@@ -1,0 +1,36 @@
+\barrerapagina
+\section{Comparación estadística y cambios de distribución}
+\subsection{Distribuciones observadas frente a hipótesis de cambio}
+El análisis descriptivo conserva medias, desviaciones y cuantiles 5/25/50/75/95 de las 20 entradas transformadas en cada partición, sin ajustar un nuevo escalador. Las mayores diferencias de media test menos train, medidas en desviaciones de train, corresponden a antigüedad observada (+4,046562), seno del mes (+0,992743) y coseno (+0,700490). Facturas medias de tres meses cambia +0,485939. La figura \ref{fig:cambios} muestra el conjunto completo de columnas.
+\figura{cambios_medias.png}{Cambios descriptivos de media en las 20 entradas existentes respecto a train, expresados en su desviación de entrenamiento. No son parámetros de una transformación nueva ni pruebas de deriva de concepto.}{fig:cambios}{0.97}
+La antigüedad crece por definición del tiempo: los productos conocidos tienen entre 36 y 40 meses observados en test, frente a tres o cuatro en los nuevos. Además, test contiene enero--mayo, validación un año completo y train 21 meses objetivo: las mezclas del calendario no son idénticas. La mediana de unidades del mes previo en test es 192 entre conocidos y 3\,336 entre nuevos, señal de escalas comerciales diferentes. Los resúmenes de historia mensual se conservan en el artefacto descriptivo, sin reinterpretar ausencia de una línea como falta de demanda.
+
+Estos hallazgos prueban cambios descriptivos de $X$ y mezcla de población, pero no demuestran un cambio de $P(y\mid X)$ o \emph{concept drift}. Posibles explicaciones incluyen extrapolación temporal del modelo lineal, comportamiento comercial variable, cobertura incompleta o identidad provisional; son hipótesis que los CSV no permiten discriminar causalmente. No se modifican características tras observarlas.
+
+\subsection{Incertidumbre y dependencia}
+Las 1\,111 filas no son réplicas independientes. Se repiten productos, se solapan ventanas de historia y productos distintos comparten condiciones de un mismo mes. Solo hay cinco bloques temporales de test. No se utilizan intervalos iid, bootstrap de líneas de factura, p-valores ni declaraciones de superioridad estadística universal.
+
+El análisis exploratorio omite sistemáticamente cada mes completo por turno y vuelve a agregar las mismas predicciones de los cuatro restantes. La BA logística resultante varía de 58,157\% a 64,129\%. Ese rango no es un intervalo de confianza, no corrige toda dependencia temporal y no reemplaza la evaluación oficial de los cinco meses. Se conservan todas las omisiones, sin elegir la favorable. La evidencia permite describir sensibilidad al período observado, no estimar de forma fiable la distribución de rendimiento futuro.
+
+\section{Interpretación para Inteligencia de Negocios}
+La mejor comparación global observada corresponde a logística, que también mejora BA y especificidad respecto al perceptrón. No obstante, 370 falsos positivos pueden generar revisiones comerciales innecesarias; los 49 falsos negativos pueden omitir meses superiores a la mediana reciente. No se traduce un FP automáticamente en sobrestock ni se inventan costos de revisión o ventas perdidas. El histórico reconoce más negativos, pero omite 374 positivos, por lo que tampoco es una solución comercial suficiente.
+
+La utilidad de una alerta depende de la acción, su costo, la capacidad de revisión y el valor de detectar una subida relativa. Esos datos no están registrados. La comparación actual debe servir para comprender una primera aplicación académica y diseñar una validación operacional independiente, no para afirmar retorno de inversión.
+
+Se requieren claves operativas y catálogos vigentes, unidades y empaques consistentes, cierres e ingestiones verificables, promociones y precios planificados, inventarios, faltantes de stock y demanda no atendida. También hacen falta acciones registradas y costos FP/FN validados por el negocio. La extracción de ventas observadas no sustituye esa información.
+
+\section{Limitaciones y decisiones pendientes}
+La identidad por nombre no prueba continuidad de producto y la cobertura al cierre es académica, no certificada. La respuesta mide facturación observada y un cambio relativo que puede ser pequeño; no incorpora relevancia económica ni disponibilidad de inventario. Las probabilidades logísticas no cuentan con calibración validada. La selección de tasa, checkpoint y umbral en una misma validación introduce optimismo en las métricas de desarrollo.
+
+Las fronteras lineales pueden no representar todas las interacciones, pero el análisis no demuestra que esa limitación sea la causa del resultado. El presupuesto de épocas es finito y no certifica convergencia completa; PCA pierde 50,38\% de varianza en 2D. Cinco meses de test y 16 filas de productos nuevos restringen generalización e inferencia estadística. No se reutiliza la reserva consumida para mejorar las cifras.
+
+En identificación académica, los informes previos coinciden en autores, asignatura, nivel y paralelo, pero sus fechas no permiten fijar inequívocamente el ciclo de esta entrega. La portada deja ciclo y fecha pendientes; la forma del nombre y grado del docente sigue la solicitud actual. Las referencias locales no declaran con certeza una autoría bibliográfica individual para todos sus textos; se citan como documentos académicos del proyecto, sin inventar metadatos.
+
+\section{Conclusiones parciales del Data Mart de Ventas}
+La preparación temporal y los artefactos alineados permiten una comparación reproducible de dos modelos propios y dos baselines. El uso común de 20 entradas y particiones cronológicas evita atribuir diferencias a cambios de muestra o de representación entre clasificadores. Las etiquetas significan exclusivamente superar la mediana de tres meses del propio producto.
+
+La regresión logística obtiene la mayor BA de test (62,42\%), con mejora observada frente a perceptrón y baselines. Su elevada tasa de falsos positivos y variación mensual impiden recomendar decisiones automáticas inmediatas. La BA global supera su promedio mensual por ponderaciones diferentes de clases, comprobadas algebraicamente, sin contradicción entre ambas cifras.
+
+El perceptrón no deja de actualizarse y sus errores fluctúan; el checkpoint 70 debe distinguirse del último estado. La logística reduce monótonamente la entropía cruzada y el gradiente, pero termina por el máximo de épocas y mantiene gradiente no nulo. La conclusión verificable es descenso estable sin convergencia completa demostrada. La proyección PCA aporta una vista exploratoria, sin explicar causalmente el rendimiento ni sustituir los modelos de 20 dimensiones.
+
+Las conclusiones se circunscriben al trabajo efectivamente realizado en Ventas. \textbf{La ampliación a los demás Data Marts es parte obligatoria del alcance académico pendiente}. Para cada uno deberán verificarse modelo dimensional y disponibilidad, formular una respuesta propia, fijar cortes y transformaciones y ejecutar una evaluación independiente. Este informe admite esa ampliación mediante nuevos módulos de metodología y resultados; no declara implementadas esas aplicaciones ni cierra definitivamente todas las obligaciones del proyecto.

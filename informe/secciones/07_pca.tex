@@ -1,0 +1,13 @@
+\barrerapagina
+\section{Reducción dimensional para visualización}
+La transformación PCA aprobada se ajustó con las 4\,599 filas de entrenamiento y se aplicó a las 2\,628 de validación, usando el mismo centrado. Las etiquetas solo colorean los puntos; no entran en el ajuste SVD. No se ajustó PCA con test ni se utilizaron las coordenadas bidimensionales para entrenar los clasificadores.
+
+PC1 explica 32,987763\% y PC2 16,630823\%; juntas conservan 49,618586\%, por lo que 50,381414\% no se representa en el plano. La varianza total de entrenamiento es 20,0043497173 con $ddof=1$ y el rango numérico es 17. El rango menor que 20 es compatible con redundancias de las variables históricas; no impide conservar las dos primeras direcciones.
+
+\input{generado/pca_cargas}
+PC1 combina principalmente nivel histórico de unidades, con coeficientes positivos grandes en media, mediana, lags y unidades por factura. PC2 combina frecuencia comercial (facturas y clientes distintos) y cambios recientes de unidades. La convención de signo hace positivo el coeficiente de mayor magnitud: invertir un vector no modifica la varianza ni aporta una clase nueva. Los coeficientes negativos menores de PC2 incluyen unidades de los retardos segundo y tercero; su lectura es algebraica, no causal.
+
+\figura{pca_train.png}{Proyección PCA de entrenamiento, coloreada por etiqueta real. Todos los puntos proceden del artefacto aprobado, sin selección ni desplazamiento artificial.}{fig:pca-train}{0.86}
+\figura{pca_val.png}{Validación proyectada con media y componentes de entrenamiento. Se conserva la escala de ejes utilizada en la visualización aprobada.}{fig:pca-val}{0.86}
+\figura{pca_varianza.png}{Varianza individual y acumulada de los componentes obtenidos de entrenamiento. El denominador incluye las 20 direcciones.}{fig:pca-varianza}{0.96}
+Las clases se solapan visualmente. La pérdida de más de la mitad de la varianza limita cualquier inferencia sobre separabilidad en las 20 entradas. PCA no es un clasificador; el solapamiento no demuestra la causa del rendimiento ni invalida una señal fuera del plano. Ninguna línea bidimensional se presenta como frontera exacta de los modelos multidimensionales.

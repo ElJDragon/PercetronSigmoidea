@@ -1,0 +1,39 @@
+{
+  "scope": "Preparación y publicación del progreso académico, sin cambios experimentales",
+  "repository": "https://github.com/ElJDragon/PercetronSigmoidea",
+  "branches": [
+    "main",
+    "develop"
+  ],
+  "initial_local_commit": "468634b",
+  "remote_initial_state": "Vacío, comprobado con git ls-remote autenticado",
+  "tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "run": 104,
+    "successful": true,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 51.557
+  },
+  "preexisting_files_unchanged": 349,
+  "document_manifest_verified": true,
+  "saved_metrics_verified": true,
+  "required_files_ignored": [],
+  "large_files": [
+    {
+      "path": "datos/originales/dataset_ventas_wwi.csv",
+      "bytes": 59150151
+    },
+    {
+      "path": "datos/originales/datos_limpios.csv",
+      "bytes": 59899758
+    }
+  ],
+  "large_file_strategy": "Git normal; ambos CSV menores de 100 MiB, sin LFS ni descarga adicional",
+  "sensitive_pattern_scan": "Sin coincidencias de claves privadas, tokens conocidos o asignaciones de secretos; no se versionan configuraciones locales o archivos .env",
+  "excluded": "Cachés Python, entornos, configuración local, secretos, auxiliares LaTeX, logs y páginas de revisión; originales, matrices, modelos, fuentes, PDF y evidencia final incluidos",
+  "byte_preservation": ".gitattributes desactiva normalización de finales de línea",
+  "local_no_training_or_regeneration": true,
+  "first_commit_staged_blobs_verified": 164
+}

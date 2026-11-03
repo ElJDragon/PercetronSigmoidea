@@ -1,0 +1,22 @@
+\begin{longtable}{r>{\raggedright\arraybackslash}p{6.7cm}>{\raggedright\arraybackslash}p{6.2cm}}\caption{Entradas efectivas y fórmulas del contrato. $q_j=Q_{p,t-j}$.}\label{tab:caracteristicas}\\\toprule Índice & Nombre & Fórmula registrada\\\midrule\endfirsthead\toprule Índice & Nombre & Fórmula registrada\\\midrule\endhead
+1 & \texttt{\detokenize{unidades_lag_1}} & Q(p,t-1) \\
+2 & \texttt{\detokenize{unidades_lag_2}} & Q(p,t-2) \\
+3 & \texttt{\detokenize{unidades_lag_3}} & Q(p,t-3) \\
+4 & \texttt{\detokenize{unidades_media_3}} & (q1+q2+q3)/3 \\
+5 & \texttt{\detokenize{unidades_mediana_3}} & mediana(q1,q2,q3) \\
+6 & \texttt{\detokenize{unidades_std_3}} & std(q1,q2,q3), ddof=0 \\
+7 & \texttt{\detokenize{cambio_unidades_1}} & q1-q2 \\
+8 & \texttt{\detokenize{variacion_relativa_1}} & (q1-q2)/q2 si q2>0; nulo en otro caso \\
+9 & \texttt{\detokenize{tendencia_unidades_3}} & (q1-q3)/2 \\
+10 & \texttt{\detokenize{facturas_lag_1}} & COUNT DISTINCT InvoiceID(p,t-1) \\
+11 & \texttt{\detokenize{facturas_media_3}} & media de facturas distintas en t-1,t-2,t-3 \\
+12 & \texttt{\detokenize{ingresos_lag_1}} & SUM VentaSinImpuesto(p,t-1) \\
+13 & \texttt{\detokenize{ingresos_media_3}} & media de ingresos de t-1,t-2,t-3 \\
+14 & \texttt{\detokenize{precio_unitario_ponderado_lag_1}} & ingresos\_lag\_1/q1 si q1>0; nulo si q1=0 \\
+15 & \texttt{\detokenize{clientes_distintos_lag_1}} & COUNT DISTINCT NombreCliente(p,t-1) \\
+16 & \texttt{\detokenize{unidades_por_factura_lag_1}} & q1/facturas\_lag\_1 si facturas\_lag\_1>0; nulo si no \\
+17 & \texttt{\detokenize{antiguedad_observada_meses}} & ordinal(t)-ordinal(primer mes observado antes del corte) \\
+18 & \texttt{\detokenize{mes_objetivo_sin}} & sin(2*pi*(mes(t)-1)/12) \\
+19 & \texttt{\detokenize{mes_objetivo_cos}} & cos(2*pi*(mes(t)-1)/12) \\
+20 & \texttt{\detokenize{dias_mes_objetivo}} & días calendario de t, con bisiestos \\
+\bottomrule\end{longtable}

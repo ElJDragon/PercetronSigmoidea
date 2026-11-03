@@ -1,0 +1,15 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Comparación de cohortes en test, sin excluir los productos nuevos.}\label{tab:cohortes}
+\begin{tabular}{lrrrrrrrr}\toprule
+Cohorte & Método & N & 0/1 & TN & FP & FN & TP & BA (\%) \\ \midrule
+conocidos & Perceptrón & 1095 & 552/543 & 62 & 490 & 14 & 529 & 54.327 \\
+conocidos & Logística & 1095 & 552/543 & 184 & 368 & 46 & 497 & 62.431 \\
+conocidos & Mayoritario & 1095 & 552/543 & 0 & 552 & 0 & 543 & 50.000 \\
+conocidos & Histórico & 1095 & 552/543 & 389 & 163 & 367 & 176 & 51.442 \\
+nuevos & Perceptrón & 16 & 6/10 & 6 & 0 & 8 & 2 & 60.000 \\
+nuevos & Logística & 16 & 6/10 & 4 & 2 & 3 & 7 & 68.333 \\
+nuevos & Mayoritario & 16 & 6/10 & 0 & 6 & 0 & 10 & 50.000 \\
+nuevos & Histórico & 16 & 6/10 & 3 & 3 & 7 & 3 & 40.000 \\
+\bottomrule\end{tabular}
+\end{table}

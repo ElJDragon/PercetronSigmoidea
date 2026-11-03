@@ -1,0 +1,43 @@
+\barrerapagina
+\section{Resultados experimentales}\label{sec:resultados}
+\subsection{Comparación común de entrenamiento, validación y prueba}
+Las métricas de la tabla \ref{tab:metricas} proceden de los estados exportados, no de una ejecución nueva. La evaluación final contiene exactamente 1\,111 observaciones de enero a mayo de 2016: 558 negativas y 553 positivas. La alineación de identificadores, productos, meses y etiquetas fue comprobada contra los metadatos aprobados; las matrices y métricas se reproducen desde las predicciones existentes.
+\input{generado/metricas}
+\figura{metricas_globales.png}{Métricas globales de test sobre los mismos casos. Todas son proporciones o porcentajes según la escala rotulada; ninguna mide beneficio económico.}{fig:metricas}{1}
+La logística tiene la mayor BA global observada: 62,415\%, 8,311 puntos sobre el perceptrón, 12,415 sobre mayoritario y 11,106 sobre histórico. El perceptrón supera esos baselines en 4,104 y 2,794 puntos de BA. Son diferencias descriptivas de la reserva final, sin prueba de superioridad universal ni significación estadística.
+
+El baseline mayoritario alcanza recall 100\% sin reconocer un solo negativo. Esto demuestra por qué accuracy o sensibilidad aisladas no resumen el equilibrio entre clases. El histórico obtiene especificidad 70,251\%, pero recall 32,369\%, y BA cercana a 50\%.
+
+\subsection{Matrices de confusión, sensibilidad y exceso de positivos}
+\input{generado/confusiones}
+\figura{confusion_perceptron.png}{Matriz de confusión de test del perceptrón. Filas: etiqueta real; columnas: clase predicha. La elevada sensibilidad coexiste con 490 falsos positivos.}{fig:conf-p}{0.66}
+\figura{confusion_logistica.png}{Matriz de confusión de test de logística con umbral congelado 0,5. Reconoce 188 negativos y 504 positivos, con 370 FP y 49 FN.}{fig:conf-l}{0.66}
+\figura{sensibilidad_especificidad.png}{Sensibilidad y especificidad de los cuatro métodos en test. Logística mejora el reconocimiento negativo frente al perceptrón, pero conserva especificidad limitada.}{fig:sensibilidad}{0.95}
+El perceptrón predice 1 en 1\,021 casos (91,899\%) y logística en 874 (78,668\%), frente a 553 positivos reales (49,775\%). Su exceso es de 42,124 y 28,893 puntos porcentuales, respectivamente. Predecir positivo frecuentemente captura muchos positivos reales, pero también eleva FP. La precisión positiva es solo 52,008\% en perceptrón y 57,666\% en logística. F1 positivo no garantiza reconocimiento de la clase negativa.
+
+La logística reconoce 120 negativos adicionales frente al perceptrón, con 27 positivos reconocidos menos. Así disminuye 93 errores totales y mejora BA, calculada con denominadores específicos de cada clase. Esta explicación aritmética no establece una causa empresarial de la diferencia.
+
+\subsection{Generalización temporal y error por partición}
+La BA test menos validación cambia $-7,528$ puntos en perceptrón y $+1,216$ en logística. El aumento global de logística no acredita estabilidad en cada mes. Las proporciones positivas reales son 51,794\% en train, 50,571\% en validación y 49,775\% en test, mientras las predicciones positivas del perceptrón pasan de 48,815\% a 57,801\% y 91,899\%; las de logística, de 53,294\% a 45,738\% y 78,668\%. Hay un cambio descriptivo marcado en las decisiones, con prevalencia global relativamente próxima.
+\figura{error_particiones.png}{Error de clasificación final, definido como $1-\mathrm{Accuracy}$, por método y partición. No es pérdida logística ni conteo de actualizaciones. No existe una curva de test por época.}{fig:error-particiones}{1}
+\input{generado/mensual}
+\figura{ba_mensual.png}{BA de los cuatro métodos en todos los meses de test. No se excluyen meses difíciles ni se selecciona un subperíodo por rendimiento.}{fig:ba-mensual}{1}
+En logística, la especificidad desciende de 64,516\% en febrero a 4,444\% en mayo, mientras el recall de mayo es 97,810\%. Su BA mensual cae hasta 51,127\%. El perceptrón supera a logística en BA de mayo (52,620\%), a pesar de la ventaja global de esta última. El desempeño cambia con el período y no se resume correctamente con una declaración universal de superioridad.
+
+\subsubsection{Por qué BA global y promedio mensual difieren}
+Si $P_t=TP_t+FN_t$ y $N_t=TN_t+FP_t$, al agrupar los conteos se obtiene
+\begin{align}
+TPR_G&=\sum_t\frac{P_t}{\sum_sP_s}TPR_t,&TNR_G&=\sum_t\frac{N_t}{\sum_sN_s}TNR_t,\\
+BA_G&=\tfrac12(TPR_G+TNR_G),&BA_M&=\frac15\sum_t BA_t.
+\end{align}
+Por tanto,
+\begin{equation}BA_G-BA_M=\frac12\sum_t\left[\left(\frac{P_t}{\sum_sP_s}-\frac15\right)TPR_t+\left(\frac{N_t}{\sum_sN_s}-\frac15\right)TNR_t\right].\end{equation}
+Los pesos son distintos para positivos y negativos; no basta ponderar cada BA mensual por el total de filas. En logística, los soportes positivos mensuales son 94, 64, 138, 120 y 137; los negativos son 125, 155, 81, 107 y 90. La agrupación produce recall 0,911392405 y especificidad 0,336917563. De ellos resulta BA 62,415\%, frente a 58,406\% del promedio mensual sin ponderar. La diferencia de 4,009691 puntos se verifica con tolerancia $10^{-12}$ en puntos porcentuales, utilizando las contribuciones por mes registradas en el análisis temporal. No es una contradicción ni un error de cálculo.
+
+\subsection{Productos conocidos y nuevos}
+\input{generado/cohortes}
+Se consideran conocidos los nombres presentes en train, según la regla congelada. En test hay 219 conocidos con 1\,095 filas y ocho nuevos con 16 filas de abril y mayo. Se conservan todos en el global. Entre los nuevos, el perceptrón tiene precision 100\% sobre solo dos positivos predichos, pero omite ocho de diez positivos reales. Logística reconoce siete de diez positivos y cuatro de seis negativos. Los conteos son insuficientes para sostener estabilidad de porcentajes o una ventaja extrapolable a nuevos catálogos.
+
+\subsection{Concordancias y desacuerdos}
+Ambos modelos aciertan 554 casos y ambos fallan 374; solo perceptrón acierta 45 y solo logística 138. Las cuatro categorías son excluyentes y suman 1\,111. Coinciden en 928 decisiones y discrepan en 183: acuerdo no equivale a acierto. Los 93 aciertos exclusivos netos de logística explican la diferencia de accuracy. Las agrupaciones por mes y cohorte están disponibles en el archivo de acuerdos; no se usaron para construir un clasificador combinado.
+\figura{acuerdos.png}{Descomposición de aciertos y errores compartidos y exclusivos por mes. Las categorías conservan los conteos de las mismas predicciones alineadas; los detalles por cohorte están en el archivo estructurado.}{fig:acuerdos}{1}

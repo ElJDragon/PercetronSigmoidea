@@ -1,0 +1,651 @@
+[
+  {
+    "claim": "Líneas originales",
+    "source": "resultados/auditoria/perfilado_datos.json",
+    "keys": [
+      "datasets",
+      "datos_limpios.csv",
+      "rows"
+    ],
+    "value": 228265,
+    "sha256": "f22b456dd0bb9cb199a25cbb31d479f1a64d665040623d20f45a5a154c0d7c68"
+  },
+  {
+    "claim": "Columnas de origen",
+    "source": "resultados/auditoria/perfilado_datos.json",
+    "keys": [
+      "datasets",
+      "datos_limpios.csv",
+      "column_count"
+    ],
+    "value": 30,
+    "sha256": "f22b456dd0bb9cb199a25cbb31d479f1a64d665040623d20f45a5a154c0d7c68"
+  },
+  {
+    "claim": "Facturas distintas",
+    "source": "resultados/auditoria/perfilado_datos.json",
+    "keys": [
+      "datasets",
+      "datos_limpios.csv",
+      "keys",
+      "InvoiceID",
+      "unique"
+    ],
+    "value": 70510,
+    "sha256": "f22b456dd0bb9cb199a25cbb31d479f1a64d665040623d20f45a5a154c0d7c68"
+  },
+  {
+    "claim": "Nombres de producto",
+    "source": "resultados/auditoria/perfilado_datos.json",
+    "keys": [
+      "datasets",
+      "datos_limpios.csv",
+      "columns",
+      "NombreProducto",
+      "unique_non_null"
+    ],
+    "value": 227,
+    "sha256": "f22b456dd0bb9cb199a25cbb31d479f1a64d665040623d20f45a5a154c0d7c68"
+  },
+  {
+    "claim": "Duplicados completos",
+    "source": "resultados/auditoria/perfilado_datos.json",
+    "keys": [
+      "datasets",
+      "datos_limpios.csv",
+      "raw_duplicate_excess"
+    ],
+    "value": 0,
+    "sha256": "f22b456dd0bb9cb199a25cbb31d479f1a64d665040623d20f45a5a154c0d7c68"
+  },
+  {
+    "claim": "Duplicados de línea",
+    "source": "resultados/auditoria/perfilado_datos.json",
+    "keys": [
+      "datasets",
+      "datos_limpios.csv",
+      "keys",
+      "InvoiceLineID",
+      "duplicate_excess"
+    ],
+    "value": 0,
+    "sha256": "f22b456dd0bb9cb199a25cbb31d479f1a64d665040623d20f45a5a154c0d7c68"
+  },
+  {
+    "claim": "Marca faltante",
+    "source": "resultados/auditoria/perfilado_datos.json",
+    "keys": [
+      "datasets",
+      "datos_limpios.csv",
+      "columns",
+      "Marca",
+      "missing"
+    ],
+    "value": 209328,
+    "sha256": "f22b456dd0bb9cb199a25cbb31d479f1a64d665040623d20f45a5a154c0d7c68"
+  },
+  {
+    "claim": "Tamaño faltante",
+    "source": "resultados/auditoria/perfilado_datos.json",
+    "keys": [
+      "datasets",
+      "datos_limpios.csv",
+      "columns",
+      "Tamanio",
+      "missing"
+    ],
+    "value": 67315,
+    "sha256": "f22b456dd0bb9cb199a25cbb31d479f1a64d665040623d20f45a5a154c0d7c68"
+  },
+  {
+    "claim": "Grupo faltante",
+    "source": "resultados/auditoria/perfilado_datos.json",
+    "keys": [
+      "datasets",
+      "datos_limpios.csv",
+      "columns",
+      "GrupoCompra",
+      "missing"
+    ],
+    "value": 84297,
+    "sha256": "f22b456dd0bb9cb199a25cbb31d479f1a64d665040623d20f45a5a154c0d7c68"
+  },
+  {
+    "claim": "Fecha inicial",
+    "source": "resultados/auditoria/perfilado_datos.json",
+    "keys": [
+      "datasets",
+      "datos_limpios.csv",
+      "columns",
+      "Fecha",
+      "min"
+    ],
+    "value": "2013-01-01 00:00:00+00:00",
+    "sha256": "f22b456dd0bb9cb199a25cbb31d479f1a64d665040623d20f45a5a154c0d7c68"
+  },
+  {
+    "claim": "Fecha final",
+    "source": "resultados/auditoria/perfilado_datos.json",
+    "keys": [
+      "datasets",
+      "datos_limpios.csv",
+      "columns",
+      "Fecha",
+      "max"
+    ],
+    "value": "2016-05-31 00:00:00+00:00",
+    "sha256": "f22b456dd0bb9cb199a25cbb31d479f1a64d665040623d20f45a5a154c0d7c68"
+  },
+  {
+    "claim": "Cantidad por precio",
+    "source": "resultados/auditoria/perfilado_datos.json",
+    "keys": [
+      "datasets",
+      "datos_limpios.csv",
+      "monetary_checks",
+      "cantidad_por_precio",
+      "violations"
+    ],
+    "value": 0,
+    "sha256": "f22b456dd0bb9cb199a25cbb31d479f1a64d665040623d20f45a5a154c0d7c68"
+  },
+  {
+    "claim": "Base más impuesto",
+    "source": "resultados/auditoria/perfilado_datos.json",
+    "keys": [
+      "datasets",
+      "datos_limpios.csv",
+      "monetary_checks",
+      "base_mas_impuesto",
+      "violations"
+    ],
+    "value": 0,
+    "sha256": "f22b456dd0bb9cb199a25cbb31d479f1a64d665040623d20f45a5a154c0d7c68"
+  },
+  {
+    "claim": "Recortes de espacios en NombreCliente (no Vendedor)",
+    "source": "resultados/auditoria/comparacion_csv.json",
+    "keys": [
+      "columns",
+      "NombreCliente",
+      "whitespace_only_differences"
+    ],
+    "value": 268,
+    "sha256": "3e801f33239f618cc915249ac2dd6764e776ba458606152d463b6d6a158794d6"
+  },
+  {
+    "claim": "Train temporal",
+    "source": "resultados/fase_03/manifiesto.json",
+    "keys": [
+      "partitions",
+      "train"
+    ],
+    "value": [
+      "2013-04",
+      "2014-12"
+    ],
+    "sha256": "b6ef8d83ec76f2b8d8e8847d3a505874770b1325528598985e36cb8712034879"
+  },
+  {
+    "claim": "Validación temporal",
+    "source": "resultados/fase_03/manifiesto.json",
+    "keys": [
+      "partitions",
+      "val"
+    ],
+    "value": [
+      "2015-01",
+      "2015-12"
+    ],
+    "sha256": "b6ef8d83ec76f2b8d8e8847d3a505874770b1325528598985e36cb8712034879"
+  },
+  {
+    "claim": "Test temporal",
+    "source": "resultados/fase_03/manifiesto.json",
+    "keys": [
+      "partitions",
+      "test"
+    ],
+    "value": [
+      "2016-01",
+      "2016-05"
+    ],
+    "sha256": "b6ef8d83ec76f2b8d8e8847d3a505874770b1325528598985e36cb8712034879"
+  },
+  {
+    "claim": "Checkpoint perceptron",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "selected_epoch"
+    ],
+    "value": 70,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Sesgo perceptron",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "bias"
+    ],
+    "value": 0.010000000000000004,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: unidades_lag_1",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      0
+    ],
+    "value": 0.08604738881119216,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: unidades_lag_2",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      1
+    ],
+    "value": 0.07955933295077251,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: unidades_lag_3",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      2
+    ],
+    "value": 0.08643380694807037,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: unidades_media_3",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      3
+    ],
+    "value": 0.08682046217511337,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: unidades_mediana_3",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      4
+    ],
+    "value": -0.3720436256352147,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: unidades_std_3",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      5
+    ],
+    "value": -0.0011423824327889114,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: cambio_unidades_1",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      6
+    ],
+    "value": 0.016234371544841163,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: variacion_relativa_1",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      7
+    ],
+    "value": 0.015503476495048884,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: tendencia_unidades_3",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      8
+    ],
+    "value": 0.0022661384069365548,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: facturas_lag_1",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      9
+    ],
+    "value": -0.01341653202315568,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: facturas_media_3",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      10
+    ],
+    "value": -0.07449527454509768,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: ingresos_lag_1",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      11
+    ],
+    "value": -0.08671342154352552,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: ingresos_media_3",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      12
+    ],
+    "value": 0.09642870252787368,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: precio_unitario_ponderado_lag_1",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      13
+    ],
+    "value": 0.14385982435183342,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: clientes_distintos_lag_1",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      14
+    ],
+    "value": -0.04867982347072822,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: unidades_por_factura_lag_1",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      15
+    ],
+    "value": 0.0246007086039395,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: antiguedad_observada_meses",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      16
+    ],
+    "value": 0.0478919237829946,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: mes_objetivo_sin",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      17
+    ],
+    "value": 0.05422922302085315,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: mes_objetivo_cos",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      18
+    ],
+    "value": 0.030914856096277414,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Peso perceptron: dias_mes_objetivo",
+    "source": "resultados/fase_04/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      19
+    ],
+    "value": 0.034500061409917425,
+    "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+  },
+  {
+    "claim": "Checkpoint logistica",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "selected_epoch"
+    ],
+    "value": 200,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Sesgo logistica",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "bias"
+    ],
+    "value": 0.08539078966952132,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: unidades_lag_1",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      0
+    ],
+    "value": 0.007753842937108124,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: unidades_lag_2",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      1
+    ],
+    "value": 0.021919159372678004,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: unidades_lag_3",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      2
+    ],
+    "value": -0.02887438357917642,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: unidades_media_3",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      3
+    ],
+    "value": 0.00038495335263386433,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: unidades_mediana_3",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      4
+    ],
+    "value": -0.1550018310751814,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: unidades_std_3",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      5
+    ],
+    "value": 0.1603485307302967,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: cambio_unidades_1",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      6
+    ],
+    "value": -0.03239089609332676,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: variacion_relativa_1",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      7
+    ],
+    "value": 0.13404048909634628,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: tendencia_unidades_3",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      8
+    ],
+    "value": 0.08312368854459541,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: facturas_lag_1",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      9
+    ],
+    "value": -0.11308763440928998,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: facturas_media_3",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      10
+    ],
+    "value": -0.520097786700729,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: ingresos_lag_1",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      11
+    ],
+    "value": -0.037081330837846524,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: ingresos_media_3",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      12
+    ],
+    "value": 0.007335190966533872,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: precio_unitario_ponderado_lag_1",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      13
+    ],
+    "value": 0.0004866891244691942,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: clientes_distintos_lag_1",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      14
+    ],
+    "value": -0.11718785125889304,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: unidades_por_factura_lag_1",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      15
+    ],
+    "value": 0.028211039550568473,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: antiguedad_observada_meses",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      16
+    ],
+    "value": 0.16703575165447174,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: mes_objetivo_sin",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      17
+    ],
+    "value": 0.24188638442783236,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: mes_objetivo_cos",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      18
+    ],
+    "value": -0.018110885050252778,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  {
+    "claim": "Peso logistica: dias_mes_objetivo",
+    "source": "resultados/fase_05/modelo_seleccionado.json",
+    "keys": [
+      "weights",
+      19
+    ],
+    "value": 0.2550458337404401,
+    "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  }
+]

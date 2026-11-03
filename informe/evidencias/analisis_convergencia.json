@@ -1,0 +1,34 @@
+{
+  "perceptron": {
+    "selected_epoch": 70,
+    "last_epoch": 100,
+    "first_errors": 1973,
+    "last_errors": 1996,
+    "min_errors": 1863,
+    "max_errors": 2016,
+    "increased_epochs": 49,
+    "zero_updates_epochs": 0,
+    "first10_mean_errors": 1954.2,
+    "last10_mean_errors": 1965.8,
+    "weights_norm_selected": 0.47039080212267365,
+    "weights_norm_last": 0.43950510812136373
+  },
+  "logistica": {
+    "initial_train_loss": 0.6931471805599452,
+    "last_train_loss": 0.6269539858615067,
+    "initial_val_loss": 0.6931471805599452,
+    "last_val_loss": 0.6695745428232207,
+    "absolute_drop": 0.06619319469843843,
+    "relative_drop": 0.09549659373203476,
+    "loss_increases_strict": 0,
+    "first10_mean_delta_L": 0.0032007452307356134,
+    "last10_mean_delta_L": 1.2942797923332084e-05,
+    "last_delta_L": 1.2399940257257214e-05,
+    "last_relative_change": 1.2399940257257214e-05,
+    "initial_gradient_norm": 0.2276084513231957,
+    "last_gradient_norm": 0.01109745983712376,
+    "last_weight_norm": 0.7266856466397787,
+    "stopped_by": "max_epochs; tolerance=None",
+    "converged_by_tolerance": false
+  }
+}

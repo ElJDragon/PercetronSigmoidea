@@ -1,0 +1,49 @@
+\section{Fundamentos matemáticos}
+\subsection{Neurona artificial y perceptrón simple}
+Una observación transformada es un vector $x\in\mathbb R^d$, con $d=20$ en este experimento. Una neurona lineal combina cada entrada con un peso $w_j$ y añade un sesgo $b$:
+\begin{equation}z=w^\top x+b=\sum_{j=1}^{d}w_jx_j+b,\qquad \widehat y=\mathbf1[z\geq 0].\label{eq:perceptron}\end{equation}
+El peso controla la contribución algebraica de una entrada y el sesgo desplaza el hiperplano. La función escalón devuelve una clase, no una probabilidad. Con etiquetas canónicas $y\in\{0,1\}$, la implementación usa
+\begin{equation}e_i=y_i-\widehat y_i,\quad w\leftarrow w+\eta e_i x_i,\quad b\leftarrow b+\eta e_i,\label{eq:actualizacion}\end{equation}
+solo si $e_i\neq0$. La tasa $\eta>0$ determina la magnitud del paso. Una época recorre todas las observaciones de entrenamiento; cada error durante ese recorrido produce una actualización. Los errores al finalizar una época se calculan con un único estado de parámetros y pueden diferir del conteo online, que mezcla los estados sucesivos.
+
+La separabilidad lineal supone que existe un hiperplano que clasifica estrictamente todos los ejemplos. Para expresar la condición teórica, se incorporan sesgo y entrada aumentada $\widetilde x=(x,1)$, etiquetas $s=2y-1$ y un separador unitario $u$ con margen $s_i u^\top\widetilde x_i\geq\gamma>0$. Si $\|\widetilde x_i\|\leq R$, la regla clásica desde cero realiza a lo sumo $(R/\gamma)^2$ errores bajo esas hipótesis. El escalado constante positivo de la actualización no cambia el argumento geométrico. La convención de empate del programa asigna 1; ello no autoriza inferir separabilidad de los datos.
+
+La garantía requiere un margen positivo y presentación reiterada de los ejemplos. No establece que cualquier conjunto real sea separable, ni que 100 épocas basten, ni que un checkpoint con buena validación tenga cero errores. En ausencia de una prueba de separabilidad, las oscilaciones observadas solo describen el comportamiento de esta ejecución. El modelo corresponde al antecedente clásico del perceptrón \cite{rosenblatt}; su optimización no es descenso de entropía cruzada.
+
+\subsection{Regresión logística binaria}
+Para el mismo $z_i=w^\top x_i+b$, se estima $p_i=\sigma(z_i)=1/(1+\exp(-z_i))$. El umbral $\tau$ transforma la salida en $\widehat y_i=\mathbf1[p_i\geq\tau]$. Aquí $\tau=0,5$ está congelado: la frontera es $z=0$. La salida está comprendida entre cero y uno, pero su calibración empírica no se deduce de esa propiedad.
+
+La pérdida media para $m$ ejemplos es la entropía cruzada binaria:
+\begin{align}
+L(w,b)&=-\frac1m\sum_{i=1}^m[y_i\log p_i+(1-y_i)\log(1-p_i)]\label{eq:ce}\\
+&=\frac1m\sum_{i=1}^m[\log(1+\exp(z_i))-y_i z_i].\nonumber
+\end{align}
+Derivando con respecto al logit se obtiene $\partial\ell_i/\partial z_i=p_i-y_i$; la regla de la cadena conduce a
+\begin{equation}\nabla_wL=\frac1mX^\top(p-y),\qquad \partial_bL=\frac1m\sum_i(p_i-y_i).\label{eq:gradientes}\end{equation}
+El descenso por lote completo actualiza $w\leftarrow w-\eta\nabla_wL$ y $b\leftarrow b-\eta\partial_bL$ una vez por época. Utiliza toda la matriz, no únicamente ejemplos mal clasificados. El objetivo suave refleja también cambios de confianza que no cruzan el umbral, por lo que resulta más informativo para estudiar la optimización que el conteo discreto de errores. Las convenciones de clasificación y pérdida siguen el tratamiento de modelos lineales probabilísticos \cite{bishop}.
+
+La estabilidad numérica se favorece evaluando la sigmoidea por ramas: para $z\geq0$, $1/(1+e^{-z})$; para $z<0$, $e^z/(1+e^z)$. La pérdida utiliza \archivo{np.logaddexp(0,z)-y*z}, sin calcular logaritmos de probabilidades redondeadas a cero ni recortarlas. El programa rechaza estados no finitos.
+
+\subsubsection{Verificación de gradientes y condiciones de descenso}
+Para un parámetro $\theta_j$, las diferencias centrales aproximan
+\begin{equation}g_j^{\mathrm{num}}=\frac{L(\theta+h_je_j)-L(\theta-h_je_j)}{2h_j},\qquad h_j=h\max(1,|\theta_j|),\end{equation}
+donde $e_j$ es el vector coordenado, incluido el sesgo. Se contrasta $|g_j-g_j^{\mathrm{num}}|\leq\mathrm{atol}+\mathrm{rtol}|g_j^{\mathrm{num}}|$. Un paso demasiado pequeño amplifica cancelación y uno demasiado grande aumenta error de truncamiento. La prueba comprueba derivadas locales en sus casos de control; no demuestra convergencia del entrenamiento WWI.
+
+Con matriz aumentada $A=[X\ \mathbf1]$ y $D=\operatorname{diag}(p_i(1-p_i))$, la Hessiana es $A^\top DA/m\succeq0$. Así, el objetivo es convexo y tiene gradiente Lipschitz con cota $L_g\leq\|A\|_2^2/(4m)$. Un paso adecuadamente pequeño, por ejemplo $0<\eta<2/L_g$ cuando se dispone de esa cota, permite justificar descenso. Esta condición no se comprobó retrospectivamente para elegir otra tasa. Sin regularización, separabilidad puede impedir un minimizador finito; redundancia puede impedir unicidad. Menor pérdida, gradiente reducido y estabilización son diagnósticos distintos de certificar un óptimo \cite{boyd}.
+
+\subsection{PCA mediante descomposición SVD}
+Sea $X\in\mathbb R^{m\times d}$ la matriz de entrenamiento ya transformada. Se calcula su media $\mu$ y $X_c=X-\mathbf1\mu^\top$. La SVD real produce
+\begin{equation}X_c=U\Sigma V^\top,\quad W_2=[v_1,v_2],\quad Z=(X-\mathbf1\mu^\top)W_2.\label{eq:pca}\end{equation}
+Los vectores $v_j$ son ortonormales y los valores singulares $\sigma_j$ están ordenados de mayor a menor, de acuerdo con la operación SVD de NumPy \cite{numpy}. Las varianzas y proporciones se definen por
+\begin{equation}\lambda_j=\frac{\sigma_j^2}{m-1},\qquad \rho_j=\frac{\lambda_j}{\sum_{q=1}^{d}\lambda_q}.\end{equation}
+El denominador incluye las 20 direcciones, no solo las dos conservadas. La proyección favorece varianza, no separación de etiquetas. El signo de cada vector es convencional; aquí se hace positivo su coeficiente de mayor magnitud. Centrado y componentes se ajustaron solo en entrenamiento y se reutilizaron en validación. Los clasificadores conservaron las 20 entradas originales transformadas.
+
+\subsection{Métricas y magnitudes de error}
+Con matriz de confusión $C=\left[\begin{smallmatrix}TN&FP\\FN&TP\end{smallmatrix}\right]$, filas reales y columnas predichas, se calculan
+\begin{align}
+\mathrm{Accuracy}&=(TP+TN)/N,&\mathrm{Precision}&=TP/(TP+FP),\\
+\mathrm{Recall}&=TP/(TP+FN),&\mathrm{Specificity}&=TN/(TN+FP),\\
+F_1&=2TP/(2TP+FP+FN),&BA&=\tfrac12(\mathrm{Recall}+\mathrm{Specificity}),\\
+FPR&=FP/(TN+FP),&FNR&=FN/(TP+FN).
+\end{align}
+La proporción de predicciones positivas es $(TP+FP)/N$. El error de clasificación es $1-\mathrm{Accuracy}$; no equivale a entropía cruzada ni a número de actualizaciones. Si no existen positivos predichos, precision se registra como cero con indicador de denominador nulo; recall y especificidad no son estimables si falta su clase real, y BA requiere ambas clases. Todas las particiones globales de este estudio contienen ambas clases.

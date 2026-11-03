@@ -1,0 +1,523 @@
+[
+  {
+    "type": "table",
+    "label": "tab:pesos-fase_04",
+    "sources": [
+      {
+        "path": "resultados/fase_04/modelo_seleccionado.json",
+        "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+      }
+    ],
+    "derivation": "Valores leídos de las claves originales; porcentajes redondeados solo en presentación."
+  },
+  {
+    "type": "table",
+    "label": "tab:pesos-fase_05",
+    "sources": [
+      {
+        "path": "resultados/fase_05/modelo_seleccionado.json",
+        "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+      }
+    ],
+    "derivation": "Valores leídos de las claves originales; porcentajes redondeados solo en presentación."
+  },
+  {
+    "type": "table",
+    "label": "tab:metricas",
+    "sources": [
+      {
+        "path": "resultados/fase_07/comparacion_con_desarrollo.json",
+        "sha256": "dff7231d6b4cfe7814e52b862d0a480c44982dea6faec5ea50918dc569e26145"
+      }
+    ],
+    "derivation": "Valores leídos de las claves originales; porcentajes redondeados solo en presentación."
+  },
+  {
+    "type": "table",
+    "label": "tab:confusiones",
+    "sources": [
+      {
+        "path": "resultados/fase_08/metricas_derivadas.json",
+        "sha256": "2a14092596110fc4c8ed4f206a096fa114ad1741203b21756033c624827fafdc"
+      }
+    ],
+    "derivation": "Valores leídos de las claves originales; porcentajes redondeados solo en presentación."
+  },
+  {
+    "type": "table",
+    "label": "tab:particiones",
+    "sources": [
+      {
+        "path": "resultados/fase_03/manifiesto.json",
+        "sha256": "b6ef8d83ec76f2b8d8e8847d3a505874770b1325528598985e36cb8712034879"
+      },
+      {
+        "path": "resultados/fase_07/comparacion_con_desarrollo.json",
+        "sha256": "dff7231d6b4cfe7814e52b862d0a480c44982dea6faec5ea50918dc569e26145"
+      }
+    ],
+    "derivation": "Valores leídos de las claves originales; porcentajes redondeados solo en presentación."
+  },
+  {
+    "type": "table",
+    "label": "tab:mensual",
+    "sources": [
+      {
+        "path": "resultados/fase_08/analisis_temporal.json",
+        "sha256": "6c500ff2232e615be75d993cf0501a8cb7633f38b48afc1a9a9ea9752a15367d"
+      }
+    ],
+    "derivation": "Valores leídos de las claves originales; porcentajes redondeados solo en presentación."
+  },
+  {
+    "type": "table",
+    "label": "tab:cohortes",
+    "sources": [
+      {
+        "path": "resultados/fase_07/metricas_cohortes.json",
+        "sha256": "f36a8ceba6ce2627d274ffc405a84ad9eb108706a1ef8bca4cd02c4f98a81af3"
+      }
+    ],
+    "derivation": "Valores leídos de las claves originales; porcentajes redondeados solo en presentación."
+  },
+  {
+    "type": "table",
+    "label": "tab:pca-cargas",
+    "sources": [
+      {
+        "path": "resultados/fase_06/coeficientes_componentes.csv",
+        "sha256": "23aad12685525864832e9b18199b115143bf8444183f5eb6280ee936fcfdccc5"
+      }
+    ],
+    "derivation": "Valores leídos de las claves originales; porcentajes redondeados solo en presentación."
+  },
+  {
+    "type": "table",
+    "label": "tab:gradientes",
+    "sources": [
+      {
+        "path": "resultados/fase_05/verificacion_gradientes.json",
+        "sha256": "2731cf8a755737a12be433c31dd5492c2df7938edbb0d5cccbabd6b8b0bc6b3f"
+      }
+    ],
+    "derivation": "Valores leídos de las claves originales; porcentajes redondeados solo en presentación."
+  },
+  {
+    "type": "table",
+    "label": "tab:tasas",
+    "sources": [
+      {
+        "path": "resultados/fase_05/experimentos.json",
+        "sha256": "faf21b2b5c652f47a1043e4f62639b9b7897fe707142d05fa7bf920a44a22486"
+      },
+      {
+        "path": "resultados/fase_05/historial_eta_001.csv",
+        "sha256": "d10ebcc8b36820604d4857591791f9898a3847936365757d57038af711cf5058"
+      },
+      {
+        "path": "resultados/fase_05/historial_eta_005.csv",
+        "sha256": "834e84f9108b61180e6c9e4f2187a42ccf3ecbdf55b582f0ec7e6481831c0d16"
+      },
+      {
+        "path": "resultados/fase_05/historial_eta_010.csv",
+        "sha256": "17955dc341ab9606467d9cfc0746b5acde5c6b56aeacef5166e32dd12b448338"
+      }
+    ],
+    "derivation": "Valores leídos de las claves originales; porcentajes redondeados solo en presentación."
+  },
+  {
+    "type": "table",
+    "label": "tab:conv-p",
+    "sources": [
+      {
+        "path": "resultados/fase_04/historial_orden_barajado.csv",
+        "sha256": "bb4a9005f56399b76ab2a563954f6fdc72fef317e5107e9b96f5b97e4f39500b"
+      }
+    ],
+    "derivation": "Valores leídos de las claves originales; porcentajes redondeados solo en presentación."
+  },
+  {
+    "type": "table",
+    "label": "tab:conv-l",
+    "sources": [
+      {
+        "path": "resultados/fase_05/historial_eta_010.csv",
+        "sha256": "17955dc341ab9606467d9cfc0746b5acde5c6b56aeacef5166e32dd12b448338"
+      },
+      {
+        "path": "resultados/fase_05/experimentos.json",
+        "sha256": "faf21b2b5c652f47a1043e4f62639b9b7897fe707142d05fa7bf920a44a22486"
+      }
+    ],
+    "derivation": "Valores leídos de las claves originales; porcentajes redondeados solo en presentación."
+  },
+  {
+    "type": "figure",
+    "label": "perceptron_errores",
+    "sources": [
+      {
+        "path": "resultados/fase_04/graficos/errores_entrenamiento.png",
+        "sha256": "01cb3213cfbafadf8b1e544524b9362608b1608dbcd220289bbb2946452ffe74"
+      }
+    ],
+    "derivation": "Copia binaria idéntica de figura aprobada."
+  },
+  {
+    "type": "figure",
+    "label": "perceptron_accuracy",
+    "sources": [
+      {
+        "path": "resultados/fase_04/graficos/accuracy_por_epoca.png",
+        "sha256": "a4e8d0b375256b52a1819f3551a501b07166055d13d65dbad1a1e5a6a9ce37e7"
+      }
+    ],
+    "derivation": "Copia binaria idéntica de figura aprobada."
+  },
+  {
+    "type": "figure",
+    "label": "perceptron_ba",
+    "sources": [
+      {
+        "path": "resultados/fase_04/graficos/balanced_accuracy_validacion.png",
+        "sha256": "a8af4b65a3ea449aac2be203285a0671703cd8e06d0ea05e8d514a2f28f6e56e"
+      }
+    ],
+    "derivation": "Copia binaria idéntica de figura aprobada."
+  },
+  {
+    "type": "figure",
+    "label": "logistica_perdida",
+    "sources": [
+      {
+        "path": "resultados/fase_05/graficos/entropia_cruzada.png",
+        "sha256": "b5f05ae62e910f27f2e886f8086be7580b7a6e0e1e22a29f1acc5f1daa58f185"
+      }
+    ],
+    "derivation": "Copia binaria idéntica de figura aprobada."
+  },
+  {
+    "type": "figure",
+    "label": "logistica_gradiente",
+    "sources": [
+      {
+        "path": "resultados/fase_05/graficos/norma_gradiente.png",
+        "sha256": "53e8a20af37e49f3fbf2c04be3d29e851b9f2439609e2de51fa6dc0011303871"
+      }
+    ],
+    "derivation": "Copia binaria idéntica de figura aprobada."
+  },
+  {
+    "type": "figure",
+    "label": "logistica_accuracy",
+    "sources": [
+      {
+        "path": "resultados/fase_05/graficos/accuracy_por_epoca.png",
+        "sha256": "5fad3a095b8591225690074d580028e273ecf2598263b0ee789c86f80000cc74"
+      }
+    ],
+    "derivation": "Copia binaria idéntica de figura aprobada."
+  },
+  {
+    "type": "figure",
+    "label": "logistica_ba",
+    "sources": [
+      {
+        "path": "resultados/fase_05/graficos/balanced_accuracy_validacion.png",
+        "sha256": "f582bfb37ea088f1025ea5cf8b9c238226dda03203ea42201253b24e94494349"
+      }
+    ],
+    "derivation": "Copia binaria idéntica de figura aprobada."
+  },
+  {
+    "type": "figure",
+    "label": "pca_train",
+    "sources": [
+      {
+        "path": "resultados/fase_06/graficos/pca_train.png",
+        "sha256": "a50084ac9d39af8da1373521b11d5fa804c075c6407c1e96f48e9f6988d96569"
+      }
+    ],
+    "derivation": "Copia binaria idéntica de figura aprobada."
+  },
+  {
+    "type": "figure",
+    "label": "pca_val",
+    "sources": [
+      {
+        "path": "resultados/fase_06/graficos/pca_val.png",
+        "sha256": "483069d463fad4184499d6b03a6bb3e9b1961157507f1fd7d9af460721d6f950"
+      }
+    ],
+    "derivation": "Copia binaria idéntica de figura aprobada."
+  },
+  {
+    "type": "figure",
+    "label": "pca_varianza",
+    "sources": [
+      {
+        "path": "resultados/fase_06/graficos/varianza_explicada.png",
+        "sha256": "d0a89fea50e9c7527e15c176fd06ef073760fe6453ecbb303114958578311e53"
+      }
+    ],
+    "derivation": "Copia binaria idéntica de figura aprobada."
+  },
+  {
+    "type": "figure",
+    "label": "confusion_perceptron",
+    "sources": [
+      {
+        "path": "resultados/fase_07/graficos/confusion_perceptron.png",
+        "sha256": "7e182b17971eb08328b4b1ba2f1e1625a5a59fc986d1fa5d9941cb2f8bf0b088"
+      }
+    ],
+    "derivation": "Copia binaria idéntica de figura aprobada."
+  },
+  {
+    "type": "figure",
+    "label": "confusion_logistica",
+    "sources": [
+      {
+        "path": "resultados/fase_07/graficos/confusion_logistica.png",
+        "sha256": "26a9fcc57219fdc71be99d9964b06c3d88c8afd6c16c993cd161b0eb0414cba5"
+      }
+    ],
+    "derivation": "Copia binaria idéntica de figura aprobada."
+  },
+  {
+    "type": "figure",
+    "label": "ba_mensual",
+    "sources": [
+      {
+        "path": "resultados/fase_07/graficos/balanced_accuracy_mensual.png",
+        "sha256": "32bad067052b397a0d658e85ec89204a10c6f53cee46cbb991c1e34c1c123c3f"
+      }
+    ],
+    "derivation": "Copia binaria idéntica de figura aprobada."
+  },
+  {
+    "type": "figure",
+    "label": "sensibilidad_especificidad",
+    "sources": [
+      {
+        "path": "resultados/fase_08/graficos/sensibilidad_especificidad.png",
+        "sha256": "844e4b1a3ded5db0359f09ee51903f21bf485aba2efeea666fe09b023a60e726"
+      }
+    ],
+    "derivation": "Copia binaria idéntica de figura aprobada."
+  },
+  {
+    "type": "figure",
+    "label": "acuerdos",
+    "sources": [
+      {
+        "path": "resultados/fase_08/graficos/acuerdos_desacuerdos.png",
+        "sha256": "a6d247c5f02171bc650fc84c71dd384f6a5c4aff028ed4b7600d52a7ade72f56"
+      }
+    ],
+    "derivation": "Copia binaria idéntica de figura aprobada."
+  },
+  {
+    "type": "figure",
+    "label": "cambios_medias",
+    "sources": [
+      {
+        "path": "resultados/fase_08/graficos/cambios_medias_caracteristicas.png",
+        "sha256": "3ded0d0301168fa0c8992d4d797d640fbf41db50bf85536e3cc18826c72eac09"
+      }
+    ],
+    "derivation": "Copia binaria idéntica de figura aprobada."
+  },
+  {
+    "type": "figure",
+    "label": "metricas_globales",
+    "sources": [
+      {
+        "path": "resultados/fase_07/comparacion_con_desarrollo.json",
+        "sha256": "dff7231d6b4cfe7814e52b862d0a480c44982dea6faec5ea50918dc569e26145"
+      }
+    ],
+    "derivation": "Cinco métricas finales guardadas; se añade BA a la vista previa de cuatro métricas, sin inferencia o evaluación nueva."
+  },
+  {
+    "type": "figure",
+    "label": "datos_particiones",
+    "sources": [
+      {
+        "path": "resultados/fase_03/manifiesto.json",
+        "sha256": "b6ef8d83ec76f2b8d8e8847d3a505874770b1325528598985e36cb8712034879"
+      },
+      {
+        "path": "resultados/fase_07/comparacion_con_desarrollo.json",
+        "sha256": "dff7231d6b4cfe7814e52b862d0a480c44982dea6faec5ea50918dc569e26145"
+      }
+    ],
+    "derivation": "Soportes reales y calendario congelado, sin partición nueva."
+  },
+  {
+    "type": "figure",
+    "label": "convergencia_detallada",
+    "sources": [
+      {
+        "path": "resultados/fase_05/historial_eta_010.csv",
+        "sha256": "17955dc341ab9606467d9cfc0746b5acde5c6b56aeacef5166e32dd12b448338"
+      },
+      {
+        "path": "resultados/fase_05/experimentos.json",
+        "sha256": "faf21b2b5c652f47a1043e4f62639b9b7897fe707142d05fa7bf920a44a22486"
+      }
+    ],
+    "derivation": "Pérdidas reales, diferencias consecutivas y gradiente del historial seleccionado."
+  },
+  {
+    "type": "figure",
+    "label": "errores_paneles",
+    "sources": [
+      {
+        "path": "resultados/fase_04/historial_orden_barajado.csv",
+        "sha256": "bb4a9005f56399b76ab2a563954f6fdc72fef317e5107e9b96f5b97e4f39500b"
+      },
+      {
+        "path": "resultados/fase_05/historial_eta_010.csv",
+        "sha256": "17955dc341ab9606467d9cfc0746b5acde5c6b56aeacef5166e32dd12b448338"
+      }
+    ],
+    "derivation": "Paneles y escalas separados; no se equiparan conteo y entropía cruzada."
+  },
+  {
+    "type": "figure",
+    "label": "error_particiones",
+    "sources": [
+      {
+        "path": "resultados/fase_07/comparacion_con_desarrollo.json",
+        "sha256": "dff7231d6b4cfe7814e52b862d0a480c44982dea6faec5ea50918dc569e26145"
+      }
+    ],
+    "derivation": "Complemento de accuracy final guardada para cuatro métodos y tres particiones."
+  },
+  {
+    "type": "table",
+    "label": "tab:caracteristicas",
+    "sources": [
+      {
+        "path": "datos/Procesados/fase_03/caracteristicas.json",
+        "sha256": "4f2b0726e99cc17204f9bd06039e765138583a1ec71910ce5541c2598b7740dc"
+      }
+    ],
+    "derivation": "Fórmulas literales de las 20 entradas efectivas."
+  },
+  {
+    "type": "claims",
+    "label": "convergencia",
+    "sources": [
+      {
+        "path": "resultados/fase_04/modelo_seleccionado.json",
+        "sha256": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82"
+      },
+      {
+        "path": "resultados/fase_05/modelo_seleccionado.json",
+        "sha256": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+      },
+      {
+        "path": "resultados/fase_04/historial_orden_barajado.csv",
+        "sha256": "bb4a9005f56399b76ab2a563954f6fdc72fef317e5107e9b96f5b97e4f39500b"
+      },
+      {
+        "path": "resultados/fase_05/historial_eta_010.csv",
+        "sha256": "17955dc341ab9606467d9cfc0746b5acde5c6b56aeacef5166e32dd12b448338"
+      },
+      {
+        "path": "resultados/fase_05/experimentos.json",
+        "sha256": "faf21b2b5c652f47a1043e4f62639b9b7897fe707142d05fa7bf920a44a22486"
+      }
+    ],
+    "derivation": "Ecuaciones Delta L y r; estadísticas conservadas en analisis_convergencia.json y CSV por época."
+  },
+  {
+    "type": "claims",
+    "label": "interpretacion-estadistica",
+    "sources": [
+      {
+        "path": "resultados/fase_08/analisis_temporal.json",
+        "sha256": "6c500ff2232e615be75d993cf0501a8cb7633f38b48afc1a9a9ea9752a15367d"
+      },
+      {
+        "path": "resultados/fase_08/metricas_derivadas.json",
+        "sha256": "2a14092596110fc4c8ed4f206a096fa114ad1741203b21756033c624827fafdc"
+      },
+      {
+        "path": "resultados/fase_08/acuerdos_desacuerdos.json",
+        "sha256": "fd4d70dde503eec4d918e1ffe2a566728bf5fb92b57c92e542d897d0001c2f95"
+      },
+      {
+        "path": "resultados/fase_08/distribuciones_descriptivas.json",
+        "sha256": "c73b29f7b10ea276c4775a151a276b967d98cd2fac7ef8dea21db897cf2d1782"
+      },
+      {
+        "path": "resultados/fase_08/sensibilidad_mensual.json",
+        "sha256": "5445916f336cc747452a1d8a4dad647d9e09c75e84ca983a972bc29883778ee1"
+      }
+    ],
+    "derivation": "Tablas y afirmaciones de resultados, dependencia y cambios descriptivos de población."
+  },
+  {
+    "type": "claims",
+    "label": "identificacion-academica",
+    "sources": [
+      {
+        "path": "referencias/Carta_de_Diseño (2).pdf",
+        "sha256": "e342b047019d74c2c936b942367b8ba6b1bb9109989b342ad2eb0a299bc4d7c0"
+      },
+      {
+        "path": "referencias/Dashboard (1).pdf",
+        "sha256": "4708dcea91a45c0fee641c1173073d72eda6e2921a65eaeeb5c2ada13a409102"
+      },
+      {
+        "path": "referencias/Openrefine_Cluster (2).pdf",
+        "sha256": "8fc6edd6cecb6eb77101002a7caa938e35e9070b99ea533156797d818057360e"
+      }
+    ],
+    "derivation": "Autores/nivel según Dashboard y OpenRefine; docente según solicitud actual. Ciclo de entrega pendiente por divergencia documental de fechas."
+  },
+  {
+    "type": "claims",
+    "label": "auditoria-y-metodologia",
+    "sources": [
+      {
+        "path": "resultados/auditoria/perfilado_datos.json",
+        "sha256": "f22b456dd0bb9cb199a25cbb31d479f1a64d665040623d20f45a5a154c0d7c68"
+      },
+      {
+        "path": "resultados/auditoria/comparacion_csv.json",
+        "sha256": "3e801f33239f618cc915249ac2dd6764e776ba458606152d463b6d6a158794d6"
+      },
+      {
+        "path": "resultados/fase_03/manifiesto.json",
+        "sha256": "b6ef8d83ec76f2b8d8e8847d3a505874770b1325528598985e36cb8712034879"
+      },
+      {
+        "path": "datos/Procesados/fase_03/caracteristicas.json",
+        "sha256": "4f2b0726e99cc17204f9bd06039e765138583a1ec71910ce5541c2598b7740dc"
+      },
+      {
+        "path": "datos/Procesados/fase_03/preprocesador.json",
+        "sha256": "aa90d86753209b69a9c00cced2afdd92bc3c1036b166b9f41af897117bee9c2c"
+      }
+    ],
+    "derivation": "Grano, cardinalidades, faltantes, calendario, descartes e imputación contrastados con claves estructuradas; reglas de disponibilidad según contrato."
+  },
+  {
+    "type": "claims",
+    "label": "pca-varianzas",
+    "sources": [
+      {
+        "path": "resultados/fase_06/varianza_explicada.json",
+        "sha256": "92b2a1b451db23a0a48f8b8c7d0a0ff7561a32918a7b3449e602ed94c441265c"
+      },
+      {
+        "path": "resultados/fase_06/parametros_pca.json",
+        "sha256": "7d37e8d104042b5ebf0d2874e5ca7acc9e16469cba69d976917c6ea569847791"
+      }
+    ],
+    "derivation": "Proporciones PC1/PC2/2D/descartada, rango y varianza total: lectura de parámetros aprobados, sin SVD nueva."
+  }
+]
