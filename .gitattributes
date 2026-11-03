@@ -1,0 +1,6 @@
+# Los manifiestos comparan bytes exactos: no normalizar finales de línea.
+* -text
+*.npy binary
+*.pdf binary
+*.png binary
+*.jpg binary

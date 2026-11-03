@@ -1,0 +1,5069 @@
+{
+  "purpose": "Solo estadística de etiquetas de desarrollo; sin predicciones, modelos ni matrices finales.",
+  "source": "datos\\originales\\datos_limpios.csv",
+  "source_sha256": "d4f3b3b7b018ee49c515915fe851ff7327d82fb198cbc8af117e8f0e73fff37e",
+  "development_month_range": [
+    "2013-01",
+    "2015-12"
+  ],
+  "test_quantities_used": false,
+  "development_monthly_pairs": 7884,
+  "eligibility": {
+    "1": {
+      "minimum_history": 1,
+      "counts": {
+        "train": 5037,
+        "validation": 2628,
+        "test": 1127
+      },
+      "monthly": {
+        "2013-01": 0,
+        "2013-02": 219,
+        "2013-03": 219,
+        "2013-04": 219,
+        "2013-05": 219,
+        "2013-06": 219,
+        "2013-07": 219,
+        "2013-08": 219,
+        "2013-09": 219,
+        "2013-10": 219,
+        "2013-11": 219,
+        "2013-12": 219,
+        "2014-01": 219,
+        "2014-02": 219,
+        "2014-03": 219,
+        "2014-04": 219,
+        "2014-05": 219,
+        "2014-06": 219,
+        "2014-07": 219,
+        "2014-08": 219,
+        "2014-09": 219,
+        "2014-10": 219,
+        "2014-11": 219,
+        "2014-12": 219,
+        "2015-01": 219,
+        "2015-02": 219,
+        "2015-03": 219,
+        "2015-04": 219,
+        "2015-05": 219,
+        "2015-06": 219,
+        "2015-07": 219,
+        "2015-08": 219,
+        "2015-09": 219,
+        "2015-10": 219,
+        "2015-11": 219,
+        "2015-12": 219,
+        "2016-01": 219,
+        "2016-02": 227,
+        "2016-03": 227,
+        "2016-04": 227,
+        "2016-05": 227
+      },
+      "assumption": "Meses completos desde primera venta, sin huecos posteriores, según evidencia fase 1; no implica vigencia comercial probada. Test se cuenta con metadatos, sin consultar cantidades."
+    },
+    "3": {
+      "minimum_history": 3,
+      "counts": {
+        "train": 4599,
+        "validation": 2628,
+        "test": 1111
+      },
+      "monthly": {
+        "2013-01": 0,
+        "2013-02": 0,
+        "2013-03": 0,
+        "2013-04": 219,
+        "2013-05": 219,
+        "2013-06": 219,
+        "2013-07": 219,
+        "2013-08": 219,
+        "2013-09": 219,
+        "2013-10": 219,
+        "2013-11": 219,
+        "2013-12": 219,
+        "2014-01": 219,
+        "2014-02": 219,
+        "2014-03": 219,
+        "2014-04": 219,
+        "2014-05": 219,
+        "2014-06": 219,
+        "2014-07": 219,
+        "2014-08": 219,
+        "2014-09": 219,
+        "2014-10": 219,
+        "2014-11": 219,
+        "2014-12": 219,
+        "2015-01": 219,
+        "2015-02": 219,
+        "2015-03": 219,
+        "2015-04": 219,
+        "2015-05": 219,
+        "2015-06": 219,
+        "2015-07": 219,
+        "2015-08": 219,
+        "2015-09": 219,
+        "2015-10": 219,
+        "2015-11": 219,
+        "2015-12": 219,
+        "2016-01": 219,
+        "2016-02": 219,
+        "2016-03": 219,
+        "2016-04": 227,
+        "2016-05": 227
+      },
+      "assumption": "Meses completos desde primera venta, sin huecos posteriores, según evidencia fase 1; no implica vigencia comercial probada. Test se cuenta con metadatos, sin consultar cantidades."
+    },
+    "6": {
+      "minimum_history": 6,
+      "counts": {
+        "train": 3942,
+        "validation": 2628,
+        "test": 1095
+      },
+      "monthly": {
+        "2013-01": 0,
+        "2013-02": 0,
+        "2013-03": 0,
+        "2013-04": 0,
+        "2013-05": 0,
+        "2013-06": 0,
+        "2013-07": 219,
+        "2013-08": 219,
+        "2013-09": 219,
+        "2013-10": 219,
+        "2013-11": 219,
+        "2013-12": 219,
+        "2014-01": 219,
+        "2014-02": 219,
+        "2014-03": 219,
+        "2014-04": 219,
+        "2014-05": 219,
+        "2014-06": 219,
+        "2014-07": 219,
+        "2014-08": 219,
+        "2014-09": 219,
+        "2014-10": 219,
+        "2014-11": 219,
+        "2014-12": 219,
+        "2015-01": 219,
+        "2015-02": 219,
+        "2015-03": 219,
+        "2015-04": 219,
+        "2015-05": 219,
+        "2015-06": 219,
+        "2015-07": 219,
+        "2015-08": 219,
+        "2015-09": 219,
+        "2015-10": 219,
+        "2015-11": 219,
+        "2015-12": 219,
+        "2016-01": 219,
+        "2016-02": 219,
+        "2016-03": 219,
+        "2016-04": 219,
+        "2016-05": 219
+      },
+      "assumption": "Meses completos desde primera venta, sin huecos posteriores, según evidencia fase 1; no implica vigencia comercial probada. Test se cuenta con metadatos, sin consultar cantidades."
+    },
+    "12": {
+      "minimum_history": 12,
+      "counts": {
+        "train": 2628,
+        "validation": 2628,
+        "test": 1095
+      },
+      "monthly": {
+        "2013-01": 0,
+        "2013-02": 0,
+        "2013-03": 0,
+        "2013-04": 0,
+        "2013-05": 0,
+        "2013-06": 0,
+        "2013-07": 0,
+        "2013-08": 0,
+        "2013-09": 0,
+        "2013-10": 0,
+        "2013-11": 0,
+        "2013-12": 0,
+        "2014-01": 219,
+        "2014-02": 219,
+        "2014-03": 219,
+        "2014-04": 219,
+        "2014-05": 219,
+        "2014-06": 219,
+        "2014-07": 219,
+        "2014-08": 219,
+        "2014-09": 219,
+        "2014-10": 219,
+        "2014-11": 219,
+        "2014-12": 219,
+        "2015-01": 219,
+        "2015-02": 219,
+        "2015-03": 219,
+        "2015-04": 219,
+        "2015-05": 219,
+        "2015-06": 219,
+        "2015-07": 219,
+        "2015-08": 219,
+        "2015-09": 219,
+        "2015-10": 219,
+        "2015-11": 219,
+        "2015-12": 219,
+        "2016-01": 219,
+        "2016-02": 219,
+        "2016-03": 219,
+        "2016-04": 219,
+        "2016-05": 219
+      },
+      "assumption": "Meses completos desde primera venta, sin huecos posteriores, según evidencia fase 1; no implica vigencia comercial probada. Test se cuenta con metadatos, sin consultar cantidades."
+    }
+  },
+  "A_global_median": {
+    "train": {
+      "n": 4599,
+      "products": 219,
+      "positive": 2299,
+      "negative": 2300,
+      "positive_pct": 49.98912807131985,
+      "all_positive_products": 100,
+      "all_negative_products": 19,
+      "product_positive_pct_quantiles": {
+        "0.0": 0.0,
+        "0.25": 4.761904761904762,
+        "0.5": 19.047619047619047,
+        "0.75": 100.0,
+        "1.0": 100.0
+      },
+      "monthly": {
+        "2013-04": {
+          "n": 219,
+          "positive": 103,
+          "positive_pct": 47.03196347031963
+        },
+        "2013-05": {
+          "n": 219,
+          "positive": 110,
+          "positive_pct": 50.2283105022831
+        },
+        "2013-06": {
+          "n": 219,
+          "positive": 106,
+          "positive_pct": 48.401826484018265
+        },
+        "2013-07": {
+          "n": 219,
+          "positive": 119,
+          "positive_pct": 54.337899543378995
+        },
+        "2013-08": {
+          "n": 219,
+          "positive": 103,
+          "positive_pct": 47.03196347031963
+        },
+        "2013-09": {
+          "n": 219,
+          "positive": 105,
+          "positive_pct": 47.94520547945205
+        },
+        "2013-10": {
+          "n": 219,
+          "positive": 106,
+          "positive_pct": 48.401826484018265
+        },
+        "2013-11": {
+          "n": 219,
+          "positive": 107,
+          "positive_pct": 48.858447488584474
+        },
+        "2013-12": {
+          "n": 219,
+          "positive": 103,
+          "positive_pct": 47.03196347031963
+        },
+        "2014-01": {
+          "n": 219,
+          "positive": 111,
+          "positive_pct": 50.68493150684932
+        },
+        "2014-02": {
+          "n": 219,
+          "positive": 100,
+          "positive_pct": 45.662100456621005
+        },
+        "2014-03": {
+          "n": 219,
+          "positive": 105,
+          "positive_pct": 47.94520547945205
+        },
+        "2014-04": {
+          "n": 219,
+          "positive": 110,
+          "positive_pct": 50.2283105022831
+        },
+        "2014-05": {
+          "n": 219,
+          "positive": 116,
+          "positive_pct": 52.96803652968036
+        },
+        "2014-06": {
+          "n": 219,
+          "positive": 118,
+          "positive_pct": 53.88127853881278
+        },
+        "2014-07": {
+          "n": 219,
+          "positive": 124,
+          "positive_pct": 56.62100456621004
+        },
+        "2014-08": {
+          "n": 219,
+          "positive": 106,
+          "positive_pct": 48.401826484018265
+        },
+        "2014-09": {
+          "n": 219,
+          "positive": 106,
+          "positive_pct": 48.401826484018265
+        },
+        "2014-10": {
+          "n": 219,
+          "positive": 121,
+          "positive_pct": 55.25114155251142
+        },
+        "2014-11": {
+          "n": 219,
+          "positive": 102,
+          "positive_pct": 46.57534246575342
+        },
+        "2014-12": {
+          "n": 219,
+          "positive": 118,
+          "positive_pct": 53.88127853881278
+        }
+      },
+      "per_product": {
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 3XL": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 3XS": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 4XL": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 5XL": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 6XL": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 7XL": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) L": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) M": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) S": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) XL": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) XS": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) XXL": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) XXS": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 3XL": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 3XS": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 4XL": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 5XL": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 6XL": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 7XL": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) L": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) M": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) S": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) XL": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) XS": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) XXL": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) XXS": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "10 mm Anti static bubble wrap (Blue) 10m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "10 mm Anti static bubble wrap (Blue) 20m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "10 mm Anti static bubble wrap (Blue) 50m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "10 mm Double sided bubble wrap 10m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "10 mm Double sided bubble wrap 20m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "10 mm Double sided bubble wrap 50m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "20 mm Anti static bubble wrap (Blue) 10m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "20 mm Anti static bubble wrap (Blue) 20m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "20 mm Anti static bubble wrap (Blue) 50m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "20 mm Double sided bubble wrap 10m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "20 mm Double sided bubble wrap 20m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "20 mm Double sided bubble wrap 50m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "3 kg Courier post bag (White) 300x190x95mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "32 mm Anti static bubble wrap (Blue) 10m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "32 mm Anti static bubble wrap (Blue) 20m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "32 mm Anti static bubble wrap (Blue) 50m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "32 mm Double sided bubble wrap 10m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "32 mm Double sided bubble wrap 20m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "32 mm Double sided bubble wrap 50m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Air cushion film 200mmx100mm 325m": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Air cushion film 200mmx200mm 325m": {
+          "n": 21,
+          "positive": 4,
+          "positive_pct": 19.047619047619047
+        },
+        "Air cushion machine (Blue)": {
+          "n": 21,
+          "positive": 4,
+          "positive_pct": 19.047619047619047
+        },
+        "Alien officer hoodie (Black) 3XL": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Alien officer hoodie (Black) 4XL": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "Alien officer hoodie (Black) 5XL": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Alien officer hoodie (Black) XL": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Alien officer hoodie (Black) XXL": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "Animal with big feet slippers (Brown) L": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Animal with big feet slippers (Brown) M": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Animal with big feet slippers (Brown) S": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Animal with big feet slippers (Brown) XL": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Black and orange fragile despatch tape 48mmx100m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Black and orange fragile despatch tape 48mmx75m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Black and orange glass with care despatch tape  48mmx100m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Black and orange glass with care despatch tape 48mmx75m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Black and orange handle with care despatch tape  48mmx100m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Black and orange handle with care despatch tape  48mmx75m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Black and orange this way up despatch tape  48mmx100m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Black and orange this way up despatch tape 48mmx75m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Black and yellow heavy despatch tape  48mmx75m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Black and yellow heavy despatch tape 48mmx100m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Bubblewrap dispenser (Black) 1.5m": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "Bubblewrap dispenser (Blue) 1.5m": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Bubblewrap dispenser (Red) 1.5m": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "Clear packaging tape 48mmx100m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Clear packaging tape 48mmx75m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "DBA joke mug - I will get you in order (Black)": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "DBA joke mug - I will get you in order (White)": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "DBA joke mug - SELECT caffeine FROM mug (Black)": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "DBA joke mug - SELECT caffeine FROM mug (White)": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "DBA joke mug - daaaaaa-ta (Black)": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "DBA joke mug - daaaaaa-ta (White)": {
+          "n": 21,
+          "positive": 4,
+          "positive_pct": 19.047619047619047
+        },
+        "DBA joke mug - it depends (Black)": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "DBA joke mug - it depends (White)": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "DBA joke mug - mind if I join you? (Black)": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "DBA joke mug - mind if I join you? (White)": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "DBA joke mug - two types of DBAs (Black)": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "DBA joke mug - two types of DBAs (White)": {
+          "n": 21,
+          "positive": 5,
+          "positive_pct": 23.809523809523807
+        },
+        "DBA joke mug - you might be a DBA if (Black)": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "DBA joke mug - you might be a DBA if (White)": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Developer joke mug - (hip, hip, array) (Black)": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "Developer joke mug - (hip, hip, array) (White)": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Developer joke mug - Oct 31 = Dec 25 (Black)": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Developer joke mug - Oct 31 = Dec 25 (White)": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "Developer joke mug - a foo walks into a bar (Black)": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "Developer joke mug - a foo walks into a bar (White)": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Developer joke mug - fun was unexpected at this time (Black)": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "Developer joke mug - fun was unexpected at this time (White)": {
+          "n": 21,
+          "positive": 4,
+          "positive_pct": 19.047619047619047
+        },
+        "Developer joke mug - inheritance is the OO way to become wealthy (Black)": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Developer joke mug - inheritance is the OO way to become wealthy (White)": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Developer joke mug - old C developers never die (Black)": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Developer joke mug - old C developers never die (White)": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Developer joke mug - that's a hardware problem (Black)": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Developer joke mug - that's a hardware problem (White)": {
+          "n": 21,
+          "positive": 4,
+          "positive_pct": 19.047619047619047
+        },
+        "Developer joke mug - there are 10 types of people in the world (Black)": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Developer joke mug - there are 10 types of people in the world (White)": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Developer joke mug - this code was generated by a tool (Black)": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Developer joke mug - this code was generated by a tool (White)": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "Developer joke mug - understanding recursion requires understanding recursion (Black)": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Developer joke mug - understanding recursion requires understanding recursion (White)": {
+          "n": 21,
+          "positive": 4,
+          "positive_pct": 19.047619047619047
+        },
+        "Developer joke mug - when your hammer is C++ (Black)": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Developer joke mug - when your hammer is C++ (White)": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Dinosaur battery-powered slippers (Green) L": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Dinosaur battery-powered slippers (Green) M": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Dinosaur battery-powered slippers (Green) S": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "Dinosaur battery-powered slippers (Green) XL": {
+          "n": 21,
+          "positive": 4,
+          "positive_pct": 19.047619047619047
+        },
+        "Express post box 5kg (White) 350x280x130mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Furry animal socks (Pink) L": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Furry animal socks (Pink) M": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Furry animal socks (Pink) S": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Furry animal socks (Pink) XL": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Furry gorilla with big eyes slippers (Black) L": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Furry gorilla with big eyes slippers (Black) M": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Furry gorilla with big eyes slippers (Black) S": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Furry gorilla with big eyes slippers (Black) XL": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Halloween skull mask (Gray) L": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Halloween skull mask (Gray) M": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Halloween skull mask (Gray) S": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Halloween skull mask (Gray) XL": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Halloween zombie mask (Light Brown) L": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Halloween zombie mask (Light Brown) M": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Halloween zombie mask (Light Brown) S": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Halloween zombie mask (Light Brown) XL": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "IT joke mug - hardware: part of the computer that can be kicked (Black)": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "IT joke mug - hardware: part of the computer that can be kicked (White)": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "IT joke mug - keyboard not found … press F1 to continue (Black)": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "IT joke mug - keyboard not found … press F1 to continue (White)": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "IT joke mug - that behavior is by design (Black)": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "IT joke mug - that behavior is by design (White)": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Large  replacement blades 18mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Large sized bubblewrap roll 50m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Medium sized bubblewrap roll 20m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Office cube periscope (Black)": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Ogre battery-powered slippers (Green) L": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Ogre battery-powered slippers (Green) M": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Ogre battery-powered slippers (Green) S": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "Ogre battery-powered slippers (Green) XL": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Pack of 12 action figures (female)": {
+          "n": 21,
+          "positive": 4,
+          "positive_pct": 19.047619047619047
+        },
+        "Pack of 12 action figures (male)": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "Pack of 12 action figures (variety)": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Packing knife with metal insert blade (Yellow) 18mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Packing knife with metal insert blade (Yellow) 9mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Permanent marker black 5mm nib (Black) 5mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Permanent marker blue 5mm nib (Blue) 5mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Permanent marker red 5mm nib (Red) 5mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Plush shark slippers (Gray) L": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "Plush shark slippers (Gray) M": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "Plush shark slippers (Gray) S": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Plush shark slippers (Gray) XL": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "RC big wheel monster truck with remote control (Black) 1/50 scale": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "RC toy sedan car with remote control (Black) 1/50 scale": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "RC toy sedan car with remote control (Blue) 1/50 scale": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "RC toy sedan car with remote control (Green) 1/50 scale": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "RC toy sedan car with remote control (Pink) 1/50 scale": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "RC toy sedan car with remote control (Red) 1/50 scale": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "RC toy sedan car with remote control (Yellow) 1/50 scale": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "RC vintage American toy coupe with remote control (Black) 1/50 scale": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "RC vintage American toy coupe with remote control (Red) 1/50 scale": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Red and white urgent  heavy despatch tape  48mmx100m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Red and white urgent despatch tape 48mmx75m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Ride on big wheel monster truck (Black) 1/12 scale": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Ride on toy sedan car (Black) 1/12 scale": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Ride on toy sedan car (Blue) 1/12 scale": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Ride on toy sedan car (Green) 1/12 scale": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "Ride on toy sedan car (Pink) 1/12 scale": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Ride on toy sedan car (Red) 1/12 scale": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Ride on toy sedan car (Yellow) 1/12 scale": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "Ride on vintage American toy coupe (Black) 1/12 scale": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Ride on vintage American toy coupe (Red) 1/12 scale": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Shipping carton (Brown) 229x229x229mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Shipping carton (Brown) 279x254x217mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Shipping carton (Brown) 305x305x305mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Shipping carton (Brown) 356x229x229mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Shipping carton (Brown) 356x356x279mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Shipping carton (Brown) 413x285x187mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Shipping carton (Brown) 457x279x279mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Shipping carton (Brown) 457x457x457mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Shipping carton (Brown) 480x270x320mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Shipping carton (Brown) 500x310x310mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Small 9mm replacement blades 9mm": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Small sized bubblewrap roll 10m": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Superhero action jacket (Blue) 3XL": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "Superhero action jacket (Blue) 3XS": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Superhero action jacket (Blue) 4XL": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "Superhero action jacket (Blue) 5XL": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Superhero action jacket (Blue) L": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Superhero action jacket (Blue) M": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Superhero action jacket (Blue) S": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "Superhero action jacket (Blue) XL": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "Superhero action jacket (Blue) XS": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "Superhero action jacket (Blue) XXL": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "Superhero action jacket (Blue) XXS": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "Tape dispenser (Black)": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Tape dispenser (Blue)": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Tape dispenser (Red)": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "USB food flash drive - banana": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "USB food flash drive - chocolate bar": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "USB food flash drive - cookie": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "USB food flash drive - dessert 10 drive variety pack": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "USB food flash drive - dim sum 10 drive variety pack": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "USB food flash drive - donut": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "USB food flash drive - fortune cookie": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "USB food flash drive - hamburger": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "USB food flash drive - hot dog": {
+          "n": 21,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "USB food flash drive - pizza slice": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "USB food flash drive - shrimp cocktail": {
+          "n": 21,
+          "positive": 4,
+          "positive_pct": 19.047619047619047
+        },
+        "USB food flash drive - sushi roll": {
+          "n": 21,
+          "positive": 3,
+          "positive_pct": 14.285714285714285
+        },
+        "USB missile launcher (Green)": {
+          "n": 21,
+          "positive": 2,
+          "positive_pct": 9.523809523809524
+        },
+        "USB rocket launcher (Gray)": {
+          "n": 21,
+          "positive": 1,
+          "positive_pct": 4.761904761904762
+        },
+        "Void fill 100 L bag (White) 100L": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Void fill 200 L bag (White) 200L": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Void fill 300 L bag (White) 300L": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        },
+        "Void fill 400 L bag (White) 400L": {
+          "n": 21,
+          "positive": 21,
+          "positive_pct": 100.0
+        }
+      }
+    },
+    "validation": {
+      "n": 2628,
+      "products": 219,
+      "positive": 1492,
+      "negative": 1136,
+      "positive_pct": 56.77321156773212,
+      "all_positive_products": 100,
+      "all_negative_products": 10,
+      "product_positive_pct_quantiles": {
+        "0.0": 0.0,
+        "0.25": 16.666666666666664,
+        "0.5": 41.66666666666667,
+        "0.75": 100.0,
+        "1.0": 100.0
+      },
+      "monthly": {
+        "2015-01": {
+          "n": 219,
+          "positive": 117,
+          "positive_pct": 53.42465753424658
+        },
+        "2015-02": {
+          "n": 219,
+          "positive": 115,
+          "positive_pct": 52.51141552511416
+        },
+        "2015-03": {
+          "n": 219,
+          "positive": 119,
+          "positive_pct": 54.337899543378995
+        },
+        "2015-04": {
+          "n": 219,
+          "positive": 138,
+          "positive_pct": 63.013698630136986
+        },
+        "2015-05": {
+          "n": 219,
+          "positive": 121,
+          "positive_pct": 55.25114155251142
+        },
+        "2015-06": {
+          "n": 219,
+          "positive": 128,
+          "positive_pct": 58.44748858447488
+        },
+        "2015-07": {
+          "n": 219,
+          "positive": 153,
+          "positive_pct": 69.86301369863014
+        },
+        "2015-08": {
+          "n": 219,
+          "positive": 112,
+          "positive_pct": 51.141552511415526
+        },
+        "2015-09": {
+          "n": 219,
+          "positive": 129,
+          "positive_pct": 58.9041095890411
+        },
+        "2015-10": {
+          "n": 219,
+          "positive": 124,
+          "positive_pct": 56.62100456621004
+        },
+        "2015-11": {
+          "n": 219,
+          "positive": 115,
+          "positive_pct": 52.51141552511416
+        },
+        "2015-12": {
+          "n": 219,
+          "positive": 121,
+          "positive_pct": 55.25114155251142
+        }
+      },
+      "per_product": {
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 3XL": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 3XS": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 4XL": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 5XL": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 6XL": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 7XL": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) L": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) M": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) S": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) XL": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) XS": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) XXL": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) XXS": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 3XL": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 3XS": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 4XL": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 5XL": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 6XL": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 7XL": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) L": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) M": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) S": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) XL": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) XS": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) XXL": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) XXS": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "10 mm Anti static bubble wrap (Blue) 10m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "10 mm Anti static bubble wrap (Blue) 20m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "10 mm Anti static bubble wrap (Blue) 50m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "10 mm Double sided bubble wrap 10m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "10 mm Double sided bubble wrap 20m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "10 mm Double sided bubble wrap 50m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "20 mm Anti static bubble wrap (Blue) 10m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "20 mm Anti static bubble wrap (Blue) 20m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "20 mm Anti static bubble wrap (Blue) 50m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "20 mm Double sided bubble wrap 10m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "20 mm Double sided bubble wrap 20m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "20 mm Double sided bubble wrap 50m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "3 kg Courier post bag (White) 300x190x95mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "32 mm Anti static bubble wrap (Blue) 10m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "32 mm Anti static bubble wrap (Blue) 20m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "32 mm Anti static bubble wrap (Blue) 50m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "32 mm Double sided bubble wrap 10m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "32 mm Double sided bubble wrap 20m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "32 mm Double sided bubble wrap 50m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Air cushion film 200mmx100mm 325m": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Air cushion film 200mmx200mm 325m": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Air cushion machine (Blue)": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "Alien officer hoodie (Black) 3XL": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Alien officer hoodie (Black) 4XL": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "Alien officer hoodie (Black) 5XL": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Alien officer hoodie (Black) XL": {
+          "n": 12,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "Alien officer hoodie (Black) XXL": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Animal with big feet slippers (Brown) L": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Animal with big feet slippers (Brown) M": {
+          "n": 12,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "Animal with big feet slippers (Brown) S": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Animal with big feet slippers (Brown) XL": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Black and orange fragile despatch tape 48mmx100m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Black and orange fragile despatch tape 48mmx75m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Black and orange glass with care despatch tape  48mmx100m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Black and orange glass with care despatch tape 48mmx75m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Black and orange handle with care despatch tape  48mmx100m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Black and orange handle with care despatch tape  48mmx75m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Black and orange this way up despatch tape  48mmx100m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Black and orange this way up despatch tape 48mmx75m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Black and yellow heavy despatch tape  48mmx75m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Black and yellow heavy despatch tape 48mmx100m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Bubblewrap dispenser (Black) 1.5m": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Bubblewrap dispenser (Blue) 1.5m": {
+          "n": 12,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "Bubblewrap dispenser (Red) 1.5m": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Clear packaging tape 48mmx100m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Clear packaging tape 48mmx75m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "DBA joke mug - I will get you in order (Black)": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "DBA joke mug - I will get you in order (White)": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "DBA joke mug - SELECT caffeine FROM mug (Black)": {
+          "n": 12,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "DBA joke mug - SELECT caffeine FROM mug (White)": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "DBA joke mug - daaaaaa-ta (Black)": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "DBA joke mug - daaaaaa-ta (White)": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "DBA joke mug - it depends (Black)": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "DBA joke mug - it depends (White)": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "DBA joke mug - mind if I join you? (Black)": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "DBA joke mug - mind if I join you? (White)": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "DBA joke mug - two types of DBAs (Black)": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "DBA joke mug - two types of DBAs (White)": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "DBA joke mug - you might be a DBA if (Black)": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "DBA joke mug - you might be a DBA if (White)": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Developer joke mug - (hip, hip, array) (Black)": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "Developer joke mug - (hip, hip, array) (White)": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Developer joke mug - Oct 31 = Dec 25 (Black)": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "Developer joke mug - Oct 31 = Dec 25 (White)": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "Developer joke mug - a foo walks into a bar (Black)": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "Developer joke mug - a foo walks into a bar (White)": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "Developer joke mug - fun was unexpected at this time (Black)": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Developer joke mug - fun was unexpected at this time (White)": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Developer joke mug - inheritance is the OO way to become wealthy (Black)": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "Developer joke mug - inheritance is the OO way to become wealthy (White)": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Developer joke mug - old C developers never die (Black)": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Developer joke mug - old C developers never die (White)": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "Developer joke mug - that's a hardware problem (Black)": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Developer joke mug - that's a hardware problem (White)": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Developer joke mug - there are 10 types of people in the world (Black)": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Developer joke mug - there are 10 types of people in the world (White)": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Developer joke mug - this code was generated by a tool (Black)": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "Developer joke mug - this code was generated by a tool (White)": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Developer joke mug - understanding recursion requires understanding recursion (Black)": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "Developer joke mug - understanding recursion requires understanding recursion (White)": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "Developer joke mug - when your hammer is C++ (Black)": {
+          "n": 12,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "Developer joke mug - when your hammer is C++ (White)": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Dinosaur battery-powered slippers (Green) L": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Dinosaur battery-powered slippers (Green) M": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Dinosaur battery-powered slippers (Green) S": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "Dinosaur battery-powered slippers (Green) XL": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "Express post box 5kg (White) 350x280x130mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Furry animal socks (Pink) L": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Furry animal socks (Pink) M": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Furry animal socks (Pink) S": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Furry animal socks (Pink) XL": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Furry gorilla with big eyes slippers (Black) L": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "Furry gorilla with big eyes slippers (Black) M": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Furry gorilla with big eyes slippers (Black) S": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "Furry gorilla with big eyes slippers (Black) XL": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Halloween skull mask (Gray) L": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Halloween skull mask (Gray) M": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Halloween skull mask (Gray) S": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Halloween skull mask (Gray) XL": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Halloween zombie mask (Light Brown) L": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Halloween zombie mask (Light Brown) M": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Halloween zombie mask (Light Brown) S": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Halloween zombie mask (Light Brown) XL": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "IT joke mug - hardware: part of the computer that can be kicked (Black)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "IT joke mug - hardware: part of the computer that can be kicked (White)": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "IT joke mug - keyboard not found … press F1 to continue (Black)": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "IT joke mug - keyboard not found … press F1 to continue (White)": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "IT joke mug - that behavior is by design (Black)": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "IT joke mug - that behavior is by design (White)": {
+          "n": 12,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "Large  replacement blades 18mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Large sized bubblewrap roll 50m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Medium sized bubblewrap roll 20m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Office cube periscope (Black)": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Ogre battery-powered slippers (Green) L": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Ogre battery-powered slippers (Green) M": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Ogre battery-powered slippers (Green) S": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Ogre battery-powered slippers (Green) XL": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Pack of 12 action figures (female)": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Pack of 12 action figures (male)": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Pack of 12 action figures (variety)": {
+          "n": 12,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "Packing knife with metal insert blade (Yellow) 18mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Packing knife with metal insert blade (Yellow) 9mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Permanent marker black 5mm nib (Black) 5mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Permanent marker blue 5mm nib (Blue) 5mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Permanent marker red 5mm nib (Red) 5mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Plush shark slippers (Gray) L": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "Plush shark slippers (Gray) M": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Plush shark slippers (Gray) S": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "Plush shark slippers (Gray) XL": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "RC big wheel monster truck with remote control (Black) 1/50 scale": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "RC toy sedan car with remote control (Black) 1/50 scale": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "RC toy sedan car with remote control (Blue) 1/50 scale": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "RC toy sedan car with remote control (Green) 1/50 scale": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "RC toy sedan car with remote control (Pink) 1/50 scale": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "RC toy sedan car with remote control (Red) 1/50 scale": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "RC toy sedan car with remote control (Yellow) 1/50 scale": {
+          "n": 12,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "RC vintage American toy coupe with remote control (Black) 1/50 scale": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "RC vintage American toy coupe with remote control (Red) 1/50 scale": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Red and white urgent  heavy despatch tape  48mmx100m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Red and white urgent despatch tape 48mmx75m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Ride on big wheel monster truck (Black) 1/12 scale": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "Ride on toy sedan car (Black) 1/12 scale": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "Ride on toy sedan car (Blue) 1/12 scale": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Ride on toy sedan car (Green) 1/12 scale": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "Ride on toy sedan car (Pink) 1/12 scale": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Ride on toy sedan car (Red) 1/12 scale": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "Ride on toy sedan car (Yellow) 1/12 scale": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Ride on vintage American toy coupe (Black) 1/12 scale": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Ride on vintage American toy coupe (Red) 1/12 scale": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Shipping carton (Brown) 229x229x229mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Shipping carton (Brown) 279x254x217mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Shipping carton (Brown) 305x305x305mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Shipping carton (Brown) 356x229x229mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Shipping carton (Brown) 356x356x279mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Shipping carton (Brown) 413x285x187mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Shipping carton (Brown) 457x279x279mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Shipping carton (Brown) 457x457x457mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Shipping carton (Brown) 480x270x320mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Shipping carton (Brown) 500x310x310mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Small 9mm replacement blades 9mm": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Small sized bubblewrap roll 10m": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Superhero action jacket (Blue) 3XL": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Superhero action jacket (Blue) 3XS": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "Superhero action jacket (Blue) 4XL": {
+          "n": 12,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "Superhero action jacket (Blue) 5XL": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "Superhero action jacket (Blue) L": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "Superhero action jacket (Blue) M": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Superhero action jacket (Blue) S": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "Superhero action jacket (Blue) XL": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "Superhero action jacket (Blue) XS": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "Superhero action jacket (Blue) XXL": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "Superhero action jacket (Blue) XXS": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "Tape dispenser (Black)": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Tape dispenser (Blue)": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Tape dispenser (Red)": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "USB food flash drive - banana": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "USB food flash drive - chocolate bar": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "USB food flash drive - cookie": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "USB food flash drive - dessert 10 drive variety pack": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "USB food flash drive - dim sum 10 drive variety pack": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "USB food flash drive - donut": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "USB food flash drive - fortune cookie": {
+          "n": 12,
+          "positive": 2,
+          "positive_pct": 16.666666666666664
+        },
+        "USB food flash drive - hamburger": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "USB food flash drive - hot dog": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "USB food flash drive - pizza slice": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "USB food flash drive - shrimp cocktail": {
+          "n": 12,
+          "positive": 1,
+          "positive_pct": 8.333333333333332
+        },
+        "USB food flash drive - sushi roll": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "USB missile launcher (Green)": {
+          "n": 12,
+          "positive": 0,
+          "positive_pct": 0.0
+        },
+        "USB rocket launcher (Gray)": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "Void fill 100 L bag (White) 100L": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Void fill 200 L bag (White) 200L": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Void fill 300 L bag (White) 300L": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        },
+        "Void fill 400 L bag (White) 400L": {
+          "n": 12,
+          "positive": 12,
+          "positive_pct": 100.0
+        }
+      }
+    },
+    "validation_minus_train_pp": 6.784083496412272,
+    "threshold": 182.0,
+    "ties": {
+      "train": 15,
+      "validation": 10
+    }
+  },
+  "B_trailing_3_median": {
+    "train": {
+      "n": 4599,
+      "products": 219,
+      "positive": 2382,
+      "negative": 2217,
+      "positive_pct": 51.79386823222439,
+      "all_positive_products": 0,
+      "all_negative_products": 0,
+      "product_positive_pct_quantiles": {
+        "0.0": 33.33333333333333,
+        "0.25": 47.61904761904761,
+        "0.5": 52.38095238095239,
+        "0.75": 57.14285714285714,
+        "1.0": 71.42857142857143
+      },
+      "monthly": {
+        "2013-04": {
+          "n": 219,
+          "positive": 141,
+          "positive_pct": 64.38356164383562
+        },
+        "2013-05": {
+          "n": 219,
+          "positive": 162,
+          "positive_pct": 73.97260273972603
+        },
+        "2013-06": {
+          "n": 219,
+          "positive": 93,
+          "positive_pct": 42.465753424657535
+        },
+        "2013-07": {
+          "n": 219,
+          "positive": 128,
+          "positive_pct": 58.44748858447488
+        },
+        "2013-08": {
+          "n": 219,
+          "positive": 61,
+          "positive_pct": 27.85388127853881
+        },
+        "2013-09": {
+          "n": 219,
+          "positive": 86,
+          "positive_pct": 39.26940639269406
+        },
+        "2013-10": {
+          "n": 219,
+          "positive": 108,
+          "positive_pct": 49.31506849315068
+        },
+        "2013-11": {
+          "n": 219,
+          "positive": 101,
+          "positive_pct": 46.118721461187214
+        },
+        "2013-12": {
+          "n": 219,
+          "positive": 112,
+          "positive_pct": 51.141552511415526
+        },
+        "2014-01": {
+          "n": 219,
+          "positive": 149,
+          "positive_pct": 68.0365296803653
+        },
+        "2014-02": {
+          "n": 219,
+          "positive": 81,
+          "positive_pct": 36.986301369863014
+        },
+        "2014-03": {
+          "n": 219,
+          "positive": 111,
+          "positive_pct": 50.68493150684932
+        },
+        "2014-04": {
+          "n": 219,
+          "positive": 135,
+          "positive_pct": 61.64383561643836
+        },
+        "2014-05": {
+          "n": 219,
+          "positive": 150,
+          "positive_pct": 68.4931506849315
+        },
+        "2014-06": {
+          "n": 219,
+          "positive": 121,
+          "positive_pct": 55.25114155251142
+        },
+        "2014-07": {
+          "n": 219,
+          "positive": 133,
+          "positive_pct": 60.73059360730594
+        },
+        "2014-08": {
+          "n": 219,
+          "positive": 62,
+          "positive_pct": 28.31050228310502
+        },
+        "2014-09": {
+          "n": 219,
+          "positive": 80,
+          "positive_pct": 36.5296803652968
+        },
+        "2014-10": {
+          "n": 219,
+          "positive": 144,
+          "positive_pct": 65.75342465753424
+        },
+        "2014-11": {
+          "n": 219,
+          "positive": 93,
+          "positive_pct": 42.465753424657535
+        },
+        "2014-12": {
+          "n": 219,
+          "positive": 131,
+          "positive_pct": 59.817351598173516
+        }
+      },
+      "per_product": {
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 3XL": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 3XS": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 4XL": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 5XL": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 6XL": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 7XL": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) L": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) M": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) S": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) XL": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) XS": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) XXL": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) XXS": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 3XL": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 3XS": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 4XL": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 5XL": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 6XL": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 7XL": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) L": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) M": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) S": {
+          "n": 21,
+          "positive": 7,
+          "positive_pct": 33.33333333333333
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) XL": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) XS": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) XXL": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) XXS": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "10 mm Anti static bubble wrap (Blue) 10m": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "10 mm Anti static bubble wrap (Blue) 20m": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "10 mm Anti static bubble wrap (Blue) 50m": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "10 mm Double sided bubble wrap 10m": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "10 mm Double sided bubble wrap 20m": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "10 mm Double sided bubble wrap 50m": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "20 mm Anti static bubble wrap (Blue) 10m": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "20 mm Anti static bubble wrap (Blue) 20m": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "20 mm Anti static bubble wrap (Blue) 50m": {
+          "n": 21,
+          "positive": 14,
+          "positive_pct": 66.66666666666666
+        },
+        "20 mm Double sided bubble wrap 10m": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "20 mm Double sided bubble wrap 20m": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "20 mm Double sided bubble wrap 50m": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "3 kg Courier post bag (White) 300x190x95mm": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "32 mm Anti static bubble wrap (Blue) 10m": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "32 mm Anti static bubble wrap (Blue) 20m": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "32 mm Anti static bubble wrap (Blue) 50m": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "32 mm Double sided bubble wrap 10m": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "32 mm Double sided bubble wrap 20m": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "32 mm Double sided bubble wrap 50m": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "Air cushion film 200mmx100mm 325m": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Air cushion film 200mmx200mm 325m": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Air cushion machine (Blue)": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "Alien officer hoodie (Black) 3XL": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Alien officer hoodie (Black) 4XL": {
+          "n": 21,
+          "positive": 14,
+          "positive_pct": 66.66666666666666
+        },
+        "Alien officer hoodie (Black) 5XL": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Alien officer hoodie (Black) XL": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Alien officer hoodie (Black) XXL": {
+          "n": 21,
+          "positive": 7,
+          "positive_pct": 33.33333333333333
+        },
+        "Animal with big feet slippers (Brown) L": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Animal with big feet slippers (Brown) M": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Animal with big feet slippers (Brown) S": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Animal with big feet slippers (Brown) XL": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Black and orange fragile despatch tape 48mmx100m": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Black and orange fragile despatch tape 48mmx75m": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Black and orange glass with care despatch tape  48mmx100m": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Black and orange glass with care despatch tape 48mmx75m": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "Black and orange handle with care despatch tape  48mmx100m": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Black and orange handle with care despatch tape  48mmx75m": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Black and orange this way up despatch tape  48mmx100m": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Black and orange this way up despatch tape 48mmx75m": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Black and yellow heavy despatch tape  48mmx75m": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "Black and yellow heavy despatch tape 48mmx100m": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Bubblewrap dispenser (Black) 1.5m": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "Bubblewrap dispenser (Blue) 1.5m": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Bubblewrap dispenser (Red) 1.5m": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Clear packaging tape 48mmx100m": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Clear packaging tape 48mmx75m": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "DBA joke mug - I will get you in order (Black)": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "DBA joke mug - I will get you in order (White)": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "DBA joke mug - SELECT caffeine FROM mug (Black)": {
+          "n": 21,
+          "positive": 14,
+          "positive_pct": 66.66666666666666
+        },
+        "DBA joke mug - SELECT caffeine FROM mug (White)": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "DBA joke mug - daaaaaa-ta (Black)": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "DBA joke mug - daaaaaa-ta (White)": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "DBA joke mug - it depends (Black)": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "DBA joke mug - it depends (White)": {
+          "n": 21,
+          "positive": 8,
+          "positive_pct": 38.095238095238095
+        },
+        "DBA joke mug - mind if I join you? (Black)": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "DBA joke mug - mind if I join you? (White)": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "DBA joke mug - two types of DBAs (Black)": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "DBA joke mug - two types of DBAs (White)": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "DBA joke mug - you might be a DBA if (Black)": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "DBA joke mug - you might be a DBA if (White)": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Developer joke mug - (hip, hip, array) (Black)": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Developer joke mug - (hip, hip, array) (White)": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Developer joke mug - Oct 31 = Dec 25 (Black)": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "Developer joke mug - Oct 31 = Dec 25 (White)": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Developer joke mug - a foo walks into a bar (Black)": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Developer joke mug - a foo walks into a bar (White)": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Developer joke mug - fun was unexpected at this time (Black)": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Developer joke mug - fun was unexpected at this time (White)": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "Developer joke mug - inheritance is the OO way to become wealthy (Black)": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Developer joke mug - inheritance is the OO way to become wealthy (White)": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Developer joke mug - old C developers never die (Black)": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Developer joke mug - old C developers never die (White)": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Developer joke mug - that's a hardware problem (Black)": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Developer joke mug - that's a hardware problem (White)": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Developer joke mug - there are 10 types of people in the world (Black)": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Developer joke mug - there are 10 types of people in the world (White)": {
+          "n": 21,
+          "positive": 8,
+          "positive_pct": 38.095238095238095
+        },
+        "Developer joke mug - this code was generated by a tool (Black)": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Developer joke mug - this code was generated by a tool (White)": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Developer joke mug - understanding recursion requires understanding recursion (Black)": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Developer joke mug - understanding recursion requires understanding recursion (White)": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "Developer joke mug - when your hammer is C++ (Black)": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Developer joke mug - when your hammer is C++ (White)": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Dinosaur battery-powered slippers (Green) L": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Dinosaur battery-powered slippers (Green) M": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Dinosaur battery-powered slippers (Green) S": {
+          "n": 21,
+          "positive": 8,
+          "positive_pct": 38.095238095238095
+        },
+        "Dinosaur battery-powered slippers (Green) XL": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Express post box 5kg (White) 350x280x130mm": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Furry animal socks (Pink) L": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Furry animal socks (Pink) M": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Furry animal socks (Pink) S": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Furry animal socks (Pink) XL": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Furry gorilla with big eyes slippers (Black) L": {
+          "n": 21,
+          "positive": 8,
+          "positive_pct": 38.095238095238095
+        },
+        "Furry gorilla with big eyes slippers (Black) M": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Furry gorilla with big eyes slippers (Black) S": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Furry gorilla with big eyes slippers (Black) XL": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Halloween skull mask (Gray) L": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Halloween skull mask (Gray) M": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Halloween skull mask (Gray) S": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Halloween skull mask (Gray) XL": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Halloween zombie mask (Light Brown) L": {
+          "n": 21,
+          "positive": 8,
+          "positive_pct": 38.095238095238095
+        },
+        "Halloween zombie mask (Light Brown) M": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Halloween zombie mask (Light Brown) S": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Halloween zombie mask (Light Brown) XL": {
+          "n": 21,
+          "positive": 15,
+          "positive_pct": 71.42857142857143
+        },
+        "IT joke mug - hardware: part of the computer that can be kicked (Black)": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "IT joke mug - hardware: part of the computer that can be kicked (White)": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "IT joke mug - keyboard not found … press F1 to continue (Black)": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "IT joke mug - keyboard not found … press F1 to continue (White)": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "IT joke mug - that behavior is by design (Black)": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "IT joke mug - that behavior is by design (White)": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Large  replacement blades 18mm": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Large sized bubblewrap roll 50m": {
+          "n": 21,
+          "positive": 8,
+          "positive_pct": 38.095238095238095
+        },
+        "Medium sized bubblewrap roll 20m": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Office cube periscope (Black)": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Ogre battery-powered slippers (Green) L": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Ogre battery-powered slippers (Green) M": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "Ogre battery-powered slippers (Green) S": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Ogre battery-powered slippers (Green) XL": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Pack of 12 action figures (female)": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Pack of 12 action figures (male)": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Pack of 12 action figures (variety)": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Packing knife with metal insert blade (Yellow) 18mm": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Packing knife with metal insert blade (Yellow) 9mm": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Permanent marker black 5mm nib (Black) 5mm": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Permanent marker blue 5mm nib (Blue) 5mm": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Permanent marker red 5mm nib (Red) 5mm": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Plush shark slippers (Gray) L": {
+          "n": 21,
+          "positive": 8,
+          "positive_pct": 38.095238095238095
+        },
+        "Plush shark slippers (Gray) M": {
+          "n": 21,
+          "positive": 14,
+          "positive_pct": 66.66666666666666
+        },
+        "Plush shark slippers (Gray) S": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Plush shark slippers (Gray) XL": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "RC big wheel monster truck with remote control (Black) 1/50 scale": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "RC toy sedan car with remote control (Black) 1/50 scale": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "RC toy sedan car with remote control (Blue) 1/50 scale": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "RC toy sedan car with remote control (Green) 1/50 scale": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "RC toy sedan car with remote control (Pink) 1/50 scale": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "RC toy sedan car with remote control (Red) 1/50 scale": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "RC toy sedan car with remote control (Yellow) 1/50 scale": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "RC vintage American toy coupe with remote control (Black) 1/50 scale": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "RC vintage American toy coupe with remote control (Red) 1/50 scale": {
+          "n": 21,
+          "positive": 8,
+          "positive_pct": 38.095238095238095
+        },
+        "Red and white urgent  heavy despatch tape  48mmx100m": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Red and white urgent despatch tape 48mmx75m": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Ride on big wheel monster truck (Black) 1/12 scale": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Ride on toy sedan car (Black) 1/12 scale": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Ride on toy sedan car (Blue) 1/12 scale": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Ride on toy sedan car (Green) 1/12 scale": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "Ride on toy sedan car (Pink) 1/12 scale": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "Ride on toy sedan car (Red) 1/12 scale": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Ride on toy sedan car (Yellow) 1/12 scale": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Ride on vintage American toy coupe (Black) 1/12 scale": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Ride on vintage American toy coupe (Red) 1/12 scale": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Shipping carton (Brown) 229x229x229mm": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Shipping carton (Brown) 279x254x217mm": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Shipping carton (Brown) 305x305x305mm": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Shipping carton (Brown) 356x229x229mm": {
+          "n": 21,
+          "positive": 14,
+          "positive_pct": 66.66666666666666
+        },
+        "Shipping carton (Brown) 356x356x279mm": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Shipping carton (Brown) 413x285x187mm": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "Shipping carton (Brown) 457x279x279mm": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Shipping carton (Brown) 457x457x457mm": {
+          "n": 21,
+          "positive": 8,
+          "positive_pct": 38.095238095238095
+        },
+        "Shipping carton (Brown) 480x270x320mm": {
+          "n": 21,
+          "positive": 14,
+          "positive_pct": 66.66666666666666
+        },
+        "Shipping carton (Brown) 500x310x310mm": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "Small 9mm replacement blades 9mm": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "Small sized bubblewrap roll 10m": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Superhero action jacket (Blue) 3XL": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Superhero action jacket (Blue) 3XS": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Superhero action jacket (Blue) 4XL": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "Superhero action jacket (Blue) 5XL": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Superhero action jacket (Blue) L": {
+          "n": 21,
+          "positive": 12,
+          "positive_pct": 57.14285714285714
+        },
+        "Superhero action jacket (Blue) M": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Superhero action jacket (Blue) S": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Superhero action jacket (Blue) XL": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Superhero action jacket (Blue) XS": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Superhero action jacket (Blue) XXL": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Superhero action jacket (Blue) XXS": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Tape dispenser (Black)": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Tape dispenser (Blue)": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Tape dispenser (Red)": {
+          "n": 21,
+          "positive": 8,
+          "positive_pct": 38.095238095238095
+        },
+        "USB food flash drive - banana": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "USB food flash drive - chocolate bar": {
+          "n": 21,
+          "positive": 8,
+          "positive_pct": 38.095238095238095
+        },
+        "USB food flash drive - cookie": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "USB food flash drive - dessert 10 drive variety pack": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "USB food flash drive - dim sum 10 drive variety pack": {
+          "n": 21,
+          "positive": 9,
+          "positive_pct": 42.857142857142854
+        },
+        "USB food flash drive - donut": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "USB food flash drive - fortune cookie": {
+          "n": 21,
+          "positive": 8,
+          "positive_pct": 38.095238095238095
+        },
+        "USB food flash drive - hamburger": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "USB food flash drive - hot dog": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "USB food flash drive - pizza slice": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "USB food flash drive - shrimp cocktail": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "USB food flash drive - sushi roll": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "USB missile launcher (Green)": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "USB rocket launcher (Gray)": {
+          "n": 21,
+          "positive": 10,
+          "positive_pct": 47.61904761904761
+        },
+        "Void fill 100 L bag (White) 100L": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Void fill 200 L bag (White) 200L": {
+          "n": 21,
+          "positive": 13,
+          "positive_pct": 61.904761904761905
+        },
+        "Void fill 300 L bag (White) 300L": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        },
+        "Void fill 400 L bag (White) 400L": {
+          "n": 21,
+          "positive": 11,
+          "positive_pct": 52.38095238095239
+        }
+      }
+    },
+    "validation": {
+      "n": 2628,
+      "products": 219,
+      "positive": 1329,
+      "negative": 1299,
+      "positive_pct": 50.57077625570776,
+      "all_positive_products": 0,
+      "all_negative_products": 0,
+      "product_positive_pct_quantiles": {
+        "0.0": 25.0,
+        "0.25": 41.66666666666667,
+        "0.5": 50.0,
+        "0.75": 58.333333333333336,
+        "1.0": 75.0
+      },
+      "monthly": {
+        "2015-01": {
+          "n": 219,
+          "positive": 111,
+          "positive_pct": 50.68493150684932
+        },
+        "2015-02": {
+          "n": 219,
+          "positive": 96,
+          "positive_pct": 43.83561643835616
+        },
+        "2015-03": {
+          "n": 219,
+          "positive": 121,
+          "positive_pct": 55.25114155251142
+        },
+        "2015-04": {
+          "n": 219,
+          "positive": 155,
+          "positive_pct": 70.77625570776256
+        },
+        "2015-05": {
+          "n": 219,
+          "positive": 109,
+          "positive_pct": 49.77168949771689
+        },
+        "2015-06": {
+          "n": 219,
+          "positive": 111,
+          "positive_pct": 50.68493150684932
+        },
+        "2015-07": {
+          "n": 219,
+          "positive": 150,
+          "positive_pct": 68.4931506849315
+        },
+        "2015-08": {
+          "n": 219,
+          "positive": 61,
+          "positive_pct": 27.85388127853881
+        },
+        "2015-09": {
+          "n": 219,
+          "positive": 110,
+          "positive_pct": 50.2283105022831
+        },
+        "2015-10": {
+          "n": 219,
+          "positive": 106,
+          "positive_pct": 48.401826484018265
+        },
+        "2015-11": {
+          "n": 219,
+          "positive": 101,
+          "positive_pct": 46.118721461187214
+        },
+        "2015-12": {
+          "n": 219,
+          "positive": 98,
+          "positive_pct": 44.74885844748858
+        }
+      },
+      "per_product": {
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 3XL": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 3XS": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 4XL": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 5XL": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 6XL": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) 7XL": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) L": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) M": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) S": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) XL": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) XS": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) XXL": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (Black) XXS": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 3XL": {
+          "n": 12,
+          "positive": 8,
+          "positive_pct": 66.66666666666666
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 3XS": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 4XL": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 5XL": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 6XL": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) 7XL": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) L": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) M": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) S": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) XL": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) XS": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) XXL": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "\"The Gu\" red shirt XML tag t-shirt (White) XXS": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "10 mm Anti static bubble wrap (Blue) 10m": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "10 mm Anti static bubble wrap (Blue) 20m": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "10 mm Anti static bubble wrap (Blue) 50m": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "10 mm Double sided bubble wrap 10m": {
+          "n": 12,
+          "positive": 9,
+          "positive_pct": 75.0
+        },
+        "10 mm Double sided bubble wrap 20m": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "10 mm Double sided bubble wrap 50m": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "20 mm Anti static bubble wrap (Blue) 10m": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "20 mm Anti static bubble wrap (Blue) 20m": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "20 mm Anti static bubble wrap (Blue) 50m": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "20 mm Double sided bubble wrap 10m": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "20 mm Double sided bubble wrap 20m": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "20 mm Double sided bubble wrap 50m": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "3 kg Courier post bag (White) 300x190x95mm": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "32 mm Anti static bubble wrap (Blue) 10m": {
+          "n": 12,
+          "positive": 8,
+          "positive_pct": 66.66666666666666
+        },
+        "32 mm Anti static bubble wrap (Blue) 20m": {
+          "n": 12,
+          "positive": 8,
+          "positive_pct": 66.66666666666666
+        },
+        "32 mm Anti static bubble wrap (Blue) 50m": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "32 mm Double sided bubble wrap 10m": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "32 mm Double sided bubble wrap 20m": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "32 mm Double sided bubble wrap 50m": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Air cushion film 200mmx100mm 325m": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Air cushion film 200mmx200mm 325m": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Air cushion machine (Blue)": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Alien officer hoodie (Black) 3XL": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Alien officer hoodie (Black) 4XL": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Alien officer hoodie (Black) 5XL": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Alien officer hoodie (Black) XL": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Alien officer hoodie (Black) XXL": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Animal with big feet slippers (Brown) L": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Animal with big feet slippers (Brown) M": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Animal with big feet slippers (Brown) S": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Animal with big feet slippers (Brown) XL": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Black and orange fragile despatch tape 48mmx100m": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Black and orange fragile despatch tape 48mmx75m": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Black and orange glass with care despatch tape  48mmx100m": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Black and orange glass with care despatch tape 48mmx75m": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Black and orange handle with care despatch tape  48mmx100m": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Black and orange handle with care despatch tape  48mmx75m": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Black and orange this way up despatch tape  48mmx100m": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Black and orange this way up despatch tape 48mmx75m": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Black and yellow heavy despatch tape  48mmx75m": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Black and yellow heavy despatch tape 48mmx100m": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Bubblewrap dispenser (Black) 1.5m": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Bubblewrap dispenser (Blue) 1.5m": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Bubblewrap dispenser (Red) 1.5m": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Clear packaging tape 48mmx100m": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Clear packaging tape 48mmx75m": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "DBA joke mug - I will get you in order (Black)": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "DBA joke mug - I will get you in order (White)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "DBA joke mug - SELECT caffeine FROM mug (Black)": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "DBA joke mug - SELECT caffeine FROM mug (White)": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "DBA joke mug - daaaaaa-ta (Black)": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "DBA joke mug - daaaaaa-ta (White)": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "DBA joke mug - it depends (Black)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "DBA joke mug - it depends (White)": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "DBA joke mug - mind if I join you? (Black)": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "DBA joke mug - mind if I join you? (White)": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "DBA joke mug - two types of DBAs (Black)": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "DBA joke mug - two types of DBAs (White)": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "DBA joke mug - you might be a DBA if (Black)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "DBA joke mug - you might be a DBA if (White)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Developer joke mug - (hip, hip, array) (Black)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Developer joke mug - (hip, hip, array) (White)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Developer joke mug - Oct 31 = Dec 25 (Black)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Developer joke mug - Oct 31 = Dec 25 (White)": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Developer joke mug - a foo walks into a bar (Black)": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Developer joke mug - a foo walks into a bar (White)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Developer joke mug - fun was unexpected at this time (Black)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Developer joke mug - fun was unexpected at this time (White)": {
+          "n": 12,
+          "positive": 9,
+          "positive_pct": 75.0
+        },
+        "Developer joke mug - inheritance is the OO way to become wealthy (Black)": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Developer joke mug - inheritance is the OO way to become wealthy (White)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Developer joke mug - old C developers never die (Black)": {
+          "n": 12,
+          "positive": 9,
+          "positive_pct": 75.0
+        },
+        "Developer joke mug - old C developers never die (White)": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Developer joke mug - that's a hardware problem (Black)": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Developer joke mug - that's a hardware problem (White)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Developer joke mug - there are 10 types of people in the world (Black)": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Developer joke mug - there are 10 types of people in the world (White)": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Developer joke mug - this code was generated by a tool (Black)": {
+          "n": 12,
+          "positive": 8,
+          "positive_pct": 66.66666666666666
+        },
+        "Developer joke mug - this code was generated by a tool (White)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Developer joke mug - understanding recursion requires understanding recursion (Black)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Developer joke mug - understanding recursion requires understanding recursion (White)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Developer joke mug - when your hammer is C++ (Black)": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Developer joke mug - when your hammer is C++ (White)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Dinosaur battery-powered slippers (Green) L": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Dinosaur battery-powered slippers (Green) M": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Dinosaur battery-powered slippers (Green) S": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Dinosaur battery-powered slippers (Green) XL": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Express post box 5kg (White) 350x280x130mm": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Furry animal socks (Pink) L": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Furry animal socks (Pink) M": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Furry animal socks (Pink) S": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Furry animal socks (Pink) XL": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Furry gorilla with big eyes slippers (Black) L": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Furry gorilla with big eyes slippers (Black) M": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Furry gorilla with big eyes slippers (Black) S": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Furry gorilla with big eyes slippers (Black) XL": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Halloween skull mask (Gray) L": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Halloween skull mask (Gray) M": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Halloween skull mask (Gray) S": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Halloween skull mask (Gray) XL": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Halloween zombie mask (Light Brown) L": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Halloween zombie mask (Light Brown) M": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Halloween zombie mask (Light Brown) S": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Halloween zombie mask (Light Brown) XL": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "IT joke mug - hardware: part of the computer that can be kicked (Black)": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "IT joke mug - hardware: part of the computer that can be kicked (White)": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "IT joke mug - keyboard not found … press F1 to continue (Black)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "IT joke mug - keyboard not found … press F1 to continue (White)": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "IT joke mug - that behavior is by design (Black)": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "IT joke mug - that behavior is by design (White)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Large  replacement blades 18mm": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Large sized bubblewrap roll 50m": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Medium sized bubblewrap roll 20m": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Office cube periscope (Black)": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Ogre battery-powered slippers (Green) L": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Ogre battery-powered slippers (Green) M": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Ogre battery-powered slippers (Green) S": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Ogre battery-powered slippers (Green) XL": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Pack of 12 action figures (female)": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Pack of 12 action figures (male)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Pack of 12 action figures (variety)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Packing knife with metal insert blade (Yellow) 18mm": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Packing knife with metal insert blade (Yellow) 9mm": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Permanent marker black 5mm nib (Black) 5mm": {
+          "n": 12,
+          "positive": 9,
+          "positive_pct": 75.0
+        },
+        "Permanent marker blue 5mm nib (Blue) 5mm": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Permanent marker red 5mm nib (Red) 5mm": {
+          "n": 12,
+          "positive": 8,
+          "positive_pct": 66.66666666666666
+        },
+        "Plush shark slippers (Gray) L": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Plush shark slippers (Gray) M": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Plush shark slippers (Gray) S": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Plush shark slippers (Gray) XL": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "RC big wheel monster truck with remote control (Black) 1/50 scale": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "RC toy sedan car with remote control (Black) 1/50 scale": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "RC toy sedan car with remote control (Blue) 1/50 scale": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "RC toy sedan car with remote control (Green) 1/50 scale": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "RC toy sedan car with remote control (Pink) 1/50 scale": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "RC toy sedan car with remote control (Red) 1/50 scale": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "RC toy sedan car with remote control (Yellow) 1/50 scale": {
+          "n": 12,
+          "positive": 8,
+          "positive_pct": 66.66666666666666
+        },
+        "RC vintage American toy coupe with remote control (Black) 1/50 scale": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "RC vintage American toy coupe with remote control (Red) 1/50 scale": {
+          "n": 12,
+          "positive": 8,
+          "positive_pct": 66.66666666666666
+        },
+        "Red and white urgent  heavy despatch tape  48mmx100m": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Red and white urgent despatch tape 48mmx75m": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Ride on big wheel monster truck (Black) 1/12 scale": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Ride on toy sedan car (Black) 1/12 scale": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Ride on toy sedan car (Blue) 1/12 scale": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Ride on toy sedan car (Green) 1/12 scale": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Ride on toy sedan car (Pink) 1/12 scale": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Ride on toy sedan car (Red) 1/12 scale": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Ride on toy sedan car (Yellow) 1/12 scale": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Ride on vintage American toy coupe (Black) 1/12 scale": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Ride on vintage American toy coupe (Red) 1/12 scale": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Shipping carton (Brown) 229x229x229mm": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Shipping carton (Brown) 279x254x217mm": {
+          "n": 12,
+          "positive": 8,
+          "positive_pct": 66.66666666666666
+        },
+        "Shipping carton (Brown) 305x305x305mm": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Shipping carton (Brown) 356x229x229mm": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Shipping carton (Brown) 356x356x279mm": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Shipping carton (Brown) 413x285x187mm": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Shipping carton (Brown) 457x279x279mm": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Shipping carton (Brown) 457x457x457mm": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Shipping carton (Brown) 480x270x320mm": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Shipping carton (Brown) 500x310x310mm": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Small 9mm replacement blades 9mm": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Small sized bubblewrap roll 10m": {
+          "n": 12,
+          "positive": 9,
+          "positive_pct": 75.0
+        },
+        "Superhero action jacket (Blue) 3XL": {
+          "n": 12,
+          "positive": 8,
+          "positive_pct": 66.66666666666666
+        },
+        "Superhero action jacket (Blue) 3XS": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Superhero action jacket (Blue) 4XL": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Superhero action jacket (Blue) 5XL": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Superhero action jacket (Blue) L": {
+          "n": 12,
+          "positive": 9,
+          "positive_pct": 75.0
+        },
+        "Superhero action jacket (Blue) M": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Superhero action jacket (Blue) S": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Superhero action jacket (Blue) XL": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Superhero action jacket (Blue) XS": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Superhero action jacket (Blue) XXL": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Superhero action jacket (Blue) XXS": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Tape dispenser (Black)": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Tape dispenser (Blue)": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "Tape dispenser (Red)": {
+          "n": 12,
+          "positive": 3,
+          "positive_pct": 25.0
+        },
+        "USB food flash drive - banana": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "USB food flash drive - chocolate bar": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "USB food flash drive - cookie": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "USB food flash drive - dessert 10 drive variety pack": {
+          "n": 12,
+          "positive": 8,
+          "positive_pct": 66.66666666666666
+        },
+        "USB food flash drive - dim sum 10 drive variety pack": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "USB food flash drive - donut": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "USB food flash drive - fortune cookie": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "USB food flash drive - hamburger": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "USB food flash drive - hot dog": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "USB food flash drive - pizza slice": {
+          "n": 12,
+          "positive": 8,
+          "positive_pct": 66.66666666666666
+        },
+        "USB food flash drive - shrimp cocktail": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "USB food flash drive - sushi roll": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        },
+        "USB missile launcher (Green)": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "USB rocket launcher (Gray)": {
+          "n": 12,
+          "positive": 7,
+          "positive_pct": 58.333333333333336
+        },
+        "Void fill 100 L bag (White) 100L": {
+          "n": 12,
+          "positive": 6,
+          "positive_pct": 50.0
+        },
+        "Void fill 200 L bag (White) 200L": {
+          "n": 12,
+          "positive": 4,
+          "positive_pct": 33.33333333333333
+        },
+        "Void fill 300 L bag (White) 300L": {
+          "n": 12,
+          "positive": 9,
+          "positive_pct": 75.0
+        },
+        "Void fill 400 L bag (White) 400L": {
+          "n": 12,
+          "positive": 5,
+          "positive_pct": 41.66666666666667
+        }
+      }
+    },
+    "validation_minus_train_pp": -1.2230919765166277,
+    "ties": {
+      "train": 59,
+      "validation": 37
+    }
+  },
+  "integrity": {
+    "preserved": true,
+    "before": {
+      "datos\\originales\\dataset_ventas_wwi.csv": "9da69cab3fd573f0f36d92cb97f533740bcb73c08b3909885209843ec8990745",
+      "datos\\originales\\datos_limpios.csv": "d4f3b3b7b018ee49c515915fe851ff7327d82fb198cbc8af117e8f0e73fff37e",
+      "referencias\\Carta_de_Diseño (2).pdf": "e342b047019d74c2c936b942367b8ba6b1bb9109989b342ad2eb0a299bc4d7c0",
+      "referencias\\Dashboard (1).pdf": "4708dcea91a45c0fee641c1173073d72eda6e2921a65eaeeb5c2ada13a409102",
+      "referencias\\GRaficos con MNIST 4077751154f78080828ff5640e835bc1.md": "61d073b362cce2b19551df991618c34bc4b4c83cb9b0324ba986fa53dbf3e1d2",
+      "referencias\\Openrefine_Cluster (2).pdf": "8fc6edd6cecb6eb77101002a7caa938e35e9070b99ea533156797d818057360e",
+      "referencias\\Codigo_anteiror\\EXPLICACION_PERCEPTRON.md": "486d85abce5871c1fd479fb100ee3998072e8bde9f6302a065017f3cece05881",
+      "referencias\\Codigo_anteiror\\Perceptron.py": "1390a68564a9b458b875f3b5eeeae3e8766ff3d818639a3cb4059739d0fb5aab",
+      "referencias\\Codigo_anteiror\\requirements.txt": "b63aea5d6238472ccdd07a5fa41c45a7f62b98df8900d8c05344035431186cbd",
+      "referencias\\Codigo_anteiror\\test_perceptron.py": "60fbfe0bb03eb26a6c8dbfd8ca4502ff0ce0f173660c2aece82536b610045596",
+      "resultados\\auditoria\\comparacion_csv.json": "3e801f33239f618cc915249ac2dd6764e776ba458606152d463b6d6a158794d6",
+      "resultados\\auditoria\\diccionario_datos.csv": "d7a06e80eb43be60ca2ad797b8abcbc3f1fb684ce3f0e25cd66d5fc47a1dfd38",
+      "resultados\\auditoria\\perfilado_datos.json": "f22b456dd0bb9cb199a25cbb31d479f1a64d665040623d20f45a5a154c0d7c68",
+      "resultados\\auditoria\\reporte_auditoria.md": "03b7a3263ca98b25e63bb7b91f9a16ca910853589f33d5091ee5a2fea5f11dd4",
+      "resultados\\auditoria\\requisitos_confirmados.md": "f89c13be74fbe239fd48a0ce0e5467320459887188fdf6cd1d3ce04508633693",
+      "resultados\\auditoria\\viabilidad_predictiva.md": "0e76c1c69d5d80e0795644a6c4cdfb08f2a9ba4b16279e50742b6d715da7f071"
+    },
+    "after": {
+      "datos\\originales\\dataset_ventas_wwi.csv": "9da69cab3fd573f0f36d92cb97f533740bcb73c08b3909885209843ec8990745",
+      "datos\\originales\\datos_limpios.csv": "d4f3b3b7b018ee49c515915fe851ff7327d82fb198cbc8af117e8f0e73fff37e",
+      "referencias\\Carta_de_Diseño (2).pdf": "e342b047019d74c2c936b942367b8ba6b1bb9109989b342ad2eb0a299bc4d7c0",
+      "referencias\\Dashboard (1).pdf": "4708dcea91a45c0fee641c1173073d72eda6e2921a65eaeeb5c2ada13a409102",
+      "referencias\\GRaficos con MNIST 4077751154f78080828ff5640e835bc1.md": "61d073b362cce2b19551df991618c34bc4b4c83cb9b0324ba986fa53dbf3e1d2",
+      "referencias\\Openrefine_Cluster (2).pdf": "8fc6edd6cecb6eb77101002a7caa938e35e9070b99ea533156797d818057360e",
+      "referencias\\Codigo_anteiror\\EXPLICACION_PERCEPTRON.md": "486d85abce5871c1fd479fb100ee3998072e8bde9f6302a065017f3cece05881",
+      "referencias\\Codigo_anteiror\\Perceptron.py": "1390a68564a9b458b875f3b5eeeae3e8766ff3d818639a3cb4059739d0fb5aab",
+      "referencias\\Codigo_anteiror\\requirements.txt": "b63aea5d6238472ccdd07a5fa41c45a7f62b98df8900d8c05344035431186cbd",
+      "referencias\\Codigo_anteiror\\test_perceptron.py": "60fbfe0bb03eb26a6c8dbfd8ca4502ff0ce0f173660c2aece82536b610045596",
+      "resultados\\auditoria\\comparacion_csv.json": "3e801f33239f618cc915249ac2dd6764e776ba458606152d463b6d6a158794d6",
+      "resultados\\auditoria\\diccionario_datos.csv": "d7a06e80eb43be60ca2ad797b8abcbc3f1fb684ce3f0e25cd66d5fc47a1dfd38",
+      "resultados\\auditoria\\perfilado_datos.json": "f22b456dd0bb9cb199a25cbb31d479f1a64d665040623d20f45a5a154c0d7c68",
+      "resultados\\auditoria\\reporte_auditoria.md": "03b7a3263ca98b25e63bb7b91f9a16ca910853589f33d5091ee5a2fea5f11dd4",
+      "resultados\\auditoria\\requisitos_confirmados.md": "f89c13be74fbe239fd48a0ce0e5467320459887188fdf6cd1d3ce04508633693",
+      "resultados\\auditoria\\viabilidad_predictiva.md": "0e76c1c69d5d80e0795644a6c4cdfb08f2a9ba4b16279e50742b6d715da7f071"
+    }
+  },
+  "environment": {
+    "pandas": "3.0.2",
+    "numpy": "2.4.4"
+  }
+}

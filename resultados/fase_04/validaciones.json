@@ -1,0 +1,23 @@
+{
+  "command": "python -m unittest discover -s tests -p 'test_*.py' -v",
+  "tests_run": 53,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "synthetic_tests_passed_before_WWI_training": true,
+  "full_WWI_reproduction": "16 result artifacts identical, including 4 PNG, same fixed plan",
+  "arrays_loaded_during_guarded_WWI_run": [
+    "X_train.npy",
+    "y_train.npy",
+    "X_val.npy",
+    "y_val.npy"
+  ],
+  "test_predictive_evaluation": false,
+  "test_technical_integrity_only": "shape, dtype, finiteness, labels and hashes; no predictions",
+  "protected_files_verified": 48,
+  "protected_files_preserved": true,
+  "artifact_hashes_verified": true,
+  "plots_visually_reviewed": 4,
+  "phase04_manifest_sha256": "9910efcb08e0e283584dde92bf16008c91f1f273165e0600593a767caed49bb7"
+}

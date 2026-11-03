@@ -1,0 +1,13 @@
+{
+  "command": "python -m unittest discover -s tests -p test_*.py -v",
+  "tests_run": 37,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "manifest_sha256": "b6ef8d83ec76f2b8d8e8847d3a505874770b1325528598985e36cb8712034879",
+  "reproducibility": "Dos exportaciones completas en destino temporal: manifiestos y todos los derivados identicos",
+  "unknown_coverage": "Bloquea matrices y conserva resultados anteriores",
+  "protected_files_verified": 25,
+  "originals_and_approved_deliverables_preserved": true
+}

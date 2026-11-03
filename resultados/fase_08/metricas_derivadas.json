@@ -1,0 +1,198 @@
+{
+  "perceptron": {
+    "n": 1111,
+    "accuracy": 0.5391539153915391,
+    "precision": 0.5200783545543585,
+    "recall": 0.9602169981916817,
+    "specificity": 0.12186379928315412,
+    "f1": 0.6747141041931385,
+    "balanced_accuracy": 0.5410403987374179,
+    "confusion_matrix": [
+      [
+        68,
+        490
+      ],
+      [
+        22,
+        531
+      ]
+    ],
+    "confusion_order": [
+      0,
+      1
+    ],
+    "support": {
+      "0": 558,
+      "1": 553
+    },
+    "class_proportions": {
+      "0": 0.5022502250225023,
+      "1": 0.4977497749774977
+    },
+    "denominator_zero": {
+      "precision": false,
+      "recall": false,
+      "specificity": false,
+      "f1": false
+    },
+    "TN": 68,
+    "FP": 490,
+    "FN": 22,
+    "TP": 531,
+    "false_positive_rate": 0.8781362007168458,
+    "false_negative_rate": 0.039783001808318265,
+    "predicted_positive_count": 1021,
+    "predicted_positive_proportion": 0.918991899189919,
+    "actual_positive_proportion": 0.4977497749774977,
+    "positive_prediction_excess_pp": 42.12421242124213,
+    "total_errors": 512,
+    "error_rate": 0.4608460846084608
+  },
+  "logistica": {
+    "n": 1111,
+    "accuracy": 0.6228622862286228,
+    "precision": 0.5766590389016019,
+    "recall": 0.9113924050632911,
+    "specificity": 0.33691756272401435,
+    "f1": 0.7063770147161879,
+    "balanced_accuracy": 0.6241549838936528,
+    "confusion_matrix": [
+      [
+        188,
+        370
+      ],
+      [
+        49,
+        504
+      ]
+    ],
+    "confusion_order": [
+      0,
+      1
+    ],
+    "support": {
+      "0": 558,
+      "1": 553
+    },
+    "class_proportions": {
+      "0": 0.5022502250225023,
+      "1": 0.4977497749774977
+    },
+    "denominator_zero": {
+      "precision": false,
+      "recall": false,
+      "specificity": false,
+      "f1": false
+    },
+    "TN": 188,
+    "FP": 370,
+    "FN": 49,
+    "TP": 504,
+    "false_positive_rate": 0.6630824372759857,
+    "false_negative_rate": 0.08860759493670886,
+    "predicted_positive_count": 874,
+    "predicted_positive_proportion": 0.7866786678667866,
+    "actual_positive_proportion": 0.4977497749774977,
+    "positive_prediction_excess_pp": 28.89288928892889,
+    "total_errors": 419,
+    "error_rate": 0.3771377137713771
+  },
+  "mayoritario": {
+    "n": 1111,
+    "accuracy": 0.4977497749774977,
+    "precision": 0.4977497749774977,
+    "recall": 1.0,
+    "specificity": 0.0,
+    "f1": 0.6646634615384616,
+    "balanced_accuracy": 0.5,
+    "confusion_matrix": [
+      [
+        0,
+        558
+      ],
+      [
+        0,
+        553
+      ]
+    ],
+    "confusion_order": [
+      0,
+      1
+    ],
+    "support": {
+      "0": 558,
+      "1": 553
+    },
+    "class_proportions": {
+      "0": 0.5022502250225023,
+      "1": 0.4977497749774977
+    },
+    "denominator_zero": {
+      "precision": false,
+      "recall": false,
+      "specificity": false,
+      "f1": false
+    },
+    "TN": 0,
+    "FP": 558,
+    "FN": 0,
+    "TP": 553,
+    "false_positive_rate": 1.0,
+    "false_negative_rate": 0.0,
+    "predicted_positive_count": 1111,
+    "predicted_positive_proportion": 1.0,
+    "actual_positive_proportion": 0.4977497749774977,
+    "positive_prediction_excess_pp": 50.225022502250226,
+    "total_errors": 558,
+    "error_rate": 0.5022502250225023
+  },
+  "historico": {
+    "n": 1111,
+    "accuracy": 0.5139513951395139,
+    "precision": 0.518840579710145,
+    "recall": 0.32368896925858953,
+    "specificity": 0.7025089605734767,
+    "f1": 0.3986636971046771,
+    "balanced_accuracy": 0.5130989649160331,
+    "confusion_matrix": [
+      [
+        392,
+        166
+      ],
+      [
+        374,
+        179
+      ]
+    ],
+    "confusion_order": [
+      0,
+      1
+    ],
+    "support": {
+      "0": 558,
+      "1": 553
+    },
+    "class_proportions": {
+      "0": 0.5022502250225023,
+      "1": 0.4977497749774977
+    },
+    "denominator_zero": {
+      "precision": false,
+      "recall": false,
+      "specificity": false,
+      "f1": false
+    },
+    "TN": 392,
+    "FP": 166,
+    "FN": 374,
+    "TP": 179,
+    "false_positive_rate": 0.2974910394265233,
+    "false_negative_rate": 0.6763110307414105,
+    "predicted_positive_count": 345,
+    "predicted_positive_proportion": 0.31053105310531054,
+    "actual_positive_proportion": 0.4977497749774977,
+    "positive_prediction_excess_pp": -18.721872187218718,
+    "total_errors": 540,
+    "error_rate": 0.48604860486048607
+  }
+}

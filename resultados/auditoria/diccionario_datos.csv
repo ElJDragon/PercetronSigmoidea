@@ -1,0 +1,61 @@
+﻿archivo,columna,grupo,tipo,faltantes,porcentaje_faltantes,cardinalidad_no_nula,uso_preliminar
+dataset_ventas_wwi.csv,InvoiceID,identificadores,int64,0,0.0,70510,identificador; no predictor ordinal
+dataset_ventas_wwi.csv,InvoiceLineID,identificadores,int64,0,0.0,228265,identificador; no predictor ordinal
+dataset_ventas_wwi.csv,Fecha,tiempo,"datetime64[us, UTC]",0,0.0,1069,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,Dia,tiempo,int64,0,0.0,31,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,NombreDia,tiempo,str,0,0.0,6,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,Mes,tiempo,int64,0,0.0,12,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,NombreMes,tiempo,str,0,0.0,12,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,Trimestre,tiempo,int64,0,0.0,4,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,Anio,tiempo,int64,0,0.0,4,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,NombreProducto,productos,str,0,0.0,227,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,Marca,productos,str,209328,91.70394059536065,1,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,Tamanio,productos,str,67315,29.48984732657219,43,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,EsRefrigerado,productos,int64,0,0.0,2,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,NombreCliente,clientes,str,0,0.0,663,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,CategoriaCliente,clientes,str,0,0.0,5,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,GrupoCompra,clientes,str,84297,36.92944603859549,2,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,FechaApertura,clientes,"datetime64[us, UTC]",0,0.0,62,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,DescuentoEstandar,clientes,float64,0,0.0,1,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,Ciudad,ubicacion,str,0,0.0,655,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,ProvinciaEstado,ubicacion,str,0,0.0,49,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,CodigoProvincia,ubicacion,str,0,0.0,49,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,TerritorioVentas,ubicacion,str,0,0.0,9,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,Vendedor,vendedores,str,0,0.0,10,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,NombrePreferidoVendedor,vendedores,str,0,0.0,9,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,CantidadVendida,cantidad_precios,int64,0,0.0,61,medida transaccional; solo histórico para problemas futuros
+dataset_ventas_wwi.csv,PrecioUnitario,cantidad_precios,float64,0,0.0,62,candidato sujeto a instante de disponibilidad
+dataset_ventas_wwi.csv,VentaSinImpuesto,ingresos,float64,0,0.0,491,medida transaccional; solo histórico para problemas futuros
+dataset_ventas_wwi.csv,Impuesto,impuestos,float64,0,0.0,493,medida transaccional; solo histórico para problemas futuros
+dataset_ventas_wwi.csv,VentaTotal,ingresos,float64,0,0.0,497,medida transaccional; solo histórico para problemas futuros
+dataset_ventas_wwi.csv,Beneficio,beneficios,float64,0,0.0,570,resultado; etiqueta posible; fuga para problema A
+datos_limpios.csv,InvoiceID,identificadores,int64,0,0.0,70510,identificador; no predictor ordinal
+datos_limpios.csv,InvoiceLineID,identificadores,int64,0,0.0,228265,identificador; no predictor ordinal
+datos_limpios.csv,Fecha,tiempo,"datetime64[us, UTC]",0,0.0,1069,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,Dia,tiempo,int64,0,0.0,31,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,NombreDia,tiempo,str,0,0.0,6,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,Mes,tiempo,int64,0,0.0,12,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,NombreMes,tiempo,str,0,0.0,12,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,Trimestre,tiempo,int64,0,0.0,4,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,Anio,tiempo,int64,0,0.0,4,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,NombreProducto,productos,str,0,0.0,227,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,Marca,productos,str,209328,91.70394059536065,1,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,Tamanio,productos,str,67315,29.48984732657219,43,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,EsRefrigerado,productos,int64,0,0.0,2,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,NombreCliente,clientes,str,0,0.0,663,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,CategoriaCliente,clientes,str,0,0.0,5,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,GrupoCompra,clientes,str,84297,36.92944603859549,2,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,FechaApertura,clientes,"datetime64[us, UTC]",0,0.0,62,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,DescuentoEstandar,clientes,float64,0,0.0,1,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,Ciudad,ubicacion,str,0,0.0,655,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,ProvinciaEstado,ubicacion,str,0,0.0,49,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,CodigoProvincia,ubicacion,str,0,0.0,49,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,TerritorioVentas,ubicacion,str,0,0.0,9,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,Vendedor,vendedores,str,0,0.0,10,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,NombrePreferidoVendedor,vendedores,str,0,0.0,9,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,CantidadVendida,cantidad_precios,int64,0,0.0,61,medida transaccional; solo histórico para problemas futuros
+datos_limpios.csv,PrecioUnitario,cantidad_precios,float64,0,0.0,62,candidato sujeto a instante de disponibilidad
+datos_limpios.csv,VentaSinImpuesto,ingresos,float64,0,0.0,491,medida transaccional; solo histórico para problemas futuros
+datos_limpios.csv,Impuesto,impuestos,float64,0,0.0,493,medida transaccional; solo histórico para problemas futuros
+datos_limpios.csv,VentaTotal,ingresos,float64,0,0.0,497,medida transaccional; solo histórico para problemas futuros
+datos_limpios.csv,Beneficio,beneficios,float64,0,0.0,570,resultado; etiqueta posible; fuga para problema A

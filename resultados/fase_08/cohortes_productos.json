@@ -1,0 +1,342 @@
+{
+  "conocidos": {
+    "rows": 1095,
+    "products": 219,
+    "methods": {
+      "perceptron": {
+        "n": 1095,
+        "accuracy": 0.5397260273972603,
+        "precision": 0.5191364082433758,
+        "recall": 0.9742173112338858,
+        "specificity": 0.11231884057971014,
+        "f1": 0.677336747759283,
+        "balanced_accuracy": 0.5432680759067979,
+        "confusion_matrix": [
+          [
+            62,
+            490
+          ],
+          [
+            14,
+            529
+          ]
+        ],
+        "confusion_order": [
+          0,
+          1
+        ],
+        "support": {
+          "0": 552,
+          "1": 543
+        },
+        "class_proportions": {
+          "0": 0.5041095890410959,
+          "1": 0.4958904109589041
+        },
+        "denominator_zero": {
+          "precision": false,
+          "recall": false,
+          "specificity": false,
+          "f1": false
+        },
+        "TN": 62,
+        "FP": 490,
+        "FN": 14,
+        "TP": 529
+      },
+      "logistica": {
+        "n": 1095,
+        "accuracy": 0.6219178082191781,
+        "precision": 0.5745664739884393,
+        "recall": 0.9152854511970534,
+        "specificity": 0.3333333333333333,
+        "f1": 0.7059659090909091,
+        "balanced_accuracy": 0.6243093922651933,
+        "confusion_matrix": [
+          [
+            184,
+            368
+          ],
+          [
+            46,
+            497
+          ]
+        ],
+        "confusion_order": [
+          0,
+          1
+        ],
+        "support": {
+          "0": 552,
+          "1": 543
+        },
+        "class_proportions": {
+          "0": 0.5041095890410959,
+          "1": 0.4958904109589041
+        },
+        "denominator_zero": {
+          "precision": false,
+          "recall": false,
+          "specificity": false,
+          "f1": false
+        },
+        "TN": 184,
+        "FP": 368,
+        "FN": 46,
+        "TP": 497
+      },
+      "mayoritario": {
+        "n": 1095,
+        "accuracy": 0.4958904109589041,
+        "precision": 0.4958904109589041,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "f1": 0.663003663003663,
+        "balanced_accuracy": 0.5,
+        "confusion_matrix": [
+          [
+            0,
+            552
+          ],
+          [
+            0,
+            543
+          ]
+        ],
+        "confusion_order": [
+          0,
+          1
+        ],
+        "support": {
+          "0": 552,
+          "1": 543
+        },
+        "class_proportions": {
+          "0": 0.5041095890410959,
+          "1": 0.4958904109589041
+        },
+        "denominator_zero": {
+          "precision": false,
+          "recall": false,
+          "specificity": false,
+          "f1": false
+        },
+        "TN": 0,
+        "FP": 552,
+        "FN": 0,
+        "TP": 543
+      },
+      "historico": {
+        "n": 1095,
+        "accuracy": 0.5159817351598174,
+        "precision": 0.5191740412979351,
+        "recall": 0.3241252302025783,
+        "specificity": 0.7047101449275363,
+        "f1": 0.39909297052154197,
+        "balanced_accuracy": 0.5144176875650572,
+        "confusion_matrix": [
+          [
+            389,
+            163
+          ],
+          [
+            367,
+            176
+          ]
+        ],
+        "confusion_order": [
+          0,
+          1
+        ],
+        "support": {
+          "0": 552,
+          "1": 543
+        },
+        "class_proportions": {
+          "0": 0.5041095890410959,
+          "1": 0.4958904109589041
+        },
+        "denominator_zero": {
+          "precision": false,
+          "recall": false,
+          "specificity": false,
+          "f1": false
+        },
+        "TN": 389,
+        "FP": 163,
+        "FN": 367,
+        "TP": 176
+      }
+    }
+  },
+  "nuevos": {
+    "rows": 16,
+    "products": 8,
+    "methods": {
+      "perceptron": {
+        "n": 16,
+        "accuracy": 0.5,
+        "precision": 1.0,
+        "recall": 0.2,
+        "specificity": 1.0,
+        "f1": 0.3333333333333333,
+        "balanced_accuracy": 0.6,
+        "confusion_matrix": [
+          [
+            6,
+            0
+          ],
+          [
+            8,
+            2
+          ]
+        ],
+        "confusion_order": [
+          0,
+          1
+        ],
+        "support": {
+          "0": 6,
+          "1": 10
+        },
+        "class_proportions": {
+          "0": 0.375,
+          "1": 0.625
+        },
+        "denominator_zero": {
+          "precision": false,
+          "recall": false,
+          "specificity": false,
+          "f1": false
+        },
+        "TN": 6,
+        "FP": 0,
+        "FN": 8,
+        "TP": 2
+      },
+      "logistica": {
+        "n": 16,
+        "accuracy": 0.6875,
+        "precision": 0.7777777777777778,
+        "recall": 0.7,
+        "specificity": 0.6666666666666666,
+        "f1": 0.7368421052631579,
+        "balanced_accuracy": 0.6833333333333333,
+        "confusion_matrix": [
+          [
+            4,
+            2
+          ],
+          [
+            3,
+            7
+          ]
+        ],
+        "confusion_order": [
+          0,
+          1
+        ],
+        "support": {
+          "0": 6,
+          "1": 10
+        },
+        "class_proportions": {
+          "0": 0.375,
+          "1": 0.625
+        },
+        "denominator_zero": {
+          "precision": false,
+          "recall": false,
+          "specificity": false,
+          "f1": false
+        },
+        "TN": 4,
+        "FP": 2,
+        "FN": 3,
+        "TP": 7
+      },
+      "mayoritario": {
+        "n": 16,
+        "accuracy": 0.625,
+        "precision": 0.625,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "f1": 0.7692307692307693,
+        "balanced_accuracy": 0.5,
+        "confusion_matrix": [
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            10
+          ]
+        ],
+        "confusion_order": [
+          0,
+          1
+        ],
+        "support": {
+          "0": 6,
+          "1": 10
+        },
+        "class_proportions": {
+          "0": 0.375,
+          "1": 0.625
+        },
+        "denominator_zero": {
+          "precision": false,
+          "recall": false,
+          "specificity": false,
+          "f1": false
+        },
+        "TN": 0,
+        "FP": 6,
+        "FN": 0,
+        "TP": 10
+      },
+      "historico": {
+        "n": 16,
+        "accuracy": 0.375,
+        "precision": 0.5,
+        "recall": 0.3,
+        "specificity": 0.5,
+        "f1": 0.375,
+        "balanced_accuracy": 0.4,
+        "confusion_matrix": [
+          [
+            3,
+            3
+          ],
+          [
+            7,
+            3
+          ]
+        ],
+        "confusion_order": [
+          0,
+          1
+        ],
+        "support": {
+          "0": 6,
+          "1": 10
+        },
+        "class_proportions": {
+          "0": 0.375,
+          "1": 0.625
+        },
+        "denominator_zero": {
+          "precision": false,
+          "recall": false,
+          "specificity": false,
+          "f1": false
+        },
+        "TN": 3,
+        "FP": 3,
+        "FN": 7,
+        "TP": 3
+      }
+    }
+  }
+}

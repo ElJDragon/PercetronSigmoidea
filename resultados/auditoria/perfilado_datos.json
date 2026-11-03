@@ -1,0 +1,2563 @@
+{
+  "method_version": 1,
+  "environment": {
+    "python": "3.12.3",
+    "pandas": "3.0.2",
+    "numpy": "2.4.4"
+  },
+  "datasets": {
+    "dataset_ventas_wwi.csv": {
+      "path": "C:\\Users\\User\\Documents\\Joshua Universidad\\Sexto\\BI\\BI2Pyhton\\PerceptronReal\\datos\\originales\\dataset_ventas_wwi.csv",
+      "relative_path": "datos\\originales\\dataset_ventas_wwi.csv",
+      "bytes": 59150151,
+      "sha256": "9da69cab3fd573f0f36d92cb97f533740bcb73c08b3909885209843ec8990745",
+      "encoding": "utf-8-sig",
+      "delimiter": ";",
+      "encoding_note": "Decodificación completa válida; no prueba única del origen. UTF-8-sig admite BOM opcional.",
+      "rows": 228265,
+      "column_count": 30,
+      "column_names": [
+        "InvoiceID",
+        "InvoiceLineID",
+        "Fecha",
+        "Dia",
+        "NombreDia",
+        "Mes",
+        "NombreMes",
+        "Trimestre",
+        "Anio",
+        "NombreProducto",
+        "Marca",
+        "Tamanio",
+        "EsRefrigerado",
+        "NombreCliente",
+        "CategoriaCliente",
+        "GrupoCompra",
+        "FechaApertura",
+        "DescuentoEstandar",
+        "Ciudad",
+        "ProvinciaEstado",
+        "CodigoProvincia",
+        "TerritorioVentas",
+        "Vendedor",
+        "NombrePreferidoVendedor",
+        "CantidadVendida",
+        "PrecioUnitario",
+        "VentaSinImpuesto",
+        "Impuesto",
+        "VentaTotal",
+        "Beneficio"
+      ],
+      "columns": {
+        "InvoiceID": {
+          "inferred_type": "int64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 70510,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "34": 5,
+            "95": 5,
+            "96": 5,
+            "126": 5,
+            "154": 5
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 35179.209686110444,
+            "std": 20337.20845250719,
+            "min": 1.0,
+            "25%": 17572.0,
+            "50%": 35152.0,
+            "75%": 52765.0,
+            "max": 70510.0
+          },
+          "iqr_outliers": {
+            "lower": -35217.5,
+            "upper": 105554.5,
+            "count": 0,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "negative": 0,
+          "zero": 0
+        },
+        "InvoiceLineID": {
+          "inferred_type": "int64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 228265,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 1
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 114133.0,
+            "std": 65894.57393569418,
+            "min": 1.0,
+            "25%": 57067.0,
+            "50%": 114133.0,
+            "75%": 171199.0,
+            "max": 228265.0
+          },
+          "iqr_outliers": {
+            "lower": -114131.0,
+            "upper": 342397.0,
+            "count": 0,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "negative": 0,
+          "zero": 0
+        },
+        "Fecha": {
+          "inferred_type": "datetime64[us, UTC]",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 1069,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "2016-05-04 00:00:00+00:00": 395,
+            "2015-01-21 00:00:00+00:00": 390,
+            "2015-11-24 00:00:00+00:00": 388,
+            "2015-06-26 00:00:00+00:00": 386,
+            "2016-03-23 00:00:00+00:00": 386
+          },
+          "invalid_dates": 0,
+          "min": "2013-01-01 00:00:00+00:00",
+          "max": "2016-05-31 00:00:00+00:00"
+        },
+        "Dia": {
+          "inferred_type": "int64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 31,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "4": 8108,
+            "19": 8103,
+            "23": 8075,
+            "25": 8068,
+            "11": 8047
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 15.766744792237093,
+            "std": 8.811717656836919,
+            "min": 1.0,
+            "25%": 8.0,
+            "50%": 16.0,
+            "75%": 23.0,
+            "max": 31.0
+          },
+          "iqr_outliers": {
+            "lower": -14.5,
+            "upper": 45.5,
+            "count": 0,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "outside_domain": 0
+        },
+        "NombreDia": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 6,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Martes": 42598,
+            "Miércoles": 41898,
+            "Jueves": 41417,
+            "Lunes": 41193,
+            "Viernes": 41172
+          }
+        },
+        "Mes": {
+          "inferred_type": "int64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 12,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "5": 23898,
+            "4": 23169,
+            "1": 22421,
+            "3": 22351,
+            "2": 19077
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 6.089899897049482,
+            "std": 3.426169389386834,
+            "min": 1.0,
+            "25%": 3.0,
+            "50%": 6.0,
+            "75%": 9.0,
+            "max": 12.0
+          },
+          "iqr_outliers": {
+            "lower": -6.0,
+            "upper": 18.0,
+            "count": 0,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "outside_domain": 0
+        },
+        "NombreMes": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 12,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Mayo": 23898,
+            "Abril": 23169,
+            "Enero": 22421,
+            "Marzo": 22351,
+            "Febrero": 19077
+          }
+        },
+        "Trimestre": {
+          "inferred_type": "int64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 4,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "2": 64236,
+            "1": 63849,
+            "3": 50540,
+            "4": 49640
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 2.376628041968764,
+            "std": 1.1086688238679054,
+            "min": 1.0,
+            "25%": 1.0,
+            "50%": 2.0,
+            "75%": 3.0,
+            "max": 4.0
+          },
+          "iqr_outliers": {
+            "lower": -2.0,
+            "upper": 6.0,
+            "count": 0,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "outside_domain": 0
+        },
+        "Anio": {
+          "inferred_type": "int64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 4,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "2015": 71898,
+            "2014": 65941,
+            "2013": 60968,
+            "2016": 29458
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 2014.305986463102,
+            "std": 1.002323706238037,
+            "min": 2013.0,
+            "25%": 2013.0,
+            "50%": 2014.0,
+            "75%": 2015.0,
+            "max": 2016.0
+          },
+          "iqr_outliers": {
+            "lower": 2010.0,
+            "upper": 2018.0,
+            "count": 0,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          }
+        },
+        "NombreProducto": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 227,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Alien officer hoodie (Black) 3XL": 1123,
+            "Dinosaur battery-powered slippers (Green) L": 1123,
+            "10 mm Anti static bubble wrap (Blue) 50m": 1119,
+            "USB food flash drive - shrimp cocktail": 1117,
+            "\"The Gu\" red shirt XML tag t-shirt (White) 7XL": 1110
+          }
+        },
+        "Marca": {
+          "inferred_type": "str",
+          "missing": 209328,
+          "missing_pct": 91.70394059536065,
+          "null_representations": {
+            "NULL": 209328
+          },
+          "unique_non_null": 1,
+          "constant_including_null": false,
+          "constant_non_null": true,
+          "top_values": {
+            "Northwind": 18937
+          }
+        },
+        "Tamanio": {
+          "inferred_type": "str",
+          "missing": 67315,
+          "missing_pct": 29.48984732657219,
+          "null_representations": {
+            "NULL": 67315
+          },
+          "unique_non_null": 43,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "XL": 12322,
+            "S": 11545,
+            "L": 11494,
+            "M": 11345,
+            "1/12 scale": 9473
+          }
+        },
+        "EsRefrigerado": {
+          "inferred_type": "int64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 2,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "0": 227229,
+            "1": 1036
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 0.004538584539898802,
+            "std": 0.06721611103807,
+            "min": 0.0,
+            "25%": 0.0,
+            "50%": 0.0,
+            "75%": 0.0,
+            "max": 1.0
+          },
+          "iqr_outliers": {
+            "lower": 0.0,
+            "upper": 0.0,
+            "count": 1036,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "outside_domain": 0
+        },
+        "NombreCliente": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 663,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Bhaavan Rai": 457,
+            "Tailspin Toys (Vidrine, LA)": 455,
+            "Aleksandrs Riekstins": 451,
+            "Om Yadav": 448,
+            "Tailspin Toys (North Crows Nest, IN)": 443
+          }
+        },
+        "CategoriaCliente": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 5,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Novelty Shop": 163002,
+            "Supermarket": 18758,
+            "Gift Store": 15614,
+            "Computer Store": 15598,
+            "Corporate": 15293
+          }
+        },
+        "GrupoCompra": {
+          "inferred_type": "str",
+          "missing": 84297,
+          "missing_pct": 36.92944603859549,
+          "null_representations": {
+            "NULL": 84297
+          },
+          "unique_non_null": 2,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Tailspin Toys": 72249,
+            "Wingtip Toys": 71719
+          }
+        },
+        "FechaApertura": {
+          "inferred_type": "datetime64[us, UTC]",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 62,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "2013-01-01 00:00:00+00:00": 215788,
+            "2013-01-27 00:00:00+00:00": 407,
+            "2013-06-11 00:00:00+00:00": 389,
+            "2013-05-03 00:00:00+00:00": 355,
+            "2013-04-14 00:00:00+00:00": 351
+          },
+          "invalid_dates": 0,
+          "min": "2013-01-01 00:00:00+00:00",
+          "max": "2016-05-07 00:00:00+00:00"
+        },
+        "DescuentoEstandar": {
+          "inferred_type": "float64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 1,
+          "constant_including_null": true,
+          "constant_non_null": true,
+          "top_values": {
+            "0.0": 228265
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "25%": 0.0,
+            "50%": 0.0,
+            "75%": 0.0,
+            "max": 0.0
+          },
+          "iqr_outliers": {
+            "lower": 0.0,
+            "upper": 0.0,
+            "count": 0,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "outside_domain": 0
+        },
+        "Ciudad": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 655,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "East Fultonham": 741,
+            "Sinclair": 737,
+            "Akhiok": 732,
+            "Teutopolis": 724,
+            "Cherry Grove Beach": 678
+          }
+        },
+        "ProvinciaEstado": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 49,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Texas": 15800,
+            "Pennsylvania": 12825,
+            "California": 11871,
+            "New York": 11406,
+            "Florida": 7593
+          }
+        },
+        "CodigoProvincia": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 49,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "TX": 15800,
+            "PA": 12825,
+            "CA": 11871,
+            "NY": 11406,
+            "FL": 7593
+          }
+        },
+        "TerritorioVentas": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 9,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Southeast": 50520,
+            "Mideast": 33763,
+            "Southwest": 31756,
+            "Plains": 31039,
+            "Great Lakes": 26599
+          }
+        },
+        "Vendedor": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 10,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Archer Lamble": 23331,
+            "Kayla Woodcock": 23079,
+            "Taj Shand": 22975,
+            "Sophia Hinton": 22906,
+            "Hudson Hollinworth": 22902
+          }
+        },
+        "NombrePreferidoVendedor": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 9,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Hudson": 45583,
+            "Archer": 23331,
+            "Kayla": 23079,
+            "Taj": 22975,
+            "Sophia": 22906
+          }
+        },
+        "CantidadVendida": {
+          "inferred_type": "int64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 61,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "10": 15799,
+            "5": 12876,
+            "1": 12716,
+            "8": 12701,
+            "7": 12681
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 39.21156550500515,
+            "std": 54.55882886783228,
+            "min": 1.0,
+            "25%": 5.0,
+            "50%": 10.0,
+            "75%": 60.0,
+            "max": 360.0
+          },
+          "iqr_outliers": {
+            "lower": -77.5,
+            "upper": 142.5,
+            "count": 13907,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "negative": 0,
+          "zero": 0
+        },
+        "PrecioUnitario": {
+          "inferred_type": "float64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 62,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "13.0": 44577,
+            "32.0": 35177,
+            "18.0": 34326,
+            "25.0": 13553,
+            "30.0": 7307
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 45.59168860753949,
+            "std": 139.86205537145835,
+            "min": 0.66,
+            "25%": 13.0,
+            "50%": 18.0,
+            "75%": 32.0,
+            "max": 1899.0
+          },
+          "iqr_outliers": {
+            "lower": -15.5,
+            "upper": 60.5,
+            "count": 24184,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "negative": 0,
+          "zero": 0
+        },
+        "VentaSinImpuesto": {
+          "inferred_type": "float64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 491,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "91.0": 4613,
+            "13.0": 4580,
+            "39.0": 4514,
+            "26.0": 4505,
+            "117.0": 4469
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 754.6550772128885,
+            "std": 1450.5585079483,
+            "min": 2.5,
+            "25%": 96.0,
+            "50%": 230.0,
+            "75%": 864.0,
+            "max": 18990.0
+          },
+          "iqr_outliers": {
+            "lower": -1056.0,
+            "upper": 2016.0,
+            "count": 20012,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "negative": 0,
+          "zero": 0
+        },
+        "Impuesto": {
+          "inferred_type": "float64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 493,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "13.65": 4613,
+            "1.95": 4580,
+            "5.85": 4514,
+            "3.9": 4505,
+            "17.55": 4469
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 112.94810089150768,
+            "std": 217.5125394480158,
+            "min": 0.38,
+            "25%": 14.4,
+            "50%": 34.5,
+            "75%": 129.6,
+            "max": 2848.5
+          },
+          "iqr_outliers": {
+            "lower": -158.39999999999998,
+            "upper": 302.4,
+            "count": 19935,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "negative": 0,
+          "zero": 0
+        },
+        "VentaTotal": {
+          "inferred_type": "float64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 497,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "104.65": 4613,
+            "14.95": 4580,
+            "44.85": 4514,
+            "29.9": 4505,
+            "134.55": 4469
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 867.6031781043962,
+            "std": 1668.0361820460594,
+            "min": 2.88,
+            "25%": 110.4,
+            "50%": 264.5,
+            "75%": 993.6,
+            "max": 21838.5
+          },
+          "iqr_outliers": {
+            "lower": -1214.4,
+            "upper": 2318.4,
+            "count": 19935,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "negative": 0,
+          "zero": 0
+        },
+        "Beneficio": {
+          "inferred_type": "float64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 570,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "85.0": 5056,
+            "68.0": 4662,
+            "59.5": 4613,
+            "25.5": 4610,
+            "17.0": 4598
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 375.56866317657114,
+            "std": 754.0520451800194,
+            "min": -645.0,
+            "25%": 51.0,
+            "50%": 120.0,
+            "75%": 390.0,
+            "max": 9200.0
+          },
+          "iqr_outliers": {
+            "lower": -457.5,
+            "upper": 898.5,
+            "count": 26845,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          }
+        }
+      },
+      "raw_duplicate_excess": 0,
+      "logical_duplicate_excess": 0,
+      "keys": {
+        "InvoiceLineID": {
+          "unique": 228265,
+          "missing": 0,
+          "duplicate_excess": 0,
+          "rows_in_duplicate_groups": 0
+        },
+        "InvoiceID": {
+          "unique": 70510,
+          "missing": 0,
+          "duplicate_excess": 157755,
+          "rows_in_duplicate_groups": 222693
+        },
+        "line_to_multiple_invoices": 0,
+        "lines_per_invoice": {
+          "count": 70510.0,
+          "mean": 3.237342220961566,
+          "std": 1.238308599689129,
+          "min": 1.0,
+          "25%": 2.0,
+          "50%": 3.0,
+          "75%": 4.0,
+          "max": 5.0
+        },
+        "invoice_context_conflicts": {
+          "Fecha": 0,
+          "NombreCliente": 0,
+          "Ciudad": 0,
+          "Vendedor": 0
+        }
+      },
+      "business_variables": {
+        "tiempo": [
+          "Fecha",
+          "Dia",
+          "NombreDia",
+          "Mes",
+          "NombreMes",
+          "Trimestre",
+          "Anio"
+        ],
+        "productos": [
+          "NombreProducto",
+          "Marca",
+          "Tamanio",
+          "EsRefrigerado"
+        ],
+        "clientes": [
+          "NombreCliente",
+          "CategoriaCliente",
+          "GrupoCompra",
+          "FechaApertura",
+          "DescuentoEstandar"
+        ],
+        "ubicacion": [
+          "Ciudad",
+          "ProvinciaEstado",
+          "CodigoProvincia",
+          "TerritorioVentas"
+        ],
+        "vendedores": [
+          "Vendedor",
+          "NombrePreferidoVendedor"
+        ],
+        "cantidad_precios": [
+          "CantidadVendida",
+          "PrecioUnitario"
+        ],
+        "ingresos": [
+          "VentaSinImpuesto",
+          "VentaTotal"
+        ],
+        "impuestos": [
+          "Impuesto"
+        ],
+        "beneficios": [
+          "Beneficio"
+        ]
+      },
+      "monetary_checks": {
+        "cantidad_por_precio": {
+          "available": true,
+          "evaluated": 228265,
+          "not_evaluated": 0,
+          "violations": 0,
+          "max_abs_error": 2.2737367544323206e-13,
+          "absolute_tolerance": 1e-08,
+          "relative_tolerance": 0,
+          "sample_row_numbers": []
+        },
+        "base_mas_impuesto": {
+          "available": true,
+          "evaluated": 228265,
+          "not_evaluated": 0,
+          "violations": 0,
+          "max_abs_error": 2.2737367544323206e-13,
+          "absolute_tolerance": 1e-08,
+          "relative_tolerance": 0,
+          "sample_row_numbers": []
+        },
+        "beneficio": "No verificable contra costo: no existe costo unitario ni costo histórico en el CSV.",
+        "impuesto": "No se impone tasa fija: no hay TaxRate para validar por operación."
+      }
+    },
+    "datos_limpios.csv": {
+      "path": "C:\\Users\\User\\Documents\\Joshua Universidad\\Sexto\\BI\\BI2Pyhton\\PerceptronReal\\datos\\originales\\datos_limpios.csv",
+      "relative_path": "datos\\originales\\datos_limpios.csv",
+      "bytes": 59899758,
+      "sha256": "d4f3b3b7b018ee49c515915fe851ff7327d82fb198cbc8af117e8f0e73fff37e",
+      "encoding": "utf-8-sig",
+      "delimiter": ";",
+      "encoding_note": "Decodificación completa válida; no prueba única del origen. UTF-8-sig admite BOM opcional.",
+      "rows": 228265,
+      "column_count": 30,
+      "column_names": [
+        "InvoiceID",
+        "InvoiceLineID",
+        "Fecha",
+        "Dia",
+        "NombreDia",
+        "Mes",
+        "NombreMes",
+        "Trimestre",
+        "Anio",
+        "NombreProducto",
+        "Marca",
+        "Tamanio",
+        "EsRefrigerado",
+        "NombreCliente",
+        "CategoriaCliente",
+        "GrupoCompra",
+        "FechaApertura",
+        "DescuentoEstandar",
+        "Ciudad",
+        "ProvinciaEstado",
+        "CodigoProvincia",
+        "TerritorioVentas",
+        "Vendedor",
+        "NombrePreferidoVendedor",
+        "CantidadVendida",
+        "PrecioUnitario",
+        "VentaSinImpuesto",
+        "Impuesto",
+        "VentaTotal",
+        "Beneficio"
+      ],
+      "columns": {
+        "InvoiceID": {
+          "inferred_type": "int64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 70510,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "34": 5,
+            "95": 5,
+            "96": 5,
+            "126": 5,
+            "154": 5
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 35179.209686110444,
+            "std": 20337.20845250719,
+            "min": 1.0,
+            "25%": 17572.0,
+            "50%": 35152.0,
+            "75%": 52765.0,
+            "max": 70510.0
+          },
+          "iqr_outliers": {
+            "lower": -35217.5,
+            "upper": 105554.5,
+            "count": 0,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "negative": 0,
+          "zero": 0
+        },
+        "InvoiceLineID": {
+          "inferred_type": "int64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 228265,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 1
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 114133.0,
+            "std": 65894.57393569418,
+            "min": 1.0,
+            "25%": 57067.0,
+            "50%": 114133.0,
+            "75%": 171199.0,
+            "max": 228265.0
+          },
+          "iqr_outliers": {
+            "lower": -114131.0,
+            "upper": 342397.0,
+            "count": 0,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "negative": 0,
+          "zero": 0
+        },
+        "Fecha": {
+          "inferred_type": "datetime64[us, UTC]",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 1069,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "2016-05-04 00:00:00+00:00": 395,
+            "2015-01-21 00:00:00+00:00": 390,
+            "2015-11-24 00:00:00+00:00": 388,
+            "2015-06-26 00:00:00+00:00": 386,
+            "2016-03-23 00:00:00+00:00": 386
+          },
+          "invalid_dates": 0,
+          "min": "2013-01-01 00:00:00+00:00",
+          "max": "2016-05-31 00:00:00+00:00"
+        },
+        "Dia": {
+          "inferred_type": "int64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 31,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "4": 8108,
+            "19": 8103,
+            "23": 8075,
+            "25": 8068,
+            "11": 8047
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 15.766744792237093,
+            "std": 8.811717656836919,
+            "min": 1.0,
+            "25%": 8.0,
+            "50%": 16.0,
+            "75%": 23.0,
+            "max": 31.0
+          },
+          "iqr_outliers": {
+            "lower": -14.5,
+            "upper": 45.5,
+            "count": 0,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "outside_domain": 0
+        },
+        "NombreDia": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 6,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Martes": 42598,
+            "Miércoles": 41898,
+            "Jueves": 41417,
+            "Lunes": 41193,
+            "Viernes": 41172
+          }
+        },
+        "Mes": {
+          "inferred_type": "int64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 12,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "5": 23898,
+            "4": 23169,
+            "1": 22421,
+            "3": 22351,
+            "2": 19077
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 6.089899897049482,
+            "std": 3.426169389386834,
+            "min": 1.0,
+            "25%": 3.0,
+            "50%": 6.0,
+            "75%": 9.0,
+            "max": 12.0
+          },
+          "iqr_outliers": {
+            "lower": -6.0,
+            "upper": 18.0,
+            "count": 0,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "outside_domain": 0
+        },
+        "NombreMes": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 12,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Mayo": 23898,
+            "Abril": 23169,
+            "Enero": 22421,
+            "Marzo": 22351,
+            "Febrero": 19077
+          }
+        },
+        "Trimestre": {
+          "inferred_type": "int64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 4,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "2": 64236,
+            "1": 63849,
+            "3": 50540,
+            "4": 49640
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 2.376628041968764,
+            "std": 1.1086688238679054,
+            "min": 1.0,
+            "25%": 1.0,
+            "50%": 2.0,
+            "75%": 3.0,
+            "max": 4.0
+          },
+          "iqr_outliers": {
+            "lower": -2.0,
+            "upper": 6.0,
+            "count": 0,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "outside_domain": 0
+        },
+        "Anio": {
+          "inferred_type": "int64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 4,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "2015": 71898,
+            "2014": 65941,
+            "2013": 60968,
+            "2016": 29458
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 2014.305986463102,
+            "std": 1.002323706238037,
+            "min": 2013.0,
+            "25%": 2013.0,
+            "50%": 2014.0,
+            "75%": 2015.0,
+            "max": 2016.0
+          },
+          "iqr_outliers": {
+            "lower": 2010.0,
+            "upper": 2018.0,
+            "count": 0,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          }
+        },
+        "NombreProducto": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 227,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Alien officer hoodie (Black) 3XL": 1123,
+            "Dinosaur battery-powered slippers (Green) L": 1123,
+            "10 mm Anti static bubble wrap (Blue) 50m": 1119,
+            "USB food flash drive - shrimp cocktail": 1117,
+            "\"The Gu\" red shirt XML tag t-shirt (White) 7XL": 1110
+          }
+        },
+        "Marca": {
+          "inferred_type": "str",
+          "missing": 209328,
+          "missing_pct": 91.70394059536065,
+          "null_representations": {
+            "": 209328
+          },
+          "unique_non_null": 1,
+          "constant_including_null": false,
+          "constant_non_null": true,
+          "top_values": {
+            "Northwind": 18937
+          }
+        },
+        "Tamanio": {
+          "inferred_type": "str",
+          "missing": 67315,
+          "missing_pct": 29.48984732657219,
+          "null_representations": {
+            "": 67315
+          },
+          "unique_non_null": 43,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "XL": 12322,
+            "S": 11545,
+            "L": 11494,
+            "M": 11345,
+            "1/12 scale": 9473
+          }
+        },
+        "EsRefrigerado": {
+          "inferred_type": "int64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 2,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "0": 227229,
+            "1": 1036
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 0.004538584539898802,
+            "std": 0.06721611103807,
+            "min": 0.0,
+            "25%": 0.0,
+            "50%": 0.0,
+            "75%": 0.0,
+            "max": 1.0
+          },
+          "iqr_outliers": {
+            "lower": 0.0,
+            "upper": 0.0,
+            "count": 1036,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "outside_domain": 0
+        },
+        "NombreCliente": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 663,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Bhaavan Rai": 457,
+            "Tailspin Toys (Vidrine, LA)": 455,
+            "Aleksandrs Riekstins": 451,
+            "Om Yadav": 448,
+            "Tailspin Toys (North Crows Nest, IN)": 443
+          }
+        },
+        "CategoriaCliente": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 5,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Novelty Shop": 163002,
+            "Supermarket": 18758,
+            "Gift Store": 15614,
+            "Computer Store": 15598,
+            "Corporate": 15293
+          }
+        },
+        "GrupoCompra": {
+          "inferred_type": "str",
+          "missing": 84297,
+          "missing_pct": 36.92944603859549,
+          "null_representations": {
+            "": 84297
+          },
+          "unique_non_null": 2,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Tailspin Toys": 72249,
+            "Wingtip Toys": 71719
+          }
+        },
+        "FechaApertura": {
+          "inferred_type": "datetime64[us, UTC]",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 62,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "2013-01-01 00:00:00+00:00": 215788,
+            "2013-01-27 00:00:00+00:00": 407,
+            "2013-06-11 00:00:00+00:00": 389,
+            "2013-05-03 00:00:00+00:00": 355,
+            "2013-04-14 00:00:00+00:00": 351
+          },
+          "invalid_dates": 0,
+          "min": "2013-01-01 00:00:00+00:00",
+          "max": "2016-05-07 00:00:00+00:00"
+        },
+        "DescuentoEstandar": {
+          "inferred_type": "float64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 1,
+          "constant_including_null": true,
+          "constant_non_null": true,
+          "top_values": {
+            "0.0": 228265
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "25%": 0.0,
+            "50%": 0.0,
+            "75%": 0.0,
+            "max": 0.0
+          },
+          "iqr_outliers": {
+            "lower": 0.0,
+            "upper": 0.0,
+            "count": 0,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "outside_domain": 0
+        },
+        "Ciudad": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 655,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "East Fultonham": 741,
+            "Sinclair": 737,
+            "Akhiok": 732,
+            "Teutopolis": 724,
+            "Cherry Grove Beach": 678
+          }
+        },
+        "ProvinciaEstado": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 49,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Texas": 15800,
+            "Pennsylvania": 12825,
+            "California": 11871,
+            "New York": 11406,
+            "Florida": 7593
+          }
+        },
+        "CodigoProvincia": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 49,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "TX": 15800,
+            "PA": 12825,
+            "CA": 11871,
+            "NY": 11406,
+            "FL": 7593
+          }
+        },
+        "TerritorioVentas": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 9,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Southeast": 50520,
+            "Mideast": 33763,
+            "Southwest": 31756,
+            "Plains": 31039,
+            "Great Lakes": 26599
+          }
+        },
+        "Vendedor": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 10,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Archer Lamble": 23331,
+            "Kayla Woodcock": 23079,
+            "Taj Shand": 22975,
+            "Sophia Hinton": 22906,
+            "Hudson Hollinworth": 22902
+          }
+        },
+        "NombrePreferidoVendedor": {
+          "inferred_type": "str",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 9,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "Hudson": 45583,
+            "Archer": 23331,
+            "Kayla": 23079,
+            "Taj": 22975,
+            "Sophia": 22906
+          }
+        },
+        "CantidadVendida": {
+          "inferred_type": "int64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 61,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "10": 15799,
+            "5": 12876,
+            "1": 12716,
+            "8": 12701,
+            "7": 12681
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 39.21156550500515,
+            "std": 54.55882886783228,
+            "min": 1.0,
+            "25%": 5.0,
+            "50%": 10.0,
+            "75%": 60.0,
+            "max": 360.0
+          },
+          "iqr_outliers": {
+            "lower": -77.5,
+            "upper": 142.5,
+            "count": 13907,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "negative": 0,
+          "zero": 0
+        },
+        "PrecioUnitario": {
+          "inferred_type": "float64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 62,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "13.0": 44577,
+            "32.0": 35177,
+            "18.0": 34326,
+            "25.0": 13553,
+            "30.0": 7307
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 45.59168860753949,
+            "std": 139.86205537145835,
+            "min": 0.66,
+            "25%": 13.0,
+            "50%": 18.0,
+            "75%": 32.0,
+            "max": 1899.0
+          },
+          "iqr_outliers": {
+            "lower": -15.5,
+            "upper": 60.5,
+            "count": 24184,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "negative": 0,
+          "zero": 0
+        },
+        "VentaSinImpuesto": {
+          "inferred_type": "float64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 491,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "91.0": 4613,
+            "13.0": 4580,
+            "39.0": 4514,
+            "26.0": 4505,
+            "117.0": 4469
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 754.6550772128885,
+            "std": 1450.5585079483,
+            "min": 2.5,
+            "25%": 96.0,
+            "50%": 230.0,
+            "75%": 864.0,
+            "max": 18990.0
+          },
+          "iqr_outliers": {
+            "lower": -1056.0,
+            "upper": 2016.0,
+            "count": 20012,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "negative": 0,
+          "zero": 0
+        },
+        "Impuesto": {
+          "inferred_type": "float64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 493,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "13.65": 4613,
+            "1.95": 4580,
+            "5.85": 4514,
+            "3.9": 4505,
+            "17.55": 4469
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 112.94810089150768,
+            "std": 217.5125394480158,
+            "min": 0.38,
+            "25%": 14.4,
+            "50%": 34.5,
+            "75%": 129.6,
+            "max": 2848.5
+          },
+          "iqr_outliers": {
+            "lower": -158.39999999999998,
+            "upper": 302.4,
+            "count": 19935,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "negative": 0,
+          "zero": 0
+        },
+        "VentaTotal": {
+          "inferred_type": "float64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 497,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "104.65": 4613,
+            "14.95": 4580,
+            "44.85": 4514,
+            "29.9": 4505,
+            "134.55": 4469
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 867.6031781043962,
+            "std": 1668.0361820460594,
+            "min": 2.88,
+            "25%": 110.4,
+            "50%": 264.5,
+            "75%": 993.6,
+            "max": 21838.5
+          },
+          "iqr_outliers": {
+            "lower": -1214.4,
+            "upper": 2318.4,
+            "count": 19935,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          },
+          "negative": 0,
+          "zero": 0
+        },
+        "Beneficio": {
+          "inferred_type": "float64",
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null_representations": {},
+          "unique_non_null": 570,
+          "constant_including_null": false,
+          "constant_non_null": false,
+          "top_values": {
+            "85.0": 5056,
+            "68.0": 4662,
+            "59.5": 4613,
+            "25.5": 4610,
+            "17.0": 4598
+          },
+          "invalid_numeric": 0,
+          "non_finite": 0,
+          "statistics": {
+            "count": 228265.0,
+            "mean": 375.56866317657114,
+            "std": 754.0520451800194,
+            "min": -645.0,
+            "25%": 51.0,
+            "50%": 120.0,
+            "75%": 390.0,
+            "max": 9200.0
+          },
+          "iqr_outliers": {
+            "lower": -457.5,
+            "upper": 898.5,
+            "count": 26845,
+            "note": "Señal exploratoria; no implica error ni eliminación. No usar IQR para IDs/calendario."
+          }
+        }
+      },
+      "raw_duplicate_excess": 0,
+      "logical_duplicate_excess": 0,
+      "keys": {
+        "InvoiceLineID": {
+          "unique": 228265,
+          "missing": 0,
+          "duplicate_excess": 0,
+          "rows_in_duplicate_groups": 0
+        },
+        "InvoiceID": {
+          "unique": 70510,
+          "missing": 0,
+          "duplicate_excess": 157755,
+          "rows_in_duplicate_groups": 222693
+        },
+        "line_to_multiple_invoices": 0,
+        "lines_per_invoice": {
+          "count": 70510.0,
+          "mean": 3.237342220961566,
+          "std": 1.238308599689129,
+          "min": 1.0,
+          "25%": 2.0,
+          "50%": 3.0,
+          "75%": 4.0,
+          "max": 5.0
+        },
+        "invoice_context_conflicts": {
+          "Fecha": 0,
+          "NombreCliente": 0,
+          "Ciudad": 0,
+          "Vendedor": 0
+        }
+      },
+      "business_variables": {
+        "tiempo": [
+          "Fecha",
+          "Dia",
+          "NombreDia",
+          "Mes",
+          "NombreMes",
+          "Trimestre",
+          "Anio"
+        ],
+        "productos": [
+          "NombreProducto",
+          "Marca",
+          "Tamanio",
+          "EsRefrigerado"
+        ],
+        "clientes": [
+          "NombreCliente",
+          "CategoriaCliente",
+          "GrupoCompra",
+          "FechaApertura",
+          "DescuentoEstandar"
+        ],
+        "ubicacion": [
+          "Ciudad",
+          "ProvinciaEstado",
+          "CodigoProvincia",
+          "TerritorioVentas"
+        ],
+        "vendedores": [
+          "Vendedor",
+          "NombrePreferidoVendedor"
+        ],
+        "cantidad_precios": [
+          "CantidadVendida",
+          "PrecioUnitario"
+        ],
+        "ingresos": [
+          "VentaSinImpuesto",
+          "VentaTotal"
+        ],
+        "impuestos": [
+          "Impuesto"
+        ],
+        "beneficios": [
+          "Beneficio"
+        ]
+      },
+      "monetary_checks": {
+        "cantidad_por_precio": {
+          "available": true,
+          "evaluated": 228265,
+          "not_evaluated": 0,
+          "violations": 0,
+          "max_abs_error": 2.2737367544323206e-13,
+          "absolute_tolerance": 1e-08,
+          "relative_tolerance": 0,
+          "sample_row_numbers": []
+        },
+        "base_mas_impuesto": {
+          "available": true,
+          "evaluated": 228265,
+          "not_evaluated": 0,
+          "violations": 0,
+          "max_abs_error": 2.2737367544323206e-13,
+          "absolute_tolerance": 1e-08,
+          "relative_tolerance": 0,
+          "sample_row_numbers": []
+        },
+        "beneficio": "No verificable contra costo: no existe costo unitario ni costo histórico en el CSV.",
+        "impuesto": "No se impone tasa fija: no hay TaxRate para validar por operación."
+      }
+    }
+  },
+  "business_analysis": {
+    "profit_counts": {
+      "positive": 223639,
+      "negative": 4626,
+      "zero": 0
+    },
+    "profit_pct": {
+      "positive": 97.97340810023437,
+      "negative": 2.026591899765623,
+      "zero": 0.0
+    },
+    "majority_binary_accuracy_pct": 97.97340810023437,
+    "majority_definition": "Negativo (<0) frente a no negativo (>=0), sin entrenamiento.",
+    "profit_by_month": [
+      {
+        "month": "2013-01",
+        "rows": 5246,
+        "negative": 88,
+        "positive": 5158,
+        "zero": 0,
+        "units": 193271,
+        "negative_pct": 1.6774685475
+      },
+      {
+        "month": "2013-02",
+        "rows": 3707,
+        "negative": 58,
+        "positive": 3649,
+        "zero": 0,
+        "units": 142120,
+        "negative_pct": 1.5646074993
+      },
+      {
+        "month": "2013-03",
+        "rows": 5330,
+        "negative": 104,
+        "positive": 5226,
+        "zero": 0,
+        "units": 207486,
+        "negative_pct": 1.9512195122
+      },
+      {
+        "month": "2013-04",
+        "rows": 5254,
+        "negative": 87,
+        "positive": 5167,
+        "zero": 0,
+        "units": 212995,
+        "negative_pct": 1.6558812333
+      },
+      {
+        "month": "2013-05",
+        "rows": 5617,
+        "negative": 88,
+        "positive": 5529,
+        "zero": 0,
+        "units": 230725,
+        "negative_pct": 1.566672601
+      },
+      {
+        "month": "2013-06",
+        "rows": 5287,
+        "negative": 108,
+        "positive": 5179,
+        "zero": 0,
+        "units": 213468,
+        "negative_pct": 2.042746359
+      },
+      {
+        "month": "2013-07",
+        "rows": 5834,
+        "negative": 99,
+        "positive": 5735,
+        "zero": 0,
+        "units": 232599,
+        "negative_pct": 1.6969489201
+      },
+      {
+        "month": "2013-08",
+        "rows": 4767,
+        "negative": 81,
+        "positive": 4686,
+        "zero": 0,
+        "units": 192199,
+        "negative_pct": 1.6991818754
+      },
+      {
+        "month": "2013-09",
+        "rows": 5021,
+        "negative": 95,
+        "positive": 4926,
+        "zero": 0,
+        "units": 190567,
+        "negative_pct": 1.8920533758
+      },
+      {
+        "month": "2013-10",
+        "rows": 5097,
+        "negative": 96,
+        "positive": 5001,
+        "zero": 0,
+        "units": 198476,
+        "negative_pct": 1.8834608593
+      },
+      {
+        "month": "2013-11",
+        "rows": 4899,
+        "negative": 90,
+        "positive": 4809,
+        "zero": 0,
+        "units": 194290,
+        "negative_pct": 1.8371096142
+      },
+      {
+        "month": "2013-12",
+        "rows": 4909,
+        "negative": 94,
+        "positive": 4815,
+        "zero": 0,
+        "units": 193461,
+        "negative_pct": 1.914850275
+      },
+      {
+        "month": "2014-01",
+        "rows": 5610,
+        "negative": 100,
+        "positive": 5510,
+        "zero": 0,
+        "units": 216337,
+        "negative_pct": 1.7825311943
+      },
+      {
+        "month": "2014-02",
+        "rows": 4768,
+        "negative": 84,
+        "positive": 4684,
+        "zero": 0,
+        "units": 182103,
+        "negative_pct": 1.7617449664
+      },
+      {
+        "month": "2014-03",
+        "rows": 5070,
+        "negative": 107,
+        "positive": 4963,
+        "zero": 0,
+        "units": 196451,
+        "negative_pct": 2.1104536489
+      },
+      {
+        "month": "2014-04",
+        "rows": 5443,
+        "negative": 100,
+        "positive": 5343,
+        "zero": 0,
+        "units": 209020,
+        "negative_pct": 1.8372221202
+      },
+      {
+        "month": "2014-05",
+        "rows": 5930,
+        "negative": 104,
+        "positive": 5826,
+        "zero": 0,
+        "units": 239381,
+        "negative_pct": 1.7537942664
+      },
+      {
+        "month": "2014-06",
+        "rows": 5798,
+        "negative": 106,
+        "positive": 5692,
+        "zero": 0,
+        "units": 223182,
+        "negative_pct": 1.8282166264
+      },
+      {
+        "month": "2014-07",
+        "rows": 6227,
+        "negative": 99,
+        "positive": 6128,
+        "zero": 0,
+        "units": 248966,
+        "negative_pct": 1.5898506504
+      },
+      {
+        "month": "2014-08",
+        "rows": 5059,
+        "negative": 96,
+        "positive": 4963,
+        "zero": 0,
+        "units": 194525,
+        "negative_pct": 1.897608223
+      },
+      {
+        "month": "2014-09",
+        "rows": 5059,
+        "negative": 96,
+        "positive": 4963,
+        "zero": 0,
+        "units": 199954,
+        "negative_pct": 1.897608223
+      },
+      {
+        "month": "2014-10",
+        "rows": 5983,
+        "negative": 116,
+        "positive": 5867,
+        "zero": 0,
+        "units": 228840,
+        "negative_pct": 1.9388266756
+      },
+      {
+        "month": "2014-11",
+        "rows": 5070,
+        "negative": 92,
+        "positive": 4978,
+        "zero": 0,
+        "units": 195892,
+        "negative_pct": 1.8145956607
+      },
+      {
+        "month": "2014-12",
+        "rows": 5924,
+        "negative": 115,
+        "positive": 5809,
+        "zero": 0,
+        "units": 232750,
+        "negative_pct": 1.9412559082
+      },
+      {
+        "month": "2015-01",
+        "rows": 5651,
+        "negative": 101,
+        "positive": 5550,
+        "zero": 0,
+        "units": 217931,
+        "negative_pct": 1.7872942842
+      },
+      {
+        "month": "2015-02",
+        "rows": 5406,
+        "negative": 92,
+        "positive": 5314,
+        "zero": 0,
+        "units": 203070,
+        "negative_pct": 1.7018128006
+      },
+      {
+        "month": "2015-03",
+        "rows": 5877,
+        "negative": 115,
+        "positive": 5762,
+        "zero": 0,
+        "units": 236872,
+        "negative_pct": 1.9567806704
+      },
+      {
+        "month": "2015-04",
+        "rows": 6549,
+        "negative": 121,
+        "positive": 6428,
+        "zero": 0,
+        "units": 253471,
+        "negative_pct": 1.8476103222
+      },
+      {
+        "month": "2015-05",
+        "rows": 6000,
+        "negative": 103,
+        "positive": 5897,
+        "zero": 0,
+        "units": 223741,
+        "negative_pct": 1.7166666667
+      },
+      {
+        "month": "2015-06",
+        "rows": 6084,
+        "negative": 115,
+        "positive": 5969,
+        "zero": 0,
+        "units": 223838,
+        "negative_pct": 1.8902038133
+      },
+      {
+        "month": "2015-07",
+        "rows": 6955,
+        "negative": 131,
+        "positive": 6824,
+        "zero": 0,
+        "units": 266768,
+        "negative_pct": 1.8835370237
+      },
+      {
+        "month": "2015-08",
+        "rows": 5321,
+        "negative": 96,
+        "positive": 5225,
+        "zero": 0,
+        "units": 204532,
+        "negative_pct": 1.8041721481
+      },
+      {
+        "month": "2015-09",
+        "rows": 6297,
+        "negative": 118,
+        "positive": 6179,
+        "zero": 0,
+        "units": 231852,
+        "negative_pct": 1.8739082103
+      },
+      {
+        "month": "2015-10",
+        "rows": 6152,
+        "negative": 112,
+        "positive": 6040,
+        "zero": 0,
+        "units": 233207,
+        "negative_pct": 1.8205461638
+      },
+      {
+        "month": "2015-11",
+        "rows": 5625,
+        "negative": 87,
+        "positive": 5538,
+        "zero": 0,
+        "units": 220911,
+        "negative_pct": 1.5466666667
+      },
+      {
+        "month": "2015-12",
+        "rows": 5981,
+        "negative": 111,
+        "positive": 5870,
+        "zero": 0,
+        "units": 224073,
+        "negative_pct": 1.8558769437
+      },
+      {
+        "month": "2016-01",
+        "rows": 5914,
+        "negative": 211,
+        "positive": 5703,
+        "zero": 0,
+        "units": 250297,
+        "negative_pct": 3.567805208
+      },
+      {
+        "month": "2016-02",
+        "rows": 5196,
+        "negative": 203,
+        "positive": 4993,
+        "zero": 0,
+        "units": 216618,
+        "negative_pct": 3.9068514242
+      },
+      {
+        "month": "2016-03",
+        "rows": 6074,
+        "negative": 187,
+        "positive": 5887,
+        "zero": 0,
+        "units": 252408,
+        "negative_pct": 3.0786960817
+      },
+      {
+        "month": "2016-04",
+        "rows": 5923,
+        "negative": 214,
+        "positive": 5709,
+        "zero": 0,
+        "units": 251945,
+        "negative_pct": 3.6130339355
+      },
+      {
+        "month": "2016-05",
+        "rows": 6351,
+        "negative": 206,
+        "positive": 6145,
+        "zero": 0,
+        "units": 270036,
+        "negative_pct": 3.2435836876
+      }
+    ],
+    "loss_products": [
+      {
+        "NombreProducto": "Halloween zombie mask (Light Brown) XL",
+        "rows": 1071,
+        "negative": 1071,
+        "loss_sum": -72372.0,
+        "loss_rate_pct": 100.0,
+        "share_of_negatives_pct": 23.1517509728
+      },
+      {
+        "NombreProducto": "Halloween zombie mask (Light Brown) S",
+        "rows": 1044,
+        "negative": 1044,
+        "loss_sum": -71016.0,
+        "loss_rate_pct": 100.0,
+        "share_of_negatives_pct": 22.5680933852
+      },
+      {
+        "NombreProducto": "Halloween zombie mask (Light Brown) M",
+        "rows": 1017,
+        "negative": 1017,
+        "loss_sum": -67008.0,
+        "loss_rate_pct": 100.0,
+        "share_of_negatives_pct": 21.9844357977
+      },
+      {
+        "NombreProducto": "Halloween zombie mask (Light Brown) L",
+        "rows": 982,
+        "negative": 982,
+        "loss_sum": -64104.0,
+        "loss_rate_pct": 100.0,
+        "share_of_negatives_pct": 21.2278426286
+      },
+      {
+        "NombreProducto": "USB food flash drive - sushi roll",
+        "rows": 1066,
+        "negative": 46,
+        "loss_sum": -1732.8,
+        "loss_rate_pct": 4.3151969981,
+        "share_of_negatives_pct": 0.9943795936
+      },
+      {
+        "NombreProducto": "USB food flash drive - dessert 10 drive variety pack",
+        "rows": 1065,
+        "negative": 43,
+        "loss_sum": -15163.5,
+        "loss_rate_pct": 4.0375586854,
+        "share_of_negatives_pct": 0.9295287505
+      },
+      {
+        "NombreProducto": "USB food flash drive - shrimp cocktail",
+        "rows": 1117,
+        "negative": 41,
+        "loss_sum": -2019.2,
+        "loss_rate_pct": 3.6705461056,
+        "share_of_negatives_pct": 0.8862948552
+      },
+      {
+        "NombreProducto": "USB food flash drive - chocolate bar",
+        "rows": 1068,
+        "negative": 41,
+        "loss_sum": -1676.8,
+        "loss_rate_pct": 3.8389513109,
+        "share_of_negatives_pct": 0.8862948552
+      },
+      {
+        "NombreProducto": "USB missile launcher (Green)",
+        "rows": 1048,
+        "negative": 40,
+        "loss_sum": -1554.0,
+        "loss_rate_pct": 3.8167938931,
+        "share_of_negatives_pct": 0.8646779075
+      },
+      {
+        "NombreProducto": "USB food flash drive - hot dog",
+        "rows": 1040,
+        "negative": 39,
+        "loss_sum": -1615.2,
+        "loss_rate_pct": 3.75,
+        "share_of_negatives_pct": 0.8430609598
+      },
+      {
+        "NombreProducto": "USB food flash drive - dim sum 10 drive variety pack",
+        "rows": 1015,
+        "negative": 38,
+        "loss_sum": -13053.0,
+        "loss_rate_pct": 3.7438423645,
+        "share_of_negatives_pct": 0.8214440121
+      },
+      {
+        "NombreProducto": "USB food flash drive - donut",
+        "rows": 1089,
+        "negative": 38,
+        "loss_sum": -1652.8,
+        "loss_rate_pct": 3.4894398531,
+        "share_of_negatives_pct": 0.8214440121
+      },
+      {
+        "NombreProducto": "USB food flash drive - banana",
+        "rows": 1061,
+        "negative": 36,
+        "loss_sum": -1589.6,
+        "loss_rate_pct": 3.3930254477,
+        "share_of_negatives_pct": 0.7782101167
+      },
+      {
+        "NombreProducto": "USB rocket launcher (Gray)",
+        "rows": 1078,
+        "negative": 35,
+        "loss_sum": -1390.25,
+        "loss_rate_pct": 3.2467532468,
+        "share_of_negatives_pct": 0.756593169
+      },
+      {
+        "NombreProducto": "USB food flash drive - pizza slice",
+        "rows": 1028,
+        "negative": 31,
+        "loss_sum": -1211.2,
+        "loss_rate_pct": 3.0155642023,
+        "share_of_negatives_pct": 0.6701253783
+      },
+      {
+        "NombreProducto": "USB food flash drive - hamburger",
+        "rows": 1046,
+        "negative": 29,
+        "loss_sum": -1032.0,
+        "loss_rate_pct": 2.7724665392,
+        "share_of_negatives_pct": 0.6268914829
+      },
+      {
+        "NombreProducto": "USB food flash drive - cookie",
+        "rows": 1041,
+        "negative": 28,
+        "loss_sum": -1178.4,
+        "loss_rate_pct": 2.6897214217,
+        "share_of_negatives_pct": 0.6052745352
+      },
+      {
+        "NombreProducto": "USB food flash drive - fortune cookie",
+        "rows": 1072,
+        "negative": 27,
+        "loss_sum": -1124.8,
+        "loss_rate_pct": 2.5186567164,
+        "share_of_negatives_pct": 0.5836575875
+      }
+    ],
+    "products_with_losses": 18,
+    "top_1_negative_share_pct": 23.151750972762645,
+    "top_5_negative_share_pct": 89.92650237786425,
+    "top_4_negative_share_pct": 88.93212278426286,
+    "history": {
+      "min": "2013-01-01 00:00:00+00:00",
+      "max": "2016-05-31 00:00:00+00:00",
+      "months": 41,
+      "observed_days": 1069,
+      "weekdays": {
+        "Tuesday": 42598,
+        "Wednesday": 41898,
+        "Thursday": 41417,
+        "Monday": 41193,
+        "Friday": 41172,
+        "Saturday": 19987
+      }
+    },
+    "calendar_mismatches": {
+      "Dia": 0,
+      "Mes": 0,
+      "Anio": 0,
+      "Trimestre": 0,
+      "NombreDia": 0,
+      "NombreMes": 0
+    },
+    "opening_after_sale": 0,
+    "product_month": {
+      "entities": 227,
+      "observed_pairs": 9019,
+      "global_grid_pairs": 9307,
+      "absent_pairs_global_grid": 288,
+      "pairs_from_first_observation": 9019,
+      "absent_pairs_from_first_observation": 0,
+      "first_observed_by_month": {
+        "2013-01": 219,
+        "2016-01": 8
+      },
+      "observed_months_per_entity": {
+        "count": 227.0,
+        "mean": 39.731277533039645,
+        "std": 6.652768380287236,
+        "min": 5.0,
+        "25%": 41.0,
+        "50%": 41.0,
+        "75%": 41.0,
+        "max": 41.0
+      },
+      "monthly_active_entities": {
+        "2013-01": 219,
+        "2013-02": 219,
+        "2013-03": 219,
+        "2013-04": 219,
+        "2013-05": 219,
+        "2013-06": 219,
+        "2013-07": 219,
+        "2013-08": 219,
+        "2013-09": 219,
+        "2013-10": 219,
+        "2013-11": 219,
+        "2013-12": 219,
+        "2014-01": 219,
+        "2014-02": 219,
+        "2014-03": 219,
+        "2014-04": 219,
+        "2014-05": 219,
+        "2014-06": 219,
+        "2014-07": 219,
+        "2014-08": 219,
+        "2014-09": 219,
+        "2014-10": 219,
+        "2014-11": 219,
+        "2014-12": 219,
+        "2015-01": 219,
+        "2015-02": 219,
+        "2015-03": 219,
+        "2015-04": 219,
+        "2015-05": 219,
+        "2015-06": 219,
+        "2015-07": 219,
+        "2015-08": 219,
+        "2015-09": 219,
+        "2015-10": 219,
+        "2015-11": 219,
+        "2015-12": 219,
+        "2016-01": 227,
+        "2016-02": 227,
+        "2016-03": 227,
+        "2016-04": 227,
+        "2016-05": 227
+      },
+      "monthly_units_quantiles_observed_pairs": {
+        "0.0": 41.0,
+        "0.25": 137.0,
+        "0.5": 192.0,
+        "0.75": 1584.0,
+        "1.0": 8064.0
+      },
+      "note": "Ausencia de transacción no prueba disponibilidad, vigencia ni demanda cero; primera venta no demuestra alta de catálogo. Último mes requiere confirmar cierre de extracción."
+    },
+    "customer_month": {
+      "entities": 663,
+      "observed_pairs": 24029,
+      "global_grid_pairs": 27183,
+      "absent_pairs_global_grid": 3154,
+      "pairs_from_first_observation": 25986,
+      "absent_pairs_from_first_observation": 1957,
+      "first_observed_by_month": {
+        "2013-01": 546,
+        "2013-02": 46,
+        "2013-03": 12,
+        "2013-04": 4,
+        "2013-05": 4,
+        "2013-07": 3,
+        "2013-08": 3,
+        "2013-09": 2,
+        "2013-10": 1,
+        "2013-11": 2,
+        "2013-12": 2,
+        "2014-01": 2,
+        "2014-02": 2,
+        "2014-05": 2,
+        "2014-07": 1,
+        "2014-08": 2,
+        "2014-09": 2,
+        "2014-11": 2,
+        "2014-12": 2,
+        "2015-01": 4,
+        "2015-02": 3,
+        "2015-06": 1,
+        "2015-08": 1,
+        "2015-09": 3,
+        "2015-10": 2,
+        "2015-12": 3,
+        "2016-01": 2,
+        "2016-02": 1,
+        "2016-03": 1,
+        "2016-05": 2
+      },
+      "observed_months_per_entity": {
+        "count": 663.0,
+        "mean": 36.242835595776775,
+        "std": 6.0864744642070105,
+        "min": 1.0,
+        "25%": 36.0,
+        "50%": 38.0,
+        "75%": 39.0,
+        "max": 41.0
+      },
+      "monthly_active_entities": {
+        "2013-01": 546,
+        "2013-02": 504,
+        "2013-03": 567,
+        "2013-04": 564,
+        "2013-05": 568,
+        "2013-06": 564,
+        "2013-07": 576,
+        "2013-08": 556,
+        "2013-09": 555,
+        "2013-10": 563,
+        "2013-11": 550,
+        "2013-12": 558,
+        "2014-01": 582,
+        "2014-02": 552,
+        "2014-03": 567,
+        "2014-04": 575,
+        "2014-05": 592,
+        "2014-06": 597,
+        "2014-07": 594,
+        "2014-08": 582,
+        "2014-09": 577,
+        "2014-10": 580,
+        "2014-11": 583,
+        "2014-12": 603,
+        "2015-01": 593,
+        "2015-02": 600,
+        "2015-03": 612,
+        "2015-04": 616,
+        "2015-05": 605,
+        "2015-06": 609,
+        "2015-07": 623,
+        "2015-08": 601,
+        "2015-09": 615,
+        "2015-10": 606,
+        "2015-11": 603,
+        "2015-12": 611,
+        "2016-01": 614,
+        "2016-02": 598,
+        "2016-03": 615,
+        "2016-04": 624,
+        "2016-05": 629
+      },
+      "monthly_units_quantiles_observed_pairs": {
+        "0.0": 1.0,
+        "0.25": 165.0,
+        "0.5": 318.0,
+        "0.75": 519.0,
+        "1.0": 2019.0
+      },
+      "note": "Ausencia de transacción no prueba disponibilidad, vigencia ni demanda cero; primera venta no demuestra alta de catálogo. Último mes requiere confirmar cierre de extracción."
+    }
+  },
+  "integrity": {
+    "preserved": true,
+    "before": {
+      "datos\\originales\\dataset_ventas_wwi.csv": "9da69cab3fd573f0f36d92cb97f533740bcb73c08b3909885209843ec8990745",
+      "datos\\originales\\datos_limpios.csv": "d4f3b3b7b018ee49c515915fe851ff7327d82fb198cbc8af117e8f0e73fff37e",
+      "referencias\\Carta_de_Diseño (2).pdf": "e342b047019d74c2c936b942367b8ba6b1bb9109989b342ad2eb0a299bc4d7c0",
+      "referencias\\Codigo_anteiror\\EXPLICACION_PERCEPTRON.md": "486d85abce5871c1fd479fb100ee3998072e8bde9f6302a065017f3cece05881",
+      "referencias\\Codigo_anteiror\\Perceptron.py": "1390a68564a9b458b875f3b5eeeae3e8766ff3d818639a3cb4059739d0fb5aab",
+      "referencias\\Codigo_anteiror\\requirements.txt": "b63aea5d6238472ccdd07a5fa41c45a7f62b98df8900d8c05344035431186cbd",
+      "referencias\\Codigo_anteiror\\test_perceptron.py": "60fbfe0bb03eb26a6c8dbfd8ca4502ff0ce0f173660c2aece82536b610045596",
+      "referencias\\Dashboard (1).pdf": "4708dcea91a45c0fee641c1173073d72eda6e2921a65eaeeb5c2ada13a409102",
+      "referencias\\GRaficos con MNIST 4077751154f78080828ff5640e835bc1.md": "61d073b362cce2b19551df991618c34bc4b4c83cb9b0324ba986fa53dbf3e1d2",
+      "referencias\\Openrefine_Cluster (2).pdf": "8fc6edd6cecb6eb77101002a7caa938e35e9070b99ea533156797d818057360e"
+    },
+    "after": {
+      "datos\\originales\\dataset_ventas_wwi.csv": "9da69cab3fd573f0f36d92cb97f533740bcb73c08b3909885209843ec8990745",
+      "datos\\originales\\datos_limpios.csv": "d4f3b3b7b018ee49c515915fe851ff7327d82fb198cbc8af117e8f0e73fff37e",
+      "referencias\\Carta_de_Diseño (2).pdf": "e342b047019d74c2c936b942367b8ba6b1bb9109989b342ad2eb0a299bc4d7c0",
+      "referencias\\Codigo_anteiror\\EXPLICACION_PERCEPTRON.md": "486d85abce5871c1fd479fb100ee3998072e8bde9f6302a065017f3cece05881",
+      "referencias\\Codigo_anteiror\\Perceptron.py": "1390a68564a9b458b875f3b5eeeae3e8766ff3d818639a3cb4059739d0fb5aab",
+      "referencias\\Codigo_anteiror\\requirements.txt": "b63aea5d6238472ccdd07a5fa41c45a7f62b98df8900d8c05344035431186cbd",
+      "referencias\\Codigo_anteiror\\test_perceptron.py": "60fbfe0bb03eb26a6c8dbfd8ca4502ff0ce0f173660c2aece82536b610045596",
+      "referencias\\Dashboard (1).pdf": "4708dcea91a45c0fee641c1173073d72eda6e2921a65eaeeb5c2ada13a409102",
+      "referencias\\GRaficos con MNIST 4077751154f78080828ff5640e835bc1.md": "61d073b362cce2b19551df991618c34bc4b4c83cb9b0324ba986fa53dbf3e1d2",
+      "referencias\\Openrefine_Cluster (2).pdf": "8fc6edd6cecb6eb77101002a7caa938e35e9070b99ea533156797d818057360e"
+    }
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "version": 1,
+  "ajuste": "train_exclusivamente",
+  "input_features": [
+    "unidades_lag_1",
+    "unidades_lag_2",
+    "unidades_lag_3",
+    "unidades_media_3",
+    "unidades_mediana_3",
+    "unidades_std_3",
+    "cambio_unidades_1",
+    "variacion_relativa_1",
+    "base_variacion_cero",
+    "tendencia_unidades_3",
+    "facturas_lag_1",
+    "facturas_media_3",
+    "ingresos_lag_1",
+    "ingresos_media_3",
+    "precio_unitario_ponderado_lag_1",
+    "mes_anterior_sin_ventas",
+    "clientes_distintos_lag_1",
+    "unidades_por_factura_lag_1",
+    "facturas_lag_1_cero",
+    "antiguedad_observada_meses",
+    "mes_objetivo_sin",
+    "mes_objetivo_cos",
+    "dias_mes_objetivo"
+  ],
+  "numeric_features": [
+    "unidades_lag_1",
+    "unidades_lag_2",
+    "unidades_lag_3",
+    "unidades_media_3",
+    "unidades_mediana_3",
+    "unidades_std_3",
+    "cambio_unidades_1",
+    "variacion_relativa_1",
+    "base_variacion_cero",
+    "tendencia_unidades_3",
+    "facturas_lag_1",
+    "facturas_media_3",
+    "ingresos_lag_1",
+    "ingresos_media_3",
+    "precio_unitario_ponderado_lag_1",
+    "mes_anterior_sin_ventas",
+    "clientes_distintos_lag_1",
+    "unidades_por_factura_lag_1",
+    "facturas_lag_1_cero",
+    "antiguedad_observada_meses",
+    "mes_objetivo_sin",
+    "mes_objetivo_cos",
+    "dias_mes_objetivo"
+  ],
+  "categorical_features": [],
+  "category_vocabulary": {},
+  "feature_names": [
+    "unidades_lag_1",
+    "unidades_lag_2",
+    "unidades_lag_3",
+    "unidades_media_3",
+    "unidades_mediana_3",
+    "unidades_std_3",
+    "cambio_unidades_1",
+    "variacion_relativa_1",
+    "tendencia_unidades_3",
+    "facturas_lag_1",
+    "facturas_media_3",
+    "ingresos_lag_1",
+    "ingresos_media_3",
+    "precio_unitario_ponderado_lag_1",
+    "clientes_distintos_lag_1",
+    "unidades_por_factura_lag_1",
+    "antiguedad_observada_meses",
+    "mes_objetivo_sin",
+    "mes_objetivo_cos",
+    "dias_mes_objetivo"
+  ],
+  "discarded": {
+    "base_variacion_cero": "constante_en_train_tras_imputacion",
+    "mes_anterior_sin_ventas": "constante_en_train_tras_imputacion",
+    "facturas_lag_1_cero": "constante_en_train_tras_imputacion"
+  },
+  "parameters": {
+    "unidades_lag_1": {
+      "imputacion": "mediana_train",
+      "mediana": 182.0,
+      "media": 956.9291150250054,
+      "desviacion_poblacional": 1161.9261226988674,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "unidades_lag_2": {
+      "imputacion": "mediana_train",
+      "mediana": 181.0,
+      "media": 945.2370080452272,
+      "desviacion_poblacional": 1154.0774226494868,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "unidades_lag_3": {
+      "imputacion": "mediana_train",
+      "mediana": 179.0,
+      "media": 937.5029354207436,
+      "desviacion_poblacional": 1143.4758474212097,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "unidades_media_3": {
+      "imputacion": "mediana_train",
+      "mediana": 161.33333333333334,
+      "media": 946.5563528303255,
+      "desviacion_poblacional": 1115.8402913087216,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "unidades_mediana_3": {
+      "imputacion": "mediana_train",
+      "mediana": 165.0,
+      "media": 942.6603609480322,
+      "desviacion_poblacional": 1120.2895974843943,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "unidades_std_3": {
+      "imputacion": "mediana_train",
+      "mediana": 37.56180092712394,
+      "media": 167.59887365381445,
+      "desviacion_poblacional": 238.13757261583262,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "cambio_unidades_1": {
+      "imputacion": "mediana_train",
+      "mediana": 4.0,
+      "media": 11.692106979778213,
+      "desviacion_poblacional": 502.8269131118305,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "variacion_relativa_1": {
+      "imputacion": "mediana_train",
+      "mediana": 0.015748031496062992,
+      "media": 0.07919698460695315,
+      "desviacion_poblacional": 0.39309879931710634,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "tendencia_unidades_3": {
+      "imputacion": "mediana_train",
+      "mediana": 2.0,
+      "media": 9.713089802130899,
+      "desviacion_poblacional": 252.79528391805454,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "facturas_lag_1": {
+      "imputacion": "mediana_train",
+      "mediana": 24.0,
+      "media": 24.360078277886497,
+      "desviacion_poblacional": 5.485827682729867,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "facturas_media_3": {
+      "imputacion": "mediana_train",
+      "mediana": 24.333333333333332,
+      "media": 24.10908168442415,
+      "desviacion_poblacional": 3.5942881631881476,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "ingresos_lag_1": {
+      "imputacion": "mediana_train",
+      "mediana": 5542.0,
+      "media": 18422.395161991735,
+      "desviacion_poblacional": 31756.88841015062,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "ingresos_media_3": {
+      "imputacion": "mediana_train",
+      "mediana": 5133.333333333333,
+      "media": 18193.893654417625,
+      "desviacion_poblacional": 30480.951069583127,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "precio_unitario_ponderado_lag_1": {
+      "imputacion": "mediana_train",
+      "mediana": 18.0,
+      "media": 45.429954337899545,
+      "desviacion_poblacional": 138.81221214188594,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "clientes_distintos_lag_1": {
+      "imputacion": "mediana_train",
+      "mediana": 24.0,
+      "media": 23.88519243313764,
+      "desviacion_poblacional": 5.317437613285996,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "unidades_por_factura_lag_1": {
+      "imputacion": "mediana_train",
+      "mediana": 6.285714285714286,
+      "media": 39.381494569230405,
+      "desviacion_poblacional": 45.270228410099115,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "antiguedad_observada_meses": {
+      "imputacion": "mediana_train",
+      "mediana": 13.0,
+      "media": 13.0,
+      "desviacion_poblacional": 6.0553007081949835,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "mes_objetivo_sin": {
+      "imputacion": "mediana_train",
+      "mediana": 0.0,
+      "media": -0.06504882875163993,
+      "desviacion_poblacional": 0.7208177118298105,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "mes_objetivo_cos": {
+      "imputacion": "mediana_train",
+      "mediana": -1.8369701987210297e-16,
+      "media": -0.11266787637068765,
+      "desviacion_poblacional": 0.6808057181197846,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    },
+    "dias_mes_objetivo": {
+      "imputacion": "mediana_train",
+      "mediana": 31.0,
+      "media": 30.476190476190474,
+      "desviacion_poblacional": 0.7315376902732007,
+      "dtype": "float64",
+      "formula": "(x_imputado-media_train)/std_train"
+    }
+  },
+  "exact_redundancy_removal": "ninguna; se conservan todas las columnas no constantes autorizadas",
+  "train_rows": 4599,
+  "ddof": 0
+}

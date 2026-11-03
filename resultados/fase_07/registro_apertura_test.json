@@ -1,0 +1,37 @@
+{
+  "run_id": "d066c6309bd94474808d082a741c547d",
+  "timestamp": "2026-11-02T14:19:49.199917-05:00",
+  "timezone": "America/Guayaquil (UTC-05:00)",
+  "declaration": "Primera apertura autorizada para evaluación predictiva final; sin optimización posterior",
+  "python": "3.12.3",
+  "numpy": "2.4.4",
+  "freeze_sha256": "e65994faf713b8feb4ab440befeb0711845bc10534b1f473421538576f0d28a4",
+  "models_sha256": {
+    "perceptron": "27f168c1ceb304a2a841e14b4ca9ab05313f1182a49e80f776ca58060f93ff82",
+    "logistica": "dc583e7cd1dbffcd08772141b8f981616898e1589ae8f1cb3697b3b2f84caa59"
+  },
+  "matrix_sha256": {
+    "datos\\Procesados\\fase_03\\X_test.npy": "7414d356532906acc6388e8e966f490d0dc06890b00e732092a2f2dff23320a0",
+    "datos\\Procesados\\fase_03\\X_train.npy": "3eaed2cdc7b875f5c84e40f00ee751293cf38eeecd3ada37c30312daaa17b4ae",
+    "datos\\Procesados\\fase_03\\X_val.npy": "9ddee79370075f5a0082f61f771a7c4ae501f13f0192f50dfab8a4fe246637e3",
+    "datos\\Procesados\\fase_03\\y_test.npy": "1e81a87691069fe4d3d125d5845da0eeb1f40f86ce6a7d0693045e289468e468",
+    "datos\\Procesados\\fase_03\\y_train.npy": "48aeadcf1a2ca9c730c9106736b0f53619eff944b9a56c3f02a1d2d945a75de8",
+    "datos\\Procesados\\fase_03\\y_val.npy": "9bceab668265424d252091d0a1d9d3ae9a2b28ef1e11b8aaac78dbdff1210443"
+  },
+  "contract_version": "2.0",
+  "primary_metric": "balanced_accuracy",
+  "metrics": [
+    "accuracy",
+    "precision",
+    "recall",
+    "f1",
+    "balanced_accuracy"
+  ],
+  "decision_rules": {
+    "perceptron": "z>=0",
+    "logistica": "probabilidad>=0.5"
+  },
+  "threshold_logistic": 0.5,
+  "integrity": "approved_before_test_labels",
+  "validation_reproduced": true
+}

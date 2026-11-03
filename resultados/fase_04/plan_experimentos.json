@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "contract_version": "2.0",
+  "experiments": [
+    {"id": "orden_fijo", "learning_rate": 0.01, "max_epochs": 100, "seed": 42, "shuffle": false},
+    {"id": "orden_barajado", "learning_rate": 0.01, "max_epochs": 100, "seed": 42, "shuffle": true}
+  ],
+  "initial_weights": "zeros_dynamic_dimension",
+  "initial_bias": 0.0,
+  "activation": "1 if z >= 0 else 0",
+  "selection": ["max validation balanced_accuracy", "max validation f1", "earliest epoch", "earliest experiment in plan"],
+  "scope": "train and validation only; no final test evaluation",
+  "budget": "2 runs, at most 200 epochs total; no additional search after results",
+  "rationale": "With zero initialization, positive constant learning rates scale the mathematical trajectory without adding a distinct classifier in exact arithmetic. One rate is fixed; sample order is the controlled comparison. Floating point can break exact scaling invariance."
+}

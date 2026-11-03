@@ -1,0 +1,90 @@
+{
+  "perceptron": {
+    "accuracy": {
+      "mean": 0.5385995614829119,
+      "months_estimable": 5
+    },
+    "precision": {
+      "mean": 0.512867137130082,
+      "months_estimable": 5
+    },
+    "recall": {
+      "mean": 0.9533124320546669,
+      "months_estimable": 5
+    },
+    "f1": {
+      "mean": 0.6604474440542304,
+      "months_estimable": 5
+    },
+    "balanced_accuracy": {
+      "mean": 0.531000553652065,
+      "months_estimable": 5
+    }
+  },
+  "logistica": {
+    "accuracy": {
+      "mean": 0.6232735904089474,
+      "months_estimable": 5
+    },
+    "precision": {
+      "mean": 0.5582809268790566,
+      "months_estimable": 5
+    },
+    "recall": {
+      "mean": 0.8808513198556801,
+      "months_estimable": 5
+    },
+    "f1": {
+      "mean": 0.6831475892794489,
+      "months_estimable": 5
+    },
+    "balanced_accuracy": {
+      "mean": 0.5840580691031696,
+      "months_estimable": 5
+    }
+  },
+  "mayoritario": {
+    "accuracy": {
+      "mean": 0.49675135276487037,
+      "months_estimable": 5
+    },
+    "precision": {
+      "mean": 0.49675135276487037,
+      "months_estimable": 5
+    },
+    "recall": {
+      "mean": 1.0,
+      "months_estimable": 5
+    },
+    "f1": {
+      "mean": 0.6540869890330661,
+      "months_estimable": 5
+    },
+    "balanced_accuracy": {
+      "mean": 0.5,
+      "months_estimable": 5
+    }
+  },
+  "historico": {
+    "accuracy": {
+      "mean": 0.5143483595840121,
+      "months_estimable": 5
+    },
+    "precision": {
+      "mean": 0.5160361629234869,
+      "months_estimable": 5
+    },
+    "recall": {
+      "mean": 0.327725969578497,
+      "months_estimable": 5
+    },
+    "f1": {
+      "mean": 0.3871209250448586,
+      "months_estimable": 5
+    },
+    "balanced_accuracy": {
+      "mean": 0.5151286889619169,
+      "months_estimable": 5
+    }
+  }
+}

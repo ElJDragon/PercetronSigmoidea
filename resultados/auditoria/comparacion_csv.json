@@ -1,0 +1,287 @@
+{
+  "schema_equal": true,
+  "column_order_equal": true,
+  "rows_left": 228265,
+  "rows_right": 228265,
+  "columns": {
+    "InvoiceID": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 70510,
+      "unique_values_after_trim": 70510,
+      "samples": []
+    },
+    "InvoiceLineID": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 228265,
+      "unique_values_after_trim": 228265,
+      "samples": []
+    },
+    "Fecha": {
+      "raw_differences": 228265,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 1069,
+      "unique_values_after_trim": 1069,
+      "samples": []
+    },
+    "Dia": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 31,
+      "unique_values_after_trim": 31,
+      "samples": []
+    },
+    "NombreDia": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 6,
+      "unique_values_after_trim": 6,
+      "samples": []
+    },
+    "Mes": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 12,
+      "unique_values_after_trim": 12,
+      "samples": []
+    },
+    "NombreMes": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 12,
+      "unique_values_after_trim": 12,
+      "samples": []
+    },
+    "Trimestre": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 4,
+      "unique_values_after_trim": 4,
+      "samples": []
+    },
+    "Anio": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 4,
+      "unique_values_after_trim": 4,
+      "samples": []
+    },
+    "NombreProducto": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 227,
+      "unique_values_after_trim": 227,
+      "samples": []
+    },
+    "Marca": {
+      "raw_differences": 209328,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 2,
+      "unique_values_after_trim": 2,
+      "samples": []
+    },
+    "Tamanio": {
+      "raw_differences": 67315,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 44,
+      "unique_values_after_trim": 44,
+      "samples": []
+    },
+    "EsRefrigerado": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 2,
+      "unique_values_after_trim": 2,
+      "samples": []
+    },
+    "NombreCliente": {
+      "raw_differences": 268,
+      "logical_differences": 268,
+      "whitespace_only_differences": 268,
+      "unique_values_before_trim": 663,
+      "unique_values_after_trim": 663,
+      "samples": [
+        {
+          "key": "44113",
+          "left": "David Novacek ",
+          "right": "David Novacek"
+        },
+        {
+          "key": "44114",
+          "left": "David Novacek ",
+          "right": "David Novacek"
+        },
+        {
+          "key": "44115",
+          "left": "David Novacek ",
+          "right": "David Novacek"
+        },
+        {
+          "key": "44116",
+          "left": "David Novacek ",
+          "right": "David Novacek"
+        },
+        {
+          "key": "44117",
+          "left": "David Novacek ",
+          "right": "David Novacek"
+        }
+      ]
+    },
+    "CategoriaCliente": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 5,
+      "unique_values_after_trim": 5,
+      "samples": []
+    },
+    "GrupoCompra": {
+      "raw_differences": 84297,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 3,
+      "unique_values_after_trim": 3,
+      "samples": []
+    },
+    "FechaApertura": {
+      "raw_differences": 228265,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 62,
+      "unique_values_after_trim": 62,
+      "samples": []
+    },
+    "DescuentoEstandar": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 1,
+      "unique_values_after_trim": 1,
+      "samples": []
+    },
+    "Ciudad": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 655,
+      "unique_values_after_trim": 655,
+      "samples": []
+    },
+    "ProvinciaEstado": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 49,
+      "unique_values_after_trim": 49,
+      "samples": []
+    },
+    "CodigoProvincia": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 49,
+      "unique_values_after_trim": 49,
+      "samples": []
+    },
+    "TerritorioVentas": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 9,
+      "unique_values_after_trim": 9,
+      "samples": []
+    },
+    "Vendedor": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 10,
+      "unique_values_after_trim": 10,
+      "samples": []
+    },
+    "NombrePreferidoVendedor": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 9,
+      "unique_values_after_trim": 9,
+      "samples": []
+    },
+    "CantidadVendida": {
+      "raw_differences": 0,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 61,
+      "unique_values_after_trim": 61,
+      "samples": []
+    },
+    "PrecioUnitario": {
+      "raw_differences": 215675,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 62,
+      "unique_values_after_trim": 62,
+      "samples": []
+    },
+    "VentaSinImpuesto": {
+      "raw_differences": 225109,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 491,
+      "unique_values_after_trim": 491,
+      "samples": []
+    },
+    "Impuesto": {
+      "raw_differences": 165724,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 493,
+      "unique_values_after_trim": 493,
+      "samples": []
+    },
+    "VentaTotal": {
+      "raw_differences": 165823,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 497,
+      "unique_values_after_trim": 497,
+      "samples": []
+    },
+    "Beneficio": {
+      "raw_differences": 226133,
+      "logical_differences": 0,
+      "whitespace_only_differences": 0,
+      "unique_values_before_trim": 570,
+      "unique_values_after_trim": 570,
+      "samples": []
+    }
+  },
+  "keys_only_left": 0,
+  "keys_only_right": 0,
+  "logical_cell_differences": 268,
+  "equivalent": false,
+  "whitespace_only_differences": 268,
+  "equivalent_if_text_trim_accepted": true,
+  "method": "Alineación por clave única, Decimal exacto, fechas ISO UTC, nulos explícitos; sin redondeo ni tolerancia monetaria en equivalencia.",
+  "source_order": [
+    "dataset_ventas_wwi.csv",
+    "datos_limpios.csv"
+  ],
+  "recommended_source": "datos_limpios.csv",
+  "recommendation_reason": "Conserva claves y medidas; nulos explícitos y fechas ISO. Diferencias de espacios documentadas, sin fusionar nombres distintos tras strip en esta copia. Mantener trazabilidad a original y solicitar IDs de entidades."
+}

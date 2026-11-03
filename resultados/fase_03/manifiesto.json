@@ -1,0 +1,147 @@
+{
+  "version_contrato": "2.0",
+  "source": "datos\\originales\\datos_limpios.csv",
+  "source_sha256": "d4f3b3b7b018ee49c515915fe851ff7327d82fb198cbc8af117e8f0e73fff37e",
+  "format": {
+    "encoding": "utf-8-sig",
+    "delimiter": ";",
+    "encoding_note": "Decodificación completa válida; no prueba única del origen. UTF-8-sig admite BOM opcional."
+  },
+  "coverage": {
+    "modo": "academica",
+    "inicio": "2013-01",
+    "fin": "2016-05",
+    "meses": {},
+    "evidencia": "Supuesto académico explícito de completitud y disponibilidad al cierre; no certificado"
+  },
+  "counts": {
+    "train": 4599,
+    "val": 2628,
+    "test": 1111
+  },
+  "expected_counts_academic": {
+    "train": 4599,
+    "val": 2628,
+    "test": 1111
+  },
+  "partitions": {
+    "train": [
+      "2013-04",
+      "2014-12"
+    ],
+    "val": [
+      "2015-01",
+      "2015-12"
+    ],
+    "test": [
+      "2016-01",
+      "2016-05"
+    ]
+  },
+  "features_before": 23,
+  "features_after": 20,
+  "dtype_X": "float64",
+  "dtype_y": "int8",
+  "label_values": [
+    0,
+    1
+  ],
+  "row_order": "mes_objetivo ascendente, producto_provisional exacto ascendente",
+  "development_label_counts": {
+    "train": {
+      "positive": 2382,
+      "negative": 2217
+    },
+    "val": {
+      "positive": 1329,
+      "negative": 1299
+    }
+  },
+  "test_label_statistics": "no calculadas ni reportadas para decisiones de desarrollo",
+  "integrity": {
+    "preserved": true,
+    "before": {
+      "datos\\originales\\dataset_ventas_wwi.csv": "9da69cab3fd573f0f36d92cb97f533740bcb73c08b3909885209843ec8990745",
+      "datos\\originales\\datos_limpios.csv": "d4f3b3b7b018ee49c515915fe851ff7327d82fb198cbc8af117e8f0e73fff37e",
+      "referencias\\Carta_de_Diseño (2).pdf": "e342b047019d74c2c936b942367b8ba6b1bb9109989b342ad2eb0a299bc4d7c0",
+      "referencias\\Codigo_anteiror\\EXPLICACION_PERCEPTRON.md": "486d85abce5871c1fd479fb100ee3998072e8bde9f6302a065017f3cece05881",
+      "referencias\\Codigo_anteiror\\Perceptron.py": "1390a68564a9b458b875f3b5eeeae3e8766ff3d818639a3cb4059739d0fb5aab",
+      "referencias\\Codigo_anteiror\\requirements.txt": "b63aea5d6238472ccdd07a5fa41c45a7f62b98df8900d8c05344035431186cbd",
+      "referencias\\Codigo_anteiror\\test_perceptron.py": "60fbfe0bb03eb26a6c8dbfd8ca4502ff0ce0f173660c2aece82536b610045596",
+      "referencias\\Dashboard (1).pdf": "4708dcea91a45c0fee641c1173073d72eda6e2921a65eaeeb5c2ada13a409102",
+      "referencias\\GRaficos con MNIST 4077751154f78080828ff5640e835bc1.md": "61d073b362cce2b19551df991618c34bc4b4c83cb9b0324ba986fa53dbf3e1d2",
+      "referencias\\Openrefine_Cluster (2).pdf": "8fc6edd6cecb6eb77101002a7caa938e35e9070b99ea533156797d818057360e",
+      "resultados\\auditoria\\comparacion_csv.json": "3e801f33239f618cc915249ac2dd6764e776ba458606152d463b6d6a158794d6",
+      "resultados\\auditoria\\diccionario_datos.csv": "d7a06e80eb43be60ca2ad797b8abcbc3f1fb684ce3f0e25cd66d5fc47a1dfd38",
+      "resultados\\auditoria\\perfilado_datos.json": "f22b456dd0bb9cb199a25cbb31d479f1a64d665040623d20f45a5a154c0d7c68",
+      "resultados\\auditoria\\reporte_auditoria.md": "03b7a3263ca98b25e63bb7b91f9a16ca910853589f33d5091ee5a2fea5f11dd4",
+      "resultados\\auditoria\\requisitos_confirmados.md": "f89c13be74fbe239fd48a0ce0e5467320459887188fdf6cd1d3ce04508633693",
+      "resultados\\auditoria\\viabilidad_predictiva.md": "0e76c1c69d5d80e0795644a6c4cdfb08f2a9ba4b16279e50742b6d715da7f071",
+      "resultados\\fase_02\\analisis_etiquetas.md": "8ee9e1b39bfd08085e09927c027629bde9f4958f76ae5f793631b9fd279b9d33",
+      "resultados\\fase_02\\contrato_datos.md": "b84694f3f614e480e0e152b1b847ab399f22a15bab67f39d4371991b2260235b",
+      "resultados\\fase_02\\diseno_evaluacion.md": "f9da7af7744bcce6adbaf9ab6ff5354c46edc4fae0c089279b33b3433013266f",
+      "resultados\\fase_02\\especificacion_problema.md": "4a1ee219ab2d53efb46e43a0167de3c39157e2ca09f24a9dfdd43da6e5dc9147",
+      "resultados\\fase_02\\exploracion_etiquetas.json": "b2ded5984f6be8df1358096cce3625ef85ad5999f1ad4bb076843a202a8ccd30",
+      "src\\auditar_datos.py": "f0669997b89401a509330fc317c6d5bb76bb34051a5386f6215829850c30d1df",
+      "src\\analizar_etiquetas.py": "ce30c045cabda78a7410693d22df32296d5af85837dfc615b7a60c471a51190e",
+      "tests\\test_auditoria.py": "c4fbe7b4a69e5a8bc4b31f8d2f09c33a3f4a54f6358bd9649227eddf14dff030",
+      "tests\\test_etiquetas.py": "1be60503acf004fe4d3ad7e8b8e5da8297d313e415ac001b13e73c7b51bcdbae"
+    },
+    "after": {
+      "datos\\originales\\dataset_ventas_wwi.csv": "9da69cab3fd573f0f36d92cb97f533740bcb73c08b3909885209843ec8990745",
+      "datos\\originales\\datos_limpios.csv": "d4f3b3b7b018ee49c515915fe851ff7327d82fb198cbc8af117e8f0e73fff37e",
+      "referencias\\Carta_de_Diseño (2).pdf": "e342b047019d74c2c936b942367b8ba6b1bb9109989b342ad2eb0a299bc4d7c0",
+      "referencias\\Codigo_anteiror\\EXPLICACION_PERCEPTRON.md": "486d85abce5871c1fd479fb100ee3998072e8bde9f6302a065017f3cece05881",
+      "referencias\\Codigo_anteiror\\Perceptron.py": "1390a68564a9b458b875f3b5eeeae3e8766ff3d818639a3cb4059739d0fb5aab",
+      "referencias\\Codigo_anteiror\\requirements.txt": "b63aea5d6238472ccdd07a5fa41c45a7f62b98df8900d8c05344035431186cbd",
+      "referencias\\Codigo_anteiror\\test_perceptron.py": "60fbfe0bb03eb26a6c8dbfd8ca4502ff0ce0f173660c2aece82536b610045596",
+      "referencias\\Dashboard (1).pdf": "4708dcea91a45c0fee641c1173073d72eda6e2921a65eaeeb5c2ada13a409102",
+      "referencias\\GRaficos con MNIST 4077751154f78080828ff5640e835bc1.md": "61d073b362cce2b19551df991618c34bc4b4c83cb9b0324ba986fa53dbf3e1d2",
+      "referencias\\Openrefine_Cluster (2).pdf": "8fc6edd6cecb6eb77101002a7caa938e35e9070b99ea533156797d818057360e",
+      "resultados\\auditoria\\comparacion_csv.json": "3e801f33239f618cc915249ac2dd6764e776ba458606152d463b6d6a158794d6",
+      "resultados\\auditoria\\diccionario_datos.csv": "d7a06e80eb43be60ca2ad797b8abcbc3f1fb684ce3f0e25cd66d5fc47a1dfd38",
+      "resultados\\auditoria\\perfilado_datos.json": "f22b456dd0bb9cb199a25cbb31d479f1a64d665040623d20f45a5a154c0d7c68",
+      "resultados\\auditoria\\reporte_auditoria.md": "03b7a3263ca98b25e63bb7b91f9a16ca910853589f33d5091ee5a2fea5f11dd4",
+      "resultados\\auditoria\\requisitos_confirmados.md": "f89c13be74fbe239fd48a0ce0e5467320459887188fdf6cd1d3ce04508633693",
+      "resultados\\auditoria\\viabilidad_predictiva.md": "0e76c1c69d5d80e0795644a6c4cdfb08f2a9ba4b16279e50742b6d715da7f071",
+      "resultados\\fase_02\\analisis_etiquetas.md": "8ee9e1b39bfd08085e09927c027629bde9f4958f76ae5f793631b9fd279b9d33",
+      "resultados\\fase_02\\contrato_datos.md": "b84694f3f614e480e0e152b1b847ab399f22a15bab67f39d4371991b2260235b",
+      "resultados\\fase_02\\diseno_evaluacion.md": "f9da7af7744bcce6adbaf9ab6ff5354c46edc4fae0c089279b33b3433013266f",
+      "resultados\\fase_02\\especificacion_problema.md": "4a1ee219ab2d53efb46e43a0167de3c39157e2ca09f24a9dfdd43da6e5dc9147",
+      "resultados\\fase_02\\exploracion_etiquetas.json": "b2ded5984f6be8df1358096cce3625ef85ad5999f1ad4bb076843a202a8ccd30",
+      "src\\auditar_datos.py": "f0669997b89401a509330fc317c6d5bb76bb34051a5386f6215829850c30d1df",
+      "src\\analizar_etiquetas.py": "ce30c045cabda78a7410693d22df32296d5af85837dfc615b7a60c471a51190e",
+      "tests\\test_auditoria.py": "c4fbe7b4a69e5a8bc4b31f8d2f09c33a3f4a54f6358bd9649227eddf14dff030",
+      "tests\\test_etiquetas.py": "1be60503acf004fe4d3ad7e8b8e5da8297d313e415ac001b13e73c7b51bcdbae"
+    }
+  },
+  "implementation_sha256": {
+    "src\\pipeline\\__init__.py": "9702e6ffa3eb3af5ab307532a4fe89694ee6aa580be832d7d8122e826652dc3b",
+    "src\\pipeline\\agregacion.py": "119563cdd88a3a4f8363dc1a30d4904b93c91561287bd0133f24c4751f0699a8",
+    "src\\pipeline\\caracteristicas.py": "e71dd02cbc805a052e7453ba1c8b314e9c459d34cf7d84e213570e8e603cb8c8",
+    "src\\pipeline\\construir_dataset.py": "232d76a6afd1e5ffb849f6192c86b42f13ad338ba3186acf8f3167777331de20",
+    "src\\pipeline\\particiones.py": "346af46b98ae0d237dc05186f73bcfa6da1ed064639fbf4f5da8962562868967",
+    "src\\pipeline\\preprocesamiento.py": "18b3afcdb09eb7ada229e489963f2fa047fbb821898733f12ee7f77c926092ab",
+    "tests/test_pipeline.py": "28dd2a26f6ceac1ce0b516929c275d254f8793eaadc562091f6a67ee00bafd5a"
+  },
+  "artifact_sha256": {
+    "datos\\Procesados\\fase_03\\caracteristicas.json": "4f2b0726e99cc17204f9bd06039e765138583a1ec71910ce5541c2598b7740dc",
+    "datos\\Procesados\\fase_03\\metadatos_test.csv": "ed82da4c2e181d3678e24a2c492a6041991db2da8d5b52cb03db8a78b70805d3",
+    "datos\\Procesados\\fase_03\\metadatos_train.csv": "30ac1b1494543354c3ce81b9cefb04447c105cd9876d74367fff9862e36d1220",
+    "datos\\Procesados\\fase_03\\metadatos_val.csv": "7fd320f0bcb183f9065e0e2a163eb29cfa98906ad6775c9fab0fc2e0b5fbba9c",
+    "datos\\Procesados\\fase_03\\observaciones.csv": "86fbbeaac2f055bac20882e7f46e2ef46b329a6c221229a9295bb4c1c40ff18e",
+    "datos\\Procesados\\fase_03\\preprocesador.json": "aa90d86753209b69a9c00cced2afdd92bc3c1036b166b9f41af897117bee9c2c",
+    "datos\\Procesados\\fase_03\\producto_mes.csv": "7bd5ca9ca1adc485d2bc0481459c779a053e92a227776fa5d11fb3eee36db956",
+    "datos\\Procesados\\fase_03\\X_test.npy": "7414d356532906acc6388e8e966f490d0dc06890b00e732092a2f2dff23320a0",
+    "datos\\Procesados\\fase_03\\X_train.npy": "3eaed2cdc7b875f5c84e40f00ee751293cf38eeecd3ada37c30312daaa17b4ae",
+    "datos\\Procesados\\fase_03\\X_val.npy": "9ddee79370075f5a0082f61f771a7c4ae501f13f0192f50dfab8a4fe246637e3",
+    "datos\\Procesados\\fase_03\\y_test.npy": "1e81a87691069fe4d3d125d5845da0eeb1f40f86ce6a7d0693045e289468e468",
+    "datos\\Procesados\\fase_03\\y_train.npy": "48aeadcf1a2ca9c730c9106736b0f53619eff944b9a56c3f02a1d2d945a75de8",
+    "datos\\Procesados\\fase_03\\y_val.npy": "9bceab668265424d252091d0a1d9d3ae9a2b28ef1e11b8aaac78dbdff1210443",
+    "resultados\\fase_03\\reporte_ejecucion.md": "0d2d3c42c201e705b43fcfe32ce73b8c57830b222b8e60b3073a7a90b44242fe"
+  },
+  "environment": {
+    "numpy": "2.4.4",
+    "pandas": "3.0.2"
+  }
+}

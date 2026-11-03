@@ -1,0 +1,67 @@
+{
+  "command": "python -m unittest discover -s tests -p 'test_*.py' -v",
+  "tests_run": 70,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "gradient_tests_passed_before_WWI": true,
+  "gradient_verification": {
+    "moderado": {
+      "passed": true,
+      "h": 1e-06,
+      "step_rule": "h*max(1,abs(parameter))",
+      "atol": 1e-08,
+      "rtol": 1e-05,
+      "analytic_weights": [
+        -0.1609068540607424,
+        -0.4715685501989191,
+        0.3066409018855943
+      ],
+      "analytic_bias": 0.01547392968512791,
+      "numerical_weights": [
+        -0.16090685406311422,
+        -0.47156855020880073,
+        0.3066409018925853
+      ],
+      "numerical_bias": 0.015473929748655024,
+      "max_absolute_error": 6.352711412471734e-11,
+      "max_relative_error": 4.1054286245702416e-09
+    },
+    "logits_extremos": {
+      "passed": true,
+      "h": 1e-05,
+      "step_rule": "h*max(1,abs(parameter))",
+      "atol": 2e-06,
+      "rtol": 1e-05,
+      "analytic_weights": [
+        1125.0,
+        -375.0
+      ],
+      "analytic_bias": 0.25,
+      "numerical_weights": [
+        1124.9999999904503,
+        -375.0000000081854
+      ],
+      "numerical_bias": 0.25000000505315256,
+      "max_absolute_error": 9.549694368615746e-09,
+      "max_relative_error": 2.021260984365195e-08
+    }
+  },
+  "guarded_repeat": "21 artifacts identical including 5 PNG, same fixed budget and selected checkpoint",
+  "arrays_loaded_by_guarded_training_runner": [
+    "X_train.npy",
+    "y_train.npy",
+    "X_val.npy",
+    "y_val.npy"
+  ],
+  "test_predictive_evaluation": false,
+  "test_labels_used_by_training_or_selection": false,
+  "prior_test_suite_note": "Historical preparation tests validate reserved arrays and alignment only; no test model predictions or parameter selection",
+  "protected_files_verified": 74,
+  "protected_files_preserved": true,
+  "artifact_hashes_verified": true,
+  "implementation_hashes_verified": true,
+  "plots_visually_reviewed": 5,
+  "phase05_manifest_sha256": "9063e9055010aec6eccd433222bd98af0b3e81ff9a59e1b818e43abd026f0c20"
+}

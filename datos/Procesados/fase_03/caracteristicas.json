@@ -1,0 +1,173 @@
+{
+  "version_contrato": "2.0",
+  "input_features": [
+    "unidades_lag_1",
+    "unidades_lag_2",
+    "unidades_lag_3",
+    "unidades_media_3",
+    "unidades_mediana_3",
+    "unidades_std_3",
+    "cambio_unidades_1",
+    "variacion_relativa_1",
+    "base_variacion_cero",
+    "tendencia_unidades_3",
+    "facturas_lag_1",
+    "facturas_media_3",
+    "ingresos_lag_1",
+    "ingresos_media_3",
+    "precio_unitario_ponderado_lag_1",
+    "mes_anterior_sin_ventas",
+    "clientes_distintos_lag_1",
+    "unidades_por_factura_lag_1",
+    "facturas_lag_1_cero",
+    "antiguedad_observada_meses",
+    "mes_objetivo_sin",
+    "mes_objetivo_cos",
+    "dias_mes_objetivo"
+  ],
+  "feature_names": [
+    "unidades_lag_1",
+    "unidades_lag_2",
+    "unidades_lag_3",
+    "unidades_media_3",
+    "unidades_mediana_3",
+    "unidades_std_3",
+    "cambio_unidades_1",
+    "variacion_relativa_1",
+    "tendencia_unidades_3",
+    "facturas_lag_1",
+    "facturas_media_3",
+    "ingresos_lag_1",
+    "ingresos_media_3",
+    "precio_unitario_ponderado_lag_1",
+    "clientes_distintos_lag_1",
+    "unidades_por_factura_lag_1",
+    "antiguedad_observada_meses",
+    "mes_objetivo_sin",
+    "mes_objetivo_cos",
+    "dias_mes_objetivo"
+  ],
+  "categorical_features": [],
+  "rules": {
+    "unidades_lag_1": {
+      "formula": "Q(p,t-1)",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "unidades_lag_2": {
+      "formula": "Q(p,t-2)",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "unidades_lag_3": {
+      "formula": "Q(p,t-3)",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "unidades_media_3": {
+      "formula": "(q1+q2+q3)/3",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "unidades_mediana_3": {
+      "formula": "mediana(q1,q2,q3)",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "unidades_std_3": {
+      "formula": "std(q1,q2,q3), ddof=0",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "cambio_unidades_1": {
+      "formula": "q1-q2",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "variacion_relativa_1": {
+      "formula": "(q1-q2)/q2 si q2>0; nulo en otro caso",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "mediana_train_si_no_esencial"
+    },
+    "base_variacion_cero": {
+      "formula": "1[q2=0]",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "tendencia_unidades_3": {
+      "formula": "(q1-q3)/2",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "facturas_lag_1": {
+      "formula": "COUNT DISTINCT InvoiceID(p,t-1)",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "facturas_media_3": {
+      "formula": "media de facturas distintas en t-1,t-2,t-3",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "ingresos_lag_1": {
+      "formula": "SUM VentaSinImpuesto(p,t-1)",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "ingresos_media_3": {
+      "formula": "media de ingresos de t-1,t-2,t-3",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "precio_unitario_ponderado_lag_1": {
+      "formula": "ingresos_lag_1/q1 si q1>0; nulo si q1=0",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "mediana_train_si_no_esencial"
+    },
+    "mes_anterior_sin_ventas": {
+      "formula": "1[q1=0]; indicador también para precio sin base",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "clientes_distintos_lag_1": {
+      "formula": "COUNT DISTINCT NombreCliente(p,t-1)",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "unidades_por_factura_lag_1": {
+      "formula": "q1/facturas_lag_1 si facturas_lag_1>0; nulo si no",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "mediana_train_si_no_esencial"
+    },
+    "facturas_lag_1_cero": {
+      "formula": "1[facturas_lag_1=0]; indicador de unidades_por_factura sin base",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "antiguedad_observada_meses": {
+      "formula": "ordinal(t)-ordinal(primer mes observado antes del corte)",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "mes_objetivo_sin": {
+      "formula": "sin(2*pi*(mes(t)-1)/12)",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "mes_objetivo_cos": {
+      "formula": "cos(2*pi*(mes(t)-1)/12)",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    },
+    "dias_mes_objetivo": {
+      "formula": "días calendario de t, con bisiestos",
+      "availability": "historia_fecha_menor_al_corte_o_calendario_conocido",
+      "missing": "historia_esencial_o_calendario_obligatorio"
+    }
+  },
+  "discarded": {
+    "base_variacion_cero": "constante_en_train_tras_imputacion",
+    "mes_anterior_sin_ventas": "constante_en_train_tras_imputacion",
+    "facturas_lag_1_cero": "constante_en_train_tras_imputacion"
+  }
+}

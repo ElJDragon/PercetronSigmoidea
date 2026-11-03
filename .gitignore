@@ -1,0 +1,45 @@
+# Python, entornos y cachés
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+# Configuración y credenciales locales
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+.aws/
+.codex/
+.agents/
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
+*.tmp
+*.bak
+*.swp
+*.log
+# Auxiliares LaTeX: se conservan fuentes, figuras y PDF final
+informe/*.aux
+informe/*.lof
+informe/*.lot
+informe/*.out
+informe/*.toc
+informe/*.fls
+informe/*.fdb_latexmk
+informe/*.synctex.gz
+informe/revision/
+informe/evidencias/compilacion_*.txt
+informe/evidencias/texto_pdf.txt
+informe/evidencias/pdfinfo.txt
+informe/evidencias/imagenes_pdf.txt
+informe/evidencias/referencia_*.txt

@@ -1,0 +1,361 @@
+{
+  "plan_sha256": "41957eecdae0d589cda92586e27e6ce342ee89865ea874eccd3468985d325f5f",
+  "runs": [
+    {
+      "id": "eta_001",
+      "params": {
+        "learning_rate": 0.01,
+        "max_epochs": 200,
+        "seed": 42,
+        "initialization": "zeros",
+        "initial_weights": null,
+        "initial_bias": 0.0,
+        "tolerance": null,
+        "threshold": 0.5
+      },
+      "selected_epoch": 195,
+      "initial_train_loss": 0.6931471805599452,
+      "initial_val_loss": 0.6931471805599452,
+      "metrics_at_05": {
+        "train": {
+          "n": 4599,
+          "accuracy": 0.6436181778647532,
+          "precision": 0.6551148225469728,
+          "recall": 0.6586901763224181,
+          "specificity": 0.627424447451511,
+          "f1": 0.6568976344986394,
+          "balanced_accuracy": 0.6430573118869646,
+          "confusion_matrix": [
+            [
+              1391,
+              826
+            ],
+            [
+              813,
+              1569
+            ]
+          ],
+          "confusion_order": [
+            0,
+            1
+          ],
+          "support": {
+            "0": 2217,
+            "1": 2382
+          },
+          "class_proportions": {
+            "0": 0.482061317677756,
+            "1": 0.5179386823222439
+          },
+          "denominator_zero": {
+            "precision": false,
+            "recall": false,
+            "specificity": false,
+            "f1": false
+          },
+          "cross_entropy": 0.648932828672805
+        },
+        "val": {
+          "n": 2628,
+          "accuracy": 0.5829528158295282,
+          "precision": 0.6741405082212257,
+          "recall": 0.33935289691497367,
+          "specificity": 0.8321785989222479,
+          "f1": 0.45145145145145144,
+          "balanced_accuracy": 0.5857657479186108,
+          "confusion_matrix": [
+            [
+              1081,
+              218
+            ],
+            [
+              878,
+              451
+            ]
+          ],
+          "confusion_order": [
+            0,
+            1
+          ],
+          "support": {
+            "0": 1299,
+            "1": 1329
+          },
+          "class_proportions": {
+            "0": 0.4942922374429224,
+            "1": 0.5057077625570776
+          },
+          "denominator_zero": {
+            "precision": false,
+            "recall": false,
+            "specificity": false,
+            "f1": false
+          },
+          "cross_entropy": 0.6724013536803527
+        }
+      },
+      "selected_weights": [
+        -0.002260469736567205,
+        -0.00719860548383328,
+        -0.01574171449906119,
+        -0.008643565885425272,
+        -0.024602395661908246,
+        0.02850922549726408,
+        0.011298618031015362,
+        0.03310245109102408,
+        0.030407552015829137,
+        -0.1042113792271048,
+        -0.19722166294381735,
+        -0.015575245032825666,
+        -0.01355299773526606,
+        -0.0058856128304286374,
+        -0.10441509089706222,
+        0.017138874104821015,
+        0.007772392853137846,
+        0.08729662674883579,
+        0.015841940063211386,
+        0.07574249032410198
+      ],
+      "selected_bias": 0.02795883941577689,
+      "converged_by_tolerance": false
+    },
+    {
+      "id": "eta_005",
+      "params": {
+        "learning_rate": 0.05,
+        "max_epochs": 200,
+        "seed": 42,
+        "initialization": "zeros",
+        "initial_weights": null,
+        "initial_bias": 0.0,
+        "tolerance": null,
+        "threshold": 0.5
+      },
+      "selected_epoch": 170,
+      "initial_train_loss": 0.6931471805599452,
+      "initial_val_loss": 0.6931471805599452,
+      "metrics_at_05": {
+        "train": {
+          "n": 4599,
+          "accuracy": 0.6555772994129159,
+          "precision": 0.664332784184514,
+          "recall": 0.6771620486985727,
+          "specificity": 0.6323861073522778,
+          "f1": 0.6706860706860707,
+          "balanced_accuracy": 0.6547740780254252,
+          "confusion_matrix": [
+            [
+              1402,
+              815
+            ],
+            [
+              769,
+              1613
+            ]
+          ],
+          "confusion_order": [
+            0,
+            1
+          ],
+          "support": {
+            "0": 2217,
+            "1": 2382
+          },
+          "class_proportions": {
+            "0": 0.482061317677756,
+            "1": 0.5179386823222439
+          },
+          "denominator_zero": {
+            "precision": false,
+            "recall": false,
+            "specificity": false,
+            "f1": false
+          },
+          "cross_entropy": 0.630477441301496
+        },
+        "val": {
+          "n": 2628,
+          "accuracy": 0.6046423135464232,
+          "precision": 0.6461693548387096,
+          "recall": 0.4823175319789315,
+          "specificity": 0.7297921478060047,
+          "f1": 0.5523481258078414,
+          "balanced_accuracy": 0.6060548398924681,
+          "confusion_matrix": [
+            [
+              948,
+              351
+            ],
+            [
+              688,
+              641
+            ]
+          ],
+          "confusion_order": [
+            0,
+            1
+          ],
+          "support": {
+            "0": 1299,
+            "1": 1329
+          },
+          "class_proportions": {
+            "0": 0.4942922374429224,
+            "1": 0.5057077625570776
+          },
+          "denominator_zero": {
+            "precision": false,
+            "recall": false,
+            "specificity": false,
+            "f1": false
+          },
+          "cross_entropy": 0.671255004424162
+        }
+      },
+      "selected_weights": [
+        0.004163262441202955,
+        0.0010721997503018825,
+        -0.030936806949880897,
+        -0.008752951135052176,
+        -0.07639170636725791,
+        0.09948529260992288,
+        0.007159525013113788,
+        0.10995792194234615,
+        0.07953648166680509,
+        -0.13943371420042613,
+        -0.4098354294337057,
+        -0.021081708470925158,
+        -0.008211012295599063,
+        -0.002343447258409133,
+        -0.1407498701039245,
+        0.03167667193048324,
+        0.09592095249620934,
+        0.19818391286178705,
+        0.0025339664798598115,
+        0.20414895602444597
+      ],
+      "selected_bias": 0.0698207724723709,
+      "converged_by_tolerance": false
+    },
+    {
+      "id": "eta_010",
+      "params": {
+        "learning_rate": 0.1,
+        "max_epochs": 200,
+        "seed": 42,
+        "initialization": "zeros",
+        "initial_weights": null,
+        "initial_bias": 0.0,
+        "tolerance": null,
+        "threshold": 0.5
+      },
+      "selected_epoch": 200,
+      "initial_train_loss": 0.6931471805599452,
+      "initial_val_loss": 0.6931471805599452,
+      "metrics_at_05": {
+        "train": {
+          "n": 4599,
+          "accuracy": 0.6584040008697543,
+          "precision": 0.6654426764585883,
+          "recall": 0.684718723761545,
+          "specificity": 0.6301308073973838,
+          "f1": 0.6749430995241051,
+          "balanced_accuracy": 0.6574247655794644,
+          "confusion_matrix": [
+            [
+              1397,
+              820
+            ],
+            [
+              751,
+              1631
+            ]
+          ],
+          "confusion_order": [
+            0,
+            1
+          ],
+          "support": {
+            "0": 2217,
+            "1": 2382
+          },
+          "class_proportions": {
+            "0": 0.482061317677756,
+            "1": 0.5179386823222439
+          },
+          "denominator_zero": {
+            "precision": false,
+            "recall": false,
+            "specificity": false,
+            "f1": false
+          },
+          "cross_entropy": 0.6269539858615067
+        },
+        "val": {
+          "n": 2628,
+          "accuracy": 0.6114916286149162,
+          "precision": 0.6281198003327787,
+          "recall": 0.5680963130173062,
+          "specificity": 0.6558891454965358,
+          "f1": 0.5966021335440538,
+          "balanced_accuracy": 0.6119927292569209,
+          "confusion_matrix": [
+            [
+              852,
+              447
+            ],
+            [
+              574,
+              755
+            ]
+          ],
+          "confusion_order": [
+            0,
+            1
+          ],
+          "support": {
+            "0": 1299,
+            "1": 1329
+          },
+          "class_proportions": {
+            "0": 0.4942922374429224,
+            "1": 0.5057077625570776
+          },
+          "denominator_zero": {
+            "precision": false,
+            "recall": false,
+            "specificity": false,
+            "f1": false
+          },
+          "cross_entropy": 0.6695745428232207
+        }
+      },
+      "selected_weights": [
+        0.007753842937108124,
+        0.021919159372678004,
+        -0.02887438357917642,
+        0.00038495335263386433,
+        -0.1550018310751814,
+        0.1603485307302967,
+        -0.03239089609332676,
+        0.13404048909634628,
+        0.08312368854459541,
+        -0.11308763440928998,
+        -0.520097786700729,
+        -0.037081330837846524,
+        0.007335190966533872,
+        0.0004866891244691942,
+        -0.11718785125889304,
+        0.028211039550568473,
+        0.16703575165447174,
+        0.24188638442783236,
+        -0.018110885050252778,
+        0.2550458337404401
+      ],
+      "selected_bias": 0.08539078966952132,
+      "converged_by_tolerance": false
+    }
+  ],
+  "selected_id": "eta_010",
+  "final_threshold": 0.5
+}

@@ -1,0 +1,204 @@
+{
+  "global": {
+    "n": 1111,
+    "agreement": 928,
+    "disagreement": 183,
+    "both_correct": 554,
+    "both_wrong": 374,
+    "only_perceptron_correct": 45,
+    "only_logistic_correct": 138
+  },
+  "monthly": {
+    "2016-01": {
+      "n": 219,
+      "agreement": 172,
+      "disagreement": 47,
+      "both_correct": 98,
+      "both_wrong": 74,
+      "only_perceptron_correct": 12,
+      "only_logistic_correct": 35
+    },
+    "2016-02": {
+      "n": 219,
+      "agreement": 132,
+      "disagreement": 87,
+      "both_correct": 71,
+      "both_wrong": 61,
+      "only_perceptron_correct": 16,
+      "only_logistic_correct": 71
+    },
+    "2016-03": {
+      "n": 219,
+      "agreement": 208,
+      "disagreement": 11,
+      "both_correct": 138,
+      "both_wrong": 70,
+      "only_perceptron_correct": 2,
+      "only_logistic_correct": 9
+    },
+    "2016-04": {
+      "n": 227,
+      "agreement": 203,
+      "disagreement": 24,
+      "both_correct": 115,
+      "both_wrong": 88,
+      "only_perceptron_correct": 7,
+      "only_logistic_correct": 17
+    },
+    "2016-05": {
+      "n": 227,
+      "agreement": 213,
+      "disagreement": 14,
+      "both_correct": 132,
+      "both_wrong": 81,
+      "only_perceptron_correct": 8,
+      "only_logistic_correct": 6
+    }
+  },
+  "cohorts": {
+    "conocidos": {
+      "n": 1095,
+      "agreement": 919,
+      "disagreement": 176,
+      "both_correct": 548,
+      "both_wrong": 371,
+      "only_perceptron_correct": 43,
+      "only_logistic_correct": 133
+    },
+    "nuevos": {
+      "n": 16,
+      "agreement": 9,
+      "disagreement": 7,
+      "both_correct": 6,
+      "both_wrong": 3,
+      "only_perceptron_correct": 2,
+      "only_logistic_correct": 5
+    }
+  },
+  "errors_by_method": {
+    "perceptron": {
+      "total": 512,
+      "correct": 599,
+      "monthly": {
+        "2016-01": {
+          "errors": 109,
+          "n": 219,
+          "error_rate": 0.4977168949771689
+        },
+        "2016-02": {
+          "errors": 132,
+          "n": 219,
+          "error_rate": 0.6027397260273972
+        },
+        "2016-03": {
+          "errors": 79,
+          "n": 219,
+          "error_rate": 0.3607305936073059
+        },
+        "2016-04": {
+          "errors": 105,
+          "n": 227,
+          "error_rate": 0.46255506607929514
+        },
+        "2016-05": {
+          "errors": 87,
+          "n": 227,
+          "error_rate": 0.3832599118942731
+        }
+      }
+    },
+    "logistica": {
+      "total": 419,
+      "correct": 692,
+      "monthly": {
+        "2016-01": {
+          "errors": 86,
+          "n": 219,
+          "error_rate": 0.3926940639269406
+        },
+        "2016-02": {
+          "errors": 77,
+          "n": 219,
+          "error_rate": 0.3515981735159817
+        },
+        "2016-03": {
+          "errors": 72,
+          "n": 219,
+          "error_rate": 0.3287671232876712
+        },
+        "2016-04": {
+          "errors": 95,
+          "n": 227,
+          "error_rate": 0.4185022026431718
+        },
+        "2016-05": {
+          "errors": 89,
+          "n": 227,
+          "error_rate": 0.3920704845814978
+        }
+      }
+    },
+    "mayoritario": {
+      "total": 558,
+      "correct": 553,
+      "monthly": {
+        "2016-01": {
+          "errors": 125,
+          "n": 219,
+          "error_rate": 0.5707762557077626
+        },
+        "2016-02": {
+          "errors": 155,
+          "n": 219,
+          "error_rate": 0.7077625570776256
+        },
+        "2016-03": {
+          "errors": 81,
+          "n": 219,
+          "error_rate": 0.3698630136986301
+        },
+        "2016-04": {
+          "errors": 107,
+          "n": 227,
+          "error_rate": 0.4713656387665198
+        },
+        "2016-05": {
+          "errors": 90,
+          "n": 227,
+          "error_rate": 0.3964757709251101
+        }
+      }
+    },
+    "historico": {
+      "total": 540,
+      "correct": 571,
+      "monthly": {
+        "2016-01": {
+          "errors": 91,
+          "n": 219,
+          "error_rate": 0.4155251141552511
+        },
+        "2016-02": {
+          "errors": 88,
+          "n": 219,
+          "error_rate": 0.4018264840182648
+        },
+        "2016-03": {
+          "errors": 128,
+          "n": 219,
+          "error_rate": 0.5844748858447488
+        },
+        "2016-04": {
+          "errors": 104,
+          "n": 227,
+          "error_rate": 0.4581497797356828
+        },
+        "2016-05": {
+          "errors": 129,
+          "n": 227,
+          "error_rate": 0.5682819383259912
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "perceptron": {
+    "n": 1111,
+    "accuracy": 0.5391539153915391,
+    "precision": 0.5200783545543585,
+    "recall": 0.9602169981916817,
+    "specificity": 0.12186379928315412,
+    "f1": 0.6747141041931385,
+    "balanced_accuracy": 0.5410403987374179,
+    "confusion_matrix": [
+      [
+        68,
+        490
+      ],
+      [
+        22,
+        531
+      ]
+    ],
+    "confusion_order": [
+      0,
+      1
+    ],
+    "support": {
+      "0": 558,
+      "1": 553
+    },
+    "class_proportions": {
+      "0": 0.5022502250225023,
+      "1": 0.4977497749774977
+    },
+    "denominator_zero": {
+      "precision": false,
+      "recall": false,
+      "specificity": false,
+      "f1": false
+    },
+    "TN": 68,
+    "FP": 490,
+    "FN": 22,
+    "TP": 531
+  },
+  "logistica": {
+    "n": 1111,
+    "accuracy": 0.6228622862286228,
+    "precision": 0.5766590389016019,
+    "recall": 0.9113924050632911,
+    "specificity": 0.33691756272401435,
+    "f1": 0.7063770147161879,
+    "balanced_accuracy": 0.6241549838936528,
+    "confusion_matrix": [
+      [
+        188,
+        370
+      ],
+      [
+        49,
+        504
+      ]
+    ],
+    "confusion_order": [
+      0,
+      1
+    ],
+    "support": {
+      "0": 558,
+      "1": 553
+    },
+    "class_proportions": {
+      "0": 0.5022502250225023,
+      "1": 0.4977497749774977
+    },
+    "denominator_zero": {
+      "precision": false,
+      "recall": false,
+      "specificity": false,
+      "f1": false
+    },
+    "TN": 188,
+    "FP": 370,
+    "FN": 49,
+    "TP": 504
+  },
+  "mayoritario": {
+    "n": 1111,
+    "accuracy": 0.4977497749774977,
+    "precision": 0.4977497749774977,
+    "recall": 1.0,
+    "specificity": 0.0,
+    "f1": 0.6646634615384616,
+    "balanced_accuracy": 0.5,
+    "confusion_matrix": [
+      [
+        0,
+        558
+      ],
+      [
+        0,
+        553
+      ]
+    ],
+    "confusion_order": [
+      0,
+      1
+    ],
+    "support": {
+      "0": 558,
+      "1": 553
+    },
+    "class_proportions": {
+      "0": 0.5022502250225023,
+      "1": 0.4977497749774977
+    },
+    "denominator_zero": {
+      "precision": false,
+      "recall": false,
+      "specificity": false,
+      "f1": false
+    },
+    "TN": 0,
+    "FP": 558,
+    "FN": 0,
+    "TP": 553
+  },
+  "historico": {
+    "n": 1111,
+    "accuracy": 0.5139513951395139,
+    "precision": 0.518840579710145,
+    "recall": 0.32368896925858953,
+    "specificity": 0.7025089605734767,
+    "f1": 0.3986636971046771,
+    "balanced_accuracy": 0.5130989649160331,
+    "confusion_matrix": [
+      [
+        392,
+        166
+      ],
+      [
+        374,
+        179
+      ]
+    ],
+    "confusion_order": [
+      0,
+      1
+    ],
+    "support": {
+      "0": 558,
+      "1": 553
+    },
+    "class_proportions": {
+      "0": 0.5022502250225023,
+      "1": 0.4977497749774977
+    },
+    "denominator_zero": {
+      "precision": false,
+      "recall": false,
+      "specificity": false,
+      "f1": false
+    },
+    "TN": 392,
+    "FP": 166,
+    "FN": 374,
+    "TP": 179
+  }
+}

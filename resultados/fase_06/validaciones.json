@@ -1,0 +1,28 @@
+{
+  "command": "python -m unittest discover -s tests -p 'test_*.py' -v",
+  "tests_run": 82,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "PCA_fit_partition": "train_only",
+  "labels_used_for_PCA_fit": false,
+  "guarded_repeat": "14 files including manifest and 3 PNG reproduced identically",
+  "arrays_loaded_by_phase06": [
+    "X_train.npy",
+    "y_train.npy",
+    "X_val.npy",
+    "y_val.npy"
+  ],
+  "classifier_fit_calls_blocked_in_guarded_run": true,
+  "full_dimensional_predictions_unchanged_after_PCA": true,
+  "test_predictive_evaluation": false,
+  "test_labels_consulted_by_phase06": false,
+  "historical_suite_note": "Historical preparation tests inspect reserved-array integrity/alignment only; classifier training tests use synthetic fixtures, not WWI retraining",
+  "protected_files_verified": 101,
+  "protected_files_preserved": true,
+  "artifact_hashes_verified": true,
+  "implementation_hashes_verified": true,
+  "plots_visually_reviewed": 3,
+  "phase06_manifest_sha256": "c51d9030faa7311833c08b80c97d8d6f54d114c75ef26b20659b80f9d5ff7050"
+}
