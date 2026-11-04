@@ -1,0 +1,39 @@
+\barrerapagina
+\section{Data Warehouse WWI y evidencia de origen}
+La carta de diseño describe un modelo estrella de ventas con \archivo{FactVentas} y las dimensiones Tiempo, Producto, Cliente, Ubicación y Vendedor \cite{carta}. El grano propuesto y comprobado en la extracción es una línea de factura, identificada por \archivo{InvoiceLineID}. \archivo{InvoiceID} se repite legítimamente cuando una factura contiene varias líneas; contar facturas exige identificar valores distintos, no sumar filas.
+
+Los dos CSV auditados contienen 228\,265 filas y 30 columnas. La extracción cubre del 1 de enero de 2013 al 31 de mayo de 2016, con 41 meses. Se encontraron 70\,510 facturas y 227 nombres de producto, sin duplicados completos ni duplicados de la clave de línea. Las medidas monetarias satisfacen las relaciones aritméticas comprobadas. La limpieza conserva las claves y medidas; además del tratamiento de nulos, se observan 268 recortes de espacio en un nombre de cliente. La columna afectada es \archivo{NombreCliente}, según la comparación estructurada, aunque un resumen previo lo atribuye a vendedor. No se atribuye ese cambio a una operación específica sin el historial de OpenRefine.
+
+La auditoría detectó ausencias en Marca (209\,328), Tamaño (67\,315) y GrupoCompra (84\,297), que no justifican borrar las observaciones. Se conservaron extremos y beneficios negativos. Estos últimos no son errores demostrados: faltan costos históricos para explicar su origen. La extracción no incluye StockItemID, CustomerID ni CityID, por lo que la identidad por nombre es provisional. Inventario histórico, compras, cobros y demanda no atendida no están disponibles en los CSV usados.
+
+Los documentos previos describen procesos analíticos y un dashboard \cite{limpieza,dashboard}; no verifican por sí solos todos los cierres, claves, medidas de otras áreas o disponibilidad al instante de predicción. Las cifras anteriores se contrastaron con \archivo{resultados/auditoria/perfilado_datos.json}, su comparación entre fuentes y los manifiestos posteriores. La trazabilidad por archivo se conserva en los anexos digitales del informe.
+
+\section{Metodología y preparación causal de datos}
+\subsection{Grano producto-mes, etiqueta e instante de predicción}
+Sea $Q_{p,t}$ la suma de unidades facturadas observadas del producto provisional $p$ en el mes $t$. La referencia histórica y la etiqueta son
+\begin{equation}R_{p,t}=\operatorname{mediana}(Q_{p,t-1},Q_{p,t-2},Q_{p,t-3}),\qquad y_{p,t}=\mathbf1[Q_{p,t}>R_{p,t}].\label{eq:etiqueta}\end{equation}
+Clase 1 significa ventas unitarias superiores a la mediana reciente del mismo producto; el empate pertenece a clase 0. El horizonte es un mes y el instante de predicción es el cierre de $t-1$. La cantidad objetivo y su etiqueta se mantienen separadas de las entradas. El calendario del mes futuro sí es conocido al corte.
+
+Un producto es elegible cuando se reconoce antes del corte y dispone de los tres meses históricos esenciales, con cobertura válida conforme al contrato. Se construyó el calendario desde su primera aparición; no se asignaron ceros antes de esa fecha. El calendario contiene 9\,019 filas y 8\,792 corresponden a productos ya reconocidos antes del corte. Se evitaron 288 pares previos a la primera aparición de ocho productos recientes. Las observaciones no elegibles se conservan con su estado, sin fabricar una etiqueta cero.
+
+\subsection{Completitud y disponibilidad asumidas}
+La ejecución aprobada utiliza modo académico: se asume completitud y disponibilidad al cierre de enero de 2013 a mayo de 2016. No es una certificación del sistema fuente. En un modo de cobertura desconocida, una ausencia no puede convertirse automáticamente en cero ventas. Los cierres e ingestiones reales deben demostrarse para una aplicación operacional. La disponibilidad secuencial permite usar un mes ya cerrado de test como historia de uno posterior, sin reajustar transformaciones o modelos.
+
+\subsection{Características permitidas y exclusiones}
+Se definieron 23 entradas numéricas base. Incluyen tres retardos de unidades, media, mediana y dispersión histórica; cambio absoluto, variación relativa y tendencia; facturas, ingresos y clientes históricos; precio ponderado y unidades por factura; antigüedad observada y calendario conocido. Las 20 columnas efectivas y sus fórmulas completas constan en el anexo \ref{sec:catalogo}.
+
+Se excluyeron variables del horizonte, medidas monetarias y clientes futuros, identificadores directos, inventario inexistente, atributos estáticos sin historia verificable y categorías no autorizadas. Tampoco se añadieron características después de observar test. Se preservaron redundancias algebraicas: eliminarlas por rendimiento habría cambiado el contrato.
+
+Las razones no esenciales pueden ser nulas si su denominador es cero. Se imputaron con medianas de entrenamiento; la historia esencial ausente bloquea elegibilidad. Tras imputar, se eliminaron únicamente tres columnas constantes en entrenamiento: \archivo{base_variacion_cero}, \archivo{mes_anterior_sin_ventas} y \archivo{facturas_lag_1_cero}. No se suprimieron columnas por correlación con la respuesta o por inspección del rendimiento final.
+
+La estandarización aplica $x_j=(\widetilde x_j-\mu_j)/s_j$, donde $\widetilde x_j$ es la entrada imputada y $\mu_j,s_j$ provienen solo de entrenamiento, con desviación poblacional ($ddof=0$). Las mismas medianas, medias, desviaciones y orden de columnas se reutilizan en validación y test. Las matrices son float64 y las etiquetas int8 canónicas 0/1. No hay codificación categórica en el contrato aprobado.
+
+\subsection{Particiones temporales y control de fuga}
+\input{generado/particiones}
+\figura{datos_particiones.png}{Distribución real de clases y períodos por mes objetivo. Enero--marzo de 2013 aportan la historia inicial, no observaciones objetivo de entrenamiento.}{fig:datos}{1}
+Las observaciones se ordenan por mes objetivo y nombre provisional de producto. Los índices e identificadores producto-mes se conservaron alineados entre modelos. La validación seleccionó configuraciones y checkpoints; test se utilizó después de congelar las decisiones, sin volver a entrenar con train más validación. No se usó partición aleatoria de líneas de factura.
+
+El protocolo previno fuga mediante desplazamiento por calendario, ajuste exclusivo con train, separación de respuestas y protección de hashes. Las pruebas existentes incluyen perturbaciones del horizonte y de datos futuros, fronteras de partición y persistencia del preprocesador. Ambos modelos reciben exactamente las mismas matrices, filas y etiquetas. Las métricas de validación son de selección, por lo que pueden ser optimistas; no se presentan como una reserva independiente del diseño.
+
+\subsection{Baselines comunes}
+El mayoritario predice la clase más frecuente de train, aquí 1, con empate resuelto hacia 0. El histórico predice $\mathbf1[Q_{p,t-1}>R_{p,t}]$, usando cantidades crudas comparables, no columnas estandarizadas en escalas distintas. Ambos se evaluaron sobre los mismos casos que los clasificadores; no se eligió su regla según test.

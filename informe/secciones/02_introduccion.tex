@@ -4,7 +4,7 @@ El análisis descriptivo de un Data Warehouse permite comparar indicadores por t
 La carta de diseño plantea necesidades de seguimiento comercial, clientes e inventario; los informes de limpieza y dashboard documentan la preparación y exploración del ámbito de ventas \cite{carta,limpieza,dashboard}. La extracción disponible respalda esa primera aplicación, pero no acredita la disponibilidad ni implementación de todos los procesos del Data Warehouse. Las dimensiones Producto y Cliente no se consideran Data Marts independientes por el solo hecho de existir como dimensiones.
 
 \subsection{Alcance académico incremental}
-La instrucción proporcionada para esta entrega es: «Perfeccionen todo con un data mart y de ahí háganlo con el resto de Data Marts». En consecuencia, Ventas constituye la primera aplicación desarrollada y evaluada. La continuación obligatoria consiste en trasladar la metodología a los demás Data Marts contemplados en el proyecto, previa comprobación de su modelo, datos y problema predictivo. No se han implementado ni evaluado aquí esas aplicaciones. La estructura modular del informe permite incorporarlas posteriormente sin atribuirles resultados inexistentes.
+La instrucción proporcionada para esta entrega es: «Perfeccionen todo con un data mart y de ahí háganlo con el resto de Data Marts». Ventas constituye la primera aplicación desarrollada y evaluada; esta versión incorpora una segunda aplicación completa en Transacciones Financieras, mediante eventos de cobro por cuenta cliente. La continuación obligatoria exige verificar modelo, datos y problema propio de cada proceso. Pedidos y Compras cuentan con investigaciones de viabilidad, pero no con clasificadores aprobados; Inventario/Movimientos continúa pendiente. La estructura del informe comparte fundamentos y criterios temporales, mientras distingue las unidades, fuentes y resultados de cada aplicación.
 
 \section{Problema empresarial y objetivos}
 \subsection{Pregunta de negocio y respuesta operativa}
@@ -13,7 +13,7 @@ Al cierre del mes anterior se busca identificar productos cuyas unidades factura
 La respuesta no representa rentabilidad, demanda insatisfecha, inventario disponible ni cantidad exacta futura. Una alerta podría orientar la revisión de un analista comercial; no establece por sí sola una orden de compra o reposición. No se dispone de costos de falsos positivos o negativos para cuantificar beneficio económico.
 
 \subsection{Objetivo general}
-Desarrollar y documentar una primera aplicación verificable de clasificación binaria en el Data Mart de Ventas de WWI, comparando un perceptrón simple y una regresión logística implementados matemáticamente, con prevención de fuga temporal y conclusiones sustentadas en resultados congelados.
+Desarrollar y documentar aplicaciones verificables de clasificación binaria en Ventas y Transacciones Financieras de WWI, comparando un perceptrón simple y una regresión logística implementados matemáticamente, con prevención de fuga temporal y conclusiones sustentadas en resultados congelados. La formulación comercial que sigue corresponde a Ventas; la pregunta financiera y sus restricciones se desarrollan en la sección \ref{sec:transacciones}.
 
 \subsection{Objetivos específicos}
 \begin{enumerate}
@@ -22,5 +22,6 @@ Desarrollar y documentar una primera aplicación verificable de clasificación b
 \item Implementar las reglas del perceptrón y los gradientes logísticos, comprobar su matemática y analizar sus historiales reales.
 \item Comparar ambos modelos con baselines mediante matrices de confusión, métricas por clase y evaluación temporal.
 \item Interpretar PCA únicamente como visualización e identificar las limitaciones estadísticas y empresariales de la evidencia.
-\item Dejar una estructura documental reproducible para la ampliación obligatoria a los demás Data Marts, sin implementarlos en esta entrega.
+\item Contrastar la clasificación de unidades vendidas con la frecuencia de cobros, sin confundir sus poblaciones ni atribuir superioridad universal a un algoritmo.
+\item Mantener una estructura documental reproducible para la ampliación obligatoria a los procesos pendientes, sin presentarlos como implementados.
 \end{enumerate}

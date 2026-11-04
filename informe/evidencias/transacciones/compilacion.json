@@ -1,0 +1,28 @@
+{
+  "command": [
+    "pdflatex",
+    "--disable-installer",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "main.tex"
+  ],
+  "passes": [
+    {
+      "attempt": 1,
+      "exit_code": 0,
+      "overfull": false,
+      "undefined": false,
+      "rerun": true
+    },
+    {
+      "attempt": 2,
+      "exit_code": 0,
+      "overfull": false,
+      "undefined": false,
+      "rerun": false
+    }
+  ],
+  "pages": 59,
+  "successful": true,
+  "duplicate_destinations": false
+}

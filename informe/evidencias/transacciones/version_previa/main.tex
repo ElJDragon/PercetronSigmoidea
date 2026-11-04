@@ -1,0 +1,77 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[margin=2.4cm,top=2.3cm,bottom=2.3cm]{geometry}
+\usepackage{amsmath,amssymb,graphicx,booktabs,longtable,array,xcolor}
+\usepackage[hidelinks]{hyperref}
+\makeatletter
+\let\informeMakeCaption\@makecaption
+\long\def\@makecaption#1#2{\informeMakeCaption{{\small\bfseries #1}}{{\small\normalfont #2}}}
+\makeatother
+\setlength{\parskip}{0.4em}
+\setlength{\parindent}{1.2em}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.14}
+\graphicspath{{figuras/}}
+\hypersetup{pdftitle={Machine Learning aplicado al Data Warehouse WWI},pdfauthor={Josue Guevara; Jonathan López}}
+\newcommand{\archivo}[1]{\nolinkurl{#1}}
+\newcommand{\figura}[4]{\begin{figure}[htbp]\centering\includegraphics[width=#4\linewidth]{#1}\ifcsname titulo@#3\endcsname\caption[\csname titulo@#3\endcsname]{#2}\else\caption{#2}\fi\label{#3}\end{figure}}
+\input{secciones/titulos_figuras}
+\newcommand{\barrerapagina}{\clearpage}
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\centering
+{\Large\bfseries UNIVERSIDAD TÉCNICA DE AMBATO\par}
+\vspace{0.4cm}
+{\large Facultad de Ingeniería en Sistemas, Electrónica e Industrial\par}
+{\large Carrera de Software\par}
+\vspace{1.8cm}
+\textcolor{blue!45!black}{\rule{\linewidth}{1.2pt}}\par
+\vspace{0.6cm}
+{\LARGE\bfseries Machine Learning aplicado al\par Data Warehouse Wide World Importers\par}
+\vspace{0.6cm}
+{\Large Clasificación binaria de ventas mediante\par perceptrón simple y regresión logística\par}
+\vspace{0.6cm}
+\textcolor{blue!45!black}{\rule{\linewidth}{1.2pt}}\par
+\vspace{0.8cm}
+{\large Informe académico incremental\par}
+Primera aplicación desarrollada y evaluada: Data Mart de Ventas\par
+\vspace{1cm}
+\begin{tabular}{rl}
+\textbf{Asignatura:} & Inteligencia de Negocios\\
+\textbf{Autores:} & Josue Guevara\\ & Jonathan López\\
+\textbf{Docente:} & Ing. Rubén Nogales Portero, Ph.D.\\
+\textbf{Nivel y paralelo:} & Sexto «A»\\
+\textbf{Unidad curricular:} & Profesional
+\end{tabular}
+\vfill
+\small Autores, nivel y unidad curricular verificados en los informes académicos previos.\par
+Ciclo y fecha de entrega de esta versión: pendientes de confirmación.\par
+Las referencias previas indican enero--julio de 2026 y una carta de diseño fechada el 18/08/2026.\par
+\end{titlepage}
+\pagenumbering{roman}
+\hypersetup{pageanchor=true}
+\input{secciones/01_resumen}
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+\clearpage
+\pagenumbering{arabic}
+\input{secciones/02_introduccion}
+\input{secciones/03_fundamentos}
+\input{secciones/04_metodologia}
+\input{secciones/05_modelos}
+\input{secciones/06_convergencia}
+\input{secciones/07_pca}
+\input{secciones/08_resultados}
+\input{secciones/09_discusion}
+\clearpage
+\input{referencias}
+\clearpage
+\appendix
+\input{secciones/10_anexos}
+\end{document}

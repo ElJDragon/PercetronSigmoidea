@@ -1,6 +1,6 @@
 \section{Fundamentos matemáticos}
 \subsection{Neurona artificial y perceptrón simple}
-Una observación transformada es un vector $x\in\mathbb R^d$, con $d=20$ en este experimento. Una neurona lineal combina cada entrada con un peso $w_j$ y añade un sesgo $b$:
+Una observación transformada es un vector $x\in\mathbb R^d$, con $d=20$ en Ventas y $d=16$ en Transacciones Financieras. La implementación conserva dimensionalidad dinámica. Una neurona lineal combina cada entrada con un peso $w_j$ y añade un sesgo $b$:
 \begin{equation}z=w^\top x+b=\sum_{j=1}^{d}w_jx_j+b,\qquad \widehat y=\mathbf1[z\geq 0].\label{eq:perceptron}\end{equation}
 El peso controla la contribución algebraica de una entrada y el sesgo desplaza el hiperplano. La función escalón devuelve una clase, no una probabilidad. Con etiquetas canónicas $y\in\{0,1\}$, la implementación usa
 \begin{equation}e_i=y_i-\widehat y_i,\quad w\leftarrow w+\eta e_i x_i,\quad b\leftarrow b+\eta e_i,\label{eq:actualizacion}\end{equation}
@@ -36,7 +36,7 @@ Sea $X\in\mathbb R^{m\times d}$ la matriz de entrenamiento ya transformada. Se c
 \begin{equation}X_c=U\Sigma V^\top,\quad W_2=[v_1,v_2],\quad Z=(X-\mathbf1\mu^\top)W_2.\label{eq:pca}\end{equation}
 Los vectores $v_j$ son ortonormales y los valores singulares $\sigma_j$ están ordenados de mayor a menor, de acuerdo con la operación SVD de NumPy \cite{numpy}. Las varianzas y proporciones se definen por
 \begin{equation}\lambda_j=\frac{\sigma_j^2}{m-1},\qquad \rho_j=\frac{\lambda_j}{\sum_{q=1}^{d}\lambda_q}.\end{equation}
-El denominador incluye las 20 direcciones, no solo las dos conservadas. La proyección favorece varianza, no separación de etiquetas. El signo de cada vector es convencional; aquí se hace positivo su coeficiente de mayor magnitud. Centrado y componentes se ajustaron solo en entrenamiento y se reutilizaron en validación. Los clasificadores conservaron las 20 entradas originales transformadas.
+El denominador incluye las $d$ direcciones, no solo las dos conservadas: 20 en Ventas y 16 en Transacciones. La proyección favorece varianza, no separación de etiquetas. El signo de cada vector es convencional; aquí se hace positivo su coeficiente de mayor magnitud. Cada aplicación ajustó centrado y componentes solo en su entrenamiento y los reutilizó en su validación. Los clasificadores conservaron las 20 o 16 entradas originales transformadas, respectivamente.
 
 \subsection{Métricas y magnitudes de error}
 Con matriz de confusión $C=\left[\begin{smallmatrix}TN&FP\\FN&TP\end{smallmatrix}\right]$, filas reales y columnas predichas, se calculan

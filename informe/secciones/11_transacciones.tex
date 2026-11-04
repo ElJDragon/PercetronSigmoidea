@@ -1,0 +1,128 @@
+\barrerapagina
+\section{Clasificación de la frecuencia de cobros en Transacciones Financieras}\label{sec:transacciones}
+\subsection{Problema empresarial, eventos e identidad}
+La segunda aplicación reutiliza los fundamentos de la sección de modelos lineales para una pregunta distinta: al inicio de un mes, ¿puede anticiparse que una cuenta registre más cobros que su referencia reciente? La finalidad académica es estudiar frecuencia de eventos y carga potencial de conciliación, no morosidad, liquidez, ingresos monetarios, saldo pendiente ni unidades vendidas. No se asigna un beneficio económico automático a una predicción positiva.
+
+Una fila de \archivo{Fact.Transaction} representa una transacción operacional de cliente o proveedor. El catálogo diferencia facturas de cliente (tipo 1), cobros recibidos (tipo 3), facturas de proveedor (tipo 5) y pagos emitidos (tipo 7); estos son los tipos observados en desarrollo. Notas de crédito, devoluciones y otros tipos del catálogo no se mezclan con cobros. Una factura registra una obligación: no demuestra un pago efectivo. El signo negativo del tipo 3 reduce cuentas por cobrar y corresponde a una entrada registrada; el mismo signo en tipo 7 reduce cuentas por pagar y corresponde a una salida registrada. El signo sin dominio y tipo no determina ingreso o egreso.
+
+La fuente elegida es \archivo{Sales.CustomerTransactions}. El evento se identifica mediante \archivo{CustomerTransactionID}. Se cuentan solo eventos tipo 3 \emph{Customer Payment Received}, cuya convención contable fue verificada. La identidad de cuenta es \archivo{CustomerID} operacional, correspondiente al pagador \emph{Bill To}, no necesariamente al destinatario de una factura. La unión por ID de evento con DW permitió recuperar cuentas aun cuando su clave dimensional era el miembro desconocido: 21\,142 cobros de desarrollo tenían ese problema. No se agrupan cuentas desconocidas bajo una identidad cero ni por nombre actual.
+
+En desarrollo se conciliaron 86\,475 transacciones financieras OLTP--DW, incluidas 23\,018 de cobro. En test se extrajeron 3\,619 cobros de 263 cuentas y se verificó la biyección por ID, fecha y tipo. Un pago puede agrupar obligaciones; los cobros no llevan \archivo{InvoiceID}. Por ello, no se inventa una aplicación uno a uno pago-factura ni se reutilizan líneas de venta como observaciones financieras. La simulación vincula pagos con obligaciones de facturación, pero no hace idénticos los eventos ni sus etiquetas.
+
+\subsection{Contrato temporal, cobertura y etiqueta}
+\archivo{TransactionDate} representa el día empresarial del cobro; \archivo{Date Key} procede de esa fecha. No contiene hora auditada de inserción. \archivo{LastEditedWhen} es última modificación y solo aporta un control observable de versión; no acredita creación ni completitud absoluta. Los eventos de cobro inspeccionados se editaron en su propio día empresarial. En cambio, \archivo{OutstandingBalance}, \archivo{IsFinalized} y \archivo{FinalizationDate} son estados mutables y no se reconstruyen como historia a partir del último valor.
+
+El contrato utiliza explícitamente \archivo{business_ledger_academic}: se asume conservación y cobertura mensual del libro de eventos dentro del alcance conciliado. La fecha interpretable, unicidad, correspondencia OLTP--DW, continuidad mensual y mecanismo local de registro respaldan una reconstrucción de conteos sin exigir snapshots de saldos que el objetivo no usa. No prueban ausencia universal de borrados, correcciones, escrituras externas, carga retroactiva o latencia. Tampoco equivalen a conciliación bancaria.
+
+La ausencia de cobros se representa como cero solo en un mes cubierto posterior a primera observación de la cuenta. Antes de primera aparición no se fabrican filas. Cobertura desconocida, mes incompleto o extracto inconsistente produce indeterminación, no clase negativa. La población inicial incluye pagadores previamente observados; no se afirma cubrir cuentas nunca vistas en cobros.
+
+Sea $N_{c,t}$ el número de IDs distintos de cobro de la cuenta $c$ en el mes calendario $t$. La referencia y la respuesta son
+\begin{equation}
+R_{c,t}=\operatorname{mediana}(N_{c,t-1},N_{c,t-2},N_{c,t-3}),\qquad
+y_{c,t}=\mathbf1[N_{c,t}>R_{c,t}].\label{eq:tf-etiqueta}
+\end{equation}
+El empate pertenece a clase 0. Se requieren tres meses consecutivos de historia, no las tres últimas compras o transacciones activas. El instante de predicción es el comienzo de $t$, después del cierre de $t-1$. El conteo objetivo y $y$ permanecen fuera de $X$; $R$ sí puede ser entrada porque utiliza exclusivamente el pasado.
+
+\subsection{Preparación causal y representación de 16 entradas}
+La extracción focalizada usa SELECT y autenticación integrada en la instancia local AMBATO. Se conserva una proyección mínima con ID de evento, cuenta, fecha, tipo, edición y comprobación de signo sin exportar importes. El snapshot comprimido y las consultas tienen hashes reproducibles. Se rechazan duplicados, tipos distintos y discrepancias de unión, sin repetir la auditoría general ni exportar indiscriminadamente la base.
+
+Cada cuenta-mes se ordena por mes y CustomerID. La primera aparición se determina con eventos previos al instante; no se utiliza actividad del objetivo, última aparición futura o supervivencia para elegir la población. Las 16 características efectivas se detallan en la tabla \ref{tab:tf-caracteristicas}. No se impuso una dimensión de 20 por analogía con Ventas.
+\begingroup\small
+\input{generado/transacciones/caracteristicas}
+\endgroup
+Solo la variación relativa puede ser nula cuando $n_2=0$: se imputa con mediana de train y conserva el indicador de base cero. La historia esencial no se imputa. Las 16 columnas resultaron no constantes en train; ninguna se eliminó con información de validación. Las medias y desviaciones poblacionales del escalado ($ddof=0$) se ajustaron solo con entrenamiento y se aplicaron sin refit a los períodos posteriores. CustomerID queda como metadato, no magnitud continua. Se excluyen importes, saldos, estados finales, medios actuales de pago y atributos dimensionales condicionados.
+
+\input{generado/transacciones/particiones}
+La tabla \ref{tab:tf-particiones} separa soporte principal y común. Train utiliza objetivos 2013--2014 desde abril, con etiquetas conocidas antes de 2015-01-01; validación usa 2015, antes de 2016-01-01. Test se limita a enero--mayo de 2016, con corte exclusivo de conocimiento 2016-06-01. No se reajusta con meses posteriores: eventos de validación o test ya concluidos solo aportan historia causal para el mes siguiente.
+
+Las pruebas de preparación perturbaban cobros del objetivo para comprobar que cambia la etiqueta al cruzar $R$, pero no sus predictores; perturbaciones futuras no alteraban períodos anteriores. También se verificaron identidad cliente-mes, continuidad de lags, cobertura explícita de ceros, parámetros train-only, alineación y reproducción. X es float64 finita; las etiquetas canónicas son 0/1. Estas pruebas usan fixtures sintéticos como controles, no sustituyen los eventos empresariales.
+
+\subsection{Configuración experimental y modelos congelados}
+Se reutilizan sin cambios las clases NumPy del perceptrón y la logística explicadas mediante las ecuaciones \ref{eq:perceptron}--\ref{eq:gradientes}. Ambos comienzan con pesos y sesgo cero, sin transferir pesos de Ventas ni utilizar clasificadores predefinidos o autodiferenciación. La dimensionalidad de estas ejecuciones es exactamente 16.
+\input{generado/transacciones/configuraciones}
+El presupuesto de la tabla \ref{tab:tf-config} se fijó antes de resultados: dos recorridos por semillas distintas para perceptrón, con tasa 0,01 y 100 épocas y una permutación nueva por época; dos tasas logísticas con 400 épocas y lote completo. En logística, seed=42 no altera la inicialización cero. La tolerancia de norma del gradiente es $10^{-6}$. No hubo búsqueda adaptativa de tasas o épocas ni selección posterior de umbral: $\tau=0,5$ quedó fijo. A diferencia de Ventas, no se inspeccionó una cuadrícula de 19 umbrales y el presupuesto logístico fue de 400, no 200 épocas.
+
+La selección maximiza BA en las 2\,943 filas de validación completa; desempata por F1, menor época y orden predefinido. Las actualizaciones solo utilizan train. Se conserva el checkpoint, sin refit train+val. La comparación con un histórico de mayor exigencia no altera retrospectivamente esa población de selección.
+
+\subsubsection{Perceptrón financiero}
+Se seleccionaron tasa 0,01, semilla 7 y época 3. El sesgo es $b=\TFBiasP$. La tabla \ref{tab:tf-pesos-perceptron} reproduce sus 16 pesos; la regla es $\widehat y=\mathbf1[z\geq0]$. Las magnitudes actúan sobre entradas estandarizadas correlacionadas y no representan efectos causales o importancia independiente.
+\input{generado/transacciones/pesos_perceptron}
+
+\subsubsection{Regresión logística financiera}
+Se seleccionaron tasa 0,10 y época 399, con umbral fijo 0,5 y sesgo $b=\TFBiasL$. La tabla \ref{tab:tf-pesos-logistic} conserva los 16 pesos. Se mantuvieron sigmoidea por ramas, pérdida \archivo{logaddexp} y gradientes analíticos del modelo general. La serialización sin pickle conserva nombres, dimensión, sesgo, parámetros y checkpoint; la recuperación reproduce las predicciones aprobadas.
+\input{generado/transacciones/pesos_logistic}
+La tabla \ref{tab:tf-desarrollo} corresponde a los checkpoints restaurados, no a las últimas épocas. La selección repetida en validación puede introducir optimismo; esa partición no es una prueba independiente del diseño. Los hashes aprobados de ambos modelos se verificaron antes de abrir test y permanecen en los anexos digitales, junto con sus pesos de precisión completa.
+
+\clearpage
+\subsection{Convergencia observada y comportamiento durante el entrenamiento}
+\input{generado/transacciones/desarrollo}
+\subsubsection{Perceptrón: oscilación y checkpoint temprano}
+Los errores online iniciales/finales fueron \TFErroresInicialesP/\TFErroresFinalesP, con mínimo \TFMinErroresP\ y máximo \TFMaxErroresP. Se registraron \TFActualizacionesP\ actualizaciones y \TFSubidasP\ transiciones crecientes. Ninguna de las 100 épocas quedó sin errores; la última mantuvo 1\,810 actualizaciones. Las figuras \ref{fig:tf:p-errores} y \ref{fig:tf:p-actualizaciones} muestran la misma identidad error--actualización exigida por la regla online, no dos evidencias independientes.
+\figura{transacciones/p_errores.png}{Errores online del perceptrón financiero por época, sin suavizar ni ocultar oscilaciones. La línea vertical identifica el checkpoint 3.}{fig:tf:p-errores}{0.91}
+\figura{transacciones/p_actualizaciones.png}{Actualizaciones por época del perceptrón financiero. Cada error online provoca una actualización, por lo que ambos conteos coinciden.}{fig:tf:p-actualizaciones}{0.91}
+Las curvas de accuracy y BA de las figuras \ref{fig:tf:p-accuracy} y \ref{fig:tf:p-ba} distinguen selección y optimización. El checkpoint 3 alcanza BA de validación 66,782699\%; la última época cae a \TFBAPUltima\%. No debe exportarse el último estado como si fuera el elegido. Los errores al cierre también difieren del conteo online: al final hay 1\,722 errores con un estado fijo de parámetros.
+\figura{transacciones/p_accuracy.png}{Accuracy financiera de train y validación al finalizar cada época del perceptrón. La validación no interviene en las actualizaciones.}{fig:tf:p-accuracy}{0.91}
+\figura{transacciones/p_ba.png}{BA financiera de validación por época. La época 3 se seleccionó por el criterio predefinido, no por cese de actualizaciones.}{fig:tf:p-ba}{0.91}
+La conclusión es ausencia de convergencia a cero actualizaciones en el presupuesto observado. No se demuestra separabilidad ni su ausencia mediante estas 100 épocas; tampoco se amplía el presupuesto al observar oscilación o test.
+
+\subsubsection{Logística: descenso estable sin alcanzar tolerancia}
+La pérdida train pasó de \TFLInicial\ a \TFLFinal; la pérdida de validación final fue \TFLValFinal. No hubo incrementos train mayores que $10^{-12}$. El último cambio de pérdida fue aproximadamente $-2,6413\times10^{-5}$ y la norma final del gradiente fue \TFGradFinal, mayor que $10^{-6}$. Las figuras \ref{fig:tf:l-perdida} y \ref{fig:tf:l-gradiente} muestran descenso y gradiente no nulo, sin convertirlos en prueba de óptimo.
+\figura{transacciones/l_perdida.png}{Entropía cruzada financiera de train y validación durante las 400 épocas de la logística seleccionada. La línea vertical marca el checkpoint 399.}{fig:tf:l-perdida}{0.91}
+\figura{transacciones/l_gradiente.png}{Norma conjunta de los gradientes de pesos y sesgo al cierre de cada época financiera. El criterio $10^{-6}$ no se alcanzó.}{fig:tf:l-gradiente}{0.91}
+La ejecución terminó por máximo de épocas, no por tolerancia. El checkpoint 399 y la época 400 tienen BA de validación 62,081956\% y 62,040220\%, respectivamente; se conservó el primero. Las figuras \ref{fig:tf:l-accuracy} y \ref{fig:tf:l-ba} permiten observar que disminuir una pérdida continua no equivale a mejorar monótonamente métricas discretas con umbral fijo.
+\figura{transacciones/l_accuracy.png}{Accuracy financiera por época de la logística con umbral 0,5; ambas series corresponden a desarrollo, no a test.}{fig:tf:l-accuracy}{0.91}
+\figura{transacciones/l_ba.png}{BA financiera de validación de la logística. La selección de checkpoint es distinta del criterio de parada por gradiente.}{fig:tf:l-ba}{0.91}
+La conclusión verificable es descenso estable sin convergencia completa demostrada. No se dibujan curvas de entrenamiento para test ni se entrenan nuevas configuraciones para interpretar estos historiales.
+
+\clearpage
+\subsection{PCA financiero: estructura de variación y solapamiento}
+PCA se ajustó mediante la SVD de la ecuación \ref{eq:pca} solo con X de entrenamiento, sin etiquetas ni nuevo escalado. La validación recibió la misma media y matriz de componentes. PC1 explica \TFPCAUno\%, PC2 \TFPCADos\% y juntas \TFPCARetenida\%; queda fuera del plano \TFPCAPerdida\%. El rango numérico fue 13 de 16, compatible con las redundancias algebraicas de media, diferencias y tendencias. Los clasificadores mantuvieron sus 16 entradas originales procesadas.
+\input{generado/transacciones/coeficientes_pca}
+PC1 resume nivel de actividad: los mayores coeficientes positivos corresponden a media (0,467396), mediana (0,458979) y los tres lags de cobros. PC2 enfatiza cambio (0,535123), variación relativa (0,503452) y tendencia (0,437703), frente a ausencia de actividad en el mes anterior (coeficiente negativo). La tabla \ref{tab:tf-pca-coef} presenta los cinco de mayor magnitud; el CSV conserva todos. Son coeficientes unitarios en coordenadas estandarizadas, no correlaciones automáticamente ni factores económicos causales.
+
+Las figuras \ref{fig:tf:pca-train} y \ref{fig:tf:pca-val} muestran solapamiento de clases; la figura \ref{fig:tf:pca-varianza} cuantifica la varianza que queda fuera del plano. Esa imagen no prueba imposibilidad de clasificación en 16 dimensiones ni explica por sí sola los errores. Se verificaron ortogonalidad, varianza de las proyecciones, suma de ratios, equivalencia del espectro SVD con la covarianza y residuo de reconstrucción. No se usó PCA para predecir, ajustar umbrales o seleccionar filas.
+\figura{transacciones/pca_train.png}{PCA financiero de entrenamiento por clase real. Se conservan todos los puntos, incluidos extremos, sin desplazamiento artificial ni frontera de clasificación 2D.}{fig:tf:pca-train}{0.85}
+\figura{transacciones/pca_val.png}{Validación financiera proyectada con parámetros exclusivamente de train. Los colores solo describen etiquetas; los ejes mantienen límites comparables.}{fig:tf:pca-val}{0.85}
+\figura{transacciones/pca_varianza.png}{Varianza financiera individual y acumulada en las 16 direcciones de entrenamiento. La retención bidimensional es 45,021\%, no el porcentaje obtenido en Ventas.}{fig:tf:pca-varianza}{0.96}
+
+\clearpage
+\subsection{Evaluación final: apertura, poblaciones y baselines}
+Antes de consultar 2016 se reprodujeron métricas y predicciones de validación y se verificaron hashes de modelos, matrices, preprocesador y protocolo. Un registro persistente de apertura precede a las consultas. El modelo de prueba ya no constituye una reserva disponible para diseñar nuevas configuraciones: sus resultados se documentan sin reajuste.
+
+La población principal contiene 1\,284 observaciones de enero--mayo, con 525 positivas y 759 negativas. Ambos clasificadores y mayoría se evalúan sobre esas mismas claves. El mayoritario predice 0, aprendida de train, a diferencia de la clase 1 del baseline de Ventas. El histórico financiero es la persistencia de la etiqueta anterior:
+\begin{equation}
+\widehat y^{\mathrm{hist}}_{c,t}=y_{c,t-1}
+=\mathbf1[N_{c,t-1}>\operatorname{mediana}(N_{c,t-2},N_{c,t-3},N_{c,t-4})].\label{eq:tf-historico}
+\end{equation}
+Requiere cuatro meses previos y no se sustituye por $\mathbf1[N_{c,t-1}>R_{c,t}]$, que incluye $N_{c,t-1}$ en otra referencia y usa tres meses. Ocho filas principales carecen del cuarto antecedente; su histórico queda indeterminado y la comparación secundaria se restringe a 1\,276. No se eliminan de los clasificadores ni se inventa el lag cero. La misma conciliación explicó previamente 16 filas de validación: 2\,943 principales frente a 2\,927 comunes, todas con etiqueta y predicciones válidas de modelos/mayoría.
+\input{generado/transacciones/test_principal}
+\input{generado/transacciones/confusiones}
+El perceptrón alcanza BA \TFBAPTest\%, accuracy 62,461\%, recall 86,857\% y F1 65,423\%; logística BA \TFBALTest\%, accuracy 65,265\%, recall 49,333\% y F1 53,734\%. La mayor BA del primero coexiste con menor accuracy y especificidad. Su FPR es 54,414\% y FNR 13,143\%, frente a 23,715\% y 50,667\% de logística. Son distintas preferencias de error de modelos ya fijados, sin atribuir un costo monetario no disponible.
+
+Las matrices de las figuras \ref{fig:tf:test-conf-p} y \ref{fig:tf:test-conf-l}, junto con la tabla \ref{tab:tf-confusiones}, proceden directamente de los artefactos exportados. El perceptrón reconoce 456 positivos y 346 negativos, con 413 FP y 69 FN; logística reconoce 259 y 579, con 180 FP y 266 FN. No se reconstruyeron predicciones para elaborar el informe.
+\figura{transacciones/test_conf_p.png}{Matriz financiera principal del perceptrón: 1\,284 observaciones, filas reales y columnas predichas. La alta sensibilidad se acompaña de 413 falsas alertas.}{fig:tf:test-conf-p}{0.66}
+\figura{transacciones/test_conf_l.png}{Matriz financiera principal de logística: 180 FP y 266 FN con umbral congelado 0,5. No corresponde al subconjunto del histórico.}{fig:tf:test-conf-l}{0.66}
+
+\input{generado/transacciones/test_comun}
+En el soporte común de la tabla \ref{tab:tf-comun}, las BA son 65,980\% para perceptrón, 62,713\% para logística, 50,000\% para mayoría y 47,585\% para histórico. Las figuras \ref{fig:tf:test-ba}, \ref{fig:tf:test-metricas} y \ref{fig:tf:test-sensibilidad} usan exactamente ese subconjunto de cuatro métodos. No reemplazan la tabla principal \ref{tab:tf-test}. Las pequeñas diferencias entre BA principal y común son aritmética de soporte, no cambios de pesos o umbral.
+\figura{transacciones/test_ba.png}{BA financiera de cuatro métodos sobre las mismas 1\,276 observaciones comunes. La población principal de modelos conserva 1\,284.}{fig:tf:test-ba}{0.98}
+\figura{transacciones/test_metricas.png}{Accuracy, precision, recall y F1 financieros sobre soporte común. Ninguna métrica aislada representa beneficio empresarial.}{fig:tf:test-metricas}{0.98}
+\figura{transacciones/test_sensibilidad.png}{Sensibilidad y especificidad financieras de los cuatro métodos en soporte común. Se conserva la regla histórica contractual aunque su BA sea inferior a 50\%.}{fig:tf:test-sensibilidad}{0.98}
+Average Precision de logística en la población principal es \TFLogAPTest, calculada sobre scores sigmoid con grupos de empates y sin interpolación. No participó en la selección ni certifica calibración. La mayoría conserva precision y F1 cero por ausencia de positivos predichos; recall o especificidad sin clase real y BA sin ambas clases serían no estimables, conforme a las convenciones generales.
+
+\subsection{Generalización temporal, cuentas nuevas y análisis de errores}
+La BA test menos validación principal cambia \TFDeltaBAP\ puntos en perceptrón y +\TFDeltaBAL\ en logística. Las poblaciones no son muestras emparejadas y cada ventana mezcla meses de forma distinta. Se conservan todos los meses, aun desfavorables, en la tabla \ref{tab:tf-mensual}; no se confunde BA global con media mensual sin ponderar.
+\input{generado/transacciones/mensual}
+\figura{transacciones/test_mensual.png}{BA financiera mensual de cuatro métodos en soporte común. La tabla del texto conserva por separado las BA principales y los dos tamaños de muestra.}{fig:tf:test-mensual}{0.98}
+\figura{transacciones/test_particiones.png}{BA de train, validación y test financieros en la población principal de cada partición. No hay entrenamiento ni selección con test.}{fig:tf:test-particiones}{0.98}
+La figura \ref{fig:tf:test-mensual} compara los cuatro métodos por mes en soporte común y la figura \ref{fig:tf:test-particiones} contrasta las poblaciones principales de cada partición. El perceptrón obtiene su mayor BA principal mensual en febrero (75,817\%) y su menor en mayo (58,123\%). Logística varía entre 59,103\% en abril y 65,015\% en mayo. Por ello, una cifra global cercana a validación no equivale a estabilidad mensual. La ecuación de ponderación por clase desarrollada para Ventas también explica por qué BA agregada y promedio simple de meses pueden diferir; no se requieren nuevas predicciones para distinguirlos.
+
+\input{generado/transacciones/cohortes}
+La tabla \ref{tab:tf-cohortes} distingue las 257 cuentas vistas en desarrollo, que aportan 1\,279 filas, de las nuevas elegibles: tres cuentas con solo cinco filas; las demás primeras apariciones aún no cumplen historia. La BA de 100\% del perceptrón en esas cinco filas no acredita generalización estable: un positivo y cuatro negativos son un soporte mínimo. No se usa ese resultado para escoger modelo, redefinir elegibilidad o eliminar cuentas.
+
+Mayo concentra 124 errores del perceptrón sobre 260 filas (47,69\%); abril concentra 103 de logística sobre 259 (39,77\%). Se conservan FP, FN, acuerdos y desacuerdos por cuenta-mes y mes, sin construir un clasificador combinado. La logística presenta menos falsas alertas, pero omite más positivos que el perceptrón. No se deduce la causa del cambio en decisiones de una variable particular ni se reajusta el umbral para compensarlo.
+
+\subsection{Limitaciones y conclusión parcial financiera}
+El experimento evalúa frecuencia relativa de cobros registrados, no demanda, mora, saldo ni ingreso monetario. La conservación y disponibilidad del libro son supuestos académicos explícitos; la biyección de las filas actuales no descarta todas las eliminaciones o correcciones históricas. Cinco meses, repetición de cuentas y ventanas solapadas restringen inferencia estadística. Las probabilidades no tienen calibración demostrada y los costos de alertas no están disponibles.
+
+Ambos clasificadores superan descriptivamente los baselines en la comparación común; el perceptrón tiene mayor BA y recall, y logística mayor accuracy y especificidad en la población principal. Esas ventajas se refieren a esta etiqueta, representación y presupuesto finito. Se preservan modelos, preprocesador, PCA y métricas; test ya fue consumido y no se reutiliza como reserva para mejorar configuraciones. La evidencia permite documentar una segunda aplicación académica completa, sin declarar terminado el proyecto ni recomendar automatización financiera productiva.

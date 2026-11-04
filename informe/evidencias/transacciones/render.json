@@ -1,0 +1,13 @@
+{
+  "pages": 59,
+  "dpi": 75,
+  "rendered_pages": 59,
+  "contact_sheets": [
+    "contacto_01.png",
+    "contacto_02.png",
+    "contacto_03.png",
+    "contacto_04.png",
+    "contacto_05.png"
+  ],
+  "pdfinfo": "Title:           Machine Learning aplicado al Data Warehouse WWI\nSubject:         \nKeywords:        \nAuthor:          Josue Guevara; Jonathan L\u00c3\u00b3pez\nCreator:         LaTeX with hyperref\nProducer:        MiKTeX pdfTeX-1.40.29\nCreationDate:    Wed Nov  4 00:05:57 2026 Hora est. Pac\u00edfico, Sudam\u00e9rica\nModDate:         Wed Nov  4 00:05:57 2026 Hora est. Pac\u00edfico, Sudam\u00e9rica\nCustom Metadata: yes\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           59\nEncrypted:       no\nPage size:       595.276 x 841.89 pts (A4)\nPage rot:        0\nFile size:       4204664 bytes\nOptimized:       no\nPDF version:     1.5\n"
+}

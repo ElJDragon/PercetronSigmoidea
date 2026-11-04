@@ -1,0 +1,363 @@
+[
+  {
+    "type": "table",
+    "label": "tab:tf-particiones",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\dataset\\conteos.json",
+        "sha256": "3341f19d631ae8b2d487e4b6cc97fc1dc8aedc2fe3dfb05ca3a49655f4280580"
+      },
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\metricas.json",
+        "sha256": "9437275a4cc26acf52ed460eda43188c607afd986a43d131ef3dcd167dd85b8a"
+      },
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\metricas_globales.json",
+        "sha256": "df0a0649e91aefbd4917559384397cc63c10ef0833635dbd3754efed223f7c03"
+      }
+    ],
+    "derivation": "Transcripción de resultados; porcentajes redondeados solo para lectura."
+  },
+  {
+    "type": "table",
+    "label": "tab:tf-caracteristicas",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\dataset\\caracteristicas.json",
+        "sha256": "01747698ed8a07ab2df3a7efe1ae7f625db5c58328fed1c1a67d66d7397ab00e"
+      },
+      {
+        "path": "datos\\Procesados\\transacciones\\feature_names.json",
+        "sha256": "e6e9aa8bbfa6248be710297a8fca0db1d375e83da4b66431133f1df3764f918d"
+      }
+    ],
+    "derivation": "Nombres/formulas del catálogo autorizado, sin variables condicionadas."
+  },
+  {
+    "type": "table",
+    "label": "tab:tf-config",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\configuracion_experimental.json",
+        "sha256": "3c058cd9c7cf7e5eccf20f218c5baf9871d033aef64fc18c168a39f4e4d4d8cf"
+      },
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\experimentos.json",
+        "sha256": "320eec809dfcfb452f77c193c140f1a3430d226ec6d179abbc2731f012c011c1"
+      }
+    ],
+    "derivation": "Transcripción de resultados; porcentajes redondeados solo para lectura."
+  },
+  {
+    "type": "table",
+    "label": "tab:tf-pesos-perceptron",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+        "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0"
+      }
+    ],
+    "derivation": "Transcripción de resultados; porcentajes redondeados solo para lectura."
+  },
+  {
+    "type": "table",
+    "label": "tab:tf-pesos-logistic",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+        "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+      }
+    ],
+    "derivation": "Transcripción de resultados; porcentajes redondeados solo para lectura."
+  },
+  {
+    "type": "table",
+    "label": "tab:tf-desarrollo",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\metricas.json",
+        "sha256": "9437275a4cc26acf52ed460eda43188c607afd986a43d131ef3dcd167dd85b8a"
+      }
+    ],
+    "derivation": "Transcripción de resultados; porcentajes redondeados solo para lectura."
+  },
+  {
+    "type": "table",
+    "label": "tab:tf-pca-coef",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\pca\\interpretacion_componentes.json",
+        "sha256": "766004ee9db3514147e9c63d7c7edc730104ab5d33649c30b0553c7788757d85"
+      }
+    ],
+    "derivation": "Transcripción de resultados; porcentajes redondeados solo para lectura."
+  },
+  {
+    "type": "table",
+    "label": "tab:tf-test",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\metricas_globales.json",
+        "sha256": "df0a0649e91aefbd4917559384397cc63c10ef0833635dbd3754efed223f7c03"
+      }
+    ],
+    "derivation": "Transcripción de resultados; porcentajes redondeados solo para lectura."
+  },
+  {
+    "type": "table",
+    "label": "tab:tf-comun",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\metricas_globales.json",
+        "sha256": "df0a0649e91aefbd4917559384397cc63c10ef0833635dbd3754efed223f7c03"
+      }
+    ],
+    "derivation": "Transcripción de resultados; porcentajes redondeados solo para lectura."
+  },
+  {
+    "type": "table",
+    "label": "tab:tf-confusiones",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\metricas_globales.json",
+        "sha256": "df0a0649e91aefbd4917559384397cc63c10ef0833635dbd3754efed223f7c03"
+      }
+    ],
+    "derivation": "Transcripción de resultados; porcentajes redondeados solo para lectura."
+  },
+  {
+    "type": "table",
+    "label": "tab:tf-mensual",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\metricas_mensuales.json",
+        "sha256": "db609ebbe4c630148b55bc44c01bb7139633dc55ed432686267a6c88a084ffa4"
+      }
+    ],
+    "derivation": "Transcripción de resultados; porcentajes redondeados solo para lectura."
+  },
+  {
+    "type": "table",
+    "label": "tab:tf-cohortes",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\cohortes.json",
+        "sha256": "4987561cd2275bd246bce0fb0c7d7ceb33eb354f7be81481d1b30eebcf6eda8d"
+      }
+    ],
+    "derivation": "Transcripción de resultados; porcentajes redondeados solo para lectura."
+  },
+  {
+    "type": "table",
+    "label": "tab:tf-comparacion",
+    "sources": [
+      {
+        "path": "resultados\\fase_07\\comparacion_con_desarrollo.json",
+        "sha256": "dff7231d6b4cfe7814e52b862d0a480c44982dea6faec5ea50918dc569e26145"
+      },
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\metricas_globales.json",
+        "sha256": "df0a0649e91aefbd4917559384397cc63c10ef0833635dbd3754efed223f7c03"
+      }
+    ],
+    "derivation": "Transcripción de resultados; porcentajes redondeados solo para lectura."
+  },
+  {
+    "type": "figure",
+    "label": "fig:tf:p-errores",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\graficos\\perceptron\\errores_entrenamiento.png",
+        "sha256": "623e5359c8532a3fce40189ccbfa04b9d2be13aae3cb582f3047119cbefb326d"
+      }
+    ],
+    "derivation": "Copia binaria del PNG aprobado; sin regenerar curvas, PCA o predicciones."
+  },
+  {
+    "type": "figure",
+    "label": "fig:tf:p-actualizaciones",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\graficos\\perceptron\\actualizaciones.png",
+        "sha256": "712229fdb367ccc9eac96068a7cc54511206f505a1e8a661c9ef2bebdcd72705"
+      }
+    ],
+    "derivation": "Copia binaria del PNG aprobado; sin regenerar curvas, PCA o predicciones."
+  },
+  {
+    "type": "figure",
+    "label": "fig:tf:p-accuracy",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\graficos\\perceptron\\accuracy_por_epoca.png",
+        "sha256": "79f9d221e4cd2f14bb3af5dd5573761e138e272c7c1b46a912c2f5fd962cd95a"
+      }
+    ],
+    "derivation": "Copia binaria del PNG aprobado; sin regenerar curvas, PCA o predicciones."
+  },
+  {
+    "type": "figure",
+    "label": "fig:tf:p-ba",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\graficos\\perceptron\\balanced_accuracy_validacion.png",
+        "sha256": "2275efc57c750e55dac9da2f5781150b0dc3f1a5950092a2c2ebc1444455e583"
+      }
+    ],
+    "derivation": "Copia binaria del PNG aprobado; sin regenerar curvas, PCA o predicciones."
+  },
+  {
+    "type": "figure",
+    "label": "fig:tf:l-perdida",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\graficos\\logistica\\entropia_cruzada.png",
+        "sha256": "a3a63b5574040b757324255140ddfc3c5997bc454e75a8575c410be5ecab9df4"
+      }
+    ],
+    "derivation": "Copia binaria del PNG aprobado; sin regenerar curvas, PCA o predicciones."
+  },
+  {
+    "type": "figure",
+    "label": "fig:tf:l-gradiente",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\graficos\\logistica\\norma_gradiente.png",
+        "sha256": "cb34944673ac5c48e4c010609b3d9d1553cd338a42f0eaeb9e2d3afdff0fa591"
+      }
+    ],
+    "derivation": "Copia binaria del PNG aprobado; sin regenerar curvas, PCA o predicciones."
+  },
+  {
+    "type": "figure",
+    "label": "fig:tf:l-accuracy",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\graficos\\logistica\\accuracy_por_epoca.png",
+        "sha256": "0ee58c40a86f5b40e35027e2e1f92b070553e420bbb57e47ca9b90d80de9b4d9"
+      }
+    ],
+    "derivation": "Copia binaria del PNG aprobado; sin regenerar curvas, PCA o predicciones."
+  },
+  {
+    "type": "figure",
+    "label": "fig:tf:l-ba",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\graficos\\logistica\\balanced_accuracy_validacion.png",
+        "sha256": "e6a607030a9c33874113966e8b5edfba18fc41e7d13ef4c4fc6af17f9dd09c6c"
+      }
+    ],
+    "derivation": "Copia binaria del PNG aprobado; sin regenerar curvas, PCA o predicciones."
+  },
+  {
+    "type": "figure",
+    "label": "fig:tf:pca-train",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\pca\\graficos\\dispersion_train.png",
+        "sha256": "3e6501e621d65b2cd96c8b94c981b509081f0b379195a583ddd9502203ce5a30"
+      }
+    ],
+    "derivation": "Copia binaria del PNG aprobado; sin regenerar curvas, PCA o predicciones."
+  },
+  {
+    "type": "figure",
+    "label": "fig:tf:pca-val",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\pca\\graficos\\dispersion_val.png",
+        "sha256": "a60a29e71034652ac1e617ad92a248e4d75a55d37d2d55aaf4c267a0c599ba84"
+      }
+    ],
+    "derivation": "Copia binaria del PNG aprobado; sin regenerar curvas, PCA o predicciones."
+  },
+  {
+    "type": "figure",
+    "label": "fig:tf:pca-varianza",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\pca\\graficos\\varianza_explicada.png",
+        "sha256": "641f2e33805131e92046d8fecbd735f68fdbb2aaf86827fd0e4ba15e1cede37d"
+      }
+    ],
+    "derivation": "Copia binaria del PNG aprobado; sin regenerar curvas, PCA o predicciones."
+  },
+  {
+    "type": "figure",
+    "label": "fig:tf:test-ba",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\graficos\\01_balanced_accuracy.png",
+        "sha256": "db0da68a24ea608aa28ca6b1425e694c05f0dc5ef05a59ed34cfad3b457c3103"
+      }
+    ],
+    "derivation": "Copia binaria del PNG aprobado; sin regenerar curvas, PCA o predicciones."
+  },
+  {
+    "type": "figure",
+    "label": "fig:tf:test-metricas",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\graficos\\02_metricas.png",
+        "sha256": "1c5175a3eb7cb085d16b0dff4f769ff9ee0ab63490b9989cb69d3d8d8f73a06a"
+      }
+    ],
+    "derivation": "Copia binaria del PNG aprobado; sin regenerar curvas, PCA o predicciones."
+  },
+  {
+    "type": "figure",
+    "label": "fig:tf:test-conf-p",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\graficos\\03_confusion_perceptron.png",
+        "sha256": "633572783fdcc5884807e9a3f4f2096654af9926caf18718d0cd7cd6a81df4b0"
+      }
+    ],
+    "derivation": "Copia binaria del PNG aprobado; sin regenerar curvas, PCA o predicciones."
+  },
+  {
+    "type": "figure",
+    "label": "fig:tf:test-conf-l",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\graficos\\04_confusion_logistic.png",
+        "sha256": "d561f26795f8ced2d8bea0de7baa90b4379dfd11bd1e88d8f3bf607969ddf358"
+      }
+    ],
+    "derivation": "Copia binaria del PNG aprobado; sin regenerar curvas, PCA o predicciones."
+  },
+  {
+    "type": "figure",
+    "label": "fig:tf:test-mensual",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\graficos\\05_BA_mensual.png",
+        "sha256": "786abf74f5b1fbad6cd1654e37b96b20952ef523cfa0f4ab0a35f1bf9dacc846"
+      }
+    ],
+    "derivation": "Copia binaria del PNG aprobado; sin regenerar curvas, PCA o predicciones."
+  },
+  {
+    "type": "figure",
+    "label": "fig:tf:test-particiones",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\graficos\\06_train_validacion_test.png",
+        "sha256": "8ab5b68ad1c7cf08a33a2e94113ac040684f3735339c7bf4f32c49ad166caefc"
+      }
+    ],
+    "derivation": "Copia binaria del PNG aprobado; sin regenerar curvas, PCA o predicciones."
+  },
+  {
+    "type": "figure",
+    "label": "fig:tf:test-sensibilidad",
+    "sources": [
+      {
+        "path": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\graficos\\07_sensibilidad_especificidad.png",
+        "sha256": "d8d96a15604ea03a745cd18c6aa3673f4e7125a24490b23420eae39b42988a18"
+      }
+    ],
+    "derivation": "Copia binaria del PNG aprobado; sin regenerar curvas, PCA o predicciones."
+  }
+]

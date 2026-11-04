@@ -1,0 +1,2268 @@
+             UNIVERSIDAD TÉCNICA DE AMBATO
+             Facultad de Ingeniería en Sistemas, Electrónica e Industrial
+
+                                    Carrera de Software
+
+
+
+
+              Machine Learning aplicado al
+          Data Warehouse Wide World Importers
+              Clasicación binaria de ventas y cobros mediante
+                   perceptrón simple y regresión logística
+
+
+
+
+                             Informe académico incremental
+
+       Aplicaciones desarrolladas y evaluadas: Ventas y Transacciones Financieras
+
+
+
+
+                        Asignatura:      Inteligencia de Negocios
+
+                           Autores:      Josue Guevara
+
+                                         Jonathan López
+
+                         Docente:        Ing. Rubén Nogales Portero, Ph.D.
+
+                 Nivel y paralelo:       Sexto A
+
+                Unidad curricular:       Profesional
+
+
+
+
+       Autores, nivel y unidad curricular vericados en los informes académicos previos.
+             Ciclo y fecha de entrega de esta versión: pendientes de conrmación.
+Las referencias previas indican enerojulio de 2026 y una carta de diseño fechada el 18/08/2026.
+Resumen
+  Se estudia la clasicación binaria de ventas unitarias mensuales de Wide World Importers
+(WWI), a partir de una extracción de su Data Mart de Ventas. La respuesta indica si las unidades
+observadas de un producto superan la mediana de sus tres meses previos. Se auditaron 228 265
+líneas de factura y se construyeron observaciones producto-mes con información disponible antes
+del horizonte objetivo. El perceptrón simple y la regresión logística se implementaron mediante
+NumPy sobre las mismas 20 características transformadas, con particiones temporales de 4 599
+observaciones de entrenamiento, 2 628 de validación y 1 111 de prueba.
+
+  La selección utilizó únicamente validación; las predicciones nales se conservaron y su consis-
+tencia se comprobó sin reentrenar. En prueba, la regresión logística alcanzó balanced accuracy de
+62,42 %, frente a 54,10 % del perceptrón, 50,00 % del baseline mayoritario y 51,31 % de la regla
+histórica. La logística registró 370 falsos positivos y 49 falsos negativos, lo que limita su utilidad
+para alertas automáticas. El perceptrón mantuvo actualizaciones hasta la última época; la logís-
+tica mostró descenso estable de entropía cruzada, sin demostración de convergencia completa al
+agotar 200 épocas. PCA se empleó solo para visualización y conservó 49,62 % de la varianza en
+dos componentes.
+
+  La ampliación nanciera estudia una respuesta empresarial distinta: frecuencia de cobros re-
+gistrados por cuenta cliente superior a la mediana de tres meses anteriores. A partir de eventos
+operacionales tipo 3 se prepararon 16 características y 4 612/2 943/1 284 observaciones de entre-
+namiento/validación/prueba. En la población principal de prueba, el perceptrón alcanzó BA de
+66,222 % y logística 62,809 %, con mayor sensibilidad y más falsas alertas en el primero. El histórico
+contractual requiere cuatro meses y se compara por separado sobre 1 276 las. El PCA nancie-
+ro, solo visual, conserva 45,021 % de varianza en dos componentes. Ninguno de los historiales
+demuestra convergencia completa.
+
+  Las conclusiones son descriptivas de cinco meses de prueba por aplicación, con observaciones
+dependientes y cobertura académica, no certicada operacionalmente. Ventas conserva identi-
+dad provisional por nombre; Transacciones usa CustomerID operacional y supuestos explícitos de
+conservación del libro de eventos. Este informe unica ambas aplicaciones sin comparar sus por-
+centajes como si correspondieran a la misma etiqueta o población. Pedidos y Compras permanecen
+como investigaciones de viabilidad con limitaciones documentadas; Inventario/Movimientos y la
+revisión de los procesos bloqueados forman parte del trabajo académico pendiente.
+
+Palabras clave: Inteligencia de Negocios; Data Warehouse; clasicación temporal; perceptrón;
+regresión logística; PCA; trazabilidad.
+
+
+
+
+                                                  i
+Índice
+Resumen                                                                                                    i
+
+
+1. Introducción                                                                                           1
+  1.1.   Alcance académico incremental       . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     1
+
+
+2. Problema empresarial y objetivos                                                                       1
+  2.1.   Pregunta de negocio y respuesta operativa . . . . . . . . . . . . . . . . . . . . . . .           1
+
+  2.2.   Objetivo general    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     1
+
+  2.3.   Objetivos especícos    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     1
+
+
+3. Fundamentos matemáticos                                                                                2
+  3.1.   Neurona articial y perceptrón simple       . . . . . . . . . . . . . . . . . . . . . . . . .     2
+
+  3.2.   Regresión logística binaria . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       3
+
+         3.2.1.   Vericación de gradientes y condiciones de descenso         . . . . . . . . . . . . .    3
+
+  3.3.   PCA mediante descomposición SVD           . . . . . . . . . . . . . . . . . . . . . . . . . .     3
+
+  3.4.   Métricas y magnitudes de error      . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     4
+
+
+4. Data Warehouse WWI y evidencia de origen                                                                5
+
+5. Metodología y preparación causal de datos                                                               5
+  5.1.   Grano producto-mes, etiqueta e instante de predicción          . . . . . . . . . . . . . . . .    5
+
+  5.2.   Completitud y disponibilidad asumidas . . . . . . . . . . . . . . . . . . . . . . . . .           5
+
+  5.3.   Características permitidas y exclusiones       . . . . . . . . . . . . . . . . . . . . . . . .    6
+
+  5.4.   Particiones temporales y control de fuga . . . . . . . . . . . . . . . . . . . . . . . .          6
+
+  5.5.   Baselines comunes     . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     7
+
+
+6. Implementación del perceptrón simple                                                                    8
+
+7. Implementación de la regresión logística binaria                                                       11
+
+8. Vericación de convergencia y comportamiento del error                                                 15
+  8.1.   Evidencia y denición de los diagnósticos        . . . . . . . . . . . . . . . . . . . . . . .   15
+
+  8.2.   Perceptrón: uctuaciones sin cese de actualizaciones         . . . . . . . . . . . . . . . . .   15
+
+  8.3.   Logística: descenso estable, límite de épocas . . . . . . . . . . . . . . . . . . . . . .        15
+
+
+9. Reducción dimensional para visualización                                                               18
+
+10.Resultados experimentales                                                                              21
+  10.1. Comparación común de entrenamiento, validación y prueba               . . . . . . . . . . . . .   21
+
+  10.2. Matrices de confusión, sensibilidad y exceso de positivos         . . . . . . . . . . . . . . .   22
+
+  10.3. Generalización temporal y error por partición         . . . . . . . . . . . . . . . . . . . . .   22
+
+         10.3.1. Por qué BA global y promedio mensual dieren . . . . . . . . . . . . . . . .             24
+
+
+
+
+                                                   ii
+   10.4. Productos conocidos y nuevos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        25
+
+   10.5. Concordancias y desacuerdos     . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     25
+
+
+11.Comparación estadística y cambios de distribución                                                     27
+   11.1. Distribuciones observadas frente a hipótesis de cambio        . . . . . . . . . . . . . . . .   27
+
+   11.2. Incertidumbre y dependencia     . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     28
+
+
+12.Interpretación para Inteligencia de Negocios                                                          28
+
+13.Limitaciones y decisiones pendientes                                                                  28
+
+14.Conclusiones parciales del Data Mart de Ventas                                                        29
+
+15.Clasicación de la frecuencia de cobros en Transacciones Financieras                                  30
+   15.1. Problema empresarial, eventos e identidad . . . . . . . . . . . . . . . . . . . . . . .         30
+
+   15.2. Contrato temporal, cobertura y etiqueta . . . . . . . . . . . . . . . . . . . . . . . .         30
+
+   15.3. Preparación causal y representación de 16 entradas . . . . . . . . . . . . . . . . . .          31
+
+   15.4. Conguración experimental y modelos congelados . . . . . . . . . . . . . . . . . . .            32
+
+        15.4.1. Perceptrón nanciero . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       32
+
+        15.4.2. Regresión logística nanciera    . . . . . . . . . . . . . . . . . . . . . . . . . .     33
+
+   15.5. Convergencia observada y comportamiento durante el entrenamiento              . . . . . . . .   34
+
+        15.5.1. Perceptrón: oscilación y checkpoint temprano         . . . . . . . . . . . . . . . . .   34
+
+        15.5.2. Logística: descenso estable sin alcanzar tolerancia . . . . . . . . . . . . . . .        34
+
+   15.6. PCA nanciero: estructura de variación y solapamiento . . . . . . . . . . . . . . . .           39
+
+   15.7. Evaluación nal: apertura, poblaciones y baselines        . . . . . . . . . . . . . . . . . .   42
+
+   15.8. Generalización temporal, cuentas nuevas y análisis de errores         . . . . . . . . . . . .   45
+
+   15.9. Limitaciones y conclusión parcial nanciera       . . . . . . . . . . . . . . . . . . . . . .   47
+
+
+16.Comparación académica entre Ventas y Transacciones                                                    48
+
+17.Conclusiones integradas y continuidad del alcance académico                                           48
+
+Referencias bibliográcas                                                                                50
+
+A. Catálogo de características efectivas                                                                 51
+
+B. Trazabilidad y reproducción documental                                                                51
+   B.1. Relación entre armaciones y evidencia . . . . . . . . . . . . . . . . . . . . . . . . .         51
+
+   B.2. Comandos sin reentrenamiento       . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     52
+
+   B.3. Parámetros y series que no deben confundirse . . . . . . . . . . . . . . . . . . . . .           52
+
+   B.4. Trazabilidad de la ampliación nanciera        . . . . . . . . . . . . . . . . . . . . . . . .   52
+
+
+C. Continuidad obligatoria del proyecto académico                                                        53
+
+
+
+                                                 iii
+Índice de guras
+  1.    Clases y calendario por partición . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     6
+  2.    Errores online del perceptrón . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     9
+  3.    Accuracy por época del perceptrón . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       9
+  4.    BA de validación del perceptrón . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      10
+  5.    Entropía cruzada de entrenamiento y validación . . . . . . . . . . . . . . . . . . . . . . . . .       12
+  6.    Norma del gradiente logístico . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    13
+  7.    Accuracy por época de logística . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    13
+  8.    BA de validación de logística . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    14
+  9.    Diagnóstico detallado de convergencia logística . . . . . . . . . . . . . . . . . . . . . . . . .      16
+  10.   Conteos del perceptrón y pérdida logística en paneles separados . . . . . . . . . . . . . . . .        17
+  11.   Dispersión PCA de entrenamiento . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        19
+  12.   Dispersión PCA de validación . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     19
+  13.   Varianza individual y acumulada del PCA . . . . . . . . . . . . . . . . . . . . . . . . . . . .        20
+  14.   Comparación de métricas globales de test . . . . . . . . . . . . . . . . . . . . . . . . . . . .       21
+  15.   Matriz de confusión de test del perceptrón . . . . . . . . . . . . . . . . . . . . . . . . . . . .     22
+  16.   Matriz de confusión de test de logística . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   23
+  17.   Sensibilidad y especicidad por método . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       23
+  18.   Error de clasicación por partición . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    24
+  19.   BA de todos los meses de test . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    25
+  20.   Aciertos compartidos y exclusivos por mes . . . . . . . . . . . . . . . . . . . . . . . . . . . .      26
+  21.   Cambios de medias en las entradas existentes . . . . . . . . . . . . . . . . . . . . . . . . . .       27
+  22.   Errores online del perceptrón nanciero . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      34
+  23.   Actualizaciones del perceptrón nanciero . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     35
+  24.   Accuracy por época del perceptrón nanciero . . . . . . . . . . . . . . . . . . . . . . . . . .        35
+  25.   BA de validación del perceptrón nanciero . . . . . . . . . . . . . . . . . . . . . . . . . . . .      36
+  26.   Entropía cruzada logística de Transacciones . . . . . . . . . . . . . . . . . . . . . . . . . . .      37
+  27.   Gradiente logístico de Transacciones . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     37
+  28.   Accuracy logística por época en Transacciones . . . . . . . . . . . . . . . . . . . . . . . . . .      38
+  29.   BA logística por época en Transacciones . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      38
+  30.   PCA nanciero de entrenamiento . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       40
+  31.   PCA nanciero de validación . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      40
+  32.   Varianza explicada del PCA nanciero . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       41
+  33.   Confusión del perceptrón nanciero en test . . . . . . . . . . . . . . . . . . . . . . . . . . .       43
+  34.   Confusión logística nanciera en test . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    43
+  35.   BA nanciera en soporte común . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      44
+  36.   Métricas nancieras en soporte común . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       44
+  37.   Sensibilidad y especicidad nancieras . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     45
+  38.   BA nanciera mensual en soporte común . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        46
+  39.   Generalización temporal nanciera . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      46
+
+
+
+
+                                                      iv
+Índice de tablas
+  1.    Particiones por mes objetivo y soporte de clases; historia disponible desde enero de
+        2013. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     6
+
+  2.    Pesos del modelo congelado perceptrón. Valores oat64 conservados con represen-
+        tación decimal de ida y vuelta.      . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    8
+
+  3.    Vericación original por diferencias nitas centrales. Todos los casos cumplen tole-
+        rancias.   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   11
+
+  4.    Presupuesto logístico previo: 200 épocas por tasa; checkpoint elegido por BA de
+        validación a umbral 0,5.     . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   11
+
+  5.    Pesos del modelo congelado logístico. Valores oat64 conservados con representación
+        decimal de ida y vuelta.     . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   12
+
+  6.    Recorrido seleccionado del perceptrón: errores online y al cierre son magnitudes
+        diferentes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    15
+
+  7.    Diagnóstico documental por época. ∆L y r se derivan del historial sin modicar el
+        criterio de parada.    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   16
+
+  8.    Cinco mayores coecientes por magnitud en cada componente. El cuadrado es par-
+        ticipación en la norma del vector, no importancia predictiva. . . . . . . . . . . . . .          18
+
+  9.    Métricas nales por partición ( %). Estados seleccionados en validación; no corres-
+        ponden a la última época del perceptrón. . . . . . . . . . . . . . . . . . . . . . . . .         21
+
+  10.   Conteos de test y tasas de error ( %). Filas reales y columnas predichas en orden 0,1. 22
+
+  11.   Todos los meses de test. Tasas en %; soporte negativo/positivo.          . . . . . . . . . . .   24
+
+  12.   Comparación de cohortes en test, sin excluir los productos nuevos.           . . . . . . . . .   25
+
+  13.   Las 16 características nancieras antes de estandarizar. nk = Nc,t−k .         . . . . . . . .   31
+
+  14.   Transacciones: particiones temporales y poblaciones principal y común. . . . . . . .             32
+
+  15.   Presupuesto nanciero predenido: cuatro ejecuciones, sin ampliación adaptativa. .               32
+
+  16.   Pesos nancieros congelados: perceptrón. Precisión decimal suciente para recupe-
+        rar oat64.    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   33
+
+  17.   Pesos nancieros congelados: logística. Precisión decimal suciente para recuperar
+        oat64. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    33
+
+  18.   Métricas nancieras de los checkpoints seleccionados en soporte principal ( %). . . .            34
+
+  19.   Coecientes de mayor magnitud del PCA nanciero en entradas estandarizadas. . .                  39
+
+  20.   Test nanciero: métricas sobre las 1 284 las principales ( %).        . . . . . . . . . . . .   42
+
+  21.   Conteos nancieros principales y tasas FPR/FNR y predicción positiva ( %). . . . .               42
+
+  22.   Comparación nanciera secundaria: los cuatro métodos en 1 276 las ( %).             . . . . .   42
+
+  23.   Todos los meses de test nanciero: soporte principal y BA principal, sin sustituirla
+        por la común. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      45
+
+  24.   Cuentas nancieras conocidas y nuevas; cinco las nuevas no acreditan generaliza-
+        ción estable. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    45
+
+  25.   Contraste descriptivo entre problemas distintos: porcentajes de test, sin compara-
+        ción estadística emparejada. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       48
+
+  26.   Entradas efectivas y fórmulas del contrato. qj = Qp,t−j . . . . . . . . . . . . . . . . .        51
+
+
+
+
+                                                   v
+1. Introducción
+  El análisis descriptivo de un Data Warehouse permite comparar indicadores por tiempo, produc-
+to, cliente y territorio. La clasicación predictiva plantea una pregunta distinta: qué información
+disponible antes de un mes permite anticipar un comportamiento de sus ventas. Este trabajo
+enlaza ambas perspectivas mediante un problema reproducible, con reglas temporales explícitas y
+evaluación común de dos clasicadores lineales.
+
+  La carta de diseño plantea necesidades de seguimiento comercial, clientes e inventario; los
+informes de limpieza y dashboard documentan la preparación y exploración del ámbito de ventas [5,
+6, 7]. La extracción disponible respalda esa primera aplicación, pero no acredita la disponibilidad
+ni implementación de todos los procesos del Data Warehouse. Las dimensiones Producto y Cliente
+no se consideran Data Marts independientes por el solo hecho de existir como dimensiones.
+
+
+
+1.1. Alcance académico incremental
+  La instrucción proporcionada para esta entrega es: Perfeccionen todo con un data mart y de
+ahí háganlo con el resto de Data Marts. Ventas constituye la primera aplicación desarrollada y
+evaluada; esta versión incorpora una segunda aplicación completa en Transacciones Financieras,
+mediante eventos de cobro por cuenta cliente. La continuación obligatoria exige vericar mode-
+lo, datos y problema propio de cada proceso. Pedidos y Compras cuentan con investigaciones
+de viabilidad, pero no con clasicadores aprobados; Inventario/Movimientos continúa pendiente.
+La estructura del informe comparte fundamentos y criterios temporales, mientras distingue las
+unidades, fuentes y resultados de cada aplicación.
+
+
+
+
+2. Problema empresarial y objetivos
+2.1. Pregunta de negocio y respuesta operativa
+  Al cierre del mes anterior se busca identicar productos cuyas unidades facturadas observadas
+en el siguiente mes superarán su mediana reciente. La comparación se realiza contra la historia
+del propio producto, no contra un umbral absoluto común. Un positivo puede corresponder a una
+diferencia de una sola unidad; su relevancia comercial necesita validación adicional.
+
+  La respuesta no representa rentabilidad, demanda insatisfecha, inventario disponible ni cantidad
+exacta futura. Una alerta podría orientar la revisión de un analista comercial; no establece por
+sí sola una orden de compra o reposición. No se dispone de costos de falsos positivos o negativos
+para cuanticar benecio económico.
+
+
+
+2.2. Objetivo general
+  Desarrollar y documentar aplicaciones vericables de clasicación binaria en Ventas y Transac-
+ciones Financieras de WWI, comparando un perceptrón simple y una regresión logística implemen-
+tados matemáticamente, con prevención de fuga temporal y conclusiones sustentadas en resultados
+congelados. La formulación comercial que sigue corresponde a Ventas; la pregunta nanciera y sus
+restricciones se desarrollan en la sección 15.
+
+
+
+2.3. Objetivos especícos
+  1. Auditar el grano, identidad, calidad y disponibilidad temporal de los datos antes de denir
+      las entradas y la etiqueta.
+
+
+
+
+                                                  1
+   2. Preparar una representación común de dimensión dinámica y particiones cronológicas, con
+      parámetros de transformación ajustados solo en entrenamiento.
+
+
+   3. Implementar las reglas del perceptrón y los gradientes logísticos, comprobar su matemática
+      y analizar sus historiales reales.
+
+
+   4. Comparar ambos modelos con baselines mediante matrices de confusión, métricas por clase
+      y evaluación temporal.
+
+
+   5. Interpretar PCA únicamente como visualización e identicar las limitaciones estadísticas y
+      empresariales de la evidencia.
+
+
+   6. Contrastar la clasicación de unidades vendidas con la frecuencia de cobros, sin confundir
+      sus poblaciones ni atribuir superioridad universal a un algoritmo.
+
+
+   7. Mantener una estructura documental reproducible para la ampliación obligatoria a los pro-
+      cesos pendientes, sin presentarlos como implementados.
+
+
+
+
+3. Fundamentos matemáticos
+3.1. Neurona articial y perceptrón simple
+  Una observación transformada es un vector            x ∈ Rd , con d = 20 en Ventas y d = 16 en
+Transacciones Financieras. La implementación conserva dimensionalidad dinámica. Una neurona
+lineal combina cada entrada con un peso wj y añade un sesgo b:
+
+
+                                             d
+                                             X
+                                 ⊤
+                          z =w x+b=                wj xj + b,    yb = 1[z ≥ 0].                      (1)
+                                             j=1
+
+El peso controla la contribución algebraica de una entrada y el sesgo desplaza el hiperplano. La
+función escalón devuelve una clase, no una probabilidad. Con etiquetas canónicas y ∈ {0, 1}, la
+implementación usa
+                           ei = yi − ybi ,   w ← w + ηei xi ,    b ← b + ηei ,                       (2)
+
+solo si   ei ̸= 0. La tasa η > 0 determina la magnitud del paso. Una época recorre todas las
+observaciones de entrenamiento; cada error durante ese recorrido produce una actualización. Los
+errores al nalizar una época se calculan con un único estado de parámetros y pueden diferir del
+conteo online, que mezcla los estados sucesivos.
+
+  La separabilidad lineal supone que existe un hiperplano que clasica estrictamente todos los
+                                                                                      e = (x, 1),
+ejemplos. Para expresar la condición teórica, se incorporan sesgo y entrada aumentada x
+etiquetas s = 2y − 1 y un separador unitario u con margen si u
+                                                                        ⊤x               xi ∥ ≤ R, la
+                                                                         ei ≥ γ > 0. Si ∥e
+regla clásica desde cero realiza a lo sumo (R/γ)
+                                                     2 errores bajo esas hipótesis. El escalado constante
+
+positivo de la actualización no cambia el argumento geométrico. La convención de empate del
+programa asigna 1; ello no autoriza inferir separabilidad de los datos.
+
+  La garantía requiere un margen positivo y presentación reiterada de los ejemplos. No establece
+que cualquier conjunto real sea separable, ni que 100 épocas basten, ni que un checkpoint con
+buena validación tenga cero errores. En ausencia de una prueba de separabilidad, las oscilacio-
+nes observadas solo describen el comportamiento de esta ejecución. El modelo corresponde al
+antecedente clásico del perceptrón [1]; su optimización no es descenso de entropía cruzada.
+
+
+
+
+                                                      2
+3.2. Regresión logística binaria
+  Para el mismo zi = w
+                            ⊤ x + b, se estima p = σ(z ) = 1/(1 + exp(−z )). El umbral τ transforma
+                               i                i     i                 i
+la salida en y
+             bi   = 1[pi ≥ τ ]. Aquí τ = 0, 5 está congelado: la frontera es z = 0. La salida está
+comprendida entre cero y uno, pero su calibración empírica no se deduce de esa propiedad.
+
+  La pérdida media para m ejemplos es la entropía cruzada binaria:
+
+                                               m
+                                          1 X
+                            L(w, b) = −       [yi log pi + (1 − yi ) log(1 − pi )]                             (3)
+                                          m
+                                              i=1
+                                             m
+                                         1   X
+                                     =             [log(1 + exp(zi )) − yi zi ].
+                                         m
+                                             i=1
+
+Derivando con respecto al logit se obtiene ∂ℓi /∂zi = pi − yi ; la regla de la cadena conduce a
+
+
+                                     1 ⊤                                1 X
+                            ∇w L =     X (p − y),              ∂b L =       (pi − yi ).                        (4)
+                                     m                                  m
+                                                                            i
+
+El descenso por lote completo actualiza w              ← w − η∇w L y b ← b − η∂b L una vez por época.
+Utiliza toda la matriz, no únicamente ejemplos mal clasicados. El objetivo suave reeja también
+cambios de conanza que no cruzan el umbral, por lo que resulta más informativo para estudiar la
+optimización que el conteo discreto de errores. Las convenciones de clasicación y pérdida siguen
+el tratamiento de modelos lineales probabilísticos [2].
+
+  La estabilidad numérica se favorece evaluando la sigmoidea por ramas: para z ≥ 0, 1/(1 + e
+                                                                                                              −z );
+
+para z < 0, e /(1 + e ). La pérdida utiliza np.logaddexp(0,z)-y*z, sin calcular logaritmos de
+              z         z
+
+probabilidades redondeadas a cero ni recortarlas. El programa rechaza estados no nitos.
+
+
+
+3.2.1. Vericación de gradientes y condiciones de descenso
+  Para un parámetro θj , las diferencias centrales aproximan
+
+
+                               L(θ + hj ej ) − L(θ − hj ej )
+                     gjnum =                                 ,          hj = h máx(1, |θj |),                 (5)
+                                            2hj
+
+donde ej es el vector coordenado, incluido el sesgo. Se contrasta |gj − gj
+                                                                                       num | ≤ atol + rtol|g num |.
+                                                                                                            j
+Un paso demasiado pequeño amplica cancelación y uno demasiado grande aumenta error de
+truncamiento. La prueba comprueba derivadas locales en sus casos de control; no demuestra
+convergencia del entrenamiento WWI.
+
+  Con matriz aumentada A = [X 1] y D = diag(pi (1 − pi )), la Hessiana es A
+                                                                                            ⊤ DA/m ⪰ 0. Así, el
+                                                                 2
+objetivo es convexo y tiene gradiente Lipschitz con cota Lg ≤ ∥A∥2 /(4m). Un paso adecuadamente
+pequeño, por ejemplo 0 < η < 2/Lg cuando se dispone de esa cota, permite justicar descenso.
+Esta condición no se comprobó retrospectivamente para elegir otra tasa. Sin regularización, se-
+parabilidad puede impedir un minimizador nito; redundancia puede impedir unicidad. Menor
+pérdida, gradiente reducido y estabilización son diagnósticos distintos de certicar un óptimo [3].
+
+
+
+3.3. PCA mediante descomposición SVD
+  Sea X   ∈ Rm×d la matriz de entrenamiento ya transformada. Se calcula su media µ y Xc =
+X − 1µ⊤ . La SVD real produce
+
+                         Xc = U ΣV ⊤ ,        W2 = [v1 , v2 ],     Z = (X − 1µ⊤ )W2 .                          (6)
+
+
+
+
+                                                           3
+Los vectores vj son ortonormales y los valores singulares σj están ordenados de mayor a menor,
+de acuerdo con la operación SVD de NumPy [4]. Las varianzas y proporciones se denen por
+
+
+                                          σj2                 λj
+                                  λj =        ,       ρ j = Pd        .                          (7)
+                                         m−1                 q=1 λq
+
+El denominador incluye las    d direcciones, no solo las dos conservadas: 20 en Ventas y 16 en
+Transacciones. La proyección favorece varianza, no separación de etiquetas. El signo de cada
+vector es convencional; aquí se hace positivo su coeciente de mayor magnitud. Cada aplicación
+ajustó centrado y componentes solo en su entrenamiento y los reutilizó en su validación. Los
+clasicadores conservaron las 20 o 16 entradas originales transformadas, respectivamente.
+
+
+
+3.4. Métricas y magnitudes de error
+                                   TN FP 
+  Con matriz de confusión C =      F N T P , las reales y columnas predichas, se calculan
+
+      Accuracy = (T P + T N )/N,                       Precision = T P/(T P + F P ),             (8)
+
+         Recall = T P/(T P + F N ),                   Specificity = T N/(T N + F P ),            (9)
+
+             F1 = 2T P/(2T P + F P + F N ),                 BA = 12 (Recall + Specificity),     (10)
+
+          F P R = F P/(T N + F P ),                       F N R = F N/(T P + F N ).             (11)
+
+
+La proporción de predicciones positivas es (T P +F P )/N . El error de clasicación es 1−Accuracy;
+no equivale a entropía cruzada ni a número de actualizaciones. Si no existen positivos predichos,
+precision se registra como cero con indicador de denominador nulo; recall y especicidad no son
+estimables si falta su clase real, y BA requiere ambas clases. Todas las particiones globales de este
+estudio contienen ambas clases.
+
+
+
+
+                                                  4
+4. Data Warehouse WWI y evidencia de origen
+  La carta de diseño describe un modelo estrella de ventas con FactVentas y las dimensiones
+Tiempo, Producto, Cliente, Ubicación y Vendedor [5]. El grano propuesto y comprobado en la
+extracción es una línea de factura, identicada por InvoiceLineID. InvoiceID se repite legítima-
+mente cuando una factura contiene varias líneas; contar facturas exige identicar valores distintos,
+no sumar las.
+
+  Los dos CSV auditados contienen 228 265 las y 30 columnas. La extracción cubre del 1 de
+enero de 2013 al 31 de mayo de 2016, con 41 meses. Se encontraron 70 510 facturas y 227 nombres
+de producto, sin duplicados completos ni duplicados de la clave de línea. Las medidas monetarias
+satisfacen las relaciones aritméticas comprobadas. La limpieza conserva las claves y medidas;
+además del tratamiento de nulos, se observan 268 recortes de espacio en un nombre de cliente.
+La columna afectada es NombreCliente, según la comparación estructurada, aunque un resumen
+previo lo atribuye a vendedor. No se atribuye ese cambio a una operación especíca sin el historial
+de OpenRene.
+
+  La auditoría detectó ausencias en Marca (209 328), Tamaño (67 315) y GrupoCompra (84 297),
+que no justican borrar las observaciones. Se conservaron extremos y benecios negativos. Estos
+últimos no son errores demostrados: faltan costos históricos para explicar su origen. La extracción
+no incluye StockItemID, CustomerID ni CityID, por lo que la identidad por nombre es provisional.
+Inventario histórico, compras, cobros y demanda no atendida no están disponibles en los CSV
+usados.
+
+  Los documentos previos describen procesos analíticos y un dashboard [6, 7]; no verican por
+sí solos todos los cierres, claves, medidas de otras áreas o disponibilidad al instante de predic-
+ción. Las cifras anteriores se contrastaron con resultados/auditoria/perfilado_datos.json,
+su comparación entre fuentes y los maniestos posteriores. La trazabilidad por archivo se conserva
+en los anexos digitales del informe.
+
+
+
+
+5. Metodología y preparación causal de datos
+5.1. Grano producto-mes, etiqueta e instante de predicción
+  Sea Qp,t la suma de unidades facturadas observadas del producto provisional p en el mes t. La
+referencia histórica y la etiqueta son
+
+
+                 Rp,t = mediana(Qp,t−1 , Qp,t−2 , Qp,t−3 ),   yp,t = 1[Qp,t > Rp,t ].          (12)
+
+
+Clase 1 signica ventas unitarias superiores a la mediana reciente del mismo producto; el empate
+pertenece a clase 0. El horizonte es un mes y el instante de predicción es el cierre de t − 1. La
+cantidad objetivo y su etiqueta se mantienen separadas de las entradas. El calendario del mes
+futuro sí es conocido al corte.
+
+  Un producto es elegible cuando se reconoce antes del corte y dispone de los tres meses históricos
+esenciales, con cobertura válida conforme al contrato. Se construyó el calendario desde su primera
+aparición; no se asignaron ceros antes de esa fecha. El calendario contiene 9 019 las y 8 792
+corresponden a productos ya reconocidos antes del corte. Se evitaron 288 pares previos a la primera
+aparición de ocho productos recientes. Las observaciones no elegibles se conservan con su estado,
+sin fabricar una etiqueta cero.
+
+
+
+5.2. Completitud y disponibilidad asumidas
+  La ejecución aprobada utiliza modo académico: se asume completitud y disponibilidad al cierre
+de enero de 2013 a mayo de 2016. No es una certicación del sistema fuente. En un modo de
+
+
+
+                                                   5
+cobertura desconocida, una ausencia no puede convertirse automáticamente en cero ventas. Los
+cierres e ingestiones reales deben demostrarse para una aplicación operacional. La disponibilidad
+secuencial permite usar un mes ya cerrado de test como historia de uno posterior, sin reajustar
+transformaciones o modelos.
+
+
+
+5.3. Características permitidas y exclusiones
+   Se denieron 23 entradas numéricas base. Incluyen tres retardos de unidades, media, mediana
+y dispersión histórica; cambio absoluto, variación relativa y tendencia; facturas, ingresos y clientes
+históricos; precio ponderado y unidades por factura; antigüedad observada y calendario conocido.
+Las 20 columnas efectivas y sus fórmulas completas constan en el anexo A.
+
+   Se excluyeron variables del horizonte, medidas monetarias y clientes futuros, identicadores
+directos, inventario inexistente, atributos estáticos sin historia vericable y categorías no autori-
+zadas. Tampoco se añadieron características después de observar test. Se preservaron redundancias
+algebraicas: eliminarlas por rendimiento habría cambiado el contrato.
+
+   Las razones no esenciales pueden ser nulas si su denominador es cero. Se imputaron con media-
+nas de entrenamiento; la historia esencial ausente bloquea elegibilidad. Tras imputar, se eliminaron
+únicamente tres columnas constantes en entrenamiento: base_variacion_cero, mes_anterior_
+sin_ventas y facturas_lag_1_cero. No se suprimieron columnas por correlación con la respuesta
+o por inspección del rendimiento nal.
+
+                                   xj −µj )/sj , donde x
+   La estandarización aplica xj = (e                   ej es la entrada imputada y µj , sj provienen
+solo de entrenamiento, con desviación poblacional (ddof             = 0). Las mismas medianas, medias,
+desviaciones y orden de columnas se reutilizan en validación y test. Las matrices son oat64 y las
+etiquetas int8 canónicas 0/1. No hay codicación categórica en el contrato aprobado.
+
+
+
+5.4. Particiones temporales y control de fuga
+
+   Tabla 1: Particiones por mes objetivo y soporte de clases; historia disponible desde enero de 2013.
+              Conjunto          Mes inicialnal           N   Clase 0   Clase 1   Clase 1 ( %)
+              Entrenamiento     2013-042014-12    4599          2217      2382         51.794
+              Validación        2015-012015-12    2628          1299      1329         50.571
+              Prueba            2016-012016-05    1111           558       553         49.775
+
+
+
+
+Figura 1: Distribución real de clases y períodos por mes objetivo. Eneromarzo de 2013 aportan la historia
+inicial, no observaciones objetivo de entrenamiento.
+
+   Las observaciones se ordenan por mes objetivo y nombre provisional de producto. Los índices e
+
+
+
+                                                       6
+identicadores producto-mes se conservaron alineados entre modelos. La validación seleccionó con-
+guraciones y checkpoints; test se utilizó después de congelar las decisiones, sin volver a entrenar
+con train más validación. No se usó partición aleatoria de líneas de factura.
+
+  El protocolo previno fuga mediante desplazamiento por calendario, ajuste exclusivo con train,
+separación de respuestas y protección de hashes. Las pruebas existentes incluyen perturbaciones
+del horizonte y de datos futuros, fronteras de partición y persistencia del preprocesador. Ambos
+modelos reciben exactamente las mismas matrices, las y etiquetas. Las métricas de validación son
+de selección, por lo que pueden ser optimistas; no se presentan como una reserva independiente
+del diseño.
+
+
+
+5.5. Baselines comunes
+  El mayoritario predice la clase más frecuente de train, aquí 1, con empate resuelto hacia 0. El
+histórico predice 1[Qp,t−1 > Rp,t ], usando cantidades crudas comparables, no columnas estanda-
+rizadas en escalas distintas. Ambos se evaluaron sobre los mismos casos que los clasicadores; no
+se eligió su regla según test.
+
+
+
+
+                                                 7
+6. Implementación del perceptrón simple
+   La implementación propia en src/models/perceptron.py valida dimensión, nitud, etiquetas
+y orden de nombres. El número de entradas es dinámico; en esta aplicación se deduce de las 20
+columnas aprobadas. Usa NumPy, la función escalón de la ecuación 1 y la actualización online de
+la ecuación 2, sin optimizadores externos ni pérdida probabilística.
+
+   El presupuesto previo compara orden jo y orden barajado con tasa 0,01, semilla 42, pesos y
+sesgo iniciales cero y máximo de 100 épocas por recorrido. La validación selecciona máxima BA,
+después mayor F1 positivo, menor época y orden del plan. El estado elegido se restaura mediante
+copia de pesos; no se exporta automáticamente la última época ni se realiza ret.
+
+   El orden jo seleccionó la época 80 y obtuvo BA de validación 61,508 %; el barajado seleccionó
+la época 70 y alcanzó 61,632 %, por lo que se conservó este último. Con inicialización cero y tasa
+constante positiva, cambiar solo la tasa escala la trayectoria en aritmética exacta; las operacio-
+nes otantes pueden romper esa equivalencia. Por ello, el presupuesto aprobado no amplió tasas
+retrospectivamente.
+
+   El sesgo seleccionado es b = 0,010000000000000004. La tabla 2 conserva los 20 pesos extraídos
+del JSON congelado. Operan sobre entradas transformadas: sus magnitudes no expresan efectos
+en unidades crudas ni importancia causal independiente. Las métricas train/validación/test y
+matrices se presentan en la sección 10.        El número de actualizaciones coincide exactamente con
+
+
+
+Tabla 2: Pesos del modelo congelado perceptrón. Valores oat64 conservados con representación decimal
+de ida y vuelta.
+                   Índice   Característica estandarizada                          Peso
+                       1    unidades_lag_1                          0.08604738881119216
+                       2    unidades_lag_2                          0.07955933295077251
+                       3    unidades_lag_3                          0.08643380694807037
+                       4    unidades_media_3                        0.08682046217511337
+                       5    unidades_mediana_3                      -0.3720436256352147
+                       6    unidades_std_3                      -0.0011423824327889114
+                       7    cambio_unidades_1                     0.016234371544841163
+                       8    variacion_relativa_1                  0.015503476495048884
+                       9    tendencia_unidades_3                 0.0022661384069365548
+                      10    facturas_lag_1                         -0.01341653202315568
+                      11    facturas_media_3                       -0.07449527454509768
+                      12    ingresos_lag_1                         -0.08671342154352552
+                      13    ingresos_media_3                        0.09642870252787368
+                      14    precio_unitario_ponderado_lag_1         0.14385982435183342
+                      15    clientes_distintos_lag_1               -0.04867982347072822
+                      16    unidades_por_factura_lag_1               0.0246007086039395
+                      17    antiguedad_observada_meses               0.0478919237829946
+                      18    mes_objetivo_sin                        0.05422922302085315
+                      19    mes_objetivo_cos                      0.030914856096277414
+                      20    dias_mes_objetivo                     0.034500061409917425
+
+
+los errores online en cada época. Una segunda gura que dibujara solo actualizaciones duplicaría
+la misma serie; la identidad se vericó y ambos conteos se presentan en la tabla 6. La gura 10
+aporta en cambio el conteo de errores al cierre, que sí es información diferente.
+
+
+
+
+                                                      8
+Figura 2: Errores del recorrido de entrenamiento del perceptrón. El análisis distingue conteo online de
+error al cierre; no es entropía cruzada. El checkpoint seleccionado es la época 70.
+
+
+
+
+Figura 3: Accuracy de entrenamiento y validación por época del recorrido barajado. Las oscilaciones no
+se ocultan mediante suavizado.
+
+
+
+
+                                                     9
+Figura 4: BA de validación por época del perceptrón; la selección responde a la métrica observada en
+validación, no a cero errores de entrenamiento.
+
+
+
+
+                                                  10
+7. Implementación de la regresión logística binaria
+  El módulo src/models/logistic_regression.py implementa sigmoidea estable por ramas,
+entropía cruzada con np.logaddexp, gradientes analíticos y descenso de gradiente por lote comple-
+to. La operación matricial X
+                                ⊤ ((p − y)/m) evita una suma grande antes de dividir. Se comprueban
+
+valores nitos y no se emplean scikit-learn, autodiferenciación ni regularización.
+
+  Los gradientes de pesos y sesgo se contrastaron previamente con diferencias centrales en casos
+moderados y logits extremos, con parámetros no nulos y etiquetas mixtas. La tabla 3 procede del
+registro original de esas comprobaciones; no se reejecutó el entrenamiento para construirla.             La
+
+
+
+  Tabla 3: Vericación original por diferencias nitas centrales. Todos los casos cumplen tolerancias.
+              Caso                   h     atol      rtol   Error abs. máx.   Error rel. máx.
+              moderado            1e-06   1e-08     1e-05        6.3527e-11       4.1054e-09
+              logits_extremos     1e-05   2e-06     1e-05        9.5497e-09       2.0213e-08
+
+
+prueba utiliza tolerancias absolutas y relativas: cerca de derivadas cero, un error relativo aislado
+puede ser engañoso. Se vericaron también dimensiones alternativas y estabilidad en las pruebas
+de implementación. Son comprobaciones del cálculo, no garantías de utilidad predictiva.
+
+
+
+Tabla 4: Presupuesto logístico previo: 200 épocas por tasa; checkpoint elegido por BA de validación a
+umbral 0,5.
+                Tasa    k elegido    BA val. ( %)     Pérdida nal train   Gradiente nal
+                0.01         195           58.577           0.648476730       0.094666887
+                0.05         170           60.605           0.629514103       0.023199269
+                0.10         200           61.199           0.626953986       0.011097460
+
+
+  Se evaluaron tres tasas, 0,01, 0,05 y 0,1, con 200 épocas cada una, inicialización cero y semilla
+42. Al ser lote completo con inicio cero, la semilla no altera la trayectoria de esta ejecución. La
+tolerancia de parada estuvo desactivada. Se eligieron tasa y checkpoint por BA de validación a
+umbral 0,5, con desempates por F1, menor época y orden del plan. Después se inspeccionó sobre
+un único checkpoint la cuadrícula de 19 umbrales entre 0,05 y 0,95; permaneció 0,5. No se buscó
+el producto cartesiano épocas por umbrales ni se usó test para elegirlos.
+
+  El modelo conservado corresponde a tasa 0,1, época 200 y sesgo b = 0,08539078966952132.
+La tabla 5 reproduce los pesos con representación decimal suciente para recuperar el mismo
+oat64. El historial de clasicación usa umbral 0,5, que coincide aquí con el umbral nal. La
+serialización JSON almacena dimensión, nombres, parámetros y checkpoint sin pickle.             Compartir
+fronteras lineales en 20 dimensiones no implica obtener los mismos parámetros: objetivo, recorrido,
+frecuencia de actualización y selección dieren. El perceptrón corrige errores discretos online,
+mientras logística optimiza una función suave por lote. Las diferencias nales no se atribuyen a
+una causa comercial sin evidencia.
+
+
+
+
+                                                      11
+Tabla 5: Pesos del modelo congelado logístico. Valores oat64 conservados con representación decimal de
+ida y vuelta.
+                Índice   Característica estandarizada                                 Peso
+                     1   unidades_lag_1                             0.007753842937108124
+                     2   unidades_lag_2                             0.021919159372678004
+                     3   unidades_lag_3                             -0.02887438357917642
+                     4   unidades_media_3                        0.00038495335263386433
+                     5   unidades_mediana_3                           -0.1550018310751814
+                     6   unidades_std_3                                0.1603485307302967
+                     7   cambio_unidades_1                          -0.03239089609332676
+                     8   variacion_relativa_1                        0.13404048909634628
+                     9   tendencia_unidades_3                        0.08312368854459541
+                    10   facturas_lag_1                             -0.11308763440928998
+                    11   facturas_media_3                              -0.520097786700729
+                    12   ingresos_lag_1                            -0.037081330837846524
+                    13   ingresos_media_3                           0.007335190966533872
+                    14   precio_unitario_ponderado_lag_1          0.0004866891244691942
+                    15   clientes_distintos_lag_1                   -0.11718785125889304
+                    16   unidades_por_factura_lag_1                 0.028211039550568473
+                    17   antiguedad_observada_meses                  0.16703575165447174
+                    18   mes_objetivo_sin                            0.24188638442783236
+                    19   mes_objetivo_cos                          -0.018110885050252778
+                    20   dias_mes_objetivo                             0.2550458337404401
+
+
+
+
+Figura 5: Entropía cruzada de entrenamiento y validación en la ejecución logística seleccionada. La pérdida
+inicial de ambas particiones es log 2, con parámetros cero.
+
+
+
+
+                                                    12
+Figura 6: Norma del gradiente logístico registrada después de cada actualización. Incluye derivadas de
+pesos y sesgo y no se interpreta como error de clasicación.
+
+
+
+
+Figura 7: Accuracy train y validación por época a umbral 0,5. La disminución de pérdida no obliga a una
+mejora monótona de la clasicación discreta.
+
+
+
+
+                                                   13
+Figura 8: BA de validación por época en la ejecución logística seleccionada. El presupuesto y la selección
+quedaron jados antes de la evaluación nal.
+
+
+
+
+                                                   14
+8. Vericación de convergencia y comportamiento del error
+8.1. Evidencia y denición de los diagnósticos
+  Se analizan exclusivamente los historiales aprobados del recorrido barajado del perceptrón y de
+la ejecución logística de tasa 0,1. Los CSV por época se conservan íntegros, junto con los cálculos
+documentales, en informe/evidencias/. No se reconstruyen curvas mediante entrenamiento, no
+se inventan métricas de test por época y no se aplica un criterio de parada nuevo.
+
+  Para la logística, con L0 guardada en el registro del experimento, se calcula para k = 1, . . . , 200:
+
+                                                                   |Lk − Lk−1 |
+                            ∆Lk = Lk−1 − Lk ,              rk =                    .                       (13)
+                                                                  máx(1, |Lk−1 |)
+Como todas las pérdidas previas son menores que 1, rk                = |∆Lk | numéricamente en este reco-
+rrido. El denominador evita exagerar un cambio relativo cuando la pérdida es pequeña. Estos
+diagnósticos describen la ejecución; no fueron condiciones efectivas de parada.
+
+
+
+8.2. Perceptrón: uctuaciones sin cese de actualizaciones
+
+  Tabla 6: Recorrido seleccionado del perceptrón: errores online y al cierre son magnitudes diferentes.
+         Época    Online   Actualiz.   Error cierre    Acc. train       Acc. val       BA val   Norma w
+         1          1973       1973           1695           63.144       59.094       59.067   0.266956
+         70         1924       1924           1627           64.623       61.720       61.632   0.470391
+         100        1996       1996           2217           51.794       53.349       53.238   0.439505
+
+  Los errores online pasan de 1 973 a 1 996, con mínimo 1 863 y máximo 2 016. En 49 transiciones
+aumenta su conteo. Ninguna de las 100 épocas presenta cero actualizaciones; la última conserva
+1 996. La media de las primeras diez épocas es 1 954,2 errores y la de las últimas diez 1 965,8. No
+aparece una tendencia de reducción a cero ni un cese de aprendizaje en el presupuesto observado.
+La norma de pesos es 0,470390802 en el checkpoint y 0,439505108 al nalizar; cambiar de norma
+no prueba estabilización de la dirección o de las predicciones.
+
+  El checkpoint 70 tiene 1 924 errores online, pero 1 627 errores al cierre, porque se evalúan estados
+diferentes. Su accuracy train es 64,623 % y validación 61,720 %, frente a 51,794 % y 53,349 % en la
+época 100. La BA de validación cae de 61,632 % en el estado exportado a 53,238 % en el último.
+Por ello, no deben utilizarse métricas de la última época como si fueran las del modelo nal
+conservado.
+
+  El resultado es un recorrido oscilante, sin convergencia a cero errores demostrada. La garantía
+teórica requiere separabilidad con margen; ni esta se ha demostrado ni su ausencia se deduce
+únicamente de 100 épocas. Mantener actualizaciones es evidencia de no estabilización de este
+recorrido, no prueba de un fallo de implementación.
+
+
+
+8.3. Logística: descenso estable, límite de épocas
+  La pérdida inicial train es 0,6931471805599452 y la nal es 0,6269539858615067: disminu-
+ye 0,06619319469843843, equivalente al 9,549659 % de la inicial. Las 200 diferencias                   ∆Lk son
+positivas; no hay aumentos estrictos de pérdida train. El descenso medio por época pasa de
+0,003200745231 en las primeras diez a 0,000012942798 en las últimas diez. La pendiente se apla-
+na, pero la pérdida sigue disminuyendo.
+
+  En la última época, ∆L200       = r200 = 1, 239994026 × 10−5 . La norma del gradiente pasa de
+0,2276084513231957 antes del primer paso a 0,01109745983712376 después del último; no es cero.
+
+
+
+                                                      15
+Tabla 7: Diagnóstico documental por época. ∆L y r se derivan del historial sin modicar el criterio de
+parada.
+       Época         L train          L val         ∆L             r    Norma grad.   BA val ( %)
+       1        0.688123412    0.689090657     0.005024     0.005024      0.2139699         57.943
+       50       0.634948297    0.672987850    0.0002168    0.0002168      0.0459331         59.918
+       100      0.629497740    0.670700835    5.422e-05    5.422e-05      0.0230980         60.621
+       150      0.627772423    0.669767545    2.221e-05    2.221e-05      0.0148239         61.147
+       200      0.626953986    0.669574543      1.24e-05     1.24e-05     0.0110975         61.199
+
+
+La norma nal de pesos es 0,726685646640. La pérdida de validación pasa de 0,6931471805599452
+a 0,6695745428232207, una mejora menor que en entrenamiento. Su diferencia nal con train es
+aproximadamente 0,042620557. El menor valor registrado de validación coincide con la época 200,
+sin que esto pruebe que épocas posteriores serían mejores.
+
+  La tolerancia estaba desactivada (tolerance=null); el registro indica converged_by_
+tolerance=false. Se detuvo por máximo de 200 épocas. En este caso, checkpoint y último
+                                                         descenso estable sin conver-
+estado coinciden. La reducción de pérdida y gradiente respalda
+gencia completa demostrada; no certica un óptimo numérico ni un criterio retrospectivo de
+suciencia. Las redundancias impiden asumir unicidad del vector de pesos.
+
+
+
+
+Figura 9: Diagnóstico de la ejecución logística seleccionada: pérdida completa con inicialización real,
+acercamiento nal, cambios por época y norma del gradiente. El eje logarítmico se identica en los paneles
+inferiores.
+
+   Las curvas permiten distinguir mejora del objetivo continuo y comportamiento de la clasica-
+ción. Concluyen sobre las ejecuciones conservadas, sin extender el presupuesto ni modicar tasas
+o modelos después de observar test.
+
+
+
+
+                                                   16
+Figura 10: Comparación con ejes separados: errores online y al cierre del perceptrón (conteos) frente a
+entropía cruzada logística (pérdida media). No son magnitudes equivalentes.
+
+
+
+
+                                                  17
+9. Reducción dimensional para visualización
+  La transformación PCA aprobada se ajustó con las 4 599 las de entrenamiento y se aplicó a las
+2 628 de validación, usando el mismo centrado. Las etiquetas solo colorean los puntos; no entran
+en el ajuste SVD. No se ajustó PCA con test ni se utilizaron las coordenadas bidimensionales para
+entrenar los clasicadores.
+
+  PC1 explica 32,987763 % y PC2 16,630823 %; juntas conservan 49,618586 %, por lo que
+50,381414 % no se representa en el plano. La varianza total de entrenamiento es 20,0043497173
+con ddof = 1 y el rango numérico es 17. El rango menor que 20 es compatible con redundancias
+de las variables históricas; no impide conservar las dos primeras direcciones.
+
+
+
+Tabla 8: Cinco mayores coecientes por magnitud en cada componente. El cuadrado es participación en
+la norma del vector, no importancia predictiva.
+                Comp.                     Característica    Coeciente   Cuadrado ( %)
+                PC1                unidades_media_3        0.386556480          14.943
+                PC1              unidades_mediana_3        0.384643640          14.795
+                PC1                  unidades_lag_1        0.379973488          14.438
+                PC1      unidades_por_factura_lag_1        0.377059706          14.217
+                PC1                  unidades_lag_2        0.371108446          13.772
+                PC2                  facturas_lag_1        0.494616346          24.465
+                PC2        clientes_distintos_lag_1        0.492434743          24.249
+                PC2            variacion_relativa_1        0.367933782          13.538
+                PC2               cambio_unidades_1        0.345813511          11.959
+                PC2            tendencia_unidades_3        0.300490423           9.029
+
+
+  PC1 combina principalmente nivel histórico de unidades, con coecientes positivos grandes
+en media, mediana, lags y unidades por factura. PC2 combina frecuencia comercial (facturas
+y clientes distintos) y cambios recientes de unidades. La convención de signo hace positivo el
+coeciente de mayor magnitud: invertir un vector no modica la varianza ni aporta una clase
+nueva. Los coecientes negativos menores de PC2 incluyen unidades de los retardos segundo y
+tercero; su lectura es algebraica, no causal.
+
+  Las clases se solapan visualmente. La pérdida de más de la mitad de la varianza limita cualquier
+inferencia sobre separabilidad en las 20 entradas. PCA no es un clasicador; el solapamiento no
+demuestra la causa del rendimiento ni invalida una señal fuera del plano. Ninguna línea bidimen-
+sional se presenta como frontera exacta de los modelos multidimensionales.
+
+
+
+
+                                                  18
+Figura 11: Proyección PCA de entrenamiento, coloreada por etiqueta real. Todos los puntos proceden del
+artefacto aprobado, sin selección ni desplazamiento articial.
+
+
+
+
+Figura 12: Validación proyectada con media y componentes de entrenamiento. Se conserva la escala de
+ejes utilizada en la visualización aprobada.
+
+
+
+
+                                                    19
+Figura 13: Varianza individual y acumulada de los componentes obtenidos de entrenamiento. El denomi-
+nador incluye las 20 direcciones.
+
+
+
+
+                                                20
+10. Resultados experimentales
+10.1. Comparación común de entrenamiento, validación y prueba
+  Las métricas de la tabla 9 proceden de los estados exportados, no de una ejecución nueva. La
+evaluación nal contiene exactamente 1 111 observaciones de enero a mayo de 2016: 558 negativas
+y 553 positivas. La alineación de identicadores, productos, meses y etiquetas fue comprobada
+contra los metadatos aprobados; las matrices y métricas se reproducen desde las predicciones
+existentes.    La logística tiene la mayor BA global observada: 62,415 %, 8,311 puntos sobre el
+
+
+
+Tabla 9: Métricas nales por partición ( %). Estados seleccionados en validación; no corresponden a la
+última época del perceptrón.
+              Método         Conjunto     Acc.     Prec.    Recall   Espec.      F1      BA
+              Perceptrón         Train   64.623   66.815    62.972   66.396   64.837   64.684
+              Perceptrón    Validación   61.720   60.632    69.300   53.965   64.677   61.632
+              Perceptrón          Test   53.915   52.008    96.022   12.186   67.471   54.104
+              Logística          Train   65.840   66.544    68.472   63.013   67.494   65.742
+              Logística     Validación   61.149   62.812    56.810   65.589   59.660   61.199
+              Logística           Test   62.286   57.666    91.139   33.692   70.638   62.415
+              Mayoritario        Train   51.794   51.794   100.000    0.000   68.242   50.000
+              Mayoritario   Validación   50.571   50.571   100.000    0.000   67.172   50.000
+              Mayoritario         Test   49.775   49.775   100.000    0.000   66.466   50.000
+              Histórico          Train   49.272   51.540    34.425   65.223   41.279   49.824
+              Histórico     Validación   49.049   49.453    34.011   64.434   40.303   49.222
+              Histórico           Test   51.395   51.884    32.369   70.251   39.866   51.310
+
+
+
+
+Figura 14: Métricas globales de test sobre los mismos casos. Todas son proporciones o porcentajes según
+la escala rotulada; ninguna mide benecio económico.
+
+perceptrón, 12,415 sobre mayoritario y 11,106 sobre histórico. El perceptrón supera esos baselines
+en 4,104 y 2,794 puntos de BA. Son diferencias descriptivas de la reserva nal, sin prueba de
+superioridad universal ni signicación estadística.
+
+  El baseline mayoritario alcanza recall 100 % sin reconocer un solo negativo. Esto demuestra
+por qué accuracy o sensibilidad aisladas no resumen el equilibrio entre clases. El histórico obtiene
+
+
+
+                                                    21
+especicidad 70,251 %, pero recall 32,369 %, y BA cercana a 50 %.
+
+
+
+10.2. Matrices de confusión, sensibilidad y exceso de positivos
+
+    Tabla 10: Conteos de test y tasas de error ( %). Filas reales y columnas predichas en orden 0,1.
+                    Método         TN     FP    FN        TP     FPR      FNR     Pred. 1
+                    Perceptrón      68   490     22    531      87.814    3.978     1021
+                    Logística      188   370     49    504      66.308    8.861      874
+                    Mayoritario      0   558      0    553     100.000    0.000     1111
+                    Histórico      392   166    374    179      29.749   67.631      345
+
+
+
+
+Figura 15: Matriz de confusión de test del perceptrón. Filas: etiqueta real; columnas: clase predicha. La
+elevada sensibilidad coexiste con 490 falsos positivos.
+
+   El perceptrón predice 1 en 1 021 casos (91,899 %) y logística en 874 (78,668 %), frente a 553
+positivos reales (49,775 %). Su exceso es de 42,124 y 28,893 puntos porcentuales, respectivamente.
+Predecir positivo frecuentemente captura muchos positivos reales, pero también eleva FP. La
+precisión positiva es solo 52,008 % en perceptrón y 57,666 % en logística. F1 positivo no garantiza
+reconocimiento de la clase negativa.
+
+   La logística reconoce 120 negativos adicionales frente al perceptrón, con 27 positivos reconocidos
+menos. Así disminuye 93 errores totales y mejora BA, calculada con denominadores especícos de
+cada clase. Esta explicación aritmética no establece una causa empresarial de la diferencia.
+
+
+
+10.3. Generalización temporal y error por partición
+   La BA test menos validación cambia          −7, 528 puntos en perceptrón y +1, 216 en logística.
+El aumento global de logística no acredita estabilidad en cada mes. Las proporciones positivas
+reales son 51,794 % en train, 50,571 % en validación y 49,775 % en test, mientras las predicciones
+positivas del perceptrón pasan de 48,815 % a 57,801 % y 91,899 %; las de logística, de 53,294 %
+a 45,738 % y 78,668 %. Hay un cambio descriptivo marcado en las decisiones, con prevalencia
+
+
+
+                                                      22
+Figura 16: Matriz de confusión de test de logística con umbral congelado 0,5. Reconoce 188 negativos y
+504 positivos, con 370 FP y 49 FN.
+
+
+
+
+Figura 17: Sensibilidad y especicidad de los cuatro métodos en test. Logística mejora el reconocimiento
+negativo frente al perceptrón, pero conserva especicidad limitada.
+
+
+
+
+                                                   23
+global relativamente próxima.        En logística, la especicidad desciende de 64,516 % en febrero a
+
+
+
+
+Figura 18: Error de clasicación nal, denido como 1 − Accuracy, por método y partición. No es pérdida
+logística ni conteo de actualizaciones. No existe una curva de test por época.
+
+
+
+               Tabla 11: Todos los meses de test. Tasas en %; soporte negativo/positivo.
+             Mes              0/1   BA perc.     BA log.       Prec. log.     Recall log.   Espec. log.
+             2016-01    125/94        55.740      63.753          52.632          85.106           42.400
+             2016-02    155/64        54.667      65.071          43.299          65.625           64.516
+             2016-03    81/138        51.235      56.065          66.019          98.551           13.580
+             2016-04   107/120        51.238      56.012          56.281          93.333           18.692
+             2016-05    90/137        52.620      51.127          60.909          97.810            4.444
+
+
+4,444 % en mayo, mientras el recall de mayo es 97,810 %. Su BA mensual cae hasta 51,127 %.
+El perceptrón supera a logística en BA de mayo (52,620 %), a pesar de la ventaja global de esta
+última. El desempeño cambia con el período y no se resume correctamente con una declaración
+universal de superioridad.
+
+
+
+10.3.1. Por qué BA global y promedio mensual dieren
+   Si Pt = T Pt + F Nt y Nt = T Nt + F Pt , al agrupar los conteos se obtiene
+
+                                P                                              N
+                               P t T P Rt ,                                   P t T N Rt ,
+                         X                                                       X
+              T P RG =                                              T N RG =                                (14)
+                          t     s Ps                                        t  s Ns
+                                                                           1X
+                BAG = 12 (T P RG + T N RG ),                         BAM =     BAt .                        (15)
+                                                                           5 t
+
+Por tanto,
+                                                                                                 
+                                    1X          P    1                         N    1
+              BAG − BAM =                      P t −           T P Rt +       P t −             T N Rt .    (16)
+                                    2 t           P
+                                                s s  5                          N
+                                                                               s s  5
+
+Los pesos son distintos para positivos y negativos; no basta ponderar cada BA mensual por
+el total de las. En logística, los soportes positivos mensuales son 94, 64, 138, 120 y 137; los
+negativos son 125, 155, 81, 107 y 90. La agrupación produce recall 0,911392405 y especicidad
+0,336917563. De ellos resulta BA 62,415 %, frente a 58,406 % del promedio mensual sin ponderar.
+
+
+
+                                                      24
+Figura 19: BA de los cuatro métodos en todos los meses de test. No se excluyen meses difíciles ni se
+selecciona un subperíodo por rendimiento.
+
+
+La diferencia de 4,009691 puntos se verica con tolerancia 10
+                                                                −12 en puntos porcentuales, utilizando
+
+las contribuciones por mes registradas en el análisis temporal. No es una contradicción ni un error
+de cálculo.
+
+
+
+10.4. Productos conocidos y nuevos
+
+              Tabla 12: Comparación de cohortes en test, sin excluir los productos nuevos.
+              Cohorte         Método        N       0/1   TN    FP    FN    TP    BA ( %)
+              conocidos   Perceptrón    1095    552/543    62   490    14   529    54.327
+              conocidos     Logística   1095    552/543   184   368    46   497    62.431
+              conocidos   Mayoritario   1095    552/543     0   552     0   543    50.000
+              conocidos     Histórico   1095    552/543   389   163   367   176    51.442
+              nuevos      Perceptrón      16       6/10     6     0     8     2    60.000
+              nuevos        Logística     16       6/10     4     2     3     7    68.333
+              nuevos      Mayoritario     16       6/10     0     6     0    10    50.000
+              nuevos        Histórico     16       6/10     3     3     7     3    40.000
+
+  Se consideran conocidos los nombres presentes en train, según la regla congelada. En test hay
+219 conocidos con 1 095 las y ocho nuevos con 16 las de abril y mayo. Se conservan todos en
+el global. Entre los nuevos, el perceptrón tiene precision 100 % sobre solo dos positivos predichos,
+pero omite ocho de diez positivos reales. Logística reconoce siete de diez positivos y cuatro de seis
+negativos. Los conteos son insucientes para sostener estabilidad de porcentajes o una ventaja
+extrapolable a nuevos catálogos.
+
+
+
+10.5. Concordancias y desacuerdos
+  Ambos modelos aciertan 554 casos y ambos fallan 374; solo perceptrón acierta 45 y solo logística
+138. Las cuatro categorías son excluyentes y suman 1 111. Coinciden en 928 decisiones y discrepan
+en 183: acuerdo no equivale a acierto. Los 93 aciertos exclusivos netos de logística explican la
+
+
+
+                                                   25
+diferencia de accuracy. Las agrupaciones por mes y cohorte están disponibles en el archivo de
+acuerdos; no se usaron para construir un clasicador combinado.
+
+
+
+
+Figura 20: Descomposición de aciertos y errores compartidos y exclusivos por mes. Las categorías con-
+servan los conteos de las mismas predicciones alineadas; los detalles por cohorte están en el archivo estruc-
+turado.
+
+
+
+
+                                                     26
+11. Comparación estadística y cambios de distribución
+11.1. Distribuciones observadas frente a hipótesis de cambio
+  El análisis descriptivo conserva medias, desviaciones y cuantiles 5/25/50/75/95 de las 20 en-
+tradas transformadas en cada partición, sin ajustar un nuevo escalador. Las mayores diferencias
+de media test menos train, medidas en desviaciones de train, corresponden a antigüedad observa-
+da (+4,046562), seno del mes (+0,992743) y coseno (+0,700490). Facturas medias de tres meses
+cambia +0,485939. La gura 21 muestra el conjunto completo de columnas. La antigüedad cre-
+
+
+
+
+Figura 21: Cambios descriptivos de media en las 20 entradas existentes respecto a train, expresados en
+su desviación de entrenamiento. No son parámetros de una transformación nueva ni pruebas de deriva de
+concepto.
+
+ce por denición del tiempo: los productos conocidos tienen entre 36 y 40 meses observados en
+test, frente a tres o cuatro en los nuevos. Además, test contiene eneromayo, validación un año
+completo y train 21 meses objetivo: las mezclas del calendario no son idénticas. La mediana de
+unidades del mes previo en test es 192 entre conocidos y 3 336 entre nuevos, señal de escalas co-
+merciales diferentes. Los resúmenes de historia mensual se conservan en el artefacto descriptivo,
+sin reinterpretar ausencia de una línea como falta de demanda.
+
+  Estos hallazgos prueban cambios descriptivos de X y mezcla de población, pero no demuestran
+un cambio de P (y | X) o   concept drift. Posibles explicaciones incluyen extrapolación temporal del
+
+                                                 27
+modelo lineal, comportamiento comercial variable, cobertura incompleta o identidad provisional;
+son hipótesis que los CSV no permiten discriminar causalmente. No se modican características
+tras observarlas.
+
+
+
+11.2. Incertidumbre y dependencia
+  Las 1 111 las no son réplicas independientes. Se repiten productos, se solapan ventanas de
+historia y productos distintos comparten condiciones de un mismo mes. Solo hay cinco bloques
+temporales de test. No se utilizan intervalos iid, bootstrap de líneas de factura, p-valores ni de-
+claraciones de superioridad estadística universal.
+
+  El análisis exploratorio omite sistemáticamente cada mes completo por turno y vuelve a agregar
+las mismas predicciones de los cuatro restantes. La BA logística resultante varía de 58,157 % a
+64,129 %. Ese rango no es un intervalo de conanza, no corrige toda dependencia temporal y no
+reemplaza la evaluación ocial de los cinco meses. Se conservan todas las omisiones, sin elegir la
+favorable. La evidencia permite describir sensibilidad al período observado, no estimar de forma
+able la distribución de rendimiento futuro.
+
+
+
+
+12. Interpretación para Inteligencia de Negocios
+  La mejor comparación global observada corresponde a logística, que también mejora BA y
+especicidad respecto al perceptrón. No obstante, 370 falsos positivos pueden generar revisiones
+comerciales innecesarias; los 49 falsos negativos pueden omitir meses superiores a la mediana
+reciente. No se traduce un FP automáticamente en sobrestock ni se inventan costos de revisión o
+ventas perdidas. El histórico reconoce más negativos, pero omite 374 positivos, por lo que tampoco
+es una solución comercial suciente.
+
+  La utilidad de una alerta depende de la acción, su costo, la capacidad de revisión y el valor
+de detectar una subida relativa. Esos datos no están registrados. La comparación actual debe
+servir para comprender una primera aplicación académica y diseñar una validación operacional
+independiente, no para armar retorno de inversión.
+
+  Se requieren claves operativas y catálogos vigentes, unidades y empaques consistentes, cierres
+e ingestiones vericables, promociones y precios planicados, inventarios, faltantes de stock y
+demanda no atendida. También hacen falta acciones registradas y costos FP/FN validados por el
+negocio. La extracción de ventas observadas no sustituye esa información.
+
+
+
+
+13. Limitaciones y decisiones pendientes
+  La identidad por nombre no prueba continuidad de producto y la cobertura al cierre es acadé-
+mica, no certicada. La respuesta mide facturación observada y un cambio relativo que puede ser
+pequeño; no incorpora relevancia económica ni disponibilidad de inventario. Las probabilidades
+logísticas no cuentan con calibración validada. La selección de tasa, checkpoint y umbral en una
+misma validación introduce optimismo en las métricas de desarrollo.
+
+  Las fronteras lineales pueden no representar todas las interacciones, pero el análisis no demues-
+tra que esa limitación sea la causa del resultado. El presupuesto de épocas es nito y no certica
+convergencia completa; PCA pierde 50,38 % de varianza en 2D. Cinco meses de test y 16 las
+de productos nuevos restringen generalización e inferencia estadística. No se reutiliza la reserva
+consumida para mejorar las cifras.
+
+  En identicación académica, los informes previos coinciden en autores, asignatura, nivel y
+paralelo, pero sus fechas no permiten jar inequívocamente el ciclo de esta entrega. La portada
+
+
+
+
+                                                28
+deja ciclo y fecha pendientes; la forma del nombre y grado del docente sigue la solicitud actual.
+Las referencias locales no declaran con certeza una autoría bibliográca individual para todos sus
+textos; se citan como documentos académicos del proyecto, sin inventar metadatos.
+
+
+
+
+14. Conclusiones parciales del Data Mart de Ventas
+  La preparación temporal y los artefactos alineados permiten una comparación reproducible de
+dos modelos propios y dos baselines. El uso común de 20 entradas y particiones cronológicas evita
+atribuir diferencias a cambios de muestra o de representación entre clasicadores. Las etiquetas
+signican exclusivamente superar la mediana de tres meses del propio producto.
+
+  La regresión logística obtiene la mayor BA de test (62,42 %), con mejora observada frente a
+perceptrón y baselines. Su elevada tasa de falsos positivos y variación mensual impiden recomendar
+decisiones automáticas inmediatas. La BA global supera su promedio mensual por ponderaciones
+diferentes de clases, comprobadas algebraicamente, sin contradicción entre ambas cifras.
+
+  El perceptrón no deja de actualizarse y sus errores uctúan; el checkpoint 70 debe distinguirse
+del último estado. La logística reduce monótonamente la entropía cruzada y el gradiente, pero
+termina por el máximo de épocas y mantiene gradiente no nulo. La conclusión vericable es
+descenso estable sin convergencia completa demostrada. La proyección PCA aporta una vista
+exploratoria, sin explicar causalmente el rendimiento ni sustituir los modelos de 20 dimensiones.
+
+  Estas conclusiones parciales se circunscriben a Ventas y se conservan al añadir la aplicación
+                          La ampliación a los procesos aún no implementados sigue
+nanciera de la sección 15.
+siendo obligatoria. Cada uno requiere vericar modelo dimensional y disponibilidad, formular
+una respuesta propia, jar cortes y transformaciones y ejecutar una evaluación independiente. La
+incorporación de Transacciones no convierte los estudios de viabilidad de Pedidos o Compras en
+modelos entrenados, ni cierra las obligaciones pendientes de Inventario/Movimientos.
+
+
+
+
+                                               29
+15. Clasicación de la frecuencia de cobros en Transacciones Fi-
+    nancieras
+15.1. Problema empresarial, eventos e identidad
+  La segunda aplicación reutiliza los fundamentos de la sección de modelos lineales para una
+pregunta distinta: al inicio de un mes, ¾puede anticiparse que una cuenta registre más cobros que
+su referencia reciente? La nalidad académica es estudiar frecuencia de eventos y carga potencial
+de conciliación, no morosidad, liquidez, ingresos monetarios, saldo pendiente ni unidades vendidas.
+No se asigna un benecio económico automático a una predicción positiva.
+
+  Una la de Fact.Transaction representa una transacción operacional de cliente o proveedor.
+El catálogo diferencia facturas de cliente (tipo 1), cobros recibidos (tipo 3), facturas de proveedor
+(tipo 5) y pagos emitidos (tipo 7); estos son los tipos observados en desarrollo. Notas de crédito,
+devoluciones y otros tipos del catálogo no se mezclan con cobros. Una factura registra una obli-
+gación: no demuestra un pago efectivo. El signo negativo del tipo 3 reduce cuentas por cobrar
+y corresponde a una entrada registrada; el mismo signo en tipo 7 reduce cuentas por pagar y
+corresponde a una salida registrada. El signo sin dominio y tipo no determina ingreso o egreso.
+
+  La      fuente   elegida   es   Sales.CustomerTransactions.   El   evento   se   identica   mediante
+CustomerTransactionID. Se cuentan solo eventos tipo 3 Customer Payment Received, cuya
+convención contable fue vericada. La identidad de cuenta es CustomerID operacional, corres-
+pondiente al pagador     Bill To, no necesariamente al destinatario de una factura. La unión por ID
+de evento con DW permitió recuperar cuentas aun cuando su clave dimensional era el miembro
+desconocido: 21 142 cobros de desarrollo tenían ese problema. No se agrupan cuentas desconocidas
+bajo una identidad cero ni por nombre actual.
+
+  En desarrollo se conciliaron 86 475 transacciones nancieras OLTPDW, incluidas 23 018 de
+cobro. En test se extrajeron 3 619 cobros de 263 cuentas y se vericó la biyección por ID, fecha
+y tipo. Un pago puede agrupar obligaciones; los cobros no llevan         InvoiceID. Por ello, no se
+inventa una aplicación uno a uno pago-factura ni se reutilizan líneas de venta como observaciones
+nancieras. La simulación vincula pagos con obligaciones de facturación, pero no hace idénticos
+los eventos ni sus etiquetas.
+
+
+
+15.2. Contrato temporal, cobertura y etiqueta
+  TransactionDate representa el día empresarial del cobro; DateKey procede de esa fecha. No
+contiene hora auditada de inserción. LastEditedWhen es última modicación y solo aporta un
+control observable de versión; no acredita creación ni completitud absoluta. Los eventos de co-
+bro inspeccionados se editaron en su propio día empresarial. En cambio, OutstandingBalance,
+IsFinalized y FinalizationDate son estados mutables y no se reconstruyen como historia a
+partir del último valor.
+
+  El contrato utiliza explícitamente business_ledger_academic: se asume conservación y cober-
+tura mensual del libro de eventos dentro del alcance conciliado. La fecha interpretable, unicidad,
+correspondencia OLTPDW, continuidad mensual y mecanismo local de registro respaldan una
+reconstrucción de conteos sin exigir snapshots de saldos que el objetivo no usa. No prueban ausen-
+cia universal de borrados, correcciones, escrituras externas, carga retroactiva o latencia. Tampoco
+equivalen a conciliación bancaria.
+
+  La ausencia de cobros se representa como cero solo en un mes cubierto posterior a primera
+observación de la cuenta. Antes de primera aparición no se fabrican las. Cobertura desconocida,
+mes incompleto o extracto inconsistente produce indeterminación, no clase negativa. La población
+inicial incluye pagadores previamente observados; no se arma cubrir cuentas nunca vistas en
+cobros.
+
+
+
+
+                                                  30
+  Sea Nc,t el número de IDs distintos de cobro de la cuenta c en el mes calendario t. La referencia
+y la respuesta son
+
+
+                   Rc,t = mediana(Nc,t−1 , Nc,t−2 , Nc,t−3 ),      yc,t = 1[Nc,t > Rc,t ].       (17)
+
+
+El empate pertenece a clase 0. Se requieren tres meses consecutivos de historia, no las tres últimas
+compras o transacciones activas. El instante de predicción es el comienzo de t, después del cierre
+de t − 1. El conteo objetivo y y permanecen fuera de X ; R sí puede ser entrada porque utiliza
+exclusivamente el pasado.
+
+
+
+15.3. Preparación causal y representación de 16 entradas
+  La extracción focalizada usa SELECT y autenticación integrada en la instancia local AMBATO.
+Se conserva una proyección mínima con ID de evento, cuenta, fecha, tipo, edición y comprobación
+de signo sin exportar importes. El snapshot comprimido y las consultas tienen hashes reprodu-
+cibles. Se rechazan duplicados, tipos distintos y discrepancias de unión, sin repetir la auditoría
+general ni exportar indiscriminadamente la base.
+
+  Cada cuenta-mes se ordena por mes y CustomerID. La primera aparición se determina con
+eventos previos al instante; no se utiliza actividad del objetivo, última aparición futura o super-
+vivencia para elegir la población. Las 16 características efectivas se detallan en la tabla 13. No se
+impuso una dimensión de 20 por analogía con Ventas.
+
+
+                     Tabla 13: Las 16 características nancieras antes de estandarizar.
+                     nk = Nc,t−k .
+
+  Característica                           Fórmula
+  cobros_lag_1                             n1
+  cobros_lag_2                             n2
+  cobros_lag_3                             n3
+  cobros_media_3                           (n1 + n2 + n3 )/3
+  cobros_mediana_3                         mediana(n1 , n2 , n3 )
+  cobros_std_3                             std(n1 , n2 , n3 ), ddof = 0
+  cobros_cambio_1                          n1 − n2
+  cobros_tendencia_3                       (n1 − n3 )/2
+  meses_con_cobros_3
+                                           P3
+                                              k=1 1[nk > 0]
+  mes_anterior_sin_cobros                  1[n1 = 0]
+  variacion_relativa_cobros                (n1 − n2 )/n2 si n2 > 0; nulo si no
+  base_variacion_cero                      1[n2 = 0]
+  antiguedad_observada_meses               ordinal(t) − ordinal(tprimero )
+  mes_sin                                  sin(2π(mes(t) − 1)/12)
+  mes_cos                                  cos(2π(mes(t) − 1)/12)
+  dias_mes_objetivo                        Días calendario del mes objetivo
+
+
+  Solo la variación relativa puede ser nula cuando n2           = 0: se imputa con mediana de train y
+conserva el indicador de base cero. La historia esencial no se imputa. Las 16 columnas resultaron
+no constantes en train; ninguna se eliminó con información de validación. Las medias y desviaciones
+poblacionales del escalado (ddof = 0) se ajustaron solo con entrenamiento y se aplicaron sin ret
+a los períodos posteriores. CustomerID queda como metadato, no magnitud continua. Se excluyen
+importes, saldos, estados nales, medios actuales de pago y atributos dimensionales condicionados.
+
+  La tabla 14 separa soporte principal y común. Train utiliza objetivos 20132014 desde abril,
+con etiquetas conocidas antes de 2015-01-01; validación usa 2015, antes de 2016-01-01. Test se
+limita a eneromayo de 2016, con corte exclusivo de conocimiento 2016-06-01. No se reajusta con
+
+
+
+                                                     31
+          Tabla 14: Transacciones: particiones temporales y poblaciones principal y común.
+            Conjunto          Mes objetivo        N principal    Clase 0   Clase 1    N común
+            Entrenamiento     2013-042014-12           4612       2814      1798         4376
+            Validación        2015-012015-12           2943       1745      1198         2927
+            Prueba            2016-012016-05           1284        759       525         1276
+
+
+meses posteriores: eventos de validación o test ya concluidos solo aportan historia causal para el
+mes siguiente.
+
+  Las pruebas de preparación perturbaban cobros del objetivo para comprobar que cambia la
+etiqueta al cruzar R, pero no sus predictores; perturbaciones futuras no alteraban períodos ante-
+riores. También se vericaron identidad cliente-mes, continuidad de lags, cobertura explícita de
+ceros, parámetros train-only, alineación y reproducción. X es oat64 nita; las etiquetas canó-
+nicas son 0/1. Estas pruebas usan xtures sintéticos como controles, no sustituyen los eventos
+empresariales.
+
+
+
+15.4. Conguración experimental y modelos congelados
+  Se reutilizan sin cambios las clases NumPy del perceptrón y la logística explicadas mediante
+las ecuaciones 14. Ambos comienzan con pesos y sesgo cero, sin transferir pesos de Ventas ni
+utilizar clasicadores predenidos o autodiferenciación. La dimensionalidad de estas ejecuciones
+es exactamente 16.     El presupuesto de la tabla 15 se jó antes de resultados: dos recorridos por
+
+
+
+     Tabla 15: Presupuesto nanciero predenido: cuatro ejecuciones, sin ampliación adaptativa.
+                 Modelo         η    Semilla    Máx. épocas     Checkpoint   BA val. ( %)
+                 Perceptrón   0,01       42             100             80           66,457
+                 Perceptrón   0,01        7             100              3           66,783
+                 Logística    0,05       42             400            380           60,611
+                 Logística    0,10       42             400            399           62,082
+
+
+semillas distintas para perceptrón, con tasa 0,01 y 100 épocas y una permutación nueva por época;
+dos tasas logísticas con 400 épocas y lote completo. En logística, seed=42 no altera la inicialización
+cero. La tolerancia de norma del gradiente es 10
+                                                   −6 . No hubo búsqueda adaptativa de tasas o épocas
+
+ni selección posterior de umbral: τ = 0, 5 quedó jo. A diferencia de Ventas, no se inspeccionó una
+cuadrícula de 19 umbrales y el presupuesto logístico fue de 400, no 200 épocas.
+
+  La selección maximiza BA en las 2 943 las de validación completa; desempata por F1, menor
+época y orden predenido. Las actualizaciones solo utilizan train. Se conserva el checkpoint, sin
+ret train+val. La comparación con un histórico de mayor exigencia no altera retrospectivamente
+esa población de selección.
+
+
+
+15.4.1. Perceptrón nanciero
+  Se seleccionaron tasa 0,01, semilla 7 y época 3. El sesgo es b = −0,060000000000000005. La
+                                             b = 1[z ≥ 0]. Las magnitudes actúan sobre entradas
+tabla 16 reproduce sus 16 pesos; la regla es y
+estandarizadas correlacionadas y no representan efectos causales o importancia independiente.
+
+
+
+
+                                                   32
+Tabla 16: Pesos nancieros congelados: perceptrón. Precisión decimal suciente para recuperar oat64.
+                  Índice   Característica estandarizada                        Peso
+                      1    cobros_lag_1                        -0.04287896966745797
+                      2    cobros_lag_2                        -0.03607377463708822
+                      3    cobros_lag_3                        -0.02506460518201935
+                      4    cobros_media_3                      -0.03912919228599467
+                      5    cobros_mediana_3                    -0.23984633131606187
+                      6    cobros_std_3                      -0.022046274510795494
+                      7    cobros_cambio_1                   -0.008542006557497794
+                      8    cobros_tendencia_3                  -0.02249378986921783
+                      9    meses_con_cobros_3                 0.010515036627325475
+                     10    mes_anterior_sin_cobros             -0.01832001014751086
+                     11    variacion_relativa_cobros            0.03828637104414538
+                     12    base_variacion_cero                0.018388594765704862
+                     13    antiguedad_observada_meses         0.026577078904025647
+                     14    mes_sin                              0.01864275205505169
+                     15    mes_cos                          -0.0052679857739134466
+                     16    dias_mes_objetivo                    0.03913688671035464
+
+
+15.4.2. Regresión logística nanciera
+  Se seleccionaron tasa 0,10 y época 399, con umbral jo 0,5 y sesgo b = −0,5397483970938558.
+La tabla 17 conserva los 16 pesos. Se mantuvieron sigmoidea por ramas, pérdida logaddexp y
+gradientes analíticos del modelo general. La serialización sin pickle conserva nombres, dimensión,
+sesgo, parámetros y checkpoint; la recuperación reproduce las predicciones aprobadas.        La tabla
+
+
+
+ Tabla 17: Pesos nancieros congelados: logística. Precisión decimal suciente para recuperar oat64.
+                  Índice   Característica estandarizada                       Peso
+                       1   cobros_lag_1                      -0.01131612469869563
+                       2   cobros_lag_2                      0.026461475377230335
+                       3   cobros_lag_3                      -0.04202999215738953
+                       4   cobros_media_3                   -0.010071816705856898
+                       5   cobros_mediana_3                    -0.8948655245730728
+                       6   cobros_std_3                      -0.13941955635444683
+                       7   cobros_cambio_1                   -0.04702866804625703
+                       8   cobros_tendencia_3                 0.03830044269545719
+                       9   meses_con_cobros_3                  -0.1518249526896529
+                      10   mes_anterior_sin_cobros              0.0796368591991789
+                      11   variacion_relativa_cobros          0.09177270933112168
+                      12   base_variacion_cero                0.10951007173144613
+                      13   antiguedad_observada_meses         0.07819826481425454
+                      14   mes_sin                            0.06375213358821646
+                      15   mes_cos                          -0.056330945759771635
+                      16   dias_mes_objetivo                  0.07942064011905278
+
+
+18 corresponde a los checkpoints restaurados, no a las últimas épocas. La selección repetida en
+validación puede introducir optimismo; esa partición no es una prueba independiente del diseño.
+Los hashes aprobados de ambos modelos se vericaron antes de abrir test y permanecen en los
+anexos digitales, junto con sus pesos de precisión completa.
+
+
+
+
+                                                  33
+15.5. Convergencia observada y comportamiento durante el entrenamiento
+
+        Tabla 18: Métricas nancieras de los checkpoints seleccionados en soporte principal ( %).
+              Modelo        Conjunto         Acc.     Prec.   Recall   Espec.      F1      BA
+              Perceptrón    Train           66,522   56,065   65,295   67,306   60,329   66,301
+              Perceptrón    Validación      65,511   55,787   73,623   59,943   63,476   66,783
+              Logística     Train           68,148   68,462   33,927   90,014   45,370   61,970
+              Logística     Validación      67,244   69,898   34,307   89,857   46,025   62,082
+
+
+
+15.5.1. Perceptrón: oscilación y checkpoint temprano
+   Los errores online iniciales/nales fueron 1856/1810, con mínimo 1768 y máximo 1917. Se
+registraron 183820 actualizaciones y 52 transiciones crecientes. Ninguna de las 100 épocas quedó
+sin errores; la última mantuvo 1 810 actualizaciones. Las guras 22 y 23 muestran la misma
+identidad erroractualización exigida por la regla online, no dos evidencias independientes.        Las
+
+
+
+
+Figura 22: Errores online del perceptrón nanciero por época, sin suavizar ni ocultar oscilaciones. La
+línea vertical identica el checkpoint 3.
+
+curvas de accuracy y BA de las guras 24 y 25 distinguen selección y optimización. El checkpoint
+3 alcanza BA de validación 66,782699 %; la última época cae a 59,099 %. No debe exportarse el
+último estado como si fuera el elegido. Los errores al cierre también dieren del conteo online: al
+nal hay 1 722 errores con un estado jo de parámetros. La conclusión es ausencia de convergencia
+a cero actualizaciones en el presupuesto observado. No se demuestra separabilidad ni su ausencia
+mediante estas 100 épocas; tampoco se amplía el presupuesto al observar oscilación o test.
+
+
+
+15.5.2. Logística: descenso estable sin alcanzar tolerancia
+   La pérdida train pasó de 0,693147181 a 0,616972884; la pérdida de validación nal fue
+0,631334062. No hubo incrementos train mayores que 10
+                                                                  −12 . El último cambio de pérdida fue
+
+aproximadamente −2, 6413 × 10
+                             −5 y la norma nal del gradiente fue 0,016242538, mayor que
+
+10−6 . Las guras 26 y 27 muestran descenso y gradiente no nulo, sin convertirlos en prueba de
+
+                                                       34
+Figura 23: Actualizaciones por época del perceptrón nanciero. Cada error online provoca una actuali-
+zación, por lo que ambos conteos coinciden.
+
+
+
+
+Figura 24: Accuracy nanciera de train y validación al nalizar cada época del perceptrón. La validación
+no interviene en las actualizaciones.
+
+
+
+
+                                                  35
+Figura 25: BA nanciera de validación por época. La época 3 se seleccionó por el criterio predenido, no
+por cese de actualizaciones.
+
+
+óptimo.   La ejecución terminó por máximo de épocas, no por tolerancia. El checkpoint 399 y la
+época 400 tienen BA de validación 62,081956 % y 62,040220 %, respectivamente; se conservó el
+primero. Las guras 28 y 29 permiten observar que disminuir una pérdida continua no equivale a
+mejorar monótonamente métricas discretas con umbral jo. La conclusión vericable es descenso
+estable sin convergencia completa demostrada. No se dibujan curvas de entrenamiento para test
+ni se entrenan nuevas conguraciones para interpretar estos historiales.
+
+
+
+
+                                                  36
+Figura 26: Entropía cruzada nanciera de train y validación durante las 400 épocas de la logística selec-
+cionada. La línea vertical marca el checkpoint 399.
+
+
+
+
+Figura 27: Norma conjunta de los gradientes de pesos y sesgo al cierre de cada época nanciera. El criterio
+10−6 no se alcanzó.
+
+
+
+
+                                                      37
+Figura 28: Accuracy nanciera por época de la logística con umbral 0,5; ambas series corresponden a
+desarrollo, no a test.
+
+
+
+
+Figura 29: BA nanciera de validación de la logística. La selección de checkpoint es distinta del criterio
+de parada por gradiente.
+
+
+
+
+                                                   38
+15.6. PCA nanciero: estructura de variación y solapamiento
+  PCA se ajustó mediante la SVD de la ecuación 6 solo con X de entrenamiento, sin etiquetas
+ni nuevo escalado. La validación recibió la misma media y matriz de componentes. PC1 explica
+27,896 %, PC2 17,125 % y juntas 45,021 %; queda fuera del plano 54,979 %. El rango numérico
+fue 13 de 16, compatible con las redundancias algebraicas de media, diferencias y tendencias. Los
+clasicadores mantuvieron sus 16 entradas originales procesadas. PC1 resume nivel de actividad:
+
+
+
+      Tabla 19: Coecientes de mayor magnitud del PCA nanciero en entradas estandarizadas.
+                       Comp.    Característica                   Coeciente
+                       PC1      cobros_media_3                  0,467395768
+                       PC1      cobros_mediana_3                0,458978900
+                       PC1      cobros_lag_1                    0,424372958
+                       PC1      cobros_lag_2                    0,411495169
+                       PC1      cobros_lag_3                    0,407070303
+                       PC2      cobros_cambio_1                 0,535122635
+                       PC2      variacion_relativa_cobros       0,503452365
+                       PC2      cobros_tendencia_3              0,437702542
+                       PC2      mes_anterior_sin_cobros        -0,352326429
+                       PC2      cobros_lag_1                    0,218738061
+
+
+los mayores coecientes positivos corresponden a media (0,467396), mediana (0,458979) y los
+tres lags de cobros. PC2 enfatiza cambio (0,535123), variación relativa (0,503452) y tendencia
+(0,437703), frente a ausencia de actividad en el mes anterior (coeciente negativo). La tabla
+19 presenta los cinco de mayor magnitud; el CSV conserva todos. Son coecientes unitarios en
+coordenadas estandarizadas, no correlaciones automáticamente ni factores económicos causales.
+
+  Las guras 30 y 31 muestran solapamiento de clases; la gura 32 cuantica la varianza que
+queda fuera del plano. Esa imagen no prueba imposibilidad de clasicación en 16 dimensiones ni
+explica por sí sola los errores. Se vericaron ortogonalidad, varianza de las proyecciones, suma de
+ratios, equivalencia del espectro SVD con la covarianza y residuo de reconstrucción. No se usó
+PCA para predecir, ajustar umbrales o seleccionar las.
+
+
+
+
+                                                 39
+Figura 30: PCA nanciero de entrenamiento por clase real. Se conservan todos los puntos, incluidos
+extremos, sin desplazamiento articial ni frontera de clasicación 2D.
+
+
+
+
+Figura 31: Validación nanciera proyectada con parámetros exclusivamente de train. Los colores solo
+describen etiquetas; los ejes mantienen límites comparables.
+
+
+
+
+                                                   40
+Figura 32: Varianza nanciera individual y acumulada en las 16 direcciones de entrenamiento. La retención
+bidimensional es 45,021 %, no el porcentaje obtenido en Ventas.
+
+
+
+
+                                                   41
+15.7. Evaluación nal: apertura, poblaciones y baselines
+  Antes de consultar 2016 se reprodujeron métricas y predicciones de validación y se vericaron
+hashes de modelos, matrices, preprocesador y protocolo. Un registro persistente de apertura pre-
+cede a las consultas. El modelo de prueba ya no constituye una reserva disponible para diseñar
+nuevas conguraciones: sus resultados se documentan sin reajuste.
+
+  La población principal contiene 1 284 observaciones de eneromayo, con 525 positivas y 759
+negativas. Ambos clasicadores y mayoría se evalúan sobre esas mismas claves. El mayoritario
+predice 0, aprendida de train, a diferencia de la clase 1 del baseline de Ventas. El histórico nanciero
+es la persistencia de la etiqueta anterior:
+
+                       hist
+                     ybc,t  = yc,t−1 = 1[Nc,t−1 > mediana(Nc,t−2 , Nc,t−3 , Nc,t−4 )].             (18)
+
+
+Requiere cuatro meses previos y no se sustituye por 1[Nc,t−1 > Rc,t ], que incluye Nc,t−1 en otra
+referencia y usa tres meses. Ocho las principales carecen del cuarto antecedente; su histórico
+queda indeterminado y la comparación secundaria se restringe a 1 276. No se eliminan de los
+clasicadores ni se inventa el lag cero. La misma conciliación explicó previamente 16 las de
+validación: 2 943 principales frente a 2 927 comunes, todas con etiqueta y predicciones válidas de
+modelos/mayoría.      El perceptrón alcanza BA 66,222 %, accuracy 62,461 %, recall 86,857 % y F1
+
+
+
+                 Tabla 20: Test nanciero: métricas sobre las 1 284 las principales ( %).
+                   Método           Acc.     Prec.     Recall     Espec.       F1       BA
+                   Perceptrón     62,461    52,474     86,857     45,586   65,423    66,222
+                   Logística      65,265    58,998     49,333     76,285   53,734    62,809
+                   Mayoritario    59,112     0,000      0,000    100,000    0,000    50,000
+
+
+
+        Tabla 21: Conteos nancieros principales y tasas FPR/FNR y predicción positiva ( %).
+                    Método         TN      FP    FN     TP       FPR       FNR      Pred. 1
+                    Perceptrón    346      413    69    456     54,414    13,143    67,679
+                    Logística     579      180   266    259     23,715    50,667    34,190
+                    Mayoritario   759        0   525      0      0,000   100,000     0,000
+
+65,423 %; logística BA 62,809 %, accuracy 65,265 %, recall 49,333 % y F1 53,734 %. La mayor BA
+del primero coexiste con menor accuracy y especicidad. Su FPR es 54,414 % y FNR 13,143 %,
+frente a 23,715 % y 50,667 % de logística. Son distintas preferencias de error de modelos ya jados,
+sin atribuir un costo monetario no disponible.
+
+  Las matrices de las guras 33 y 34, junto con la tabla 21, proceden directamente de los artefactos
+exportados. El perceptrón reconoce 456 positivos y 346 negativos, con 413 FP y 69 FN; logística
+reconoce 259 y 579, con 180 FP y 266 FN. No se reconstruyeron predicciones para elaborar el
+informe.
+
+
+
+           Tabla 22: Comparación nanciera secundaria: los cuatro métodos en 1 276 las ( %).
+                   Método           Acc.     Prec.     Recall     Espec.       F1       BA
+                   Perceptrón     62,226    52,364     86,807     45,153   65,324    65,980
+                   Logística      65,125    58,904     49,331     76,096   53,694    62,713
+                   Mayoritario    59,013     0,000      0,000    100,000    0,000    50,000
+                   Histórico      49,373    38,104     37,667     57,503   37,885    47,585
+
+
+
+                                                       42
+Figura 33: Matriz nanciera principal del perceptrón: 1 284 observaciones, las reales y columnas predi-
+chas. La alta sensibilidad se acompaña de 413 falsas alertas.
+
+
+
+
+Figura 34: Matriz nanciera principal de logística: 180 FP y 266 FN con umbral congelado 0,5. No
+corresponde al subconjunto del histórico.
+
+
+
+
+                                                    43
+  En el soporte común de la tabla 22, las BA son 65,980 % para perceptrón, 62,713 % para
+logística, 50,000 % para mayoría y 47,585 % para histórico. Las guras 35, 36 y 37 usan exactamente
+ese subconjunto de cuatro métodos. No reemplazan la tabla principal 20. Las pequeñas diferencias
+entre BA principal y común son aritmética de soporte, no cambios de pesos o umbral.        Average
+
+
+
+
+Figura 35: BA nanciera de cuatro métodos sobre las mismas 1 276 observaciones comunes. La población
+principal de modelos conserva 1 284.
+
+
+
+
+Figura 36: Accuracy, precision, recall y F1 nancieros sobre soporte común. Ninguna métrica aislada
+representa benecio empresarial.
+
+Precision de logística en la población principal es 0,621821, calculada sobre scores sigmoid con
+grupos de empates y sin interpolación. No participó en la selección ni certica calibración. La
+mayoría conserva precision y F1 cero por ausencia de positivos predichos; recall o especicidad
+sin clase real y BA sin ambas clases serían no estimables, conforme a las convenciones generales.
+
+
+
+
+                                                44
+Figura 37: Sensibilidad y especicidad nancieras de los cuatro métodos en soporte común. Se conserva
+la regla histórica contractual aunque su BA sea inferior a 50 %.
+
+
+15.8. Generalización temporal, cuentas nuevas y análisis de errores
+   La BA test menos validación principal cambia -0,561 puntos en perceptrón y +0,727 en logística.
+Las poblaciones no son muestras emparejadas y cada ventana mezcla meses de forma distinta. Se
+conservan todos los meses, aun desfavorables, en la tabla 23; no se confunde BA global con media
+mensual sin ponderar.     La gura 38 compara los cuatro métodos por mes en soporte común y la
+
+
+
+Tabla 23: Todos los meses de test nanciero: soporte principal y BA principal, sin sustituirla por la
+común.
+              Mes       N principal     N común       Clase 0/1     BA perc. ( %)     BA log. ( %)
+              2016-01             254         252     145/109              68,519          60,418
+              2016-02             254         254     168/86               75,817          64,708
+              2016-03             257         254     149/108              62,820          63,348
+              2016-04             259         257     143/116              64,188          59,103
+              2016-05             260         259     154/106              58,123          65,015
+
+gura 39 contrasta las poblaciones principales de cada partición. El perceptrón obtiene su mayor
+BA principal mensual en febrero (75,817 %) y su menor en mayo (58,123 %). Logística varía entre
+59,103 % en abril y 65,015 % en mayo. Por ello, una cifra global cercana a validación no equivale
+a estabilidad mensual. La ecuación de ponderación por clase desarrollada para Ventas también
+explica por qué BA agregada y promedio simple de meses pueden diferir; no se requieren nuevas
+predicciones para distinguirlos.
+
+
+
+Tabla 24: Cuentas nancieras conocidas y nuevas; cinco las nuevas no acreditan generalización estable.
+           Cohorte                 Cuentas    Filas     Clase 0/1     BA perc. ( %)     BA log. ( %)
+           Vistas en desarrollo         257    1279     755/524              66,065           62,793
+           Nuevas en test                 3       5     4/1                 100,000           50,000
+
+   La tabla 24 distingue las 257 cuentas vistas en desarrollo, que aportan 1 279 las, de las nuevas
+elegibles: tres cuentas con solo cinco las; las demás primeras apariciones aún no cumplen historia.
+
+
+
+                                                       45
+Figura 38: BA nanciera mensual de cuatro métodos en soporte común. La tabla del texto conserva por
+separado las BA principales y los dos tamaños de muestra.
+
+
+
+
+Figura 39: BA de train, validación y test nancieros en la población principal de cada partición. No hay
+entrenamiento ni selección con test.
+
+
+
+
+                                                  46
+La BA de 100 % del perceptrón en esas cinco las no acredita generalización estable: un positivo
+y cuatro negativos son un soporte mínimo. No se usa ese resultado para escoger modelo, redenir
+elegibilidad o eliminar cuentas.
+
+  Mayo concentra 124 errores del perceptrón sobre 260 las (47,69 %); abril concentra 103 de
+logística sobre 259 (39,77 %). Se conservan FP, FN, acuerdos y desacuerdos por cuenta-mes y
+mes, sin construir un clasicador combinado. La logística presenta menos falsas alertas, pero
+omite más positivos que el perceptrón. No se deduce la causa del cambio en decisiones de una
+variable particular ni se reajusta el umbral para compensarlo.
+
+
+
+15.9. Limitaciones y conclusión parcial nanciera
+  El experimento evalúa frecuencia relativa de cobros registrados, no demanda, mora, saldo ni
+ingreso monetario. La conservación y disponibilidad del libro son supuestos académicos explícitos;
+la biyección de las las actuales no descarta todas las eliminaciones o correcciones históricas.
+Cinco meses, repetición de cuentas y ventanas solapadas restringen inferencia estadística. Las
+probabilidades no tienen calibración demostrada y los costos de alertas no están disponibles.
+
+  Ambos clasicadores superan descriptivamente los baselines en la comparación común; el per-
+ceptrón tiene mayor BA y recall, y logística mayor accuracy y especicidad en la población prin-
+cipal. Esas ventajas se reeren a esta etiqueta, representación y presupuesto nito. Se preservan
+modelos, preprocesador, PCA y métricas; test ya fue consumido y no se reutiliza como reserva pa-
+ra mejorar conguraciones. La evidencia permite documentar una segunda aplicación académica
+completa, sin declarar terminado el proyecto ni recomendar automatización nanciera productiva.
+
+
+
+
+                                               47
+16. Comparación académica entre Ventas y Transacciones
+   La metodología comparte modelos multidimensionales propios, orden temporal, selección en
+validación y transformaciones ajustadas solo con train. Sin embargo, no son dos mediciones sobre
+la misma población: Ventas predice unidades relativas por producto provisional; Transacciones
+predice frecuencia relativa de cobros por cuenta operacional. Las columnas, identidad, escala
+empresarial, supuestos y baselines son especícos de cada contrato.
+
+   Ventas   utiliza   20   características,   con   lags   de    unidades   y   variables    históricas   comercia-
+les/monetarias; Transacciones conserva 16, centradas en conteos, estadísticos, antigüedad obser-
+vada y calendario. En esta última no se habilitan importes ni saldos históricos no acreditados. Las
+ventanas principales de test contienen 1 111 y 1 284 observaciones, respectivamente; sus positivos
+no tienen el mismo signicado. La tabla 25 conserva cada población. La mayor BA observada en
+
+
+
+Tabla 25: Contraste descriptivo entre problemas distintos: porcentajes de test, sin comparación estadística
+emparejada.
+                 Proceso            Modelo            N         Acc.     BA      Recall     Espec.
+                 Ventas             Perceptrón      1111    53,915     54,104   96,022      12,186
+                 Ventas             Logística       1111    62,286     62,415   91,139      33,692
+                 Transacciones      Perceptrón      1284    62,461     66,222   86,857      45,586
+                 Transacciones      Logística       1284    65,265     62,809   49,333      76,285
+
+
+Ventas corresponde a logística (62,42 %); en Transacciones, al perceptrón (66,22 %). No procede
+restar ambas cifras como estimación de superioridad sobre un mismo problema ni concluir que
+un algoritmo sea universalmente mejor. Se comparan dos experimentos con diferentes etiquetas y
+muestras, no un ensayo emparejado de métodos en una única población.
+
+   En Ventas, ambos modelos presentan alta sensibilidad y escasa especicidad, particularmente
+el perceptrón. La logística reduce falsas alertas y obtiene mejor equilibrio, aunque sus 370 FP
+todavía limitan el uso automático. En Transacciones, el perceptrón reconoce muchos positivos con
+FPR 54,41 %, mientras logística sacrica recall para obtener mayor especicidad y accuracy. La
+interpretación debe partir del costo y la acción empresarial, que no se han cuanticado; ninguna
+métrica equivale a rentabilidad o conciliación bancaria.
+
+   El perceptrón continúa actualizando en ambos procesos, pero sus checkpoints elegidos son
+70 y 3. La logística tiene descenso estable en ambos: Ventas agota 200 épocas con tolerancia
+desactivada; Transacciones agota 400 sin alcanzar 10
+                                                                −6 . No se interpreta la distinta época elegida
+
+como evidencia de convergencia más rápida a una solución comparable. Los PCA retienen 49,619 %
+y 45,021 % de varianza; solo visualizan estructuras distintas y no intervienen en las predicciones.
+
+   Las dos pruebas cubren cinco meses y tienen dependencia temporal y por entidad. La selección
+repetida en validación introduce optimismo de desarrollo; los pocos productos/cuentas nuevos
+impiden extrapolaciones estables. Los porcentajes son descriptivos de WWI y sus supuestos de
+cobertura. No se han demostrado signicación estadística, deriva conceptual causal, superioridad
+universal ni utilidad productiva.
+
+
+
+
+17. Conclusiones integradas y continuidad del alcance académico
+   La aplicación de Ventas conserva sus conclusiones vericadas: preparación causal común de 20
+entradas, comparación reproducible de modelos propios y baselines, mejor BA logística y limi-
+taciones por falsas alertas, identidad provisional y cobertura asumida. La ampliación nanciera
+añade una segunda pregunta empresarial vericable, con identidad operacional, 16 características
+y separación entre eventos de pago y estados actuales.
+
+
+
+                                                       48
+  La evaluación nanciera mantuvo una población principal de 1 284 las y una comparación
+secundaria de 1 276 por disponibilidad del cuarto lag histórico. Esta distinción evita que una
+limitación del baseline cambie la evaluación de clasicadores. Se registraron las decisiones antes de
+abrir la reserva y se conservaron pesos, sesgos, umbral y preprocesador. La revisión de convergencia
+y PCA aportó interpretación, no entrenamiento o ajuste adicional del resultado nal.
+
+  La reutilización segura corresponde a la matemática y a las interfaces vericadas, no a copiar
+etiquetas, presupuestos, pesos o supuestos entre procesos. Los experimentos muestran distintos
+compromisos de sensibilidad y especicidad. Sin costos y contexto operacional, no se justica
+elegir universalmente una neurona ni convertir sus predicciones en acciones automáticas.
+
+  La ampliación a los demás Data Marts sigue siendo una obligación académica pen-
+diente. Pedidos conserva estudios por línea/documento con bloqueo temporal y un objetivo de
+retraso descartado; Compras conserva estudios de viabilidad sin dataset ni clasicadores apro-
+bados bajo su contrato actual. Se describen como investigaciones con limitaciones, nunca como
+modelos implementados. Inventario/Movimientos continúa pendiente, así como una revisión nal
+de procesos bloqueados si se obtiene evidencia nueva. Estas actividades no se ejecutaron para
+ampliar el informe.
+
+  La entrega documenta dos aplicaciones y no cierra el proyecto completo. Continúan pendientes
+la certicación operacional de conservación/cierres, la validación de costos FP/FN, información
+empresarial adicional, evidencia sobre cuentas nuevas y la identicación inequívoca del ciclo de en-
+trega. Se requiere una evaluación independiente para cualquier uso real; las reservas ya observadas
+no pueden presentarse de nuevo como test nunca visto.
+
+
+
+
+                                                 49
+Referencias
+[1] F. Rosenblatt. The perceptron: a probabilistic model for information storage and organization
+   in the brain.   Psychological Review, 65(6), 386408, 1958. DOI: 10.1037/h0042519. Metadatos
+   contrastados con PubMed, PMID 13602029. Referencia histórica; no se atribuye a este artículo
+   la implementación particular del proyecto.
+
+
+[2] C. M. Bishop.    Pattern Recognition and Machine Learning. Springer, 2006. ISBN 978-0-387-
+   31073-2. Capítulos 4 (clasicación lineal) y 12 (reducción dimensional). Edición disponible
+   desde Microsoft Research.
+
+
+[3] S. Boyd y L. Vandenberghe.    Convex Optimization. Cambridge University Press, 2004. Capí-
+   tulos 3 y 9. Sitio de los autores: https://web.stanford.edu/~boyd/cvxbook/.
+
+
+[4] NumPy Developers.      numpy.linalg.svd, documentación ocial de la descomposición en valo-
+   res singulares. https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.
+   html. Consulta: 2 de noviembre de 2026. La versión ejecutada por el proyecto se registra en
+   los maniestos; la documentación enlazada es la estable al consultar.
+
+
+                                                Formato de levantamiento de datos para
+[5] Proyecto académico de Inteligencia de Negocios.
+   la planicación de un modelo OLAP: Wide World Importers. Universidad Técnica de Am-
+   bato, 18/08/2026, versión 1.0. Documento local:     referencias/Carta_de_DiseÃ±o(2).pdf.
+   Integrantes consignados: Jonathan López y Josue Guevara. Autoría editorial no declarada.
+
+
+                                                 Limpieza y preparación de datos utilizando
+[6] Proyecto académico de Inteligencia de Negocios.
+   OpenRene. Universidad Técnica de Ambato, ciclo indicado enerojulio de 2026. Documento
+   local: referencias/Openrefine_Cluster(2).pdf. Participantes consignados: Josue Guevara
+   y Jonathan López.
+
+
+[7] Proyecto académico de Inteligencia de Negocios.   Dashboard de Business Intelligence para el
+   Análisis de Ventas. Universidad Técnica de Ambato, ciclo indicado enerojulio de 2026. Do-
+   cumento local: referencias/Dashboard(1).pdf. Participantes consignados: Josue Guevara y
+   Jonathan López.
+
+
+
+
+                                                50
+A. Catálogo de características efectivas
+  Las fórmulas de la tabla 26 corresponden a Ventas y son transcripción del contrato estructurado,
+antes de imputación y estandarización. q1 , q2 , q3 denotan unidades de los tres meses anteriores. Las
+unidades monetarias son las de la extracción: no se inere una moneda empresarial sin metadatos
+adicionales. El catálogo nanciero independiente de 16 entradas aparece en la tabla 13.
+
+
+                   Tabla 26: Entradas efectivas y fórmulas del contrato. qj = Qp,t−j .
+
+    Índice   Nombre                                         Fórmula registrada
+         1   unidades_lag_1                                 Q(p,t-1)
+         2   unidades_lag_2                                 Q(p,t-2)
+         3   unidades_lag_3                                 Q(p,t-3)
+         4   unidades_media_3                               (q1+q2+q3)/3
+         5   unidades_mediana_3                             mediana(q1,q2,q3)
+         6   unidades_std_3                                 std(q1,q2,q3), ddof=0
+         7   cambio_unidades_1                              q1-q2
+         8   variacion_relativa_1                           (q1-q2)/q2 si q2>0; nulo en otro caso
+         9   tendencia_unidades_3                           (q1-q3)/2
+        10   facturas_lag_1                                 COUNT DISTINCT InvoiceID(p,t-1)
+        11   facturas_media_3                               media de facturas distintas en t-1,t-2,t-3
+        12   ingresos_lag_1                                 SUM VentaSinImpuesto(p,t-1)
+        13   ingresos_media_3                               media de ingresos de t-1,t-2,t-3
+        14   precio_unitario_ponderado_lag_1                ingresos_lag_1/q1 si q1>0; nulo si
+                                                            q1=0
+        15   clientes_distintos_lag_1                       COUNT DISTINCT
+                                                            NombreCliente(p,t-1)
+        16   unidades_por_factura_lag_1                     q1/facturas_lag_1 si
+                                                            facturas_lag_1>0; nulo si no
+        17   antiguedad_observada_meses                     ordinal(t)-ordinal(primer mes observado
+                                                            antes del corte)
+        18   mes_objetivo_sin                               sin(2*pi*(mes(t)-1)/12)
+        19   mes_objetivo_cos                               cos(2*pi*(mes(t)-1)/12)
+        20   dias_mes_objetivo                              días calendario de t, con bisiestos
+
+
+
+B. Trazabilidad y reproducción documental
+B.1. Relación entre armaciones y evidencia
+  El archivo informe/evidencias/trazabilidad.json relaciona cada tabla y gura con su fuen-
+te y hash SHA-256. Las armaciones cuantitativas sobre convergencia se derivan de los CSV por
+época y del registro de inicialización; las de evaluación se contrastan con las matrices, predicciones
+y análisis estadístico. Los pesos se comparan exactamente con el estado del archivo de congelación.
+Las guras copiadas mantienen los mismos bytes de su origen; las nuevas vistas de soporte tem-
+poral, comparación global con cinco métricas, convergencia, paneles de error y error por partición
+se generan desde registros guardados.
+
+  La procedencia principal se organiza así:
+
+
+      Calidad,grano y cardinalidades: resultados/auditoria/, especialmente perfilado_
+      datos.json y comparacion_csv.json.
+      Fórmulas, parámetros y particiones: datos/Procesados/fase_03/ y su maniesto.
+
+
+
+                                                   51
+     Pesos y recorrido del perceptrón:     resultados/fase_04/modelo_seleccionado.json e
+     historial_orden_barajado.csv.
+     Logística, gradientes y selección: resultados/fase_05/, sus JSON y historial_eta_010.
+     csv.
+     PCA y estados congelados: resultados/fase_06/.
+
+
+     Métricas y predicciones nales alineadas: resultados/fase_07/.
+
+
+     Descomposición temporal, acuerdos, distribuciones y sensibilidad agrupada: resultados/
+     fase_08/.
+
+Los nombres técnicos de directorio se mantienen para reproducibilidad; no organizan la narrativa
+académica.
+
+
+
+B.2. Comandos sin reentrenamiento
+  Desde la raíz del proyecto, el exportador documental lee artefactos y escribe únicamente dentro
+de informe/:
+
+
+python informe/herramientas/generar_transacciones.py
+cd informe
+pdflatex --disable-installer -interaction=nonstopmode -halt-on-error main.tex
+pdflatex --disable-installer -interaction=nonstopmode -halt-on-error main.tex
+pdflatex --disable-installer -interaction=nonstopmode -halt-on-error main.tex
+
+No ejecutar los entrenadores, la preparación del dataset ni la evaluación nal para compilar.
+Los archivos README.md y evidencias/verificacion_informe.json documentan los comandos
+efectivos, número de tablas/guras y controles de integridad. Se comprueban referencias cruzadas,
+ecuaciones, archivos grácos y dimensiones de tablas, además de la inspección visual del PDF.
+
+  Los antecedentes de Ventas registran 104 pruebas satisfactorias antes de su elaboración docu-
+mental. La evaluación nanciera posterior registró 313 pruebas satisfactorias, según su archivo de
+validaciones. Son resultados históricos, no una suite reejecutada para esta edición. El vericador
+documental comprueba integridad, transcripción y reproducción de tablas/guras con operacio-
+nes experimentales bloqueadas. Las pruebas matemáticas históricas usan ejemplos de control y no
+deben confundirse con reentrenamientos de WWI.
+
+
+
+B.3. Parámetros y series que no deben confundirse
+  Los JSON conservan precisión completa de pesos y sesgos; los porcentajes del texto se redondean
+solo para lectura. Las curvas de accuracy y BA registran estados por época; las métricas nales
+corresponden al checkpoint restaurado. La norma del gradiente logístico incluye el sesgo y se
+registra después de cada actualización; gradient_used_norm corresponde al estado previo. No se
+transforma una curva de entrenamiento en una curva de test.
+
+
+
+B.4. Trazabilidad de la ampliación nanciera
+   La exportación documental nanciera se ejecuta mediante informe/herramientas/generar_
+transacciones.py; su vericación y reproducción sin operaciones de aprendizaje o predicción co-
+rresponden a informe/herramientas/verificar_transacciones_informe.py. La trazabilidad
+
+
+
+
+                                               52
+adicional está en informe/evidencias/transacciones/. Las 18 guras nancieras son copias bi-
+narias de resultados aprobados. Las 13 tablas nuevas transcriben JSON/CSV estructurados; FNR
+se obtiene algebraicamente de la matriz de confusión, sin recalcular predicciones.
+
+  Los comandos de compilación de este anexo siguen vigentes. Los exportadores y vericadores
+iniciales de Ventas se conservan como evidencia de la versión previa; sus conteos de 21 guras
+y 13 tablas describen esa versión, no la ampliación actual. El README actualizado indica el
+procedimiento vigente. No se ejecutan preparación de datos, entrenamiento, evaluación o PCA
+para elaborar esta versión documental.
+
+
+
+
+C. Continuidad obligatoria del proyecto académico
+  Esta versión documenta dos aplicaciones efectivamente evaluadas: Ventas y Transacciones Fi-
+nancieras. Las ampliaciones siguientes deberán incorporar, para cada proceso vericado, su for-
+mulación, procedencia, metodología, resultados y conclusiones parciales. Cliente o Producto no
+constituyen Data Marts distintos por el solo hecho de ser dimensiones. Pedidos y Compras con-
+servan limitaciones de viabilidad; Inventario/Movimientos permanece pendiente. No se incluyen
+resultados vacíos o cticios. La identicación inequívoca del ciclo actual y la evidencia operacional
+de cobertura, claves y unidades también siguen pendientes. El proyecto académico completo no
+se declara terminado.
+
+
+
+
+                                                 53
+

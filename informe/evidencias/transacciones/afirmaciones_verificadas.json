@@ -1,0 +1,520 @@
+[
+  {
+    "claim": "Train filas",
+    "source": "resultados\\extension_datamarts\\transacciones\\dataset\\conteos.json",
+    "keys": [
+      "train",
+      "eligible"
+    ],
+    "value": 4612,
+    "sha256": "3341f19d631ae8b2d487e4b6cc97fc1dc8aedc2fe3dfb05ca3a49655f4280580"
+  },
+  {
+    "claim": "Validación filas",
+    "source": "resultados\\extension_datamarts\\transacciones\\dataset\\conteos.json",
+    "keys": [
+      "val",
+      "eligible"
+    ],
+    "value": 2943,
+    "sha256": "3341f19d631ae8b2d487e4b6cc97fc1dc8aedc2fe3dfb05ca3a49655f4280580"
+  },
+  {
+    "claim": "Test filas",
+    "source": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\metricas_globales.json",
+    "keys": [
+      "primary_n"
+    ],
+    "value": 1284,
+    "sha256": "df0a0649e91aefbd4917559384397cc63c10ef0833635dbd3754efed223f7c03"
+  },
+  {
+    "claim": "Test común",
+    "source": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\metricas_globales.json",
+    "keys": [
+      "common_n"
+    ],
+    "value": 1276,
+    "sha256": "df0a0649e91aefbd4917559384397cc63c10ef0833635dbd3754efed223f7c03"
+  },
+  {
+    "claim": "Exclusión solo histórico",
+    "source": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\metricas_globales.json",
+    "keys": [
+      "excluded_only_from_historical"
+    ],
+    "value": 8,
+    "sha256": "df0a0649e91aefbd4917559384397cc63c10ef0833635dbd3754efed223f7c03"
+  },
+  {
+    "claim": "Test positivos",
+    "source": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\conteos.json",
+    "keys": [
+      "positive"
+    ],
+    "value": 525,
+    "sha256": "e843d0219fc206a34c02f5af3cca2dcd1bf18ca837eb43d03c6d2755cebe88fa"
+  },
+  {
+    "claim": "Test negativos",
+    "source": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\conteos.json",
+    "keys": [
+      "negative"
+    ],
+    "value": 759,
+    "sha256": "e843d0219fc206a34c02f5af3cca2dcd1bf18ca837eb43d03c6d2755cebe88fa"
+  },
+  {
+    "claim": "Matriz principal perceptron",
+    "source": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\metricas_globales.json",
+    "keys": [
+      "primary",
+      "perceptron",
+      "confusion_matrix"
+    ],
+    "value": [
+      [
+        346,
+        413
+      ],
+      [
+        69,
+        456
+      ]
+    ],
+    "sha256": "df0a0649e91aefbd4917559384397cc63c10ef0833635dbd3754efed223f7c03"
+  },
+  {
+    "claim": "Matriz principal logistic",
+    "source": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\metricas_globales.json",
+    "keys": [
+      "primary",
+      "logistic",
+      "confusion_matrix"
+    ],
+    "value": [
+      [
+        579,
+        180
+      ],
+      [
+        266,
+        259
+      ]
+    ],
+    "sha256": "df0a0649e91aefbd4917559384397cc63c10ef0833635dbd3754efed223f7c03"
+  },
+  {
+    "claim": "Checkpoint perceptron",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+    "keys": [
+      "selected_epoch"
+    ],
+    "value": 3,
+    "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0"
+  },
+  {
+    "claim": "Peso perceptron/cobros_lag_1",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+    "keys": [
+      "weights",
+      0
+    ],
+    "value": -0.04287896966745797,
+    "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0"
+  },
+  {
+    "claim": "Peso perceptron/cobros_lag_2",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+    "keys": [
+      "weights",
+      1
+    ],
+    "value": -0.03607377463708822,
+    "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0"
+  },
+  {
+    "claim": "Peso perceptron/cobros_lag_3",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+    "keys": [
+      "weights",
+      2
+    ],
+    "value": -0.02506460518201935,
+    "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0"
+  },
+  {
+    "claim": "Peso perceptron/cobros_media_3",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+    "keys": [
+      "weights",
+      3
+    ],
+    "value": -0.03912919228599467,
+    "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0"
+  },
+  {
+    "claim": "Peso perceptron/cobros_mediana_3",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+    "keys": [
+      "weights",
+      4
+    ],
+    "value": -0.23984633131606187,
+    "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0"
+  },
+  {
+    "claim": "Peso perceptron/cobros_std_3",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+    "keys": [
+      "weights",
+      5
+    ],
+    "value": -0.022046274510795494,
+    "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0"
+  },
+  {
+    "claim": "Peso perceptron/cobros_cambio_1",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+    "keys": [
+      "weights",
+      6
+    ],
+    "value": -0.008542006557497794,
+    "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0"
+  },
+  {
+    "claim": "Peso perceptron/cobros_tendencia_3",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+    "keys": [
+      "weights",
+      7
+    ],
+    "value": -0.02249378986921783,
+    "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0"
+  },
+  {
+    "claim": "Peso perceptron/meses_con_cobros_3",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+    "keys": [
+      "weights",
+      8
+    ],
+    "value": 0.010515036627325475,
+    "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0"
+  },
+  {
+    "claim": "Peso perceptron/mes_anterior_sin_cobros",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+    "keys": [
+      "weights",
+      9
+    ],
+    "value": -0.01832001014751086,
+    "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0"
+  },
+  {
+    "claim": "Peso perceptron/variacion_relativa_cobros",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+    "keys": [
+      "weights",
+      10
+    ],
+    "value": 0.03828637104414538,
+    "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0"
+  },
+  {
+    "claim": "Peso perceptron/base_variacion_cero",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+    "keys": [
+      "weights",
+      11
+    ],
+    "value": 0.018388594765704862,
+    "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0"
+  },
+  {
+    "claim": "Peso perceptron/antiguedad_observada_meses",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+    "keys": [
+      "weights",
+      12
+    ],
+    "value": 0.026577078904025647,
+    "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0"
+  },
+  {
+    "claim": "Peso perceptron/mes_sin",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+    "keys": [
+      "weights",
+      13
+    ],
+    "value": 0.01864275205505169,
+    "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0"
+  },
+  {
+    "claim": "Peso perceptron/mes_cos",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+    "keys": [
+      "weights",
+      14
+    ],
+    "value": -0.0052679857739134466,
+    "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0"
+  },
+  {
+    "claim": "Peso perceptron/dias_mes_objetivo",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+    "keys": [
+      "weights",
+      15
+    ],
+    "value": 0.03913688671035464,
+    "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0"
+  },
+  {
+    "claim": "Checkpoint logistic",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+    "keys": [
+      "selected_epoch"
+    ],
+    "value": 399,
+    "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  {
+    "claim": "Peso logistic/cobros_lag_1",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+    "keys": [
+      "weights",
+      0
+    ],
+    "value": -0.01131612469869563,
+    "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  {
+    "claim": "Peso logistic/cobros_lag_2",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+    "keys": [
+      "weights",
+      1
+    ],
+    "value": 0.026461475377230335,
+    "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  {
+    "claim": "Peso logistic/cobros_lag_3",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+    "keys": [
+      "weights",
+      2
+    ],
+    "value": -0.04202999215738953,
+    "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  {
+    "claim": "Peso logistic/cobros_media_3",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+    "keys": [
+      "weights",
+      3
+    ],
+    "value": -0.010071816705856898,
+    "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  {
+    "claim": "Peso logistic/cobros_mediana_3",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+    "keys": [
+      "weights",
+      4
+    ],
+    "value": -0.8948655245730728,
+    "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  {
+    "claim": "Peso logistic/cobros_std_3",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+    "keys": [
+      "weights",
+      5
+    ],
+    "value": -0.13941955635444683,
+    "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  {
+    "claim": "Peso logistic/cobros_cambio_1",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+    "keys": [
+      "weights",
+      6
+    ],
+    "value": -0.04702866804625703,
+    "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  {
+    "claim": "Peso logistic/cobros_tendencia_3",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+    "keys": [
+      "weights",
+      7
+    ],
+    "value": 0.03830044269545719,
+    "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  {
+    "claim": "Peso logistic/meses_con_cobros_3",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+    "keys": [
+      "weights",
+      8
+    ],
+    "value": -0.1518249526896529,
+    "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  {
+    "claim": "Peso logistic/mes_anterior_sin_cobros",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+    "keys": [
+      "weights",
+      9
+    ],
+    "value": 0.0796368591991789,
+    "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  {
+    "claim": "Peso logistic/variacion_relativa_cobros",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+    "keys": [
+      "weights",
+      10
+    ],
+    "value": 0.09177270933112168,
+    "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  {
+    "claim": "Peso logistic/base_variacion_cero",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+    "keys": [
+      "weights",
+      11
+    ],
+    "value": 0.10951007173144613,
+    "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  {
+    "claim": "Peso logistic/antiguedad_observada_meses",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+    "keys": [
+      "weights",
+      12
+    ],
+    "value": 0.07819826481425454,
+    "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  {
+    "claim": "Peso logistic/mes_sin",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+    "keys": [
+      "weights",
+      13
+    ],
+    "value": 0.06375213358821646,
+    "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  {
+    "claim": "Peso logistic/mes_cos",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+    "keys": [
+      "weights",
+      14
+    ],
+    "value": -0.056330945759771635,
+    "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  {
+    "claim": "Peso logistic/dias_mes_objetivo",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+    "keys": [
+      "weights",
+      15
+    ],
+    "value": 0.07942064011905278,
+    "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  {
+    "claim": "Umbral logístico",
+    "source": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+    "keys": [
+      "params",
+      "threshold"
+    ],
+    "value": 0.5,
+    "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  {
+    "claim": "PCA PC1_percent",
+    "source": "resultados\\extension_datamarts\\transacciones\\pca\\varianza_explicada.json",
+    "keys": [
+      "PC1_percent"
+    ],
+    "value": 27.89633478995603,
+    "sha256": "a729286c2a54d6d77c009ab22083a03f5a850b6a9ab477da09bf89ed614bd81c"
+  },
+  {
+    "claim": "PCA PC2_percent",
+    "source": "resultados\\extension_datamarts\\transacciones\\pca\\varianza_explicada.json",
+    "keys": [
+      "PC2_percent"
+    ],
+    "value": 17.1250590770698,
+    "sha256": "a729286c2a54d6d77c009ab22083a03f5a850b6a9ab477da09bf89ed614bd81c"
+  },
+  {
+    "claim": "PCA retained_percent",
+    "source": "resultados\\extension_datamarts\\transacciones\\pca\\varianza_explicada.json",
+    "keys": [
+      "retained_percent"
+    ],
+    "value": 45.02139386702583,
+    "sha256": "a729286c2a54d6d77c009ab22083a03f5a850b6a9ab477da09bf89ed614bd81c"
+  },
+  {
+    "claim": "Nuevas cuentas evaluables",
+    "source": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\cohortes.json",
+    "keys": [
+      "new_in_test",
+      "accounts"
+    ],
+    "value": 3,
+    "sha256": "4987561cd2275bd246bce0fb0c7d7ceb33eb354f7be81481d1b30eebcf6eda8d"
+  },
+  {
+    "claim": "Etiquetas nuevas: 4 negativas",
+    "source": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\cohortes.json",
+    "keys": [
+      "new_in_test",
+      "metrics",
+      "primary",
+      "perceptron",
+      "support",
+      "0"
+    ],
+    "value": 4,
+    "sha256": "4987561cd2275bd246bce0fb0c7d7ceb33eb354f7be81481d1b30eebcf6eda8d"
+  },
+  {
+    "claim": "Etiquetas nuevas: 1 positiva",
+    "source": "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\cohortes.json",
+    "keys": [
+      "new_in_test",
+      "metrics",
+      "primary",
+      "perceptron",
+      "support",
+      "1"
+    ],
+    "value": 1,
+    "sha256": "4987561cd2275bd246bce0fb0c7d7ceb33eb354f7be81481d1b30eebcf6eda8d"
+  }
+]

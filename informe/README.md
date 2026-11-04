@@ -1,64 +1,41 @@
-# Informe académico incremental de WWI
+# Informe académico unificado de WWI
 
-Entrada LaTeX: `main.tex`. Entregable compilado: `main.pdf`.
+Entrada LaTeX: `main.tex`. PDF: `main.pdf`. Esta versión conserva Ventas e incorpora el experimento completo de frecuencia de cobros de Transacciones Financieras, seguido de una comparación académica y conclusiones integradas. Pedidos y Compras son investigaciones de viabilidad, no modelos implementados; Inventario/Movimientos sigue pendiente.
 
-Se documenta exclusivamente la aplicación realizada en el Data Mart de Ventas. La ampliación a los demás Data Marts es una obligación académica pendiente; esta entrega no implementa esas aplicaciones.
+## Contenido
 
-## Contenido y organización
+- Las secciones detalladas de Ventas, sus 21 figuras y 13 tablas permanecen intactas. Se actualizaron portada, resumen, alcance, aclaraciones generales de dimensión y conclusiones para incorporar la segunda aplicación.
+- `secciones/11_transacciones.tex`: fuente, contrato, 16 características, preparación temporal, modelos/pesos, convergencia, PCA y evaluación principal/común.
+- `secciones/12_comparacion_datamarts.tex`: comparación de problemas distintos, compromisos de error y alcance pendiente.
+- `generado/transacciones/`: 13 tablas nuevas y macros con cifras estructuradas. `figuras/transacciones/`: 18 copias binarias de gráficos aprobados: ocho curvas de desarrollo, tres de PCA y siete de evaluación final.
+- En total: 39 figuras y 26 tablas. El número final de páginas y los controles de compilación constan en `evidencias/transacciones/verificacion_informe.json`.
+- `evidencias/transacciones/`: trazabilidad SHA-256, afirmaciones contrastadas, integridad experimental, compilación y revisión visual. `version_previa/` conserva el PDF y las fuentes principales de la versión anterior.
 
-- `secciones/`: narrativa académica, fundamentos, metodología, implementaciones, convergencia, PCA, resultados, discusión y anexos.
-- `generado/`: 13 tablas extraídas de artefactos aprobados, incluidas las dos tablas de 20 pesos cada una.
-- `figuras/`: 21 imágenes insertadas. Se copiaron 16 figuras previas con identidad binaria y se generaron cinco vistas documentales nuevas. La comparación global incluye las cinco métricas exigidas, agregando BA a la vista previa de cuatro métricas. La distribución de clases y el calendario comparten una figura; las actualizaciones del perceptrón coinciden exactamente con los errores online y no requieren otra curva idéntica.
-- `referencias.tex`: siete referencias verificables, incluidas las tres referencias académicas locales. Se usa `thebibliography` para compilar sin BibTeX ni Biber.
-- `herramientas/generar_informe.py`: exportación de tablas y figuras desde archivos congelados, sin entrenamiento, transformaciones nuevas o predicciones.
-- `herramientas/verificar_informe.py`: comprobaciones de integridad, cifras, pesos, curvas, referencias, inclusión de figuras/tablas y reproducción con operaciones de modelos bloqueadas.
-- `evidencias/`: trazabilidad con SHA-256, afirmaciones verificadas, dos CSV por época, análisis de convergencia, registro de compilación y verificación final.
-- `revision/`: páginas renderizadas para control visual; son material auxiliar.
-
-## Reproducir desde la raíz del proyecto
+## Reproducción documental desde la raíz
 
 ```powershell
-python informe/herramientas/generar_informe.py
-Set-Location informe
-pdflatex --disable-installer -interaction=nonstopmode -halt-on-error main.tex
-pdflatex --disable-installer -interaction=nonstopmode -halt-on-error main.tex
-pdflatex --disable-installer -interaction=nonstopmode -halt-on-error main.tex
-Set-Location ..
-python informe/herramientas/verificar_informe.py
+python informe/herramientas/generar_transacciones.py
+python informe/herramientas/compilar_transacciones.py
+python informe/herramientas/verificar_transacciones_informe.py
 ```
 
-Las tres pasadas resuelven el índice, las listas y las referencias cruzadas. No ejecutar entrenadores, preparación del dataset, PCA ni evaluación final para producir el informe. No se requieren paquetes Python adicionales a los ya usados en el proyecto. Se compiló con pdfLaTeX de MiKTeX, sin instalar automáticamente paquetes LaTeX. En este entorno, los ejecutables MiKTeX requieren acceso a su configuración de usuario fuera del aislamiento del workspace.
+El compilador usa MiKTeX con `--disable-installer`, hasta tres pasadas para resolver índices y referencias, sin instalar paquetes. Necesita acceso a su configuración local de usuario. No hay consultas SQL, entrenamiento, transformación PCA ni recálculo de predicciones para producir el informe. El generador solo lee JSON/CSV aprobados y copia figuras.
 
-Para inspección visual se utilizó `pdftoppm`, incluido en la instalación local:
+El exportador/verificador inicial de Ventas se conserva como herramienta histórica de la versión anterior, con sus conteos originales. No sustituye al verificador actual del informe unificado. Las 313 pruebas experimentales previas se conservan como evidencia histórica; esta edición ejecuta controles documentales específicos y no presenta esa suite como reejecutada.
+
+## Revisión del PDF
+
+Renderizar el PDF final mediante Poppler y revisar páginas, tablas, ecuaciones, referencias y gráficos:
 
 ```powershell
-Set-Location informe
-pdftoppm -r 75 -png main.pdf revision/final
-pdftotext -layout main.pdf evidencias/texto_pdf.txt
+pdftoppm -r 75 -png informe/main.pdf informe/revision/transacciones/pagina
+pdftotext -layout informe/main.pdf informe/evidencias/transacciones/texto_pdf.txt
 ```
 
-El verificador reproduce 38 artefactos documentales byte a byte y comprueba que 169 archivos previos permanezcan intactos. La evidencia de la suite anterior de 104 pruebas se conserva en `resultados/fase_08/validaciones.json`; no se presenta como una suite reejecutada en esta tarea documental. La inspección visual humana del agente se registra después de ejecutar el verificador; el script no puede realizarla por sí solo.
+Los resultados de la inspección visual se registran después del último render, junto con el hash del PDF revisado. La verificación automática no sustituye esa inspección.
 
-## Resultado de convergencia
+## Resultados y límites
 
-Perceptrón: recorrido barajado de 100 épocas, checkpoint 70. Errores online entre 1863 y 2016; 49 transiciones crecientes; ninguna época sin actualizaciones; 1996 actualizaciones en la última. El checkpoint y el último estado tienen métricas diferentes. No se demuestra convergencia a cero errores ni se deduce no separabilidad de un presupuesto finito.
+Transacciones: 4.612/2.943/1.284 filas train/validación/test y 16 entradas. BA principal test: perceptrón 66,222%, logística 62,809%; la comparación con histórico de cuatro meses usa 1.276 filas y no reemplaza el soporte principal. PCA conserva 45,021% de varianza y no interviene en clasificadores. El perceptrón sigue actualizando y la logística agota 400 épocas sin alcanzar su tolerancia; no se declara convergencia completa.
 
-Logística: pérdida inicial train 0.6931471805599452 y final 0.6269539858615067; caída absoluta 0.06619319469843843 (9.549659 % de la inicial). No hay subidas estrictas de pérdida train. El último descenso y cambio relativo son 1.2399940257257214e-05; norma final del gradiente 0.01109745983712376. Se detuvo por máximo de 200 épocas, con tolerancia desactivada. Conclusión: descenso estable sin convergencia completa demostrada.
-
-Los cálculos por época y las normas de parámetros disponibles están en los CSV de `evidencias/`; no fueron criterios retrospectivos de parada ni justificaron ampliar épocas o cambiar hiperparámetros.
-
-## Correcciones y limitaciones documentales
-
-- El cotejo estructurado detectó que los 268 recortes de espacios afectan a `NombreCliente`, no a vendedor como indica un resumen anterior. El informe usa `comparacion_csv.json` y documenta la discrepancia; no altera los entregables históricos.
-- Se distinguieron las 9019 filas del calendario `producto_mes.csv` de las 8792 observaciones conocidas antes del corte en `observaciones.csv`.
-- La compilación inicial encontró ausente `caption.sty`. Se sustituyó por formato nativo de LaTeX, sin instalar paquetes. Se corrigieron desbordamientos de rutas, el destino duplicado de portada, los pies de figura y la extensión del índice de figuras.
-- El gráfico de acuerdos muestra agrupaciones mensuales; los detalles por cohorte están en el JSON y la tabla de cohortes, no se atribuyen al gráfico.
-- El informe no afirma convergencia completa, significación estadística universal ni causa demostrada de deriva conceptual. No inventa costos empresariales ni resultados de otros Data Marts.
-
-## Información pendiente y ampliación
-
-Los autores Josue Guevara y Jonathan López, nivel Sexto «A» y unidad Profesional constan en las portadas previas. Se conserva esa forma de los nombres. El docente sigue la identificación de la solicitud actual: Ing. Rubén Nogales Portero, Ph.D. Las referencias previas indican ciclo enero–julio de 2026, pero la carta de diseño se fecha el 18/08/2026; no se inventa el ciclo o fecha de entrega de este informe.
-
-Continúan pendientes las claves operativas y catálogos históricos, unidades comerciales, cierres y disponibilidad al corte certificados, contexto comercial y costos FP/FN. La cobertura académica y cinco meses de test no bastan para recomendar uso productivo automático.
-
-Para extender el informe, incorporar nuevos módulos académicos solo cuando cada Data Mart tenga datos, definición de respuesta y evaluación efectivamente realizados. Mantener el protocolo temporal y la trazabilidad propios de cada aplicación, sin identificar dimensiones como Data Marts por su nombre. Esta entrega se detiene con Ventas documentado.
+Ventas conserva sus resultados originales: 20 entradas, mejor BA test logística 62,415%. Los porcentajes de ambos procesos no representan la misma etiqueta o población ni prueban superioridad universal. La cobertura es académica; cinco meses de test, observaciones dependientes y pocas entidades nuevas limitan la generalización. No se cierra el proyecto completo ni se recomienda automatización productiva.

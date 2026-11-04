@@ -1,5 +1,5 @@
 \section{Catálogo de características efectivas}\label{sec:catalogo}
-Las fórmulas de la tabla \ref{tab:caracteristicas} son transcripción del contrato estructurado, antes de imputación y estandarización. $q_1,q_2,q_3$ denotan unidades de los tres meses anteriores. Las unidades monetarias son las de la extracción: no se infiere una moneda empresarial sin metadatos adicionales.
+Las fórmulas de la tabla \ref{tab:caracteristicas} corresponden a Ventas y son transcripción del contrato estructurado, antes de imputación y estandarización. $q_1,q_2,q_3$ denotan unidades de los tres meses anteriores. Las unidades monetarias son las de la extracción: no se infiere una moneda empresarial sin metadatos adicionales. El catálogo financiero independiente de 16 entradas aparece en la tabla \ref{tab:tf-caracteristicas}.
 \begingroup\small
 \input{generado/caracteristicas}
 \endgroup
@@ -23,18 +23,23 @@ Los nombres técnicos de directorio se mantienen para reproducibilidad; no organ
 \subsection{Comandos sin reentrenamiento}
 Desde la raíz del proyecto, el exportador documental lee artefactos y escribe únicamente dentro de \archivo{informe/}:
 \begin{verbatim}
-python informe/herramientas/generar_informe.py
+python informe/herramientas/generar_transacciones.py
 cd informe
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
+pdflatex --disable-installer -interaction=nonstopmode -halt-on-error main.tex
+pdflatex --disable-installer -interaction=nonstopmode -halt-on-error main.tex
+pdflatex --disable-installer -interaction=nonstopmode -halt-on-error main.tex
 \end{verbatim}
 No ejecutar los entrenadores, la preparación del dataset ni la evaluación final para compilar. Los archivos \archivo{README.md} y \archivo{evidencias/verificacion_informe.json} documentan los comandos efectivos, número de tablas/figuras y controles de integridad. Se comprueban referencias cruzadas, ecuaciones, archivos gráficos y dimensiones de tablas, además de la inspección visual del PDF.
 
-Los antecedentes registran 104 pruebas satisfactorias, sin fallos ni omisiones, antes de esta elaboración documental. El informe verifica nuevamente integridad y consistencia de las fuentes sin modificar esas pruebas o artefactos. Las pruebas matemáticas históricas usan ejemplos de control y no deben confundirse con reentrenamientos de WWI.
+Los antecedentes de Ventas registran 104 pruebas satisfactorias antes de su elaboración documental. La evaluación financiera posterior registró 313 pruebas satisfactorias, según su archivo de validaciones. Son resultados históricos, no una suite reejecutada para esta edición. El verificador documental comprueba integridad, transcripción y reproducción de tablas/figuras con operaciones experimentales bloqueadas. Las pruebas matemáticas históricas usan ejemplos de control y no deben confundirse con reentrenamientos de WWI.
 
 \subsection{Parámetros y series que no deben confundirse}
 Los JSON conservan precisión completa de pesos y sesgos; los porcentajes del texto se redondean solo para lectura. Las curvas de accuracy y BA registran estados por época; las métricas finales corresponden al checkpoint restaurado. La norma del gradiente logístico incluye el sesgo y se registra después de cada actualización; \archivo{gradient_used_norm} corresponde al estado previo. No se transforma una curva de entrenamiento en una curva de test.
 
+\subsection{Trazabilidad de la ampliación financiera}
+La exportación documental financiera se ejecuta mediante \archivo{informe/herramientas/generar_transacciones.py}; su verificación y reproducción sin operaciones de aprendizaje o predicción corresponden a \archivo{informe/herramientas/verificar_transacciones_informe.py}. La trazabilidad adicional está en \archivo{informe/evidencias/transacciones/}. Las 18 figuras financieras son copias binarias de resultados aprobados. Las 13 tablas nuevas transcriben JSON/CSV estructurados; FNR se obtiene algebraicamente de la matriz de confusión, sin recalcular predicciones.
+
+Los comandos de compilación de este anexo siguen vigentes. Los exportadores y verificadores iniciales de Ventas se conservan como evidencia de la versión previa; sus conteos de 21 figuras y 13 tablas describen esa versión, no la ampliación actual. El README actualizado indica el procedimiento vigente. No se ejecutan preparación de datos, entrenamiento, evaluación o PCA para elaborar esta versión documental.
+
 \section{Continuidad obligatoria del proyecto académico}
-La siguiente ampliación documental deberá agregar, para cada Data Mart verificado, su formulación, procedencia, metodología, resultados y conclusiones parciales. No se presupone que Cliente o Producto constituyan Data Marts distintos; deben identificarse los procesos reales del DW y las extracciones disponibles. No se incluyen capítulos de resultados vacíos o ficticios. Antes de una entrega definitiva quedan pendientes la identificación del ciclo actual y la evidencia operacional de cobertura, claves y unidades. Esta versión termina con Ventas documentado y evaluado, manteniendo explícita la obligación de completar las demás aplicaciones.
+Esta versión documenta dos aplicaciones efectivamente evaluadas: Ventas y Transacciones Financieras. Las ampliaciones siguientes deberán incorporar, para cada proceso verificado, su formulación, procedencia, metodología, resultados y conclusiones parciales. Cliente o Producto no constituyen Data Marts distintos por el solo hecho de ser dimensiones. Pedidos y Compras conservan limitaciones de viabilidad; Inventario/Movimientos permanece pendiente. No se incluyen resultados vacíos o ficticios. La identificación inequívoca del ciclo actual y la evidencia operacional de cobertura, claves y unidades también siguen pendientes. El proyecto académico completo no se declara terminado.

@@ -1,0 +1,33 @@
+\barrerapagina
+\section{Implementación del perceptrón simple}
+La implementación propia en \archivo{src/models/perceptron.py} valida dimensión, finitud, etiquetas y orden de nombres. El número de entradas es dinámico; en esta aplicación se deduce de las 20 columnas aprobadas. Usa NumPy, la función escalón de la ecuación \ref{eq:perceptron} y la actualización online de la ecuación \ref{eq:actualizacion}, sin optimizadores externos ni pérdida probabilística.
+
+El presupuesto previo compara orden fijo y orden barajado con tasa 0,01, semilla 42, pesos y sesgo iniciales cero y máximo de 100 épocas por recorrido. La validación selecciona máxima BA, después mayor F1 positivo, menor época y orden del plan. El estado elegido se restaura mediante copia de pesos; no se exporta automáticamente la última época ni se realiza refit.
+
+El orden fijo seleccionó la época 80 y obtuvo BA de validación 61,508\%; el barajado seleccionó la época 70 y alcanzó 61,632\%, por lo que se conservó este último. Con inicialización cero y tasa constante positiva, cambiar solo la tasa escala la trayectoria en aritmética exacta; las operaciones flotantes pueden romper esa equivalencia. Por ello, el presupuesto aprobado no amplió tasas retrospectivamente.
+
+El sesgo seleccionado es $b=0.010000000000000004$. La tabla \ref{tab:pesos-fase_04} conserva los 20 pesos extraídos del JSON congelado. Operan sobre entradas transformadas: sus magnitudes no expresan efectos en unidades crudas ni importancia causal independiente. Las métricas train/validación/test y matrices se presentan en la sección \ref{sec:resultados}.
+\input{generado/pesos_fase_04}
+\figura{perceptron_errores.png}{Errores del recorrido de entrenamiento del perceptrón. El análisis distingue conteo online de error al cierre; no es entropía cruzada. El checkpoint seleccionado es la época 70.}{fig:p-errores}{0.96}
+\figura{perceptron_accuracy.png}{Accuracy de entrenamiento y validación por época del recorrido barajado. Las oscilaciones no se ocultan mediante suavizado.}{fig:p-accuracy}{0.96}
+\figura{perceptron_ba.png}{BA de validación por época del perceptrón; la selección responde a la métrica observada en validación, no a cero errores de entrenamiento.}{fig:p-ba}{0.96}
+El número de actualizaciones coincide exactamente con los errores online en cada época. Una segunda figura que dibujara solo actualizaciones duplicaría la misma serie; la identidad se verificó y ambos conteos se presentan en la tabla \ref{tab:conv-p}. La figura \ref{fig:paneles} aporta en cambio el conteo de errores al cierre, que sí es información diferente.
+
+\barrerapagina
+\section{Implementación de la regresión logística binaria}
+El módulo \archivo{src/models/logistic_regression.py} implementa sigmoidea estable por ramas, entropía cruzada con \archivo{np.logaddexp}, gradientes analíticos y descenso de gradiente por lote completo. La operación matricial $X^\top((p-y)/m)$ evita una suma grande antes de dividir. Se comprueban valores finitos y no se emplean scikit-learn, autodiferenciación ni regularización.
+
+Los gradientes de pesos y sesgo se contrastaron previamente con diferencias centrales en casos moderados y logits extremos, con parámetros no nulos y etiquetas mixtas. La tabla \ref{tab:gradientes} procede del registro original de esas comprobaciones; no se reejecutó el entrenamiento para construirla.
+\input{generado/gradientes}
+La prueba utiliza tolerancias absolutas y relativas: cerca de derivadas cero, un error relativo aislado puede ser engañoso. Se verificaron también dimensiones alternativas y estabilidad en las pruebas de implementación. Son comprobaciones del cálculo, no garantías de utilidad predictiva.
+
+\input{generado/tasas}
+Se evaluaron tres tasas, 0,01, 0,05 y 0,1, con 200 épocas cada una, inicialización cero y semilla 42. Al ser lote completo con inicio cero, la semilla no altera la trayectoria de esta ejecución. La tolerancia de parada estuvo desactivada. Se eligieron tasa y checkpoint por BA de validación a umbral 0,5, con desempates por F1, menor época y orden del plan. Después se inspeccionó sobre un único checkpoint la cuadrícula de 19 umbrales entre 0,05 y 0,95; permaneció 0,5. No se buscó el producto cartesiano épocas por umbrales ni se usó test para elegirlos.
+
+El modelo conservado corresponde a tasa 0,1, época 200 y sesgo $b=0.08539078966952132$. La tabla \ref{tab:pesos-fase_05} reproduce los pesos con representación decimal suficiente para recuperar el mismo float64. El historial de clasificación usa umbral 0,5, que coincide aquí con el umbral final. La serialización JSON almacena dimensión, nombres, parámetros y checkpoint sin pickle.
+\input{generado/pesos_fase_05}
+\figura{logistica_perdida.png}{Entropía cruzada de entrenamiento y validación en la ejecución logística seleccionada. La pérdida inicial de ambas particiones es $\log 2$, con parámetros cero.}{fig:l-perdida}{0.96}
+\figura{logistica_gradiente.png}{Norma del gradiente logístico registrada después de cada actualización. Incluye derivadas de pesos y sesgo y no se interpreta como error de clasificación.}{fig:l-gradiente}{0.96}
+\figura{logistica_accuracy.png}{Accuracy train y validación por época a umbral 0,5. La disminución de pérdida no obliga a una mejora monótona de la clasificación discreta.}{fig:l-accuracy}{0.96}
+\figura{logistica_ba.png}{BA de validación por época en la ejecución logística seleccionada. El presupuesto y la selección quedaron fijados antes de la evaluación final.}{fig:l-ba}{0.96}
+Compartir fronteras lineales en 20 dimensiones no implica obtener los mismos parámetros: objetivo, recorrido, frecuencia de actualización y selección difieren. El perceptrón corrige errores discretos online, mientras logística optimiza una función suave por lote. Las diferencias finales no se atribuyen a una causa comercial sin evidencia.

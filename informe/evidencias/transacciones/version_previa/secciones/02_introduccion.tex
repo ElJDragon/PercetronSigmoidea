@@ -1,0 +1,26 @@
+\section{Introducción}
+El análisis descriptivo de un Data Warehouse permite comparar indicadores por tiempo, producto, cliente y territorio. La clasificación predictiva plantea una pregunta distinta: qué información disponible antes de un mes permite anticipar un comportamiento de sus ventas. Este trabajo enlaza ambas perspectivas mediante un problema reproducible, con reglas temporales explícitas y evaluación común de dos clasificadores lineales.
+
+La carta de diseño plantea necesidades de seguimiento comercial, clientes e inventario; los informes de limpieza y dashboard documentan la preparación y exploración del ámbito de ventas \cite{carta,limpieza,dashboard}. La extracción disponible respalda esa primera aplicación, pero no acredita la disponibilidad ni implementación de todos los procesos del Data Warehouse. Las dimensiones Producto y Cliente no se consideran Data Marts independientes por el solo hecho de existir como dimensiones.
+
+\subsection{Alcance académico incremental}
+La instrucción proporcionada para esta entrega es: «Perfeccionen todo con un data mart y de ahí háganlo con el resto de Data Marts». En consecuencia, Ventas constituye la primera aplicación desarrollada y evaluada. La continuación obligatoria consiste en trasladar la metodología a los demás Data Marts contemplados en el proyecto, previa comprobación de su modelo, datos y problema predictivo. No se han implementado ni evaluado aquí esas aplicaciones. La estructura modular del informe permite incorporarlas posteriormente sin atribuirles resultados inexistentes.
+
+\section{Problema empresarial y objetivos}
+\subsection{Pregunta de negocio y respuesta operativa}
+Al cierre del mes anterior se busca identificar productos cuyas unidades facturadas observadas en el siguiente mes superarán su mediana reciente. La comparación se realiza contra la historia del propio producto, no contra un umbral absoluto común. Un positivo puede corresponder a una diferencia de una sola unidad; su relevancia comercial necesita validación adicional.
+
+La respuesta no representa rentabilidad, demanda insatisfecha, inventario disponible ni cantidad exacta futura. Una alerta podría orientar la revisión de un analista comercial; no establece por sí sola una orden de compra o reposición. No se dispone de costos de falsos positivos o negativos para cuantificar beneficio económico.
+
+\subsection{Objetivo general}
+Desarrollar y documentar una primera aplicación verificable de clasificación binaria en el Data Mart de Ventas de WWI, comparando un perceptrón simple y una regresión logística implementados matemáticamente, con prevención de fuga temporal y conclusiones sustentadas en resultados congelados.
+
+\subsection{Objetivos específicos}
+\begin{enumerate}
+\item Auditar el grano, identidad, calidad y disponibilidad temporal de los datos antes de definir las entradas y la etiqueta.
+\item Preparar una representación común de dimensión dinámica y particiones cronológicas, con parámetros de transformación ajustados solo en entrenamiento.
+\item Implementar las reglas del perceptrón y los gradientes logísticos, comprobar su matemática y analizar sus historiales reales.
+\item Comparar ambos modelos con baselines mediante matrices de confusión, métricas por clase y evaluación temporal.
+\item Interpretar PCA únicamente como visualización e identificar las limitaciones estadísticas y empresariales de la evidencia.
+\item Dejar una estructura documental reproducible para la ampliación obligatoria a los demás Data Marts, sin implementarlos en esta entrega.
+\end{enumerate}

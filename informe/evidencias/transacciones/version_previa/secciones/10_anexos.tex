@@ -1,0 +1,40 @@
+\section{Catálogo de características efectivas}\label{sec:catalogo}
+Las fórmulas de la tabla \ref{tab:caracteristicas} son transcripción del contrato estructurado, antes de imputación y estandarización. $q_1,q_2,q_3$ denotan unidades de los tres meses anteriores. Las unidades monetarias son las de la extracción: no se infiere una moneda empresarial sin metadatos adicionales.
+\begingroup\small
+\input{generado/caracteristicas}
+\endgroup
+
+\section{Trazabilidad y reproducción documental}
+\subsection{Relación entre afirmaciones y evidencia}
+El archivo \archivo{informe/evidencias/trazabilidad.json} relaciona cada tabla y figura con su fuente y hash SHA-256. Las afirmaciones cuantitativas sobre convergencia se derivan de los CSV por época y del registro de inicialización; las de evaluación se contrastan con las matrices, predicciones y análisis estadístico. Los pesos se comparan exactamente con el estado del archivo de congelación. Las figuras copiadas mantienen los mismos bytes de su origen; las nuevas vistas de soporte temporal, comparación global con cinco métricas, convergencia, paneles de error y error por partición se generan desde registros guardados.
+
+La procedencia principal se organiza así:
+\begin{itemize}
+\item Calidad, grano y cardinalidades: \archivo{resultados/auditoria/}, especialmente \archivo{perfilado_datos.json} y \archivo{comparacion_csv.json}.
+\item Fórmulas, parámetros y particiones: \archivo{datos/Procesados/fase_03/} y su manifiesto.
+\item Pesos y recorrido del perceptrón: \archivo{resultados/fase_04/modelo_seleccionado.json} e \archivo{historial_orden_barajado.csv}.
+\item Logística, gradientes y selección: \archivo{resultados/fase_05/}, sus JSON y \archivo{historial_eta_010.csv}.
+\item PCA y estados congelados: \archivo{resultados/fase_06/}.
+\item Métricas y predicciones finales alineadas: \archivo{resultados/fase_07/}.
+\item Descomposición temporal, acuerdos, distribuciones y sensibilidad agrupada: \archivo{resultados/fase_08/}.
+\end{itemize}
+Los nombres técnicos de directorio se mantienen para reproducibilidad; no organizan la narrativa académica.
+
+\subsection{Comandos sin reentrenamiento}
+Desde la raíz del proyecto, el exportador documental lee artefactos y escribe únicamente dentro de \archivo{informe/}:
+\begin{verbatim}
+python informe/herramientas/generar_informe.py
+cd informe
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+\end{verbatim}
+No ejecutar los entrenadores, la preparación del dataset ni la evaluación final para compilar. Los archivos \archivo{README.md} y \archivo{evidencias/verificacion_informe.json} documentan los comandos efectivos, número de tablas/figuras y controles de integridad. Se comprueban referencias cruzadas, ecuaciones, archivos gráficos y dimensiones de tablas, además de la inspección visual del PDF.
+
+Los antecedentes registran 104 pruebas satisfactorias, sin fallos ni omisiones, antes de esta elaboración documental. El informe verifica nuevamente integridad y consistencia de las fuentes sin modificar esas pruebas o artefactos. Las pruebas matemáticas históricas usan ejemplos de control y no deben confundirse con reentrenamientos de WWI.
+
+\subsection{Parámetros y series que no deben confundirse}
+Los JSON conservan precisión completa de pesos y sesgos; los porcentajes del texto se redondean solo para lectura. Las curvas de accuracy y BA registran estados por época; las métricas finales corresponden al checkpoint restaurado. La norma del gradiente logístico incluye el sesgo y se registra después de cada actualización; \archivo{gradient_used_norm} corresponde al estado previo. No se transforma una curva de entrenamiento en una curva de test.
+
+\section{Continuidad obligatoria del proyecto académico}
+La siguiente ampliación documental deberá agregar, para cada Data Mart verificado, su formulación, procedencia, metodología, resultados y conclusiones parciales. No se presupone que Cliente o Producto constituyan Data Marts distintos; deben identificarse los procesos reales del DW y las extracciones disponibles. No se incluyen capítulos de resultados vacíos o ficticios. Antes de una entrega definitiva quedan pendientes la identificación del ciclo actual y la evidencia operacional de cobertura, claves y unidades. Esta versión termina con Ventas documentado y evaluado, manteniendo explícita la obligación de completar las demás aplicaciones.

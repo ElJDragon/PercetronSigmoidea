@@ -1,0 +1,185 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-04-28>
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo))
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babel-
+spanish.tex)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.ld
+f))
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty))
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty))
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cf
+g)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def)
+)) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx))
+ (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty)
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinek
+eys.sty)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.st
+y (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty)
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.
+sty
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.st
+y))) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitl
+estring.sty
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty)
+)) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.st
+y) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.
+sty)))
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfile
+check.sty
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniqueco
+unter.sty))) (secciones/titulos_figuras.tex)
+(secciones/titulos_transacciones.tex) (generado/transacciones/cifras.tex)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdft
+ex.def) (main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
+i
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-ba
+se.sty
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cf
+g)) (main.out) (main.out)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+[1{C:/Users/User/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+(secciones/01_resumen.tex) [1] (main.toc [2]) [3] (main.lof) [4] (main.lot)
+[5] (secciones/02_introduccion.tex [1]) (secciones/03_fundamentos.tex [2]
+[3]) (secciones/04_metodologia.tex [4] [5] (generado/particiones.tex) [6 <./fig
+uras/datos_particiones.png>]) (secciones/05_modelos.tex [7]
+(generado/pesos_fase_04.tex) [8] [9 <./figuras/perceptron_errores.png> <./figur
+as/perceptron_accuracy.png>] [10 <./figuras/perceptron_ba.png>]
+(generado/gradientes.tex) (generado/tasas.tex) (generado/pesos_fase_05.tex))
+(secciones/06_convergencia.tex [11] [12 <./figuras/logistica_perdida.png>]
+[13 <./figuras/logistica_gradiente.png> <./figuras/logistica_accuracy.png>]
+[14 <./figuras/logistica_ba.png>] (generado/convergencia_perceptron.tex)
+(generado/convergencia_logistica.tex) [15]
+Underfull \hbox (badness 1874) in paragraph at lines 24--25
+[]\T1/cmr/m/n/10.95 La to-le-ran-cia es-ta-ba des-ac-ti-va-da ($\T1/cmtt/m/n/10
+.95 tolerance = null$\T1/cmr/m/n/10.95 ); el re-gis-tro in-di-ca $\T1/cmtt/m/n/
+10.95 converged _ by _
+) (secciones/07_pca.tex [16 <./figuras/convergencia_detallada.png>] [17 <./figu
+ras/errores_paneles.png>] (generado/pca_cargas.tex))
+(secciones/08_resultados.tex [18] [19 <./figuras/pca_train.png> <./figuras/pca_
+val.png>] [20 <./figuras/pca_varianza.png>] (generado/metricas.tex) [21 <./figu
+ras/metricas_globales.png>] (generado/confusiones.tex) (generado/mensual.tex)
+[22 <./figuras/confusion_perceptron.png>] [23 <./figuras/confusion_logistica.pn
+g> <./figuras/sensibilidad_especificidad.png>] [24 <./figuras/error_particiones
+.png>] (generado/cohortes.tex)) (secciones/09_discusion.tex [25 <./figuras/ba_m
+ensual.png>] [26 <./figuras/acuerdos.png>] [27 <./figuras/cambios_medias.png>]
+[28]) (secciones/11_transacciones.tex [29]
+Underfull \hbox (badness 2134) in paragraph at lines 8--9
+[]\T1/cmr/m/n/10.95 La fuen-te ele-gi-da es $\T1/cmtt/m/n/10.95 Sales . Custome
+rTransactions$\T1/cmr/m/n/10.95 . El even-to se iden-ti-fi-ca me-dian-te
+[30] (generado/transacciones/caracteristicas.tex)
+(generado/transacciones/particiones.tex) [31]
+(generado/transacciones/configuraciones.tex)
+(generado/transacciones/pesos_perceptron.tex)
+(generado/transacciones/pesos_logistic.tex) [32] [33]
+(generado/transacciones/desarrollo.tex) [34 <./figuras/transacciones/p_errores.
+png>] [35 <./figuras/transacciones/p_actualizaciones.png> <./figuras/transaccio
+nes/p_accuracy.png>] [36 <./figuras/transacciones/p_ba.png>] [37 <./figuras/tra
+nsacciones/l_perdida.png> <./figuras/transacciones/l_gradiente.png>] [38 <./fig
+uras/transacciones/l_accuracy.png> <./figuras/transacciones/l_ba.png>]
+(generado/transacciones/coeficientes_pca.tex) [39] [40 <./figuras/transacciones
+/pca_train.png> <./figuras/transacciones/pca_val.png>] [41 <./figuras/transacci
+ones/pca_varianza.png>] (generado/transacciones/test_principal.tex)
+(generado/transacciones/confusiones.tex) (generado/transacciones/test_comun.tex
+) [42] [43 <./figuras/transacciones/test_conf_p.png> <./figuras/transacciones/t
+est_conf_l.png>] (generado/transacciones/mensual.tex) [44 <./figuras/transaccio
+nes/test_ba.png> <./figuras/transacciones/test_metricas.png>]
+(generado/transacciones/cohortes.tex) [45 <./figuras/transacciones/test_sensibi
+lidad.png>] [46 <./figuras/transacciones/test_mensual.png> <./figuras/transacci
+ones/test_particiones.png>]) (secciones/12_comparacion_datamarts.tex [47]
+(generado/transacciones/comparacion.tex) [48]) [49] (referencias.tex) [50]
+(secciones/10_anexos.tex (generado/caracteristicas.tex)
+Underfull \hbox (badness 1184) in paragraph at lines 13--14
+[]\T1/cmr/m/n/10.95 Calidad, grano y car-di-na-li-da-des: $\T1/cmtt/m/n/10.95 r
+esultados / auditoria/$\T1/cmr/m/n/10.95 , es-pe-cial-men-te $\T1/cmtt/m/n/10.9
+5 perfilado _
+[51] [52]) [53] (main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information) <C:\Users\User\AppData\Loc
+al\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\User\AppDat
+a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\User\A
+ppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\U
+ser\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Us
+ers\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <
+C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1095.
+pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc
+1095.pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
+\ecrm1000.pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
+pi600\ecbx1095.pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
+/ec/dpi600\ecrm1095.pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfour/jkn
+appen/ec/dpi600\ecrm1440.pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/ljfou
+r/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\User\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\User\AppData\Local\MiKTeX\font
+s/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk><C:/Users/User/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/User/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/User/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Us
+er/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/U
+sers/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmr7.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmr8.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/User/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/User/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (59 pages, 4204661 bytes).
+Transcript written on main.log.

@@ -1,0 +1,28 @@
+\barrerapagina
+\section{Verificación de convergencia y comportamiento del error}\label{sec:convergencia}
+\subsection{Evidencia y definición de los diagnósticos}
+Se analizan exclusivamente los historiales aprobados del recorrido barajado del perceptrón y de la ejecución logística de tasa 0,1. Los CSV por época se conservan íntegros, junto con los cálculos documentales, en \archivo{informe/evidencias/}. No se reconstruyen curvas mediante entrenamiento, no se inventan métricas de test por época y no se aplica un criterio de parada nuevo.
+
+Para la logística, con $L_0$ guardada en el registro del experimento, se calcula para $k=1,\dots,200$:
+\begin{equation}\Delta L_k=L_{k-1}-L_k,\qquad r_k=\frac{|L_k-L_{k-1}|}{\max(1,|L_{k-1}|)}.\label{eq:diagnosticos}\end{equation}
+Como todas las pérdidas previas son menores que 1, $r_k=|\Delta L_k|$ numéricamente en este recorrido. El denominador evita exagerar un cambio relativo cuando la pérdida es pequeña. Estos diagnósticos describen la ejecución; no fueron condiciones efectivas de parada.
+
+\subsection{Perceptrón: fluctuaciones sin cese de actualizaciones}
+\input{generado/convergencia_perceptron}
+Los errores online pasan de 1\,973 a 1\,996, con mínimo 1\,863 y máximo 2\,016. En 49 transiciones aumenta su conteo. Ninguna de las 100 épocas presenta cero actualizaciones; la última conserva 1\,996. La media de las primeras diez épocas es 1\,954,2 errores y la de las últimas diez 1\,965,8. No aparece una tendencia de reducción a cero ni un cese de aprendizaje en el presupuesto observado. La norma de pesos es 0,470390802 en el checkpoint y 0,439505108 al finalizar; cambiar de norma no prueba estabilización de la dirección o de las predicciones.
+
+El checkpoint 70 tiene 1\,924 errores online, pero 1\,627 errores al cierre, porque se evalúan estados diferentes. Su accuracy train es 64,623\% y validación 61,720\%, frente a 51,794\% y 53,349\% en la época 100. La BA de validación cae de 61,632\% en el estado exportado a 53,238\% en el último. Por ello, no deben utilizarse métricas de la última época como si fueran las del modelo final conservado.
+
+El resultado es un recorrido oscilante, sin convergencia a cero errores demostrada. La garantía teórica requiere separabilidad con margen; ni esta se ha demostrado ni su ausencia se deduce únicamente de 100 épocas. Mantener actualizaciones es evidencia de no estabilización de este recorrido, no prueba de un fallo de implementación.
+
+\subsection{Logística: descenso estable, límite de épocas}
+\input{generado/convergencia_logistica}
+La pérdida inicial train es 0,6931471805599452 y la final es 0,6269539858615067: disminuye 0,06619319469843843, equivalente al 9,549659\% de la inicial. Las 200 diferencias $\Delta L_k$ son positivas; no hay aumentos estrictos de pérdida train. El descenso medio por época pasa de 0,003200745231 en las primeras diez a 0,000012942798 en las últimas diez. La pendiente se aplana, pero la pérdida sigue disminuyendo.
+
+En la última época, $\Delta L_{200}=r_{200}=1,239994026\times10^{-5}$. La norma del gradiente pasa de 0,2276084513231957 antes del primer paso a 0,01109745983712376 después del último; no es cero. La norma final de pesos es 0,726685646640. La pérdida de validación pasa de 0,6931471805599452 a 0,6695745428232207, una mejora menor que en entrenamiento. Su diferencia final con train es aproximadamente 0,042620557. El menor valor registrado de validación coincide con la época 200, sin que esto pruebe que épocas posteriores serían mejores.
+
+La tolerancia estaba desactivada (\archivo{tolerance=null}); el registro indica \archivo{converged_by_tolerance=false}. Se detuvo por máximo de 200 épocas. En este caso, checkpoint y último estado coinciden. La reducción de pérdida y gradiente respalda \textbf{descenso estable sin convergencia completa demostrada}; no certifica un óptimo numérico ni un criterio retrospectivo de suficiencia. Las redundancias impiden asumir unicidad del vector de pesos.
+
+\figura{convergencia_detallada.png}{Diagnóstico de la ejecución logística seleccionada: pérdida completa con inicialización real, acercamiento final, cambios por época y norma del gradiente. El eje logarítmico se identifica en los paneles inferiores.}{fig:convergencia}{1}
+\figura{errores_paneles.png}{Comparación con ejes separados: errores online y al cierre del perceptrón (conteos) frente a entropía cruzada logística (pérdida media). No son magnitudes equivalentes.}{fig:paneles}{1}
+Las curvas permiten distinguir mejora del objetivo continuo y comportamiento de la clasificación. Concluyen sobre las ejecuciones conservadas, sin extender el presupuesto ni modificar tasas o modelos después de observar test.
