@@ -1,0 +1,2889 @@
+[
+  {
+    "sql": "SELECT CAST(SERVERPROPERTY('ServerName') AS nvarchar(128)) AS server_name,DB_NAME() AS database_name,CAST(SERVERPROPERTY('ProductVersion') AS nvarchar(128)) AS version",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT s.name AS schema_name,t.name AS table_name,c.column_id,c.name AS column_name,ty.name AS data_type,c.max_length,c.precision,c.scale,c.is_nullable,c.is_identity,c.is_computed,dc.definition AS default_definition,t.temporal_type_desc\n    FROM sys.tables t JOIN sys.schemas s ON t.schema_id=s.schema_id JOIN sys.columns c ON c.object_id=t.object_id JOIN sys.types ty ON c.user_type_id=ty.user_type_id LEFT JOIN sys.default_constraints dc ON c.default_object_id=dc.object_id WHERE s.name IN (?,?) ORDER BY s.name,t.name,c.column_id",
+    "parameters": [
+      "Fact",
+      "Dimension"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 180
+  },
+  {
+    "sql": "SELECT s.name AS schema_name,t.name AS table_name,i.name AS index_name,i.type_desc,i.is_primary_key,i.is_unique,i.is_unique_constraint,i.has_filter,i.filter_definition,c.name AS column_name,ic.key_ordinal,ic.is_included_column\n    FROM sys.tables t JOIN sys.schemas s ON t.schema_id=s.schema_id JOIN sys.indexes i ON i.object_id=t.object_id JOIN sys.index_columns ic ON ic.object_id=i.object_id AND ic.index_id=i.index_id JOIN sys.columns c ON c.object_id=ic.object_id AND c.column_id=ic.column_id WHERE s.name IN (?,?) ORDER BY s.name,t.name,i.index_id,ic.index_column_id",
+    "parameters": [
+      "Fact",
+      "Dimension"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 185
+  },
+  {
+    "sql": "SELECT fk.name AS fk_name,ps.name AS parent_schema,pt.name AS parent_table,pc.name AS parent_column,rs.name AS referenced_schema,rt.name AS referenced_table,rc.name AS referenced_column,fk.is_disabled,fk.is_not_trusted,fkc.constraint_column_id\n    FROM sys.foreign_keys fk JOIN sys.foreign_key_columns fkc ON fk.object_id=fkc.constraint_object_id JOIN sys.tables pt ON pt.object_id=fkc.parent_object_id JOIN sys.schemas ps ON ps.schema_id=pt.schema_id JOIN sys.columns pc ON pc.object_id=pt.object_id AND pc.column_id=fkc.parent_column_id JOIN sys.tables rt ON rt.object_id=fkc.referenced_object_id JOIN sys.schemas rs ON rs.schema_id=rt.schema_id JOIN sys.columns rc ON rc.object_id=rt.object_id AND rc.column_id=fkc.referenced_column_id WHERE ps.name IN (?,?) ORDER BY ps.name,pt.name,fk.name,fkc.constraint_column_id",
+    "parameters": [
+      "Fact",
+      "Dimension"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 29
+  },
+  {
+    "sql": "SELECT s.name AS schema_name,t.name AS table_name,c.name,c.definition,c.is_disabled,c.is_not_trusted FROM sys.check_constraints c JOIN sys.tables t ON t.object_id=c.parent_object_id JOIN sys.schemas s ON s.schema_id=t.schema_id WHERE s.name IN (?,?)",
+    "parameters": [
+      "Fact",
+      "Dimension"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 0
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Order Key],[City Key],[Customer Key],[Stock Item Key],[Order Date Key],[Picked Date Key],[Salesperson Key],[Picker Key],[WWI Order ID],[WWI Backorder ID],[Description],[Package],[Quantity],[Unit Price],[Tax Rate],[Total Excluding Tax],[Tax Amount],[Total Including Tax],[Lineage Key])) AS checksum FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Purchase Key],[Date Key],[Supplier Key],[Stock Item Key],[WWI Purchase Order ID],[Ordered Outers],[Ordered Quantity],[Received Outers],[Package],[Is Order Finalized],[Lineage Key])) AS checksum FROM [Fact].[Purchase]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Movement Key],[Date Key],[Stock Item Key],[Customer Key],[Supplier Key],[Transaction Type Key],[WWI Stock Item Transaction ID],[WWI Invoice ID],[WWI Purchase Order ID],[Quantity],[Lineage Key])) AS checksum FROM [Fact].[Movement]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Stock Holding Key],[Stock Item Key],[Quantity On Hand],[Bin Location],[Last Stocktake Quantity],[Last Cost Price],[Reorder Level],[Target Stock Level],[Lineage Key])) AS checksum FROM [Fact].[Stock Holding]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Transaction Key],[Date Key],[Customer Key],[Bill To Customer Key],[Supplier Key],[Transaction Type Key],[Payment Method Key],[WWI Customer Transaction ID],[WWI Supplier Transaction ID],[WWI Invoice ID],[WWI Purchase Order ID],[Supplier Invoice Number],[Total Excluding Tax],[Tax Amount],[Total Including Tax],[Outstanding Balance],[Is Finalized],[Lineage Key])) AS checksum FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Date],[Day Number],[Day],[Month],[Short Month],[Calendar Month Number],[Calendar Month Label],[Calendar Year],[Calendar Year Label],[Fiscal Month Number],[Fiscal Month Label],[Fiscal Year],[Fiscal Year Label],[ISO Week Number])) AS checksum FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Stock Item Key],[WWI Stock Item ID],[Stock Item],[Color],[Selling Package],[Buying Package],[Brand],[Size],[Lead Time Days],[Quantity Per Outer],[Is Chiller Stock],[Barcode],[Tax Rate],[Unit Price],[Recommended Retail Price],[Typical Weight Per Unit],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Customer Key],[WWI Customer ID],[Customer],[Bill To Customer],[Category],[Buying Group],[Primary Contact],[Postal Code],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Customer]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Supplier Key],[WWI Supplier ID],[Supplier],[Category],[Primary Contact],[Supplier Reference],[Payment Days],[Postal Code],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Supplier]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Transaction Type Key],[WWI Transaction Type ID],[Transaction Type],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Transaction Type]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Payment Method Key],[WWI Payment Method ID],[Payment Method],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Payment Method]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([City Key],[WWI City ID],[City],[State Province],[Country],[Continent],[Sales Territory],[Region],[Subregion],[Latest Recorded Population],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Employee Key],[WWI Employee ID],[Employee],[Preferred Name],[Is Salesperson],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Employee]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Order Key]) AS nulls,COUNT_BIG(DISTINCT [Order Key]) AS distinct_nonnull,MIN([Order Key]) AS min,MAX([Order Key]) AS max,SUM(CAST(CASE WHEN [Order Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Order Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([City Key]) AS nulls,COUNT_BIG(DISTINCT [City Key]) AS distinct_nonnull,MIN([City Key]) AS min,MAX([City Key]) AS max,SUM(CAST(CASE WHEN [City Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [City Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Customer Key]) AS nulls,COUNT_BIG(DISTINCT [Customer Key]) AS distinct_nonnull,MIN([Customer Key]) AS min,MAX([Customer Key]) AS max,SUM(CAST(CASE WHEN [Customer Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Customer Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Stock Item Key]) AS nulls,COUNT_BIG(DISTINCT [Stock Item Key]) AS distinct_nonnull,MIN([Stock Item Key]) AS min,MAX([Stock Item Key]) AS max,SUM(CAST(CASE WHEN [Stock Item Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Stock Item Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Order Date Key]) AS nulls,COUNT_BIG(DISTINCT [Order Date Key]) AS distinct_nonnull,MIN([Order Date Key]) AS min,MAX([Order Date Key]) AS max FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Picked Date Key]) AS nulls,COUNT_BIG(DISTINCT [Picked Date Key]) AS distinct_nonnull,MIN([Picked Date Key]) AS min,MAX([Picked Date Key]) AS max FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Salesperson Key]) AS nulls,COUNT_BIG(DISTINCT [Salesperson Key]) AS distinct_nonnull,MIN([Salesperson Key]) AS min,MAX([Salesperson Key]) AS max,SUM(CAST(CASE WHEN [Salesperson Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Salesperson Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Picker Key]) AS nulls,COUNT_BIG(DISTINCT [Picker Key]) AS distinct_nonnull,MIN([Picker Key]) AS min,MAX([Picker Key]) AS max,SUM(CAST(CASE WHEN [Picker Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Picker Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([WWI Order ID]) AS nulls,COUNT_BIG(DISTINCT [WWI Order ID]) AS distinct_nonnull,MIN([WWI Order ID]) AS min,MAX([WWI Order ID]) AS max,SUM(CAST(CASE WHEN [WWI Order ID]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [WWI Order ID]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([WWI Backorder ID]) AS nulls,COUNT_BIG(DISTINCT [WWI Backorder ID]) AS distinct_nonnull,MIN([WWI Backorder ID]) AS min,MAX([WWI Backorder ID]) AS max,SUM(CAST(CASE WHEN [WWI Backorder ID]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [WWI Backorder ID]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Description]) AS nulls,COUNT_BIG(DISTINCT [Description]) AS distinct_nonnull FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Package]) AS nulls,COUNT_BIG(DISTINCT [Package]) AS distinct_nonnull FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Quantity]) AS nulls,COUNT_BIG(DISTINCT [Quantity]) AS distinct_nonnull,MIN([Quantity]) AS min,MAX([Quantity]) AS max,SUM(CAST(CASE WHEN [Quantity]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Quantity]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Unit Price]) AS nulls,COUNT_BIG(DISTINCT [Unit Price]) AS distinct_nonnull,MIN([Unit Price]) AS min,MAX([Unit Price]) AS max,SUM(CAST(CASE WHEN [Unit Price]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Unit Price]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Tax Rate]) AS nulls,COUNT_BIG(DISTINCT [Tax Rate]) AS distinct_nonnull,MIN([Tax Rate]) AS min,MAX([Tax Rate]) AS max,SUM(CAST(CASE WHEN [Tax Rate]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Tax Rate]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Total Excluding Tax]) AS nulls,COUNT_BIG(DISTINCT [Total Excluding Tax]) AS distinct_nonnull,MIN([Total Excluding Tax]) AS min,MAX([Total Excluding Tax]) AS max,SUM(CAST(CASE WHEN [Total Excluding Tax]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Total Excluding Tax]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Tax Amount]) AS nulls,COUNT_BIG(DISTINCT [Tax Amount]) AS distinct_nonnull,MIN([Tax Amount]) AS min,MAX([Tax Amount]) AS max,SUM(CAST(CASE WHEN [Tax Amount]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Tax Amount]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Total Including Tax]) AS nulls,COUNT_BIG(DISTINCT [Total Including Tax]) AS distinct_nonnull,MIN([Total Including Tax]) AS min,MAX([Total Including Tax]) AS max,SUM(CAST(CASE WHEN [Total Including Tax]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Total Including Tax]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Lineage Key]) AS nulls,COUNT_BIG(DISTINCT [Lineage Key]) AS distinct_nonnull,MIN([Lineage Key]) AS min,MAX([Lineage Key]) AS max,SUM(CAST(CASE WHEN [Lineage Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Lineage Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Fact].[Order] GROUP BY [Order Key],[Order Date Key] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Fact].[Order] GROUP BY [City Key],[Customer Key],[Stock Item Key],[Picked Date Key],[Salesperson Key],[Picker Key],[WWI Order ID],[WWI Backorder ID],[Description],[Package],[Quantity],[Unit Price],[Tax Rate],[Total Excluding Tax],[Tax Amount],[Total Including Tax] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Order Date Key],126) AS month,COUNT_BIG(*) AS n FROM [Fact].[Order] WHERE [Order Date Key] IS NOT NULL GROUP BY CONVERT(char(7),[Order Date Key],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 41
+  },
+  {
+    "sql": "SELECT YEAR([Order Date Key]) AS year,COUNT_BIG(*) AS n FROM [Fact].[Order] WHERE [Order Date Key] IS NOT NULL GROUP BY YEAR([Order Date Key]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 4
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Picked Date Key],126) AS month,COUNT_BIG(*) AS n FROM [Fact].[Order] WHERE [Picked Date Key] IS NOT NULL GROUP BY CONVERT(char(7),[Picked Date Key],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 41
+  },
+  {
+    "sql": "SELECT YEAR([Picked Date Key]) AS year,COUNT_BIG(*) AS n FROM [Fact].[Order] WHERE [Picked Date Key] IS NOT NULL GROUP BY YEAR([Picked Date Key]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 4
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[City Key] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Order] f LEFT JOIN [Dimension].[City] d ON f.[City Key]=d.[City Key] WHERE f.[City Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Customer Key] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Order] f LEFT JOIN [Dimension].[Customer] d ON f.[Customer Key]=d.[Customer Key] WHERE f.[Customer Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Date] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Order] f LEFT JOIN [Dimension].[Date] d ON f.[Order Date Key]=d.[Date] WHERE f.[Order Date Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Date] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Order] f LEFT JOIN [Dimension].[Date] d ON f.[Picked Date Key]=d.[Date] WHERE f.[Picked Date Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Employee Key] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Order] f LEFT JOIN [Dimension].[Employee] d ON f.[Picker Key]=d.[Employee Key] WHERE f.[Picker Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Employee Key] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Order] f LEFT JOIN [Dimension].[Employee] d ON f.[Salesperson Key]=d.[Employee Key] WHERE f.[Salesperson Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Stock Item Key] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Order] f LEFT JOIN [Dimension].[Stock Item] d ON f.[Stock Item Key]=d.[Stock Item Key] WHERE f.[Stock Item Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT DISTINCT PERCENTILE_CONT(0.05) WITHIN GROUP(ORDER BY CAST([Quantity] AS float)) OVER() AS q05,PERCENTILE_CONT(0.25) WITHIN GROUP(ORDER BY CAST([Quantity] AS float)) OVER() AS q25,PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY CAST([Quantity] AS float)) OVER() AS median,PERCENTILE_CONT(0.75) WITHIN GROUP(ORDER BY CAST([Quantity] AS float)) OVER() AS q75,PERCENTILE_CONT(0.95) WITHIN GROUP(ORDER BY CAST([Quantity] AS float)) OVER() AS q95 FROM [Fact].[Order] WHERE [Quantity] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_1_5_IQR FROM [Fact].[Order] WHERE [Quantity]<? OR [Quantity]>?",
+    "parameters": [
+      -77.5,
+      142.5
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT DISTINCT PERCENTILE_CONT(0.05) WITHIN GROUP(ORDER BY CAST([Total Including Tax] AS float)) OVER() AS q05,PERCENTILE_CONT(0.25) WITHIN GROUP(ORDER BY CAST([Total Including Tax] AS float)) OVER() AS q25,PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY CAST([Total Including Tax] AS float)) OVER() AS median,PERCENTILE_CONT(0.75) WITHIN GROUP(ORDER BY CAST([Total Including Tax] AS float)) OVER() AS q75,PERCENTILE_CONT(0.95) WITHIN GROUP(ORDER BY CAST([Total Including Tax] AS float)) OVER() AS q95 FROM [Fact].[Order] WHERE [Total Including Tax] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_1_5_IQR FROM [Fact].[Order] WHERE [Total Including Tax]<? OR [Total Including Tax]>?",
+    "parameters": [
+      -1255.8,
+      2387.4
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Fact].[Purchase]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Purchase Key]) AS nulls,COUNT_BIG(DISTINCT [Purchase Key]) AS distinct_nonnull,MIN([Purchase Key]) AS min,MAX([Purchase Key]) AS max,SUM(CAST(CASE WHEN [Purchase Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Purchase Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Purchase]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Date Key]) AS nulls,COUNT_BIG(DISTINCT [Date Key]) AS distinct_nonnull,MIN([Date Key]) AS min,MAX([Date Key]) AS max FROM [Fact].[Purchase]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Supplier Key]) AS nulls,COUNT_BIG(DISTINCT [Supplier Key]) AS distinct_nonnull,MIN([Supplier Key]) AS min,MAX([Supplier Key]) AS max,SUM(CAST(CASE WHEN [Supplier Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Supplier Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Purchase]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Stock Item Key]) AS nulls,COUNT_BIG(DISTINCT [Stock Item Key]) AS distinct_nonnull,MIN([Stock Item Key]) AS min,MAX([Stock Item Key]) AS max,SUM(CAST(CASE WHEN [Stock Item Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Stock Item Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Purchase]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([WWI Purchase Order ID]) AS nulls,COUNT_BIG(DISTINCT [WWI Purchase Order ID]) AS distinct_nonnull,MIN([WWI Purchase Order ID]) AS min,MAX([WWI Purchase Order ID]) AS max,SUM(CAST(CASE WHEN [WWI Purchase Order ID]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [WWI Purchase Order ID]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Purchase]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Ordered Outers]) AS nulls,COUNT_BIG(DISTINCT [Ordered Outers]) AS distinct_nonnull,MIN([Ordered Outers]) AS min,MAX([Ordered Outers]) AS max,SUM(CAST(CASE WHEN [Ordered Outers]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Ordered Outers]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Purchase]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Ordered Quantity]) AS nulls,COUNT_BIG(DISTINCT [Ordered Quantity]) AS distinct_nonnull,MIN([Ordered Quantity]) AS min,MAX([Ordered Quantity]) AS max,SUM(CAST(CASE WHEN [Ordered Quantity]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Ordered Quantity]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Purchase]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Received Outers]) AS nulls,COUNT_BIG(DISTINCT [Received Outers]) AS distinct_nonnull,MIN([Received Outers]) AS min,MAX([Received Outers]) AS max,SUM(CAST(CASE WHEN [Received Outers]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Received Outers]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Purchase]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Package]) AS nulls,COUNT_BIG(DISTINCT [Package]) AS distinct_nonnull FROM [Fact].[Purchase]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Is Order Finalized]) AS nulls,COUNT_BIG(DISTINCT [Is Order Finalized]) AS distinct_nonnull,MIN(CAST([Is Order Finalized] AS int)) AS min,MAX(CAST([Is Order Finalized] AS int)) AS max,SUM(CAST(CASE WHEN [Is Order Finalized]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Is Order Finalized]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Purchase]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Lineage Key]) AS nulls,COUNT_BIG(DISTINCT [Lineage Key]) AS distinct_nonnull,MIN([Lineage Key]) AS min,MAX([Lineage Key]) AS max,SUM(CAST(CASE WHEN [Lineage Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Lineage Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Purchase]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Fact].[Purchase] GROUP BY [Purchase Key],[Date Key] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Fact].[Purchase] GROUP BY [Supplier Key],[Stock Item Key],[WWI Purchase Order ID],[Ordered Outers],[Ordered Quantity],[Received Outers],[Package],[Is Order Finalized] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Date Key],126) AS month,COUNT_BIG(*) AS n FROM [Fact].[Purchase] WHERE [Date Key] IS NOT NULL GROUP BY CONVERT(char(7),[Date Key],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 41
+  },
+  {
+    "sql": "SELECT YEAR([Date Key]) AS year,COUNT_BIG(*) AS n FROM [Fact].[Purchase] WHERE [Date Key] IS NOT NULL GROUP BY YEAR([Date Key]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 4
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Date] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Purchase] f LEFT JOIN [Dimension].[Date] d ON f.[Date Key]=d.[Date] WHERE f.[Date Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Stock Item Key] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Purchase] f LEFT JOIN [Dimension].[Stock Item] d ON f.[Stock Item Key]=d.[Stock Item Key] WHERE f.[Stock Item Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Supplier Key] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Purchase] f LEFT JOIN [Dimension].[Supplier] d ON f.[Supplier Key]=d.[Supplier Key] WHERE f.[Supplier Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT DISTINCT PERCENTILE_CONT(0.05) WITHIN GROUP(ORDER BY CAST([Ordered Quantity] AS float)) OVER() AS q05,PERCENTILE_CONT(0.25) WITHIN GROUP(ORDER BY CAST([Ordered Quantity] AS float)) OVER() AS q25,PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY CAST([Ordered Quantity] AS float)) OVER() AS median,PERCENTILE_CONT(0.75) WITHIN GROUP(ORDER BY CAST([Ordered Quantity] AS float)) OVER() AS q75,PERCENTILE_CONT(0.95) WITHIN GROUP(ORDER BY CAST([Ordered Quantity] AS float)) OVER() AS q95 FROM [Fact].[Purchase] WHERE [Ordered Quantity] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_1_5_IQR FROM [Fact].[Purchase] WHERE [Ordered Quantity]<? OR [Ordered Quantity]>?",
+    "parameters": [
+      -27412.5,
+      58455.5
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT DISTINCT PERCENTILE_CONT(0.05) WITHIN GROUP(ORDER BY CAST([Ordered Outers] AS float)) OVER() AS q05,PERCENTILE_CONT(0.25) WITHIN GROUP(ORDER BY CAST([Ordered Outers] AS float)) OVER() AS q25,PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY CAST([Ordered Outers] AS float)) OVER() AS median,PERCENTILE_CONT(0.75) WITHIN GROUP(ORDER BY CAST([Ordered Outers] AS float)) OVER() AS q75,PERCENTILE_CONT(0.95) WITHIN GROUP(ORDER BY CAST([Ordered Outers] AS float)) OVER() AS q95 FROM [Fact].[Purchase] WHERE [Ordered Outers] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_1_5_IQR FROM [Fact].[Purchase] WHERE [Ordered Outers]<? OR [Ordered Outers]>?",
+    "parameters": [
+      -1939.75,
+      4182.25
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT DISTINCT PERCENTILE_CONT(0.05) WITHIN GROUP(ORDER BY CAST([Received Outers] AS float)) OVER() AS q05,PERCENTILE_CONT(0.25) WITHIN GROUP(ORDER BY CAST([Received Outers] AS float)) OVER() AS q25,PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY CAST([Received Outers] AS float)) OVER() AS median,PERCENTILE_CONT(0.75) WITHIN GROUP(ORDER BY CAST([Received Outers] AS float)) OVER() AS q75,PERCENTILE_CONT(0.95) WITHIN GROUP(ORDER BY CAST([Received Outers] AS float)) OVER() AS q95 FROM [Fact].[Purchase] WHERE [Received Outers] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_1_5_IQR FROM [Fact].[Purchase] WHERE [Received Outers]<? OR [Received Outers]>?",
+    "parameters": [
+      -1945.5,
+      4182.5
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Fact].[Movement]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Movement Key]) AS nulls,COUNT_BIG(DISTINCT [Movement Key]) AS distinct_nonnull,MIN([Movement Key]) AS min,MAX([Movement Key]) AS max,SUM(CAST(CASE WHEN [Movement Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Movement Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Movement]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Date Key]) AS nulls,COUNT_BIG(DISTINCT [Date Key]) AS distinct_nonnull,MIN([Date Key]) AS min,MAX([Date Key]) AS max FROM [Fact].[Movement]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Stock Item Key]) AS nulls,COUNT_BIG(DISTINCT [Stock Item Key]) AS distinct_nonnull,MIN([Stock Item Key]) AS min,MAX([Stock Item Key]) AS max,SUM(CAST(CASE WHEN [Stock Item Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Stock Item Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Movement]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Customer Key]) AS nulls,COUNT_BIG(DISTINCT [Customer Key]) AS distinct_nonnull,MIN([Customer Key]) AS min,MAX([Customer Key]) AS max,SUM(CAST(CASE WHEN [Customer Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Customer Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Movement]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Supplier Key]) AS nulls,COUNT_BIG(DISTINCT [Supplier Key]) AS distinct_nonnull,MIN([Supplier Key]) AS min,MAX([Supplier Key]) AS max,SUM(CAST(CASE WHEN [Supplier Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Supplier Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Movement]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Transaction Type Key]) AS nulls,COUNT_BIG(DISTINCT [Transaction Type Key]) AS distinct_nonnull,MIN([Transaction Type Key]) AS min,MAX([Transaction Type Key]) AS max,SUM(CAST(CASE WHEN [Transaction Type Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Transaction Type Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Movement]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([WWI Stock Item Transaction ID]) AS nulls,COUNT_BIG(DISTINCT [WWI Stock Item Transaction ID]) AS distinct_nonnull,MIN([WWI Stock Item Transaction ID]) AS min,MAX([WWI Stock Item Transaction ID]) AS max,SUM(CAST(CASE WHEN [WWI Stock Item Transaction ID]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [WWI Stock Item Transaction ID]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Movement]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([WWI Invoice ID]) AS nulls,COUNT_BIG(DISTINCT [WWI Invoice ID]) AS distinct_nonnull,MIN([WWI Invoice ID]) AS min,MAX([WWI Invoice ID]) AS max,SUM(CAST(CASE WHEN [WWI Invoice ID]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [WWI Invoice ID]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Movement]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([WWI Purchase Order ID]) AS nulls,COUNT_BIG(DISTINCT [WWI Purchase Order ID]) AS distinct_nonnull,MIN([WWI Purchase Order ID]) AS min,MAX([WWI Purchase Order ID]) AS max,SUM(CAST(CASE WHEN [WWI Purchase Order ID]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [WWI Purchase Order ID]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Movement]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Quantity]) AS nulls,COUNT_BIG(DISTINCT [Quantity]) AS distinct_nonnull,MIN([Quantity]) AS min,MAX([Quantity]) AS max,SUM(CAST(CASE WHEN [Quantity]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Quantity]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Movement]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Lineage Key]) AS nulls,COUNT_BIG(DISTINCT [Lineage Key]) AS distinct_nonnull,MIN([Lineage Key]) AS min,MAX([Lineage Key]) AS max,SUM(CAST(CASE WHEN [Lineage Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Lineage Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Movement]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Fact].[Movement] GROUP BY [Movement Key],[Date Key] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Fact].[Movement] GROUP BY [Stock Item Key],[Customer Key],[Supplier Key],[Transaction Type Key],[WWI Stock Item Transaction ID],[WWI Invoice ID],[WWI Purchase Order ID],[Quantity] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Date Key],126) AS month,COUNT_BIG(*) AS n FROM [Fact].[Movement] WHERE [Date Key] IS NOT NULL GROUP BY CONVERT(char(7),[Date Key],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 41
+  },
+  {
+    "sql": "SELECT YEAR([Date Key]) AS year,COUNT_BIG(*) AS n FROM [Fact].[Movement] WHERE [Date Key] IS NOT NULL GROUP BY YEAR([Date Key]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 4
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Customer Key] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Movement] f LEFT JOIN [Dimension].[Customer] d ON f.[Customer Key]=d.[Customer Key] WHERE f.[Customer Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Date] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Movement] f LEFT JOIN [Dimension].[Date] d ON f.[Date Key]=d.[Date] WHERE f.[Date Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Stock Item Key] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Movement] f LEFT JOIN [Dimension].[Stock Item] d ON f.[Stock Item Key]=d.[Stock Item Key] WHERE f.[Stock Item Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Supplier Key] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Movement] f LEFT JOIN [Dimension].[Supplier] d ON f.[Supplier Key]=d.[Supplier Key] WHERE f.[Supplier Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Transaction Type Key] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Movement] f LEFT JOIN [Dimension].[Transaction Type] d ON f.[Transaction Type Key]=d.[Transaction Type Key] WHERE f.[Transaction Type Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT DISTINCT PERCENTILE_CONT(0.05) WITHIN GROUP(ORDER BY CAST([Quantity] AS float)) OVER() AS q05,PERCENTILE_CONT(0.25) WITHIN GROUP(ORDER BY CAST([Quantity] AS float)) OVER() AS q25,PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY CAST([Quantity] AS float)) OVER() AS median,PERCENTILE_CONT(0.75) WITHIN GROUP(ORDER BY CAST([Quantity] AS float)) OVER() AS q75,PERCENTILE_CONT(0.95) WITHIN GROUP(ORDER BY CAST([Quantity] AS float)) OVER() AS q95 FROM [Fact].[Movement] WHERE [Quantity] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_1_5_IQR FROM [Fact].[Movement] WHERE [Quantity]<? OR [Quantity]>?",
+    "parameters": [
+      -142.5,
+      77.5
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Fact].[Stock Holding]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Stock Holding Key]) AS nulls,COUNT_BIG(DISTINCT [Stock Holding Key]) AS distinct_nonnull,MIN([Stock Holding Key]) AS min,MAX([Stock Holding Key]) AS max,SUM(CAST(CASE WHEN [Stock Holding Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Stock Holding Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Stock Holding]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Stock Item Key]) AS nulls,COUNT_BIG(DISTINCT [Stock Item Key]) AS distinct_nonnull,MIN([Stock Item Key]) AS min,MAX([Stock Item Key]) AS max,SUM(CAST(CASE WHEN [Stock Item Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Stock Item Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Stock Holding]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Quantity On Hand]) AS nulls,COUNT_BIG(DISTINCT [Quantity On Hand]) AS distinct_nonnull,MIN([Quantity On Hand]) AS min,MAX([Quantity On Hand]) AS max,SUM(CAST(CASE WHEN [Quantity On Hand]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Quantity On Hand]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Stock Holding]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Bin Location]) AS nulls,COUNT_BIG(DISTINCT [Bin Location]) AS distinct_nonnull FROM [Fact].[Stock Holding]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Last Stocktake Quantity]) AS nulls,COUNT_BIG(DISTINCT [Last Stocktake Quantity]) AS distinct_nonnull,MIN([Last Stocktake Quantity]) AS min,MAX([Last Stocktake Quantity]) AS max,SUM(CAST(CASE WHEN [Last Stocktake Quantity]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Last Stocktake Quantity]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Stock Holding]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Last Cost Price]) AS nulls,COUNT_BIG(DISTINCT [Last Cost Price]) AS distinct_nonnull,MIN([Last Cost Price]) AS min,MAX([Last Cost Price]) AS max,SUM(CAST(CASE WHEN [Last Cost Price]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Last Cost Price]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Stock Holding]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Reorder Level]) AS nulls,COUNT_BIG(DISTINCT [Reorder Level]) AS distinct_nonnull,MIN([Reorder Level]) AS min,MAX([Reorder Level]) AS max,SUM(CAST(CASE WHEN [Reorder Level]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Reorder Level]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Stock Holding]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Target Stock Level]) AS nulls,COUNT_BIG(DISTINCT [Target Stock Level]) AS distinct_nonnull,MIN([Target Stock Level]) AS min,MAX([Target Stock Level]) AS max,SUM(CAST(CASE WHEN [Target Stock Level]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Target Stock Level]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Stock Holding]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Lineage Key]) AS nulls,COUNT_BIG(DISTINCT [Lineage Key]) AS distinct_nonnull,MIN([Lineage Key]) AS min,MAX([Lineage Key]) AS max,SUM(CAST(CASE WHEN [Lineage Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Lineage Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Stock Holding]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Fact].[Stock Holding] GROUP BY [Stock Holding Key] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Fact].[Stock Holding] GROUP BY [Stock Item Key],[Quantity On Hand],[Bin Location],[Last Stocktake Quantity],[Last Cost Price],[Reorder Level],[Target Stock Level] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Stock Item Key] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Stock Holding] f LEFT JOIN [Dimension].[Stock Item] d ON f.[Stock Item Key]=d.[Stock Item Key] WHERE f.[Stock Item Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT DISTINCT PERCENTILE_CONT(0.05) WITHIN GROUP(ORDER BY CAST([Quantity On Hand] AS float)) OVER() AS q05,PERCENTILE_CONT(0.25) WITHIN GROUP(ORDER BY CAST([Quantity On Hand] AS float)) OVER() AS q25,PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY CAST([Quantity On Hand] AS float)) OVER() AS median,PERCENTILE_CONT(0.75) WITHIN GROUP(ORDER BY CAST([Quantity On Hand] AS float)) OVER() AS q75,PERCENTILE_CONT(0.95) WITHIN GROUP(ORDER BY CAST([Quantity On Hand] AS float)) OVER() AS q95 FROM [Fact].[Stock Holding] WHERE [Quantity On Hand] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_1_5_IQR FROM [Fact].[Stock Holding] WHERE [Quantity On Hand]<? OR [Quantity On Hand]>?",
+    "parameters": [
+      -167120.25,
+      405737.75
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Transaction Key]) AS nulls,COUNT_BIG(DISTINCT [Transaction Key]) AS distinct_nonnull,MIN([Transaction Key]) AS min,MAX([Transaction Key]) AS max,SUM(CAST(CASE WHEN [Transaction Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Transaction Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Date Key]) AS nulls,COUNT_BIG(DISTINCT [Date Key]) AS distinct_nonnull,MIN([Date Key]) AS min,MAX([Date Key]) AS max FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Customer Key]) AS nulls,COUNT_BIG(DISTINCT [Customer Key]) AS distinct_nonnull,MIN([Customer Key]) AS min,MAX([Customer Key]) AS max,SUM(CAST(CASE WHEN [Customer Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Customer Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Bill To Customer Key]) AS nulls,COUNT_BIG(DISTINCT [Bill To Customer Key]) AS distinct_nonnull,MIN([Bill To Customer Key]) AS min,MAX([Bill To Customer Key]) AS max,SUM(CAST(CASE WHEN [Bill To Customer Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Bill To Customer Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Supplier Key]) AS nulls,COUNT_BIG(DISTINCT [Supplier Key]) AS distinct_nonnull,MIN([Supplier Key]) AS min,MAX([Supplier Key]) AS max,SUM(CAST(CASE WHEN [Supplier Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Supplier Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Transaction Type Key]) AS nulls,COUNT_BIG(DISTINCT [Transaction Type Key]) AS distinct_nonnull,MIN([Transaction Type Key]) AS min,MAX([Transaction Type Key]) AS max,SUM(CAST(CASE WHEN [Transaction Type Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Transaction Type Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Payment Method Key]) AS nulls,COUNT_BIG(DISTINCT [Payment Method Key]) AS distinct_nonnull,MIN([Payment Method Key]) AS min,MAX([Payment Method Key]) AS max,SUM(CAST(CASE WHEN [Payment Method Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Payment Method Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([WWI Customer Transaction ID]) AS nulls,COUNT_BIG(DISTINCT [WWI Customer Transaction ID]) AS distinct_nonnull,MIN([WWI Customer Transaction ID]) AS min,MAX([WWI Customer Transaction ID]) AS max,SUM(CAST(CASE WHEN [WWI Customer Transaction ID]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [WWI Customer Transaction ID]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([WWI Supplier Transaction ID]) AS nulls,COUNT_BIG(DISTINCT [WWI Supplier Transaction ID]) AS distinct_nonnull,MIN([WWI Supplier Transaction ID]) AS min,MAX([WWI Supplier Transaction ID]) AS max,SUM(CAST(CASE WHEN [WWI Supplier Transaction ID]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [WWI Supplier Transaction ID]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([WWI Invoice ID]) AS nulls,COUNT_BIG(DISTINCT [WWI Invoice ID]) AS distinct_nonnull,MIN([WWI Invoice ID]) AS min,MAX([WWI Invoice ID]) AS max,SUM(CAST(CASE WHEN [WWI Invoice ID]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [WWI Invoice ID]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([WWI Purchase Order ID]) AS nulls,COUNT_BIG(DISTINCT [WWI Purchase Order ID]) AS distinct_nonnull,MIN([WWI Purchase Order ID]) AS min,MAX([WWI Purchase Order ID]) AS max,SUM(CAST(CASE WHEN [WWI Purchase Order ID]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [WWI Purchase Order ID]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Supplier Invoice Number]) AS nulls,COUNT_BIG(DISTINCT [Supplier Invoice Number]) AS distinct_nonnull FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Total Excluding Tax]) AS nulls,COUNT_BIG(DISTINCT [Total Excluding Tax]) AS distinct_nonnull,MIN([Total Excluding Tax]) AS min,MAX([Total Excluding Tax]) AS max,SUM(CAST(CASE WHEN [Total Excluding Tax]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Total Excluding Tax]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Tax Amount]) AS nulls,COUNT_BIG(DISTINCT [Tax Amount]) AS distinct_nonnull,MIN([Tax Amount]) AS min,MAX([Tax Amount]) AS max,SUM(CAST(CASE WHEN [Tax Amount]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Tax Amount]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Total Including Tax]) AS nulls,COUNT_BIG(DISTINCT [Total Including Tax]) AS distinct_nonnull,MIN([Total Including Tax]) AS min,MAX([Total Including Tax]) AS max,SUM(CAST(CASE WHEN [Total Including Tax]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Total Including Tax]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Outstanding Balance]) AS nulls,COUNT_BIG(DISTINCT [Outstanding Balance]) AS distinct_nonnull,MIN([Outstanding Balance]) AS min,MAX([Outstanding Balance]) AS max,SUM(CAST(CASE WHEN [Outstanding Balance]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Outstanding Balance]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Is Finalized]) AS nulls,COUNT_BIG(DISTINCT [Is Finalized]) AS distinct_nonnull,MIN(CAST([Is Finalized] AS int)) AS min,MAX(CAST([Is Finalized] AS int)) AS max,SUM(CAST(CASE WHEN [Is Finalized]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Is Finalized]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Lineage Key]) AS nulls,COUNT_BIG(DISTINCT [Lineage Key]) AS distinct_nonnull,MIN([Lineage Key]) AS min,MAX([Lineage Key]) AS max,SUM(CAST(CASE WHEN [Lineage Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Lineage Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Fact].[Transaction] GROUP BY [Transaction Key],[Date Key] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Fact].[Transaction] GROUP BY [Customer Key],[Bill To Customer Key],[Supplier Key],[Transaction Type Key],[Payment Method Key],[WWI Customer Transaction ID],[WWI Supplier Transaction ID],[WWI Invoice ID],[WWI Purchase Order ID],[Supplier Invoice Number],[Total Excluding Tax],[Tax Amount],[Total Including Tax],[Outstanding Balance],[Is Finalized] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Date Key],126) AS month,COUNT_BIG(*) AS n FROM [Fact].[Transaction] WHERE [Date Key] IS NOT NULL GROUP BY CONVERT(char(7),[Date Key],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 41
+  },
+  {
+    "sql": "SELECT YEAR([Date Key]) AS year,COUNT_BIG(*) AS n FROM [Fact].[Transaction] WHERE [Date Key] IS NOT NULL GROUP BY YEAR([Date Key]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 4
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Customer Key] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Transaction] f LEFT JOIN [Dimension].[Customer] d ON f.[Bill To Customer Key]=d.[Customer Key] WHERE f.[Bill To Customer Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Customer Key] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Transaction] f LEFT JOIN [Dimension].[Customer] d ON f.[Customer Key]=d.[Customer Key] WHERE f.[Customer Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Date] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Transaction] f LEFT JOIN [Dimension].[Date] d ON f.[Date Key]=d.[Date] WHERE f.[Date Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Payment Method Key] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Transaction] f LEFT JOIN [Dimension].[Payment Method] d ON f.[Payment Method Key]=d.[Payment Method Key] WHERE f.[Payment Method Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Supplier Key] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Transaction] f LEFT JOIN [Dimension].[Supplier] d ON f.[Supplier Key]=d.[Supplier Key] WHERE f.[Supplier Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS nonnull_references,SUM(CAST(CASE WHEN d.[Transaction Type Key] IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphans FROM [Fact].[Transaction] f LEFT JOIN [Dimension].[Transaction Type] d ON f.[Transaction Type Key]=d.[Transaction Type Key] WHERE f.[Transaction Type Key] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT DISTINCT PERCENTILE_CONT(0.05) WITHIN GROUP(ORDER BY CAST([Outstanding Balance] AS float)) OVER() AS q05,PERCENTILE_CONT(0.25) WITHIN GROUP(ORDER BY CAST([Outstanding Balance] AS float)) OVER() AS q25,PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY CAST([Outstanding Balance] AS float)) OVER() AS median,PERCENTILE_CONT(0.75) WITHIN GROUP(ORDER BY CAST([Outstanding Balance] AS float)) OVER() AS q75,PERCENTILE_CONT(0.95) WITHIN GROUP(ORDER BY CAST([Outstanding Balance] AS float)) OVER() AS q95 FROM [Fact].[Transaction] WHERE [Outstanding Balance] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_1_5_IQR FROM [Fact].[Transaction] WHERE [Outstanding Balance]<? OR [Outstanding Balance]>?",
+    "parameters": [
+      0.0,
+      0.0
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT DISTINCT PERCENTILE_CONT(0.05) WITHIN GROUP(ORDER BY CAST([Total Including Tax] AS float)) OVER() AS q05,PERCENTILE_CONT(0.25) WITHIN GROUP(ORDER BY CAST([Total Including Tax] AS float)) OVER() AS q25,PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY CAST([Total Including Tax] AS float)) OVER() AS median,PERCENTILE_CONT(0.75) WITHIN GROUP(ORDER BY CAST([Total Including Tax] AS float)) OVER() AS q75,PERCENTILE_CONT(0.95) WITHIN GROUP(ORDER BY CAST([Total Including Tax] AS float)) OVER() AS q95 FROM [Fact].[Transaction] WHERE [Total Including Tax] IS NOT NULL",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_1_5_IQR FROM [Fact].[Transaction] WHERE [Total Including Tax]<? OR [Total Including Tax]>?",
+    "parameters": [
+      -5192.4,
+      7730.16
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Date]) AS nulls,COUNT_BIG(DISTINCT [Date]) AS distinct_nonnull,MIN([Date]) AS min,MAX([Date]) AS max FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Day Number]) AS nulls,COUNT_BIG(DISTINCT [Day Number]) AS distinct_nonnull,MIN([Day Number]) AS min,MAX([Day Number]) AS max,SUM(CAST(CASE WHEN [Day Number]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Day Number]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Day]) AS nulls,COUNT_BIG(DISTINCT [Day]) AS distinct_nonnull FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Month]) AS nulls,COUNT_BIG(DISTINCT [Month]) AS distinct_nonnull FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Short Month]) AS nulls,COUNT_BIG(DISTINCT [Short Month]) AS distinct_nonnull FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Calendar Month Number]) AS nulls,COUNT_BIG(DISTINCT [Calendar Month Number]) AS distinct_nonnull,MIN([Calendar Month Number]) AS min,MAX([Calendar Month Number]) AS max,SUM(CAST(CASE WHEN [Calendar Month Number]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Calendar Month Number]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Calendar Month Label]) AS nulls,COUNT_BIG(DISTINCT [Calendar Month Label]) AS distinct_nonnull FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Calendar Year]) AS nulls,COUNT_BIG(DISTINCT [Calendar Year]) AS distinct_nonnull,MIN([Calendar Year]) AS min,MAX([Calendar Year]) AS max,SUM(CAST(CASE WHEN [Calendar Year]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Calendar Year]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Calendar Year Label]) AS nulls,COUNT_BIG(DISTINCT [Calendar Year Label]) AS distinct_nonnull FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Fiscal Month Number]) AS nulls,COUNT_BIG(DISTINCT [Fiscal Month Number]) AS distinct_nonnull,MIN([Fiscal Month Number]) AS min,MAX([Fiscal Month Number]) AS max,SUM(CAST(CASE WHEN [Fiscal Month Number]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Fiscal Month Number]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Fiscal Month Label]) AS nulls,COUNT_BIG(DISTINCT [Fiscal Month Label]) AS distinct_nonnull FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Fiscal Year]) AS nulls,COUNT_BIG(DISTINCT [Fiscal Year]) AS distinct_nonnull,MIN([Fiscal Year]) AS min,MAX([Fiscal Year]) AS max,SUM(CAST(CASE WHEN [Fiscal Year]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Fiscal Year]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Fiscal Year Label]) AS nulls,COUNT_BIG(DISTINCT [Fiscal Year Label]) AS distinct_nonnull FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([ISO Week Number]) AS nulls,COUNT_BIG(DISTINCT [ISO Week Number]) AS distinct_nonnull,MIN([ISO Week Number]) AS min,MAX([ISO Week Number]) AS max,SUM(CAST(CASE WHEN [ISO Week Number]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [ISO Week Number]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Dimension].[Date] GROUP BY [Date] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Dimension].[Date] GROUP BY [Day Number],[Day],[Month],[Short Month],[Calendar Month Number],[Calendar Month Label],[Calendar Year],[Calendar Year Label],[Fiscal Month Number],[Fiscal Month Label],[Fiscal Year],[Fiscal Year Label],[ISO Week Number] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Date],126) AS month,COUNT_BIG(*) AS n FROM [Dimension].[Date] WHERE [Date] IS NOT NULL GROUP BY CONVERT(char(7),[Date],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 48
+  },
+  {
+    "sql": "SELECT YEAR([Date]) AS year,COUNT_BIG(*) AS n FROM [Dimension].[Date] WHERE [Date] IS NOT NULL GROUP BY YEAR([Date]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 4
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Stock Item Key]) AS nulls,COUNT_BIG(DISTINCT [Stock Item Key]) AS distinct_nonnull,MIN([Stock Item Key]) AS min,MAX([Stock Item Key]) AS max,SUM(CAST(CASE WHEN [Stock Item Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Stock Item Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([WWI Stock Item ID]) AS nulls,COUNT_BIG(DISTINCT [WWI Stock Item ID]) AS distinct_nonnull,MIN([WWI Stock Item ID]) AS min,MAX([WWI Stock Item ID]) AS max,SUM(CAST(CASE WHEN [WWI Stock Item ID]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [WWI Stock Item ID]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Stock Item]) AS nulls,COUNT_BIG(DISTINCT [Stock Item]) AS distinct_nonnull FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Color]) AS nulls,COUNT_BIG(DISTINCT [Color]) AS distinct_nonnull FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Selling Package]) AS nulls,COUNT_BIG(DISTINCT [Selling Package]) AS distinct_nonnull FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Buying Package]) AS nulls,COUNT_BIG(DISTINCT [Buying Package]) AS distinct_nonnull FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Brand]) AS nulls,COUNT_BIG(DISTINCT [Brand]) AS distinct_nonnull FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Size]) AS nulls,COUNT_BIG(DISTINCT [Size]) AS distinct_nonnull FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Lead Time Days]) AS nulls,COUNT_BIG(DISTINCT [Lead Time Days]) AS distinct_nonnull,MIN([Lead Time Days]) AS min,MAX([Lead Time Days]) AS max,SUM(CAST(CASE WHEN [Lead Time Days]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Lead Time Days]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Quantity Per Outer]) AS nulls,COUNT_BIG(DISTINCT [Quantity Per Outer]) AS distinct_nonnull,MIN([Quantity Per Outer]) AS min,MAX([Quantity Per Outer]) AS max,SUM(CAST(CASE WHEN [Quantity Per Outer]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Quantity Per Outer]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Is Chiller Stock]) AS nulls,COUNT_BIG(DISTINCT [Is Chiller Stock]) AS distinct_nonnull,MIN(CAST([Is Chiller Stock] AS int)) AS min,MAX(CAST([Is Chiller Stock] AS int)) AS max,SUM(CAST(CASE WHEN [Is Chiller Stock]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Is Chiller Stock]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Barcode]) AS nulls,COUNT_BIG(DISTINCT [Barcode]) AS distinct_nonnull FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Tax Rate]) AS nulls,COUNT_BIG(DISTINCT [Tax Rate]) AS distinct_nonnull,MIN([Tax Rate]) AS min,MAX([Tax Rate]) AS max,SUM(CAST(CASE WHEN [Tax Rate]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Tax Rate]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Unit Price]) AS nulls,COUNT_BIG(DISTINCT [Unit Price]) AS distinct_nonnull,MIN([Unit Price]) AS min,MAX([Unit Price]) AS max,SUM(CAST(CASE WHEN [Unit Price]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Unit Price]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Recommended Retail Price]) AS nulls,COUNT_BIG(DISTINCT [Recommended Retail Price]) AS distinct_nonnull,MIN([Recommended Retail Price]) AS min,MAX([Recommended Retail Price]) AS max,SUM(CAST(CASE WHEN [Recommended Retail Price]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Recommended Retail Price]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Typical Weight Per Unit]) AS nulls,COUNT_BIG(DISTINCT [Typical Weight Per Unit]) AS distinct_nonnull,MIN([Typical Weight Per Unit]) AS min,MAX([Typical Weight Per Unit]) AS max,SUM(CAST(CASE WHEN [Typical Weight Per Unit]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Typical Weight Per Unit]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Photo]) AS nulls FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Valid From]) AS nulls,COUNT_BIG(DISTINCT [Valid From]) AS distinct_nonnull,MIN([Valid From]) AS min,MAX([Valid From]) AS max FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Valid To]) AS nulls,COUNT_BIG(DISTINCT [Valid To]) AS distinct_nonnull,MIN([Valid To]) AS min,MAX([Valid To]) AS max FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Lineage Key]) AS nulls,COUNT_BIG(DISTINCT [Lineage Key]) AS distinct_nonnull,MIN([Lineage Key]) AS min,MAX([Lineage Key]) AS max,SUM(CAST(CASE WHEN [Lineage Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Lineage Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Dimension].[Stock Item] GROUP BY [Stock Item Key] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Dimension].[Stock Item] GROUP BY [WWI Stock Item ID],[Stock Item],[Color],[Selling Package],[Buying Package],[Brand],[Size],[Lead Time Days],[Quantity Per Outer],[Is Chiller Stock],[Barcode],[Tax Rate],[Unit Price],[Recommended Retail Price],[Typical Weight Per Unit],[Valid From],[Valid To] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Valid From],126) AS month,COUNT_BIG(*) AS n FROM [Dimension].[Stock Item] WHERE [Valid From] IS NOT NULL GROUP BY CONVERT(char(7),[Valid From],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 3
+  },
+  {
+    "sql": "SELECT YEAR([Valid From]) AS year,COUNT_BIG(*) AS n FROM [Dimension].[Stock Item] WHERE [Valid From] IS NOT NULL GROUP BY YEAR([Valid From]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Valid To],126) AS month,COUNT_BIG(*) AS n FROM [Dimension].[Stock Item] WHERE [Valid To] IS NOT NULL GROUP BY CONVERT(char(7),[Valid To],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT YEAR([Valid To]) AS year,COUNT_BIG(*) AS n FROM [Dimension].[Stock Item] WHERE [Valid To] IS NOT NULL GROUP BY YEAR([Valid To]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Customer]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Customer Key]) AS nulls,COUNT_BIG(DISTINCT [Customer Key]) AS distinct_nonnull,MIN([Customer Key]) AS min,MAX([Customer Key]) AS max,SUM(CAST(CASE WHEN [Customer Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Customer Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Customer]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([WWI Customer ID]) AS nulls,COUNT_BIG(DISTINCT [WWI Customer ID]) AS distinct_nonnull,MIN([WWI Customer ID]) AS min,MAX([WWI Customer ID]) AS max,SUM(CAST(CASE WHEN [WWI Customer ID]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [WWI Customer ID]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Customer]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Customer]) AS nulls,COUNT_BIG(DISTINCT [Customer]) AS distinct_nonnull FROM [Dimension].[Customer]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Bill To Customer]) AS nulls,COUNT_BIG(DISTINCT [Bill To Customer]) AS distinct_nonnull FROM [Dimension].[Customer]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Category]) AS nulls,COUNT_BIG(DISTINCT [Category]) AS distinct_nonnull FROM [Dimension].[Customer]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Buying Group]) AS nulls,COUNT_BIG(DISTINCT [Buying Group]) AS distinct_nonnull FROM [Dimension].[Customer]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Primary Contact]) AS nulls,COUNT_BIG(DISTINCT [Primary Contact]) AS distinct_nonnull FROM [Dimension].[Customer]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Postal Code]) AS nulls,COUNT_BIG(DISTINCT [Postal Code]) AS distinct_nonnull FROM [Dimension].[Customer]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Valid From]) AS nulls,COUNT_BIG(DISTINCT [Valid From]) AS distinct_nonnull,MIN([Valid From]) AS min,MAX([Valid From]) AS max FROM [Dimension].[Customer]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Valid To]) AS nulls,COUNT_BIG(DISTINCT [Valid To]) AS distinct_nonnull,MIN([Valid To]) AS min,MAX([Valid To]) AS max FROM [Dimension].[Customer]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Lineage Key]) AS nulls,COUNT_BIG(DISTINCT [Lineage Key]) AS distinct_nonnull,MIN([Lineage Key]) AS min,MAX([Lineage Key]) AS max,SUM(CAST(CASE WHEN [Lineage Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Lineage Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Customer]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Dimension].[Customer] GROUP BY [Customer Key] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Dimension].[Customer] GROUP BY [WWI Customer ID],[Customer],[Bill To Customer],[Category],[Buying Group],[Primary Contact],[Postal Code],[Valid From],[Valid To] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Valid From],126) AS month,COUNT_BIG(*) AS n FROM [Dimension].[Customer] WHERE [Valid From] IS NOT NULL GROUP BY CONVERT(char(7),[Valid From],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT YEAR([Valid From]) AS year,COUNT_BIG(*) AS n FROM [Dimension].[Customer] WHERE [Valid From] IS NOT NULL GROUP BY YEAR([Valid From]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Valid To],126) AS month,COUNT_BIG(*) AS n FROM [Dimension].[Customer] WHERE [Valid To] IS NOT NULL GROUP BY CONVERT(char(7),[Valid To],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT YEAR([Valid To]) AS year,COUNT_BIG(*) AS n FROM [Dimension].[Customer] WHERE [Valid To] IS NOT NULL GROUP BY YEAR([Valid To]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Supplier]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Supplier Key]) AS nulls,COUNT_BIG(DISTINCT [Supplier Key]) AS distinct_nonnull,MIN([Supplier Key]) AS min,MAX([Supplier Key]) AS max,SUM(CAST(CASE WHEN [Supplier Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Supplier Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Supplier]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([WWI Supplier ID]) AS nulls,COUNT_BIG(DISTINCT [WWI Supplier ID]) AS distinct_nonnull,MIN([WWI Supplier ID]) AS min,MAX([WWI Supplier ID]) AS max,SUM(CAST(CASE WHEN [WWI Supplier ID]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [WWI Supplier ID]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Supplier]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Supplier]) AS nulls,COUNT_BIG(DISTINCT [Supplier]) AS distinct_nonnull FROM [Dimension].[Supplier]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Category]) AS nulls,COUNT_BIG(DISTINCT [Category]) AS distinct_nonnull FROM [Dimension].[Supplier]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Primary Contact]) AS nulls,COUNT_BIG(DISTINCT [Primary Contact]) AS distinct_nonnull FROM [Dimension].[Supplier]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Supplier Reference]) AS nulls,COUNT_BIG(DISTINCT [Supplier Reference]) AS distinct_nonnull FROM [Dimension].[Supplier]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Payment Days]) AS nulls,COUNT_BIG(DISTINCT [Payment Days]) AS distinct_nonnull,MIN([Payment Days]) AS min,MAX([Payment Days]) AS max,SUM(CAST(CASE WHEN [Payment Days]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Payment Days]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Supplier]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Postal Code]) AS nulls,COUNT_BIG(DISTINCT [Postal Code]) AS distinct_nonnull FROM [Dimension].[Supplier]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Valid From]) AS nulls,COUNT_BIG(DISTINCT [Valid From]) AS distinct_nonnull,MIN([Valid From]) AS min,MAX([Valid From]) AS max FROM [Dimension].[Supplier]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Valid To]) AS nulls,COUNT_BIG(DISTINCT [Valid To]) AS distinct_nonnull,MIN([Valid To]) AS min,MAX([Valid To]) AS max FROM [Dimension].[Supplier]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Lineage Key]) AS nulls,COUNT_BIG(DISTINCT [Lineage Key]) AS distinct_nonnull,MIN([Lineage Key]) AS min,MAX([Lineage Key]) AS max,SUM(CAST(CASE WHEN [Lineage Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Lineage Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Supplier]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Dimension].[Supplier] GROUP BY [Supplier Key] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Dimension].[Supplier] GROUP BY [WWI Supplier ID],[Supplier],[Category],[Primary Contact],[Supplier Reference],[Payment Days],[Postal Code],[Valid From],[Valid To] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Valid From],126) AS month,COUNT_BIG(*) AS n FROM [Dimension].[Supplier] WHERE [Valid From] IS NOT NULL GROUP BY CONVERT(char(7),[Valid From],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT YEAR([Valid From]) AS year,COUNT_BIG(*) AS n FROM [Dimension].[Supplier] WHERE [Valid From] IS NOT NULL GROUP BY YEAR([Valid From]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Valid To],126) AS month,COUNT_BIG(*) AS n FROM [Dimension].[Supplier] WHERE [Valid To] IS NOT NULL GROUP BY CONVERT(char(7),[Valid To],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT YEAR([Valid To]) AS year,COUNT_BIG(*) AS n FROM [Dimension].[Supplier] WHERE [Valid To] IS NOT NULL GROUP BY YEAR([Valid To]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Transaction Type]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Transaction Type Key]) AS nulls,COUNT_BIG(DISTINCT [Transaction Type Key]) AS distinct_nonnull,MIN([Transaction Type Key]) AS min,MAX([Transaction Type Key]) AS max,SUM(CAST(CASE WHEN [Transaction Type Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Transaction Type Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Transaction Type]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([WWI Transaction Type ID]) AS nulls,COUNT_BIG(DISTINCT [WWI Transaction Type ID]) AS distinct_nonnull,MIN([WWI Transaction Type ID]) AS min,MAX([WWI Transaction Type ID]) AS max,SUM(CAST(CASE WHEN [WWI Transaction Type ID]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [WWI Transaction Type ID]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Transaction Type]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Transaction Type]) AS nulls,COUNT_BIG(DISTINCT [Transaction Type]) AS distinct_nonnull FROM [Dimension].[Transaction Type]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Valid From]) AS nulls,COUNT_BIG(DISTINCT [Valid From]) AS distinct_nonnull,MIN([Valid From]) AS min,MAX([Valid From]) AS max FROM [Dimension].[Transaction Type]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Valid To]) AS nulls,COUNT_BIG(DISTINCT [Valid To]) AS distinct_nonnull,MIN([Valid To]) AS min,MAX([Valid To]) AS max FROM [Dimension].[Transaction Type]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Lineage Key]) AS nulls,COUNT_BIG(DISTINCT [Lineage Key]) AS distinct_nonnull,MIN([Lineage Key]) AS min,MAX([Lineage Key]) AS max,SUM(CAST(CASE WHEN [Lineage Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Lineage Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Transaction Type]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Dimension].[Transaction Type] GROUP BY [Transaction Type Key] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Dimension].[Transaction Type] GROUP BY [WWI Transaction Type ID],[Transaction Type],[Valid From],[Valid To] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Valid From],126) AS month,COUNT_BIG(*) AS n FROM [Dimension].[Transaction Type] WHERE [Valid From] IS NOT NULL GROUP BY CONVERT(char(7),[Valid From],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT YEAR([Valid From]) AS year,COUNT_BIG(*) AS n FROM [Dimension].[Transaction Type] WHERE [Valid From] IS NOT NULL GROUP BY YEAR([Valid From]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Valid To],126) AS month,COUNT_BIG(*) AS n FROM [Dimension].[Transaction Type] WHERE [Valid To] IS NOT NULL GROUP BY CONVERT(char(7),[Valid To],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT YEAR([Valid To]) AS year,COUNT_BIG(*) AS n FROM [Dimension].[Transaction Type] WHERE [Valid To] IS NOT NULL GROUP BY YEAR([Valid To]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Payment Method]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Payment Method Key]) AS nulls,COUNT_BIG(DISTINCT [Payment Method Key]) AS distinct_nonnull,MIN([Payment Method Key]) AS min,MAX([Payment Method Key]) AS max,SUM(CAST(CASE WHEN [Payment Method Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Payment Method Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Payment Method]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([WWI Payment Method ID]) AS nulls,COUNT_BIG(DISTINCT [WWI Payment Method ID]) AS distinct_nonnull,MIN([WWI Payment Method ID]) AS min,MAX([WWI Payment Method ID]) AS max,SUM(CAST(CASE WHEN [WWI Payment Method ID]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [WWI Payment Method ID]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Payment Method]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Payment Method]) AS nulls,COUNT_BIG(DISTINCT [Payment Method]) AS distinct_nonnull FROM [Dimension].[Payment Method]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Valid From]) AS nulls,COUNT_BIG(DISTINCT [Valid From]) AS distinct_nonnull,MIN([Valid From]) AS min,MAX([Valid From]) AS max FROM [Dimension].[Payment Method]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Valid To]) AS nulls,COUNT_BIG(DISTINCT [Valid To]) AS distinct_nonnull,MIN([Valid To]) AS min,MAX([Valid To]) AS max FROM [Dimension].[Payment Method]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Lineage Key]) AS nulls,COUNT_BIG(DISTINCT [Lineage Key]) AS distinct_nonnull,MIN([Lineage Key]) AS min,MAX([Lineage Key]) AS max,SUM(CAST(CASE WHEN [Lineage Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Lineage Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Payment Method]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Dimension].[Payment Method] GROUP BY [Payment Method Key] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Dimension].[Payment Method] GROUP BY [WWI Payment Method ID],[Payment Method],[Valid From],[Valid To] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Valid From],126) AS month,COUNT_BIG(*) AS n FROM [Dimension].[Payment Method] WHERE [Valid From] IS NOT NULL GROUP BY CONVERT(char(7),[Valid From],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT YEAR([Valid From]) AS year,COUNT_BIG(*) AS n FROM [Dimension].[Payment Method] WHERE [Valid From] IS NOT NULL GROUP BY YEAR([Valid From]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Valid To],126) AS month,COUNT_BIG(*) AS n FROM [Dimension].[Payment Method] WHERE [Valid To] IS NOT NULL GROUP BY CONVERT(char(7),[Valid To],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT YEAR([Valid To]) AS year,COUNT_BIG(*) AS n FROM [Dimension].[Payment Method] WHERE [Valid To] IS NOT NULL GROUP BY YEAR([Valid To]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([City Key]) AS nulls,COUNT_BIG(DISTINCT [City Key]) AS distinct_nonnull,MIN([City Key]) AS min,MAX([City Key]) AS max,SUM(CAST(CASE WHEN [City Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [City Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([WWI City ID]) AS nulls,COUNT_BIG(DISTINCT [WWI City ID]) AS distinct_nonnull,MIN([WWI City ID]) AS min,MAX([WWI City ID]) AS max,SUM(CAST(CASE WHEN [WWI City ID]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [WWI City ID]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([City]) AS nulls,COUNT_BIG(DISTINCT [City]) AS distinct_nonnull FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([State Province]) AS nulls,COUNT_BIG(DISTINCT [State Province]) AS distinct_nonnull FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Country]) AS nulls,COUNT_BIG(DISTINCT [Country]) AS distinct_nonnull FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Continent]) AS nulls,COUNT_BIG(DISTINCT [Continent]) AS distinct_nonnull FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Sales Territory]) AS nulls,COUNT_BIG(DISTINCT [Sales Territory]) AS distinct_nonnull FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Region]) AS nulls,COUNT_BIG(DISTINCT [Region]) AS distinct_nonnull FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Subregion]) AS nulls,COUNT_BIG(DISTINCT [Subregion]) AS distinct_nonnull FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Location]) AS nulls FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Latest Recorded Population]) AS nulls,COUNT_BIG(DISTINCT [Latest Recorded Population]) AS distinct_nonnull,MIN([Latest Recorded Population]) AS min,MAX([Latest Recorded Population]) AS max,SUM(CAST(CASE WHEN [Latest Recorded Population]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Latest Recorded Population]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Valid From]) AS nulls,COUNT_BIG(DISTINCT [Valid From]) AS distinct_nonnull,MIN([Valid From]) AS min,MAX([Valid From]) AS max FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Valid To]) AS nulls,COUNT_BIG(DISTINCT [Valid To]) AS distinct_nonnull,MIN([Valid To]) AS min,MAX([Valid To]) AS max FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Lineage Key]) AS nulls,COUNT_BIG(DISTINCT [Lineage Key]) AS distinct_nonnull,MIN([Lineage Key]) AS min,MAX([Lineage Key]) AS max,SUM(CAST(CASE WHEN [Lineage Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Lineage Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Dimension].[City] GROUP BY [City Key] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Dimension].[City] GROUP BY [WWI City ID],[City],[State Province],[Country],[Continent],[Sales Territory],[Region],[Subregion],[Latest Recorded Population],[Valid From],[Valid To] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Valid From],126) AS month,COUNT_BIG(*) AS n FROM [Dimension].[City] WHERE [Valid From] IS NOT NULL GROUP BY CONVERT(char(7),[Valid From],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 4
+  },
+  {
+    "sql": "SELECT YEAR([Valid From]) AS year,COUNT_BIG(*) AS n FROM [Dimension].[City] WHERE [Valid From] IS NOT NULL GROUP BY YEAR([Valid From]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 3
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Valid To],126) AS month,COUNT_BIG(*) AS n FROM [Dimension].[City] WHERE [Valid To] IS NOT NULL GROUP BY CONVERT(char(7),[Valid To],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 5
+  },
+  {
+    "sql": "SELECT YEAR([Valid To]) AS year,COUNT_BIG(*) AS n FROM [Dimension].[City] WHERE [Valid To] IS NOT NULL GROUP BY YEAR([Valid To]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 4
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Employee]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Employee Key]) AS nulls,COUNT_BIG(DISTINCT [Employee Key]) AS distinct_nonnull,MIN([Employee Key]) AS min,MAX([Employee Key]) AS max,SUM(CAST(CASE WHEN [Employee Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Employee Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Employee]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([WWI Employee ID]) AS nulls,COUNT_BIG(DISTINCT [WWI Employee ID]) AS distinct_nonnull,MIN([WWI Employee ID]) AS min,MAX([WWI Employee ID]) AS max,SUM(CAST(CASE WHEN [WWI Employee ID]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [WWI Employee ID]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Employee]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Employee]) AS nulls,COUNT_BIG(DISTINCT [Employee]) AS distinct_nonnull FROM [Dimension].[Employee]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Preferred Name]) AS nulls,COUNT_BIG(DISTINCT [Preferred Name]) AS distinct_nonnull FROM [Dimension].[Employee]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Is Salesperson]) AS nulls,COUNT_BIG(DISTINCT [Is Salesperson]) AS distinct_nonnull,MIN(CAST([Is Salesperson] AS int)) AS min,MAX(CAST([Is Salesperson] AS int)) AS max,SUM(CAST(CASE WHEN [Is Salesperson]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Is Salesperson]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Employee]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Photo]) AS nulls FROM [Dimension].[Employee]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Valid From]) AS nulls,COUNT_BIG(DISTINCT [Valid From]) AS distinct_nonnull,MIN([Valid From]) AS min,MAX([Valid From]) AS max FROM [Dimension].[Employee]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Valid To]) AS nulls,COUNT_BIG(DISTINCT [Valid To]) AS distinct_nonnull,MIN([Valid To]) AS min,MAX([Valid To]) AS max FROM [Dimension].[Employee]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*)-COUNT_BIG([Lineage Key]) AS nulls,COUNT_BIG(DISTINCT [Lineage Key]) AS distinct_nonnull,MIN([Lineage Key]) AS min,MAX([Lineage Key]) AS max,SUM(CAST(CASE WHEN [Lineage Key]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN [Lineage Key]=0 THEN 1 ELSE 0 END AS bigint)) AS zero FROM [Dimension].[Employee]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Dimension].[Employee] GROUP BY [Employee Key] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT COUNT_BIG(*) AS n FROM [Dimension].[Employee] GROUP BY [WWI Employee ID],[Employee],[Preferred Name],[Is Salesperson],[Valid From],[Valid To] HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Valid From],126) AS month,COUNT_BIG(*) AS n FROM [Dimension].[Employee] WHERE [Valid From] IS NOT NULL GROUP BY CONVERT(char(7),[Valid From],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 39
+  },
+  {
+    "sql": "SELECT YEAR([Valid From]) AS year,COUNT_BIG(*) AS n FROM [Dimension].[Employee] WHERE [Valid From] IS NOT NULL GROUP BY YEAR([Valid From]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 4
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),[Valid To],126) AS month,COUNT_BIG(*) AS n FROM [Dimension].[Employee] WHERE [Valid To] IS NOT NULL GROUP BY CONVERT(char(7),[Valid To],126) ORDER BY month",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 40
+  },
+  {
+    "sql": "SELECT YEAR([Valid To]) AS year,COUNT_BIG(*) AS n FROM [Dimension].[Employee] WHERE [Valid To] IS NOT NULL GROUP BY YEAR([Valid To]) ORDER BY year",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 5
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS documents,MIN(n) AS min_lines,MAX(n) AS max_lines,AVG(CAST(n AS float)) AS mean_lines,SUM(CAST(CASE WHEN n>1 THEN 1 ELSE 0 END AS bigint)) AS documents_multiple_lines FROM (SELECT [WWI Order ID],COUNT_BIG(*) AS n FROM [Fact].[Order] WHERE [WWI Order ID] IS NOT NULL GROUP BY [WWI Order ID]) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM (SELECT [WWI Order ID] FROM [Fact].[Order] WHERE [WWI Order ID] IS NOT NULL GROUP BY [WWI Order ID] HAVING COUNT(DISTINCT [Order Date Key])>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS documents,MIN(n) AS min_lines,MAX(n) AS max_lines,AVG(CAST(n AS float)) AS mean_lines,SUM(CAST(CASE WHEN n>1 THEN 1 ELSE 0 END AS bigint)) AS documents_multiple_lines FROM (SELECT [WWI Purchase Order ID],COUNT_BIG(*) AS n FROM [Fact].[Purchase] WHERE [WWI Purchase Order ID] IS NOT NULL GROUP BY [WWI Purchase Order ID]) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM (SELECT [WWI Purchase Order ID] FROM [Fact].[Purchase] WHERE [WWI Purchase Order ID] IS NOT NULL GROUP BY [WWI Purchase Order ID] HAVING COUNT(DISTINCT [Date Key])>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS documents,MIN(n) AS min_lines,MAX(n) AS max_lines,AVG(CAST(n AS float)) AS mean_lines,SUM(CAST(CASE WHEN n>1 THEN 1 ELSE 0 END AS bigint)) AS documents_multiple_lines FROM (SELECT [WWI Stock Item Transaction ID],COUNT_BIG(*) AS n FROM [Fact].[Movement] WHERE [WWI Stock Item Transaction ID] IS NOT NULL GROUP BY [WWI Stock Item Transaction ID]) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM (SELECT [WWI Stock Item Transaction ID] FROM [Fact].[Movement] WHERE [WWI Stock Item Transaction ID] IS NOT NULL GROUP BY [WWI Stock Item Transaction ID] HAVING COUNT(DISTINCT [Date Key])>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS identifiers,MAX(n) AS max_rows_per_identifier,SUM(CAST(CASE WHEN n>1 THEN 1 ELSE 0 END AS bigint)) AS repeated_identifiers FROM (SELECT [WWI Customer Transaction ID],COUNT_BIG(*) AS n FROM [Fact].[Transaction] WHERE [WWI Customer Transaction ID] IS NOT NULL GROUP BY [WWI Customer Transaction ID]) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS identifiers,MAX(n) AS max_rows_per_identifier,SUM(CAST(CASE WHEN n>1 THEN 1 ELSE 0 END AS bigint)) AS repeated_identifiers FROM (SELECT [WWI Supplier Transaction ID],COUNT_BIG(*) AS n FROM [Fact].[Transaction] WHERE [WWI Supplier Transaction ID] IS NOT NULL GROUP BY [WWI Supplier Transaction ID]) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS identifiers,MAX(n) AS max_rows_per_identifier,SUM(CAST(CASE WHEN n>1 THEN 1 ELSE 0 END AS bigint)) AS repeated_identifiers FROM (SELECT [WWI Invoice ID],COUNT_BIG(*) AS n FROM [Fact].[Transaction] WHERE [WWI Invoice ID] IS NOT NULL GROUP BY [WWI Invoice ID]) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS identifiers,MAX(n) AS max_rows_per_identifier,SUM(CAST(CASE WHEN n>1 THEN 1 ELSE 0 END AS bigint)) AS repeated_identifiers FROM (SELECT [WWI Purchase Order ID],COUNT_BIG(*) AS n FROM [Fact].[Transaction] WHERE [WWI Purchase Order ID] IS NOT NULL GROUP BY [WWI Purchase Order ID]) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS documents,MIN(n) AS min_movements,MAX(n) AS max_movements,AVG(CAST(n AS float)) AS mean_movements FROM (SELECT [WWI Invoice ID],COUNT_BIG(*) AS n FROM [Fact].[Movement] WHERE [WWI Invoice ID] IS NOT NULL GROUP BY [WWI Invoice ID]) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS documents,MIN(n) AS min_movements,MAX(n) AS max_movements,AVG(CAST(n AS float)) AS mean_movements FROM (SELECT [WWI Purchase Order ID],COUNT_BIG(*) AS n FROM [Fact].[Movement] WHERE [WWI Purchase Order ID] IS NOT NULL GROUP BY [WWI Purchase Order ID]) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT SUM(CAST(CASE WHEN [Picked Date Key]<[Order Date Key] THEN 1 ELSE 0 END AS bigint)) AS picked_before_order,COUNT(DISTINCT [WWI Order ID]) AS documents FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT DATEDIFF(day,[Order Date Key],[Picked Date Key]) AS days_to_pick,COUNT_BIG(*) AS lines FROM [Fact].[Order] GROUP BY DATEDIFF(day,[Order Date Key],[Picked Date Key]) ORDER BY days_to_pick",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 481
+  },
+  {
+    "sql": "SELECT t.[Transaction Type],COUNT_BIG(*) AS rows,MIN(f.[Quantity]) AS min_quantity,MAX(f.[Quantity]) AS max_quantity,SUM(CAST(CASE WHEN f.[Quantity]<0 THEN 1 ELSE 0 END AS bigint)) AS negative,SUM(CAST(CASE WHEN f.[Quantity]>0 THEN 1 ELSE 0 END AS bigint)) AS positive,SUM(CAST(f.[Quantity] AS bigint)) AS net_units FROM [Fact].[Movement] f JOIN [Dimension].[Transaction Type] t ON f.[Transaction Type Key]=t.[Transaction Type Key] GROUP BY t.[Transaction Type] ORDER BY t.[Transaction Type]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 3
+  },
+  {
+    "sql": "SELECT t.[Transaction Type],COUNT_BIG(*) AS rows,SUM(CAST(CASE WHEN f.[Total Including Tax]<0 THEN 1 ELSE 0 END AS bigint)) AS negative_amount,SUM(CAST(CASE WHEN f.[Outstanding Balance]<>0 THEN 1 ELSE 0 END AS bigint)) AS nonzero_outstanding,SUM(CAST(f.[Is Finalized] AS bigint)) AS finalized FROM [Fact].[Transaction] f JOIN [Dimension].[Transaction Type] t ON f.[Transaction Type Key]=t.[Transaction Type Key] GROUP BY t.[Transaction Type] ORDER BY t.[Transaction Type]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 4
+  },
+  {
+    "sql": "SELECT [Is Order Finalized] AS finalized,COUNT_BIG(*) AS lines,SUM(CAST(CASE WHEN [Received Outers]>[Ordered Outers] THEN 1 ELSE 0 END AS bigint)) AS received_exceeds_ordered,SUM(CAST(CASE WHEN [Received Outers]=0 THEN 1 ELSE 0 END AS bigint)) AS zero_received FROM [Fact].[Purchase] GROUP BY [Is Order Finalized]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS business_ids,MAX(n) AS max_versions,SUM(CAST(CASE WHEN n>1 THEN 1 ELSE 0 END AS bigint)) AS ids_multiple_versions FROM (SELECT [WWI Stock Item ID],COUNT_BIG(*) AS n FROM [Dimension].[Stock Item] GROUP BY [WWI Stock Item ID]) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Stock Item] WHERE [Valid From]>=[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Stock Item] a JOIN [Dimension].[Stock Item] b ON a.[WWI Stock Item ID]=b.[WWI Stock Item ID] AND a.[Stock Item Key]<b.[Stock Item Key] AND a.[Valid From]<b.[Valid To] AND b.[Valid From]<a.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS business_ids,MAX(n) AS max_versions,SUM(CAST(CASE WHEN n>1 THEN 1 ELSE 0 END AS bigint)) AS ids_multiple_versions FROM (SELECT [WWI Customer ID],COUNT_BIG(*) AS n FROM [Dimension].[Customer] GROUP BY [WWI Customer ID]) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Customer] WHERE [Valid From]>=[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Customer] a JOIN [Dimension].[Customer] b ON a.[WWI Customer ID]=b.[WWI Customer ID] AND a.[Customer Key]<b.[Customer Key] AND a.[Valid From]<b.[Valid To] AND b.[Valid From]<a.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS business_ids,MAX(n) AS max_versions,SUM(CAST(CASE WHEN n>1 THEN 1 ELSE 0 END AS bigint)) AS ids_multiple_versions FROM (SELECT [WWI Supplier ID],COUNT_BIG(*) AS n FROM [Dimension].[Supplier] GROUP BY [WWI Supplier ID]) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Supplier] WHERE [Valid From]>=[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Supplier] a JOIN [Dimension].[Supplier] b ON a.[WWI Supplier ID]=b.[WWI Supplier ID] AND a.[Supplier Key]<b.[Supplier Key] AND a.[Valid From]<b.[Valid To] AND b.[Valid From]<a.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS business_ids,MAX(n) AS max_versions,SUM(CAST(CASE WHEN n>1 THEN 1 ELSE 0 END AS bigint)) AS ids_multiple_versions FROM (SELECT [WWI Transaction Type ID],COUNT_BIG(*) AS n FROM [Dimension].[Transaction Type] GROUP BY [WWI Transaction Type ID]) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Transaction Type] WHERE [Valid From]>=[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Transaction Type] a JOIN [Dimension].[Transaction Type] b ON a.[WWI Transaction Type ID]=b.[WWI Transaction Type ID] AND a.[Transaction Type Key]<b.[Transaction Type Key] AND a.[Valid From]<b.[Valid To] AND b.[Valid From]<a.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS business_ids,MAX(n) AS max_versions,SUM(CAST(CASE WHEN n>1 THEN 1 ELSE 0 END AS bigint)) AS ids_multiple_versions FROM (SELECT [WWI Payment Method ID],COUNT_BIG(*) AS n FROM [Dimension].[Payment Method] GROUP BY [WWI Payment Method ID]) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Payment Method] WHERE [Valid From]>=[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Payment Method] a JOIN [Dimension].[Payment Method] b ON a.[WWI Payment Method ID]=b.[WWI Payment Method ID] AND a.[Payment Method Key]<b.[Payment Method Key] AND a.[Valid From]<b.[Valid To] AND b.[Valid From]<a.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS business_ids,MAX(n) AS max_versions,SUM(CAST(CASE WHEN n>1 THEN 1 ELSE 0 END AS bigint)) AS ids_multiple_versions FROM (SELECT [WWI City ID],COUNT_BIG(*) AS n FROM [Dimension].[City] GROUP BY [WWI City ID]) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[City] WHERE [Valid From]>=[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[City] a JOIN [Dimension].[City] b ON a.[WWI City ID]=b.[WWI City ID] AND a.[City Key]<b.[City Key] AND a.[Valid From]<b.[Valid To] AND b.[Valid From]<a.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS business_ids,MAX(n) AS max_versions,SUM(CAST(CASE WHEN n>1 THEN 1 ELSE 0 END AS bigint)) AS ids_multiple_versions FROM (SELECT [WWI Employee ID],COUNT_BIG(*) AS n FROM [Dimension].[Employee] GROUP BY [WWI Employee ID]) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Employee] WHERE [Valid From]>=[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS n FROM [Dimension].[Employee] a JOIN [Dimension].[Employee] b ON a.[WWI Employee ID]=b.[WWI Employee ID] AND a.[Employee Key]<b.[Employee Key] AND a.[Valid From]<b.[Valid To] AND b.[Valid From]<a.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_event_date_interval FROM [Fact].[Movement] f JOIN [Dimension].[Customer] d ON f.[Customer Key]=d.[Customer Key] WHERE CAST(f.[Date Key] AS datetime2)<d.[Valid From] OR CAST(f.[Date Key] AS datetime2)>=d.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_event_date_interval FROM [Fact].[Movement] f JOIN [Dimension].[Stock Item] d ON f.[Stock Item Key]=d.[Stock Item Key] WHERE CAST(f.[Date Key] AS datetime2)<d.[Valid From] OR CAST(f.[Date Key] AS datetime2)>=d.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_event_date_interval FROM [Fact].[Movement] f JOIN [Dimension].[Supplier] d ON f.[Supplier Key]=d.[Supplier Key] WHERE CAST(f.[Date Key] AS datetime2)<d.[Valid From] OR CAST(f.[Date Key] AS datetime2)>=d.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_event_date_interval FROM [Fact].[Movement] f JOIN [Dimension].[Transaction Type] d ON f.[Transaction Type Key]=d.[Transaction Type Key] WHERE CAST(f.[Date Key] AS datetime2)<d.[Valid From] OR CAST(f.[Date Key] AS datetime2)>=d.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_event_date_interval FROM [Fact].[Order] f JOIN [Dimension].[City] d ON f.[City Key]=d.[City Key] WHERE CAST(f.[Order Date Key] AS datetime2)<d.[Valid From] OR CAST(f.[Order Date Key] AS datetime2)>=d.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_event_date_interval FROM [Fact].[Order] f JOIN [Dimension].[Customer] d ON f.[Customer Key]=d.[Customer Key] WHERE CAST(f.[Order Date Key] AS datetime2)<d.[Valid From] OR CAST(f.[Order Date Key] AS datetime2)>=d.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_event_date_interval FROM [Fact].[Order] f JOIN [Dimension].[Employee] d ON f.[Picker Key]=d.[Employee Key] WHERE CAST(f.[Order Date Key] AS datetime2)<d.[Valid From] OR CAST(f.[Order Date Key] AS datetime2)>=d.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_event_date_interval FROM [Fact].[Order] f JOIN [Dimension].[Employee] d ON f.[Salesperson Key]=d.[Employee Key] WHERE CAST(f.[Order Date Key] AS datetime2)<d.[Valid From] OR CAST(f.[Order Date Key] AS datetime2)>=d.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_event_date_interval FROM [Fact].[Order] f JOIN [Dimension].[Stock Item] d ON f.[Stock Item Key]=d.[Stock Item Key] WHERE CAST(f.[Order Date Key] AS datetime2)<d.[Valid From] OR CAST(f.[Order Date Key] AS datetime2)>=d.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_event_date_interval FROM [Fact].[Purchase] f JOIN [Dimension].[Stock Item] d ON f.[Stock Item Key]=d.[Stock Item Key] WHERE CAST(f.[Date Key] AS datetime2)<d.[Valid From] OR CAST(f.[Date Key] AS datetime2)>=d.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_event_date_interval FROM [Fact].[Purchase] f JOIN [Dimension].[Supplier] d ON f.[Supplier Key]=d.[Supplier Key] WHERE CAST(f.[Date Key] AS datetime2)<d.[Valid From] OR CAST(f.[Date Key] AS datetime2)>=d.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_event_date_interval FROM [Fact].[Transaction] f JOIN [Dimension].[Customer] d ON f.[Bill To Customer Key]=d.[Customer Key] WHERE CAST(f.[Date Key] AS datetime2)<d.[Valid From] OR CAST(f.[Date Key] AS datetime2)>=d.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_event_date_interval FROM [Fact].[Transaction] f JOIN [Dimension].[Customer] d ON f.[Customer Key]=d.[Customer Key] WHERE CAST(f.[Date Key] AS datetime2)<d.[Valid From] OR CAST(f.[Date Key] AS datetime2)>=d.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_event_date_interval FROM [Fact].[Transaction] f JOIN [Dimension].[Payment Method] d ON f.[Payment Method Key]=d.[Payment Method Key] WHERE CAST(f.[Date Key] AS datetime2)<d.[Valid From] OR CAST(f.[Date Key] AS datetime2)>=d.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_event_date_interval FROM [Fact].[Transaction] f JOIN [Dimension].[Supplier] d ON f.[Supplier Key]=d.[Supplier Key] WHERE CAST(f.[Date Key] AS datetime2)<d.[Valid From] OR CAST(f.[Date Key] AS datetime2)>=d.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS outside_event_date_interval FROM [Fact].[Transaction] f JOIN [Dimension].[Transaction Type] d ON f.[Transaction Type Key]=d.[Transaction Type Key] WHERE CAST(f.[Date Key] AS datetime2)<d.[Valid From] OR CAST(f.[Date Key] AS datetime2)>=d.[Valid To]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,MIN(month) AS min_month,MAX(month) AS max_month,SUM(CAST(CASE WHEN net_units>0 THEN 1 ELSE 0 END AS bigint)) AS positive_net_groups,SUM(CAST(CASE WHEN net_units<0 THEN 1 ELSE 0 END AS bigint)) AS negative_net_groups,SUM(CAST(CASE WHEN net_units=0 THEN 1 ELSE 0 END AS bigint)) AS zero_net_groups FROM (SELECT si.[WWI Stock Item ID],CONVERT(char(7),f.[Order Date Key],126) AS month,SUM(CAST(f.[Quantity] AS bigint)) AS net_units FROM [Fact].[Order] f JOIN [Dimension].[Stock Item] si ON f.[Stock Item Key]=si.[Stock Item Key] GROUP BY si.[WWI Stock Item ID],CONVERT(char(7),f.[Order Date Key],126)) g",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,MIN(month) AS min_month,MAX(month) AS max_month,SUM(CAST(CASE WHEN net_units>0 THEN 1 ELSE 0 END AS bigint)) AS positive_net_groups,SUM(CAST(CASE WHEN net_units<0 THEN 1 ELSE 0 END AS bigint)) AS negative_net_groups,SUM(CAST(CASE WHEN net_units=0 THEN 1 ELSE 0 END AS bigint)) AS zero_net_groups FROM (SELECT si.[WWI Stock Item ID],CONVERT(char(7),f.[Date Key],126) AS month,SUM(CAST(f.[Ordered Quantity] AS bigint)) AS net_units FROM [Fact].[Purchase] f JOIN [Dimension].[Stock Item] si ON f.[Stock Item Key]=si.[Stock Item Key] GROUP BY si.[WWI Stock Item ID],CONVERT(char(7),f.[Date Key],126)) g",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,MIN(month) AS min_month,MAX(month) AS max_month,SUM(CAST(CASE WHEN net_units>0 THEN 1 ELSE 0 END AS bigint)) AS positive_net_groups,SUM(CAST(CASE WHEN net_units<0 THEN 1 ELSE 0 END AS bigint)) AS negative_net_groups,SUM(CAST(CASE WHEN net_units=0 THEN 1 ELSE 0 END AS bigint)) AS zero_net_groups FROM (SELECT si.[WWI Stock Item ID],CONVERT(char(7),f.[Date Key],126) AS month,SUM(CAST(f.[Quantity] AS bigint)) AS net_units FROM [Fact].[Movement] f JOIN [Dimension].[Stock Item] si ON f.[Stock Item Key]=si.[Stock Item Key] GROUP BY si.[WWI Stock Item ID],CONVERT(char(7),f.[Date Key],126)) g",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,COUNT(DISTINCT s.[WWI Stock Item ID]) AS business_products,MIN(s.[Valid From]) AS min_dimension_valid_from,MAX(s.[Valid From]) AS max_dimension_valid_from FROM [Fact].[Stock Holding] h JOIN [Dimension].[Stock Item] s ON h.[Stock Item Key]=s.[Stock Item Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT ps.name AS parent_schema,pt.name AS parent_table,pc.name AS parent_column FROM sys.foreign_key_columns f JOIN sys.tables pt ON pt.object_id=f.parent_object_id JOIN sys.schemas ps ON ps.schema_id=pt.schema_id JOIN sys.columns pc ON pc.object_id=pt.object_id AND pc.column_id=f.parent_column_id JOIN sys.tables rt ON rt.object_id=f.referenced_object_id WHERE ps.name=? AND rt.name<>?",
+    "parameters": [
+      "Fact",
+      "Date"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 22
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS zero_key_rows FROM [Fact].[Order] WHERE [City Key]=0",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS zero_key_rows FROM [Fact].[Movement] WHERE [Customer Key]=0",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS zero_key_rows FROM [Fact].[Order] WHERE [Customer Key]=0",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS zero_key_rows FROM [Fact].[Transaction] WHERE [Customer Key]=0",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS zero_key_rows FROM [Fact].[Transaction] WHERE [Bill To Customer Key]=0",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS zero_key_rows FROM [Fact].[Order] WHERE [Salesperson Key]=0",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS zero_key_rows FROM [Fact].[Order] WHERE [Picker Key]=0",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS zero_key_rows FROM [Fact].[Transaction] WHERE [Payment Method Key]=0",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS zero_key_rows FROM [Fact].[Movement] WHERE [Stock Item Key]=0",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS zero_key_rows FROM [Fact].[Order] WHERE [Stock Item Key]=0",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS zero_key_rows FROM [Fact].[Purchase] WHERE [Stock Item Key]=0",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS zero_key_rows FROM [Fact].[Stock Holding] WHERE [Stock Item Key]=0",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS zero_key_rows FROM [Fact].[Movement] WHERE [Supplier Key]=0",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS zero_key_rows FROM [Fact].[Purchase] WHERE [Supplier Key]=0",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS zero_key_rows FROM [Fact].[Transaction] WHERE [Supplier Key]=0",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS zero_key_rows FROM [Fact].[Movement] WHERE [Transaction Type Key]=0",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS zero_key_rows FROM [Fact].[Transaction] WHERE [Transaction Type Key]=0",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT pt.name AS fact,pc.name AS role,rt.name AS dimension,rc.name AS dimension_key,bc.name AS business_id FROM sys.foreign_key_columns f JOIN sys.tables pt ON pt.object_id=f.parent_object_id JOIN sys.schemas ps ON ps.schema_id=pt.schema_id JOIN sys.columns pc ON pc.object_id=pt.object_id AND pc.column_id=f.parent_column_id JOIN sys.tables rt ON rt.object_id=f.referenced_object_id JOIN sys.columns rc ON rc.object_id=rt.object_id AND rc.column_id=f.referenced_column_id JOIN sys.columns bc ON bc.object_id=rt.object_id WHERE ps.name=? AND bc.name LIKE ?",
+    "parameters": [
+      "Fact",
+      "WWI % ID"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 22
+  },
+  {
+    "sql": "SELECT COUNT_BIG(DISTINCT CASE WHEN d.[WWI City ID]<>0 THEN d.[WWI City ID] END) AS real_business_ids FROM [Fact].[Order] f JOIN [Dimension].[City] d ON f.[City Key]=d.[City Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(DISTINCT CASE WHEN d.[WWI Customer ID]<>0 THEN d.[WWI Customer ID] END) AS real_business_ids FROM [Fact].[Movement] f JOIN [Dimension].[Customer] d ON f.[Customer Key]=d.[Customer Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(DISTINCT CASE WHEN d.[WWI Customer ID]<>0 THEN d.[WWI Customer ID] END) AS real_business_ids FROM [Fact].[Order] f JOIN [Dimension].[Customer] d ON f.[Customer Key]=d.[Customer Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(DISTINCT CASE WHEN d.[WWI Customer ID]<>0 THEN d.[WWI Customer ID] END) AS real_business_ids FROM [Fact].[Transaction] f JOIN [Dimension].[Customer] d ON f.[Customer Key]=d.[Customer Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(DISTINCT CASE WHEN d.[WWI Customer ID]<>0 THEN d.[WWI Customer ID] END) AS real_business_ids FROM [Fact].[Transaction] f JOIN [Dimension].[Customer] d ON f.[Bill To Customer Key]=d.[Customer Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(DISTINCT CASE WHEN d.[WWI Employee ID]<>0 THEN d.[WWI Employee ID] END) AS real_business_ids FROM [Fact].[Order] f JOIN [Dimension].[Employee] d ON f.[Salesperson Key]=d.[Employee Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(DISTINCT CASE WHEN d.[WWI Employee ID]<>0 THEN d.[WWI Employee ID] END) AS real_business_ids FROM [Fact].[Order] f JOIN [Dimension].[Employee] d ON f.[Picker Key]=d.[Employee Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(DISTINCT CASE WHEN d.[WWI Payment Method ID]<>0 THEN d.[WWI Payment Method ID] END) AS real_business_ids FROM [Fact].[Transaction] f JOIN [Dimension].[Payment Method] d ON f.[Payment Method Key]=d.[Payment Method Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(DISTINCT CASE WHEN d.[WWI Stock Item ID]<>0 THEN d.[WWI Stock Item ID] END) AS real_business_ids FROM [Fact].[Movement] f JOIN [Dimension].[Stock Item] d ON f.[Stock Item Key]=d.[Stock Item Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(DISTINCT CASE WHEN d.[WWI Stock Item ID]<>0 THEN d.[WWI Stock Item ID] END) AS real_business_ids FROM [Fact].[Order] f JOIN [Dimension].[Stock Item] d ON f.[Stock Item Key]=d.[Stock Item Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(DISTINCT CASE WHEN d.[WWI Stock Item ID]<>0 THEN d.[WWI Stock Item ID] END) AS real_business_ids FROM [Fact].[Purchase] f JOIN [Dimension].[Stock Item] d ON f.[Stock Item Key]=d.[Stock Item Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(DISTINCT CASE WHEN d.[WWI Stock Item ID]<>0 THEN d.[WWI Stock Item ID] END) AS real_business_ids FROM [Fact].[Stock Holding] f JOIN [Dimension].[Stock Item] d ON f.[Stock Item Key]=d.[Stock Item Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(DISTINCT CASE WHEN d.[WWI Supplier ID]<>0 THEN d.[WWI Supplier ID] END) AS real_business_ids FROM [Fact].[Movement] f JOIN [Dimension].[Supplier] d ON f.[Supplier Key]=d.[Supplier Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(DISTINCT CASE WHEN d.[WWI Supplier ID]<>0 THEN d.[WWI Supplier ID] END) AS real_business_ids FROM [Fact].[Purchase] f JOIN [Dimension].[Supplier] d ON f.[Supplier Key]=d.[Supplier Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(DISTINCT CASE WHEN d.[WWI Supplier ID]<>0 THEN d.[WWI Supplier ID] END) AS real_business_ids FROM [Fact].[Transaction] f JOIN [Dimension].[Supplier] d ON f.[Supplier Key]=d.[Supplier Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(DISTINCT CASE WHEN d.[WWI Transaction Type ID]<>0 THEN d.[WWI Transaction Type ID] END) AS real_business_ids FROM [Fact].[Movement] f JOIN [Dimension].[Transaction Type] d ON f.[Transaction Type Key]=d.[Transaction Type Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(DISTINCT CASE WHEN d.[WWI Transaction Type ID]<>0 THEN d.[WWI Transaction Type ID] END) AS real_business_ids FROM [Fact].[Transaction] f JOIN [Dimension].[Transaction Type] d ON f.[Transaction Type Key]=d.[Transaction Type Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT TOP (10) a.[WWI Supplier ID] AS business_id,a.[Supplier Key] AS key_a,b.[Supplier Key] AS key_b,a.[Valid From] AS from_a,a.[Valid To] AS to_a,b.[Valid From] AS from_b,b.[Valid To] AS to_b FROM [Dimension].[Supplier] a JOIN [Dimension].[Supplier] b ON a.[WWI Supplier ID]=b.[WWI Supplier ID] AND a.[Supplier Key]<b.[Supplier Key] AND a.[Valid From]<b.[Valid To] AND b.[Valid From]<a.[Valid To] ORDER BY a.[WWI Supplier ID],a.[Supplier Key],b.[Supplier Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT TOP (10) a.[WWI City ID] AS business_id,a.[City Key] AS key_a,b.[City Key] AS key_b,a.[Valid From] AS from_a,a.[Valid To] AS to_a,b.[Valid From] AS from_b,b.[Valid To] AS to_b FROM [Dimension].[City] a JOIN [Dimension].[City] b ON a.[WWI City ID]=b.[WWI City ID] AND a.[City Key]<b.[City Key] AND a.[Valid From]<b.[Valid To] AND b.[Valid From]<a.[Valid To] ORDER BY a.[WWI City ID],a.[City Key],b.[City Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 10
+  },
+  {
+    "sql": "SELECT TOP (10) a.[WWI Employee ID] AS business_id,a.[Employee Key] AS key_a,b.[Employee Key] AS key_b,a.[Valid From] AS from_a,a.[Valid To] AS to_a,b.[Valid From] AS from_b,b.[Valid To] AS to_b FROM [Dimension].[Employee] a JOIN [Dimension].[Employee] b ON a.[WWI Employee ID]=b.[WWI Employee ID] AND a.[Employee Key]<b.[Employee Key] AND a.[Valid From]<b.[Valid To] AND b.[Valid From]<a.[Valid To] ORDER BY a.[WWI Employee ID],a.[Employee Key],b.[Employee Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Order Key],[City Key],[Customer Key],[Stock Item Key],[Order Date Key],[Picked Date Key],[Salesperson Key],[Picker Key],[WWI Order ID],[WWI Backorder ID],[Description],[Package],[Quantity],[Unit Price],[Tax Rate],[Total Excluding Tax],[Tax Amount],[Total Including Tax],[Lineage Key])) AS checksum FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Purchase Key],[Date Key],[Supplier Key],[Stock Item Key],[WWI Purchase Order ID],[Ordered Outers],[Ordered Quantity],[Received Outers],[Package],[Is Order Finalized],[Lineage Key])) AS checksum FROM [Fact].[Purchase]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Movement Key],[Date Key],[Stock Item Key],[Customer Key],[Supplier Key],[Transaction Type Key],[WWI Stock Item Transaction ID],[WWI Invoice ID],[WWI Purchase Order ID],[Quantity],[Lineage Key])) AS checksum FROM [Fact].[Movement]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Stock Holding Key],[Stock Item Key],[Quantity On Hand],[Bin Location],[Last Stocktake Quantity],[Last Cost Price],[Reorder Level],[Target Stock Level],[Lineage Key])) AS checksum FROM [Fact].[Stock Holding]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Transaction Key],[Date Key],[Customer Key],[Bill To Customer Key],[Supplier Key],[Transaction Type Key],[Payment Method Key],[WWI Customer Transaction ID],[WWI Supplier Transaction ID],[WWI Invoice ID],[WWI Purchase Order ID],[Supplier Invoice Number],[Total Excluding Tax],[Tax Amount],[Total Including Tax],[Outstanding Balance],[Is Finalized],[Lineage Key])) AS checksum FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Date],[Day Number],[Day],[Month],[Short Month],[Calendar Month Number],[Calendar Month Label],[Calendar Year],[Calendar Year Label],[Fiscal Month Number],[Fiscal Month Label],[Fiscal Year],[Fiscal Year Label],[ISO Week Number])) AS checksum FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Stock Item Key],[WWI Stock Item ID],[Stock Item],[Color],[Selling Package],[Buying Package],[Brand],[Size],[Lead Time Days],[Quantity Per Outer],[Is Chiller Stock],[Barcode],[Tax Rate],[Unit Price],[Recommended Retail Price],[Typical Weight Per Unit],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Customer Key],[WWI Customer ID],[Customer],[Bill To Customer],[Category],[Buying Group],[Primary Contact],[Postal Code],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Customer]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Supplier Key],[WWI Supplier ID],[Supplier],[Category],[Primary Contact],[Supplier Reference],[Payment Days],[Postal Code],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Supplier]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Transaction Type Key],[WWI Transaction Type ID],[Transaction Type],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Transaction Type]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Payment Method Key],[WWI Payment Method ID],[Payment Method],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Payment Method]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([City Key],[WWI City ID],[City],[State Province],[Country],[Continent],[Sales Territory],[Region],[Subregion],[Latest Recorded Population],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Employee Key],[WWI Employee ID],[Employee],[Preferred Name],[Is Salesperson],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Employee]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  }
+]

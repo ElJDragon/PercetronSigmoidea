@@ -1,0 +1,72 @@
+{
+  "source_counts": {
+    "customer": 84338,
+    "supplier": 2137
+  },
+  "dw_count": 86475,
+  "side_scoped_identity_bijection": true,
+  "mapping_mismatches": {},
+  "dimension_unknown_rows": {
+    "customer": 43578
+  },
+  "dimension_known_identity_mismatches": {},
+  "source_id_numeric_overlap_between_sides": 0,
+  "payment_checks": {
+    "customer": {
+      "events": 23018,
+      "all_edited_on_event_day": true,
+      "all_negative_amount": true,
+      "all_null_document": true,
+      "all_finalized_same_day": true,
+      "duplicate_entity_date_groups": 0,
+      "event_dates_min": "2013-01-02",
+      "event_dates_max": "2015-12-31"
+    },
+    "supplier": {
+      "events": 320,
+      "all_edited_on_event_day": true,
+      "all_negative_amount": true,
+      "all_null_document": true,
+      "all_finalized_same_day": true,
+      "duplicate_entity_date_groups": 0,
+      "event_dates_min": "2013-01-07",
+      "event_dates_max": "2015-12-28"
+    }
+  },
+  "dimensions": {
+    "customer": {
+      "business_ids": 403,
+      "versions": 403,
+      "max_versions": 1,
+      "overlaps": []
+    },
+    "supplier": {
+      "business_ids": 14,
+      "versions": 28,
+      "max_versions": 3,
+      "overlaps": [
+        {
+          "business_id": 3,
+          "surrogates": [
+            16,
+            27
+          ]
+        }
+      ]
+    },
+    "transaction_type": {
+      "business_ids": 13,
+      "versions": 13,
+      "max_versions": 1,
+      "overlaps": []
+    },
+    "payment_method": {
+      "business_ids": 5,
+      "versions": 5,
+      "max_versions": 1,
+      "overlaps": []
+    }
+  },
+  "invoice_amount_identity": true,
+  "all_dates_before_2016": true
+}

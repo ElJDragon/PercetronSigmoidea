@@ -1,0 +1,10 @@
+{
+  "python": "3.12.3",
+  "numpy": "2.4.4",
+  "pandas": "3.0.2",
+  "matplotlib": "3.10.8",
+  "PCA_implementation": "unchanged src/visualization/pca.py",
+  "PCA_source_sha256": "a65f8d306b44de9cdc5f8190a14618cfab59dc3af5cf761bf14c28485ddd1fe1",
+  "dtypes": "float64",
+  "variance_ddof": 1
+}

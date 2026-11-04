@@ -1,0 +1,215 @@
+{
+  "status": "closed_before_first_test_opening",
+  "test_executed": false,
+  "sql_queries_now": 0,
+  "months": [
+    "2016-01",
+    "2016-02",
+    "2016-03",
+    "2016-04",
+    "2016-05"
+  ],
+  "event_interval": [
+    "2016-01-01",
+    "2016-06-01"
+  ],
+  "label_knowledge_cut_exclusive": "2016-06-01 00:00:00",
+  "receipt_SELECT": "SELECT st.StockItemTransactionID AS event_id,st.StockItemID AS item_id,\nst.TransactionTypeID AS type_id,st.TransactionOccurredWhen AS occurred_at,\nst.Quantity AS quantity,st.LastEditedWhen AS edited_at,st.InvoiceID AS invoice_id,\nst.PurchaseOrderID AS purchase_order_id,st.CustomerID AS customer_id,st.SupplierID AS supplier_id\nFROM Warehouse.StockItemTransactions st\nWHERE st.TransactionTypeID=? AND st.TransactionOccurredWhen>=? AND st.TransactionOccurredWhen<?\nORDER BY st.StockItemTransactionID",
+  "receipt_parameters": [
+    11,
+    "2016-01-01",
+    "2016-06-01"
+  ],
+  "first_appearance_SELECT": "SELECT st.StockItemID AS item_id,MIN(st.TransactionOccurredWhen) AS first_event_at FROM Warehouse.StockItemTransactions st WHERE st.TransactionOccurredWhen < ? GROUP BY st.StockItemID",
+  "first_appearance_parameter": "prediction_at for each target month; verify edit knowledge before cut; any movement, not first receipt",
+  "identity": "StockItemID / WWI Stock Item ID; exact source event StockItemTransactionID; DW bijection on item,type,date,quantity and documents",
+  "coverage": "event_ledger_academic explicitly on; only complete covered months after first known appearance may be zero; unknown/incomplete excluded with reason",
+  "eligibility": "three consecutive prior covered months; identity and first event known before target; never filter by target activity, future survival, prediction or error",
+  "history": "initial October-December 2015 from frozen snapshot; subsequent closed prior test months may supply history; no refit",
+  "label": "1[N(t)>median(N(t-1),N(t-2),N(t-3))], ties 0; target counted after closure and known strictly before label cut",
+  "feature_names": [
+    "recepciones_lag_1",
+    "recepciones_lag_2",
+    "recepciones_lag_3",
+    "unidades_recibidas_lag_1",
+    "unidades_recibidas_lag_2",
+    "unidades_recibidas_lag_3",
+    "recepciones_media_3",
+    "recepciones_mediana_3",
+    "recepciones_std_3",
+    "recepciones_cambio_1",
+    "recepciones_tendencia_3",
+    "meses_con_recepciones_3",
+    "mes_anterior_sin_recepciones",
+    "antiguedad_observada_meses",
+    "mes_sin",
+    "mes_cos",
+    "dias_mes_objetivo"
+  ],
+  "feature_catalog_sha256": "a0f2983780ba0da751016aca0ba6576281d8b833ca28d27ea3d6e8c7eee751f1",
+  "preprocessing_sha256": "a0541ad37cd070df3e3dc169844c3002833ed372efe4b9d7c7427e8b8c7cf408",
+  "preprocessing": "transform only; same 17 features, mean and population std, no new masking or fitting",
+  "models": {
+    "perceptron": {
+      "path": "resultados\\extension_datamarts\\inventario\\entrenamiento\\modelos\\perceptron.json",
+      "sha256": "55516fc6523d0873cc3a0d37276a900634fdfe5b8dba5463fcf48474f6f792f6",
+      "run": "p_seed42",
+      "variant": "standard",
+      "selected_epoch": 30,
+      "params": {
+        "learning_rate": 0.01,
+        "max_epochs": 100,
+        "seed": 42,
+        "shuffle": true,
+        "initial_weights": null,
+        "initial_bias": 0.0
+      },
+      "validation_metrics": {
+        "n": 2628,
+        "accuracy": 0.9752663622526636,
+        "precision": 0.35,
+        "recall": 1.0,
+        "specificity": 0.9749325106054763,
+        "f1": 0.5185185185185185,
+        "balanced_accuracy": 0.9874662553027381,
+        "confusion_matrix": [
+          [
+            2528,
+            65
+          ],
+          [
+            0,
+            35
+          ]
+        ],
+        "confusion_order": [
+          0,
+          1
+        ],
+        "support": {
+          "0": 2593,
+          "1": 35
+        },
+        "class_proportions": {
+          "0": 0.9866818873668188,
+          "1": 0.013318112633181126
+        },
+        "denominator_zero": {
+          "precision": false,
+          "recall": false,
+          "specificity": false,
+          "f1": false
+        },
+        "positive_prediction_proportion": 0.0380517503805175,
+        "only_majority_predicted": false
+      },
+      "validation_average_precision": null,
+      "n_features": 17,
+      "scores_calibrated": false
+    },
+    "logistic": {
+      "path": "resultados\\extension_datamarts\\inventario\\entrenamiento\\modelos\\logistic.json",
+      "sha256": "094a1a64956556c81ca36dc66d6399c5e93923b7dc444840236fed7e518f15e9",
+      "run": "l_eta005",
+      "variant": "standard",
+      "selected_epoch": 156,
+      "params": {
+        "learning_rate": 0.05,
+        "max_epochs": 400,
+        "seed": 42,
+        "initialization": "zeros",
+        "initial_weights": null,
+        "initial_bias": 0.0,
+        "tolerance": 1e-06,
+        "threshold": 0.5
+      },
+      "validation_metrics": {
+        "n": 2628,
+        "accuracy": 0.9733637747336378,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "specificity": 0.973004242190513,
+        "f1": 0.5,
+        "balanced_accuracy": 0.9865021210952565,
+        "confusion_matrix": [
+          [
+            2523,
+            70
+          ],
+          [
+            0,
+            35
+          ]
+        ],
+        "confusion_order": [
+          0,
+          1
+        ],
+        "support": {
+          "0": 2593,
+          "1": 35
+        },
+        "class_proportions": {
+          "0": 0.9866818873668188,
+          "1": 0.013318112633181126
+        },
+        "denominator_zero": {
+          "precision": false,
+          "recall": false,
+          "specificity": false,
+          "f1": false
+        },
+        "positive_prediction_proportion": 0.03995433789954338,
+        "only_majority_predicted": false
+      },
+      "validation_average_precision": 0.3668857240075474,
+      "n_features": 17,
+      "scores_calibrated": false
+    }
+  },
+  "thresholds": {
+    "perceptron": "z>=0",
+    "logistic": 0.5
+  },
+  "majority_class": 0,
+  "historical": "1[N(t-1)>median(N(t-1),N(t-2),N(t-3))]",
+  "primary": "all otherwise eligible item-month classifier observations with known label",
+  "common": "exact stable-key intersection of perceptron, logistic, majority and historical, expected equal to primary",
+  "missing_historical": "keep principal row, secondary common support separate; no invented fourth lag or silent row dropping",
+  "metrics": [
+    "n",
+    "class support",
+    "accuracy",
+    "balanced_accuracy",
+    "precision",
+    "recall",
+    "F1",
+    "specificity",
+    "FPR",
+    "confusion [[TN,FP],[FN,TP]]",
+    "predicted-positive rate",
+    "logistic Average Precision from grouped tied scores"
+  ],
+  "denominator_policy": "precision/F1 zero when no predicted positive (annotate); recall absent positive None, specificity absent negative None, BA None if either real class absent; keep single-class months; AP None with no positives",
+  "breakdowns": [
+    "global",
+    "every calendar month",
+    "per operational item",
+    "seen in train",
+    "seen only in val",
+    "new eligible in test",
+    "insufficient history exclusions",
+    "positive events, TP and false alerts"
+  ],
+  "opening_record": "persist UTC, immutable protocol/model/dataset/source/code hashes and purpose BEFORE any outcome query; write-once failure if already opened",
+  "reproducibility": "canonical snapshots, SQL logs and before/after fingerprints, keys, raw/processed features, labels and scores separately, all SHA256; regenerate offline without fit",
+  "no_selection_on_test": true,
+  "no_train_plus_val_refit": true,
+  "PCA": "train-fit visualization only; never classifier input",
+  "diagnostics_not_baselines": [
+    "1[any receipt in past three months] is descriptive only; not substituted for frozen historical"
+  ],
+  "prior_protocol_sha256": "dbbea4a806b9befb2d703bfcfb301b526491fd7ec1f1b3fdc2c49abbef29bc9d",
+  "frozen_models_manifest_sha256": "cf9084a1841d67e0ef76f3783279d5e1feaa2589f0e52b1d46eba2bb7c00ed7d",
+  "decision": "first test evaluation methodologically recommended after successful audit; not executed or automatically opened"
+}

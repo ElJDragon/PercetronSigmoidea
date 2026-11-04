@@ -1,0 +1,32 @@
+{
+  "status": "reviewed",
+  "figures": 18,
+  "all_figures_reviewed_in_contact_sheet": true,
+  "full_resolution_checked": [
+    "recall_precision.png",
+    "logistica_ponderada/perdidas_definiciones_separadas.png",
+    "logistica_ponderada/val_balanced_accuracy.png"
+  ],
+  "overlap_corrected": true,
+  "weighted_and_unweighted_losses_separated": true,
+  "figure_hashes": {
+    "graficos\\alertas_por_mes.png": "c62ea76afd6c4d6d8bab856da179cc375c0aa8a49526381b5b6e44ae24b3b5fb",
+    "graficos\\comparacion_baselines.png": "14562c4b0806bd4a99aa8099fc9af91ab2a0fc72d223b447b949d92231404e35",
+    "graficos\\logistica_estandar\\accuracy_por_epoca.png": "290f45364dc2829bd76cdebddf559bcb438bf448ba699a884b7be0b3513becc8",
+    "graficos\\logistica_estandar\\balanced_accuracy_validacion.png": "01b5315fe8be4d638fbfa26629e11d015cf903a96eafbdf3723d0bd319ae6d19",
+    "graficos\\logistica_estandar\\entropia_cruzada.png": "7172f4c1e2d0d890753373194c88f19cdb11b3beaa7e1b073a1acc8a019a630d",
+    "graficos\\logistica_estandar\\matriz_confusion_validacion.png": "0371e93ae94344fc6e02276da91c70037640cdde03eb495351f9bc9d81f442d0",
+    "graficos\\logistica_estandar\\norma_gradiente.png": "d60363575c12cf65f32953f70a1c7c452b9beb7a0e5408ecd5ea580950666905",
+    "graficos\\logistica_ponderada\\gradient_norm.png": "2c957bdfebe30ce7006f40d07193f73609bfdaea80f0c55129abe2bdd4d0ab70",
+    "graficos\\logistica_ponderada\\matriz_confusion_validacion.png": "77c2e465ab1fafd814e2d93282da4a098f9755479dd122f3261c05b3c4b853ab",
+    "graficos\\logistica_ponderada\\perdidas_definiciones_separadas.png": "5e08e2a2e40e60b0fc3b93c20fe163d3e93bf6312e373d5b938de3d92c2fc12e",
+    "graficos\\logistica_ponderada\\val_balanced_accuracy.png": "bf3922c2a26db4cd6b41097967996ccbe9d4f2f6cadf80ea649040348ba815f6",
+    "graficos\\metricas_validacion.png": "946a3901d5992fce0ffe5e07f2017b904fe376328758d1d03fb7f27f5e6eeb73",
+    "graficos\\perceptron\\accuracy_por_epoca.png": "a2f501cf7eaea82043a1a00ff73f7938b5c4607616cf16a86bed218e5b2f7bd1",
+    "graficos\\perceptron\\actualizaciones.png": "f49b103c6041eb6c3a1f3920bec36edbf3e4bdf4f797386fec4329cd2bac9c6b",
+    "graficos\\perceptron\\balanced_accuracy_validacion.png": "f9e5e924c0a488a86e93ef6adcb9c75cac9bf1910c97ac926695f975b318d870",
+    "graficos\\perceptron\\errores_entrenamiento.png": "e48dcd432319342a8a4b6a04085183180f144a8dd8287edd6f88a5465310af5d",
+    "graficos\\perceptron\\matriz_confusion_validacion.png": "81f3354a076084827dc3b45e85dd0e6df14dbf2f77d4a031d430c423b8d601e4",
+    "graficos\\recall_precision.png": "3ab4de8e94604ba0854dd8fbe76805b541a281450350e354908a57358571fba0"
+  }
+}

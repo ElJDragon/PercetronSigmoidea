@@ -1,0 +1,58 @@
+[
+  {
+    "process": "Pedidos",
+    "event": "Order Date Key = Sales.Orders.OrderDate",
+    "known_candidate": "Cantidad, precio y calendario al registro, solo si se confirma inmutabilidad; historia cerrada anterior al corte",
+    "post_event": [
+      "Picked Date Key",
+      "Picker Key",
+      "PickedQuantity",
+      "PickingCompletedWhen",
+      "WWI Backorder ID como entrada"
+    ],
+    "evidence": "GetOrderUpdates carga fecha de picking desde OrderLines y actualiza según LastEditedWhen. Fecha de creación del backorder coincide con padre en esta copia: no acredita cuándo se generó el vínculo."
+  },
+  {
+    "process": "Compras",
+    "event": "Date Key = PurchaseOrders.OrderDate, no fecha de recepción",
+    "known_candidate": "Cantidad pedida y proveedor solo con vigencia/captura inicial comprobada",
+    "post_event": [
+      "Received Outers",
+      "Is Order Finalized",
+      "LastReceiptDate"
+    ],
+    "evidence": "GetPurchaseUpdates usa IsOrderLineFinalized para el campo llamado Is Order Finalized y QuantityPerOuter actual para Ordered Quantity; no asumir unidad histórica estable."
+  },
+  {
+    "process": "Inventario",
+    "event": "Date Key = CAST(TransactionOccurredWhen AS date)",
+    "known_candidate": "Movimientos agregados ya ocurridos, tipos y claves estables; no saldo reconstruido sin saldo inicial",
+    "post_event": [
+      "Stock Holding actual",
+      "Last Cost Price actual",
+      "balances inferidos sin apertura"
+    ],
+    "evidence": "GetStockHoldingUpdates lee una instantánea sin fecha; movimientos pierden hora al cargar Date Key."
+  },
+  {
+    "process": "Transacciones",
+    "event": "Date Key = TransactionDate; FinalizationDate solo está en OLTP",
+    "known_candidate": "Historial financiero anterior al evento por identidad estable y tipo",
+    "post_event": [
+      "Outstanding Balance",
+      "Is Finalized",
+      "FinalizationDate como entrada"
+    ],
+    "evidence": "GetTransactionUpdates mezcla CustomerTransactions y SupplierTransactions y copia estados actuales según LastEditedWhen, no snapshots al evento."
+  },
+  {
+    "process": "Dimensiones",
+    "event": "Intervalos [Valid From,Valid To), no necesariamente historial de hechos",
+    "known_candidate": "Join por clave operacional y vigencia en el corte, con unicidad demostrada",
+    "post_event": [
+      "Última versión dimensional",
+      "Precio/contacto/población/lead time posteriores al corte"
+    ],
+    "evidence": "Hay versiones múltiples y superposiciones. Resolver empates, no elegir arbitrariamente la última clave."
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "status": "ready_for_first_test_evaluation_under_frozen_protocol_and_opening_record",
+  "test_executed": false,
+  "first_test_methodologically_recommended": true,
+  "causal_leak_detected": false,
+  "models_unchanged": true,
+  "PCA_classifier_input": false,
+  "protocol_path": "resultados\\extension_datamarts\\inventario\\pca\\protocolo_test_definitivo.json",
+  "protocol_sha256": "0b302d7cf66e8f23f806356e5bbf3ee6571cc4d4efe784e81b63a6dfbe62ca68",
+  "prerequisites_before_any_outcome_query": [
+    "Verify all frozen hashes",
+    "Persist a write-once opening record before the first SQL query",
+    "Respect coverage, cutoff, eligible population and frozen models"
+  ],
+  "historical_failures": 9,
+  "new_regressions": false
+}

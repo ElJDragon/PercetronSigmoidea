@@ -1,0 +1,26 @@
+{
+  "successful": true,
+  "tests_run": 139,
+  "new_focused_tests": 20,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "duration_seconds": 34.859,
+  "preexisting_files_unchanged": 386,
+  "development_outcome_queries": 13,
+  "development_boundary_exclusive": "2016-01-01",
+  "new_test_outcome_queries": 0,
+  "historical_audit_reconciliation_only": true,
+  "readonly": true,
+  "development_fingerprint_matches": true,
+  "no_matrices_or_training": true,
+  "audit_manifest_sha256": "8aa656e87667b083c6d931d7b251284a1d056a8bfb10fd9c8d96d8a82663af0f",
+  "test_note": "Las pruebas nuevas son fixtures y lectura de evidencia, sin conexiones SQL; las previas comprueban modelos con fixtures sintéticas, no reentrenan WWI.",
+  "limitations": [
+    "Copia actual sin snapshots de emisión ni latencia certificada",
+    "Líneas incompletas siguen indeterminadas y su exclusión sesga población",
+    "Composición e identificadores de documento cambian por backorders",
+    "Atributos actuales no certifican sus valores iniciales",
+    "No se habilita ETL, entrenamiento ni operaciones Git en esta tarea"
+  ]
+}

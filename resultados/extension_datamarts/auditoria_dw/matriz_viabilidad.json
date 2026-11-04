@@ -1,0 +1,67 @@
+[
+  {
+    "priority": 1,
+    "process": "Pedidos",
+    "quality": "PK/FK sin huérfanos; 85469 líneas con cliente desconocido, 3147 picking nulos y vigencia pendiente",
+    "history": "41 meses; 231412 líneas / 73595 documentos",
+    "potential_observations": 227745,
+    "binary_label": "Ambas clases en outcomes observados; censura pendiente",
+    "historical_predictors": "Posibles con lags previos y claves operacionales",
+    "temporal_leakage": "Alta sin selección as-of; resoluble bajo contrato",
+    "business_relevance": "Plazo de preparación y revisión de incumplimiento",
+    "algorithm_reuse": "Perceptrón/logística/PCA existentes, sin cambios ahora",
+    "decision": "Formalizar primero, no entrenar aún"
+  },
+  {
+    "priority": 2,
+    "process": "Compras",
+    "quality": "8367 líneas, 2074 documentos, 9 sin recepción; proveedor con solapamiento",
+    "history": "41 meses pero solo 574 producto-meses observados",
+    "potential_observations": 8358,
+    "binary_label": "Atraso respecto a esperado degenerado; >1 día es alternativa exploratoria",
+    "historical_predictors": "Historial proveedor/producto; conversiones y precio inicial pendientes",
+    "temporal_leakage": "Recibido/finalizado son posteriores",
+    "business_relevance": "Plazo de aprovisionamiento",
+    "algorithm_reuse": "Clasificadores existentes tras contrato propio",
+    "decision": "Segundo tras verificar recepción parcial/unidades"
+  },
+  {
+    "priority": 3,
+    "process": "Movimientos",
+    "quality": "236667 IDs únicos, signos coherentes con tipo; sin apertura de stock",
+    "history": "41 meses / 9019 grupos observados",
+    "potential_observations": null,
+    "binary_label": "Balance neto candidato; fuerte desequilibrio",
+    "historical_predictors": "Movimientos previos por tipo",
+    "temporal_leakage": "Stock actual no es predictor histórico",
+    "business_relevance": "Flujo de abastecimiento, no stockout demostrado",
+    "algorithm_reuse": "Modelos reutilizables con nueva etiqueta",
+    "decision": "Tercero; justificar utilidad y cobertura"
+  },
+  {
+    "priority": 4,
+    "process": "Transacciones",
+    "quality": "99585 eventos, IDs cliente/proveedor separados; estado actualizado",
+    "history": "41 meses",
+    "potential_observations": null,
+    "binary_label": "7/30 días sin positivos en muestra madura",
+    "historical_predictors": "Limitados para ese objetivo con patrón de pago determinista",
+    "temporal_leakage": "Muy alta por saldo/finalización",
+    "business_relevance": "Cobros/pagos, requiere otra evidencia u objetivo",
+    "algorithm_reuse": "No entrenar objetivo monoclase",
+    "decision": "Redefinir después de validar negocio y datos"
+  },
+  {
+    "priority": 5,
+    "process": "Stock Holding",
+    "quality": "227 filas actuales, sin fecha",
+    "history": "Sin serie demostrada",
+    "potential_observations": null,
+    "binary_label": "No construible temporalmente",
+    "historical_predictors": "Sin snapshots previos",
+    "temporal_leakage": "Estado actual retroproyectado sería fuga",
+    "business_relevance": "Inventario requiere historia adicional",
+    "algorithm_reuse": "No entrenar sin historia",
+    "decision": "Bloqueado para clasificación temporal"
+  }
+]

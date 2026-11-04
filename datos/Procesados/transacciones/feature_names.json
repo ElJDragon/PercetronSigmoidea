@@ -1,0 +1,18 @@
+[
+  "cobros_lag_1",
+  "cobros_lag_2",
+  "cobros_lag_3",
+  "cobros_media_3",
+  "cobros_mediana_3",
+  "cobros_std_3",
+  "cobros_cambio_1",
+  "cobros_tendencia_3",
+  "meses_con_cobros_3",
+  "mes_anterior_sin_cobros",
+  "variacion_relativa_cobros",
+  "base_variacion_cero",
+  "antiguedad_observada_meses",
+  "mes_sin",
+  "mes_cos",
+  "dias_mes_objetivo"
+]

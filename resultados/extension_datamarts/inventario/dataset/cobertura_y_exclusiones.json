@@ -1,0 +1,17 @@
+{
+  "mode": "event_ledger_academic",
+  "assumed_event_conservation": true,
+  "assumed_month_closure": true,
+  "zero_policy": "zero only in covered months after first known appearance; unknown/incomplete excluded",
+  "item_months": 7884,
+  "months_without_receipts": 7363,
+  "coverage_states": {
+    "covered": 7884
+  },
+  "exclusions": {
+    "insufficient_history": 657
+  },
+  "excluded_rows": 657,
+  "no_stock_levels_reconstructed": true,
+  "first_appearance_source": "approved all-movement development audit"
+}

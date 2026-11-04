@@ -1,0 +1,18 @@
+[
+  {
+    "PaymentMethodID": 1,
+    "PaymentMethodName": "Cash"
+  },
+  {
+    "PaymentMethodID": 2,
+    "PaymentMethodName": "Check"
+  },
+  {
+    "PaymentMethodID": 3,
+    "PaymentMethodName": "Credit-Card"
+  },
+  {
+    "PaymentMethodID": 4,
+    "PaymentMethodName": "EFT"
+  }
+]

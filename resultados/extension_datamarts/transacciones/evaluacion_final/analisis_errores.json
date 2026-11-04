@@ -1,0 +1,59 @@
+{
+  "global_counts": {
+    "shared_correct": 600,
+    "shared_error": 244,
+    "disagreement": 440,
+    "perceptron_FP": 413,
+    "perceptron_FN": 69,
+    "logistic_FP": 180,
+    "logistic_FN": 266
+  },
+  "monthly": {
+    "2016-01": {
+      "shared_correct": 110,
+      "shared_error": 35,
+      "disagreement": 109,
+      "perceptron_FP": 74,
+      "perceptron_FN": 13,
+      "logistic_FP": 23,
+      "logistic_FN": 69
+    },
+    "2016-02": {
+      "shared_correct": 151,
+      "shared_error": 32,
+      "disagreement": 71,
+      "perceptron_FP": 50,
+      "perceptron_FN": 16,
+      "logistic_FP": 17,
+      "logistic_FN": 52
+    },
+    "2016-03": {
+      "shared_correct": 110,
+      "shared_error": 51,
+      "disagreement": 96,
+      "perceptron_FP": 97,
+      "perceptron_FN": 10,
+      "logistic_FP": 43,
+      "logistic_FN": 48
+    },
+    "2016-04": {
+      "shared_correct": 119,
+      "shared_error": 61,
+      "disagreement": 79,
+      "perceptron_FP": 79,
+      "perceptron_FN": 19,
+      "logistic_FP": 43,
+      "logistic_FN": 60
+    },
+    "2016-05": {
+      "shared_correct": 110,
+      "shared_error": 65,
+      "disagreement": 85,
+      "perceptron_FP": 113,
+      "perceptron_FN": 11,
+      "logistic_FP": 54,
+      "logistic_FN": 37
+    }
+  },
+  "no_parameter_changes_from_errors": true
+}

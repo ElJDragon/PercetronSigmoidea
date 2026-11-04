@@ -1,0 +1,59 @@
+{
+  "format_version": 1,
+  "algorithm": "manual_numpy_binary_logistic_regression",
+  "params": {
+    "learning_rate": 0.05,
+    "max_epochs": 400,
+    "seed": 42,
+    "initialization": "zeros",
+    "initial_weights": null,
+    "initial_bias": 0.0,
+    "tolerance": 1e-06,
+    "threshold": 0.5
+  },
+  "label_values": [
+    0,
+    1
+  ],
+  "n_features": 16,
+  "feature_names": [
+    "cobros_lag_1",
+    "cobros_lag_2",
+    "cobros_lag_3",
+    "cobros_media_3",
+    "cobros_mediana_3",
+    "cobros_std_3",
+    "cobros_cambio_1",
+    "cobros_tendencia_3",
+    "meses_con_cobros_3",
+    "mes_anterior_sin_cobros",
+    "variacion_relativa_cobros",
+    "base_variacion_cero",
+    "antiguedad_observada_meses",
+    "mes_sin",
+    "mes_cos",
+    "dias_mes_objetivo"
+  ],
+  "weights": [
+    -0.07196881987849041,
+    -0.054531867802280774,
+    -0.10606983844461869,
+    -0.08741705338237861,
+    -0.5508418955116046,
+    -0.12422160304721386,
+    -0.02182190963699751,
+    0.042188872122159465,
+    -0.15704194303042343,
+    0.08153958397093237,
+    0.06197410145468721,
+    0.09323271890041325,
+    0.07355778125406637,
+    0.06237496258897097,
+    -0.05263566829464454,
+    0.07761868100800298
+  ],
+  "bias": -0.5145041666491653,
+  "selected_epoch": 380,
+  "selection": "validation_BA_F1_earliest_epoch",
+  "history_threshold": 0.5
+}

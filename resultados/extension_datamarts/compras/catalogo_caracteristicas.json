@@ -1,0 +1,209 @@
+[
+  {
+    "nombre": "cantidad_lag_1",
+    "formula": "Q(e,t-1)",
+    "fuente": "PurchaseOrderLines.OrderedOuters × StockItems.QuantityPerOuter histórico",
+    "granularidad": "producto-mes",
+    "disponibilidad": "Antes del inicio de t; todas las versiones de t-1 acreditadas",
+    "riesgo": "Cantidad mutable; altas tardías; unidad y cobertura",
+    "estado": "condicionado_desactivado"
+  },
+  {
+    "nombre": "ordenes_lag_1",
+    "formula": "COUNT DISTINCT PurchaseOrderID(e,t-1)",
+    "fuente": "PurchaseOrders.OrderDate, SupplierID; líneas solo para producto",
+    "granularidad": "proveedor-mes; producto-mes condicionado",
+    "disponibilidad": "Antes del inicio de t; identidad y mes de negocio acreditados",
+    "riesgo": "No confundir orden con línea; reasignación o alta retroactiva",
+    "estado": "condicionado_desactivado"
+  },
+  {
+    "nombre": "cantidad_lag_2",
+    "formula": "Q(e,t-2)",
+    "fuente": "PurchaseOrderLines.OrderedOuters × StockItems.QuantityPerOuter histórico",
+    "granularidad": "producto-mes",
+    "disponibilidad": "Antes del inicio de t; todas las versiones de t-2 acreditadas",
+    "riesgo": "Cantidad mutable; altas tardías; unidad y cobertura",
+    "estado": "condicionado_desactivado"
+  },
+  {
+    "nombre": "ordenes_lag_2",
+    "formula": "COUNT DISTINCT PurchaseOrderID(e,t-2)",
+    "fuente": "PurchaseOrders.OrderDate, SupplierID; líneas solo para producto",
+    "granularidad": "proveedor-mes; producto-mes condicionado",
+    "disponibilidad": "Antes del inicio de t; identidad y mes de negocio acreditados",
+    "riesgo": "No confundir orden con línea; reasignación o alta retroactiva",
+    "estado": "condicionado_desactivado"
+  },
+  {
+    "nombre": "cantidad_lag_3",
+    "formula": "Q(e,t-3)",
+    "fuente": "PurchaseOrderLines.OrderedOuters × StockItems.QuantityPerOuter histórico",
+    "granularidad": "producto-mes",
+    "disponibilidad": "Antes del inicio de t; todas las versiones de t-3 acreditadas",
+    "riesgo": "Cantidad mutable; altas tardías; unidad y cobertura",
+    "estado": "condicionado_desactivado"
+  },
+  {
+    "nombre": "ordenes_lag_3",
+    "formula": "COUNT DISTINCT PurchaseOrderID(e,t-3)",
+    "fuente": "PurchaseOrders.OrderDate, SupplierID; líneas solo para producto",
+    "granularidad": "proveedor-mes; producto-mes condicionado",
+    "disponibilidad": "Antes del inicio de t; identidad y mes de negocio acreditados",
+    "riesgo": "No confundir orden con línea; reasignación o alta retroactiva",
+    "estado": "condicionado_desactivado"
+  },
+  {
+    "nombre": "cantidad_media_3",
+    "formula": "(q1+q2+q3)/3",
+    "fuente": "Agregados previos acreditados",
+    "granularidad": "Entidad-mes",
+    "disponibilidad": "Antes del inicio de t",
+    "riesgo": "Hereda los bloqueos de lags y ceros",
+    "estado": "condicionado_desactivado"
+  },
+  {
+    "nombre": "cantidad_mediana_3",
+    "formula": "mediana(q1,q2,q3)",
+    "fuente": "Agregados previos acreditados",
+    "granularidad": "Entidad-mes",
+    "disponibilidad": "Antes del inicio de t",
+    "riesgo": "Hereda los bloqueos de lags y ceros",
+    "estado": "condicionado_desactivado"
+  },
+  {
+    "nombre": "cantidad_std_3",
+    "formula": "std(q1,q2,q3), ddof=0",
+    "fuente": "Agregados previos acreditados",
+    "granularidad": "Entidad-mes",
+    "disponibilidad": "Antes del inicio de t",
+    "riesgo": "Hereda los bloqueos de lags y ceros",
+    "estado": "condicionado_desactivado"
+  },
+  {
+    "nombre": "cantidad_tendencia_3",
+    "formula": "(q1-q3)/2",
+    "fuente": "Agregados previos acreditados",
+    "granularidad": "Entidad-mes",
+    "disponibilidad": "Antes del inicio de t",
+    "riesgo": "Hereda los bloqueos de lags y ceros",
+    "estado": "condicionado_desactivado"
+  },
+  {
+    "nombre": "cantidad_cambio_1",
+    "formula": "q1-q2",
+    "fuente": "Agregados previos acreditados",
+    "granularidad": "Entidad-mes",
+    "disponibilidad": "Antes del inicio de t",
+    "riesgo": "Hereda los bloqueos de lags y ceros",
+    "estado": "condicionado_desactivado"
+  },
+  {
+    "nombre": "cantidad_variacion_relativa",
+    "formula": "(q1-q2)/q2 si q2>0; indeterminada en otro caso",
+    "fuente": "Agregados previos acreditados",
+    "granularidad": "Entidad-mes",
+    "disponibilidad": "Antes del inicio de t",
+    "riesgo": "Hereda los bloqueos de lags y ceros",
+    "estado": "condicionado_desactivado"
+  },
+  {
+    "nombre": "frecuencia_media_3",
+    "formula": "(n1+n2+n3)/3",
+    "fuente": "Agregados previos acreditados",
+    "granularidad": "Entidad-mes",
+    "disponibilidad": "Antes del inicio de t",
+    "riesgo": "Hereda los bloqueos de lags y ceros",
+    "estado": "condicionado_desactivado"
+  },
+  {
+    "nombre": "meses_activos_3",
+    "formula": "SUM 1[nk>0], k=1..3",
+    "fuente": "Agregados previos acreditados",
+    "granularidad": "Entidad-mes",
+    "disponibilidad": "Antes del inicio de t",
+    "riesgo": "Hereda los bloqueos de lags y ceros",
+    "estado": "condicionado_desactivado"
+  },
+  {
+    "nombre": "antiguedad_observada_meses",
+    "formula": "ordinal(t)-ordinal(primer mes observable antes de t)",
+    "fuente": "Registro histórico de identidad",
+    "granularidad": "Entidad-mes",
+    "disponibilidad": "Antes de t, sin usar última compra futura",
+    "riesgo": "Primera observación no equivale a alta real; supervivencia",
+    "estado": "condicionado_desactivado"
+  },
+  {
+    "nombre": "mes_sin",
+    "formula": "sin(2*pi*(mes(t)-1)/12)",
+    "fuente": "Calendario civil",
+    "granularidad": "Entidad-mes",
+    "disponibilidad": "Conocida antes de t",
+    "riesgo": "Bajo; no certifica cobertura",
+    "estado": "permitido_candidato_sin_dataset"
+  },
+  {
+    "nombre": "mes_cos",
+    "formula": "cos(2*pi*(mes(t)-1)/12)",
+    "fuente": "Calendario civil",
+    "granularidad": "Entidad-mes",
+    "disponibilidad": "Conocida antes de t",
+    "riesgo": "Bajo; no certifica cobertura",
+    "estado": "permitido_candidato_sin_dataset"
+  },
+  {
+    "nombre": "dias_mes",
+    "formula": "días calendario de t",
+    "fuente": "Calendario civil",
+    "granularidad": "Entidad-mes",
+    "disponibilidad": "Conocida antes de t",
+    "riesgo": "Bajo; no certifica cobertura",
+    "estado": "permitido_candidato_sin_dataset"
+  },
+  {
+    "nombre": "recepcion_y_finalizacion",
+    "formula": "ReceivedOuters, LastReceiptDate, IsOrderLineFinalized, IsOrderFinalized",
+    "fuente": "OLTP/DW",
+    "granularidad": "Línea/documento/entidad",
+    "disponibilidad": "No acreditada en el momento requerido",
+    "riesgo": "Fuga, semántica o identidad",
+    "estado": "prohibido"
+  },
+  {
+    "nombre": "cantidades_mes_objetivo",
+    "formula": "Q(e,t), N(e,t), referencia calculada con t",
+    "fuente": "OLTP/DW",
+    "granularidad": "Línea/documento/entidad",
+    "disponibilidad": "No acreditada en el momento requerido",
+    "riesgo": "Fuga, semántica o identidad",
+    "estado": "prohibido"
+  },
+  {
+    "nombre": "claves_numericas",
+    "formula": "Supplier Key, Stock Item Key, IDs como magnitudes",
+    "fuente": "OLTP/DW",
+    "granularidad": "Línea/documento/entidad",
+    "disponibilidad": "No acreditada en el momento requerido",
+    "riesgo": "Fuga, semántica o identidad",
+    "estado": "prohibido"
+  },
+  {
+    "nombre": "dimension_futura",
+    "formula": "Atributos fuera de un intervalo único válido al instante",
+    "fuente": "OLTP/DW",
+    "granularidad": "Línea/documento/entidad",
+    "disponibilidad": "No acreditada en el momento requerido",
+    "riesgo": "Fuga, semántica o identidad",
+    "estado": "prohibido"
+  },
+  {
+    "nombre": "ultima_edicion_como_alta",
+    "formula": "LastEditedWhen como fecha de creación",
+    "fuente": "OLTP/DW",
+    "granularidad": "Línea/documento/entidad",
+    "disponibilidad": "No acreditada en el momento requerido",
+    "riesgo": "Fuga, semántica o identidad",
+    "estado": "prohibido"
+  }
+]

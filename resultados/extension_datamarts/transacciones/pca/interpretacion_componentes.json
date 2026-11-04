@@ -1,0 +1,58 @@
+{
+  "top_absolute_coefficients": {
+    "PC1": [
+      {
+        "feature": "cobros_media_3",
+        "coefficient": 0.4673957682745077
+      },
+      {
+        "feature": "cobros_mediana_3",
+        "coefficient": 0.45897890015407217
+      },
+      {
+        "feature": "cobros_lag_1",
+        "coefficient": 0.4243729580286859
+      },
+      {
+        "feature": "cobros_lag_2",
+        "coefficient": 0.4114951688102529
+      },
+      {
+        "feature": "cobros_lag_3",
+        "coefficient": 0.4070703025658689
+      },
+      {
+        "feature": "meses_con_cobros_3",
+        "coefficient": 0.1685344276226254
+      }
+    ],
+    "PC2": [
+      {
+        "feature": "cobros_cambio_1",
+        "coefficient": 0.5351226348454909
+      },
+      {
+        "feature": "variacion_relativa_cobros",
+        "coefficient": 0.5034523647165826
+      },
+      {
+        "feature": "cobros_tendencia_3",
+        "coefficient": 0.437702541867038
+      },
+      {
+        "feature": "mes_anterior_sin_cobros",
+        "coefficient": -0.3523264285246074
+      },
+      {
+        "feature": "cobros_lag_1",
+        "coefficient": 0.21873806106653973
+      },
+      {
+        "feature": "cobros_lag_2",
+        "coefficient": -0.21099539953434715
+      }
+    ]
+  },
+  "coefficients_are": "unit eigenvector coefficients on standardized inputs, not causal effects or correlations",
+  "sign_convention": "largest absolute coefficient positive; first input index on ties"
+}

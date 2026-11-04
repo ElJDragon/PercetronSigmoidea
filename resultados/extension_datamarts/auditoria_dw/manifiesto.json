@@ -1,0 +1,51 @@
+{
+  "scope": "Auditoría local de lectura, sin etiquetas definitivas, entrenamiento o cambios de Ventas",
+  "databases": [
+    "WideWorldImportersDW",
+    "WideWorldImporters"
+  ],
+  "only_select": true,
+  "prior_files_preserved": 349,
+  "database_fingerprints_match": true,
+  "oltp_fingerprints_match": true,
+  "fingerprint_limit": "COUNT y CHECKSUM_AGG son controles acotados no criptográficos; no prueban ausencia de cambios concurrentes fuera del intervalo o colisiones.",
+  "implementation_sha256": {
+    "src\\db\\__init__.py": "83abd612dabebbb14bc15a7d7bdc99fef27e965cb61cbfd73cf3e437fc027661",
+    "src\\db\\auditoria_dw.py": "b1862a7142b46b98ed5ad97627e143122d2580f0c061de5e29b91b74cd4a38f5",
+    "src\\db\\conexion.py": "127a34f5bf9e3bdbfacb08b573273635e85820d70005315c3664ee97e7a4adf0",
+    "src\\db\\reportes_dw.py": "7c4530dc1aab21b605f408233e5c1518c53badb5da48c05e950ec4483d229ba8",
+    "tests\\test_auditoria_dw.py": "b53928821ddc436500fd2cef665431102d0b94ee184df5086feb94465c836e1f"
+  },
+  "artifacts_sha256": {
+    "resultados\\extension_datamarts\\auditoria_dw\\arquitectura_y_reproduccion.md": "6ed28f9c791d2dc1cb9715824dcc59885d0b7a19bcdfbb05f3e7268c39168bad",
+    "resultados\\extension_datamarts\\auditoria_dw\\claves_relaciones.json": "12da70b825f5d2b88187a9e501ee0bb660b13a01930d423c05f00c1ae8eb3832",
+    "resultados\\extension_datamarts\\auditoria_dw\\cobertura_temporal.json": "fb62041166d9c9af50eae40b30c68bc547f62d3e24dfe83c39c6cdb157a7b197",
+    "resultados\\extension_datamarts\\auditoria_dw\\comprobaciones_adicionales.json": "9d59ef3bbe6d126fa5f1533368aec8e0f18eb4806364ca25e6347d6e20ac10c5",
+    "resultados\\extension_datamarts\\auditoria_dw\\comprobaciones_oltp.json": "3f605aa521d4e2c404d2a096b3cf97bebf0bf9c6fb564975db0eb46f546c4e28",
+    "resultados\\extension_datamarts\\auditoria_dw\\conexion_verificada.json": "87d21a25c9eec951b35fbc854ee360c6338d6137d082c401e88fd0240ada28f3",
+    "resultados\\extension_datamarts\\auditoria_dw\\consultas.json": "f87f1d18e7531e4ec6c0ecf6d1b93e93699295dcb4aea787a86b652ef3b87cd7",
+    "resultados\\extension_datamarts\\auditoria_dw\\consultas_adicionales_dw.json": "2b8b93082419fd87777df7e3a5ae311aa9e7e0c4f242d3e3a641cfd8360f5c7a",
+    "resultados\\extension_datamarts\\auditoria_dw\\consultas_adicionales_oltp.json": "10d49d1f2c128c88013bac289a6d9f560767de7076d7178c8e63833306b84d5d",
+    "resultados\\extension_datamarts\\auditoria_dw\\consultas_oltp.json": "fb66046a18dea3f92dab83a9f2aadf9d2ce6c2088c696b2baa20f43596635210",
+    "resultados\\extension_datamarts\\auditoria_dw\\consultas_oltp_definiciones.json": "7c64b004e009c2abe3b69b43b2a31ce4179a94bf37add732324f4704f6b659c8",
+    "resultados\\extension_datamarts\\auditoria_dw\\consultas_oltp_iniciales.json": "3d04f1b5ca0d80679973229bd79594fa2802b1a7e605e3dc4716bbb03b339052",
+    "resultados\\extension_datamarts\\auditoria_dw\\definiciones_integracion_oltp.json": "e1f04a16ec35ddbb272e6bda891f16d8e26211e54c7d5f195f1280e377beb95f",
+    "resultados\\extension_datamarts\\auditoria_dw\\diccionario_tablas.csv": "cda9007f3a27f99324b21aa24101dc1db0a4c9141524c5ae5333456e1d2a2667",
+    "resultados\\extension_datamarts\\auditoria_dw\\diccionario_tablas.json": "d78e76999a100828b70a051b0cd437b0f0a4ca32083be1a408e23ca591e1bb84",
+    "resultados\\extension_datamarts\\auditoria_dw\\granularidad.json": "8caac8a1ac81a0ce92077471fa81f726e440892a9c572fb929f4ed6cd5aa12d2",
+    "resultados\\extension_datamarts\\auditoria_dw\\huella_bd_antes_comprobacion.json": "f37de046bfa44382677009dd26132f1b49314e77d3bcc84474df4277d5e1e90d",
+    "resultados\\extension_datamarts\\auditoria_dw\\huella_bd_despues_comprobacion.json": "f37de046bfa44382677009dd26132f1b49314e77d3bcc84474df4277d5e1e90d",
+    "resultados\\extension_datamarts\\auditoria_dw\\huella_oltp_antes.json": "97833981744a08c0e70eb313acbf08ac23fba16b82eb54ce85740a3ed4a0e6e2",
+    "resultados\\extension_datamarts\\auditoria_dw\\huella_oltp_despues.json": "97833981744a08c0e70eb313acbf08ac23fba16b82eb54ce85740a3ed4a0e6e2",
+    "resultados\\extension_datamarts\\auditoria_dw\\integridad_antes.json": "9a6cf0d1e72ee11500d6bae267a1637814bb1427d85041794854862832ffb634",
+    "resultados\\extension_datamarts\\auditoria_dw\\integridad_despues.json": "9a6cf0d1e72ee11500d6bae267a1637814bb1427d85041794854862832ffb634",
+    "resultados\\extension_datamarts\\auditoria_dw\\matriz_viabilidad.csv": "3597c82cbdc6564b80797c54ce118f3a5e5952c978a628e72b1fa7effbbe831b",
+    "resultados\\extension_datamarts\\auditoria_dw\\matriz_viabilidad.json": "b33e5bfadacdde26e9b52dd5e69e9cb2ef884d5e692b6ed34cd59c032e131123",
+    "resultados\\extension_datamarts\\auditoria_dw\\metadatos_oltp.json": "1bf38f5838ed592b2808fd9a5bb860556a00fa540ab373c1d123457770481153",
+    "resultados\\extension_datamarts\\auditoria_dw\\perfiles_calidad.json": "8b9bc4160ffc2e52688f510440eff22b35ecb644edfb44f45218568e1da3d45e",
+    "resultados\\extension_datamarts\\auditoria_dw\\propuestas_predictivas.json": "4f4a78f7724b01a5ae02fba629a4172533056915c0bdd02859604cd4a70d6f19",
+    "resultados\\extension_datamarts\\auditoria_dw\\reporte_auditoria.md": "b0f1a2451f3d503acdea38ab155bf9ddf348facc029d07af6646f7f47ac6ae41",
+    "resultados\\extension_datamarts\\auditoria_dw\\riesgos_fuga.json": "e080e2ccb97885207510ed904fc47e7a407b0060306bf6c3763ce13aef6a2d97",
+    "resultados\\extension_datamarts\\auditoria_dw\\vigencia_dimensional.json": "1ba833699b43a527a667cb85b27f6140f216d30920251b5a88219b7e95d52850"
+  }
+}

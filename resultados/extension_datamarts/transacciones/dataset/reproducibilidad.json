@@ -1,0 +1,7 @@
+{
+  "status": "successful",
+  "offline_pipeline_reproduced_files": 28,
+  "all_hashes_identical": true,
+  "snapshot_regenerated_identically": true,
+  "sql_queries_during_reproduction": 0
+}

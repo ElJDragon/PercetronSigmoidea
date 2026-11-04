@@ -1,0 +1,92 @@
+[
+  {
+    "sql": "SELECT COUNT_BIG(*) AS lines,CHECKSUM_AGG(BINARY_CHECKSUM(OrderID,OrderLineID,OrderDate,StockItemID,CustomerID,pick_at,line_edited,header_edited,Quantity,UnitPrice)) AS checksum FROM (SELECT o.OrderID,l.OrderLineID,o.OrderDate,l.StockItemID,o.CustomerID,\n    l.Quantity,l.UnitPrice,l.PickedQuantity,l.PickingCompletedWhen AS pick_at,\n    o.PickingCompletedWhen AS header_pick_at,l.LastEditedWhen AS line_edited,\n    o.LastEditedWhen AS header_edited,\n    CASE WHEN l.LastEditedWhen>o.LastEditedWhen THEN l.LastEditedWhen ELSE o.LastEditedWhen END AS known_at,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS partition_cut\n    FROM Sales.OrderLines l JOIN Sales.Orders o ON l.OrderID=o.OrderID WHERE o.OrderDate < ?) q",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS lines,CHECKSUM_AGG(BINARY_CHECKSUM(OrderID,OrderLineID,OrderDate,StockItemID,CustomerID,pick_at,line_edited,header_edited,Quantity,UnitPrice)) AS checksum FROM (SELECT o.OrderID,l.OrderLineID,o.OrderDate,l.StockItemID,o.CustomerID,\n    l.Quantity,l.UnitPrice,l.PickedQuantity,l.PickingCompletedWhen AS pick_at,\n    o.PickingCompletedWhen AS header_pick_at,l.LastEditedWhen AS line_edited,\n    o.LastEditedWhen AS header_edited,\n    CASE WHEN l.LastEditedWhen>o.LastEditedWhen THEN l.LastEditedWhen ELSE o.LastEditedWhen END AS known_at,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS partition_cut\n    FROM Sales.OrderLines l JOIN Sales.Orders o ON l.OrderID=o.OrderID WHERE o.OrderDate < ?) q",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS lines,COUNT_BIG(DISTINCT OrderLineID) AS order_line_ids,COUNT_BIG(DISTINCT OrderID) AS current_order_ids FROM (SELECT o.OrderID,l.OrderLineID,o.OrderDate,l.StockItemID,o.CustomerID,\n    l.Quantity,l.UnitPrice,l.PickedQuantity,l.PickingCompletedWhen AS pick_at,\n    o.PickingCompletedWhen AS header_pick_at,l.LastEditedWhen AS line_edited,\n    o.LastEditedWhen AS header_edited,\n    CASE WHEN l.LastEditedWhen>o.LastEditedWhen THEN l.LastEditedWhen ELSE o.LastEditedWhen END AS known_at,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS partition_cut\n    FROM Sales.OrderLines l JOIN Sales.Orders o ON l.OrderID=o.OrderID WHERE o.OrderDate < ?) q",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,COALESCE(SUM(n-1),0) AS excess FROM (SELECT OrderID,StockItemID,COUNT_BIG(*) AS n FROM (SELECT o.OrderID,l.OrderLineID,o.OrderDate,l.StockItemID,o.CustomerID,\n    l.Quantity,l.UnitPrice,l.PickedQuantity,l.PickingCompletedWhen AS pick_at,\n    o.PickingCompletedWhen AS header_pick_at,l.LastEditedWhen AS line_edited,\n    o.LastEditedWhen AS header_edited,\n    CASE WHEN l.LastEditedWhen>o.LastEditedWhen THEN l.LastEditedWhen ELSE o.LastEditedWhen END AS known_at,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS partition_cut\n    FROM Sales.OrderLines l JOIN Sales.Orders o ON l.OrderID=o.OrderID WHERE o.OrderDate < ?) q GROUP BY OrderID,StockItemID HAVING COUNT_BIG(*)>1) z",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS dw_rows,COUNT_BIG(l.OrderLineID) AS matched_lines,COUNT_BIG(DISTINCT l.OrderLineID) AS distinct_lines,SUM(CAST(CASE WHEN l.OrderLineID IS NULL THEN 1 ELSE 0 END AS bigint)) AS no_source,SUM(CAST(CASE WHEN d.[Order Date Key]<>o.OrderDate THEN 1 ELSE 0 END AS bigint)) AS date_discrepancies FROM [WideWorldImportersDW].[Fact].[Order] d JOIN [WideWorldImportersDW].[Dimension].[Stock Item] si ON si.[Stock Item Key]=d.[Stock Item Key] JOIN Sales.Orders o ON o.OrderID=d.[WWI Order ID] LEFT JOIN Sales.OrderLines l ON l.OrderID=o.OrderID AND l.StockItemID=si.[WWI Stock Item ID] WHERE o.OrderDate < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT CASE WHEN OrderDate<'20150101' THEN 'train' ELSE 'validation' END AS partition,COUNT_BIG(*) AS lines,SUM(CAST(CASE WHEN CAST(line_edited AS date)=OrderDate THEN 1 ELSE 0 END AS bigint)) AS last_edit_same_day,SUM(CAST(CASE WHEN CAST(line_edited AS date)>OrderDate THEN 1 ELSE 0 END AS bigint)) AS last_edit_later_day,SUM(CAST(CASE WHEN CAST(line_edited AS date)<OrderDate THEN 1 ELSE 0 END AS bigint)) AS last_edit_earlier_day FROM (SELECT o.OrderID,l.OrderLineID,o.OrderDate,l.StockItemID,o.CustomerID,\n    l.Quantity,l.UnitPrice,l.PickedQuantity,l.PickingCompletedWhen AS pick_at,\n    o.PickingCompletedWhen AS header_pick_at,l.LastEditedWhen AS line_edited,\n    o.LastEditedWhen AS header_edited,\n    CASE WHEN l.LastEditedWhen>o.LastEditedWhen THEN l.LastEditedWhen ELSE o.LastEditedWhen END AS known_at,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS partition_cut\n    FROM Sales.OrderLines l JOIN Sales.Orders o ON l.OrderID=o.OrderID WHERE o.OrderDate < ?) q GROUP BY CASE WHEN OrderDate<'20150101' THEN 'train' ELSE 'validation' END",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT CASE WHEN OrderDate<'20150101' THEN 'train' ELSE 'validation' END AS partition,COUNT_BIG(*) AS previously_eligible,SUM(CAST(CASE WHEN CAST(line_edited AS date)=OrderDate THEN 1 ELSE 0 END AS bigint)) AS same_day_edit,SUM(CAST(CASE WHEN CAST(line_edited AS date)=OrderDate AND state='after_two_days' THEN 1 ELSE 0 END AS bigint)) AS positive_with_same_day_edit,SUM(CAST(CASE WHEN CAST(line_edited AS date)>OrderDate THEN 1 ELSE 0 END AS bigint)) AS later_day_edit,SUM(CAST(CASE WHEN state='after_two_days' THEN 1 ELSE 0 END AS bigint)) AS previous_positive FROM (SELECT b.*,CASE WHEN OrderDate IS NULL OR pick_at<CAST(OrderDate AS datetime2) THEN 'invalid'\n    WHEN horizon_end>partition_cut THEN 'insufficient_followup'\n    WHEN pick_at IS NULL THEN 'missing_pick_indeterminate'\n    WHEN pick_at>=partition_cut THEN 'pick_not_observed_by_cut'\n    WHEN known_at IS NULL OR known_at>=partition_cut THEN 'row_not_available_by_cut'\n    WHEN CAST(pick_at AS date)>DATEADD(day,2,OrderDate) THEN 'after_two_days'\n    ELSE 'within_two_days' END AS state FROM (SELECT o.OrderID,l.OrderLineID,o.OrderDate,l.StockItemID,o.CustomerID,\n    l.Quantity,l.UnitPrice,l.PickedQuantity,l.PickingCompletedWhen AS pick_at,\n    o.PickingCompletedWhen AS header_pick_at,l.LastEditedWhen AS line_edited,\n    o.LastEditedWhen AS header_edited,\n    CASE WHEN l.LastEditedWhen>o.LastEditedWhen THEN l.LastEditedWhen ELSE o.LastEditedWhen END AS known_at,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS partition_cut\n    FROM Sales.OrderLines l JOIN Sales.Orders o ON l.OrderID=o.OrderID WHERE o.OrderDate < ?) b) q WHERE state IN ('within_two_days','after_two_days') GROUP BY CASE WHEN OrderDate<'20150101' THEN 'train' ELSE 'validation' END",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS lines,SUM(CAST(CASE WHEN UnitPrice IS NULL THEN 1 ELSE 0 END AS bigint)) AS current_price_null,SUM(CAST(CASE WHEN Quantity<=0 THEN 1 ELSE 0 END AS bigint)) AS current_nonpositive_quantity,SUM(CAST(CASE WHEN UnitPrice<0 THEN 1 ELSE 0 END AS bigint)) AS current_negative_price FROM (SELECT o.OrderID,l.OrderLineID,o.OrderDate,l.StockItemID,o.CustomerID,\n    l.Quantity,l.UnitPrice,l.PickedQuantity,l.PickingCompletedWhen AS pick_at,\n    o.PickingCompletedWhen AS header_pick_at,l.LastEditedWhen AS line_edited,\n    o.LastEditedWhen AS header_edited,\n    CASE WHEN l.LastEditedWhen>o.LastEditedWhen THEN l.LastEditedWhen ELSE o.LastEditedWhen END AS known_at,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS partition_cut\n    FROM Sales.OrderLines l JOIN Sales.Orders o ON l.OrderID=o.OrderID WHERE o.OrderDate < ?) q",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS edges,SUM(CAST(CASE WHEN o.OrderDate<>c.OrderDate THEN 1 ELSE 0 END AS bigint)) AS different_reference_dates,SUM(CAST(CASE WHEN c.OrderID<=o.OrderID THEN 1 ELSE 0 END AS bigint)) AS non_increasing_ids FROM Sales.Orders o JOIN Sales.Orders c ON c.OrderID=o.BackorderOrderID WHERE o.OrderDate < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT TOP (12) l.OrderLineID,l.OrderID AS current_order_id,o.OrderDate AS reference_date,l.LastEditedWhen AS last_edit_only FROM Sales.OrderLines l JOIN Sales.Orders o ON l.OrderID=o.OrderID WHERE o.OrderDate < ? ORDER BY l.OrderLineID",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 12
+  }
+]

@@ -1,0 +1,130 @@
+[
+  {
+    "table_name": "Orders",
+    "column_name": "OrderID",
+    "data_type": "int",
+    "is_nullable": false,
+    "default_definition": "(NEXT VALUE FOR [Sequences].[OrderID])",
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "table_name": "Orders",
+    "column_name": "CustomerID",
+    "data_type": "int",
+    "is_nullable": false,
+    "default_definition": null,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "table_name": "Orders",
+    "column_name": "SalespersonPersonID",
+    "data_type": "int",
+    "is_nullable": false,
+    "default_definition": null,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "table_name": "Orders",
+    "column_name": "PickedByPersonID",
+    "data_type": "int",
+    "is_nullable": true,
+    "default_definition": null,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "table_name": "Orders",
+    "column_name": "ContactPersonID",
+    "data_type": "int",
+    "is_nullable": false,
+    "default_definition": null,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "table_name": "Orders",
+    "column_name": "BackorderOrderID",
+    "data_type": "int",
+    "is_nullable": true,
+    "default_definition": null,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "table_name": "Orders",
+    "column_name": "OrderDate",
+    "data_type": "date",
+    "is_nullable": false,
+    "default_definition": null,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "table_name": "Orders",
+    "column_name": "ExpectedDeliveryDate",
+    "data_type": "date",
+    "is_nullable": false,
+    "default_definition": null,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "table_name": "Orders",
+    "column_name": "CustomerPurchaseOrderNumber",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "default_definition": null,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "table_name": "Orders",
+    "column_name": "IsUndersupplyBackordered",
+    "data_type": "bit",
+    "is_nullable": false,
+    "default_definition": null,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "table_name": "Orders",
+    "column_name": "Comments",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "default_definition": null,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "table_name": "Orders",
+    "column_name": "DeliveryInstructions",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "default_definition": null,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "table_name": "Orders",
+    "column_name": "InternalComments",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "default_definition": null,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "table_name": "Orders",
+    "column_name": "PickingCompletedWhen",
+    "data_type": "datetime2",
+    "is_nullable": true,
+    "default_definition": null,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "table_name": "Orders",
+    "column_name": "LastEditedBy",
+    "data_type": "int",
+    "is_nullable": false,
+    "default_definition": null,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "table_name": "Orders",
+    "column_name": "LastEditedWhen",
+    "data_type": "datetime2",
+    "is_nullable": false,
+    "default_definition": "(sysdatetime())",
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  }
+]

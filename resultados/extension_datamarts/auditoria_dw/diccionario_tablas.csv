@@ -1,0 +1,181 @@
+schema_name,table_name,column_name,data_type,max_length,precision,scale,is_nullable,is_identity,is_computed
+Dimension,City,City Key,int,4,10,0,False,False,False
+Dimension,City,WWI City ID,int,4,10,0,False,False,False
+Dimension,City,City,nvarchar,100,0,0,False,False,False
+Dimension,City,State Province,nvarchar,100,0,0,False,False,False
+Dimension,City,Country,nvarchar,120,0,0,False,False,False
+Dimension,City,Continent,nvarchar,60,0,0,False,False,False
+Dimension,City,Sales Territory,nvarchar,100,0,0,False,False,False
+Dimension,City,Region,nvarchar,60,0,0,False,False,False
+Dimension,City,Subregion,nvarchar,60,0,0,False,False,False
+Dimension,City,Location,geography,-1,0,0,True,False,False
+Dimension,City,Latest Recorded Population,bigint,8,19,0,False,False,False
+Dimension,City,Valid From,datetime2,8,27,7,False,False,False
+Dimension,City,Valid To,datetime2,8,27,7,False,False,False
+Dimension,City,Lineage Key,int,4,10,0,False,False,False
+Dimension,Customer,Customer Key,int,4,10,0,False,False,False
+Dimension,Customer,WWI Customer ID,int,4,10,0,False,False,False
+Dimension,Customer,Customer,nvarchar,200,0,0,False,False,False
+Dimension,Customer,Bill To Customer,nvarchar,200,0,0,False,False,False
+Dimension,Customer,Category,nvarchar,100,0,0,False,False,False
+Dimension,Customer,Buying Group,nvarchar,100,0,0,False,False,False
+Dimension,Customer,Primary Contact,nvarchar,100,0,0,False,False,False
+Dimension,Customer,Postal Code,nvarchar,20,0,0,False,False,False
+Dimension,Customer,Valid From,datetime2,8,27,7,False,False,False
+Dimension,Customer,Valid To,datetime2,8,27,7,False,False,False
+Dimension,Customer,Lineage Key,int,4,10,0,False,False,False
+Dimension,Date,Date,date,3,10,0,False,False,False
+Dimension,Date,Day Number,int,4,10,0,False,False,False
+Dimension,Date,Day,nvarchar,20,0,0,False,False,False
+Dimension,Date,Month,nvarchar,20,0,0,False,False,False
+Dimension,Date,Short Month,nvarchar,6,0,0,False,False,False
+Dimension,Date,Calendar Month Number,int,4,10,0,False,False,False
+Dimension,Date,Calendar Month Label,nvarchar,40,0,0,False,False,False
+Dimension,Date,Calendar Year,int,4,10,0,False,False,False
+Dimension,Date,Calendar Year Label,nvarchar,20,0,0,False,False,False
+Dimension,Date,Fiscal Month Number,int,4,10,0,False,False,False
+Dimension,Date,Fiscal Month Label,nvarchar,40,0,0,False,False,False
+Dimension,Date,Fiscal Year,int,4,10,0,False,False,False
+Dimension,Date,Fiscal Year Label,nvarchar,20,0,0,False,False,False
+Dimension,Date,ISO Week Number,int,4,10,0,False,False,False
+Dimension,Employee,Employee Key,int,4,10,0,False,False,False
+Dimension,Employee,WWI Employee ID,int,4,10,0,False,False,False
+Dimension,Employee,Employee,nvarchar,100,0,0,False,False,False
+Dimension,Employee,Preferred Name,nvarchar,100,0,0,False,False,False
+Dimension,Employee,Is Salesperson,bit,1,1,0,False,False,False
+Dimension,Employee,Photo,varbinary,-1,0,0,True,False,False
+Dimension,Employee,Valid From,datetime2,8,27,7,False,False,False
+Dimension,Employee,Valid To,datetime2,8,27,7,False,False,False
+Dimension,Employee,Lineage Key,int,4,10,0,False,False,False
+Dimension,Payment Method,Payment Method Key,int,4,10,0,False,False,False
+Dimension,Payment Method,WWI Payment Method ID,int,4,10,0,False,False,False
+Dimension,Payment Method,Payment Method,nvarchar,100,0,0,False,False,False
+Dimension,Payment Method,Valid From,datetime2,8,27,7,False,False,False
+Dimension,Payment Method,Valid To,datetime2,8,27,7,False,False,False
+Dimension,Payment Method,Lineage Key,int,4,10,0,False,False,False
+Dimension,Stock Item,Stock Item Key,int,4,10,0,False,False,False
+Dimension,Stock Item,WWI Stock Item ID,int,4,10,0,False,False,False
+Dimension,Stock Item,Stock Item,nvarchar,200,0,0,False,False,False
+Dimension,Stock Item,Color,nvarchar,40,0,0,False,False,False
+Dimension,Stock Item,Selling Package,nvarchar,100,0,0,False,False,False
+Dimension,Stock Item,Buying Package,nvarchar,100,0,0,False,False,False
+Dimension,Stock Item,Brand,nvarchar,100,0,0,False,False,False
+Dimension,Stock Item,Size,nvarchar,40,0,0,False,False,False
+Dimension,Stock Item,Lead Time Days,int,4,10,0,False,False,False
+Dimension,Stock Item,Quantity Per Outer,int,4,10,0,False,False,False
+Dimension,Stock Item,Is Chiller Stock,bit,1,1,0,False,False,False
+Dimension,Stock Item,Barcode,nvarchar,100,0,0,True,False,False
+Dimension,Stock Item,Tax Rate,decimal,9,18,3,False,False,False
+Dimension,Stock Item,Unit Price,decimal,9,18,2,False,False,False
+Dimension,Stock Item,Recommended Retail Price,decimal,9,18,2,True,False,False
+Dimension,Stock Item,Typical Weight Per Unit,decimal,9,18,3,False,False,False
+Dimension,Stock Item,Photo,varbinary,-1,0,0,True,False,False
+Dimension,Stock Item,Valid From,datetime2,8,27,7,False,False,False
+Dimension,Stock Item,Valid To,datetime2,8,27,7,False,False,False
+Dimension,Stock Item,Lineage Key,int,4,10,0,False,False,False
+Dimension,Supplier,Supplier Key,int,4,10,0,False,False,False
+Dimension,Supplier,WWI Supplier ID,int,4,10,0,False,False,False
+Dimension,Supplier,Supplier,nvarchar,200,0,0,False,False,False
+Dimension,Supplier,Category,nvarchar,100,0,0,False,False,False
+Dimension,Supplier,Primary Contact,nvarchar,100,0,0,False,False,False
+Dimension,Supplier,Supplier Reference,nvarchar,40,0,0,True,False,False
+Dimension,Supplier,Payment Days,int,4,10,0,False,False,False
+Dimension,Supplier,Postal Code,nvarchar,20,0,0,False,False,False
+Dimension,Supplier,Valid From,datetime2,8,27,7,False,False,False
+Dimension,Supplier,Valid To,datetime2,8,27,7,False,False,False
+Dimension,Supplier,Lineage Key,int,4,10,0,False,False,False
+Dimension,Transaction Type,Transaction Type Key,int,4,10,0,False,False,False
+Dimension,Transaction Type,WWI Transaction Type ID,int,4,10,0,False,False,False
+Dimension,Transaction Type,Transaction Type,nvarchar,100,0,0,False,False,False
+Dimension,Transaction Type,Valid From,datetime2,8,27,7,False,False,False
+Dimension,Transaction Type,Valid To,datetime2,8,27,7,False,False,False
+Dimension,Transaction Type,Lineage Key,int,4,10,0,False,False,False
+Fact,Movement,Movement Key,bigint,8,19,0,False,True,False
+Fact,Movement,Date Key,date,3,10,0,False,False,False
+Fact,Movement,Stock Item Key,int,4,10,0,False,False,False
+Fact,Movement,Customer Key,int,4,10,0,True,False,False
+Fact,Movement,Supplier Key,int,4,10,0,True,False,False
+Fact,Movement,Transaction Type Key,int,4,10,0,False,False,False
+Fact,Movement,WWI Stock Item Transaction ID,int,4,10,0,False,False,False
+Fact,Movement,WWI Invoice ID,int,4,10,0,True,False,False
+Fact,Movement,WWI Purchase Order ID,int,4,10,0,True,False,False
+Fact,Movement,Quantity,int,4,10,0,False,False,False
+Fact,Movement,Lineage Key,int,4,10,0,False,False,False
+Fact,Order,Order Key,bigint,8,19,0,False,True,False
+Fact,Order,City Key,int,4,10,0,False,False,False
+Fact,Order,Customer Key,int,4,10,0,False,False,False
+Fact,Order,Stock Item Key,int,4,10,0,False,False,False
+Fact,Order,Order Date Key,date,3,10,0,False,False,False
+Fact,Order,Picked Date Key,date,3,10,0,True,False,False
+Fact,Order,Salesperson Key,int,4,10,0,False,False,False
+Fact,Order,Picker Key,int,4,10,0,True,False,False
+Fact,Order,WWI Order ID,int,4,10,0,False,False,False
+Fact,Order,WWI Backorder ID,int,4,10,0,True,False,False
+Fact,Order,Description,nvarchar,200,0,0,False,False,False
+Fact,Order,Package,nvarchar,100,0,0,False,False,False
+Fact,Order,Quantity,int,4,10,0,False,False,False
+Fact,Order,Unit Price,decimal,9,18,2,False,False,False
+Fact,Order,Tax Rate,decimal,9,18,3,False,False,False
+Fact,Order,Total Excluding Tax,decimal,9,18,2,False,False,False
+Fact,Order,Tax Amount,decimal,9,18,2,False,False,False
+Fact,Order,Total Including Tax,decimal,9,18,2,False,False,False
+Fact,Order,Lineage Key,int,4,10,0,False,False,False
+Fact,Purchase,Purchase Key,bigint,8,19,0,False,True,False
+Fact,Purchase,Date Key,date,3,10,0,False,False,False
+Fact,Purchase,Supplier Key,int,4,10,0,False,False,False
+Fact,Purchase,Stock Item Key,int,4,10,0,False,False,False
+Fact,Purchase,WWI Purchase Order ID,int,4,10,0,True,False,False
+Fact,Purchase,Ordered Outers,int,4,10,0,False,False,False
+Fact,Purchase,Ordered Quantity,int,4,10,0,False,False,False
+Fact,Purchase,Received Outers,int,4,10,0,False,False,False
+Fact,Purchase,Package,nvarchar,100,0,0,False,False,False
+Fact,Purchase,Is Order Finalized,bit,1,1,0,False,False,False
+Fact,Purchase,Lineage Key,int,4,10,0,False,False,False
+Fact,Sale,Sale Key,bigint,8,19,0,False,True,False
+Fact,Sale,City Key,int,4,10,0,False,False,False
+Fact,Sale,Customer Key,int,4,10,0,False,False,False
+Fact,Sale,Bill To Customer Key,int,4,10,0,False,False,False
+Fact,Sale,Stock Item Key,int,4,10,0,False,False,False
+Fact,Sale,Invoice Date Key,date,3,10,0,False,False,False
+Fact,Sale,Delivery Date Key,date,3,10,0,True,False,False
+Fact,Sale,Salesperson Key,int,4,10,0,False,False,False
+Fact,Sale,WWI Invoice ID,int,4,10,0,False,False,False
+Fact,Sale,Description,nvarchar,200,0,0,False,False,False
+Fact,Sale,Package,nvarchar,100,0,0,False,False,False
+Fact,Sale,Quantity,int,4,10,0,False,False,False
+Fact,Sale,Unit Price,decimal,9,18,2,False,False,False
+Fact,Sale,Tax Rate,decimal,9,18,3,False,False,False
+Fact,Sale,Total Excluding Tax,decimal,9,18,2,False,False,False
+Fact,Sale,Tax Amount,decimal,9,18,2,False,False,False
+Fact,Sale,Profit,decimal,9,18,2,False,False,False
+Fact,Sale,Total Including Tax,decimal,9,18,2,False,False,False
+Fact,Sale,Total Dry Items,int,4,10,0,False,False,False
+Fact,Sale,Total Chiller Items,int,4,10,0,False,False,False
+Fact,Sale,Lineage Key,int,4,10,0,False,False,False
+Fact,Stock Holding,Stock Holding Key,bigint,8,19,0,False,True,False
+Fact,Stock Holding,Stock Item Key,int,4,10,0,False,False,False
+Fact,Stock Holding,Quantity On Hand,int,4,10,0,False,False,False
+Fact,Stock Holding,Bin Location,nvarchar,40,0,0,False,False,False
+Fact,Stock Holding,Last Stocktake Quantity,int,4,10,0,False,False,False
+Fact,Stock Holding,Last Cost Price,decimal,9,18,2,False,False,False
+Fact,Stock Holding,Reorder Level,int,4,10,0,False,False,False
+Fact,Stock Holding,Target Stock Level,int,4,10,0,False,False,False
+Fact,Stock Holding,Lineage Key,int,4,10,0,False,False,False
+Fact,Transaction,Transaction Key,bigint,8,19,0,False,True,False
+Fact,Transaction,Date Key,date,3,10,0,False,False,False
+Fact,Transaction,Customer Key,int,4,10,0,True,False,False
+Fact,Transaction,Bill To Customer Key,int,4,10,0,True,False,False
+Fact,Transaction,Supplier Key,int,4,10,0,True,False,False
+Fact,Transaction,Transaction Type Key,int,4,10,0,False,False,False
+Fact,Transaction,Payment Method Key,int,4,10,0,True,False,False
+Fact,Transaction,WWI Customer Transaction ID,int,4,10,0,True,False,False
+Fact,Transaction,WWI Supplier Transaction ID,int,4,10,0,True,False,False
+Fact,Transaction,WWI Invoice ID,int,4,10,0,True,False,False
+Fact,Transaction,WWI Purchase Order ID,int,4,10,0,True,False,False
+Fact,Transaction,Supplier Invoice Number,nvarchar,40,0,0,True,False,False
+Fact,Transaction,Total Excluding Tax,decimal,9,18,2,False,False,False
+Fact,Transaction,Tax Amount,decimal,9,18,2,False,False,False
+Fact,Transaction,Total Including Tax,decimal,9,18,2,False,False,False
+Fact,Transaction,Outstanding Balance,decimal,9,18,2,False,False,False
+Fact,Transaction,Is Finalized,bit,1,1,0,False,False,False
+Fact,Transaction,Lineage Key,int,4,10,0,False,False,False

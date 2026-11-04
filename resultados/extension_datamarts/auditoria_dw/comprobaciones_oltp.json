@@ -1,0 +1,914 @@
+{
+  "columns": [
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrderLines",
+      "column_name": "PurchaseOrderLineID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrderLines",
+      "column_name": "PurchaseOrderID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrderLines",
+      "column_name": "StockItemID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrderLines",
+      "column_name": "OrderedOuters",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrderLines",
+      "column_name": "Description",
+      "data_type": "nvarchar",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrderLines",
+      "column_name": "ReceivedOuters",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrderLines",
+      "column_name": "PackageTypeID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrderLines",
+      "column_name": "ExpectedUnitPricePerOuter",
+      "data_type": "decimal",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrderLines",
+      "column_name": "LastReceiptDate",
+      "data_type": "date",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrderLines",
+      "column_name": "IsOrderLineFinalized",
+      "data_type": "bit",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrderLines",
+      "column_name": "LastEditedBy",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrderLines",
+      "column_name": "LastEditedWhen",
+      "data_type": "datetime2",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrders",
+      "column_name": "PurchaseOrderID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrders",
+      "column_name": "SupplierID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrders",
+      "column_name": "OrderDate",
+      "data_type": "date",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrders",
+      "column_name": "DeliveryMethodID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrders",
+      "column_name": "ContactPersonID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrders",
+      "column_name": "ExpectedDeliveryDate",
+      "data_type": "date",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrders",
+      "column_name": "SupplierReference",
+      "data_type": "nvarchar",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrders",
+      "column_name": "IsOrderFinalized",
+      "data_type": "bit",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrders",
+      "column_name": "Comments",
+      "data_type": "nvarchar",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrders",
+      "column_name": "InternalComments",
+      "data_type": "nvarchar",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrders",
+      "column_name": "LastEditedBy",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrders",
+      "column_name": "LastEditedWhen",
+      "data_type": "datetime2",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "SupplierTransactions",
+      "column_name": "SupplierTransactionID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "SupplierTransactions",
+      "column_name": "SupplierID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "SupplierTransactions",
+      "column_name": "TransactionTypeID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "SupplierTransactions",
+      "column_name": "PurchaseOrderID",
+      "data_type": "int",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "SupplierTransactions",
+      "column_name": "PaymentMethodID",
+      "data_type": "int",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "SupplierTransactions",
+      "column_name": "SupplierInvoiceNumber",
+      "data_type": "nvarchar",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "SupplierTransactions",
+      "column_name": "TransactionDate",
+      "data_type": "date",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "SupplierTransactions",
+      "column_name": "AmountExcludingTax",
+      "data_type": "decimal",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "SupplierTransactions",
+      "column_name": "TaxAmount",
+      "data_type": "decimal",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "SupplierTransactions",
+      "column_name": "TransactionAmount",
+      "data_type": "decimal",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "SupplierTransactions",
+      "column_name": "OutstandingBalance",
+      "data_type": "decimal",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "SupplierTransactions",
+      "column_name": "FinalizationDate",
+      "data_type": "date",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "SupplierTransactions",
+      "column_name": "IsFinalized",
+      "data_type": "bit",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "SupplierTransactions",
+      "column_name": "LastEditedBy",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "SupplierTransactions",
+      "column_name": "LastEditedWhen",
+      "data_type": "datetime2",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "CustomerTransactions",
+      "column_name": "CustomerTransactionID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "CustomerTransactions",
+      "column_name": "CustomerID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "CustomerTransactions",
+      "column_name": "TransactionTypeID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "CustomerTransactions",
+      "column_name": "InvoiceID",
+      "data_type": "int",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "CustomerTransactions",
+      "column_name": "PaymentMethodID",
+      "data_type": "int",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "CustomerTransactions",
+      "column_name": "TransactionDate",
+      "data_type": "date",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "CustomerTransactions",
+      "column_name": "AmountExcludingTax",
+      "data_type": "decimal",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "CustomerTransactions",
+      "column_name": "TaxAmount",
+      "data_type": "decimal",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "CustomerTransactions",
+      "column_name": "TransactionAmount",
+      "data_type": "decimal",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "CustomerTransactions",
+      "column_name": "OutstandingBalance",
+      "data_type": "decimal",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "CustomerTransactions",
+      "column_name": "FinalizationDate",
+      "data_type": "date",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "CustomerTransactions",
+      "column_name": "IsFinalized",
+      "data_type": "bit",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "CustomerTransactions",
+      "column_name": "LastEditedBy",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "CustomerTransactions",
+      "column_name": "LastEditedWhen",
+      "data_type": "datetime2",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "OrderLines",
+      "column_name": "OrderLineID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "OrderLines",
+      "column_name": "OrderID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "OrderLines",
+      "column_name": "StockItemID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "OrderLines",
+      "column_name": "Description",
+      "data_type": "nvarchar",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "OrderLines",
+      "column_name": "PackageTypeID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "OrderLines",
+      "column_name": "Quantity",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "OrderLines",
+      "column_name": "UnitPrice",
+      "data_type": "decimal",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "OrderLines",
+      "column_name": "TaxRate",
+      "data_type": "decimal",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "OrderLines",
+      "column_name": "PickedQuantity",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "OrderLines",
+      "column_name": "PickingCompletedWhen",
+      "data_type": "datetime2",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "OrderLines",
+      "column_name": "LastEditedBy",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "OrderLines",
+      "column_name": "LastEditedWhen",
+      "data_type": "datetime2",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Orders",
+      "column_name": "OrderID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Orders",
+      "column_name": "CustomerID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Orders",
+      "column_name": "SalespersonPersonID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Orders",
+      "column_name": "PickedByPersonID",
+      "data_type": "int",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Orders",
+      "column_name": "ContactPersonID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Orders",
+      "column_name": "BackorderOrderID",
+      "data_type": "int",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Orders",
+      "column_name": "OrderDate",
+      "data_type": "date",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Orders",
+      "column_name": "ExpectedDeliveryDate",
+      "data_type": "date",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Orders",
+      "column_name": "CustomerPurchaseOrderNumber",
+      "data_type": "nvarchar",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Orders",
+      "column_name": "IsUndersupplyBackordered",
+      "data_type": "bit",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Orders",
+      "column_name": "Comments",
+      "data_type": "nvarchar",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Orders",
+      "column_name": "DeliveryInstructions",
+      "data_type": "nvarchar",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Orders",
+      "column_name": "InternalComments",
+      "data_type": "nvarchar",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Orders",
+      "column_name": "PickingCompletedWhen",
+      "data_type": "datetime2",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Orders",
+      "column_name": "LastEditedBy",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Orders",
+      "column_name": "LastEditedWhen",
+      "data_type": "datetime2",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemHoldings",
+      "column_name": "StockItemID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemHoldings",
+      "column_name": "QuantityOnHand",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemHoldings",
+      "column_name": "BinLocation",
+      "data_type": "nvarchar",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemHoldings",
+      "column_name": "LastStocktakeQuantity",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemHoldings",
+      "column_name": "LastCostPrice",
+      "data_type": "decimal",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemHoldings",
+      "column_name": "ReorderLevel",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemHoldings",
+      "column_name": "TargetStockLevel",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemHoldings",
+      "column_name": "LastEditedBy",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemHoldings",
+      "column_name": "LastEditedWhen",
+      "data_type": "datetime2",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemTransactions",
+      "column_name": "StockItemTransactionID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemTransactions",
+      "column_name": "StockItemID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemTransactions",
+      "column_name": "TransactionTypeID",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemTransactions",
+      "column_name": "CustomerID",
+      "data_type": "int",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemTransactions",
+      "column_name": "InvoiceID",
+      "data_type": "int",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemTransactions",
+      "column_name": "SupplierID",
+      "data_type": "int",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemTransactions",
+      "column_name": "PurchaseOrderID",
+      "data_type": "int",
+      "is_nullable": true,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemTransactions",
+      "column_name": "TransactionOccurredWhen",
+      "data_type": "datetime2",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemTransactions",
+      "column_name": "Quantity",
+      "data_type": "decimal",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemTransactions",
+      "column_name": "LastEditedBy",
+      "data_type": "int",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItemTransactions",
+      "column_name": "LastEditedWhen",
+      "data_type": "datetime2",
+      "is_nullable": false,
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    }
+  ],
+  "integration_definitions": [
+    {
+      "schema_name": "Integration",
+      "module_name": "GetMovementUpdates",
+      "definition": "\r\nCREATE PROCEDURE Integration.GetMovementUpdates\r\n@LastCutoff datetime2(7),\r\n@NewCutoff datetime2(7)\r\nWITH EXECUTE AS OWNER\r\nAS\r\nBEGIN\r\n    SET NOCOUNT ON;\r\n    SET XACT_ABORT ON;\r\n\r\n    SELECT CAST(sit.TransactionOccurredWhen AS date) AS [Date Key],\r\n           sit.StockItemTransactionID AS [WWI Stock Item Transaction ID],\r\n           sit.InvoiceID AS [WWI Invoice ID],\r\n           sit.PurchaseOrderID AS [WWI Purchase Order ID],\r\n           CAST(sit.Quantity AS int) AS Quantity,\r\n           sit.StockItemID AS [WWI Stock Item ID],\r\n           sit.CustomerID AS [WWI Customer ID],\r\n           sit.SupplierID AS [WWI Supplier ID],\r\n           sit.TransactionTypeID AS [WWI Transaction Type ID],\r\n           sit.TransactionOccurredWhen AS [Transaction Occurred When]\r\n    FROM Warehouse.StockItemTransactions AS sit\r\n    WHERE sit.LastEditedWhen > @LastCutoff\r\n    AND sit.LastEditedWhen <= @NewCutoff\r\n    ORDER BY sit.StockItemTransactionID;\r\n\r\n    RETURN 0;\r\nEND;\r\n"
+    },
+    {
+      "schema_name": "Integration",
+      "module_name": "GetOrderUpdates",
+      "definition": "\r\nCREATE PROCEDURE Integration.GetOrderUpdates\r\n@LastCutoff datetime2(7),\r\n@NewCutoff datetime2(7)\r\nWITH EXECUTE AS OWNER\r\nAS\r\nBEGIN\r\n    SET NOCOUNT ON;\r\n    SET XACT_ABORT ON;\r\n\r\n\r\n    SELECT CAST(o.OrderDate AS date) AS [Order Date Key],\r\n           CAST(ol.PickingCompletedWhen AS date) AS [Picked Date Key],\r\n           o.OrderID AS [WWI Order ID],\r\n           o.BackorderOrderID AS [WWI Backorder ID],\r\n           ol.[Description],\r\n           pt.PackageTypeName AS Package,\r\n           ol.Quantity AS Quantity,\r\n           ol.UnitPrice AS [Unit Price],\r\n           ol.TaxRate AS [Tax Rate],\r\n           ROUND(ol.Quantity * ol.UnitPrice, 2) AS [Total Excluding Tax],\r\n           ROUND(ol.Quantity * ol.UnitPrice * ol.TaxRate / 100.0, 2) AS [Tax Amount],\r\n           ROUND(ol.Quantity * ol.UnitPrice, 2) + ROUND(ol.Quantity * ol.UnitPrice * ol.TaxRate / 100.0, 2) AS [Total Including Tax],\r\n           c.DeliveryCityID AS [WWI City ID],\r\n           c.CustomerID AS [WWI Customer ID],\r\n           ol.StockItemID AS [WWI Stock Item ID],\r\n           o.SalespersonPersonID AS [WWI Salesperson ID],\r\n           o.PickedByPersonID AS [WWI Picker ID],\r\n           CASE WHEN ol.LastEditedWhen > o.LastEditedWhen THEN ol.LastEditedWhen ELSE o.LastEditedWhen END AS [Last Modified When]\r\n    FROM Sales.Orders AS o\r\n    INNER JOIN Sales.OrderLines AS ol\r\n    ON o.OrderID = ol.OrderID\r\n    INNER JOIN Warehouse.PackageTypes AS pt\r\n    ON ol.PackageTypeID = pt.PackageTypeID\r\n    INNER JOIN Sales.Customers AS c\r\n    ON c.CustomerID = o.CustomerID\r\n    WHERE CASE WHEN ol.LastEditedWhen > o.LastEditedWhen THEN ol.LastEditedWhen ELSE o.LastEditedWhen END > @LastCutoff\r\n    AND CASE WHEN ol.LastEditedWhen > o.LastEditedWhen THEN ol.LastEditedWhen ELSE o.LastEditedWhen END <= @NewCutoff\r\n    ORDER BY o.OrderID;\r\n\r\n    RETURN 0;\r\nEND;\r\n"
+    },
+    {
+      "schema_name": "Integration",
+      "module_name": "GetPurchaseUpdates",
+      "definition": "\r\nCREATE PROCEDURE Integration.GetPurchaseUpdates\r\n@LastCutoff datetime2(7),\r\n@NewCutoff datetime2(7)\r\nWITH EXECUTE AS OWNER\r\nAS\r\nBEGIN\r\n    SET NOCOUNT ON;\r\n    SET XACT_ABORT ON;\r\n\r\n\r\n    SELECT CAST(po.OrderDate AS date) AS [Date Key],\r\n           po.PurchaseOrderID AS [WWI Purchase Order ID],\r\n           pol.OrderedOuters AS [Ordered Outers],\r\n           pol.OrderedOuters * si.QuantityPerOuter AS [Ordered Quantity],\r\n           pol.ReceivedOuters AS [Received Outers],\r\n           pt.PackageTypeName AS Package,\r\n           pol.IsOrderLineFinalized AS [Is Order Finalized],\r\n           po.SupplierID AS [WWI Supplier ID],\r\n           pol.StockItemID AS [WWI Stock Item ID],\r\n           CASE WHEN pol.LastEditedWhen > po.LastEditedWhen THEN pol.LastEditedWhen ELSE po.LastEditedWhen END AS [Last Modified When]\r\n    FROM Purchasing.PurchaseOrders AS po\r\n    INNER JOIN Purchasing.PurchaseOrderLines AS pol\r\n    ON po.PurchaseOrderID = pol.PurchaseOrderID\r\n    INNER JOIN Warehouse.StockItems AS si\r\n    ON pol.StockItemID = si.StockItemID\r\n    INNER JOIN Warehouse.PackageTypes AS pt\r\n    ON pol.PackageTypeID = pt.PackageTypeID\r\n    WHERE CASE WHEN pol.LastEditedWhen > po.LastEditedWhen THEN pol.LastEditedWhen ELSE po.LastEditedWhen END > @LastCutoff\r\n    AND CASE WHEN pol.LastEditedWhen > po.LastEditedWhen THEN pol.LastEditedWhen ELSE po.LastEditedWhen END <= @NewCutoff\r\n    ORDER BY po.PurchaseOrderID;\r\n\r\n    RETURN 0;\r\nEND;\r\n"
+    },
+    {
+      "schema_name": "Integration",
+      "module_name": "GetStockHoldingUpdates",
+      "definition": "\r\nCREATE PROCEDURE Integration.GetStockHoldingUpdates\r\nWITH EXECUTE AS OWNER\r\nAS\r\nBEGIN\r\n    SET NOCOUNT ON;\r\n    SET XACT_ABORT ON;\r\n\r\n    SELECT sih.QuantityOnHand AS [Quantity On Hand],\r\n           sih.BinLocation AS [Bin Location],\r\n           sih.LastStocktakeQuantity AS [Last Stocktake Quantity],\r\n           sih.LastCostPrice AS [Last Cost Price],\r\n           sih.ReorderLevel AS [Reorder Level],\r\n           sih.TargetStockLevel AS [Target Stock Level],\r\n           sih.StockItemID AS [WWI Stock Item ID]\r\n    FROM Warehouse.StockItemHoldings AS sih\r\n    ORDER BY sih.StockItemID;\r\n\r\n    RETURN 0;\r\nEND;\r\n"
+    },
+    {
+      "schema_name": "Integration",
+      "module_name": "GetTransactionUpdates",
+      "definition": "\r\nCREATE PROCEDURE Integration.GetTransactionUpdates\r\n@LastCutoff datetime2(7),\r\n@NewCutoff datetime2(7)\r\nWITH EXECUTE AS OWNER\r\nAS\r\nBEGIN\r\n    SET NOCOUNT ON;\r\n    SET XACT_ABORT ON;\r\n\r\n    SELECT CAST(ct.TransactionDate AS date) AS [Date Key],\r\n           ct.CustomerTransactionID AS [WWI Customer Transaction ID],\r\n           CAST(NULL AS int) AS [WWI Supplier Transaction ID],\r\n           ct.InvoiceID AS [WWI Invoice ID],\r\n           CAST(NULL AS int) AS [WWI Purchase Order ID],\r\n           CAST(NULL AS nvarchar(20)) AS [Supplier Invoice Number],\r\n           ct.AmountExcludingTax AS [Total Excluding Tax],\r\n           ct.TaxAmount AS [Tax Amount],\r\n           ct.TransactionAmount AS [Total Including Tax],\r\n           ct.OutstandingBalance AS [Outstanding Balance],\r\n           ct.IsFinalized AS [Is Finalized],\r\n           COALESCE(i.CustomerID, ct.CustomerID) AS [WWI Customer ID],\r\n           ct.CustomerID AS [WWI Bill To Customer ID],\r\n           CAST(NULL AS int) AS [WWI Supplier ID],\r\n           ct.TransactionTypeID AS [WWI Transaction Type ID],\r\n           ct.PaymentMethodID AS [WWI Payment Method ID],\r\n           ct.LastEditedWhen AS [Last Modified When]\r\n    FROM Sales.CustomerTransactions AS ct\r\n    LEFT OUTER JOIN Sales.Invoices AS i\r\n    ON ct.InvoiceID = i.InvoiceID\r\n    WHERE ct.LastEditedWhen > @LastCutoff\r\n    AND ct.LastEditedWhen <= @NewCutoff\r\n\r\n    UNION ALL\r\n\r\n    SELECT CAST(st.TransactionDate AS date) AS [Date Key],\r\n           CAST(NULL AS int) AS [WWI Customer Transaction ID],\r\n           st.SupplierTransactionID AS [WWI Supplier Transaction ID],\r\n           CAST(NULL AS int) AS [WWI Invoice ID],\r\n           st.PurchaseOrderID AS [WWI Purchase Order ID],\r\n           st.SupplierInvoiceNumber AS [Supplier Invoice Number],\r\n           st.AmountExcludingTax AS [Total Excluding Tax],\r\n           st.TaxAmount AS [Tax Amount],\r\n           st.TransactionAmount AS [Total Including Tax],\r\n           st.OutstandingBalance AS [Outstanding Balance],\r\n           st.IsFinalized AS [Is Finalized],\r\n           CAST(NULL AS int) AS [WWI Customer ID],\r\n           CAST(NULL AS int) AS [WWI Bill To Customer ID],\r\n           st.SupplierID AS [WWI Supplier ID],\r\n           st.TransactionTypeID AS [WWI Transaction Type ID],\r\n           st.PaymentMethodID AS [WWI Payment Method ID],\r\n           st.LastEditedWhen AS [Last Modified When]\r\n    FROM Purchasing.SupplierTransactions AS st\r\n    WHERE st.LastEditedWhen > @LastCutoff\r\n    AND st.LastEditedWhen <= @NewCutoff;\r\n\r\n    RETURN 0;\r\nEND;\r\n"
+    }
+  ],
+  "orders": {
+    "orders": 73595,
+    "min_order_date": "2013-01-01",
+    "max_order_date": "2016-05-31",
+    "no_completion": 3085,
+    "with_backorder": 7538,
+    "edited_after_order_date": 73595
+  },
+  "order_line_keys": {
+    "repeated_order_stock_pairs": 0,
+    "excess": 0
+  },
+  "order_line_link": {
+    "matched": 231412,
+    "discrepancies": 0
+  },
+  "order_candidate_2day": {
+    "eligible_documents": 73426,
+    "possible_positive": 6220,
+    "possible_negative": 67206
+  },
+  "order_candidate_censoring": {
+    "no_completion_before_2day_cutoff": 3068
+  },
+  "purchase_dates": {
+    "lines": 8367,
+    "missing_receipt": 9,
+    "receipt_before_order": 0,
+    "last_receipt_after_expected": 0,
+    "edited_after_order_date": 8367
+  },
+  "purchase_candidate_late": {
+    "closed_observed_lines": 8235,
+    "possible_late": 0,
+    "documents": 2043
+  },
+  "movements": {
+    "transactions": 236667,
+    "fractional_quantities": 0,
+    "min_event": "2013-01-01 12:00:00",
+    "max_event": "2016-05-31 12:00:00",
+    "edited_after_event": 0
+  },
+  "movement_link": {
+    "matched": 236667,
+    "discrepancies": 0
+  },
+  "customer_transactions": {
+    "transactions": 97147,
+    "min_event": "2013-01-01",
+    "max_event": "2016-05-31",
+    "latest_finalization": "2016-05-31",
+    "finalized_later": 70426,
+    "finalized_nonzero_balance": 0,
+    "unfinalized_with_date": 0
+  },
+  "supplier_transactions": {
+    "transactions": 2438,
+    "min_event": "2013-01-02",
+    "max_event": "2016-05-31",
+    "latest_finalization": "2016-05-30",
+    "finalized_later": 1429,
+    "finalized_nonzero_balance": 0,
+    "unfinalized_with_date": 0
+  },
+  "invoice_payment_candidate_30day": {
+    "eligible_positive_invoices": 68562,
+    "possible_unpaid_after_30d": 0,
+    "latest_finalization": "2016-05-01"
+  },
+  "purchase_unit_conversion": {
+    "matched": 8367,
+    "discrepancies": 0
+  },
+  "scope": "Metadatos y agregados necesarios; las definiciones de procedimientos se leen desde sys.sql_modules, nunca se ejecutan."
+}

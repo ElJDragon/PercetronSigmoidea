@@ -1,0 +1,226 @@
+[
+  {
+    "kind": "supplier",
+    "surrogate": 0,
+    "business_id": 0,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "9999-12-31 23:59:59.999999",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 1,
+    "business_id": 1,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 14,
+    "business_id": 1,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 11,
+    "business_id": 2,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 15,
+    "business_id": 2,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 3,
+    "business_id": 3,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 16,
+    "business_id": 3,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 27,
+    "business_id": 3,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 7,
+    "business_id": 4,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 17,
+    "business_id": 4,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 6,
+    "business_id": 5,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 18,
+    "business_id": 5,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 5,
+    "business_id": 6,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 19,
+    "business_id": 6,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 4,
+    "business_id": 7,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 20,
+    "business_id": 7,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 10,
+    "business_id": 8,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 21,
+    "business_id": 8,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 12,
+    "business_id": 9,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 22,
+    "business_id": 9,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 13,
+    "business_id": 10,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 23,
+    "business_id": 10,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 9,
+    "business_id": 11,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 24,
+    "business_id": 11,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 8,
+    "business_id": 12,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 25,
+    "business_id": 12,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 2,
+    "business_id": 13,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00",
+    "quantity_per_outer": null
+  },
+  {
+    "kind": "supplier",
+    "surrogate": 26,
+    "business_id": 13,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999",
+    "quantity_per_outer": null
+  }
+]

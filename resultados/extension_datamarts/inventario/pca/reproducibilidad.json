@@ -1,0 +1,25 @@
+{
+  "status": "identical",
+  "files_compared": 13,
+  "hashes": {
+    "centroides_articulo.csv": "e41a046431047d75fb1c69aa1ca17e75aa9a531823b48ff4e0cf2bfaea2ff873",
+    "coeficientes_componentes.csv": "84256d0d521633c0b8ac92b27e8865d8a10f6ebcd695e66baa19134ce92fae38",
+    "comprobaciones_matematicas.json": "e8fd80d6d826eafc8bb799002b04b7e382abb55a4ec419372c9797a3596cab7c",
+    "interpretacion_componentes.json": "d6d5050c1ca76c8095fd60deb61b8cb5f8da50cdb142cad19c4708e508b3f42a",
+    "pca_parametros.json": "765940798c682a31a21adf74cec8232e210d31d39589320efaba6036430ff7c5",
+    "proyeccion_train.csv": "80a8ab148ee0c1854b07309d4e8050020527768ea7a2c7d2e53f7519feb82e59",
+    "proyeccion_train.npy": "3eda079cab9828b3700062fd08469e5c4141c500ea12429a40b85789637d8c54",
+    "proyeccion_val.csv": "d024c43c1733e5ef66b772f03200d93d28874a5fdac3091e42d1935447749568",
+    "proyeccion_val.npy": "3693ceb9e6bcf5b8a7bdd39955dfc194951251c5900682d8ca2e518a07f8a08b",
+    "varianza_explicada.json": "307f5c076b11c9632de4514aac06e360ae7a775365bfa37c5e38e3ba6f4ed8fa",
+    "graficos\\dispersion_train.png": "9cc02d2066328dad6ae3fce7c0dd7601253c419bde913eb70ca4540e7057f093",
+    "graficos\\dispersion_val.png": "175219e68e607713f2b747338ddb332a70a4845484df526dd8febef1d443e74d",
+    "graficos\\varianza_explicada.png": "f5d28164dc2fb028428ff87881235d81aa2f37c91f8c21437fa52421ffcc9513"
+  },
+  "PCA_fit_partition": "train_only",
+  "classifier_fit_calls": 0,
+  "scaler_fit_calls": 0,
+  "SQL_queries": 0,
+  "test_loaded": false,
+  "numerical_environment": "see entorno.json; bitwise replay in same environment"
+}

@@ -1,0 +1,198 @@
+[
+  {
+    "surrogate": 0,
+    "business_id": 0,
+    "label": null,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 1,
+    "business_id": 1,
+    "label": null,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00"
+  },
+  {
+    "surrogate": 2,
+    "business_id": 13,
+    "label": null,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00"
+  },
+  {
+    "surrogate": 3,
+    "business_id": 3,
+    "label": null,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00"
+  },
+  {
+    "surrogate": 4,
+    "business_id": 7,
+    "label": null,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00"
+  },
+  {
+    "surrogate": 5,
+    "business_id": 6,
+    "label": null,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00"
+  },
+  {
+    "surrogate": 6,
+    "business_id": 5,
+    "label": null,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00"
+  },
+  {
+    "surrogate": 7,
+    "business_id": 4,
+    "label": null,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00"
+  },
+  {
+    "surrogate": 8,
+    "business_id": 12,
+    "label": null,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00"
+  },
+  {
+    "surrogate": 9,
+    "business_id": 11,
+    "label": null,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00"
+  },
+  {
+    "surrogate": 10,
+    "business_id": 8,
+    "label": null,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00"
+  },
+  {
+    "surrogate": 11,
+    "business_id": 2,
+    "label": null,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00"
+  },
+  {
+    "surrogate": 12,
+    "business_id": 9,
+    "label": null,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00"
+  },
+  {
+    "surrogate": 13,
+    "business_id": 10,
+    "label": null,
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "2013-01-01 00:05:00"
+  },
+  {
+    "surrogate": 14,
+    "business_id": 1,
+    "label": null,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 15,
+    "business_id": 2,
+    "label": null,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 16,
+    "business_id": 3,
+    "label": null,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 17,
+    "business_id": 4,
+    "label": null,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 18,
+    "business_id": 5,
+    "label": null,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 19,
+    "business_id": 6,
+    "label": null,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 20,
+    "business_id": 7,
+    "label": null,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 21,
+    "business_id": 8,
+    "label": null,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 22,
+    "business_id": 9,
+    "label": null,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 23,
+    "business_id": 10,
+    "label": null,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 24,
+    "business_id": 11,
+    "label": null,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 25,
+    "business_id": 12,
+    "label": null,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 26,
+    "business_id": 13,
+    "label": null,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 27,
+    "business_id": 3,
+    "label": null,
+    "valid_from": "2013-01-01 00:05:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "started_at_utc": "2026-11-04T04:32:02.915089+00:00",
+  "completed_at_utc": "2026-11-04T04:32:03.325034+00:00",
+  "server": "lpc:.\\AMBATO",
+  "source_database": "WideWorldImporters",
+  "verification_database": "WideWorldImportersDW",
+  "params": [
+    3,
+    "2016-01-01",
+    "2016-06-01"
+  ],
+  "events": 3619,
+  "accounts": 263,
+  "source_dw_bijection": true,
+  "fingerprints": {
+    "WideWorldImporters": {
+      "before": [
+        {
+          "events": 3619,
+          "checksum": -801311972
+        }
+      ],
+      "after": [
+        {
+          "events": 3619,
+          "checksum": -801311972
+        }
+      ]
+    },
+    "WideWorldImportersDW": {
+      "before": [
+        {
+          "events": 3619,
+          "checksum": 78896723
+        }
+      ],
+      "after": [
+        {
+          "events": 3619,
+          "checksum": 78896723
+        }
+      ]
+    }
+  },
+  "snapshot_sha256": "22df4f7d3771bd8bdbbd2cef367a1e088b842878f70e29c3831ddee8e5b0dd28",
+  "canonical_csv_sha256": "938977f58d2efcb6dc0da7051f5992cb0025465cd787229457233214354f272c",
+  "opening_record_sha256": "ed25a41dedf8f4d904d3c8687b36174aa4ade51f84ad3734150bb204886410c2",
+  "opening_evaluator_sha256": "92c244e8cc4cff13efcd13eaa4cefb564473e2cb2fd699d9902478baf91381a4",
+  "all_payment_versions_edited_on_event_day": true,
+  "absolute_completeness_certified": false
+}

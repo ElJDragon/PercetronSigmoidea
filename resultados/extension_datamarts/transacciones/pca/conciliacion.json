@@ -1,0 +1,24 @@
+{
+  "status": "consistent",
+  "primary_validation": 2943,
+  "common_validation": 2927,
+  "excluded": 16,
+  "excluded_positive": 7,
+  "excluded_negative": 9,
+  "excluded_by_month": {
+    "2015-02": 2,
+    "2015-03": 2,
+    "2015-04": 4,
+    "2015-05": 3,
+    "2015-09": 1,
+    "2015-11": 1,
+    "2015-12": 3
+  },
+  "all_exclusions_only_fourth_history_missing": true,
+  "primary_population": "all eligible classifier rows with 3 prior covered months and valid label; n=2943",
+  "common_population": "secondary comparison of all four methods where 4 prior months are covered and known; n=2927",
+  "historical_formula": "1[N(t-1)>median(N(t-2),N(t-3),N(t-4))]",
+  "selection_by_model_errors": false,
+  "previous_predictions_modified": false,
+  "alignment_discrepancy_detected": false
+}

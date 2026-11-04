@@ -1,0 +1,35 @@
+test_all_seventeen_formulas (tests.test_inventario_dataset.InventoryDatasetTests.test_all_seventeen_formulas) ... ok
+test_before_first_appearance_not_padded (tests.test_inventario_dataset.InventoryDatasetTests.test_before_first_appearance_not_padded) ... ok
+test_changing_target_units_does_not_change_own_x (tests.test_inventario_dataset.InventoryDatasetTests.test_changing_target_units_does_not_change_own_x) ... ok
+test_constant_mask_only_from_train (tests.test_inventario_dataset.InventoryDatasetTests.test_constant_mask_only_from_train) ... ok
+test_covered_absence_zero_unknown_not_zero (tests.test_inventario_dataset.InventoryDatasetTests.test_covered_absence_zero_unknown_not_zero) ... ok
+test_current_target_never_in_feature_catalog (tests.test_inventario_dataset.InventoryDatasetTests.test_current_target_never_in_feature_catalog) ... ok
+test_duplicate_id_rejected_not_silently_deduplicated (tests.test_inventario_dataset.InventoryDatasetTests.test_duplicate_id_rejected_not_silently_deduplicated) ... ok
+test_edit_at_future_cutoff_blocks (tests.test_inventario_dataset.InventoryDatasetTests.test_edit_at_future_cutoff_blocks) ... ok
+test_exact_median_of_three_closed_months_and_tie_zero (tests.test_inventario_dataset.InventoryDatasetTests.test_exact_median_of_three_closed_months_and_tie_zero) ... ok
+test_first_appearance_is_any_movement_not_first_receipt (tests.test_inventario_dataset.InventoryDatasetTests.test_first_appearance_is_any_movement_not_first_receipt) ... ok
+test_fit_only_train_and_once (tests.test_inventario_dataset.InventoryDatasetTests.test_fit_only_train_and_once) ... ok
+test_future_events_do_not_modify_past_features (tests.test_inventario_dataset.InventoryDatasetTests.test_future_events_do_not_modify_past_features) ... ok
+test_historical_baseline_uses_same_three_month_reference (tests.test_inventario_dataset.InventoryDatasetTests.test_historical_baseline_uses_same_three_month_reference) ... ok
+test_incomplete_month_and_its_following_history_excluded (tests.test_inventario_dataset.InventoryDatasetTests.test_incomplete_month_and_its_following_history_excluded) ... ok
+test_item_without_recent_receipt_is_not_removed (tests.test_inventario_dataset.InventoryDatasetTests.test_item_without_recent_receipt_is_not_removed) ... ok
+test_outcomes_2016_rejected (tests.test_inventario_dataset.InventoryDatasetTests.test_outcomes_2016_rejected) ... ok
+test_params_equal_train_statistics_not_validation (tests.test_inventario_dataset.InventoryDatasetTests.test_params_equal_train_statistics_not_validation) ... ok
+test_positive_sign_and_unit_integrality_required (tests.test_inventario_dataset.InventoryDatasetTests.test_positive_sign_and_unit_integrality_required) ... ok
+test_preprocess_rejects_missing_inf_text_and_bad_order (tests.test_inventario_dataset.InventoryDatasetTests.test_preprocess_rejects_missing_inf_text_and_bad_order) ... ok
+test_receipts_are_not_collapsed_by_day_or_item (tests.test_inventario_dataset.InventoryDatasetTests.test_receipts_are_not_collapsed_by_day_or_item) ... ok
+test_reconciliation_detects_duplicate_or_changed_identity (tests.test_inventario_dataset.InventoryDatasetTests.test_reconciliation_detects_duplicate_or_changed_identity) ... ok
+test_reserved_test_spec_does_not_query (tests.test_inventario_dataset.InventoryDatasetTests.test_reserved_test_spec_does_not_query) ... ok
+test_sales_and_adjustments_rejected_by_receipt_boundary (tests.test_inventario_dataset.InventoryDatasetTests.test_sales_and_adjustments_rejected_by_receipt_boundary) ... ok
+test_snapshot_reproducible_with_fixed_gzip_header (tests.test_inventario_dataset.InventoryDatasetTests.test_snapshot_reproducible_with_fixed_gzip_header) ... ok
+test_sql_is_select_fixed_receipt_type_and_development (tests.test_inventario_dataset.InventoryDatasetTests.test_sql_is_select_fixed_receipt_type_and_development) ... ok
+test_state_roundtrip_and_float64 (tests.test_inventario_dataset.InventoryDatasetTests.test_state_roundtrip_and_float64) ... ok
+test_target_change_changes_label_not_own_features (tests.test_inventario_dataset.InventoryDatasetTests.test_target_change_changes_label_not_own_features) ... ok
+test_unique_identity_and_exact_alignment (tests.test_inventario_dataset.InventoryDatasetTests.test_unique_identity_and_exact_alignment) ... ok
+test_validation_uses_concluded_validation_history (tests.test_inventario_dataset.InventoryDatasetTests.test_validation_uses_concluded_validation_history) ... ok
+test_zero_requires_explicit_academic_mode (tests.test_inventario_dataset.InventoryDatasetTests.test_zero_requires_explicit_academic_mode) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.318s
+
+OK

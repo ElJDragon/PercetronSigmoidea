@@ -1,0 +1,182 @@
+{
+  "train": {
+    "perceptron": {
+      "n": 4599,
+      "accuracy": 0.9841269841269841,
+      "precision": 0.543046357615894,
+      "recall": 0.9534883720930233,
+      "specificity": 0.9847108353645025,
+      "f1": 0.6919831223628692,
+      "balanced_accuracy": 0.9690996037287629,
+      "confusion_matrix": [
+        [
+          4444,
+          69
+        ],
+        [
+          4,
+          82
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 4513,
+        "1": 86
+      },
+      "class_proportions": {
+        "0": 0.9813002826701457,
+        "1": 0.018699717329854315
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.03283322461404653,
+      "only_majority_predicted": false,
+      "TN": 4444,
+      "FP": 69,
+      "FN": 4,
+      "TP": 82,
+      "false_positive_rate": 0.015289164635497452
+    },
+    "logistic": {
+      "n": 4599,
+      "accuracy": 0.9791258969341161,
+      "precision": 0.46875,
+      "recall": 0.872093023255814,
+      "specificity": 0.9811655218258365,
+      "f1": 0.6097560975609756,
+      "balanced_accuracy": 0.9266292725408252,
+      "confusion_matrix": [
+        [
+          4428,
+          85
+        ],
+        [
+          11,
+          75
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 4513,
+        "1": 86
+      },
+      "class_proportions": {
+        "0": 0.9813002826701457,
+        "1": 0.018699717329854315
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.034790171776473144,
+      "only_majority_predicted": false,
+      "TN": 4428,
+      "FP": 85,
+      "FN": 11,
+      "TP": 75,
+      "false_positive_rate": 0.01883447817416353
+    }
+  },
+  "val": {
+    "perceptron": {
+      "n": 2628,
+      "accuracy": 0.9752663622526636,
+      "precision": 0.35,
+      "recall": 1.0,
+      "specificity": 0.9749325106054763,
+      "f1": 0.5185185185185185,
+      "balanced_accuracy": 0.9874662553027381,
+      "confusion_matrix": [
+        [
+          2528,
+          65
+        ],
+        [
+          0,
+          35
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 2593,
+        "1": 35
+      },
+      "class_proportions": {
+        "0": 0.9866818873668188,
+        "1": 0.013318112633181126
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0380517503805175,
+      "only_majority_predicted": false,
+      "TN": 2528,
+      "FP": 65,
+      "FN": 0,
+      "TP": 35,
+      "false_positive_rate": 0.025067489394523718
+    },
+    "logistic": {
+      "n": 2628,
+      "accuracy": 0.9733637747336378,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "specificity": 0.973004242190513,
+      "f1": 0.5,
+      "balanced_accuracy": 0.9865021210952565,
+      "confusion_matrix": [
+        [
+          2523,
+          70
+        ],
+        [
+          0,
+          35
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 2593,
+        "1": 35
+      },
+      "class_proportions": {
+        "0": 0.9866818873668188,
+        "1": 0.013318112633181126
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.03995433789954338,
+      "only_majority_predicted": false,
+      "TN": 2523,
+      "FP": 70,
+      "FN": 0,
+      "TP": 35,
+      "false_positive_rate": 0.02699575780948708
+    }
+  }
+}

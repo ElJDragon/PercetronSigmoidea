@@ -1,0 +1,33 @@
+{
+  "decision": "blocked_pending_independent_creation_evidence",
+  "included": 0,
+  "development_candidates_blocked": 201510,
+  "reason": "No se identificó registro de creación independiente por OrderLineID. No se afirma que todas las líneas hayan sido creadas tarde.",
+  "per_partition": [
+    {
+      "partition": "train",
+      "source_lines": 128507,
+      "previously_label_eligible": 126341,
+      "previous_positive": 1734,
+      "included_in_dataset": 0,
+      "source_lines_blocked_by_anchor": 128507,
+      "same_day_edit_diagnostic_only": 123800,
+      "same_day_positive_diagnostic_only": 0,
+      "reason": "Puerta de existencia al registro sin evidencia. Última edición del mismo día es una cota de presencia durante ese día, no el alta ni la hora de emisión."
+    },
+    {
+      "partition": "validation",
+      "source_lines": 73003,
+      "previously_label_eligible": 71112,
+      "previous_positive": 698,
+      "included_in_dataset": 0,
+      "source_lines_blocked_by_anchor": 73003,
+      "same_day_edit_diagnostic_only": 70014,
+      "same_day_positive_diagnostic_only": 0,
+      "reason": "Puerta de existencia al registro sin evidencia. Última edición del mismo día es una cota de presencia durante ese día, no el alta ni la hora de emisión."
+    }
+  ],
+  "test": "No leído ni filtrado por outcome; predictores no materializados",
+  "limited_metadata_sample": "trazabilidad_desarrollo.json: metadata_sample_no_picking; IDs/fecha nominal/última edición, sin picking, y ni cantidades/precios",
+  "full_row_export": "No se vuelcan todas las filas ni se fabrica un inventario de matrices ante un bloqueo general; se conservan conteos exhaustivos de candidatos y motivos globales."
+}

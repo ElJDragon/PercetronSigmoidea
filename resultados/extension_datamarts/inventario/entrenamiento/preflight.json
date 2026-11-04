@@ -1,0 +1,40 @@
+{
+  "status": "successful",
+  "dataset_manifest_sha256": "7fcfee2c8d8475cba80620307b43126a529501063445c1f917e77069936f5589",
+  "preprocessor_sha256": "a0541ad37cd070df3e3dc169844c3002833ed372efe4b9d7c7427e8b8c7cf408",
+  "shapes": {
+    "train": [
+      4599,
+      17
+    ],
+    "val": [
+      2628,
+      17
+    ]
+  },
+  "historical_failures_confirmed": 9,
+  "historical_differences_report_only": true,
+  "SQL_queries": 0,
+  "test_loaded": false,
+  "matrices_rebuilt": false,
+  "features": [
+    "recepciones_lag_1",
+    "recepciones_lag_2",
+    "recepciones_lag_3",
+    "unidades_recibidas_lag_1",
+    "unidades_recibidas_lag_2",
+    "unidades_recibidas_lag_3",
+    "recepciones_media_3",
+    "recepciones_mediana_3",
+    "recepciones_std_3",
+    "recepciones_cambio_1",
+    "recepciones_tendencia_3",
+    "meses_con_recepciones_3",
+    "mes_anterior_sin_recepciones",
+    "antiguedad_observada_meses",
+    "mes_sin",
+    "mes_cos",
+    "dias_mes_objetivo"
+  ],
+  "weighted_variant_explicitly_authorized": true
+}

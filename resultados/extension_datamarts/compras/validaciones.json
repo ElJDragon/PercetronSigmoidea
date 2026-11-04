@@ -1,0 +1,35 @@
+{
+  "status": "successful",
+  "tests_run": 198,
+  "new_focused_tests": 26,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "offline_reproduced_artifacts": 12,
+  "prior_files_preserved": 449,
+  "read_only_sql_queries": {
+    "consultas_metadatos.json": 4,
+    "consultas_oltp.json": 6,
+    "consultas_dw.json": 5
+  },
+  "development_orders": 1819,
+  "development_lines_and_facts": 7307,
+  "line_fact_bijection": true,
+  "oltp_and_dw_fingerprints_unchanged": true,
+  "historical_outcome_cut_applied_to_all_scenarios": true,
+  "2016_target_orders_or_months_queried_for_design": false,
+  "future_edits_of_2015_orders": "used only to identify unavailable versions; excluded from labels at the relevant split cut",
+  "coverage_default": "unknown, no authorized zero filling",
+  "dataset_authorized": false,
+  "authorized_observations": {
+    "train": 0,
+    "validation": 0
+  },
+  "matrices_generated": false,
+  "models_trained": false,
+  "pca_executed": false,
+  "previous_reports_modified": false,
+  "git_operations_performed": false,
+  "next_separate_task": "Transacciones financieras, sin iniciarla",
+  "manifest_sha256": "5e9ba2ebae7c12a2bbb1aac925e0cf4e0638753ad4e08afd71c8914ec1790837"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "successful",
+  "byte_identical_artifacts": 36,
+  "snapshot_regenerated_identically": true,
+  "figures_byte_identical": 7,
+  "additional_SQL_queries": 0,
+  "classifier_fit_calls": 0,
+  "preprocessor_fit_calls": 0,
+  "technical_reproduction_does_not_select_parameters": true
+}

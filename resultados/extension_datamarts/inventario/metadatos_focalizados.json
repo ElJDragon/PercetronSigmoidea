@@ -1,0 +1,612 @@
+[
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "StockItemID",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "StockItemName",
+    "data_type": "nvarchar",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "SupplierID",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "ColorID",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "UnitPackageID",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "OuterPackageID",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "Brand",
+    "data_type": "nvarchar",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "Size",
+    "data_type": "nvarchar",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "LeadTimeDays",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "QuantityPerOuter",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "IsChillerStock",
+    "data_type": "bit",
+    "precision": 1,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "Barcode",
+    "data_type": "nvarchar",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "TaxRate",
+    "data_type": "decimal",
+    "precision": 18,
+    "scale": 3,
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "UnitPrice",
+    "data_type": "decimal",
+    "precision": 18,
+    "scale": 2,
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "RecommendedRetailPrice",
+    "data_type": "decimal",
+    "precision": 18,
+    "scale": 2,
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "TypicalWeightPerUnit",
+    "data_type": "decimal",
+    "precision": 18,
+    "scale": 3,
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "MarketingComments",
+    "data_type": "nvarchar",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "InternalComments",
+    "data_type": "nvarchar",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "Photo",
+    "data_type": "varbinary",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "CustomFields",
+    "data_type": "nvarchar",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "Tags",
+    "data_type": "nvarchar",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "SearchDetails",
+    "data_type": "nvarchar",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "LastEditedBy",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "ValidFrom",
+    "data_type": "datetime2",
+    "precision": 27,
+    "scale": 7,
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "ValidTo",
+    "data_type": "datetime2",
+    "precision": 27,
+    "scale": 7,
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "StockItemID",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "StockItemName",
+    "data_type": "nvarchar",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "SupplierID",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "ColorID",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "UnitPackageID",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "OuterPackageID",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "Brand",
+    "data_type": "nvarchar",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "Size",
+    "data_type": "nvarchar",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "LeadTimeDays",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "QuantityPerOuter",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "IsChillerStock",
+    "data_type": "bit",
+    "precision": 1,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "Barcode",
+    "data_type": "nvarchar",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "TaxRate",
+    "data_type": "decimal",
+    "precision": 18,
+    "scale": 3,
+    "is_nullable": false,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "UnitPrice",
+    "data_type": "decimal",
+    "precision": 18,
+    "scale": 2,
+    "is_nullable": false,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "RecommendedRetailPrice",
+    "data_type": "decimal",
+    "precision": 18,
+    "scale": 2,
+    "is_nullable": true,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "TypicalWeightPerUnit",
+    "data_type": "decimal",
+    "precision": 18,
+    "scale": 3,
+    "is_nullable": false,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "MarketingComments",
+    "data_type": "nvarchar",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "InternalComments",
+    "data_type": "nvarchar",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "Photo",
+    "data_type": "varbinary",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "CustomFields",
+    "data_type": "nvarchar",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "Tags",
+    "data_type": "nvarchar",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "SearchDetails",
+    "data_type": "nvarchar",
+    "precision": 0,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "LastEditedBy",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "ValidFrom",
+    "data_type": "datetime2",
+    "precision": 27,
+    "scale": 7,
+    "is_nullable": false,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems_Archive",
+    "column_name": "ValidTo",
+    "data_type": "datetime2",
+    "precision": 27,
+    "scale": 7,
+    "is_nullable": false,
+    "temporal_type_desc": "HISTORY_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItemTransactions",
+    "column_name": "StockItemTransactionID",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItemTransactions",
+    "column_name": "StockItemID",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItemTransactions",
+    "column_name": "TransactionTypeID",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItemTransactions",
+    "column_name": "CustomerID",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItemTransactions",
+    "column_name": "InvoiceID",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItemTransactions",
+    "column_name": "SupplierID",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItemTransactions",
+    "column_name": "PurchaseOrderID",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": true,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItemTransactions",
+    "column_name": "TransactionOccurredWhen",
+    "data_type": "datetime2",
+    "precision": 27,
+    "scale": 7,
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItemTransactions",
+    "column_name": "Quantity",
+    "data_type": "decimal",
+    "precision": 18,
+    "scale": 3,
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItemTransactions",
+    "column_name": "LastEditedBy",
+    "data_type": "int",
+    "precision": 10,
+    "scale": 0,
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItemTransactions",
+    "column_name": "LastEditedWhen",
+    "data_type": "datetime2",
+    "precision": 27,
+    "scale": 7,
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE"
+  }
+]

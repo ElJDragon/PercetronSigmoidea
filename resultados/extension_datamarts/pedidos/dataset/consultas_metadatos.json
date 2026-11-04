@@ -1,0 +1,88 @@
+[
+  {
+    "sql": "SELECT DB_NAME() AS database_name,HAS_PERMS_BY_NAME(DB_NAME(),'DATABASE','VIEW DEFINITION') AS can_view_definition",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT t.name AS table_name,c.column_id,c.name AS column_name,ty.name AS data_type,c.is_nullable,c.is_identity,c.generated_always_type_desc,dc.definition AS default_definition FROM sys.tables t JOIN sys.schemas s ON t.schema_id=s.schema_id JOIN sys.columns c ON t.object_id=c.object_id JOIN sys.types ty ON ty.user_type_id=c.user_type_id LEFT JOIN sys.default_constraints dc ON dc.object_id=c.default_object_id WHERE s.name=? AND t.name IN (?,?) ORDER BY t.name,c.column_id",
+    "parameters": [
+      "Sales",
+      "Orders",
+      "OrderLines"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 28
+  },
+  {
+    "sql": "SELECT s.name AS schema_name,t.name AS table_name,t.temporal_type_desc,t.is_tracked_by_cdc,OBJECT_SCHEMA_NAME(t.history_table_id) AS history_schema,OBJECT_NAME(t.history_table_id) AS history_table,CASE WHEN ct.object_id IS NULL THEN 0 ELSE 1 END AS change_tracking FROM sys.tables t JOIN sys.schemas s ON s.schema_id=t.schema_id LEFT JOIN sys.change_tracking_tables ct ON t.object_id=ct.object_id WHERE s.name=? AND t.name IN (?,?)",
+    "parameters": [
+      "Sales",
+      "Orders",
+      "OrderLines"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT t.name AS table_name,tr.name AS trigger_name,tr.is_disabled,m.definition FROM sys.triggers tr JOIN sys.tables t ON t.object_id=tr.parent_id JOIN sys.schemas s ON s.schema_id=t.schema_id LEFT JOIN sys.sql_modules m ON m.object_id=tr.object_id WHERE s.name=? AND t.name IN (?,?)",
+    "parameters": [
+      "Sales",
+      "Orders",
+      "OrderLines"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 0
+  },
+  {
+    "sql": "SELECT s.name AS schema_name,t.name AS table_name,t.temporal_type_desc FROM sys.tables t JOIN sys.schemas s ON t.schema_id=s.schema_id WHERE t.name LIKE ? OR t.name LIKE ? OR t.name LIKE ? OR t.name LIKE ?",
+    "parameters": [
+      "%Order%",
+      "%Audit%",
+      "%Histor%",
+      "%Archiv%"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 21
+  },
+  {
+    "sql": "SELECT s.name AS schema_name,v.name AS view_name FROM sys.views v JOIN sys.schemas s ON s.schema_id=v.schema_id WHERE v.name LIKE ? OR v.name LIKE ? OR v.name LIKE ?",
+    "parameters": [
+      "%Order%",
+      "%Audit%",
+      "%Line%"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 0
+  },
+  {
+    "sql": "SELECT s.name AS schema_name,n.name AS synonym_name,n.base_object_name FROM sys.synonyms n JOIN sys.schemas s ON s.schema_id=n.schema_id WHERE n.name LIKE ? OR n.name LIKE ? OR n.name LIKE ?",
+    "parameters": [
+      "%Order%",
+      "%Audit%",
+      "%Line%"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 0
+  },
+  {
+    "sql": "SELECT t.name AS table_name,c.name AS column_name,CAST(ep.value AS nvarchar(4000)) AS description FROM sys.extended_properties ep JOIN sys.tables t ON t.object_id=ep.major_id JOIN sys.schemas s ON s.schema_id=t.schema_id LEFT JOIN sys.columns c ON c.object_id=t.object_id AND c.column_id=ep.minor_id WHERE s.name=? AND t.name IN (?,?) AND ep.name=?",
+    "parameters": [
+      "Sales",
+      "Orders",
+      "OrderLines",
+      "MS_Description"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 0
+  }
+]

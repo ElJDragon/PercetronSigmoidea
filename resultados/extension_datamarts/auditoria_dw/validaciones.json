@@ -1,0 +1,24 @@
+{
+  "successful": true,
+  "tests_run": 119,
+  "new_focused_tests": 15,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "duration_seconds": 38.968,
+  "prior_files_preserved": 349,
+  "same_prior_files_before_after": true,
+  "validated_select_queries_including_exploration": 487,
+  "database_fingerprints_match": true,
+  "oltp_fingerprints_match": true,
+  "audit_manifest_sha256": "d8b3b469acd9de32372f43f3be6664768cb999931ffd828dff0105ff9b4f8c99",
+  "no_model_training_or_definitive_labels": true,
+  "test_scope": "Fixtures sintéticas/locales y evidencia exportada; ninguna prueba escribe en las bases. Las pruebas previas no reentrenan WWI.",
+  "git_scope": "Sin commit, push, merge o cambio de rama; se conservan PDF modificado y clon no versionado previos del usuario.",
+  "environment": {
+    "python": "3.12.3",
+    "pyodbc": "5.3.0",
+    "driver": "ODBC Driver 17 for SQL Server"
+  },
+  "final_documentation_check": "Se aclaró la interpretación de Payment Method Key cero sin asumir su correspondencia por igualdad de conteos; se explicitó identidad desconocida en la matriz. Reportes regenerados solo desde agregados existentes y hashes verificados."
+}

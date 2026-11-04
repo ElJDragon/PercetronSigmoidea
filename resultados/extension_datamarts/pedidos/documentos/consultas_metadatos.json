@@ -1,0 +1,12 @@
+[
+  {
+    "sql": "SELECT t.name AS table_name,c.name AS column_name,ty.name AS data_type,c.is_nullable,dc.definition AS default_definition,t.temporal_type_desc FROM sys.tables t JOIN sys.schemas s ON s.schema_id=t.schema_id JOIN sys.columns c ON c.object_id=t.object_id JOIN sys.types ty ON ty.user_type_id=c.user_type_id LEFT JOIN sys.default_constraints dc ON c.default_object_id=dc.object_id WHERE s.name=? AND t.name=? ORDER BY c.column_id",
+    "parameters": [
+      "Sales",
+      "Orders"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 16
+  }
+]

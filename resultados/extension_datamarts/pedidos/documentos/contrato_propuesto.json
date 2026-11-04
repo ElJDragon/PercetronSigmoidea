@@ -1,0 +1,56 @@
+{
+  "version": "pedidos-documentos-1.0-viabilidad",
+  "unit": "OrderID único de Sales.Orders; sin ponderación por líneas",
+  "prediction_anchor": "OrderDate propio del documento, fecha de negocio sin hora y no inserción auditada. No reemplazar fecha de backorder por raíz ni por LastEditedWhen.",
+  "candidate_label": "0 si DATE(PickingCompletedWhen)<=OrderDate+2; 1 si posterior; null/inconsistencia/seguimiento o disponibilidad insuficiente -> indeterminado o no elegible",
+  "horizon": "Dos días calendario, igualdad incluida en clase 0; fin exclusivo al inicio de d+3, no SLA demostrado",
+  "availability": "Horizonte completo al corte, PickingCompletedWhen<cut y LastEditedWhen<cut. Última edición solo limita versión, no fija nacimiento o instante de predicción.",
+  "development": {
+    "train": [
+      "2013-01-01",
+      "2014-12-31"
+    ],
+    "train_labels_before": "2015-01-01T00:00:00",
+    "validation": [
+      "2015-01-01",
+      "2015-12-31"
+    ],
+    "validation_labels_before": "2016-01-01T00:00:00",
+    "test": "OrderDate>=2016-01-01 sellado, sin outcomes nuevos"
+  },
+  "business_cohort_assessment": "El completo original solo puede interpretarse razonablemente sin traslado a backorder; originales con salida y derivados se separan para diagnóstico, no se incorporan para equilibrar clases.",
+  "backorder_selection_risk": "La ausencia/presencia final de links es selección retrospectiva, no una condición operativa conocida al emitir. No usarla como predictor ni extrapolar la cohorte a todos los pedidos.",
+  "calendar_features": [
+    "mes_sin",
+    "mes_cos",
+    "semana_sin",
+    "semana_cos",
+    "dia_mes",
+    "dias_mes"
+  ],
+  "header_predictors": "CustomerID, SalespersonPersonID y datos comerciales conceptualmente asignados al insertar, pero valores actuales sin historial no certificados: desactivados salvo calendario.",
+  "forbidden": [
+    "Picking del objetivo",
+    "PickedByPersonID",
+    "BackorderOrderID final",
+    "IsUndersupplyBackordered actual como proxy de outcome sin disponibilidad comprobada",
+    "LastEditedWhen como predictor o alta",
+    "Información de líneas o composición original no demostrada",
+    "Atributos dimensionales con joins ambiguos",
+    "Estadísticas de retraso no conocidas en el corte de features"
+  ],
+  "cancellation": "No se encontró estado dedicado de cancelación en el esquema consultado. Sin picking no implica cancelado ni retrasado.",
+  "verdict": {
+    "retrospective_business_anchor": "OrderDate propio del documento original no derivado; fecha de negocio, no timestamp de inserción auditado",
+    "cohort_with_defensible_full_order_interpretation": "original_without_backorder",
+    "can_build_dataset_now": false,
+    "sufficient_class_support_in_both_development_splits": false,
+    "verdict": "insufficient_evidence_or_events_for_requested_document_target",
+    "reason": "Los backorders heredan fecha y pueden cerrar un documento tras transferir pendientes. La cohorte original sin traslado se evalúa aparte; no se incorporan otras cohortes para conseguir positivos.",
+    "fallback": "Continuar con Fact.Movement bajo un contrato propio; no iniciar esa investigación ni cambiar objetivo silenciosamente aquí.",
+    "test_outcomes_read": false,
+    "matrices_generated": false,
+    "training_performed": false
+  },
+  "next_process": "Fact.Movement: nueva formulación explícita y nueva autorización; no se desarrolla aquí."
+}

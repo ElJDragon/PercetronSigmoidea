@@ -1,0 +1,336 @@
+{
+  "status": "academic_event_contract_ready_for_subsequent_construction_not_operationally_certified",
+  "identity": "(customer, CustomerTransactions.CustomerID, target_month); source transaction identity=(side,event_id)",
+  "population": "Cuentas con al menos un cobro previo y tres meses calendario posteriores a su primera observación; no incluir cuentas por su actividad futura",
+  "event_filter": {
+    "side": "customer",
+    "TransactionTypeID": 3,
+    "TransactionTypeName": "Customer Payment Received"
+  },
+  "prediction_time": "inicio del primer día calendario de t, tiempo empresarial local; sin inventar hora de inserción",
+  "horizon": "mes calendario t completo [inicio(t),inicio(t+1))",
+  "N": "COUNT DISTINCT CustomerTransactionID con tipo 3 y TransactionDate dentro del mes de la cuenta",
+  "R": "median(N(c,t-1),N(c,t-2),N(c,t-3))",
+  "y": "1[N(c,t)>R(c,t)]",
+  "tie_class": 0,
+  "target_meaning": "Más registros de cobro que su referencia reciente; no más ingresos por ventas, cobro de cada factura, impago ni mayor liquidez monetaria",
+  "splits": {
+    "train": [
+      "2013-04",
+      "2014-12"
+    ],
+    "validation": [
+      "2015-01",
+      "2015-12"
+    ],
+    "reserved": "2016 sin lectura de outcomes"
+  },
+  "label_cuts_exclusive": {
+    "train": "2015-01-01 00:00:00",
+    "validation": "2016-01-01 00:00:00"
+  },
+  "availability": "Tres meses completos previos con eventos registrados antes de inicio(t); objetivo completo disponible antes del corte. Las versiones de pago actuales cumplen este control, sin exigir snapshots de saldos.",
+  "zero_policy": "Solo business_ledger_academic explícito, después de primera observación y dentro de meses cubiertos; unknown nunca rellena cero",
+  "coverage": {
+    "status": "justified_academic_business_event_ledger_not_absolute_certification",
+    "scope": "Eventos tipos 3/7 con TransactionDate en 2013-01..2015-12; dominios separados",
+    "confirmed": [
+      "Biyectividad de 86475 transacciones OLTP–DW en desarrollo sin discrepancias de fecha/tipo/importes/estado actual",
+      "Tipos de pago presentes en los 36 meses de desarrollo",
+      "23338 pagos/cobros con última edición en el propio día empresarial",
+      "Módulos locales insertan pagos separados y actualizan saldos/finalizaciones de obligaciones; no se ejecutó SQL de modificación"
+    ],
+    "assumptions": [
+      "TransactionDate representa el día de registro empresarial del pago/cobro; no se afirma una hora auditada de inserción.",
+      "El libro de eventos de desarrollo conserva los pagos registrados sin borrados o reclasificaciones retrospectivas relevantes no observados. Los módulos locales y las versiones actuales son evidencia de apoyo, no bitácora exhaustiva.",
+      "Las extracciones conciliadas OLTP–DW y presencia de pagos en los 36 meses justifican cobertura académica mensual del libro desde enero de 2013; no certifican conciliación bancaria ni completitud absoluta.",
+      "Bajo esa cobertura explícita, ausencia de un pago en un mes posterior a primera observación significa cero eventos registrados, no incapacidad de pagar ni ausencia de ventas.",
+      "La disponibilidad retrospectiva de eventos se aproxima por su día empresarial y el control observable de versión. Para todos los pagos seleccionados, última edición coincide con ese día; no se necesita inferir saldos anteriores."
+    ],
+    "unknowns": [
+      "No hay auditoría exhaustiva de borrados, anulaciones, escrituras desde clientes externos o backdating",
+      "No existe snapshot mensual ni bitácora de cada estado; no se necesitan para el objetivo de conteo, sí para saldos",
+      "No se certifica latencia ETL histórica o conciliación bancaria"
+    ],
+    "zero_policy": "Solo business_ledger_academic explícito, después de primera observación y dentro de meses cubiertos; unknown nunca rellena cero",
+    "unknown_coverage_sensitivity": "Solo meses con eventos observados en t y tres anteriores; resultado condicionado por actividad de t, no población alternativa aprobada",
+    "production_status": "Requiere cierres/latencias y reconciliación operacional antes de uso operativo"
+  },
+  "missing": "Identidad/fecha/tipo o cobertura desconocidos => indeterminado, no cero ni clase negativa por defecto",
+  "features": [
+    {
+      "nombre": "cobros_lag_1",
+      "formula": "N(c,t-1)",
+      "fuente": "CustomerTransactions, tipo 3, DISTINCT CustomerTransactionID",
+      "granularidad": "Cuenta cliente-mes",
+      "disponibilidad": "Antes de inicio(t), mes anterior cerrado",
+      "estado": "permitido_contrato_academico",
+      "justificacion": "Eventos de pago con identidad y fecha verificadas; sin saldos. Cobertura académica explícita."
+    },
+    {
+      "nombre": "cobros_lag_2",
+      "formula": "N(c,t-2)",
+      "fuente": "CustomerTransactions, tipo 3, DISTINCT CustomerTransactionID",
+      "granularidad": "Cuenta cliente-mes",
+      "disponibilidad": "Antes de inicio(t), mes anterior cerrado",
+      "estado": "permitido_contrato_academico",
+      "justificacion": "Eventos de pago con identidad y fecha verificadas; sin saldos. Cobertura académica explícita."
+    },
+    {
+      "nombre": "cobros_lag_3",
+      "formula": "N(c,t-3)",
+      "fuente": "CustomerTransactions, tipo 3, DISTINCT CustomerTransactionID",
+      "granularidad": "Cuenta cliente-mes",
+      "disponibilidad": "Antes de inicio(t), mes anterior cerrado",
+      "estado": "permitido_contrato_academico",
+      "justificacion": "Eventos de pago con identidad y fecha verificadas; sin saldos. Cobertura académica explícita."
+    },
+    {
+      "nombre": "cobros_media_3",
+      "formula": "(n1+n2+n3)/3",
+      "fuente": "Agregados de eventos tipo 3",
+      "granularidad": "Cuenta cliente-mes",
+      "disponibilidad": "Antes de inicio(t)",
+      "estado": "permitido_contrato_academico",
+      "justificacion": "Hereda identidad, cobertura y disponibilidad de los tres lags; cero solo en libro cubierto."
+    },
+    {
+      "nombre": "cobros_mediana_3",
+      "formula": "mediana(n1,n2,n3)",
+      "fuente": "Agregados de eventos tipo 3",
+      "granularidad": "Cuenta cliente-mes",
+      "disponibilidad": "Antes de inicio(t)",
+      "estado": "permitido_contrato_academico",
+      "justificacion": "Hereda identidad, cobertura y disponibilidad de los tres lags; cero solo en libro cubierto."
+    },
+    {
+      "nombre": "cobros_std_3",
+      "formula": "std(n1,n2,n3), ddof=0",
+      "fuente": "Agregados de eventos tipo 3",
+      "granularidad": "Cuenta cliente-mes",
+      "disponibilidad": "Antes de inicio(t)",
+      "estado": "permitido_contrato_academico",
+      "justificacion": "Hereda identidad, cobertura y disponibilidad de los tres lags; cero solo en libro cubierto."
+    },
+    {
+      "nombre": "cobros_cambio_1",
+      "formula": "n1-n2",
+      "fuente": "Agregados de eventos tipo 3",
+      "granularidad": "Cuenta cliente-mes",
+      "disponibilidad": "Antes de inicio(t)",
+      "estado": "permitido_contrato_academico",
+      "justificacion": "Hereda identidad, cobertura y disponibilidad de los tres lags; cero solo en libro cubierto."
+    },
+    {
+      "nombre": "cobros_tendencia_3",
+      "formula": "(n1-n3)/2",
+      "fuente": "Agregados de eventos tipo 3",
+      "granularidad": "Cuenta cliente-mes",
+      "disponibilidad": "Antes de inicio(t)",
+      "estado": "permitido_contrato_academico",
+      "justificacion": "Hereda identidad, cobertura y disponibilidad de los tres lags; cero solo en libro cubierto."
+    },
+    {
+      "nombre": "meses_con_cobros_3",
+      "formula": "SUM 1[nk>0], k=1..3",
+      "fuente": "Agregados de eventos tipo 3",
+      "granularidad": "Cuenta cliente-mes",
+      "disponibilidad": "Antes de inicio(t)",
+      "estado": "permitido_contrato_academico",
+      "justificacion": "Hereda identidad, cobertura y disponibilidad de los tres lags; cero solo en libro cubierto."
+    },
+    {
+      "nombre": "mes_anterior_sin_cobros",
+      "formula": "1[n1=0]",
+      "fuente": "Agregados de eventos tipo 3",
+      "granularidad": "Cuenta cliente-mes",
+      "disponibilidad": "Antes de inicio(t)",
+      "estado": "permitido_contrato_academico",
+      "justificacion": "Hereda identidad, cobertura y disponibilidad de los tres lags; cero solo en libro cubierto."
+    },
+    {
+      "nombre": "variacion_relativa_cobros",
+      "formula": "(n1-n2)/n2 si n2>0; nulo en otro caso",
+      "fuente": "Agregados de eventos tipo 3",
+      "granularidad": "Cuenta cliente-mes",
+      "disponibilidad": "Antes de inicio(t)",
+      "estado": "permitido_contrato_academico",
+      "justificacion": "No dividir entre cero; opcional y acompañada por indicador de base cero."
+    },
+    {
+      "nombre": "base_variacion_cero",
+      "formula": "1[n2=0]",
+      "fuente": "Agregados de eventos tipo 3",
+      "granularidad": "Cuenta cliente-mes",
+      "disponibilidad": "Antes de inicio(t)",
+      "estado": "permitido_contrato_academico",
+      "justificacion": "Depende de cobertura que permita el cero."
+    },
+    {
+      "nombre": "antiguedad_observada_meses",
+      "formula": "ordinal(t)-ordinal(primer mes de cobro conocido antes de t)",
+      "fuente": "CustomerTransactions tipo 3",
+      "granularidad": "Cuenta cliente-mes",
+      "disponibilidad": "Antes de inicio(t)",
+      "estado": "permitido_contrato_academico",
+      "justificacion": "Primera observación, no fecha real de alta; no usar último evento futuro ni supervivencia."
+    },
+    {
+      "nombre": "mes_sin",
+      "formula": "sin(2*pi*(mes(t)-1)/12)",
+      "fuente": "Calendario civil",
+      "granularidad": "Cuenta cliente-mes",
+      "disponibilidad": "Conocida antes de inicio(t)",
+      "estado": "permitido",
+      "justificacion": "Calendario conocido; no acredita actividad ni cobertura."
+    },
+    {
+      "nombre": "mes_cos",
+      "formula": "cos(2*pi*(mes(t)-1)/12)",
+      "fuente": "Calendario civil",
+      "granularidad": "Cuenta cliente-mes",
+      "disponibilidad": "Conocida antes de inicio(t)",
+      "estado": "permitido",
+      "justificacion": "Calendario conocido; no acredita actividad ni cobertura."
+    },
+    {
+      "nombre": "dias_mes_objetivo",
+      "formula": "Días calendario de t",
+      "fuente": "Calendario civil",
+      "granularidad": "Cuenta cliente-mes",
+      "disponibilidad": "Conocida antes de inicio(t)",
+      "estado": "permitido",
+      "justificacion": "Calendario conocido; no acredita actividad ni cobertura."
+    },
+    {
+      "nombre": "importe_cobrado_lag_k",
+      "formula": "-SUM TransactionAmount(c,t-k), solo tipo 3",
+      "fuente": "CustomerTransactions.TransactionAmount",
+      "granularidad": "Cuenta cliente-mes",
+      "disponibilidad": "Antes de inicio(t), eventos íntegros y moneda verificada",
+      "estado": "condicionado_desactivado",
+      "justificacion": "Signo y reconocimiento comprobados, pero el esquema extraído no certifica código de moneda o ausencia de mezcla/conversión; fuera del dataset recomendado."
+    },
+    {
+      "nombre": "pagos_proveedor_lag_k",
+      "formula": "COUNT DISTINCT SupplierTransactionID(s,t-k), tipo 7",
+      "fuente": "SupplierTransactions",
+      "granularidad": "Proveedor-mes separado",
+      "disponibilidad": "Antes de inicio(t)",
+      "estado": "condicionado_otro_objetivo",
+      "justificacion": "No mezclar con cuentas cliente; seis proveedores y solo dos series persistentes: no es la población elegida."
+    },
+    {
+      "nombre": "atributos_dimensionales",
+      "formula": "Atributo en intervalo único [Valid From,Valid To) válido antes de t",
+      "fuente": "Dimensiones relacionadas",
+      "granularidad": "Entidad-mes",
+      "disponibilidad": "As-of anterior a t",
+      "estado": "condicionado_desactivado",
+      "justificacion": "No son necesarios para conteos; miembros desconocidos y versiones pueden romper identidad o multiplicar filas."
+    },
+    {
+      "nombre": "saldos_y_estados_actuales",
+      "formula": "OutstandingBalance, IsFinalized, FinalizationDate actuales",
+      "fuente": "OLTP/DW",
+      "granularidad": "Evento/entidad",
+      "disponibilidad": "No autorizable en esa forma",
+      "estado": "prohibido",
+      "justificacion": "No son snapshots de meses anteriores."
+    },
+    {
+      "nombre": "mes_objetivo",
+      "formula": "N(c,t), importe(c,t), evento de t como X",
+      "fuente": "OLTP/DW",
+      "granularidad": "Evento/entidad",
+      "disponibilidad": "No autorizable en esa forma",
+      "estado": "prohibido",
+      "justificacion": "Información posterior al instante; N(t) solo para y."
+    },
+    {
+      "nombre": "identificadores_continuos",
+      "formula": "Customer Key, Supplier Key, IDs como cantidades",
+      "fuente": "OLTP/DW",
+      "granularidad": "Evento/entidad",
+      "disponibilidad": "No autorizable en esa forma",
+      "estado": "prohibido",
+      "justificacion": "Identificadores se usan para unión/agrupación, no magnitudes."
+    },
+    {
+      "nombre": "fecha_edicion_como_alta",
+      "formula": "LastEditedWhen como creación del evento",
+      "fuente": "OLTP/DW",
+      "granularidad": "Evento/entidad",
+      "disponibilidad": "No autorizable en esa forma",
+      "estado": "prohibido",
+      "justificacion": "Una edición no certifica la primera inserción."
+    },
+    {
+      "nombre": "cualquier_tipo_negativo_como_cobro",
+      "formula": "SUM/COUNT de importes negativos sin tipo y dominio",
+      "fuente": "OLTP/DW",
+      "granularidad": "Evento/entidad",
+      "disponibilidad": "No autorizable en esa forma",
+      "estado": "prohibido",
+      "justificacion": "El mismo signo describe cobro de cliente o pago a proveedor; crédito/refund tiene otra semántica."
+    }
+  ],
+  "dimensions": "No se requieren atributos dimensionales. Recuperar cuenta operacional por evento; claves cero no identifican una cuenta. No joins por nombre ni versionar identidad por PK sustituta.",
+  "allowed_future_construction": true,
+  "requires_explicit_academic_coverage_mode": true,
+  "operational_use_certified": false,
+  "data_and_models_created_now": false,
+  "decision": {
+    "recommended_candidate": "A: frecuencia mensual de cobros registrados de cliente superior a mediana reciente",
+    "status": "viable_under_explicit_academic_assumptions",
+    "granularity": "CustomerTransactions.CustomerID (cuenta Bill To) + mes objetivo",
+    "dataset_construction_viable_under_documented_academic_contract": true,
+    "unconditional_or_operational_approval": false,
+    "construction_executed": false,
+    "matrices_generated": false,
+    "training_performed": false,
+    "pca_performed": false,
+    "test_2016_queried": false,
+    "authorized_future_scope": "Solo candidato A, conteos históricos tipo 3 y calendario; modo académico de cobertura explícito; ninguna matriz en este encargo",
+    "development_support": {
+      "train": {
+        "eligible": 4612,
+        "positive": 1798,
+        "negative": 2814,
+        "positive_proportion": 0.3898525585429315,
+        "target_zero": 380,
+        "reference_zero": 86,
+        "entities": 236,
+        "entities_switching_class": 233,
+        "entities_single_class": 3
+      },
+      "validation": {
+        "eligible": 2943,
+        "positive": 1198,
+        "negative": 1745,
+        "positive_proportion": 0.40706761807679237,
+        "target_zero": 182,
+        "reference_zero": 31,
+        "entities": 252,
+        "entities_switching_class": 248,
+        "entities_single_class": 4
+      }
+    },
+    "candidate_B": {
+      "status": "conditional_secondary_not_selected",
+      "reason": "Solo seis proveedores y dos series persistentes; cuatro aportan ceros tras enero. No recomendado como siguiente entrenamiento."
+    },
+    "candidate_C": {
+      "status": "conditioned_currency_verification_pending_not_selected",
+      "reason": "Signo, importe y reconocimiento del pago verificados; no hay código monetario/certificación de unidad única en las fuentes consultadas. No se calculan etiquetas de volumen ni se habilitan importes como X."
+    },
+    "assumptions": [
+      "TransactionDate representa el día de registro empresarial del pago/cobro; no se afirma una hora auditada de inserción.",
+      "El libro de eventos de desarrollo conserva los pagos registrados sin borrados o reclasificaciones retrospectivas relevantes no observados. Los módulos locales y las versiones actuales son evidencia de apoyo, no bitácora exhaustiva.",
+      "Las extracciones conciliadas OLTP–DW y presencia de pagos en los 36 meses justifican cobertura académica mensual del libro desde enero de 2013; no certifican conciliación bancaria ni completitud absoluta.",
+      "Bajo esa cobertura explícita, ausencia de un pago en un mes posterior a primera observación significa cero eventos registrados, no incapacidad de pagar ni ausencia de ventas.",
+      "La disponibilidad retrospectiva de eventos se aproxima por su día empresarial y el control observable de versión. Para todos los pagos seleccionados, última edición coincide con ese día; no se necesita inferir saldos anteriores."
+    ],
+    "next_action": "Detenerse tras este dictamen; construir el dataset solo en un encargo posterior con este contrato explícito, sin avanzar automáticamente a Inventario"
+  }
+}

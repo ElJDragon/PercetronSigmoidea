@@ -1,0 +1,20 @@
+{
+  "recorded_at_utc": "2026-11-04T04:35:15.451459+00:00",
+  "stage": "descriptive report completion after observing test",
+  "change": "Añadir al reporte la concentración mensual de errores y la interpretación de recall/falsas alertas; no modificar extracción, población, fórmulas, transformación, predicciones o configuraciones",
+  "evaluator_before_report_addition_sha256": "92c244e8cc4cff13efcd13eaa4cefb564473e2cb2fd699d9902478baf91381a4",
+  "frozen_numeric_artifacts_before_addition": {
+    "metricas_globales.json": "df0a0649e91aefbd4917559384397cc63c10ef0833635dbd3754efed223f7c03",
+    "metricas_mensuales.json": "db609ebbe4c630148b55bc44c01bb7139633dc55ed432686267a6c88a084ffa4",
+    "predicciones_test.csv": "efb6f9861f191d549b04d0edb54ade78429030c1d370faaba08a44f890e5f496",
+    "X_test.csv": "14b997f807f88ebdd58d5b7fd701fa11a329c0ab4bedc7bb0b5bcfda32eac65b",
+    "y_test.csv": "2b36517f90607f369d262667a4f338382a7bee5fadad0a69757dca74a2716c9a",
+    "metadatos_test.csv": "c507e5c22b4de0f04e16f77a554b3dba53d7912b39e4c02c3d50bc9dad3b4297",
+    "snapshot_test.csv.gz": "22df4f7d3771bd8bdbbd2cef367a1e088b842878f70e29c3831ddee8e5b0dd28"
+  },
+  "new_hyperparameters": false,
+  "new_classifiers": false,
+  "additional_SQL_queries": 0,
+  "evaluator_after_report_addition_sha256": "ad8e8ce484e3daac539bed32f7e1a16c0d16accaf742d22d2e30bad664c2ebca",
+  "all_numeric_artifacts_unchanged": true
+}

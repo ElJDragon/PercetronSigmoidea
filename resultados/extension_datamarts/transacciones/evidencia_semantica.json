@@ -1,0 +1,40 @@
+{
+  "source_sha256": "1bccd285b5cdb71701a4b196e24d88bc3e92a28e36b6126f2236af9f22018f80",
+  "modules": [
+    {
+      "schema": "DataLoadSimulation",
+      "module": "Configuration_ApplyDataLoadSimulationProcedures",
+      "executed": false,
+      "snippets": [
+        "CREATE PROCEDURE DataLoadSimulation.ProcessCustomerPayments\n@CurrentDateTime datetime2(7),\n@StartingWhen datetime,\n@EndOfTime datetime2(7),\n@IsSilentMode bit\nWITH EXECUTE AS OWNER\nAS\nBEGIN\n    SET NOCOUNT ON;\n    SET XACT_ABORT ON;\n\n    IF @IsSilentMode = 0\n    BEGIN\n        PRINT N''Processing customer payments'';\n    END;\n\n    DECLARE @StaffMemberPersonID int = (SELECT TOP(1) PersonID\n                                        FROM [Application].People\n                                        WHERE IsEmployee <> 0\n                                        ORDER BY NEWID());\n\n    DECLARE @TransactionsToReceive TABLE\n    (\n        CustomerTransactionID int,\n        CustomerID int,\n        InvoiceID int NULL,\n        OutstandingBalance decimal(18,2)\n    );\n\n    INSERT @TransactionsToReceive\n        (CustomerTransactionID, CustomerID, InvoiceID, OutstandingBalance)\n    SELECT CustomerTransactionID, CustomerID, InvoiceID, OutstandingBalance\n    FROM Sales.CustomerTransactions\n    WHERE IsFinalized = 0;\n\n    BEGIN TRAN;\n\n    UPDATE Sales.CustomerTransactions\n    SET OutstandingBalance = 0,\n        FinalizationDate = @StartingWhen,\n        LastEditedBy = @StaffMemberPersonID,\n        LastEditedWhen = @StartingWhen\n    WHERE CustomerTransactionID IN (SELECT CustomerTransactionID FROM @TransactionsToReceive);\n\n    INSERT Sales.CustomerTransactions\n        (CustomerID, TransactionTypeID, InvoiceID, PaymentMethodID, TransactionDate,\n         AmountExcludingTax, TaxAmount, TransactionAmount, OutstandingBalance,\n         FinalizationDate, LastEditedBy, LastEditedWhen)\n    SELECT ttr.CustomerID, (SELECT TransactionTypeID FROM [Application].TransactionTypes WHERE TransactionTypeName = N''Customer Payment Received''),\n           NULL, (SELECT PaymentMethodID FROM [Application].PaymentMethods WHERE PaymentMethodName = N''EFT''),\n           CAST(@StartingWhen AS date), 0, 0, 0 - SUM(ttr.OutstandingBalance),\n           0, CAST(@StartingWhen AS date), @StaffMemberPersonID, @StartingWhen\n    FROM @TransactionsToReceive AS ttr\n    GROUP BY ttr.CustomerID;\n\n    COMMIT;\n\nEND;';\n",
+        "CREATE PROCEDURE DataLoadSimulation.PaySuppliers\n@CurrentDateTime datetime2(7),\n@StartingWhen datetime,\n@EndOfTime datetime2(7),\n@IsSilentMode bit\nAS\nBEGIN\n    SET NOCOUNT ON;\n    SET XACT_ABORT ON;\n\n    IF @IsSilentMode = 0\n    BEGIN\n        PRINT N''Paying suppliers'';\n    END;\n\n    DECLARE @StaffMemberPersonID int = (SELECT TOP(1) PersonID\n                                        FROM [Application].People\n                                        WHERE IsEmployee <> 0\n                                        ORDER BY NEWID());\n\n    DECLARE @TransactionsToPay TABLE\n    (\n        SupplierTransactionID int,\n        SupplierID int,\n        PurchaseOrderID int NULL,\n        SupplierInvoiceNumber nvarchar(20) NULL,\n        OutstandingBalance decimal(18,2)\n    );\n\n    INSERT @TransactionsToPay\n        (SupplierTransactionID, SupplierID, PurchaseOrderID, SupplierInvoiceNumber, OutstandingBalance)\n    SELECT SupplierTransactionID, SupplierID, PurchaseOrderID, SupplierInvoiceNumber, OutstandingBalance\n    FROM Purchasing.SupplierTransactions\n    WHERE IsFinalized = 0;\n\n    BEGIN TRAN;\n\n    UPDATE Purchasing.SupplierTransactions\n    SET OutstandingBalance = 0,\n        FinalizationDate = @StartingWhen,\n        LastEditedBy = @StaffMemberPersonID,\n        LastEditedWhen = @StartingWhen\n    WHERE SupplierTransactionID IN (SELECT SupplierTransactionID FROM @TransactionsToPay);\n\n    INSERT Purchasing.SupplierTransactions\n        (SupplierID, TransactionTypeID, PurchaseOrderID, PaymentMethodID,\n         SupplierInvoiceNumber, TransactionDate, AmountExcludingTax, TaxAmount, TransactionAmount,\n         OutstandingBalance, FinalizationDate, LastEditedBy, LastEditedWhen)\n    SELECT ttp.SupplierID, (SELECT TransactionTypeID FROM [Application].TransactionTypes WHERE TransactionTypeName = N''Supplier Payment Issued''),\n           NULL, (SELECT PaymentMethodID FROM [Application].PaymentMethods WHERE PaymentMethodName = N''EFT''),\n           NULL, CAST(@StartingWhen AS date), 0, 0, 0 - SUM(ttp.OutstandingBalance),\n           0, CAST(@StartingWhen AS date), @StaffMemberPersonID, @StartingWhen\n    FROM @TransactionsToPay AS ttp\n    GROUP BY ttp.SupplierID;\n\n    COMMIT;\n\nEND;';\n"
+      ]
+    },
+    {
+      "schema": "Website",
+      "module": "InvoiceCustomerOrders",
+      "executed": false,
+      "snippets": []
+    },
+    {
+      "schema": "Application",
+      "module": "Configuration_EnableInMemory",
+      "executed": false,
+      "snippets": []
+    },
+    {
+      "schema": "Application",
+      "module": "Configuration_ApplyPartitioning",
+      "executed": false,
+      "snippets": []
+    },
+    {
+      "schema": "Integration",
+      "module": "GetTransactionUpdates",
+      "executed": false,
+      "snippets": [
+        "\nCREATE PROCEDURE Integration.GetTransactionUpdates\n@LastCutoff datetime2(7),\n@NewCutoff datetime2(7)\nWITH EXECUTE AS OWNER\nAS\nBEGIN\n    SET NOCOUNT ON;\n    SET XACT_ABORT ON;\n\n    SELECT CAST(ct.TransactionDate AS date) AS [Date Key],\n           ct.CustomerTransactionID AS [WWI Customer Transaction ID],\n           CAST(NULL AS int) AS [WWI Supplier Transaction ID],\n           ct.InvoiceID AS [WWI Invoice ID],\n           CAST(NULL AS int) AS [WWI Purchase Order ID],\n           CAST(NULL AS nvarchar(20)) AS [Supplier Invoice Number],\n           ct.AmountExcludingTax AS [Total Excluding Tax],\n           ct.TaxAmount AS [Tax Amount],\n           ct.TransactionAmount AS [Total Including Tax],\n           ct.OutstandingBalance AS [Outstanding Balance],\n           ct.IsFinalized AS [Is Finalized],\n           COALESCE(i.CustomerID, ct.CustomerID) AS [WWI Customer ID],\n           ct.CustomerID AS [WWI Bill To Customer ID],\n           CAST(NULL AS int) AS [WWI Supplier ID],\n           ct.TransactionTypeID AS [WWI Transaction Type ID],\n           ct.PaymentMethodID AS [WWI Payment Method ID],\n           ct.LastEditedWhen AS [Last Modified When]\n    FROM Sales.CustomerTransactions AS ct\n    LEFT OUTER JOIN Sales.Invoices AS i\n    ON ct.InvoiceID = i.InvoiceID\n    WHERE ct.LastEditedWhen > @LastCutoff\n    AND ct.LastEditedWhen <= @NewCutoff\n\n    UNION ALL\n\n    SELECT CAST(st.TransactionDate AS date) AS [Date Key],\n           CAST(NULL AS int) AS [WWI Customer Transaction ID],\n           st.SupplierTransactionID AS [WWI Supplier Transaction ID],\n           CAST(NULL AS int) AS [WWI Invoice ID],\n           st.PurchaseOrderID AS [WWI Purchase Order ID],\n           st.SupplierInvoiceNumber AS [Supplier Invoice Number],\n           st.AmountExcludingTax AS [Total Excluding Tax],\n           st.TaxAmount AS [Tax Amount],\n           st.TransactionAmount AS [Total Including Tax],\n           st.OutstandingBalance AS [Outstanding Balance],\n           st.IsFinalized AS [Is Finalized],\n           CAST(NULL AS int) AS [WWI Customer ID],\n           CAST(NULL AS int) AS [WWI Bill To Customer ID],\n           st.SupplierID AS [WWI Supplier ID],\n           st.TransactionTypeID AS [WWI Transaction Type ID],\n           st.PaymentMethodID AS [WWI Payment Method ID],\n           st.LastEditedWhen AS [Last Modified When]\n    FROM Purchasing.SupplierTransactions AS st\n    WHERE st.LastEditedWhen > @LastCutoff\n    AND st.LastEditedWhen <= @NewCutoff;\n\n    RETURN 0;\nEND;\n"
+      ]
+    }
+  ]
+}

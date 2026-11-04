@@ -1,0 +1,196 @@
+{
+  "id": "l_eta010",
+  "index": 3,
+  "algorithm": "logistic",
+  "params": {
+    "learning_rate": 0.1,
+    "max_epochs": 400,
+    "seed": 42,
+    "initialization": "zeros",
+    "initial_weights": null,
+    "initial_bias": 0.0,
+    "tolerance": 1e-06,
+    "threshold": 0.5
+  },
+  "selected_epoch": 399,
+  "metrics": {
+    "train": {
+      "n": 4612,
+      "accuracy": 0.6814830875975716,
+      "precision": 0.6846240179573513,
+      "recall": 0.339265850945495,
+      "specificity": 0.9001421464108031,
+      "f1": 0.45370026031982147,
+      "balanced_accuracy": 0.6197039986781491,
+      "confusion_matrix": [
+        [
+          2533,
+          281
+        ],
+        [
+          1188,
+          610
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 2814,
+        "1": 1798
+      },
+      "class_proportions": {
+        "0": 0.6101474414570686,
+        "1": 0.3898525585429315
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.19319167389418906
+    },
+    "val": {
+      "n": 2943,
+      "accuracy": 0.6724430852871219,
+      "precision": 0.6989795918367347,
+      "recall": 0.34307178631051755,
+      "specificity": 0.898567335243553,
+      "f1": 0.46024636058230683,
+      "balanced_accuracy": 0.6208195607770353,
+      "confusion_matrix": [
+        [
+          1568,
+          177
+        ],
+        [
+          787,
+          411
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 1745,
+        "1": 1198
+      },
+      "class_proportions": {
+        "0": 0.5929323819232076,
+        "1": 0.40706761807679237
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.199796126401631
+    }
+  },
+  "last_epoch_metrics": {
+    "train": {
+      "n": 4612,
+      "accuracy": 0.6814830875975716,
+      "precision": 0.6846240179573513,
+      "recall": 0.339265850945495,
+      "specificity": 0.9001421464108031,
+      "f1": 0.45370026031982147,
+      "balanced_accuracy": 0.6197039986781491,
+      "confusion_matrix": [
+        [
+          2533,
+          281
+        ],
+        [
+          1188,
+          610
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 2814,
+        "1": 1798
+      },
+      "class_proportions": {
+        "0": 0.6101474414570686,
+        "1": 0.3898525585429315
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.19319167389418906
+    },
+    "val": {
+      "n": 2943,
+      "accuracy": 0.672103295956507,
+      "precision": 0.6984667802385008,
+      "recall": 0.34223706176961605,
+      "specificity": 0.898567335243553,
+      "f1": 0.45938375350140054,
+      "balanced_accuracy": 0.6204021985065845,
+      "confusion_matrix": [
+        [
+          1568,
+          177
+        ],
+        [
+          788,
+          410
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 1745,
+        "1": 1198
+      },
+      "class_proportions": {
+        "0": 0.5929323819232076,
+        "1": 0.40706761807679237
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.19945633707101598
+    }
+  },
+  "epochs_run": 400,
+  "last_weights": [
+    -0.010959769569570418,
+    0.026875948824672848,
+    -0.04167020269240644,
+    -0.009646661128282254,
+    -0.8962800599354366,
+    -0.13953638687590184,
+    -0.04710037478436661,
+    0.03829816474653423,
+    -0.15184669482945592,
+    0.07965935490705342,
+    0.09185235136044051,
+    0.10958550865285768,
+    0.07819681259562987,
+    0.06375059611877779,
+    -0.05633031751984047,
+    0.07942369941050957
+  ],
+  "last_bias": -0.5397736134055564,
+  "termination": "max_epochs",
+  "initial_train_loss": 0.6931471805599452,
+  "initial_val_loss": 0.6931471805599454,
+  "validation_average_precision": 0.6383200544030032
+}

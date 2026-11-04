@@ -1,0 +1,43 @@
+{
+  "status": "successful",
+  "tests_run": 227,
+  "new_focused_tests": 29,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "offline_reproduced_artifacts": 14,
+  "prior_files_preserved": 487,
+  "read_only_select_queries": {
+    "consultas_metadatos.json": 5,
+    "consultas_oltp.json": 6,
+    "consultas_dw.json": 7
+  },
+  "oltp_dw_development_bijection_events": 86475,
+  "customer_payment_events": 23018,
+  "supplier_payment_events": 320,
+  "fingerprints_unchanged": true,
+  "test_2016_transaction_events_queried": false,
+  "state_fields_used_as_predictors": false,
+  "historical_counts_require_monthly_state_snapshots": false,
+  "coverage": "business_ledger_academic explicitly justified, not absolute completeness or bank certification",
+  "candidate_A_viable_under_documented_academic_contract": true,
+  "unconditional_operational_approval": false,
+  "candidate_A_train": {
+    "eligible": 4612,
+    "positive": 1798,
+    "negative": 2814
+  },
+  "candidate_A_validation": {
+    "eligible": 2943,
+    "positive": 1198,
+    "negative": 1745
+  },
+  "dataset_constructed": false,
+  "matrices_generated": false,
+  "models_trained": false,
+  "pca_executed": false,
+  "previous_reports_modified": false,
+  "git_operations_performed": false,
+  "inventory_investigation_started": false,
+  "manifest_sha256": "5c517b0916dfebd5e551f71200b562b15cf66c905850dbf8608c23d03481e232"
+}

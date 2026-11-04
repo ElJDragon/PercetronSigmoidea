@@ -1,0 +1,53 @@
+{
+  "recommended_candidate": "A: frecuencia mensual de cobros registrados de cliente superior a mediana reciente",
+  "status": "viable_under_explicit_academic_assumptions",
+  "granularity": "CustomerTransactions.CustomerID (cuenta Bill To) + mes objetivo",
+  "dataset_construction_viable_under_documented_academic_contract": true,
+  "unconditional_or_operational_approval": false,
+  "construction_executed": false,
+  "matrices_generated": false,
+  "training_performed": false,
+  "pca_performed": false,
+  "test_2016_queried": false,
+  "authorized_future_scope": "Solo candidato A, conteos históricos tipo 3 y calendario; modo académico de cobertura explícito; ninguna matriz en este encargo",
+  "development_support": {
+    "train": {
+      "eligible": 4612,
+      "positive": 1798,
+      "negative": 2814,
+      "positive_proportion": 0.3898525585429315,
+      "target_zero": 380,
+      "reference_zero": 86,
+      "entities": 236,
+      "entities_switching_class": 233,
+      "entities_single_class": 3
+    },
+    "validation": {
+      "eligible": 2943,
+      "positive": 1198,
+      "negative": 1745,
+      "positive_proportion": 0.40706761807679237,
+      "target_zero": 182,
+      "reference_zero": 31,
+      "entities": 252,
+      "entities_switching_class": 248,
+      "entities_single_class": 4
+    }
+  },
+  "candidate_B": {
+    "status": "conditional_secondary_not_selected",
+    "reason": "Solo seis proveedores y dos series persistentes; cuatro aportan ceros tras enero. No recomendado como siguiente entrenamiento."
+  },
+  "candidate_C": {
+    "status": "conditioned_currency_verification_pending_not_selected",
+    "reason": "Signo, importe y reconocimiento del pago verificados; no hay código monetario/certificación de unidad única en las fuentes consultadas. No se calculan etiquetas de volumen ni se habilitan importes como X."
+  },
+  "assumptions": [
+    "TransactionDate representa el día de registro empresarial del pago/cobro; no se afirma una hora auditada de inserción.",
+    "El libro de eventos de desarrollo conserva los pagos registrados sin borrados o reclasificaciones retrospectivas relevantes no observados. Los módulos locales y las versiones actuales son evidencia de apoyo, no bitácora exhaustiva.",
+    "Las extracciones conciliadas OLTP–DW y presencia de pagos en los 36 meses justifican cobertura académica mensual del libro desde enero de 2013; no certifican conciliación bancaria ni completitud absoluta.",
+    "Bajo esa cobertura explícita, ausencia de un pago en un mes posterior a primera observación significa cero eventos registrados, no incapacidad de pagar ni ausencia de ventas.",
+    "La disponibilidad retrospectiva de eventos se aproxima por su día empresarial y el control observable de versión. Para todos los pagos seleccionados, última edición coincide con ese día; no se necesita inferir saldos anteriores."
+  ],
+  "next_action": "Detenerse tras este dictamen; construir el dataset solo en un encargo posterior con este contrato explícito, sin avanzar automáticamente a Inventario"
+}

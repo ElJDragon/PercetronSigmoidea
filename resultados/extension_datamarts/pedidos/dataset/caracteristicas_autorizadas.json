@@ -1,0 +1,105 @@
+{
+  "calendar_features": [
+    {
+      "name": "mes_sin",
+      "formula": "sin(2*pi*(month-1)/12)",
+      "origin": "Fecha de registro original verificada de la línea, todavía sin resolver por fila",
+      "availability": "Calendario conocido al registro, condicionado a validar el ancla",
+      "authorized_by_existing_contract": true,
+      "business_values_computed": false,
+      "status": "authorized_definition_materialization_blocked",
+      "justification": "Solo calendario, sin información del propio día ni posterior; no se sustituye por fecha de última edición"
+    },
+    {
+      "name": "mes_cos",
+      "formula": "cos(2*pi*(month-1)/12)",
+      "origin": "Fecha de registro original verificada de la línea, todavía sin resolver por fila",
+      "availability": "Calendario conocido al registro, condicionado a validar el ancla",
+      "authorized_by_existing_contract": true,
+      "business_values_computed": false,
+      "status": "authorized_definition_materialization_blocked",
+      "justification": "Solo calendario, sin información del propio día ni posterior; no se sustituye por fecha de última edición"
+    },
+    {
+      "name": "semana_sin",
+      "formula": "sin(2*pi*weekday/7), lunes=0",
+      "origin": "Fecha de registro original verificada de la línea, todavía sin resolver por fila",
+      "availability": "Calendario conocido al registro, condicionado a validar el ancla",
+      "authorized_by_existing_contract": true,
+      "business_values_computed": false,
+      "status": "authorized_definition_materialization_blocked",
+      "justification": "Solo calendario, sin información del propio día ni posterior; no se sustituye por fecha de última edición"
+    },
+    {
+      "name": "semana_cos",
+      "formula": "cos(2*pi*weekday/7), lunes=0",
+      "origin": "Fecha de registro original verificada de la línea, todavía sin resolver por fila",
+      "availability": "Calendario conocido al registro, condicionado a validar el ancla",
+      "authorized_by_existing_contract": true,
+      "business_values_computed": false,
+      "status": "authorized_definition_materialization_blocked",
+      "justification": "Solo calendario, sin información del propio día ni posterior; no se sustituye por fecha de última edición"
+    },
+    {
+      "name": "dia_mes",
+      "formula": "día de mes 1..31",
+      "origin": "Fecha de registro original verificada de la línea, todavía sin resolver por fila",
+      "availability": "Calendario conocido al registro, condicionado a validar el ancla",
+      "authorized_by_existing_contract": true,
+      "business_values_computed": false,
+      "status": "authorized_definition_materialization_blocked",
+      "justification": "Solo calendario, sin información del propio día ni posterior; no se sustituye por fecha de última edición"
+    },
+    {
+      "name": "dias_mes",
+      "formula": "días calendario del mes, incluyendo bisiestos",
+      "origin": "Fecha de registro original verificada de la línea, todavía sin resolver por fila",
+      "availability": "Calendario conocido al registro, condicionado a validar el ancla",
+      "authorized_by_existing_contract": true,
+      "business_values_computed": false,
+      "status": "authorized_definition_materialization_blocked",
+      "justification": "Solo calendario, sin información del propio día ni posterior; no se sustituye por fecha de última edición"
+    }
+  ],
+  "feature_order": [
+    "mes_sin",
+    "mes_cos",
+    "semana_sin",
+    "semana_cos",
+    "dia_mes",
+    "dias_mes"
+  ],
+  "all_six_retained_in_design": true,
+  "preprocessor": {
+    "fitted": false,
+    "reason": "No hay train temporalmente validado; no ajustar imputación, z-score ni constantes sobre candidatos ambiguos"
+  },
+  "disabled": [
+    {
+      "feature": "Quantity",
+      "enabled": false,
+      "reason": "El valor actual no certifica la cantidad original; no hay versiones de línea identificadas"
+    },
+    {
+      "feature": "UnitPrice",
+      "enabled": false,
+      "reason": "Asignado al insertar según módulo, pero el último estado puede ser posterior; no hay valores originales trazados"
+    },
+    {
+      "feature": "Atributos dimensionales",
+      "enabled": false,
+      "reason": "Relación as-of no garantizada, se mantienen desactivados"
+    },
+    {
+      "feature": "Cliente reconstruido/categorías",
+      "enabled": false,
+      "reason": "No se inventan identidades; no se usan en la base"
+    },
+    {
+      "feature": "Historia y agregados del propio día",
+      "enabled": false,
+      "reason": "Desactivados; estadísticas futuras solo podrían usar información anterior al día de registro"
+    }
+  ],
+  "test_policy": "No leer picking de 2016 ni seleccionar líneas test por su resultado. Sin ancla verificada, no se genera X_test tampoco."
+}

@@ -1,0 +1,178 @@
+[
+  {
+    "nombre": "cobros_lag_1",
+    "formula": "N(c,t-1)",
+    "fuente": "CustomerTransactions, tipo 3, DISTINCT CustomerTransactionID",
+    "granularidad": "Cuenta cliente-mes",
+    "disponibilidad": "Antes de inicio(t), mes anterior cerrado",
+    "estado": "permitido_contrato_academico",
+    "justificacion": "Eventos de pago con identidad y fecha verificadas; sin saldos. Cobertura académica explícita.",
+    "missing_treatment": "No permitido faltar; bloqueo si NaN",
+    "output_dtype": "float64"
+  },
+  {
+    "nombre": "cobros_lag_2",
+    "formula": "N(c,t-2)",
+    "fuente": "CustomerTransactions, tipo 3, DISTINCT CustomerTransactionID",
+    "granularidad": "Cuenta cliente-mes",
+    "disponibilidad": "Antes de inicio(t), mes anterior cerrado",
+    "estado": "permitido_contrato_academico",
+    "justificacion": "Eventos de pago con identidad y fecha verificadas; sin saldos. Cobertura académica explícita.",
+    "missing_treatment": "No permitido faltar; bloqueo si NaN",
+    "output_dtype": "float64"
+  },
+  {
+    "nombre": "cobros_lag_3",
+    "formula": "N(c,t-3)",
+    "fuente": "CustomerTransactions, tipo 3, DISTINCT CustomerTransactionID",
+    "granularidad": "Cuenta cliente-mes",
+    "disponibilidad": "Antes de inicio(t), mes anterior cerrado",
+    "estado": "permitido_contrato_academico",
+    "justificacion": "Eventos de pago con identidad y fecha verificadas; sin saldos. Cobertura académica explícita.",
+    "missing_treatment": "No permitido faltar; bloqueo si NaN",
+    "output_dtype": "float64"
+  },
+  {
+    "nombre": "cobros_media_3",
+    "formula": "(n1+n2+n3)/3",
+    "fuente": "Agregados de eventos tipo 3",
+    "granularidad": "Cuenta cliente-mes",
+    "disponibilidad": "Antes de inicio(t)",
+    "estado": "permitido_contrato_academico",
+    "justificacion": "Hereda identidad, cobertura y disponibilidad de los tres lags; cero solo en libro cubierto.",
+    "missing_treatment": "No permitido faltar; bloqueo si NaN",
+    "output_dtype": "float64"
+  },
+  {
+    "nombre": "cobros_mediana_3",
+    "formula": "mediana(n1,n2,n3)",
+    "fuente": "Agregados de eventos tipo 3",
+    "granularidad": "Cuenta cliente-mes",
+    "disponibilidad": "Antes de inicio(t)",
+    "estado": "permitido_contrato_academico",
+    "justificacion": "Hereda identidad, cobertura y disponibilidad de los tres lags; cero solo en libro cubierto.",
+    "missing_treatment": "No permitido faltar; bloqueo si NaN",
+    "output_dtype": "float64"
+  },
+  {
+    "nombre": "cobros_std_3",
+    "formula": "std(n1,n2,n3), ddof=0",
+    "fuente": "Agregados de eventos tipo 3",
+    "granularidad": "Cuenta cliente-mes",
+    "disponibilidad": "Antes de inicio(t)",
+    "estado": "permitido_contrato_academico",
+    "justificacion": "Hereda identidad, cobertura y disponibilidad de los tres lags; cero solo en libro cubierto.",
+    "missing_treatment": "No permitido faltar; bloqueo si NaN",
+    "output_dtype": "float64"
+  },
+  {
+    "nombre": "cobros_cambio_1",
+    "formula": "n1-n2",
+    "fuente": "Agregados de eventos tipo 3",
+    "granularidad": "Cuenta cliente-mes",
+    "disponibilidad": "Antes de inicio(t)",
+    "estado": "permitido_contrato_academico",
+    "justificacion": "Hereda identidad, cobertura y disponibilidad de los tres lags; cero solo en libro cubierto.",
+    "missing_treatment": "No permitido faltar; bloqueo si NaN",
+    "output_dtype": "float64"
+  },
+  {
+    "nombre": "cobros_tendencia_3",
+    "formula": "(n1-n3)/2",
+    "fuente": "Agregados de eventos tipo 3",
+    "granularidad": "Cuenta cliente-mes",
+    "disponibilidad": "Antes de inicio(t)",
+    "estado": "permitido_contrato_academico",
+    "justificacion": "Hereda identidad, cobertura y disponibilidad de los tres lags; cero solo en libro cubierto.",
+    "missing_treatment": "No permitido faltar; bloqueo si NaN",
+    "output_dtype": "float64"
+  },
+  {
+    "nombre": "meses_con_cobros_3",
+    "formula": "SUM 1[nk>0], k=1..3",
+    "fuente": "Agregados de eventos tipo 3",
+    "granularidad": "Cuenta cliente-mes",
+    "disponibilidad": "Antes de inicio(t)",
+    "estado": "permitido_contrato_academico",
+    "justificacion": "Hereda identidad, cobertura y disponibilidad de los tres lags; cero solo en libro cubierto.",
+    "missing_treatment": "No permitido faltar; bloqueo si NaN",
+    "output_dtype": "float64"
+  },
+  {
+    "nombre": "mes_anterior_sin_cobros",
+    "formula": "1[n1=0]",
+    "fuente": "Agregados de eventos tipo 3",
+    "granularidad": "Cuenta cliente-mes",
+    "disponibilidad": "Antes de inicio(t)",
+    "estado": "permitido_contrato_academico",
+    "justificacion": "Hereda identidad, cobertura y disponibilidad de los tres lags; cero solo en libro cubierto.",
+    "missing_treatment": "No permitido faltar; bloqueo si NaN",
+    "output_dtype": "float64"
+  },
+  {
+    "nombre": "variacion_relativa_cobros",
+    "formula": "(n1-n2)/n2 si n2>0; nulo en otro caso",
+    "fuente": "Agregados de eventos tipo 3",
+    "granularidad": "Cuenta cliente-mes",
+    "disponibilidad": "Antes de inicio(t)",
+    "estado": "permitido_contrato_academico",
+    "justificacion": "No dividir entre cero; opcional y acompañada por indicador de base cero.",
+    "missing_treatment": "mediana ajustada exclusivamente en train; indicador base_variacion_cero",
+    "output_dtype": "float64"
+  },
+  {
+    "nombre": "base_variacion_cero",
+    "formula": "1[n2=0]",
+    "fuente": "Agregados de eventos tipo 3",
+    "granularidad": "Cuenta cliente-mes",
+    "disponibilidad": "Antes de inicio(t)",
+    "estado": "permitido_contrato_academico",
+    "justificacion": "Depende de cobertura que permita el cero.",
+    "missing_treatment": "No permitido faltar; bloqueo si NaN",
+    "output_dtype": "float64"
+  },
+  {
+    "nombre": "antiguedad_observada_meses",
+    "formula": "ordinal(t)-ordinal(primer mes de cobro conocido antes de t)",
+    "fuente": "CustomerTransactions tipo 3",
+    "granularidad": "Cuenta cliente-mes",
+    "disponibilidad": "Antes de inicio(t)",
+    "estado": "permitido_contrato_academico",
+    "justificacion": "Primera observación, no fecha real de alta; no usar último evento futuro ni supervivencia.",
+    "missing_treatment": "No permitido faltar; bloqueo si NaN",
+    "output_dtype": "float64"
+  },
+  {
+    "nombre": "mes_sin",
+    "formula": "sin(2*pi*(mes(t)-1)/12)",
+    "fuente": "Calendario civil",
+    "granularidad": "Cuenta cliente-mes",
+    "disponibilidad": "Conocida antes de inicio(t)",
+    "estado": "permitido",
+    "justificacion": "Calendario conocido; no acredita actividad ni cobertura.",
+    "missing_treatment": "No permitido faltar; bloqueo si NaN",
+    "output_dtype": "float64"
+  },
+  {
+    "nombre": "mes_cos",
+    "formula": "cos(2*pi*(mes(t)-1)/12)",
+    "fuente": "Calendario civil",
+    "granularidad": "Cuenta cliente-mes",
+    "disponibilidad": "Conocida antes de inicio(t)",
+    "estado": "permitido",
+    "justificacion": "Calendario conocido; no acredita actividad ni cobertura.",
+    "missing_treatment": "No permitido faltar; bloqueo si NaN",
+    "output_dtype": "float64"
+  },
+  {
+    "nombre": "dias_mes_objetivo",
+    "formula": "Días calendario de t",
+    "fuente": "Calendario civil",
+    "granularidad": "Cuenta cliente-mes",
+    "disponibilidad": "Conocida antes de inicio(t)",
+    "estado": "permitido",
+    "justificacion": "Calendario conocido; no acredita actividad ni cobertura.",
+    "missing_treatment": "No permitido faltar; bloqueo si NaN",
+    "output_dtype": "float64"
+  }
+]

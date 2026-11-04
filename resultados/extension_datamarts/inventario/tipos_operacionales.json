@@ -1,0 +1,54 @@
+[
+  {
+    "TransactionTypeID": 1,
+    "TransactionTypeName": "Customer Invoice"
+  },
+  {
+    "TransactionTypeID": 2,
+    "TransactionTypeName": "Customer Credit Note"
+  },
+  {
+    "TransactionTypeID": 3,
+    "TransactionTypeName": "Customer Payment Received"
+  },
+  {
+    "TransactionTypeID": 4,
+    "TransactionTypeName": "Customer Refund"
+  },
+  {
+    "TransactionTypeID": 5,
+    "TransactionTypeName": "Supplier Invoice"
+  },
+  {
+    "TransactionTypeID": 6,
+    "TransactionTypeName": "Supplier Credit Note"
+  },
+  {
+    "TransactionTypeID": 7,
+    "TransactionTypeName": "Supplier Payment Issued"
+  },
+  {
+    "TransactionTypeID": 8,
+    "TransactionTypeName": "Supplier Refund"
+  },
+  {
+    "TransactionTypeID": 9,
+    "TransactionTypeName": "Stock Transfer"
+  },
+  {
+    "TransactionTypeID": 10,
+    "TransactionTypeName": "Stock Issue"
+  },
+  {
+    "TransactionTypeID": 11,
+    "TransactionTypeName": "Stock Receipt"
+  },
+  {
+    "TransactionTypeID": 12,
+    "TransactionTypeName": "Stock Adjustment at Stocktake"
+  },
+  {
+    "TransactionTypeID": 13,
+    "TransactionTypeName": "Customer Contra"
+  }
+]

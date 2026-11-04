@@ -1,0 +1,445 @@
+{
+  "Order_observed_product_months": {
+    "groups": 9019,
+    "min_month": "2013-01",
+    "max_month": "2016-05",
+    "positive_net_groups": 9019,
+    "negative_net_groups": 0,
+    "zero_net_groups": 0
+  },
+  "Purchase_observed_product_months": {
+    "groups": 574,
+    "min_month": "2013-01",
+    "max_month": "2016-05",
+    "positive_net_groups": 574,
+    "negative_net_groups": 0,
+    "zero_net_groups": 0
+  },
+  "Movement_observed_product_months": {
+    "groups": 9019,
+    "min_month": "2013-01",
+    "max_month": "2016-05",
+    "positive_net_groups": 352,
+    "negative_net_groups": 8667,
+    "zero_net_groups": 0
+  },
+  "stock_holding_current_version": {
+    "rows": 227,
+    "business_products": 227,
+    "min_dimension_valid_from": "2016-05-31 23:00:00",
+    "max_dimension_valid_from": "2016-05-31 23:12:00"
+  },
+  "order_backorder_chain": {
+    "orders": 73595,
+    "null_completion_with_backorder": 0,
+    "null_completion_without_backorder": 3085,
+    "orphan_backorders": 0,
+    "backorder_before_parent": 0,
+    "max_backorder_lag_days": 0
+  },
+  "order_backorder_candidate_2day": {
+    "mature_orders": 73426,
+    "backorder_within_2d": 7521,
+    "no_backorder_within_2d": 65905
+  },
+  "payment_delay_distribution": [
+    {
+      "days_to_finalize": null,
+      "invoices": 84
+    },
+    {
+      "days_to_finalize": 1,
+      "invoices": 70426
+    }
+  ],
+  "invoice_payment_candidate_7day": {
+    "mature_invoices": 70051,
+    "possible_positive": 0
+  },
+  "purchase_receipt_delay_histogram": [
+    {
+      "days_to_last_receipt": null,
+      "lines": 9
+    },
+    {
+      "days_to_last_receipt": 1,
+      "lines": 6215
+    },
+    {
+      "days_to_last_receipt": 2,
+      "lines": 619
+    },
+    {
+      "days_to_last_receipt": 3,
+      "lines": 1524
+    }
+  ],
+  "order_line_candidate_2day": {
+    "mature_lines": 230874,
+    "unknown_completion": 3129,
+    "observed_late": 3154,
+    "observed_within_2d": 224591
+  },
+  "order_unknown_customer_source": {
+    "affected_lines": 85469,
+    "source_customer_ids": 261,
+    "lines_without_business_id_in_dimension": 85469
+  },
+  "unknown_dimension_keys": [
+    {
+      "parent_schema": "Fact",
+      "parent_table": "Order",
+      "parent_column": "City Key",
+      "zero_key_rows": 0
+    },
+    {
+      "parent_schema": "Fact",
+      "parent_table": "Movement",
+      "parent_column": "Customer Key",
+      "zero_key_rows": 92699
+    },
+    {
+      "parent_schema": "Fact",
+      "parent_table": "Order",
+      "parent_column": "Customer Key",
+      "zero_key_rows": 85469
+    },
+    {
+      "parent_schema": "Fact",
+      "parent_table": "Transaction",
+      "parent_column": "Customer Key",
+      "zero_key_rows": 52968
+    },
+    {
+      "parent_schema": "Fact",
+      "parent_table": "Transaction",
+      "parent_column": "Bill To Customer Key",
+      "zero_key_rows": 52968
+    },
+    {
+      "parent_schema": "Fact",
+      "parent_table": "Order",
+      "parent_column": "Salesperson Key",
+      "zero_key_rows": 0
+    },
+    {
+      "parent_schema": "Fact",
+      "parent_table": "Order",
+      "parent_column": "Picker Key",
+      "zero_key_rows": 23740
+    },
+    {
+      "parent_schema": "Fact",
+      "parent_table": "Transaction",
+      "parent_column": "Payment Method Key",
+      "zero_key_rows": 70510
+    },
+    {
+      "parent_schema": "Fact",
+      "parent_table": "Movement",
+      "parent_column": "Stock Item Key",
+      "zero_key_rows": 0
+    },
+    {
+      "parent_schema": "Fact",
+      "parent_table": "Order",
+      "parent_column": "Stock Item Key",
+      "zero_key_rows": 0
+    },
+    {
+      "parent_schema": "Fact",
+      "parent_table": "Purchase",
+      "parent_column": "Stock Item Key",
+      "zero_key_rows": 0
+    },
+    {
+      "parent_schema": "Fact",
+      "parent_table": "Stock Holding",
+      "parent_column": "Stock Item Key",
+      "zero_key_rows": 0
+    },
+    {
+      "parent_schema": "Fact",
+      "parent_table": "Movement",
+      "parent_column": "Supplier Key",
+      "zero_key_rows": 228309
+    },
+    {
+      "parent_schema": "Fact",
+      "parent_table": "Purchase",
+      "parent_column": "Supplier Key",
+      "zero_key_rows": 0
+    },
+    {
+      "parent_schema": "Fact",
+      "parent_table": "Transaction",
+      "parent_column": "Supplier Key",
+      "zero_key_rows": 97147
+    },
+    {
+      "parent_schema": "Fact",
+      "parent_table": "Movement",
+      "parent_column": "Transaction Type Key",
+      "zero_key_rows": 0
+    },
+    {
+      "parent_schema": "Fact",
+      "parent_table": "Transaction",
+      "parent_column": "Transaction Type Key",
+      "zero_key_rows": 0
+    }
+  ],
+  "business_cardinalities": [
+    {
+      "fact": "Order",
+      "role": "City Key",
+      "dimension": "City",
+      "dimension_key": "City Key",
+      "business_id": "WWI City ID",
+      "real_business_ids": 655
+    },
+    {
+      "fact": "Movement",
+      "role": "Customer Key",
+      "dimension": "Customer",
+      "dimension_key": "Customer Key",
+      "business_id": "WWI Customer ID",
+      "real_business_ids": 402
+    },
+    {
+      "fact": "Order",
+      "role": "Customer Key",
+      "dimension": "Customer",
+      "dimension_key": "Customer Key",
+      "business_id": "WWI Customer ID",
+      "real_business_ids": 402
+    },
+    {
+      "fact": "Transaction",
+      "role": "Customer Key",
+      "dimension": "Customer",
+      "dimension_key": "Customer Key",
+      "business_id": "WWI Customer ID",
+      "real_business_ids": 402
+    },
+    {
+      "fact": "Transaction",
+      "role": "Bill To Customer Key",
+      "dimension": "Customer",
+      "dimension_key": "Customer Key",
+      "business_id": "WWI Customer ID",
+      "real_business_ids": 2
+    },
+    {
+      "fact": "Order",
+      "role": "Salesperson Key",
+      "dimension": "Employee",
+      "dimension_key": "Employee Key",
+      "business_id": "WWI Employee ID",
+      "real_business_ids": 10
+    },
+    {
+      "fact": "Order",
+      "role": "Picker Key",
+      "dimension": "Employee",
+      "dimension_key": "Employee Key",
+      "business_id": "WWI Employee ID",
+      "real_business_ids": 19
+    },
+    {
+      "fact": "Transaction",
+      "role": "Payment Method Key",
+      "dimension": "Payment Method",
+      "dimension_key": "Payment Method Key",
+      "business_id": "WWI Payment Method ID",
+      "real_business_ids": 1
+    },
+    {
+      "fact": "Movement",
+      "role": "Stock Item Key",
+      "dimension": "Stock Item",
+      "dimension_key": "Stock Item Key",
+      "business_id": "WWI Stock Item ID",
+      "real_business_ids": 227
+    },
+    {
+      "fact": "Order",
+      "role": "Stock Item Key",
+      "dimension": "Stock Item",
+      "dimension_key": "Stock Item Key",
+      "business_id": "WWI Stock Item ID",
+      "real_business_ids": 227
+    },
+    {
+      "fact": "Purchase",
+      "role": "Stock Item Key",
+      "dimension": "Stock Item",
+      "dimension_key": "Stock Item Key",
+      "business_id": "WWI Stock Item ID",
+      "real_business_ids": 227
+    },
+    {
+      "fact": "Stock Holding",
+      "role": "Stock Item Key",
+      "dimension": "Stock Item",
+      "dimension_key": "Stock Item Key",
+      "business_id": "WWI Stock Item ID",
+      "real_business_ids": 227
+    },
+    {
+      "fact": "Movement",
+      "role": "Supplier Key",
+      "dimension": "Supplier",
+      "dimension_key": "Supplier Key",
+      "business_id": "WWI Supplier ID",
+      "real_business_ids": 7
+    },
+    {
+      "fact": "Purchase",
+      "role": "Supplier Key",
+      "dimension": "Supplier",
+      "dimension_key": "Supplier Key",
+      "business_id": "WWI Supplier ID",
+      "real_business_ids": 7
+    },
+    {
+      "fact": "Transaction",
+      "role": "Supplier Key",
+      "dimension": "Supplier",
+      "dimension_key": "Supplier Key",
+      "business_id": "WWI Supplier ID",
+      "real_business_ids": 7
+    },
+    {
+      "fact": "Movement",
+      "role": "Transaction Type Key",
+      "dimension": "Transaction Type",
+      "dimension_key": "Transaction Type Key",
+      "business_id": "WWI Transaction Type ID",
+      "real_business_ids": 3
+    },
+    {
+      "fact": "Transaction",
+      "role": "Transaction Type Key",
+      "dimension": "Transaction Type",
+      "dimension_key": "Transaction Type Key",
+      "business_id": "WWI Transaction Type ID",
+      "real_business_ids": 4
+    }
+  ],
+  "overlap_Supplier": [
+    {
+      "business_id": 3,
+      "key_a": 16,
+      "key_b": 27,
+      "from_a": "2013-01-01 00:05:00",
+      "to_a": "9999-12-31 23:59:59.999999",
+      "from_b": "2013-01-01 00:05:00",
+      "to_b": "9999-12-31 23:59:59.999999"
+    }
+  ],
+  "overlap_City": [
+    {
+      "business_id": 3,
+      "key_a": 78824,
+      "key_b": 92842,
+      "from_a": "2013-07-01 16:00:00",
+      "to_a": "2015-07-01 16:00:00",
+      "from_b": "2013-07-01 16:00:00",
+      "to_b": "2015-07-01 16:00:00"
+    },
+    {
+      "business_id": 6,
+      "key_a": 78825,
+      "key_b": 92843,
+      "from_a": "2013-07-01 16:00:00",
+      "to_a": "2015-07-01 16:00:00",
+      "from_b": "2013-07-01 16:00:00",
+      "to_b": "2015-07-01 16:00:00"
+    },
+    {
+      "business_id": 12,
+      "key_a": 106769,
+      "key_b": 110610,
+      "from_a": "2015-07-01 16:00:00",
+      "to_a": "9999-12-31 23:59:59.999999",
+      "from_b": "2015-07-01 16:00:00",
+      "to_b": "9999-12-31 23:59:59.999999"
+    },
+    {
+      "business_id": 14,
+      "key_a": 110070,
+      "key_b": 116029,
+      "from_a": "2015-07-01 16:00:00",
+      "to_a": "9999-12-31 23:59:59.999999",
+      "from_b": "2015-07-01 16:00:00",
+      "to_b": "9999-12-31 23:59:59.999999"
+    },
+    {
+      "business_id": 26,
+      "key_a": 83502,
+      "key_b": 86792,
+      "from_a": "2013-07-01 16:00:00",
+      "to_a": "9999-12-31 23:59:59.999999",
+      "from_b": "2013-07-01 16:00:00",
+      "to_b": "9999-12-31 23:59:59.999999"
+    },
+    {
+      "business_id": 28,
+      "key_a": 78826,
+      "key_b": 92844,
+      "from_a": "2013-07-01 16:00:00",
+      "to_a": "2015-07-01 16:00:00",
+      "from_b": "2013-07-01 16:00:00",
+      "to_b": "2015-07-01 16:00:00"
+    },
+    {
+      "business_id": 29,
+      "key_a": 78827,
+      "key_b": 92845,
+      "from_a": "2013-07-01 16:00:00",
+      "to_a": "2015-07-01 16:00:00",
+      "from_b": "2013-07-01 16:00:00",
+      "to_b": "2015-07-01 16:00:00"
+    },
+    {
+      "business_id": 31,
+      "key_a": 106770,
+      "key_b": 110611,
+      "from_a": "2015-07-01 16:00:00",
+      "to_a": "9999-12-31 23:59:59.999999",
+      "from_b": "2015-07-01 16:00:00",
+      "to_b": "9999-12-31 23:59:59.999999"
+    },
+    {
+      "business_id": 41,
+      "key_a": 106771,
+      "key_b": 110612,
+      "from_a": "2015-07-01 16:00:00",
+      "to_a": "9999-12-31 23:59:59.999999",
+      "from_b": "2015-07-01 16:00:00",
+      "to_b": "9999-12-31 23:59:59.999999"
+    },
+    {
+      "business_id": 43,
+      "key_a": 106772,
+      "key_b": 110613,
+      "from_a": "2015-07-01 16:00:00",
+      "to_a": "9999-12-31 23:59:59.999999",
+      "from_b": "2015-07-01 16:00:00",
+      "to_b": "9999-12-31 23:59:59.999999"
+    }
+  ],
+  "overlap_Employee": [
+    {
+      "business_id": 8,
+      "key_a": 94,
+      "key_b": 95,
+      "from_a": "2013-11-25 08:00:00",
+      "to_a": "2014-04-14 08:00:00",
+      "from_b": "2013-11-25 08:00:00",
+      "to_b": "2014-04-14 08:00:00"
+    }
+  ],
+  "note": "Conteos de propuestas exploratorias y ejemplos acotados de intervalos, sin materializar etiquetas ni elegir umbrales por rendimiento predictivo."
+}

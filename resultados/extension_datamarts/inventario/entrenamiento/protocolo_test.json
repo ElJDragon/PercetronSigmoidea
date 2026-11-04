@@ -1,0 +1,468 @@
+{
+  "status": "reserved_not_executed",
+  "months": [
+    "2016-01",
+    "2016-02",
+    "2016-03",
+    "2016-04",
+    "2016-05"
+  ],
+  "outcomes_queried": false,
+  "dataset_recipe": {
+    "status": "reserved_not_executed",
+    "outcomes_queried": false,
+    "X_test_built": false,
+    "y_test_built": false,
+    "period": "2016; only complete certified/assumed-covered months at future opening",
+    "target_months": [
+      "2016-01",
+      "2016-02",
+      "2016-03",
+      "2016-04",
+      "2016-05"
+    ],
+    "target_window_origin": "Coverage endpoint from prior general audit; not selected using test labels",
+    "event_type_id": 11,
+    "event_time_field": "TransactionOccurredWhen",
+    "history_for_first_target": [
+      "2015-12",
+      "2015-11",
+      "2015-10"
+    ],
+    "observation_order": [
+      "item_id ascending",
+      "target_month ascending"
+    ],
+    "majority_class_from_train": 0,
+    "prerequisites": [
+      "Freeze preprocessing, models, checkpoint, threshold and protocol before opening outcomes",
+      "Persist opening record before querying test"
+    ],
+    "recipe": [
+      "Extract only type 11 using the same canonical schema and SQL SELECT after explicit opening authorization",
+      "Use operational item identity, event IDs and reconcile bijectively with DW; recover first appearance causally without future survival filters",
+      "For each t, use only t-1,t-2,t-3 closed covered months; earlier concluded test months may supply subsequent history",
+      "Unknown/incomplete months are not zero; exclude new items until three covered months after first appearance",
+      "Compute y with strict excess over three-month median, ties zero; keep target count separate",
+      "Apply exactly the frozen catalog, mask, mean and population std below, without fit or imputation of essential history",
+      "Preserve aligned keys, observations, exclusions, hashes, monthly supports and both causal baselines"
+    ],
+    "preprocessing": {
+      "version": 1,
+      "fit_partition": "train",
+      "input_features": [
+        "recepciones_lag_1",
+        "recepciones_lag_2",
+        "recepciones_lag_3",
+        "unidades_recibidas_lag_1",
+        "unidades_recibidas_lag_2",
+        "unidades_recibidas_lag_3",
+        "recepciones_media_3",
+        "recepciones_mediana_3",
+        "recepciones_std_3",
+        "recepciones_cambio_1",
+        "recepciones_tendencia_3",
+        "meses_con_recepciones_3",
+        "mes_anterior_sin_recepciones",
+        "antiguedad_observada_meses",
+        "mes_sin",
+        "mes_cos",
+        "dias_mes_objetivo"
+      ],
+      "feature_names": [
+        "recepciones_lag_1",
+        "recepciones_lag_2",
+        "recepciones_lag_3",
+        "unidades_recibidas_lag_1",
+        "unidades_recibidas_lag_2",
+        "unidades_recibidas_lag_3",
+        "recepciones_media_3",
+        "recepciones_mediana_3",
+        "recepciones_std_3",
+        "recepciones_cambio_1",
+        "recepciones_tendencia_3",
+        "meses_con_recepciones_3",
+        "mes_anterior_sin_recepciones",
+        "antiguedad_observada_meses",
+        "mes_sin",
+        "mes_cos",
+        "dias_mes_objetivo"
+      ],
+      "discarded": {},
+      "parameters": {
+        "recepciones_lag_1": {
+          "mean": 0.8854098717112415,
+          "std_population": 4.463634097316614,
+          "imputation": "not_needed_required_finite"
+        },
+        "recepciones_lag_2": {
+          "mean": 0.87279843444227,
+          "std_population": 4.429697440437432,
+          "imputation": "not_needed_required_finite"
+        },
+        "recepciones_lag_3": {
+          "mean": 0.8923679060665362,
+          "std_population": 4.329988224492653,
+          "imputation": "not_needed_required_finite"
+        },
+        "unidades_recibidas_lag_1": {
+          "mean": 7851.265927375516,
+          "std_population": 48112.14640415748,
+          "imputation": "not_needed_required_finite"
+        },
+        "unidades_recibidas_lag_2": {
+          "mean": 7160.709502065666,
+          "std_population": 45119.51901634283,
+          "imputation": "not_needed_required_finite"
+        },
+        "unidades_recibidas_lag_3": {
+          "mean": 6406.744074798869,
+          "std_population": 41309.13063691576,
+          "imputation": "not_needed_required_finite"
+        },
+        "recepciones_media_3": {
+          "mean": 0.8835254040733495,
+          "std_population": 4.386795821441394,
+          "imputation": "not_needed_required_finite"
+        },
+        "recepciones_mediana_3": {
+          "mean": 0.8662752772341813,
+          "std_population": 4.390355896250097,
+          "imputation": "not_needed_required_finite"
+        },
+        "recepciones_std_3": {
+          "mean": 0.08204782045818783,
+          "std_population": 0.4254861259606125,
+          "imputation": "not_needed_required_finite"
+        },
+        "recepciones_cambio_1": {
+          "mean": 0.012611437268971515,
+          "std_population": 0.5973902321816674,
+          "imputation": "not_needed_required_finite"
+        },
+        "recepciones_tendencia_3": {
+          "mean": -0.0034790171776473144,
+          "std_population": 0.44712712383325254,
+          "imputation": "not_needed_required_finite"
+        },
+        "meses_con_recepciones_3": {
+          "mean": 0.1609045444661883,
+          "std_population": 0.6013196036473434,
+          "imputation": "not_needed_required_finite"
+        },
+        "mes_anterior_sin_recepciones": {
+          "mean": 0.9612959338986736,
+          "std_population": 0.19288872794580436,
+          "imputation": "not_needed_required_finite"
+        },
+        "antiguedad_observada_meses": {
+          "mean": 13.0,
+          "std_population": 6.0553007081949835,
+          "imputation": "not_needed_required_finite"
+        },
+        "mes_sin": {
+          "mean": -0.06504882875163992,
+          "std_population": 0.7208177118298105,
+          "imputation": "not_needed_required_finite"
+        },
+        "mes_cos": {
+          "mean": -0.11266787637068762,
+          "std_population": 0.6808057181197846,
+          "imputation": "not_needed_required_finite"
+        },
+        "dias_mes_objetivo": {
+          "mean": 30.476190476190474,
+          "std_population": 0.7315376902732007,
+          "imputation": "not_needed_required_finite"
+        }
+      },
+      "train_rows": 4599,
+      "dtype": "float64",
+      "ddof": 0,
+      "imputation": "none; all features required finite",
+      "formula": "(x-train_mean)/train_population_std",
+      "feature_selection": "only constants in train; no validation selection"
+    },
+    "required_features": [
+      "recepciones_lag_1",
+      "recepciones_lag_2",
+      "recepciones_lag_3",
+      "unidades_recibidas_lag_1",
+      "unidades_recibidas_lag_2",
+      "unidades_recibidas_lag_3",
+      "recepciones_media_3",
+      "recepciones_mediana_3",
+      "recepciones_std_3",
+      "recepciones_cambio_1",
+      "recepciones_tendencia_3",
+      "meses_con_recepciones_3",
+      "mes_anterior_sin_recepciones",
+      "antiguedad_observada_meses",
+      "mes_sin",
+      "mes_cos",
+      "dias_mes_objetivo"
+    ],
+    "baseline": "1[n1>median(n1,n2,n3)]; majority fit on development train only",
+    "test_sql_implemented": false,
+    "no_test_dates_exposed_in_current_CLI": true
+  },
+  "models": {
+    "perceptron": {
+      "path": "resultados\\extension_datamarts\\inventario\\entrenamiento\\modelos\\perceptron.json",
+      "sha256": "55516fc6523d0873cc3a0d37276a900634fdfe5b8dba5463fcf48474f6f792f6",
+      "run": "p_seed42",
+      "variant": "standard",
+      "selected_epoch": 30,
+      "params": {
+        "learning_rate": 0.01,
+        "max_epochs": 100,
+        "seed": 42,
+        "shuffle": true,
+        "initial_weights": null,
+        "initial_bias": 0.0
+      },
+      "validation_metrics": {
+        "n": 2628,
+        "accuracy": 0.9752663622526636,
+        "precision": 0.35,
+        "recall": 1.0,
+        "specificity": 0.9749325106054763,
+        "f1": 0.5185185185185185,
+        "balanced_accuracy": 0.9874662553027381,
+        "confusion_matrix": [
+          [
+            2528,
+            65
+          ],
+          [
+            0,
+            35
+          ]
+        ],
+        "confusion_order": [
+          0,
+          1
+        ],
+        "support": {
+          "0": 2593,
+          "1": 35
+        },
+        "class_proportions": {
+          "0": 0.9866818873668188,
+          "1": 0.013318112633181126
+        },
+        "denominator_zero": {
+          "precision": false,
+          "recall": false,
+          "specificity": false,
+          "f1": false
+        },
+        "positive_prediction_proportion": 0.0380517503805175,
+        "only_majority_predicted": false
+      },
+      "validation_average_precision": null,
+      "n_features": 17,
+      "scores_calibrated": false
+    },
+    "logistic": {
+      "path": "resultados\\extension_datamarts\\inventario\\entrenamiento\\modelos\\logistic.json",
+      "sha256": "094a1a64956556c81ca36dc66d6399c5e93923b7dc444840236fed7e518f15e9",
+      "run": "l_eta005",
+      "variant": "standard",
+      "selected_epoch": 156,
+      "params": {
+        "learning_rate": 0.05,
+        "max_epochs": 400,
+        "seed": 42,
+        "initialization": "zeros",
+        "initial_weights": null,
+        "initial_bias": 0.0,
+        "tolerance": 1e-06,
+        "threshold": 0.5
+      },
+      "validation_metrics": {
+        "n": 2628,
+        "accuracy": 0.9733637747336378,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "specificity": 0.973004242190513,
+        "f1": 0.5,
+        "balanced_accuracy": 0.9865021210952565,
+        "confusion_matrix": [
+          [
+            2523,
+            70
+          ],
+          [
+            0,
+            35
+          ]
+        ],
+        "confusion_order": [
+          0,
+          1
+        ],
+        "support": {
+          "0": 2593,
+          "1": 35
+        },
+        "class_proportions": {
+          "0": 0.9866818873668188,
+          "1": 0.013318112633181126
+        },
+        "denominator_zero": {
+          "precision": false,
+          "recall": false,
+          "specificity": false,
+          "f1": false
+        },
+        "positive_prediction_proportion": 0.03995433789954338,
+        "only_majority_predicted": false
+      },
+      "validation_average_precision": 0.3668857240075474,
+      "n_features": 17,
+      "scores_calibrated": false
+    },
+    "logistic_standard": {
+      "path": "resultados\\extension_datamarts\\inventario\\entrenamiento\\modelos\\logistic_standard.json",
+      "sha256": "094a1a64956556c81ca36dc66d6399c5e93923b7dc444840236fed7e518f15e9",
+      "run": "l_eta005",
+      "variant": "standard",
+      "selected_epoch": 156,
+      "params": {
+        "learning_rate": 0.05,
+        "max_epochs": 400,
+        "seed": 42,
+        "initialization": "zeros",
+        "initial_weights": null,
+        "initial_bias": 0.0,
+        "tolerance": 1e-06,
+        "threshold": 0.5
+      },
+      "validation_metrics": {
+        "n": 2628,
+        "accuracy": 0.9733637747336378,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "specificity": 0.973004242190513,
+        "f1": 0.5,
+        "balanced_accuracy": 0.9865021210952565,
+        "confusion_matrix": [
+          [
+            2523,
+            70
+          ],
+          [
+            0,
+            35
+          ]
+        ],
+        "confusion_order": [
+          0,
+          1
+        ],
+        "support": {
+          "0": 2593,
+          "1": 35
+        },
+        "class_proportions": {
+          "0": 0.9866818873668188,
+          "1": 0.013318112633181126
+        },
+        "denominator_zero": {
+          "precision": false,
+          "recall": false,
+          "specificity": false,
+          "f1": false
+        },
+        "positive_prediction_proportion": 0.03995433789954338,
+        "only_majority_predicted": false
+      },
+      "validation_average_precision": 0.3668857240075474,
+      "n_features": 17,
+      "scores_calibrated": false
+    },
+    "logistic_weighted": {
+      "path": "resultados\\extension_datamarts\\inventario\\entrenamiento\\modelos\\logistic_weighted.json",
+      "sha256": "0087d51788e16e10a90f283d292f6e6a377330f9bca74d8051af66386ec2b9c1",
+      "run": "lw_eta005",
+      "variant": "weighted",
+      "selected_epoch": 1,
+      "params": {
+        "learning_rate": 0.05,
+        "max_epochs": 400,
+        "seed": 42,
+        "initialization": "zeros",
+        "initial_weights": null,
+        "initial_bias": 0.0,
+        "tolerance": 1e-06,
+        "threshold": 0.5,
+        "class_weights": {
+          "0": 0.5095280301351651,
+          "1": 26.738372093023255
+        }
+      },
+      "validation_metrics": {
+        "n": 2628,
+        "accuracy": 0.9722222222222222,
+        "precision": 0.32407407407407407,
+        "recall": 1.0,
+        "specificity": 0.9718472811415348,
+        "f1": 0.48951048951048953,
+        "balanced_accuracy": 0.9859236405707674,
+        "confusion_matrix": [
+          [
+            2520,
+            73
+          ],
+          [
+            0,
+            35
+          ]
+        ],
+        "confusion_order": [
+          0,
+          1
+        ],
+        "support": {
+          "0": 2593,
+          "1": 35
+        },
+        "class_proportions": {
+          "0": 0.9866818873668188,
+          "1": 0.013318112633181126
+        },
+        "denominator_zero": {
+          "precision": false,
+          "recall": false,
+          "specificity": false,
+          "f1": false
+        },
+        "positive_prediction_proportion": 0.0410958904109589,
+        "only_majority_predicted": false
+      },
+      "validation_average_precision": 0.3548707735111173,
+      "n_features": 17,
+      "scores_calibrated": false
+    }
+  },
+  "final_models": [
+    "perceptron",
+    "logistic"
+  ],
+  "frozen_manifest_sha256": "cf9084a1841d67e0ef76f3783279d5e1feaa2589f0e52b1d46eba2bb7c00ed7d",
+  "majority_class": 0,
+  "historical": "1[N(t-1)>median(N(t-1),N(t-2),N(t-3))]",
+  "thresholds": {
+    "perceptron": "z>=0",
+    "logistic": 0.5,
+    "candidates": [
+      0.5
+    ],
+    "search": false
+  },
+  "primary_and_common_expected_equal": true,
+  "policy": "If any method lacks history preserve principal results and explicitly report separate common support; never invent zeros for unknown coverage",
+  "required_opening_record_before_queries": true,
+  "fit_or_threshold_search_on_test": false
+}

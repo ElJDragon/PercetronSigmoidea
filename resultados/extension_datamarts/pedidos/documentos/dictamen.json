@@ -1,0 +1,12 @@
+{
+  "retrospective_business_anchor": "OrderDate propio del documento original no derivado; fecha de negocio, no timestamp de inserción auditado",
+  "cohort_with_defensible_full_order_interpretation": "original_without_backorder",
+  "can_build_dataset_now": false,
+  "sufficient_class_support_in_both_development_splits": false,
+  "verdict": "insufficient_evidence_or_events_for_requested_document_target",
+  "reason": "Los backorders heredan fecha y pueden cerrar un documento tras transferir pendientes. La cohorte original sin traslado se evalúa aparte; no se incorporan otras cohortes para conseguir positivos.",
+  "fallback": "Continuar con Fact.Movement bajo un contrato propio; no iniciar esa investigación ni cambiar objetivo silenciosamente aquí.",
+  "test_outcomes_read": false,
+  "matrices_generated": false,
+  "training_performed": false
+}

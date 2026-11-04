@@ -1,0 +1,15 @@
+{
+  "status": "blocked_pending_independent_creation_evidence",
+  "reason": "La existencia en la fecha original no se prueba por una clave actual, una fecha heredada o última edición. No se cuenta con evidencia independiente por línea en las fuentes consultadas.",
+  "dedicated_creation_columns_found": [],
+  "history_configuration_found": false,
+  "development_candidates": 201510,
+  "included_in_dataset": 0,
+  "blocked_from_materialization": 201510,
+  "not_a_claim_that_all_lines_were_created_late": true,
+  "matrices_generated": false,
+  "preprocessor_fitted": false,
+  "test_predictors_generated": false,
+  "test_outcomes_read": false,
+  "next_step": "Obtener log de inserción/CreatedAt verificable o snapshot de líneas al registro, con historial de traslados y valores originales. Si no existe, acordar explícitamente otro instante/objetivo antes de construir."
+}

@@ -1,0 +1,2062 @@
+{
+  "Order": {
+    "documents": 73595,
+    "min_lines": 1,
+    "max_lines": 5,
+    "mean_lines": 3.144398396630206,
+    "documents_multiple_lines": 64999,
+    "document_date_inconsistencies": 0
+  },
+  "Purchase": {
+    "documents": 2074,
+    "min_lines": 1,
+    "max_lines": 34,
+    "mean_lines": 4.034233365477339,
+    "documents_multiple_lines": 1924,
+    "document_date_inconsistencies": 0
+  },
+  "Movement": {
+    "documents": 236667,
+    "min_lines": 1,
+    "max_lines": 1,
+    "mean_lines": 1.0,
+    "documents_multiple_lines": 0,
+    "document_date_inconsistencies": 0
+  },
+  "Transaction:WWI Customer Transaction ID": {
+    "identifiers": 97147,
+    "max_rows_per_identifier": 1,
+    "repeated_identifiers": 0
+  },
+  "Transaction:WWI Supplier Transaction ID": {
+    "identifiers": 2438,
+    "max_rows_per_identifier": 1,
+    "repeated_identifiers": 0
+  },
+  "Transaction:WWI Invoice ID": {
+    "identifiers": 70510,
+    "max_rows_per_identifier": 1,
+    "repeated_identifiers": 0
+  },
+  "Transaction:WWI Purchase Order ID": {
+    "identifiers": 2072,
+    "max_rows_per_identifier": 1,
+    "repeated_identifiers": 0
+  },
+  "Movement:WWI Invoice ID": {
+    "documents": 70510,
+    "min_movements": 1,
+    "max_movements": 5,
+    "mean_movements": 3.237342220961566
+  },
+  "Movement:WWI Purchase Order ID": {
+    "documents": 2072,
+    "min_movements": 1,
+    "max_movements": 34,
+    "mean_movements": 4.033783783783784
+  },
+  "Order_dates": {
+    "picked_before_order": 0,
+    "documents": 73595
+  },
+  "Order_delay_histogram": [
+    {
+      "days_to_pick": null,
+      "lines": 3147
+    },
+    {
+      "days_to_pick": 0,
+      "lines": 223727
+    },
+    {
+      "days_to_pick": 1,
+      "lines": 1004
+    },
+    {
+      "days_to_pick": 2,
+      "lines": 380
+    },
+    {
+      "days_to_pick": 3,
+      "lines": 293
+    },
+    {
+      "days_to_pick": 4,
+      "lines": 255
+    },
+    {
+      "days_to_pick": 5,
+      "lines": 168
+    },
+    {
+      "days_to_pick": 6,
+      "lines": 149
+    },
+    {
+      "days_to_pick": 7,
+      "lines": 147
+    },
+    {
+      "days_to_pick": 8,
+      "lines": 73
+    },
+    {
+      "days_to_pick": 9,
+      "lines": 68
+    },
+    {
+      "days_to_pick": 10,
+      "lines": 51
+    },
+    {
+      "days_to_pick": 11,
+      "lines": 43
+    },
+    {
+      "days_to_pick": 12,
+      "lines": 34
+    },
+    {
+      "days_to_pick": 13,
+      "lines": 44
+    },
+    {
+      "days_to_pick": 14,
+      "lines": 36
+    },
+    {
+      "days_to_pick": 15,
+      "lines": 34
+    },
+    {
+      "days_to_pick": 16,
+      "lines": 25
+    },
+    {
+      "days_to_pick": 17,
+      "lines": 25
+    },
+    {
+      "days_to_pick": 18,
+      "lines": 20
+    },
+    {
+      "days_to_pick": 19,
+      "lines": 17
+    },
+    {
+      "days_to_pick": 20,
+      "lines": 29
+    },
+    {
+      "days_to_pick": 21,
+      "lines": 24
+    },
+    {
+      "days_to_pick": 22,
+      "lines": 18
+    },
+    {
+      "days_to_pick": 23,
+      "lines": 14
+    },
+    {
+      "days_to_pick": 24,
+      "lines": 15
+    },
+    {
+      "days_to_pick": 25,
+      "lines": 16
+    },
+    {
+      "days_to_pick": 26,
+      "lines": 14
+    },
+    {
+      "days_to_pick": 27,
+      "lines": 16
+    },
+    {
+      "days_to_pick": 28,
+      "lines": 21
+    },
+    {
+      "days_to_pick": 29,
+      "lines": 9
+    },
+    {
+      "days_to_pick": 30,
+      "lines": 12
+    },
+    {
+      "days_to_pick": 31,
+      "lines": 14
+    },
+    {
+      "days_to_pick": 32,
+      "lines": 7
+    },
+    {
+      "days_to_pick": 33,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 34,
+      "lines": 10
+    },
+    {
+      "days_to_pick": 35,
+      "lines": 14
+    },
+    {
+      "days_to_pick": 36,
+      "lines": 16
+    },
+    {
+      "days_to_pick": 37,
+      "lines": 13
+    },
+    {
+      "days_to_pick": 38,
+      "lines": 17
+    },
+    {
+      "days_to_pick": 39,
+      "lines": 10
+    },
+    {
+      "days_to_pick": 40,
+      "lines": 9
+    },
+    {
+      "days_to_pick": 41,
+      "lines": 12
+    },
+    {
+      "days_to_pick": 42,
+      "lines": 17
+    },
+    {
+      "days_to_pick": 43,
+      "lines": 10
+    },
+    {
+      "days_to_pick": 44,
+      "lines": 12
+    },
+    {
+      "days_to_pick": 45,
+      "lines": 7
+    },
+    {
+      "days_to_pick": 46,
+      "lines": 7
+    },
+    {
+      "days_to_pick": 47,
+      "lines": 8
+    },
+    {
+      "days_to_pick": 48,
+      "lines": 13
+    },
+    {
+      "days_to_pick": 49,
+      "lines": 17
+    },
+    {
+      "days_to_pick": 50,
+      "lines": 7
+    },
+    {
+      "days_to_pick": 51,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 52,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 53,
+      "lines": 11
+    },
+    {
+      "days_to_pick": 54,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 55,
+      "lines": 7
+    },
+    {
+      "days_to_pick": 56,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 57,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 58,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 59,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 60,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 61,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 62,
+      "lines": 8
+    },
+    {
+      "days_to_pick": 63,
+      "lines": 8
+    },
+    {
+      "days_to_pick": 64,
+      "lines": 8
+    },
+    {
+      "days_to_pick": 65,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 66,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 67,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 68,
+      "lines": 9
+    },
+    {
+      "days_to_pick": 69,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 70,
+      "lines": 12
+    },
+    {
+      "days_to_pick": 71,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 72,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 73,
+      "lines": 9
+    },
+    {
+      "days_to_pick": 74,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 75,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 76,
+      "lines": 8
+    },
+    {
+      "days_to_pick": 77,
+      "lines": 15
+    },
+    {
+      "days_to_pick": 78,
+      "lines": 7
+    },
+    {
+      "days_to_pick": 79,
+      "lines": 10
+    },
+    {
+      "days_to_pick": 80,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 81,
+      "lines": 7
+    },
+    {
+      "days_to_pick": 82,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 83,
+      "lines": 15
+    },
+    {
+      "days_to_pick": 84,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 85,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 86,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 87,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 88,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 89,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 90,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 91,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 92,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 93,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 94,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 95,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 96,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 97,
+      "lines": 7
+    },
+    {
+      "days_to_pick": 98,
+      "lines": 13
+    },
+    {
+      "days_to_pick": 99,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 100,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 101,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 102,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 103,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 104,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 105,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 106,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 107,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 108,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 109,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 110,
+      "lines": 7
+    },
+    {
+      "days_to_pick": 111,
+      "lines": 9
+    },
+    {
+      "days_to_pick": 112,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 113,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 114,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 115,
+      "lines": 7
+    },
+    {
+      "days_to_pick": 116,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 117,
+      "lines": 11
+    },
+    {
+      "days_to_pick": 118,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 119,
+      "lines": 7
+    },
+    {
+      "days_to_pick": 120,
+      "lines": 8
+    },
+    {
+      "days_to_pick": 121,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 122,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 123,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 124,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 125,
+      "lines": 8
+    },
+    {
+      "days_to_pick": 126,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 127,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 128,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 129,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 130,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 131,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 132,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 133,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 134,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 135,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 136,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 137,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 138,
+      "lines": 8
+    },
+    {
+      "days_to_pick": 139,
+      "lines": 9
+    },
+    {
+      "days_to_pick": 140,
+      "lines": 8
+    },
+    {
+      "days_to_pick": 141,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 142,
+      "lines": 12
+    },
+    {
+      "days_to_pick": 143,
+      "lines": 7
+    },
+    {
+      "days_to_pick": 144,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 145,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 146,
+      "lines": 11
+    },
+    {
+      "days_to_pick": 147,
+      "lines": 10
+    },
+    {
+      "days_to_pick": 148,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 149,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 150,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 151,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 152,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 153,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 154,
+      "lines": 7
+    },
+    {
+      "days_to_pick": 155,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 156,
+      "lines": 7
+    },
+    {
+      "days_to_pick": 157,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 158,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 159,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 160,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 161,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 162,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 163,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 164,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 165,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 166,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 167,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 168,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 169,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 170,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 171,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 172,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 173,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 174,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 175,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 176,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 177,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 178,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 179,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 180,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 181,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 182,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 183,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 184,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 185,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 186,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 187,
+      "lines": 7
+    },
+    {
+      "days_to_pick": 188,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 189,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 191,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 192,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 193,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 194,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 195,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 196,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 197,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 198,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 199,
+      "lines": 7
+    },
+    {
+      "days_to_pick": 200,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 201,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 202,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 203,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 204,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 205,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 206,
+      "lines": 8
+    },
+    {
+      "days_to_pick": 207,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 208,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 209,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 210,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 211,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 212,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 213,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 214,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 215,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 216,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 217,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 218,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 219,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 220,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 221,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 222,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 224,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 227,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 228,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 229,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 230,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 231,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 232,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 234,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 236,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 237,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 238,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 239,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 240,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 241,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 242,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 243,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 244,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 245,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 247,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 248,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 250,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 251,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 252,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 253,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 254,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 255,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 256,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 257,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 258,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 259,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 260,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 261,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 262,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 263,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 264,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 265,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 266,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 267,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 269,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 270,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 272,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 273,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 274,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 276,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 277,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 278,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 280,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 281,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 282,
+      "lines": 6
+    },
+    {
+      "days_to_pick": 283,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 285,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 286,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 287,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 289,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 291,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 292,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 295,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 296,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 298,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 299,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 300,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 301,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 302,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 303,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 304,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 307,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 309,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 310,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 311,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 312,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 313,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 314,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 315,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 316,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 317,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 318,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 319,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 320,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 321,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 322,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 323,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 324,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 325,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 326,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 327,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 328,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 329,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 331,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 332,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 333,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 334,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 335,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 336,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 337,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 338,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 339,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 340,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 341,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 342,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 343,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 344,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 345,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 346,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 347,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 348,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 351,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 352,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 353,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 355,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 356,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 357,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 359,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 360,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 361,
+      "lines": 5
+    },
+    {
+      "days_to_pick": 362,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 363,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 364,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 365,
+      "lines": 3
+    },
+    {
+      "days_to_pick": 369,
+      "lines": 4
+    },
+    {
+      "days_to_pick": 372,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 373,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 374,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 375,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 376,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 377,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 378,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 379,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 381,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 382,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 383,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 385,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 386,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 387,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 388,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 389,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 390,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 391,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 392,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 393,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 394,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 396,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 399,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 400,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 402,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 404,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 408,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 409,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 410,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 412,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 415,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 418,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 419,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 423,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 424,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 426,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 429,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 432,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 433,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 439,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 440,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 443,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 444,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 446,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 448,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 450,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 471,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 472,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 474,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 475,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 481,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 482,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 486,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 490,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 501,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 502,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 509,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 511,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 518,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 522,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 528,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 536,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 548,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 551,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 564,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 573,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 580,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 584,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 585,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 590,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 592,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 594,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 598,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 606,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 614,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 615,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 616,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 619,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 625,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 636,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 639,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 642,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 650,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 654,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 656,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 657,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 667,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 669,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 671,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 682,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 683,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 692,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 696,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 698,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 700,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 703,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 705,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 712,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 715,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 718,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 720,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 721,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 724,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 731,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 734,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 738,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 739,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 740,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 741,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 755,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 759,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 775,
+      "lines": 2
+    },
+    {
+      "days_to_pick": 777,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 809,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 810,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 812,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 815,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 820,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 839,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 848,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 875,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 892,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 893,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 905,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 914,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 924,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 927,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 954,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 964,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 977,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 987,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 990,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 1004,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 1007,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 1012,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 1032,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 1064,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 1074,
+      "lines": 1
+    },
+    {
+      "days_to_pick": 1116,
+      "lines": 1
+    }
+  ],
+  "Movement_by_type": [
+    {
+      "Transaction Type": "Stock Adjustment at Stocktake",
+      "rows": 44,
+      "min_quantity": -5,
+      "max_quantity": 4,
+      "negative": 21,
+      "positive": 19,
+      "net_units": -18
+    },
+    {
+      "Transaction Type": "Stock Issue",
+      "rows": 228265,
+      "min_quantity": -360,
+      "max_quantity": -1,
+      "negative": 228265,
+      "positive": 0,
+      "net_units": -8950628
+    },
+    {
+      "Transaction Type": "Stock Receipt",
+      "rows": 8358,
+      "min_quantity": 6,
+      "max_quantity": 67368,
+      "negative": 0,
+      "positive": 8358,
+      "net_units": 139418326
+    }
+  ],
+  "Transaction_by_type": [
+    {
+      "Transaction Type": "Customer Invoice",
+      "rows": 70510,
+      "negative_amount": 0,
+      "nonzero_outstanding": 84,
+      "finalized": 70426
+    },
+    {
+      "Transaction Type": "Customer Payment Received",
+      "rows": 26637,
+      "negative_amount": 26637,
+      "nonzero_outstanding": 0,
+      "finalized": 26637
+    },
+    {
+      "Transaction Type": "Supplier Invoice",
+      "rows": 2072,
+      "negative_amount": 0,
+      "nonzero_outstanding": 2,
+      "finalized": 2070
+    },
+    {
+      "Transaction Type": "Supplier Payment Issued",
+      "rows": 366,
+      "negative_amount": 366,
+      "nonzero_outstanding": 0,
+      "finalized": 366
+    }
+  ],
+  "Purchase_receipts": [
+    {
+      "finalized": false,
+      "lines": 9,
+      "received_exceeds_ordered": 0,
+      "zero_received": 9
+    },
+    {
+      "finalized": true,
+      "lines": 8358,
+      "received_exceeds_ordered": 0,
+      "zero_received": 0
+    }
+  ],
+  "Stock_holding_history": "No existe columna fecha en el esquema real: instantánea, no serie temporal demostrada."
+}

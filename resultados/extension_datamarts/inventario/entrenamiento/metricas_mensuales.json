@@ -1,0 +1,7262 @@
+[
+  {
+    "partition": "train",
+    "month": "2013-04",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "balanced_accuracy": 1.0,
+      "confusion_matrix": [
+        [
+          211,
+          0
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-04",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 1.0,
+      "recall": 0.875,
+      "specificity": 1.0,
+      "f1": 0.9333333333333333,
+      "balanced_accuracy": 0.9375,
+      "confusion_matrix": [
+        [
+          211,
+          0
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0319634703196347,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-04",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.0365296803652968,
+      "precision": 0.0365296803652968,
+      "recall": 1.0,
+      "specificity": 0.0,
+      "f1": 0.07048458149779736,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          0,
+          211
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 1.0,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-04",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9634703196347032,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          211,
+          0
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-04",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9863013698630136,
+      "precision": 1.0,
+      "recall": 0.625,
+      "specificity": 1.0,
+      "f1": 0.7692307692307693,
+      "balanced_accuracy": 0.8125,
+      "confusion_matrix": [
+        [
+          211,
+          0
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0228310502283105,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-05",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 1.0,
+      "recall": 0.8888888888888888,
+      "specificity": 1.0,
+      "f1": 0.9411764705882353,
+      "balanced_accuracy": 0.9444444444444444,
+      "confusion_matrix": [
+        [
+          210,
+          0
+        ],
+        [
+          1,
+          8
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 210,
+        "1": 9
+      },
+      "class_proportions": {
+        "0": 0.958904109589041,
+        "1": 0.0410958904109589
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-05",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 1.0,
+      "recall": 0.7777777777777778,
+      "specificity": 1.0,
+      "f1": 0.875,
+      "balanced_accuracy": 0.8888888888888888,
+      "confusion_matrix": [
+        [
+          210,
+          0
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 210,
+        "1": 9
+      },
+      "class_proportions": {
+        "0": 0.958904109589041,
+        "1": 0.0410958904109589
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0319634703196347,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-05",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 1.0,
+      "recall": 0.8888888888888888,
+      "specificity": 1.0,
+      "f1": 0.9411764705882353,
+      "balanced_accuracy": 0.9444444444444444,
+      "confusion_matrix": [
+        [
+          210,
+          0
+        ],
+        [
+          1,
+          8
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 210,
+        "1": 9
+      },
+      "class_proportions": {
+        "0": 0.958904109589041,
+        "1": 0.0410958904109589
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-05",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.958904109589041,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          210,
+          0
+        ],
+        [
+          9,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 210,
+        "1": 9
+      },
+      "class_proportions": {
+        "0": 0.958904109589041,
+        "1": 0.0410958904109589
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-05",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 1.0,
+      "recall": 0.7777777777777778,
+      "specificity": 1.0,
+      "f1": 0.875,
+      "balanced_accuracy": 0.8888888888888888,
+      "confusion_matrix": [
+        [
+          210,
+          0
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 210,
+        "1": 9
+      },
+      "class_proportions": {
+        "0": 0.958904109589041,
+        "1": 0.0410958904109589
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0319634703196347,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-06",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 0.14285714285714285,
+      "recall": 1.0,
+      "specificity": 0.9724770642201835,
+      "f1": 0.25,
+      "balanced_accuracy": 0.9862385321100917,
+      "confusion_matrix": [
+        [
+          212,
+          6
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0319634703196347,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-06",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9634703196347032,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 0.9678899082568807,
+      "f1": 0.0,
+      "balanced_accuracy": 0.48394495412844035,
+      "confusion_matrix": [
+        [
+          211,
+          7
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0319634703196347,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-06",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9634703196347032,
+      "precision": 0.1111111111111111,
+      "recall": 1.0,
+      "specificity": 0.963302752293578,
+      "f1": 0.2,
+      "balanced_accuracy": 0.981651376146789,
+      "confusion_matrix": [
+        [
+          210,
+          8
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-06",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          218,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-06",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9863013698630136,
+      "precision": 0.25,
+      "recall": 1.0,
+      "specificity": 0.9862385321100917,
+      "f1": 0.4,
+      "balanced_accuracy": 0.9931192660550459,
+      "confusion_matrix": [
+        [
+          215,
+          3
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0182648401826484,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-07",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.7777777777777778,
+      "recall": 1.0,
+      "specificity": 0.9905660377358491,
+      "f1": 0.875,
+      "balanced_accuracy": 0.9952830188679245,
+      "confusion_matrix": [
+        [
+          210,
+          2
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-07",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9863013698630136,
+      "precision": 0.75,
+      "recall": 0.8571428571428571,
+      "specificity": 0.9905660377358491,
+      "f1": 0.8,
+      "balanced_accuracy": 0.9238544474393531,
+      "confusion_matrix": [
+        [
+          210,
+          2
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-07",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.7777777777777778,
+      "recall": 1.0,
+      "specificity": 0.9905660377358491,
+      "f1": 0.875,
+      "balanced_accuracy": 0.9952830188679245,
+      "confusion_matrix": [
+        [
+          210,
+          2
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-07",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          212,
+          0
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-07",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 1.0,
+      "recall": 0.14285714285714285,
+      "specificity": 1.0,
+      "f1": 0.25,
+      "balanced_accuracy": 0.5714285714285714,
+      "confusion_matrix": [
+        [
+          212,
+          0
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0045662100456621,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-08",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.2222222222222222,
+      "recall": 1.0,
+      "specificity": 0.967741935483871,
+      "f1": 0.36363636363636365,
+      "balanced_accuracy": 0.9838709677419355,
+      "confusion_matrix": [
+        [
+          210,
+          7
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-08",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 0.25,
+      "recall": 1.0,
+      "specificity": 0.9723502304147466,
+      "f1": 0.4,
+      "balanced_accuracy": 0.9861751152073732,
+      "confusion_matrix": [
+        [
+          211,
+          6
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-08",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.2222222222222222,
+      "recall": 1.0,
+      "specificity": 0.967741935483871,
+      "f1": 0.36363636363636365,
+      "balanced_accuracy": 0.9838709677419355,
+      "confusion_matrix": [
+        [
+          210,
+          7
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-08",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          217,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-08",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 0.16666666666666666,
+      "recall": 0.5,
+      "specificity": 0.9769585253456221,
+      "f1": 0.25,
+      "balanced_accuracy": 0.738479262672811,
+      "confusion_matrix": [
+        [
+          212,
+          5
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0273972602739726,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-09",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9771689497716894,
+      "precision": 0.16666666666666666,
+      "recall": 1.0,
+      "specificity": 0.9770642201834863,
+      "f1": 0.2857142857142857,
+      "balanced_accuracy": 0.9885321100917431,
+      "confusion_matrix": [
+        [
+          213,
+          5
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0273972602739726,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-09",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.125,
+      "recall": 1.0,
+      "specificity": 0.9678899082568807,
+      "f1": 0.2222222222222222,
+      "balanced_accuracy": 0.9839449541284404,
+      "confusion_matrix": [
+        [
+          211,
+          7
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-09",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9634703196347032,
+      "precision": 0.1111111111111111,
+      "recall": 1.0,
+      "specificity": 0.963302752293578,
+      "f1": 0.2,
+      "balanced_accuracy": 0.981651376146789,
+      "confusion_matrix": [
+        [
+          210,
+          8
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-09",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          218,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-09",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 0.9954128440366973,
+      "f1": 0.0,
+      "balanced_accuracy": 0.49770642201834864,
+      "confusion_matrix": [
+        [
+          217,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0045662100456621,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-10",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.7777777777777778,
+      "recall": 1.0,
+      "specificity": 0.9905660377358491,
+      "f1": 0.875,
+      "balanced_accuracy": 0.9952830188679245,
+      "confusion_matrix": [
+        [
+          210,
+          2
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-10",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.875,
+      "recall": 1.0,
+      "specificity": 0.9952830188679245,
+      "f1": 0.9333333333333333,
+      "balanced_accuracy": 0.9976415094339622,
+      "confusion_matrix": [
+        [
+          211,
+          1
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-10",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.7777777777777778,
+      "recall": 1.0,
+      "specificity": 0.9905660377358491,
+      "f1": 0.875,
+      "balanced_accuracy": 0.9952830188679245,
+      "confusion_matrix": [
+        [
+          210,
+          2
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-10",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          212,
+          0
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-10",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          212,
+          0
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-11",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 0.9954337899543378,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          218,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": true,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0045662100456621,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-11",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 0.9680365296803652,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          212,
+          7
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": true,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0319634703196347,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-11",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9634703196347032,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 0.9634703196347032,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          211,
+          8
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": true,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-11",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 1.0,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          219,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": true,
+        "specificity": false,
+        "f1": true
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-11",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 0.9680365296803652,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          212,
+          7
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": true,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0319634703196347,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-12",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.125,
+      "recall": 1.0,
+      "specificity": 0.9678899082568807,
+      "f1": 0.2222222222222222,
+      "balanced_accuracy": 0.9839449541284404,
+      "confusion_matrix": [
+        [
+          211,
+          7
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-12",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.125,
+      "recall": 1.0,
+      "specificity": 0.9678899082568807,
+      "f1": 0.2222222222222222,
+      "balanced_accuracy": 0.9839449541284404,
+      "confusion_matrix": [
+        [
+          211,
+          7
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-12",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.125,
+      "recall": 1.0,
+      "specificity": 0.9678899082568807,
+      "f1": 0.2222222222222222,
+      "balanced_accuracy": 0.9839449541284404,
+      "confusion_matrix": [
+        [
+          211,
+          7
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-12",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          218,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2013-12",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          218,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-01",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.75,
+      "recall": 1.0,
+      "specificity": 0.9906103286384976,
+      "f1": 0.8571428571428571,
+      "balanced_accuracy": 0.9953051643192488,
+      "confusion_matrix": [
+        [
+          211,
+          2
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 213,
+        "1": 6
+      },
+      "class_proportions": {
+        "0": 0.9726027397260274,
+        "1": 0.0273972602739726
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-01",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.75,
+      "recall": 1.0,
+      "specificity": 0.9906103286384976,
+      "f1": 0.8571428571428571,
+      "balanced_accuracy": 0.9953051643192488,
+      "confusion_matrix": [
+        [
+          211,
+          2
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 213,
+        "1": 6
+      },
+      "class_proportions": {
+        "0": 0.9726027397260274,
+        "1": 0.0273972602739726
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-01",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.75,
+      "recall": 1.0,
+      "specificity": 0.9906103286384976,
+      "f1": 0.8571428571428571,
+      "balanced_accuracy": 0.9953051643192488,
+      "confusion_matrix": [
+        [
+          211,
+          2
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 213,
+        "1": 6
+      },
+      "class_proportions": {
+        "0": 0.9726027397260274,
+        "1": 0.0273972602739726
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-01",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          213,
+          0
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 213,
+        "1": 6
+      },
+      "class_proportions": {
+        "0": 0.9726027397260274,
+        "1": 0.0273972602739726
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-01",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          213,
+          0
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 213,
+        "1": 6
+      },
+      "class_proportions": {
+        "0": 0.9726027397260274,
+        "1": 0.0273972602739726
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-02",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 1.0,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          219,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": true,
+        "specificity": false,
+        "f1": true
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-02",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 0.9726027397260274,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          213,
+          6
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": true,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0273972602739726,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-02",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9634703196347032,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 0.9634703196347032,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          211,
+          8
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": true,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-02",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 1.0,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          219,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": true,
+        "specificity": false,
+        "f1": true
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-02",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 0.9726027397260274,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          213,
+          6
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": true,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0273972602739726,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-03",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.125,
+      "recall": 1.0,
+      "specificity": 0.9678899082568807,
+      "f1": 0.2222222222222222,
+      "balanced_accuracy": 0.9839449541284404,
+      "confusion_matrix": [
+        [
+          211,
+          7
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-03",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.125,
+      "recall": 1.0,
+      "specificity": 0.9678899082568807,
+      "f1": 0.2222222222222222,
+      "balanced_accuracy": 0.9839449541284404,
+      "confusion_matrix": [
+        [
+          211,
+          7
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-03",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.125,
+      "recall": 1.0,
+      "specificity": 0.9678899082568807,
+      "f1": 0.2222222222222222,
+      "balanced_accuracy": 0.9839449541284404,
+      "confusion_matrix": [
+        [
+          211,
+          7
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-03",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          218,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-03",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          218,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-04",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.75,
+      "recall": 1.0,
+      "specificity": 0.9906103286384976,
+      "f1": 0.8571428571428571,
+      "balanced_accuracy": 0.9953051643192488,
+      "confusion_matrix": [
+        [
+          211,
+          2
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 213,
+        "1": 6
+      },
+      "class_proportions": {
+        "0": 0.9726027397260274,
+        "1": 0.0273972602739726
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-04",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.75,
+      "recall": 1.0,
+      "specificity": 0.9906103286384976,
+      "f1": 0.8571428571428571,
+      "balanced_accuracy": 0.9953051643192488,
+      "confusion_matrix": [
+        [
+          211,
+          2
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 213,
+        "1": 6
+      },
+      "class_proportions": {
+        "0": 0.9726027397260274,
+        "1": 0.0273972602739726
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-04",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.75,
+      "recall": 1.0,
+      "specificity": 0.9906103286384976,
+      "f1": 0.8571428571428571,
+      "balanced_accuracy": 0.9953051643192488,
+      "confusion_matrix": [
+        [
+          211,
+          2
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 213,
+        "1": 6
+      },
+      "class_proportions": {
+        "0": 0.9726027397260274,
+        "1": 0.0273972602739726
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-04",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          213,
+          0
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 213,
+        "1": 6
+      },
+      "class_proportions": {
+        "0": 0.9726027397260274,
+        "1": 0.0273972602739726
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-04",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          213,
+          0
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 213,
+        "1": 6
+      },
+      "class_proportions": {
+        "0": 0.9726027397260274,
+        "1": 0.0273972602739726
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-05",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9771689497716894,
+      "precision": 0.5,
+      "recall": 0.8,
+      "specificity": 0.9813084112149533,
+      "f1": 0.6153846153846154,
+      "balanced_accuracy": 0.8906542056074767,
+      "confusion_matrix": [
+        [
+          210,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 214,
+        "1": 5
+      },
+      "class_proportions": {
+        "0": 0.9771689497716894,
+        "1": 0.0228310502283105
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-05",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9771689497716894,
+      "precision": 0.5,
+      "recall": 0.8,
+      "specificity": 0.9813084112149533,
+      "f1": 0.6153846153846154,
+      "balanced_accuracy": 0.8906542056074767,
+      "confusion_matrix": [
+        [
+          210,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 214,
+        "1": 5
+      },
+      "class_proportions": {
+        "0": 0.9771689497716894,
+        "1": 0.0228310502283105
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-05",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9771689497716894,
+      "precision": 0.5,
+      "recall": 0.8,
+      "specificity": 0.9813084112149533,
+      "f1": 0.6153846153846154,
+      "balanced_accuracy": 0.8906542056074767,
+      "confusion_matrix": [
+        [
+          210,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 214,
+        "1": 5
+      },
+      "class_proportions": {
+        "0": 0.9771689497716894,
+        "1": 0.0228310502283105
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-05",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9771689497716894,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          214,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 214,
+        "1": 5
+      },
+      "class_proportions": {
+        "0": 0.9771689497716894,
+        "1": 0.0228310502283105
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-05",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9863013698630136,
+      "precision": 0.6666666666666666,
+      "recall": 0.8,
+      "specificity": 0.9906542056074766,
+      "f1": 0.7272727272727273,
+      "balanced_accuracy": 0.8953271028037384,
+      "confusion_matrix": [
+        [
+          212,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 214,
+        "1": 5
+      },
+      "class_proportions": {
+        "0": 0.9771689497716894,
+        "1": 0.0228310502283105
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0273972602739726,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-06",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 0.25,
+      "recall": 1.0,
+      "specificity": 0.9723502304147466,
+      "f1": 0.4,
+      "balanced_accuracy": 0.9861751152073732,
+      "confusion_matrix": [
+        [
+          211,
+          6
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-06",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 0.16666666666666666,
+      "recall": 0.5,
+      "specificity": 0.9769585253456221,
+      "f1": 0.25,
+      "balanced_accuracy": 0.738479262672811,
+      "confusion_matrix": [
+        [
+          212,
+          5
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0273972602739726,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-06",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.2222222222222222,
+      "recall": 1.0,
+      "specificity": 0.967741935483871,
+      "f1": 0.36363636363636365,
+      "balanced_accuracy": 0.9838709677419355,
+      "confusion_matrix": [
+        [
+          210,
+          7
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-06",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          217,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-06",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 1.0,
+      "recall": 0.5,
+      "specificity": 1.0,
+      "f1": 0.6666666666666666,
+      "balanced_accuracy": 0.75,
+      "confusion_matrix": [
+        [
+          217,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0045662100456621,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-07",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.7777777777777778,
+      "recall": 1.0,
+      "specificity": 0.9905660377358491,
+      "f1": 0.875,
+      "balanced_accuracy": 0.9952830188679245,
+      "confusion_matrix": [
+        [
+          210,
+          2
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-07",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9863013698630136,
+      "precision": 0.75,
+      "recall": 0.8571428571428571,
+      "specificity": 0.9905660377358491,
+      "f1": 0.8,
+      "balanced_accuracy": 0.9238544474393531,
+      "confusion_matrix": [
+        [
+          210,
+          2
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-07",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.7777777777777778,
+      "recall": 1.0,
+      "specificity": 0.9905660377358491,
+      "f1": 0.875,
+      "balanced_accuracy": 0.9952830188679245,
+      "confusion_matrix": [
+        [
+          210,
+          2
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-07",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          212,
+          0
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-07",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9771689497716894,
+      "precision": 1.0,
+      "recall": 0.2857142857142857,
+      "specificity": 1.0,
+      "f1": 0.4444444444444444,
+      "balanced_accuracy": 0.6428571428571428,
+      "confusion_matrix": [
+        [
+          212,
+          0
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0091324200913242,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-08",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.125,
+      "recall": 1.0,
+      "specificity": 0.9678899082568807,
+      "f1": 0.2222222222222222,
+      "balanced_accuracy": 0.9839449541284404,
+      "confusion_matrix": [
+        [
+          211,
+          7
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-08",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9634703196347032,
+      "precision": 0.1111111111111111,
+      "recall": 1.0,
+      "specificity": 0.963302752293578,
+      "f1": 0.2,
+      "balanced_accuracy": 0.981651376146789,
+      "confusion_matrix": [
+        [
+          210,
+          8
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-08",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9634703196347032,
+      "precision": 0.1111111111111111,
+      "recall": 1.0,
+      "specificity": 0.963302752293578,
+      "f1": 0.2,
+      "balanced_accuracy": 0.981651376146789,
+      "confusion_matrix": [
+        [
+          210,
+          8
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-08",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          218,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-08",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 0.14285714285714285,
+      "recall": 1.0,
+      "specificity": 0.9724770642201835,
+      "f1": 0.25,
+      "balanced_accuracy": 0.9862385321100917,
+      "confusion_matrix": [
+        [
+          212,
+          6
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0319634703196347,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-09",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9771689497716894,
+      "precision": 0.5,
+      "recall": 0.8,
+      "specificity": 0.9813084112149533,
+      "f1": 0.6153846153846154,
+      "balanced_accuracy": 0.8906542056074767,
+      "confusion_matrix": [
+        [
+          210,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 214,
+        "1": 5
+      },
+      "class_proportions": {
+        "0": 0.9771689497716894,
+        "1": 0.0228310502283105
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-09",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9817351598173516,
+      "precision": 0.5714285714285714,
+      "recall": 0.8,
+      "specificity": 0.985981308411215,
+      "f1": 0.6666666666666666,
+      "balanced_accuracy": 0.8929906542056075,
+      "confusion_matrix": [
+        [
+          211,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 214,
+        "1": 5
+      },
+      "class_proportions": {
+        "0": 0.9771689497716894,
+        "1": 0.0228310502283105
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0319634703196347,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-09",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9817351598173516,
+      "precision": 0.5555555555555556,
+      "recall": 1.0,
+      "specificity": 0.9813084112149533,
+      "f1": 0.7142857142857143,
+      "balanced_accuracy": 0.9906542056074766,
+      "confusion_matrix": [
+        [
+          210,
+          4
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 214,
+        "1": 5
+      },
+      "class_proportions": {
+        "0": 0.9771689497716894,
+        "1": 0.0228310502283105
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-09",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9771689497716894,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          214,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 214,
+        "1": 5
+      },
+      "class_proportions": {
+        "0": 0.9771689497716894,
+        "1": 0.0228310502283105
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-09",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9771689497716894,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          214,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 214,
+        "1": 5
+      },
+      "class_proportions": {
+        "0": 0.9771689497716894,
+        "1": 0.0228310502283105
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-10",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.8888888888888888,
+      "recall": 1.0,
+      "specificity": 0.995260663507109,
+      "f1": 0.9411764705882353,
+      "balanced_accuracy": 0.9976303317535544,
+      "confusion_matrix": [
+        [
+          210,
+          1
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-10",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9863013698630136,
+      "precision": 0.8571428571428571,
+      "recall": 0.75,
+      "specificity": 0.995260663507109,
+      "f1": 0.8,
+      "balanced_accuracy": 0.8726303317535544,
+      "confusion_matrix": [
+        [
+          210,
+          1
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0319634703196347,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-10",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.8888888888888888,
+      "recall": 1.0,
+      "specificity": 0.995260663507109,
+      "f1": 0.9411764705882353,
+      "balanced_accuracy": 0.9976303317535544,
+      "confusion_matrix": [
+        [
+          210,
+          1
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-10",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9634703196347032,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          211,
+          0
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-10",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 1.0,
+      "recall": 0.125,
+      "specificity": 1.0,
+      "f1": 0.2222222222222222,
+      "balanced_accuracy": 0.5625,
+      "confusion_matrix": [
+        [
+          211,
+          0
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0045662100456621,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-11",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9817351598173516,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 0.9862385321100917,
+      "f1": 0.0,
+      "balanced_accuracy": 0.49311926605504586,
+      "confusion_matrix": [
+        [
+          215,
+          3
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0136986301369863,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-11",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.125,
+      "recall": 1.0,
+      "specificity": 0.9678899082568807,
+      "f1": 0.2222222222222222,
+      "balanced_accuracy": 0.9839449541284404,
+      "confusion_matrix": [
+        [
+          211,
+          7
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-11",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9634703196347032,
+      "precision": 0.1111111111111111,
+      "recall": 1.0,
+      "specificity": 0.963302752293578,
+      "f1": 0.2,
+      "balanced_accuracy": 0.981651376146789,
+      "confusion_matrix": [
+        [
+          210,
+          8
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-11",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          218,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-11",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 0.14285714285714285,
+      "recall": 1.0,
+      "specificity": 0.9724770642201835,
+      "f1": 0.25,
+      "balanced_accuracy": 0.9862385321100917,
+      "confusion_matrix": [
+        [
+          212,
+          6
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0319634703196347,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-12",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.8888888888888888,
+      "recall": 1.0,
+      "specificity": 0.995260663507109,
+      "f1": 0.9411764705882353,
+      "balanced_accuracy": 0.9976303317535544,
+      "confusion_matrix": [
+        [
+          210,
+          1
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-12",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.8888888888888888,
+      "recall": 1.0,
+      "specificity": 0.995260663507109,
+      "f1": 0.9411764705882353,
+      "balanced_accuracy": 0.9976303317535544,
+      "confusion_matrix": [
+        [
+          210,
+          1
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-12",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.8888888888888888,
+      "recall": 1.0,
+      "specificity": 0.995260663507109,
+      "f1": 0.9411764705882353,
+      "balanced_accuracy": 0.9976303317535544,
+      "confusion_matrix": [
+        [
+          210,
+          1
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-12",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9634703196347032,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          211,
+          0
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "train",
+    "month": "2014-12",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9634703196347032,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          211,
+          0
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-01",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.958904109589041,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 0.958904109589041,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          210,
+          9
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": true,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-01",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.958904109589041,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 0.958904109589041,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          210,
+          9
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": true,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-01",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.958904109589041,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 0.958904109589041,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          210,
+          9
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": true,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-01",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 1.0,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          219,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": true,
+        "specificity": false,
+        "f1": true
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-01",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 0.9908675799086758,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          217,
+          2
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": true,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0091324200913242,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-02",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9771689497716894,
+      "precision": 0.16666666666666666,
+      "recall": 1.0,
+      "specificity": 0.9770642201834863,
+      "f1": 0.2857142857142857,
+      "balanced_accuracy": 0.9885321100917431,
+      "confusion_matrix": [
+        [
+          213,
+          5
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0273972602739726,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-02",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.125,
+      "recall": 1.0,
+      "specificity": 0.9678899082568807,
+      "f1": 0.2222222222222222,
+      "balanced_accuracy": 0.9839449541284404,
+      "confusion_matrix": [
+        [
+          211,
+          7
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-02",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9634703196347032,
+      "precision": 0.1111111111111111,
+      "recall": 1.0,
+      "specificity": 0.963302752293578,
+      "f1": 0.2,
+      "balanced_accuracy": 0.981651376146789,
+      "confusion_matrix": [
+        [
+          210,
+          8
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-02",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          218,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-02",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          218,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-03",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9863013698630136,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "specificity": 0.9859154929577465,
+      "f1": 0.8,
+      "balanced_accuracy": 0.9929577464788732,
+      "confusion_matrix": [
+        [
+          210,
+          3
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 213,
+        "1": 6
+      },
+      "class_proportions": {
+        "0": 0.9726027397260274,
+        "1": 0.0273972602739726
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-03",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9863013698630136,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "specificity": 0.9859154929577465,
+      "f1": 0.8,
+      "balanced_accuracy": 0.9929577464788732,
+      "confusion_matrix": [
+        [
+          210,
+          3
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 213,
+        "1": 6
+      },
+      "class_proportions": {
+        "0": 0.9726027397260274,
+        "1": 0.0273972602739726
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-03",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9863013698630136,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "specificity": 0.9859154929577465,
+      "f1": 0.8,
+      "balanced_accuracy": 0.9929577464788732,
+      "confusion_matrix": [
+        [
+          210,
+          3
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 213,
+        "1": 6
+      },
+      "class_proportions": {
+        "0": 0.9726027397260274,
+        "1": 0.0273972602739726
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-03",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          213,
+          0
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 213,
+        "1": 6
+      },
+      "class_proportions": {
+        "0": 0.9726027397260274,
+        "1": 0.0273972602739726
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-03",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          213,
+          0
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 213,
+        "1": 6
+      },
+      "class_proportions": {
+        "0": 0.9726027397260274,
+        "1": 0.0273972602739726
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-04",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9771689497716894,
+      "precision": 0.4444444444444444,
+      "recall": 1.0,
+      "specificity": 0.9767441860465116,
+      "f1": 0.6153846153846154,
+      "balanced_accuracy": 0.9883720930232558,
+      "confusion_matrix": [
+        [
+          210,
+          5
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 215,
+        "1": 4
+      },
+      "class_proportions": {
+        "0": 0.9817351598173516,
+        "1": 0.0182648401826484
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-04",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9771689497716894,
+      "precision": 0.4444444444444444,
+      "recall": 1.0,
+      "specificity": 0.9767441860465116,
+      "f1": 0.6153846153846154,
+      "balanced_accuracy": 0.9883720930232558,
+      "confusion_matrix": [
+        [
+          210,
+          5
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 215,
+        "1": 4
+      },
+      "class_proportions": {
+        "0": 0.9817351598173516,
+        "1": 0.0182648401826484
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-04",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9771689497716894,
+      "precision": 0.4444444444444444,
+      "recall": 1.0,
+      "specificity": 0.9767441860465116,
+      "f1": 0.6153846153846154,
+      "balanced_accuracy": 0.9883720930232558,
+      "confusion_matrix": [
+        [
+          210,
+          5
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 215,
+        "1": 4
+      },
+      "class_proportions": {
+        "0": 0.9817351598173516,
+        "1": 0.0182648401826484
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-04",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9817351598173516,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          215,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 215,
+        "1": 4
+      },
+      "class_proportions": {
+        "0": 0.9817351598173516,
+        "1": 0.0182648401826484
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-04",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9817351598173516,
+      "precision": 0.5,
+      "recall": 0.75,
+      "specificity": 0.986046511627907,
+      "f1": 0.6,
+      "balanced_accuracy": 0.8680232558139536,
+      "confusion_matrix": [
+        [
+          212,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 215,
+        "1": 4
+      },
+      "class_proportions": {
+        "0": 0.9817351598173516,
+        "1": 0.0182648401826484
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0273972602739726,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-05",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.2222222222222222,
+      "recall": 1.0,
+      "specificity": 0.967741935483871,
+      "f1": 0.36363636363636365,
+      "balanced_accuracy": 0.9838709677419355,
+      "confusion_matrix": [
+        [
+          210,
+          7
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-05",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.2222222222222222,
+      "recall": 1.0,
+      "specificity": 0.967741935483871,
+      "f1": 0.36363636363636365,
+      "balanced_accuracy": 0.9838709677419355,
+      "confusion_matrix": [
+        [
+          210,
+          7
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-05",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.2222222222222222,
+      "recall": 1.0,
+      "specificity": 0.967741935483871,
+      "f1": 0.36363636363636365,
+      "balanced_accuracy": 0.9838709677419355,
+      "confusion_matrix": [
+        [
+          210,
+          7
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-05",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          217,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-05",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9863013698630136,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 0.9953917050691244,
+      "f1": 0.0,
+      "balanced_accuracy": 0.4976958525345622,
+      "confusion_matrix": [
+        [
+          216,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0045662100456621,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-06",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.2222222222222222,
+      "recall": 1.0,
+      "specificity": 0.967741935483871,
+      "f1": 0.36363636363636365,
+      "balanced_accuracy": 0.9838709677419355,
+      "confusion_matrix": [
+        [
+          210,
+          7
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-06",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 0.25,
+      "recall": 1.0,
+      "specificity": 0.9723502304147466,
+      "f1": 0.4,
+      "balanced_accuracy": 0.9861751152073732,
+      "confusion_matrix": [
+        [
+          211,
+          6
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-06",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.2222222222222222,
+      "recall": 1.0,
+      "specificity": 0.967741935483871,
+      "f1": 0.36363636363636365,
+      "balanced_accuracy": 0.9838709677419355,
+      "confusion_matrix": [
+        [
+          210,
+          7
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-06",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          217,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-06",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          217,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-07",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.7777777777777778,
+      "recall": 1.0,
+      "specificity": 0.9905660377358491,
+      "f1": 0.875,
+      "balanced_accuracy": 0.9952830188679245,
+      "confusion_matrix": [
+        [
+          210,
+          2
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-07",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.7777777777777778,
+      "recall": 1.0,
+      "specificity": 0.9905660377358491,
+      "f1": 0.875,
+      "balanced_accuracy": 0.9952830188679245,
+      "confusion_matrix": [
+        [
+          210,
+          2
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-07",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.7777777777777778,
+      "recall": 1.0,
+      "specificity": 0.9905660377358491,
+      "f1": 0.875,
+      "balanced_accuracy": 0.9952830188679245,
+      "confusion_matrix": [
+        [
+          210,
+          2
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-07",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          212,
+          0
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-07",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9771689497716894,
+      "precision": 1.0,
+      "recall": 0.2857142857142857,
+      "specificity": 1.0,
+      "f1": 0.4444444444444444,
+      "balanced_accuracy": 0.6428571428571428,
+      "confusion_matrix": [
+        [
+          212,
+          0
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 212,
+        "1": 7
+      },
+      "class_proportions": {
+        "0": 0.9680365296803652,
+        "1": 0.0319634703196347
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0091324200913242,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-08",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 0.14285714285714285,
+      "recall": 1.0,
+      "specificity": 0.9724770642201835,
+      "f1": 0.25,
+      "balanced_accuracy": 0.9862385321100917,
+      "confusion_matrix": [
+        [
+          212,
+          6
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0319634703196347,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-08",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9634703196347032,
+      "precision": 0.1111111111111111,
+      "recall": 1.0,
+      "specificity": 0.963302752293578,
+      "f1": 0.2,
+      "balanced_accuracy": 0.981651376146789,
+      "confusion_matrix": [
+        [
+          210,
+          8
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-08",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9634703196347032,
+      "precision": 0.1111111111111111,
+      "recall": 1.0,
+      "specificity": 0.963302752293578,
+      "f1": 0.2,
+      "balanced_accuracy": 0.981651376146789,
+      "confusion_matrix": [
+        [
+          210,
+          8
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-08",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          218,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-08",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9771689497716894,
+      "precision": 0.16666666666666666,
+      "recall": 1.0,
+      "specificity": 0.9770642201834863,
+      "f1": 0.2857142857142857,
+      "balanced_accuracy": 0.9885321100917431,
+      "confusion_matrix": [
+        [
+          213,
+          5
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 218,
+        "1": 1
+      },
+      "class_proportions": {
+        "0": 0.9954337899543378,
+        "1": 0.0045662100456621
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0273972602739726,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-09",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.2222222222222222,
+      "recall": 1.0,
+      "specificity": 0.967741935483871,
+      "f1": 0.36363636363636365,
+      "balanced_accuracy": 0.9838709677419355,
+      "confusion_matrix": [
+        [
+          210,
+          7
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-09",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.2222222222222222,
+      "recall": 1.0,
+      "specificity": 0.967741935483871,
+      "f1": 0.36363636363636365,
+      "balanced_accuracy": 0.9838709677419355,
+      "confusion_matrix": [
+        [
+          210,
+          7
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-09",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.2222222222222222,
+      "recall": 1.0,
+      "specificity": 0.967741935483871,
+      "f1": 0.36363636363636365,
+      "balanced_accuracy": 0.9838709677419355,
+      "confusion_matrix": [
+        [
+          210,
+          7
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-09",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          217,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-09",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9863013698630136,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 0.9953917050691244,
+      "f1": 0.0,
+      "balanced_accuracy": 0.4976958525345622,
+      "confusion_matrix": [
+        [
+          216,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0045662100456621,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-10",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.2222222222222222,
+      "recall": 1.0,
+      "specificity": 0.967741935483871,
+      "f1": 0.36363636363636365,
+      "balanced_accuracy": 0.9838709677419355,
+      "confusion_matrix": [
+        [
+          210,
+          7
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-10",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.2222222222222222,
+      "recall": 1.0,
+      "specificity": 0.967741935483871,
+      "f1": 0.36363636363636365,
+      "balanced_accuracy": 0.9838709677419355,
+      "confusion_matrix": [
+        [
+          210,
+          7
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-10",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9680365296803652,
+      "precision": 0.2222222222222222,
+      "recall": 1.0,
+      "specificity": 0.967741935483871,
+      "f1": 0.36363636363636365,
+      "balanced_accuracy": 0.9838709677419355,
+      "confusion_matrix": [
+        [
+          210,
+          7
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-10",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9908675799086758,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          217,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-10",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 1.0,
+      "recall": 0.5,
+      "specificity": 1.0,
+      "f1": 0.6666666666666666,
+      "balanced_accuracy": 0.75,
+      "confusion_matrix": [
+        [
+          217,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 217,
+        "1": 2
+      },
+      "class_proportions": {
+        "0": 0.9908675799086758,
+        "1": 0.0091324200913242
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0045662100456621,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-11",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9726027397260274,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 0.9726027397260274,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          213,
+          6
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": true,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0273972602739726,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-11",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9634703196347032,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 0.9634703196347032,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          211,
+          8
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": true,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0365296803652968,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-11",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.958904109589041,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 0.958904109589041,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          210,
+          9
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": true,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-11",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 1.0,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          219,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": true,
+        "specificity": false,
+        "f1": true
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-11",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.0,
+      "recall": null,
+      "specificity": 0.9954337899543378,
+      "f1": 0.0,
+      "balanced_accuracy": null,
+      "confusion_matrix": [
+        [
+          218,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 219,
+        "1": 0
+      },
+      "class_proportions": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": true,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0045662100456621,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-12",
+    "method": "perceptron",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.8888888888888888,
+      "recall": 1.0,
+      "specificity": 0.995260663507109,
+      "f1": 0.9411764705882353,
+      "balanced_accuracy": 0.9976303317535544,
+      "confusion_matrix": [
+        [
+          210,
+          1
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-12",
+    "method": "logistic_standard",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.8888888888888888,
+      "recall": 1.0,
+      "specificity": 0.995260663507109,
+      "f1": 0.9411764705882353,
+      "balanced_accuracy": 0.9976303317535544,
+      "confusion_matrix": [
+        [
+          210,
+          1
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-12",
+    "method": "logistic_weighted",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9954337899543378,
+      "precision": 0.8888888888888888,
+      "recall": 1.0,
+      "specificity": 0.995260663507109,
+      "f1": 0.9411764705882353,
+      "balanced_accuracy": 0.9976303317535544,
+      "confusion_matrix": [
+        [
+          210,
+          1
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-12",
+    "method": "majority",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9634703196347032,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          211,
+          0
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  },
+  {
+    "partition": "val",
+    "month": "2015-12",
+    "method": "historical",
+    "metrics": {
+      "n": 219,
+      "accuracy": 0.9634703196347032,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          211,
+          0
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 211,
+        "1": 8
+      },
+      "class_proportions": {
+        "0": 0.9634703196347032,
+        "1": 0.0365296803652968
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0,
+      "only_majority_predicted": true
+    }
+  }
+]

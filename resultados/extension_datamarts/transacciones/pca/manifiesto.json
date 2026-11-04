@@ -1,0 +1,35 @@
+{
+  "implementation_sha256": {
+    "src/experiments/pca_transacciones.py": "915d795ace19b28b1eccc3637b251b397ccf16425627129f73387ba892aa2f0b",
+    "tests/test_pca_transacciones.py": "f4593fa3b8b904cc033b6d1376a36731a9938c822a9796cb4516057ff315d823"
+  },
+  "pca_implementation_sha256": "a65f8d306b44de9cdc5f8190a14618cfab59dc3af5cf761bf14c28485ddd1fe1",
+  "artifacts_sha256": {
+    "resultados\\extension_datamarts\\transacciones\\pca\\coeficientes_componentes.csv": "55bb61f00687d89baa7fd0be01677acef981554f17c92ae10826b197b6415e25",
+    "resultados\\extension_datamarts\\transacciones\\pca\\comprobaciones_matematicas.json": "4d94e4d96d5dd62c94f73ae044f55f4cf4086e8c1874dc5ebabfa8daf6f61756",
+    "resultados\\extension_datamarts\\transacciones\\pca\\conciliacion.json": "f0629414fbcc75a45938649f29d49b71c1317834df965d7da1af057e6641bd3c",
+    "resultados\\extension_datamarts\\transacciones\\pca\\conciliacion_validacion.md": "e643befc54832b41823507511334ab6797af53c7f79f60e2484bbde9ffee5bde",
+    "resultados\\extension_datamarts\\transacciones\\pca\\convergencia_verificada.json": "866c848d0c72d6bf95ebfea9feef42fc74f8815d8a6ad131b94c441a27d7ab6c",
+    "resultados\\extension_datamarts\\transacciones\\pca\\dictamen.json": "9b33edc7b46a6575a408de38f4f6f326ba7f9b64ff370c2f6b21891f9252c1a8",
+    "resultados\\extension_datamarts\\transacciones\\pca\\entorno.json": "0a392144f6c1f590b48facb0b17f61921abaad2a048535548661997b66881735",
+    "resultados\\extension_datamarts\\transacciones\\pca\\graficos\\dispersion_train.png": "3e6501e621d65b2cd96c8b94c981b509081f0b379195a583ddd9502203ce5a30",
+    "resultados\\extension_datamarts\\transacciones\\pca\\graficos\\dispersion_val.png": "a60a29e71034652ac1e617ad92a248e4d75a55d37d2d55aaf4c267a0c599ba84",
+    "resultados\\extension_datamarts\\transacciones\\pca\\graficos\\varianza_explicada.png": "641f2e33805131e92046d8fecbd735f68fdbb2aaf86827fd0e4ba15e1cede37d",
+    "resultados\\extension_datamarts\\transacciones\\pca\\integridad_antes.json": "ef950752ff9495af82d2a1ac429cfb8f9faa54c3fd1bdc700ebda73ec874fd27",
+    "resultados\\extension_datamarts\\transacciones\\pca\\integridad_despues.json": "ef950752ff9495af82d2a1ac429cfb8f9faa54c3fd1bdc700ebda73ec874fd27",
+    "resultados\\extension_datamarts\\transacciones\\pca\\interpretacion_componentes.json": "766004ee9db3514147e9c63d7c7edc730104ab5d33649c30b0553c7788757d85",
+    "resultados\\extension_datamarts\\transacciones\\pca\\observaciones_excluidas.csv": "5502bb2589b65e44b310eb38de4fe4e8f7c3484748f44808daa6a45b950b3bfd",
+    "resultados\\extension_datamarts\\transacciones\\pca\\parametros_pca.json": "53f68ad9d0eeb02a5e10e5cd034ee075e4b355652123cbd28cc09dbee45fcf40",
+    "resultados\\extension_datamarts\\transacciones\\pca\\protocolo_test_definitivo.json": "989b92ba2f032613341719f926d2ef0b500e1d659ed51fd276d5a6dffa169d1e",
+    "resultados\\extension_datamarts\\transacciones\\pca\\protocolo_test_definitivo.md": "78093dcff26297d32f8d20f61749a80c8eaf15f8bbfbf20dbc3eabcb02764fa0",
+    "resultados\\extension_datamarts\\transacciones\\pca\\proyeccion_train.csv": "4d25cf6278c1282af97a8719bd5a22f1fd42c921468b036f285c514fa372426a",
+    "resultados\\extension_datamarts\\transacciones\\pca\\proyeccion_val.csv": "51b324754519174d74f86a5c9eb9e04333d6a1cf22622e72506fdf3356c30b88",
+    "resultados\\extension_datamarts\\transacciones\\pca\\reporte_pca.md": "4f1cd7814fdb866daedca3f2a6b7bda46b96fd8289cd6d8333d744ee5f91bc68",
+    "resultados\\extension_datamarts\\transacciones\\pca\\varianza_explicada.json": "a729286c2a54d6d77c009ab22083a03f5a850b6a9ab477da09bf89ed614bd81c",
+    "resultados\\extension_datamarts\\transacciones\\pca\\verificacion_modelos.json": "35085aba4219eeac93c69bd0100a05324818834219adf20cfac3c50e7d378955"
+  },
+  "frozen_model_sha256": {
+    "perceptron": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0",
+    "logistic": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  }
+}

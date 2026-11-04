@@ -1,0 +1,40 @@
+{
+  "partitions": {
+    "train": {
+      "eligible": {
+        "expected": 4612,
+        "actual": 4612
+      },
+      "positive": {
+        "expected": 1798,
+        "actual": 1798
+      },
+      "negative": {
+        "expected": 2814,
+        "actual": 2814
+      }
+    },
+    "val": {
+      "eligible": {
+        "expected": 2943,
+        "actual": 2943
+      },
+      "positive": {
+        "expected": 1198,
+        "actual": 1198
+      },
+      "negative": {
+        "expected": 1745,
+        "actual": 1745
+      }
+    }
+  },
+  "matches_approved": true,
+  "source_events": 23018,
+  "accounts": 257,
+  "population_slots": 8320,
+  "eligibility_states": {
+    "insufficient_history": 765,
+    "eligible": 7555
+  }
+}

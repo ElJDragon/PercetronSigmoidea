@@ -1,0 +1,2953 @@
+{
+  "volume_product": {
+    "zero_policy": "conditional_ledger",
+    "scenarios": {
+      "retrospective": {
+        "train": {
+          "eligible": 4590,
+          "positive": 168,
+          "negative": 4422,
+          "positive_proportion": 0.036601307189542485,
+          "entities": 219,
+          "entities_switching_class": 4,
+          "entities_single_class": 215,
+          "target_zero": 4420,
+          "reference_zero": 4422,
+          "monthly": [
+            {
+              "month": "2013-04",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2013-05",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2013-06",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2013-07",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2013-08",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2013-09",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2013-10",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2013-11",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2013-12",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2014-01",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2014-02",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2014-03",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2014-04",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2014-05",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2014-06",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2014-07",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2014-08",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2014-09",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2014-10",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2014-11",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2014-12",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            }
+          ]
+        },
+        "validation": {
+          "eligible": 2619,
+          "positive": 89,
+          "negative": 2530,
+          "positive_proportion": 0.033982436044291714,
+          "entities": 219,
+          "entities_switching_class": 8,
+          "entities_single_class": 211,
+          "target_zero": 2520,
+          "reference_zero": 2520,
+          "monthly": [
+            {
+              "month": "2015-01",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2015-02",
+              "eligible": 219,
+              "positive": 1,
+              "negative": 218,
+              "positive_proportion": 0.0045662100456621
+            },
+            {
+              "month": "2015-03",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2015-04",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2015-05",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2015-06",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2015-07",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2015-08",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2015-09",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2015-10",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2015-11",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2015-12",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            }
+          ]
+        }
+      },
+      "availability_gated": {
+        "train": {
+          "eligible": 4423,
+          "positive": 3,
+          "negative": 4420,
+          "positive_proportion": 0.0006782726656115759,
+          "entities": 211,
+          "entities_switching_class": 2,
+          "entities_single_class": 209,
+          "target_zero": 4420,
+          "reference_zero": 4421,
+          "monthly": [
+            {
+              "month": "2013-04",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-05",
+              "eligible": 211,
+              "positive": 1,
+              "negative": 210,
+              "positive_proportion": 0.004739336492890996
+            },
+            {
+              "month": "2013-06",
+              "eligible": 211,
+              "positive": 1,
+              "negative": 210,
+              "positive_proportion": 0.004739336492890996
+            },
+            {
+              "month": "2013-07",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-08",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-09",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-10",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-11",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-12",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-01",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-02",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-03",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-04",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-05",
+              "eligible": 211,
+              "positive": 1,
+              "negative": 210,
+              "positive_proportion": 0.004739336492890996
+            },
+            {
+              "month": "2014-06",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-07",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-08",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-09",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-10",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-11",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-12",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            }
+          ]
+        },
+        "validation": {
+          "eligible": 2520,
+          "positive": 0,
+          "negative": 2520,
+          "positive_proportion": 0.0,
+          "entities": 210,
+          "entities_switching_class": 0,
+          "entities_single_class": 210,
+          "target_zero": 2520,
+          "reference_zero": 2520,
+          "monthly": [
+            {
+              "month": "2015-01",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-02",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-03",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-04",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-05",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-06",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-07",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-08",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-09",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-10",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-11",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-12",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            }
+          ]
+        }
+      }
+    },
+    "excluded_reasons_nonexclusive": {
+      "historical_version_after_prediction": 284,
+      "target_version_after_split_cut": 18
+    }
+  },
+  "volume_product_observed_only": {
+    "zero_policy": "observed_only",
+    "scenarios": {
+      "retrospective": {
+        "train": {
+          "eligible": 162,
+          "positive": 160,
+          "negative": 2,
+          "positive_proportion": 0.9876543209876543,
+          "entities": 9,
+          "entities_switching_class": 2,
+          "entities_single_class": 7,
+          "target_zero": 0,
+          "reference_zero": 0,
+          "monthly": [
+            {
+              "month": "2013-04",
+              "eligible": 7,
+              "positive": 7,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2013-05",
+              "eligible": 7,
+              "positive": 7,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2013-06",
+              "eligible": 8,
+              "positive": 7,
+              "negative": 1,
+              "positive_proportion": 0.875
+            },
+            {
+              "month": "2013-07",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2013-08",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2013-09",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2013-10",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2013-11",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2013-12",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-01",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-02",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-03",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-04",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-05",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-06",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-07",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-08",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-09",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-10",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-11",
+              "eligible": 9,
+              "positive": 8,
+              "negative": 1,
+              "positive_proportion": 0.8888888888888888
+            }
+          ]
+        },
+        "validation": {
+          "eligible": 99,
+          "positive": 89,
+          "negative": 10,
+          "positive_proportion": 0.898989898989899,
+          "entities": 9,
+          "entities_switching_class": 8,
+          "entities_single_class": 1,
+          "target_zero": 0,
+          "reference_zero": 0,
+          "monthly": [
+            {
+              "month": "2015-01",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2015-02",
+              "eligible": 9,
+              "positive": 1,
+              "negative": 8,
+              "positive_proportion": 0.1111111111111111
+            },
+            {
+              "month": "2015-03",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2015-04",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2015-05",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2015-06",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2015-07",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2015-08",
+              "eligible": 9,
+              "positive": 8,
+              "negative": 1,
+              "positive_proportion": 0.8888888888888888
+            },
+            {
+              "month": "2015-09",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2015-10",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2015-11",
+              "eligible": 9,
+              "positive": 8,
+              "negative": 1,
+              "positive_proportion": 0.8888888888888888
+            }
+          ]
+        }
+      },
+      "availability_gated": {
+        "train": {
+          "eligible": 0,
+          "positive": 0,
+          "negative": 0,
+          "positive_proportion": null,
+          "entities": 0,
+          "entities_switching_class": 0,
+          "entities_single_class": 0,
+          "target_zero": 0,
+          "reference_zero": 0,
+          "monthly": []
+        },
+        "validation": {
+          "eligible": 0,
+          "positive": 0,
+          "negative": 0,
+          "positive_proportion": null,
+          "entities": 0,
+          "entities_switching_class": 0,
+          "entities_single_class": 0,
+          "target_zero": 0,
+          "reference_zero": 0,
+          "monthly": []
+        }
+      }
+    },
+    "excluded_reasons_nonexclusive": {
+      "missing_observed_month": 6948,
+      "historical_version_after_prediction": 279,
+      "target_version_after_split_cut": 18
+    }
+  },
+  "volume_product_supplier": {
+    "zero_policy": "conditional_ledger",
+    "scenarios": {
+      "retrospective": {
+        "train": {
+          "eligible": 4590,
+          "positive": 168,
+          "negative": 4422,
+          "positive_proportion": 0.036601307189542485,
+          "entities": 219,
+          "entities_switching_class": 4,
+          "entities_single_class": 215,
+          "target_zero": 4420,
+          "reference_zero": 4422,
+          "monthly": [
+            {
+              "month": "2013-04",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2013-05",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2013-06",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2013-07",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2013-08",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2013-09",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2013-10",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2013-11",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2013-12",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2014-01",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2014-02",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2014-03",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2014-04",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2014-05",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2014-06",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2014-07",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2014-08",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2014-09",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2014-10",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2014-11",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2014-12",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            }
+          ]
+        },
+        "validation": {
+          "eligible": 2619,
+          "positive": 89,
+          "negative": 2530,
+          "positive_proportion": 0.033982436044291714,
+          "entities": 219,
+          "entities_switching_class": 8,
+          "entities_single_class": 211,
+          "target_zero": 2520,
+          "reference_zero": 2520,
+          "monthly": [
+            {
+              "month": "2015-01",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2015-02",
+              "eligible": 219,
+              "positive": 1,
+              "negative": 218,
+              "positive_proportion": 0.0045662100456621
+            },
+            {
+              "month": "2015-03",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2015-04",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2015-05",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2015-06",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2015-07",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2015-08",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2015-09",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2015-10",
+              "eligible": 219,
+              "positive": 9,
+              "negative": 210,
+              "positive_proportion": 0.0410958904109589
+            },
+            {
+              "month": "2015-11",
+              "eligible": 219,
+              "positive": 8,
+              "negative": 211,
+              "positive_proportion": 0.0365296803652968
+            },
+            {
+              "month": "2015-12",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            }
+          ]
+        }
+      },
+      "availability_gated": {
+        "train": {
+          "eligible": 4423,
+          "positive": 3,
+          "negative": 4420,
+          "positive_proportion": 0.0006782726656115759,
+          "entities": 211,
+          "entities_switching_class": 2,
+          "entities_single_class": 209,
+          "target_zero": 4420,
+          "reference_zero": 4421,
+          "monthly": [
+            {
+              "month": "2013-04",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-05",
+              "eligible": 211,
+              "positive": 1,
+              "negative": 210,
+              "positive_proportion": 0.004739336492890996
+            },
+            {
+              "month": "2013-06",
+              "eligible": 211,
+              "positive": 1,
+              "negative": 210,
+              "positive_proportion": 0.004739336492890996
+            },
+            {
+              "month": "2013-07",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-08",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-09",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-10",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-11",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-12",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-01",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-02",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-03",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-04",
+              "eligible": 211,
+              "positive": 0,
+              "negative": 211,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-05",
+              "eligible": 211,
+              "positive": 1,
+              "negative": 210,
+              "positive_proportion": 0.004739336492890996
+            },
+            {
+              "month": "2014-06",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-07",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-08",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-09",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-10",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-11",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-12",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            }
+          ]
+        },
+        "validation": {
+          "eligible": 2520,
+          "positive": 0,
+          "negative": 2520,
+          "positive_proportion": 0.0,
+          "entities": 210,
+          "entities_switching_class": 0,
+          "entities_single_class": 210,
+          "target_zero": 2520,
+          "reference_zero": 2520,
+          "monthly": [
+            {
+              "month": "2015-01",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-02",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-03",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-04",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-05",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-06",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-07",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-08",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-09",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-10",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-11",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-12",
+              "eligible": 210,
+              "positive": 0,
+              "negative": 210,
+              "positive_proportion": 0.0
+            }
+          ]
+        }
+      }
+    },
+    "excluded_reasons_nonexclusive": {
+      "historical_version_after_prediction": 284,
+      "target_version_after_split_cut": 18
+    }
+  },
+  "volume_product_supplier_observed_only": {
+    "zero_policy": "observed_only",
+    "scenarios": {
+      "retrospective": {
+        "train": {
+          "eligible": 162,
+          "positive": 160,
+          "negative": 2,
+          "positive_proportion": 0.9876543209876543,
+          "entities": 9,
+          "entities_switching_class": 2,
+          "entities_single_class": 7,
+          "target_zero": 0,
+          "reference_zero": 0,
+          "monthly": [
+            {
+              "month": "2013-04",
+              "eligible": 7,
+              "positive": 7,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2013-05",
+              "eligible": 7,
+              "positive": 7,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2013-06",
+              "eligible": 8,
+              "positive": 7,
+              "negative": 1,
+              "positive_proportion": 0.875
+            },
+            {
+              "month": "2013-07",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2013-08",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2013-09",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2013-10",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2013-11",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2013-12",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-01",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-02",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-03",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-04",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-05",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-06",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-07",
+              "eligible": 8,
+              "positive": 8,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-08",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-09",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-10",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-11",
+              "eligible": 9,
+              "positive": 8,
+              "negative": 1,
+              "positive_proportion": 0.8888888888888888
+            }
+          ]
+        },
+        "validation": {
+          "eligible": 99,
+          "positive": 89,
+          "negative": 10,
+          "positive_proportion": 0.898989898989899,
+          "entities": 9,
+          "entities_switching_class": 8,
+          "entities_single_class": 1,
+          "target_zero": 0,
+          "reference_zero": 0,
+          "monthly": [
+            {
+              "month": "2015-01",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2015-02",
+              "eligible": 9,
+              "positive": 1,
+              "negative": 8,
+              "positive_proportion": 0.1111111111111111
+            },
+            {
+              "month": "2015-03",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2015-04",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2015-05",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2015-06",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2015-07",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2015-08",
+              "eligible": 9,
+              "positive": 8,
+              "negative": 1,
+              "positive_proportion": 0.8888888888888888
+            },
+            {
+              "month": "2015-09",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2015-10",
+              "eligible": 9,
+              "positive": 9,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2015-11",
+              "eligible": 9,
+              "positive": 8,
+              "negative": 1,
+              "positive_proportion": 0.8888888888888888
+            }
+          ]
+        }
+      },
+      "availability_gated": {
+        "train": {
+          "eligible": 0,
+          "positive": 0,
+          "negative": 0,
+          "positive_proportion": null,
+          "entities": 0,
+          "entities_switching_class": 0,
+          "entities_single_class": 0,
+          "target_zero": 0,
+          "reference_zero": 0,
+          "monthly": []
+        },
+        "validation": {
+          "eligible": 0,
+          "positive": 0,
+          "negative": 0,
+          "positive_proportion": null,
+          "entities": 0,
+          "entities_switching_class": 0,
+          "entities_single_class": 0,
+          "target_zero": 0,
+          "reference_zero": 0,
+          "monthly": []
+        }
+      }
+    },
+    "excluded_reasons_nonexclusive": {
+      "missing_observed_month": 6948,
+      "historical_version_after_prediction": 279,
+      "target_version_after_split_cut": 18
+    }
+  },
+  "order_frequency_supplier": {
+    "zero_policy": "conditional_ledger",
+    "scenarios": {
+      "retrospective": {
+        "train": {
+          "eligible": 124,
+          "positive": 18,
+          "negative": 106,
+          "positive_proportion": 0.14516129032258066,
+          "entities": 6,
+          "entities_switching_class": 2,
+          "entities_single_class": 4,
+          "target_zero": 84,
+          "reference_zero": 84,
+          "monthly": [
+            {
+              "month": "2013-04",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2013-05",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2013-06",
+              "eligible": 6,
+              "positive": 0,
+              "negative": 6,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-07",
+              "eligible": 6,
+              "positive": 1,
+              "negative": 5,
+              "positive_proportion": 0.16666666666666666
+            },
+            {
+              "month": "2013-08",
+              "eligible": 6,
+              "positive": 1,
+              "negative": 5,
+              "positive_proportion": 0.16666666666666666
+            },
+            {
+              "month": "2013-09",
+              "eligible": 6,
+              "positive": 0,
+              "negative": 6,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-10",
+              "eligible": 6,
+              "positive": 1,
+              "negative": 5,
+              "positive_proportion": 0.16666666666666666
+            },
+            {
+              "month": "2013-11",
+              "eligible": 6,
+              "positive": 0,
+              "negative": 6,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-12",
+              "eligible": 6,
+              "positive": 1,
+              "negative": 5,
+              "positive_proportion": 0.16666666666666666
+            },
+            {
+              "month": "2014-01",
+              "eligible": 6,
+              "positive": 1,
+              "negative": 5,
+              "positive_proportion": 0.16666666666666666
+            },
+            {
+              "month": "2014-02",
+              "eligible": 6,
+              "positive": 0,
+              "negative": 6,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-03",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2014-04",
+              "eligible": 6,
+              "positive": 1,
+              "negative": 5,
+              "positive_proportion": 0.16666666666666666
+            },
+            {
+              "month": "2014-05",
+              "eligible": 6,
+              "positive": 1,
+              "negative": 5,
+              "positive_proportion": 0.16666666666666666
+            },
+            {
+              "month": "2014-06",
+              "eligible": 6,
+              "positive": 0,
+              "negative": 6,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-07",
+              "eligible": 6,
+              "positive": 1,
+              "negative": 5,
+              "positive_proportion": 0.16666666666666666
+            },
+            {
+              "month": "2014-08",
+              "eligible": 6,
+              "positive": 0,
+              "negative": 6,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-09",
+              "eligible": 6,
+              "positive": 1,
+              "negative": 5,
+              "positive_proportion": 0.16666666666666666
+            },
+            {
+              "month": "2014-10",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2014-11",
+              "eligible": 6,
+              "positive": 1,
+              "negative": 5,
+              "positive_proportion": 0.16666666666666666
+            },
+            {
+              "month": "2014-12",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            }
+          ]
+        },
+        "validation": {
+          "eligible": 70,
+          "positive": 7,
+          "negative": 63,
+          "positive_proportion": 0.1,
+          "entities": 6,
+          "entities_switching_class": 2,
+          "entities_single_class": 4,
+          "target_zero": 48,
+          "reference_zero": 48,
+          "monthly": [
+            {
+              "month": "2015-01",
+              "eligible": 6,
+              "positive": 0,
+              "negative": 6,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-02",
+              "eligible": 6,
+              "positive": 0,
+              "negative": 6,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-03",
+              "eligible": 6,
+              "positive": 1,
+              "negative": 5,
+              "positive_proportion": 0.16666666666666666
+            },
+            {
+              "month": "2015-04",
+              "eligible": 6,
+              "positive": 1,
+              "negative": 5,
+              "positive_proportion": 0.16666666666666666
+            },
+            {
+              "month": "2015-05",
+              "eligible": 6,
+              "positive": 0,
+              "negative": 6,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-06",
+              "eligible": 6,
+              "positive": 0,
+              "negative": 6,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-07",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2015-08",
+              "eligible": 6,
+              "positive": 1,
+              "negative": 5,
+              "positive_proportion": 0.16666666666666666
+            },
+            {
+              "month": "2015-09",
+              "eligible": 6,
+              "positive": 0,
+              "negative": 6,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-10",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2015-11",
+              "eligible": 6,
+              "positive": 0,
+              "negative": 6,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-12",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            }
+          ]
+        }
+      },
+      "availability_gated": {
+        "train": {
+          "eligible": 84,
+          "positive": 0,
+          "negative": 84,
+          "positive_proportion": 0.0,
+          "entities": 4,
+          "entities_switching_class": 0,
+          "entities_single_class": 4,
+          "target_zero": 84,
+          "reference_zero": 84,
+          "monthly": [
+            {
+              "month": "2013-04",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-05",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-06",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-07",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-08",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-09",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-10",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-11",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-12",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-01",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-02",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-03",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-04",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-05",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-06",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-07",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-08",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-09",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-10",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-11",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-12",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            }
+          ]
+        },
+        "validation": {
+          "eligible": 48,
+          "positive": 0,
+          "negative": 48,
+          "positive_proportion": 0.0,
+          "entities": 4,
+          "entities_switching_class": 0,
+          "entities_single_class": 4,
+          "target_zero": 48,
+          "reference_zero": 48,
+          "monthly": [
+            {
+              "month": "2015-01",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-02",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-03",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-04",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-05",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-06",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-07",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-08",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-09",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-10",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-11",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-12",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            }
+          ]
+        }
+      }
+    },
+    "excluded_reasons_nonexclusive": {
+      "historical_version_after_prediction": 66,
+      "target_version_after_split_cut": 4
+    }
+  },
+  "order_activity_supplier": {
+    "zero_policy": "conditional_ledger",
+    "scenarios": {
+      "retrospective": {
+        "train": {
+          "eligible": 124,
+          "positive": 40,
+          "negative": 84,
+          "positive_proportion": 0.3225806451612903,
+          "entities": 6,
+          "entities_switching_class": 0,
+          "entities_single_class": 6,
+          "target_zero": 84,
+          "reference_zero": 84,
+          "monthly": [
+            {
+              "month": "2013-04",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2013-05",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2013-06",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2013-07",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2013-08",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2013-09",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2013-10",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2013-11",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2013-12",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2014-01",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2014-02",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2014-03",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2014-04",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2014-05",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2014-06",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2014-07",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2014-08",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2014-09",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2014-10",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2014-11",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2014-12",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            }
+          ]
+        },
+        "validation": {
+          "eligible": 70,
+          "positive": 22,
+          "negative": 48,
+          "positive_proportion": 0.3142857142857143,
+          "entities": 6,
+          "entities_switching_class": 0,
+          "entities_single_class": 6,
+          "target_zero": 48,
+          "reference_zero": 48,
+          "monthly": [
+            {
+              "month": "2015-01",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2015-02",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2015-03",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2015-04",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2015-05",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2015-06",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2015-07",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2015-08",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2015-09",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2015-10",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2015-11",
+              "eligible": 6,
+              "positive": 2,
+              "negative": 4,
+              "positive_proportion": 0.3333333333333333
+            },
+            {
+              "month": "2015-12",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            }
+          ]
+        }
+      },
+      "availability_gated": {
+        "train": {
+          "eligible": 84,
+          "positive": 0,
+          "negative": 84,
+          "positive_proportion": 0.0,
+          "entities": 4,
+          "entities_switching_class": 0,
+          "entities_single_class": 4,
+          "target_zero": 84,
+          "reference_zero": 84,
+          "monthly": [
+            {
+              "month": "2013-04",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-05",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-06",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-07",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-08",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-09",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-10",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-11",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-12",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-01",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-02",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-03",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-04",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-05",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-06",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-07",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-08",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-09",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-10",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-11",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-12",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            }
+          ]
+        },
+        "validation": {
+          "eligible": 48,
+          "positive": 0,
+          "negative": 48,
+          "positive_proportion": 0.0,
+          "entities": 4,
+          "entities_switching_class": 0,
+          "entities_single_class": 4,
+          "target_zero": 48,
+          "reference_zero": 48,
+          "monthly": [
+            {
+              "month": "2015-01",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-02",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-03",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-04",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-05",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-06",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-07",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-08",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-09",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-10",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-11",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-12",
+              "eligible": 4,
+              "positive": 0,
+              "negative": 4,
+              "positive_proportion": 0.0
+            }
+          ]
+        }
+      }
+    },
+    "excluded_reasons_nonexclusive": {
+      "historical_version_after_prediction": 66,
+      "target_version_after_split_cut": 4
+    }
+  },
+  "order_frequency_supplier_observed_only": {
+    "zero_policy": "observed_only",
+    "scenarios": {
+      "retrospective": {
+        "train": {
+          "eligible": 40,
+          "positive": 18,
+          "negative": 22,
+          "positive_proportion": 0.45,
+          "entities": 2,
+          "entities_switching_class": 2,
+          "entities_single_class": 0,
+          "target_zero": 0,
+          "reference_zero": 0,
+          "monthly": [
+            {
+              "month": "2013-04",
+              "eligible": 2,
+              "positive": 2,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2013-05",
+              "eligible": 2,
+              "positive": 2,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2013-06",
+              "eligible": 2,
+              "positive": 0,
+              "negative": 2,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-07",
+              "eligible": 2,
+              "positive": 1,
+              "negative": 1,
+              "positive_proportion": 0.5
+            },
+            {
+              "month": "2013-08",
+              "eligible": 2,
+              "positive": 1,
+              "negative": 1,
+              "positive_proportion": 0.5
+            },
+            {
+              "month": "2013-09",
+              "eligible": 2,
+              "positive": 0,
+              "negative": 2,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-10",
+              "eligible": 2,
+              "positive": 1,
+              "negative": 1,
+              "positive_proportion": 0.5
+            },
+            {
+              "month": "2013-11",
+              "eligible": 2,
+              "positive": 0,
+              "negative": 2,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2013-12",
+              "eligible": 2,
+              "positive": 1,
+              "negative": 1,
+              "positive_proportion": 0.5
+            },
+            {
+              "month": "2014-01",
+              "eligible": 2,
+              "positive": 1,
+              "negative": 1,
+              "positive_proportion": 0.5
+            },
+            {
+              "month": "2014-02",
+              "eligible": 2,
+              "positive": 0,
+              "negative": 2,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-03",
+              "eligible": 2,
+              "positive": 2,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-04",
+              "eligible": 2,
+              "positive": 1,
+              "negative": 1,
+              "positive_proportion": 0.5
+            },
+            {
+              "month": "2014-05",
+              "eligible": 2,
+              "positive": 1,
+              "negative": 1,
+              "positive_proportion": 0.5
+            },
+            {
+              "month": "2014-06",
+              "eligible": 2,
+              "positive": 0,
+              "negative": 2,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-07",
+              "eligible": 2,
+              "positive": 1,
+              "negative": 1,
+              "positive_proportion": 0.5
+            },
+            {
+              "month": "2014-08",
+              "eligible": 2,
+              "positive": 0,
+              "negative": 2,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2014-09",
+              "eligible": 2,
+              "positive": 1,
+              "negative": 1,
+              "positive_proportion": 0.5
+            },
+            {
+              "month": "2014-10",
+              "eligible": 2,
+              "positive": 2,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2014-11",
+              "eligible": 2,
+              "positive": 1,
+              "negative": 1,
+              "positive_proportion": 0.5
+            }
+          ]
+        },
+        "validation": {
+          "eligible": 22,
+          "positive": 7,
+          "negative": 15,
+          "positive_proportion": 0.3181818181818182,
+          "entities": 2,
+          "entities_switching_class": 2,
+          "entities_single_class": 0,
+          "target_zero": 0,
+          "reference_zero": 0,
+          "monthly": [
+            {
+              "month": "2015-01",
+              "eligible": 2,
+              "positive": 0,
+              "negative": 2,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-02",
+              "eligible": 2,
+              "positive": 0,
+              "negative": 2,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-03",
+              "eligible": 2,
+              "positive": 1,
+              "negative": 1,
+              "positive_proportion": 0.5
+            },
+            {
+              "month": "2015-04",
+              "eligible": 2,
+              "positive": 1,
+              "negative": 1,
+              "positive_proportion": 0.5
+            },
+            {
+              "month": "2015-05",
+              "eligible": 2,
+              "positive": 0,
+              "negative": 2,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-06",
+              "eligible": 2,
+              "positive": 0,
+              "negative": 2,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-07",
+              "eligible": 2,
+              "positive": 2,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2015-08",
+              "eligible": 2,
+              "positive": 1,
+              "negative": 1,
+              "positive_proportion": 0.5
+            },
+            {
+              "month": "2015-09",
+              "eligible": 2,
+              "positive": 0,
+              "negative": 2,
+              "positive_proportion": 0.0
+            },
+            {
+              "month": "2015-10",
+              "eligible": 2,
+              "positive": 2,
+              "negative": 0,
+              "positive_proportion": 1.0
+            },
+            {
+              "month": "2015-11",
+              "eligible": 2,
+              "positive": 0,
+              "negative": 2,
+              "positive_proportion": 0.0
+            }
+          ]
+        }
+      },
+      "availability_gated": {
+        "train": {
+          "eligible": 0,
+          "positive": 0,
+          "negative": 0,
+          "positive_proportion": null,
+          "entities": 0,
+          "entities_switching_class": 0,
+          "entities_single_class": 0,
+          "target_zero": 0,
+          "reference_zero": 0,
+          "monthly": []
+        },
+        "validation": {
+          "eligible": 0,
+          "positive": 0,
+          "negative": 0,
+          "positive_proportion": null,
+          "entities": 0,
+          "entities_switching_class": 0,
+          "entities_single_class": 0,
+          "target_zero": 0,
+          "reference_zero": 0,
+          "monthly": []
+        }
+      }
+    },
+    "excluded_reasons_nonexclusive": {
+      "missing_observed_month": 132,
+      "historical_version_after_prediction": 66,
+      "target_version_after_split_cut": 4
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "status": "sealed_not_constructed",
+  "queries_executed": false,
+  "X_test_created": false,
+  "y_test_created": false,
+  "scope": "2016 reservado; ventana propuesta enero-mayo según cobertura ya documentada en la auditoría general, sin consultar nuevas etiquetas",
+  "planned_target_months": [
+    "2016-01",
+    "2016-02",
+    "2016-03",
+    "2016-04",
+    "2016-05"
+  ],
+  "proposed_event_interval_inclusive_exclusive": [
+    "2016-01-01",
+    "2016-06-01"
+  ],
+  "proposed_label_availability_cut_exclusive": "2016-06-01 00:00:00",
+  "window_source": "resultados/extension_datamarts/auditoria_dw/reporte_auditoria.md; cobertura previa, no selección por nuevos outcomes",
+  "incomplete_or_unconfirmed_month": "indeterminado; no rellenar cero ni ampliar la ventana usando resultados; cualquier revisión debe congelarse antes de evaluar",
+  "preprocessor_sha256": "f1b513c99312e07afe70980631fd4881c388a34be61b4bc7164e741d6b4c1ba5",
+  "development_snapshot_sha256": "38739cfbcccd5df3d8dd11248e44a16b35279a714f796eb8e206794e41b14a8d",
+  "prerequisites": [
+    "Congelar contrato, cobertura, features y hashes del preprocesador",
+    "Congelar modelos, hiperparámetros, umbral, baselines y protocolo de evaluación antes de abrir outcomes",
+    "Autorizar la evaluación final en un encargo posterior; esta especificación no la ejecuta"
+  ],
+  "extraction": "Reutilizar proyección mínima tipo 3 y unión de IDs fuente/DW, con intervalo de test explícito tras congelación; no existe opción de ejecución de test en este CLI",
+  "history": "Concatenar snapshot de desarrollo con eventos de meses de test ya concluidos, deduplicados por ID; no consultar t ni meses futuros para X(c,t)",
+  "first_seen": "Mínimo mes observado de cobro hasta el instante, nunca catálogo o última aparición futura; nuevas cuentas elegibles tras tres meses de historia",
+  "target": "y=1[N(c,t)>median(N(c,t-1),N(c,t-2),N(c,t-3))], empate 0; obtener solo tras cierre y comprobar disponibilidad",
+  "order": "mes objetivo ascendente, CustomerID ascendente; observation_id=customer:{CustomerID}:{YYYY-MM}",
+  "features": [
+    "cobros_lag_1",
+    "cobros_lag_2",
+    "cobros_lag_3",
+    "cobros_media_3",
+    "cobros_mediana_3",
+    "cobros_std_3",
+    "cobros_cambio_1",
+    "cobros_tendencia_3",
+    "meses_con_cobros_3",
+    "mes_anterior_sin_cobros",
+    "variacion_relativa_cobros",
+    "base_variacion_cero",
+    "antiguedad_observada_meses",
+    "mes_sin",
+    "mes_cos",
+    "dias_mes_objetivo"
+  ],
+  "preprocessing": "Cargar preprocesador financiero congelado; solo transform; ningún fit ni nueva selección de constantes",
+  "known_history": "Ventana consecutiva de tres meses; ceros solo en cobertura académica explícita, meses sin cobertura indeterminados",
+  "eligibility": "Separar elegibilidad por historia antes de t de disponibilidad posterior de y; no excluir cuentas por no pagar en t",
+  "maturity": "Excluir objetivo mensual incompleto; no tratar el último mes observado parcialmente como cerrado",
+  "cutoffs": "Documentar cierre y fecha de conocimiento del test antes de su evaluación; no deducir completitud de la mera presencia de filas",
+  "prohibited": [
+    "Ajustar con test",
+    "Construir X_test/y_test ahora",
+    "Usar saldo/finalización/importe/atributos condicionados",
+    "Elegir entidades según actividad futura"
+  ]
+}

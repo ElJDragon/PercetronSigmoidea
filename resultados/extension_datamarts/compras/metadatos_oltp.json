@@ -1,0 +1,782 @@
+[
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrderLines",
+    "column_name": "PurchaseOrderLineID",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrderLines",
+    "column_name": "PurchaseOrderID",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrderLines",
+    "column_name": "StockItemID",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrderLines",
+    "column_name": "OrderedOuters",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrderLines",
+    "column_name": "Description",
+    "data_type": "nvarchar",
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrderLines",
+    "column_name": "ReceivedOuters",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrderLines",
+    "column_name": "PackageTypeID",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrderLines",
+    "column_name": "ExpectedUnitPricePerOuter",
+    "data_type": "decimal",
+    "is_nullable": true,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrderLines",
+    "column_name": "LastReceiptDate",
+    "data_type": "date",
+    "is_nullable": true,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrderLines",
+    "column_name": "IsOrderLineFinalized",
+    "data_type": "bit",
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrderLines",
+    "column_name": "LastEditedBy",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrderLines",
+    "column_name": "LastEditedWhen",
+    "data_type": "datetime2",
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrders",
+    "column_name": "PurchaseOrderID",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrders",
+    "column_name": "SupplierID",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrders",
+    "column_name": "OrderDate",
+    "data_type": "date",
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrders",
+    "column_name": "DeliveryMethodID",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrders",
+    "column_name": "ContactPersonID",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrders",
+    "column_name": "ExpectedDeliveryDate",
+    "data_type": "date",
+    "is_nullable": true,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrders",
+    "column_name": "SupplierReference",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrders",
+    "column_name": "IsOrderFinalized",
+    "data_type": "bit",
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrders",
+    "column_name": "Comments",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrders",
+    "column_name": "InternalComments",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrders",
+    "column_name": "LastEditedBy",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrders",
+    "column_name": "LastEditedWhen",
+    "data_type": "datetime2",
+    "is_nullable": false,
+    "temporal_type_desc": "NON_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": null
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "SupplierID",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "SupplierName",
+    "data_type": "nvarchar",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "SupplierCategoryID",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "PrimaryContactPersonID",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "AlternateContactPersonID",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "DeliveryMethodID",
+    "data_type": "int",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "DeliveryCityID",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "PostalCityID",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "SupplierReference",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "BankAccountName",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "BankAccountBranch",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "BankAccountCode",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "BankAccountNumber",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "BankInternationalCode",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "PaymentDays",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "InternalComments",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "PhoneNumber",
+    "data_type": "nvarchar",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "FaxNumber",
+    "data_type": "nvarchar",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "WebsiteURL",
+    "data_type": "nvarchar",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "DeliveryAddressLine1",
+    "data_type": "nvarchar",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "DeliveryAddressLine2",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "DeliveryPostalCode",
+    "data_type": "nvarchar",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "DeliveryLocation",
+    "data_type": "geography",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "PostalAddressLine1",
+    "data_type": "nvarchar",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "PostalAddressLine2",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "PostalPostalCode",
+    "data_type": "nvarchar",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "LastEditedBy",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "ValidFrom",
+    "data_type": "datetime2",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "Suppliers",
+    "column_name": "ValidTo",
+    "data_type": "datetime2",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 786101841
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "StockItemID",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "StockItemName",
+    "data_type": "nvarchar",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "SupplierID",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "ColorID",
+    "data_type": "int",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "UnitPackageID",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "OuterPackageID",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "Brand",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "Size",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "LeadTimeDays",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "QuantityPerOuter",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "IsChillerStock",
+    "data_type": "bit",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "Barcode",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "TaxRate",
+    "data_type": "decimal",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "UnitPrice",
+    "data_type": "decimal",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "RecommendedRetailPrice",
+    "data_type": "decimal",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "TypicalWeightPerUnit",
+    "data_type": "decimal",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "MarketingComments",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "InternalComments",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "Photo",
+    "data_type": "varbinary",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "CustomFields",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "Tags",
+    "data_type": "nvarchar",
+    "is_nullable": true,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "SearchDetails",
+    "data_type": "nvarchar",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "LastEditedBy",
+    "data_type": "int",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "ValidFrom",
+    "data_type": "datetime2",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  },
+  {
+    "schema_name": "Warehouse",
+    "table_name": "StockItems",
+    "column_name": "ValidTo",
+    "data_type": "datetime2",
+    "is_nullable": false,
+    "temporal_type_desc": "SYSTEM_VERSIONED_TEMPORAL_TABLE",
+    "is_tracked_by_cdc": false,
+    "history_table_id": 1458104235
+  }
+]

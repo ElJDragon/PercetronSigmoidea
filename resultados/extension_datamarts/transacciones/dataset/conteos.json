@@ -1,0 +1,251 @@
+{
+  "train": {
+    "eligible": 4612,
+    "positive": 1798,
+    "negative": 2814,
+    "positive_proportion": 0.3898525585429315,
+    "entities": 236,
+    "monthly": [
+      {
+        "month": "2013-04",
+        "eligible": 178,
+        "positive": 68,
+        "negative": 110,
+        "positive_proportion": 0.38202247191011235
+      },
+      {
+        "month": "2013-05",
+        "eligible": 198,
+        "positive": 88,
+        "negative": 110,
+        "positive_proportion": 0.4444444444444444
+      },
+      {
+        "month": "2013-06",
+        "eligible": 204,
+        "positive": 85,
+        "negative": 119,
+        "positive_proportion": 0.4166666666666667
+      },
+      {
+        "month": "2013-07",
+        "eligible": 208,
+        "positive": 78,
+        "negative": 130,
+        "positive_proportion": 0.375
+      },
+      {
+        "month": "2013-08",
+        "eligible": 212,
+        "positive": 58,
+        "negative": 154,
+        "positive_proportion": 0.27358490566037735
+      },
+      {
+        "month": "2013-09",
+        "eligible": 212,
+        "positive": 70,
+        "negative": 142,
+        "positive_proportion": 0.330188679245283
+      },
+      {
+        "month": "2013-10",
+        "eligible": 215,
+        "positive": 83,
+        "negative": 132,
+        "positive_proportion": 0.386046511627907
+      },
+      {
+        "month": "2013-11",
+        "eligible": 218,
+        "positive": 80,
+        "negative": 138,
+        "positive_proportion": 0.3669724770642202
+      },
+      {
+        "month": "2013-12",
+        "eligible": 220,
+        "positive": 79,
+        "negative": 141,
+        "positive_proportion": 0.35909090909090907
+      },
+      {
+        "month": "2014-01",
+        "eligible": 221,
+        "positive": 103,
+        "negative": 118,
+        "positive_proportion": 0.4660633484162896
+      },
+      {
+        "month": "2014-02",
+        "eligible": 223,
+        "positive": 75,
+        "negative": 148,
+        "positive_proportion": 0.336322869955157
+      },
+      {
+        "month": "2014-03",
+        "eligible": 225,
+        "positive": 84,
+        "negative": 141,
+        "positive_proportion": 0.37333333333333335
+      },
+      {
+        "month": "2014-04",
+        "eligible": 227,
+        "positive": 83,
+        "negative": 144,
+        "positive_proportion": 0.3656387665198238
+      },
+      {
+        "month": "2014-05",
+        "eligible": 229,
+        "positive": 109,
+        "negative": 120,
+        "positive_proportion": 0.4759825327510917
+      },
+      {
+        "month": "2014-06",
+        "eligible": 229,
+        "positive": 102,
+        "negative": 127,
+        "positive_proportion": 0.44541484716157204
+      },
+      {
+        "month": "2014-07",
+        "eligible": 229,
+        "positive": 108,
+        "negative": 121,
+        "positive_proportion": 0.47161572052401746
+      },
+      {
+        "month": "2014-08",
+        "eligible": 231,
+        "positive": 81,
+        "negative": 150,
+        "positive_proportion": 0.35064935064935066
+      },
+      {
+        "month": "2014-09",
+        "eligible": 231,
+        "positive": 80,
+        "negative": 151,
+        "positive_proportion": 0.3463203463203463
+      },
+      {
+        "month": "2014-10",
+        "eligible": 232,
+        "positive": 98,
+        "negative": 134,
+        "positive_proportion": 0.4224137931034483
+      },
+      {
+        "month": "2014-11",
+        "eligible": 234,
+        "positive": 91,
+        "negative": 143,
+        "positive_proportion": 0.3888888888888889
+      },
+      {
+        "month": "2014-12",
+        "eligible": 236,
+        "positive": 95,
+        "negative": 141,
+        "positive_proportion": 0.4025423728813559
+      }
+    ]
+  },
+  "val": {
+    "eligible": 2943,
+    "positive": 1198,
+    "negative": 1745,
+    "positive_proportion": 0.40706761807679237,
+    "entities": 252,
+    "monthly": [
+      {
+        "month": "2015-01",
+        "eligible": 236,
+        "positive": 110,
+        "negative": 126,
+        "positive_proportion": 0.4661016949152542
+      },
+      {
+        "month": "2015-02",
+        "eligible": 238,
+        "positive": 86,
+        "negative": 152,
+        "positive_proportion": 0.36134453781512604
+      },
+      {
+        "month": "2015-03",
+        "eligible": 240,
+        "positive": 94,
+        "negative": 146,
+        "positive_proportion": 0.39166666666666666
+      },
+      {
+        "month": "2015-04",
+        "eligible": 244,
+        "positive": 113,
+        "negative": 131,
+        "positive_proportion": 0.46311475409836067
+      },
+      {
+        "month": "2015-05",
+        "eligible": 247,
+        "positive": 113,
+        "negative": 134,
+        "positive_proportion": 0.4574898785425101
+      },
+      {
+        "month": "2015-06",
+        "eligible": 247,
+        "positive": 95,
+        "negative": 152,
+        "positive_proportion": 0.38461538461538464
+      },
+      {
+        "month": "2015-07",
+        "eligible": 247,
+        "positive": 117,
+        "negative": 130,
+        "positive_proportion": 0.47368421052631576
+      },
+      {
+        "month": "2015-08",
+        "eligible": 247,
+        "positive": 69,
+        "negative": 178,
+        "positive_proportion": 0.2793522267206478
+      },
+      {
+        "month": "2015-09",
+        "eligible": 248,
+        "positive": 103,
+        "negative": 145,
+        "positive_proportion": 0.4153225806451613
+      },
+      {
+        "month": "2015-10",
+        "eligible": 248,
+        "positive": 109,
+        "negative": 139,
+        "positive_proportion": 0.43951612903225806
+      },
+      {
+        "month": "2015-11",
+        "eligible": 249,
+        "positive": 91,
+        "negative": 158,
+        "positive_proportion": 0.3654618473895582
+      },
+      {
+        "month": "2015-12",
+        "eligible": 252,
+        "positive": 98,
+        "negative": 154,
+        "positive_proportion": 0.3888888888888889
+      }
+    ]
+  }
+}

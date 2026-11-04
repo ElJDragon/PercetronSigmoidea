@@ -1,0 +1,147 @@
+{
+  "approved_catalog": [
+    {
+      "name": "recepciones_lag_1",
+      "formula": "n1 = N(i,t-1)",
+      "source": "COUNT DISTINCT StockItemTransactionID, tipo 11",
+      "availability": "Cierre de t-1"
+    },
+    {
+      "name": "recepciones_lag_2",
+      "formula": "n2 = N(i,t-2)",
+      "source": "COUNT DISTINCT StockItemTransactionID, tipo 11",
+      "availability": "Cierre de t-2"
+    },
+    {
+      "name": "recepciones_lag_3",
+      "formula": "n3 = N(i,t-3)",
+      "source": "COUNT DISTINCT StockItemTransactionID, tipo 11",
+      "availability": "Cierre de t-3"
+    },
+    {
+      "name": "unidades_recibidas_lag_1",
+      "formula": "q1 = Q(i,t-1)",
+      "source": "SUM Quantity de eventos tipo 11; unidades base del mismo artículo",
+      "availability": "Cierre de t-1"
+    },
+    {
+      "name": "unidades_recibidas_lag_2",
+      "formula": "q2 = Q(i,t-2)",
+      "source": "SUM Quantity de eventos tipo 11; unidades base del mismo artículo",
+      "availability": "Cierre de t-2"
+    },
+    {
+      "name": "unidades_recibidas_lag_3",
+      "formula": "q3 = Q(i,t-3)",
+      "source": "SUM Quantity de eventos tipo 11; unidades base del mismo artículo",
+      "availability": "Cierre de t-3"
+    },
+    {
+      "name": "recepciones_media_3",
+      "formula": "(n1+n2+n3)/3",
+      "source": "Historia tipo 11 y primera aparición en cualquier movimiento; calendario conocido",
+      "availability": "Antes del comienzo de t"
+    },
+    {
+      "name": "recepciones_mediana_3",
+      "formula": "mediana(n1,n2,n3)",
+      "source": "Historia tipo 11 y primera aparición en cualquier movimiento; calendario conocido",
+      "availability": "Antes del comienzo de t"
+    },
+    {
+      "name": "recepciones_std_3",
+      "formula": "sqrt(sum((nk-media)^2)/3)",
+      "source": "Historia tipo 11 y primera aparición en cualquier movimiento; calendario conocido",
+      "availability": "Antes del comienzo de t"
+    },
+    {
+      "name": "recepciones_cambio_1",
+      "formula": "n1-n2",
+      "source": "Historia tipo 11 y primera aparición en cualquier movimiento; calendario conocido",
+      "availability": "Antes del comienzo de t"
+    },
+    {
+      "name": "recepciones_tendencia_3",
+      "formula": "(n1-n3)/2",
+      "source": "Historia tipo 11 y primera aparición en cualquier movimiento; calendario conocido",
+      "availability": "Antes del comienzo de t"
+    },
+    {
+      "name": "meses_con_recepciones_3",
+      "formula": "sum(1[nk>0], k=1..3)",
+      "source": "Historia tipo 11 y primera aparición en cualquier movimiento; calendario conocido",
+      "availability": "Antes del comienzo de t"
+    },
+    {
+      "name": "mes_anterior_sin_recepciones",
+      "formula": "1[n1=0]",
+      "source": "Historia tipo 11 y primera aparición en cualquier movimiento; calendario conocido",
+      "availability": "Antes del comienzo de t"
+    },
+    {
+      "name": "antiguedad_observada_meses",
+      "formula": "ordinal(t)-ordinal(primer_mes_evento_conocido_antes_de_t)",
+      "source": "Historia tipo 11 y primera aparición en cualquier movimiento; calendario conocido",
+      "availability": "Antes del comienzo de t"
+    },
+    {
+      "name": "mes_sin",
+      "formula": "sin(2*pi*(mes(t)-1)/12)",
+      "source": "Historia tipo 11 y primera aparición en cualquier movimiento; calendario conocido",
+      "availability": "Antes del comienzo de t"
+    },
+    {
+      "name": "mes_cos",
+      "formula": "cos(2*pi*(mes(t)-1)/12)",
+      "source": "Historia tipo 11 y primera aparición en cualquier movimiento; calendario conocido",
+      "availability": "Antes del comienzo de t"
+    },
+    {
+      "name": "dias_mes_objetivo",
+      "formula": "dias_calendario(t)",
+      "source": "Historia tipo 11 y primera aparición en cualquier movimiento; calendario conocido",
+      "availability": "Antes del comienzo de t"
+    }
+  ],
+  "input_features": [
+    "recepciones_lag_1",
+    "recepciones_lag_2",
+    "recepciones_lag_3",
+    "unidades_recibidas_lag_1",
+    "unidades_recibidas_lag_2",
+    "unidades_recibidas_lag_3",
+    "recepciones_media_3",
+    "recepciones_mediana_3",
+    "recepciones_std_3",
+    "recepciones_cambio_1",
+    "recepciones_tendencia_3",
+    "meses_con_recepciones_3",
+    "mes_anterior_sin_recepciones",
+    "antiguedad_observada_meses",
+    "mes_sin",
+    "mes_cos",
+    "dias_mes_objetivo"
+  ],
+  "feature_names": [
+    "recepciones_lag_1",
+    "recepciones_lag_2",
+    "recepciones_lag_3",
+    "unidades_recibidas_lag_1",
+    "unidades_recibidas_lag_2",
+    "unidades_recibidas_lag_3",
+    "recepciones_media_3",
+    "recepciones_mediana_3",
+    "recepciones_std_3",
+    "recepciones_cambio_1",
+    "recepciones_tendencia_3",
+    "meses_con_recepciones_3",
+    "mes_anterior_sin_recepciones",
+    "antiguedad_observada_meses",
+    "mes_sin",
+    "mes_cos",
+    "dias_mes_objetivo"
+  ],
+  "discarded": {},
+  "all_features_required": true,
+  "no_imputation_needed": true
+}

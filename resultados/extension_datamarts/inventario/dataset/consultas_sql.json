@@ -1,0 +1,74 @@
+[
+  {
+    "database": "WideWorldImporters",
+    "sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(st.StockItemTransactionID,\nst.StockItemID,st.TransactionTypeID,st.TransactionOccurredWhen,st.Quantity,st.LastEditedWhen,\nst.InvoiceID,st.PurchaseOrderID,st.CustomerID,st.SupplierID)) AS checksum\nFROM Warehouse.StockItemTransactions st\nWHERE st.TransactionTypeID=? AND st.TransactionOccurredWhen>=? AND st.TransactionOccurredWhen<?",
+    "parameters": [
+      11,
+      "2013-01-01",
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "database": "WideWorldImporters",
+    "sql": "SELECT st.StockItemTransactionID AS event_id,st.StockItemID AS item_id,\nst.TransactionTypeID AS type_id,st.TransactionOccurredWhen AS occurred_at,\nst.Quantity AS quantity,st.LastEditedWhen AS edited_at,st.InvoiceID AS invoice_id,\nst.PurchaseOrderID AS purchase_order_id,st.CustomerID AS customer_id,st.SupplierID AS supplier_id\nFROM Warehouse.StockItemTransactions st\nWHERE st.TransactionTypeID=? AND st.TransactionOccurredWhen>=? AND st.TransactionOccurredWhen<?\nORDER BY st.StockItemTransactionID",
+    "parameters": [
+      11,
+      "2013-01-01",
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 7298
+  },
+  {
+    "database": "WideWorldImporters",
+    "sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(st.StockItemTransactionID,\nst.StockItemID,st.TransactionTypeID,st.TransactionOccurredWhen,st.Quantity,st.LastEditedWhen,\nst.InvoiceID,st.PurchaseOrderID,st.CustomerID,st.SupplierID)) AS checksum\nFROM Warehouse.StockItemTransactions st\nWHERE st.TransactionTypeID=? AND st.TransactionOccurredWhen>=? AND st.TransactionOccurredWhen<?",
+    "parameters": [
+      11,
+      "2013-01-01",
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "database": "WideWorldImportersDW",
+    "sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(f.[Movement Key],\nf.[WWI Stock Item Transaction ID],d.[WWI Stock Item ID],tt.[WWI Transaction Type ID],\nf.[Date Key],f.Quantity,f.[WWI Purchase Order ID],f.[WWI Invoice ID],f.[Stock Item Key])) AS checksum\nFROM Fact.Movement f JOIN Dimension.[Stock Item] d ON d.[Stock Item Key]=f.[Stock Item Key]\nJOIN Dimension.[Transaction Type] tt ON tt.[Transaction Type Key]=f.[Transaction Type Key]\nWHERE tt.[WWI Transaction Type ID]=? AND f.[Date Key]>=? AND f.[Date Key]<?",
+    "parameters": [
+      11,
+      "2013-01-01",
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "database": "WideWorldImportersDW",
+    "sql": "SELECT f.[WWI Stock Item Transaction ID] AS event_id,d.[WWI Stock Item ID] AS item_id,\ntt.[WWI Transaction Type ID] AS type_id,f.[Date Key] AS event_date,f.Quantity AS quantity,\nf.[WWI Purchase Order ID] AS purchase_order_id,f.[WWI Invoice ID] AS invoice_id,\nf.[Stock Item Key] AS item_key,d.[Valid From] AS valid_from,d.[Valid To] AS valid_to\nFROM Fact.Movement f JOIN Dimension.[Stock Item] d ON d.[Stock Item Key]=f.[Stock Item Key]\nJOIN Dimension.[Transaction Type] tt ON tt.[Transaction Type Key]=f.[Transaction Type Key]\nWHERE tt.[WWI Transaction Type ID]=? AND f.[Date Key]>=? AND f.[Date Key]<? ORDER BY f.[WWI Stock Item Transaction ID]",
+    "parameters": [
+      11,
+      "2013-01-01",
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 7298
+  },
+  {
+    "database": "WideWorldImportersDW",
+    "sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(f.[Movement Key],\nf.[WWI Stock Item Transaction ID],d.[WWI Stock Item ID],tt.[WWI Transaction Type ID],\nf.[Date Key],f.Quantity,f.[WWI Purchase Order ID],f.[WWI Invoice ID],f.[Stock Item Key])) AS checksum\nFROM Fact.Movement f JOIN Dimension.[Stock Item] d ON d.[Stock Item Key]=f.[Stock Item Key]\nJOIN Dimension.[Transaction Type] tt ON tt.[Transaction Type Key]=f.[Transaction Type Key]\nWHERE tt.[WWI Transaction Type ID]=? AND f.[Date Key]>=? AND f.[Date Key]<?",
+    "parameters": [
+      11,
+      "2013-01-01",
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  }
+]

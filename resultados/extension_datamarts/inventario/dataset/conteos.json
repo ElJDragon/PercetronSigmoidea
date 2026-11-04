@@ -1,0 +1,3475 @@
+{
+  "train": {
+    "observations": 4599,
+    "positive": 86,
+    "negative": 4513,
+    "prevalence": 0.018699717329854315,
+    "entities": 219,
+    "positive_entities": 10,
+    "entities_varying": 10,
+    "monthly": [
+      {
+        "month": "2013-04",
+        "observations": 219,
+        "positive": 8,
+        "negative": 211,
+        "prevalence": 0.0365296803652968
+      },
+      {
+        "month": "2013-05",
+        "observations": 219,
+        "positive": 9,
+        "negative": 210,
+        "prevalence": 0.0410958904109589
+      },
+      {
+        "month": "2013-06",
+        "observations": 219,
+        "positive": 1,
+        "negative": 218,
+        "prevalence": 0.0045662100456621
+      },
+      {
+        "month": "2013-07",
+        "observations": 219,
+        "positive": 7,
+        "negative": 212,
+        "prevalence": 0.0319634703196347
+      },
+      {
+        "month": "2013-08",
+        "observations": 219,
+        "positive": 2,
+        "negative": 217,
+        "prevalence": 0.0091324200913242
+      },
+      {
+        "month": "2013-09",
+        "observations": 219,
+        "positive": 1,
+        "negative": 218,
+        "prevalence": 0.0045662100456621
+      },
+      {
+        "month": "2013-10",
+        "observations": 219,
+        "positive": 7,
+        "negative": 212,
+        "prevalence": 0.0319634703196347
+      },
+      {
+        "month": "2013-11",
+        "observations": 219,
+        "positive": 0,
+        "negative": 219,
+        "prevalence": 0.0
+      },
+      {
+        "month": "2013-12",
+        "observations": 219,
+        "positive": 1,
+        "negative": 218,
+        "prevalence": 0.0045662100456621
+      },
+      {
+        "month": "2014-01",
+        "observations": 219,
+        "positive": 6,
+        "negative": 213,
+        "prevalence": 0.0273972602739726
+      },
+      {
+        "month": "2014-02",
+        "observations": 219,
+        "positive": 0,
+        "negative": 219,
+        "prevalence": 0.0
+      },
+      {
+        "month": "2014-03",
+        "observations": 219,
+        "positive": 1,
+        "negative": 218,
+        "prevalence": 0.0045662100456621
+      },
+      {
+        "month": "2014-04",
+        "observations": 219,
+        "positive": 6,
+        "negative": 213,
+        "prevalence": 0.0273972602739726
+      },
+      {
+        "month": "2014-05",
+        "observations": 219,
+        "positive": 5,
+        "negative": 214,
+        "prevalence": 0.0228310502283105
+      },
+      {
+        "month": "2014-06",
+        "observations": 219,
+        "positive": 2,
+        "negative": 217,
+        "prevalence": 0.0091324200913242
+      },
+      {
+        "month": "2014-07",
+        "observations": 219,
+        "positive": 7,
+        "negative": 212,
+        "prevalence": 0.0319634703196347
+      },
+      {
+        "month": "2014-08",
+        "observations": 219,
+        "positive": 1,
+        "negative": 218,
+        "prevalence": 0.0045662100456621
+      },
+      {
+        "month": "2014-09",
+        "observations": 219,
+        "positive": 5,
+        "negative": 214,
+        "prevalence": 0.0228310502283105
+      },
+      {
+        "month": "2014-10",
+        "observations": 219,
+        "positive": 8,
+        "negative": 211,
+        "prevalence": 0.0365296803652968
+      },
+      {
+        "month": "2014-11",
+        "observations": 219,
+        "positive": 1,
+        "negative": 218,
+        "prevalence": 0.0045662100456621
+      },
+      {
+        "month": "2014-12",
+        "observations": 219,
+        "positive": 8,
+        "negative": 211,
+        "prevalence": 0.0365296803652968
+      }
+    ],
+    "by_item": [
+      {
+        "item_id": 1,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 2,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 3,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 4,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 5,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 6,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 7,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 8,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 9,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 10,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 11,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 12,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 13,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 14,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 15,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 16,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 17,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 18,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 19,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 20,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 21,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 22,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 23,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 24,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 25,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 26,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 27,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 28,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 29,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 30,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 31,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 32,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 33,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 34,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 35,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 36,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 37,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 38,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 39,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 40,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 41,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 42,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 43,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 44,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 45,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 46,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 47,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 48,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 49,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 50,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 51,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 52,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 53,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 54,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 55,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 56,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 57,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 58,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 59,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 60,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 61,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 62,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 63,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 64,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 65,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 66,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 67,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 68,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 69,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 70,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 71,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 72,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 73,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 74,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 75,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 76,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 77,
+        "observations": 21,
+        "positive": 9,
+        "negative": 12,
+        "class_variation": true
+      },
+      {
+        "item_id": 78,
+        "observations": 21,
+        "positive": 11,
+        "negative": 10,
+        "class_variation": true
+      },
+      {
+        "item_id": 79,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 80,
+        "observations": 21,
+        "positive": 12,
+        "negative": 9,
+        "class_variation": true
+      },
+      {
+        "item_id": 81,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 82,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 83,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 84,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 85,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 86,
+        "observations": 21,
+        "positive": 7,
+        "negative": 14,
+        "class_variation": true
+      },
+      {
+        "item_id": 87,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 88,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 89,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 90,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 91,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 92,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 93,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 94,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 95,
+        "observations": 21,
+        "positive": 11,
+        "negative": 10,
+        "class_variation": true
+      },
+      {
+        "item_id": 96,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 97,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 98,
+        "observations": 21,
+        "positive": 9,
+        "negative": 12,
+        "class_variation": true
+      },
+      {
+        "item_id": 99,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 100,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 101,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 102,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 103,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 104,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 105,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 106,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 107,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 108,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 109,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 110,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 111,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 112,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 113,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 114,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 115,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 116,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 117,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 118,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 119,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 120,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 121,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 122,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 123,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 124,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 125,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 126,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 127,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 128,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 129,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 130,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 131,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 132,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 133,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 134,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 135,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 136,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 137,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 138,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 139,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 140,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 141,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 142,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 143,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 144,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 145,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 146,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 147,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 148,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 149,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 150,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 151,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 152,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 153,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 154,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 155,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 156,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 157,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 158,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 159,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 160,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 161,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 162,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 163,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 164,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 165,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 166,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 167,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 168,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 169,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 170,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 171,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 172,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 173,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 174,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 175,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 176,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 177,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 178,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 179,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 180,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 181,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 182,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 183,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 184,
+        "observations": 21,
+        "positive": 6,
+        "negative": 15,
+        "class_variation": true
+      },
+      {
+        "item_id": 185,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 186,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 187,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 188,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 189,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 190,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 191,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 192,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 193,
+        "observations": 21,
+        "positive": 9,
+        "negative": 12,
+        "class_variation": true
+      },
+      {
+        "item_id": 194,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 195,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 196,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 197,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 198,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 199,
+        "observations": 21,
+        "positive": 3,
+        "negative": 18,
+        "class_variation": true
+      },
+      {
+        "item_id": 200,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 201,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 202,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 203,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 204,
+        "observations": 21,
+        "positive": 9,
+        "negative": 12,
+        "class_variation": true
+      },
+      {
+        "item_id": 205,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 206,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 207,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 208,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 209,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 210,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 211,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 212,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 213,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 214,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 215,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 216,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 217,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 218,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      },
+      {
+        "item_id": 219,
+        "observations": 21,
+        "positive": 0,
+        "negative": 21,
+        "class_variation": false
+      }
+    ],
+    "majority_class_from_train": 0,
+    "majority": {
+      "n": 4599,
+      "accuracy": 0.9813002826701457,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          4513,
+          0
+        ],
+        [
+          86,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 4513,
+        "1": 86
+      },
+      "class_proportions": {
+        "0": 0.9813002826701457,
+        "1": 0.018699717329854315
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      }
+    },
+    "historical": {
+      "n": 4599,
+      "accuracy": 0.9789084583605131,
+      "precision": 0.4098360655737705,
+      "recall": 0.29069767441860467,
+      "specificity": 0.9920230445380013,
+      "f1": 0.3401360544217687,
+      "balanced_accuracy": 0.6413603594783029,
+      "confusion_matrix": [
+        [
+          4477,
+          36
+        ],
+        [
+          61,
+          25
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 4513,
+        "1": 86
+      },
+      "class_proportions": {
+        "0": 0.9813002826701457,
+        "1": 0.018699717329854315
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      }
+    }
+  },
+  "val": {
+    "observations": 2628,
+    "positive": 35,
+    "negative": 2593,
+    "prevalence": 0.013318112633181126,
+    "entities": 219,
+    "positive_entities": 9,
+    "entities_varying": 9,
+    "monthly": [
+      {
+        "month": "2015-01",
+        "observations": 219,
+        "positive": 0,
+        "negative": 219,
+        "prevalence": 0.0
+      },
+      {
+        "month": "2015-02",
+        "observations": 219,
+        "positive": 1,
+        "negative": 218,
+        "prevalence": 0.0045662100456621
+      },
+      {
+        "month": "2015-03",
+        "observations": 219,
+        "positive": 6,
+        "negative": 213,
+        "prevalence": 0.0273972602739726
+      },
+      {
+        "month": "2015-04",
+        "observations": 219,
+        "positive": 4,
+        "negative": 215,
+        "prevalence": 0.0182648401826484
+      },
+      {
+        "month": "2015-05",
+        "observations": 219,
+        "positive": 2,
+        "negative": 217,
+        "prevalence": 0.0091324200913242
+      },
+      {
+        "month": "2015-06",
+        "observations": 219,
+        "positive": 2,
+        "negative": 217,
+        "prevalence": 0.0091324200913242
+      },
+      {
+        "month": "2015-07",
+        "observations": 219,
+        "positive": 7,
+        "negative": 212,
+        "prevalence": 0.0319634703196347
+      },
+      {
+        "month": "2015-08",
+        "observations": 219,
+        "positive": 1,
+        "negative": 218,
+        "prevalence": 0.0045662100456621
+      },
+      {
+        "month": "2015-09",
+        "observations": 219,
+        "positive": 2,
+        "negative": 217,
+        "prevalence": 0.0091324200913242
+      },
+      {
+        "month": "2015-10",
+        "observations": 219,
+        "positive": 2,
+        "negative": 217,
+        "prevalence": 0.0091324200913242
+      },
+      {
+        "month": "2015-11",
+        "observations": 219,
+        "positive": 0,
+        "negative": 219,
+        "prevalence": 0.0
+      },
+      {
+        "month": "2015-12",
+        "observations": 219,
+        "positive": 8,
+        "negative": 211,
+        "prevalence": 0.0365296803652968
+      }
+    ],
+    "by_item": [
+      {
+        "item_id": 1,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 2,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 3,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 4,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 5,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 6,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 7,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 8,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 9,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 10,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 11,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 12,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 13,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 14,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 15,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 16,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 17,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 18,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 19,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 20,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 21,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 22,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 23,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 24,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 25,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 26,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 27,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 28,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 29,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 30,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 31,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 32,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 33,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 34,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 35,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 36,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 37,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 38,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 39,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 40,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 41,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 42,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 43,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 44,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 45,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 46,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 47,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 48,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 49,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 50,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 51,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 52,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 53,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 54,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 55,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 56,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 57,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 58,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 59,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 60,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 61,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 62,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 63,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 64,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 65,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 66,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 67,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 68,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 69,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 70,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 71,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 72,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 73,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 74,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 75,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 76,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 77,
+        "observations": 12,
+        "positive": 4,
+        "negative": 8,
+        "class_variation": true
+      },
+      {
+        "item_id": 78,
+        "observations": 12,
+        "positive": 3,
+        "negative": 9,
+        "class_variation": true
+      },
+      {
+        "item_id": 79,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 80,
+        "observations": 12,
+        "positive": 4,
+        "negative": 8,
+        "class_variation": true
+      },
+      {
+        "item_id": 81,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 82,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 83,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 84,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 85,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 86,
+        "observations": 12,
+        "positive": 3,
+        "negative": 9,
+        "class_variation": true
+      },
+      {
+        "item_id": 87,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 88,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 89,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 90,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 91,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 92,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 93,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 94,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 95,
+        "observations": 12,
+        "positive": 4,
+        "negative": 8,
+        "class_variation": true
+      },
+      {
+        "item_id": 96,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 97,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 98,
+        "observations": 12,
+        "positive": 4,
+        "negative": 8,
+        "class_variation": true
+      },
+      {
+        "item_id": 99,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 100,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 101,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 102,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 103,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 104,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 105,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 106,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 107,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 108,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 109,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 110,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 111,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 112,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 113,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 114,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 115,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 116,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 117,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 118,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 119,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 120,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 121,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 122,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 123,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 124,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 125,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 126,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 127,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 128,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 129,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 130,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 131,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 132,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 133,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 134,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 135,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 136,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 137,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 138,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 139,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 140,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 141,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 142,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 143,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 144,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 145,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 146,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 147,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 148,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 149,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 150,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 151,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 152,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 153,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 154,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 155,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 156,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 157,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 158,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 159,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 160,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 161,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 162,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 163,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 164,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 165,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 166,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 167,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 168,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 169,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 170,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 171,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 172,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 173,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 174,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 175,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 176,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 177,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 178,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 179,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 180,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 181,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 182,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 183,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 184,
+        "observations": 12,
+        "positive": 6,
+        "negative": 6,
+        "class_variation": true
+      },
+      {
+        "item_id": 185,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 186,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 187,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 188,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 189,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 190,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 191,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 192,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 193,
+        "observations": 12,
+        "positive": 4,
+        "negative": 8,
+        "class_variation": true
+      },
+      {
+        "item_id": 194,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 195,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 196,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 197,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 198,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 199,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 200,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 201,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 202,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 203,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 204,
+        "observations": 12,
+        "positive": 3,
+        "negative": 9,
+        "class_variation": true
+      },
+      {
+        "item_id": 205,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 206,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 207,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 208,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 209,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 210,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 211,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 212,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 213,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 214,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 215,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 216,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 217,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 218,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      },
+      {
+        "item_id": 219,
+        "observations": 12,
+        "positive": 0,
+        "negative": 12,
+        "class_variation": false
+      }
+    ],
+    "majority_class_from_train": 0,
+    "majority": {
+      "n": 2628,
+      "accuracy": 0.9866818873668188,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          2593,
+          0
+        ],
+        [
+          35,
+          0
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 2593,
+        "1": 35
+      },
+      "class_proportions": {
+        "0": 0.9866818873668188,
+        "1": 0.013318112633181126
+      },
+      "denominator_zero": {
+        "precision": true,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      }
+    },
+    "historical": {
+      "n": 2628,
+      "accuracy": 0.9843987823439878,
+      "precision": 0.35,
+      "recall": 0.2,
+      "specificity": 0.9949865021210953,
+      "f1": 0.2545454545454545,
+      "balanced_accuracy": 0.5974932510605476,
+      "confusion_matrix": [
+        [
+          2580,
+          13
+        ],
+        [
+          28,
+          7
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 2593,
+        "1": 35
+      },
+      "class_proportions": {
+        "0": 0.9866818873668188,
+        "1": 0.013318112633181126
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      }
+    }
+  }
+}

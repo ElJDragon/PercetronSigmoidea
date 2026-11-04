@@ -1,0 +1,233 @@
+[
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Order Key],[City Key],[Customer Key],[Stock Item Key],[Order Date Key],[Picked Date Key],[Salesperson Key],[Picker Key],[WWI Order ID],[WWI Backorder ID],[Description],[Package],[Quantity],[Unit Price],[Tax Rate],[Total Excluding Tax],[Tax Amount],[Total Including Tax],[Lineage Key])) AS checksum FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Purchase Key],[Date Key],[Supplier Key],[Stock Item Key],[WWI Purchase Order ID],[Ordered Outers],[Ordered Quantity],[Received Outers],[Package],[Is Order Finalized],[Lineage Key])) AS checksum FROM [Fact].[Purchase]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Movement Key],[Date Key],[Stock Item Key],[Customer Key],[Supplier Key],[Transaction Type Key],[WWI Stock Item Transaction ID],[WWI Invoice ID],[WWI Purchase Order ID],[Quantity],[Lineage Key])) AS checksum FROM [Fact].[Movement]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Stock Holding Key],[Stock Item Key],[Quantity On Hand],[Bin Location],[Last Stocktake Quantity],[Last Cost Price],[Reorder Level],[Target Stock Level],[Lineage Key])) AS checksum FROM [Fact].[Stock Holding]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Transaction Key],[Date Key],[Customer Key],[Bill To Customer Key],[Supplier Key],[Transaction Type Key],[Payment Method Key],[WWI Customer Transaction ID],[WWI Supplier Transaction ID],[WWI Invoice ID],[WWI Purchase Order ID],[Supplier Invoice Number],[Total Excluding Tax],[Tax Amount],[Total Including Tax],[Outstanding Balance],[Is Finalized],[Lineage Key])) AS checksum FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Date],[Day Number],[Day],[Month],[Short Month],[Calendar Month Number],[Calendar Month Label],[Calendar Year],[Calendar Year Label],[Fiscal Month Number],[Fiscal Month Label],[Fiscal Year],[Fiscal Year Label],[ISO Week Number])) AS checksum FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Stock Item Key],[WWI Stock Item ID],[Stock Item],[Color],[Selling Package],[Buying Package],[Brand],[Size],[Lead Time Days],[Quantity Per Outer],[Is Chiller Stock],[Barcode],[Tax Rate],[Unit Price],[Recommended Retail Price],[Typical Weight Per Unit],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Customer Key],[WWI Customer ID],[Customer],[Bill To Customer],[Category],[Buying Group],[Primary Contact],[Postal Code],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Customer]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Supplier Key],[WWI Supplier ID],[Supplier],[Category],[Primary Contact],[Supplier Reference],[Payment Days],[Postal Code],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Supplier]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Transaction Type Key],[WWI Transaction Type ID],[Transaction Type],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Transaction Type]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Payment Method Key],[WWI Payment Method ID],[Payment Method],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Payment Method]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([City Key],[WWI City ID],[City],[State Province],[Country],[Continent],[Sales Territory],[Region],[Subregion],[Latest Recorded Population],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Employee Key],[WWI Employee ID],[Employee],[Preferred Name],[Is Salesperson],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Employee]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,MIN(month) AS min_month,MAX(month) AS max_month,SUM(CAST(CASE WHEN net_units>0 THEN 1 ELSE 0 END AS bigint)) AS positive_net_groups,SUM(CAST(CASE WHEN net_units<0 THEN 1 ELSE 0 END AS bigint)) AS negative_net_groups,SUM(CAST(CASE WHEN net_units=0 THEN 1 ELSE 0 END AS bigint)) AS zero_net_groups FROM (SELECT si.[WWI Stock Item ID],CONVERT(char(7),f.[Order Date Key],126) AS month,SUM(CAST(f.[Quantity] AS bigint)) AS net_units FROM [Fact].[Order] f JOIN [Dimension].[Stock Item] si ON f.[Stock Item Key]=si.[Stock Item Key] GROUP BY si.[WWI Stock Item ID],CONVERT(char(7),f.[Order Date Key],126)) g",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,MIN(month) AS min_month,MAX(month) AS max_month,SUM(CAST(CASE WHEN net_units>0 THEN 1 ELSE 0 END AS bigint)) AS positive_net_groups,SUM(CAST(CASE WHEN net_units<0 THEN 1 ELSE 0 END AS bigint)) AS negative_net_groups,SUM(CAST(CASE WHEN net_units=0 THEN 1 ELSE 0 END AS bigint)) AS zero_net_groups FROM (SELECT si.[WWI Stock Item ID],CONVERT(char(7),f.[Date Key],126) AS month,SUM(CAST(f.[Ordered Quantity] AS bigint)) AS net_units FROM [Fact].[Purchase] f JOIN [Dimension].[Stock Item] si ON f.[Stock Item Key]=si.[Stock Item Key] GROUP BY si.[WWI Stock Item ID],CONVERT(char(7),f.[Date Key],126)) g",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS groups,MIN(month) AS min_month,MAX(month) AS max_month,SUM(CAST(CASE WHEN net_units>0 THEN 1 ELSE 0 END AS bigint)) AS positive_net_groups,SUM(CAST(CASE WHEN net_units<0 THEN 1 ELSE 0 END AS bigint)) AS negative_net_groups,SUM(CAST(CASE WHEN net_units=0 THEN 1 ELSE 0 END AS bigint)) AS zero_net_groups FROM (SELECT si.[WWI Stock Item ID],CONVERT(char(7),f.[Date Key],126) AS month,SUM(CAST(f.[Quantity] AS bigint)) AS net_units FROM [Fact].[Movement] f JOIN [Dimension].[Stock Item] si ON f.[Stock Item Key]=si.[Stock Item Key] GROUP BY si.[WWI Stock Item ID],CONVERT(char(7),f.[Date Key],126)) g",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,COUNT(DISTINCT s.[WWI Stock Item ID]) AS business_products,MIN(s.[Valid From]) AS min_dimension_valid_from,MAX(s.[Valid From]) AS max_dimension_valid_from FROM [Fact].[Stock Holding] h JOIN [Dimension].[Stock Item] s ON h.[Stock Item Key]=s.[Stock Item Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT TOP (10) a.[WWI Supplier ID] AS business_id,a.[Supplier Key] AS key_a,b.[Supplier Key] AS key_b,a.[Valid From] AS from_a,a.[Valid To] AS to_a,b.[Valid From] AS from_b,b.[Valid To] AS to_b FROM [Dimension].[Supplier] a JOIN [Dimension].[Supplier] b ON a.[WWI Supplier ID]=b.[WWI Supplier ID] AND a.[Supplier Key]<b.[Supplier Key] AND a.[Valid From]<b.[Valid To] AND b.[Valid From]<a.[Valid To] ORDER BY a.[WWI Supplier ID],a.[Supplier Key],b.[Supplier Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT TOP (10) a.[WWI City ID] AS business_id,a.[City Key] AS key_a,b.[City Key] AS key_b,a.[Valid From] AS from_a,a.[Valid To] AS to_a,b.[Valid From] AS from_b,b.[Valid To] AS to_b FROM [Dimension].[City] a JOIN [Dimension].[City] b ON a.[WWI City ID]=b.[WWI City ID] AND a.[City Key]<b.[City Key] AND a.[Valid From]<b.[Valid To] AND b.[Valid From]<a.[Valid To] ORDER BY a.[WWI City ID],a.[City Key],b.[City Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 10
+  },
+  {
+    "sql": "SELECT TOP (10) a.[WWI Employee ID] AS business_id,a.[Employee Key] AS key_a,b.[Employee Key] AS key_b,a.[Valid From] AS from_a,a.[Valid To] AS to_a,b.[Valid From] AS from_b,b.[Valid To] AS to_b FROM [Dimension].[Employee] a JOIN [Dimension].[Employee] b ON a.[WWI Employee ID]=b.[WWI Employee ID] AND a.[Employee Key]<b.[Employee Key] AND a.[Valid From]<b.[Valid To] AND b.[Valid From]<a.[Valid To] ORDER BY a.[WWI Employee ID],a.[Employee Key],b.[Employee Key]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Order Key],[City Key],[Customer Key],[Stock Item Key],[Order Date Key],[Picked Date Key],[Salesperson Key],[Picker Key],[WWI Order ID],[WWI Backorder ID],[Description],[Package],[Quantity],[Unit Price],[Tax Rate],[Total Excluding Tax],[Tax Amount],[Total Including Tax],[Lineage Key])) AS checksum FROM [Fact].[Order]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Purchase Key],[Date Key],[Supplier Key],[Stock Item Key],[WWI Purchase Order ID],[Ordered Outers],[Ordered Quantity],[Received Outers],[Package],[Is Order Finalized],[Lineage Key])) AS checksum FROM [Fact].[Purchase]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Movement Key],[Date Key],[Stock Item Key],[Customer Key],[Supplier Key],[Transaction Type Key],[WWI Stock Item Transaction ID],[WWI Invoice ID],[WWI Purchase Order ID],[Quantity],[Lineage Key])) AS checksum FROM [Fact].[Movement]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Stock Holding Key],[Stock Item Key],[Quantity On Hand],[Bin Location],[Last Stocktake Quantity],[Last Cost Price],[Reorder Level],[Target Stock Level],[Lineage Key])) AS checksum FROM [Fact].[Stock Holding]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Transaction Key],[Date Key],[Customer Key],[Bill To Customer Key],[Supplier Key],[Transaction Type Key],[Payment Method Key],[WWI Customer Transaction ID],[WWI Supplier Transaction ID],[WWI Invoice ID],[WWI Purchase Order ID],[Supplier Invoice Number],[Total Excluding Tax],[Tax Amount],[Total Including Tax],[Outstanding Balance],[Is Finalized],[Lineage Key])) AS checksum FROM [Fact].[Transaction]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Date],[Day Number],[Day],[Month],[Short Month],[Calendar Month Number],[Calendar Month Label],[Calendar Year],[Calendar Year Label],[Fiscal Month Number],[Fiscal Month Label],[Fiscal Year],[Fiscal Year Label],[ISO Week Number])) AS checksum FROM [Dimension].[Date]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Stock Item Key],[WWI Stock Item ID],[Stock Item],[Color],[Selling Package],[Buying Package],[Brand],[Size],[Lead Time Days],[Quantity Per Outer],[Is Chiller Stock],[Barcode],[Tax Rate],[Unit Price],[Recommended Retail Price],[Typical Weight Per Unit],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Stock Item]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Customer Key],[WWI Customer ID],[Customer],[Bill To Customer],[Category],[Buying Group],[Primary Contact],[Postal Code],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Customer]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Supplier Key],[WWI Supplier ID],[Supplier],[Category],[Primary Contact],[Supplier Reference],[Payment Days],[Postal Code],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Supplier]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Transaction Type Key],[WWI Transaction Type ID],[Transaction Type],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Transaction Type]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Payment Method Key],[WWI Payment Method ID],[Payment Method],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Payment Method]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([City Key],[WWI City ID],[City],[State Province],[Country],[Continent],[Sales Territory],[Region],[Subregion],[Latest Recorded Population],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[City]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([Employee Key],[WWI Employee ID],[Employee],[Preferred Name],[Is Salesperson],[Valid From],[Valid To],[Lineage Key])) AS checksum FROM [Dimension].[Employee]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  }
+]

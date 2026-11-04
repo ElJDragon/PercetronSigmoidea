@@ -1,0 +1,38 @@
+[
+  {
+    "sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(st.StockItemTransactionID,st.StockItemID,st.TransactionTypeID,st.TransactionOccurredWhen,st.Quantity,st.InvoiceID,st.PurchaseOrderID,st.LastEditedWhen)) AS checksum FROM Warehouse.StockItemTransactions st WHERE st.TransactionOccurredWhen < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT st.StockItemTransactionID AS event_id,st.StockItemID AS item_id,st.TransactionTypeID AS type_id,st.TransactionOccurredWhen AS occurred_at,st.Quantity AS quantity,st.InvoiceID AS invoice_id,st.PurchaseOrderID AS purchase_order_id,st.CustomerID AS customer_id,st.SupplierID AS supplier_id,st.LastEditedWhen AS edited_at FROM Warehouse.StockItemTransactions st WHERE st.TransactionOccurredWhen < ? ORDER BY st.StockItemTransactionID",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 206143
+  },
+  {
+    "sql": "SELECT d.StockItemID AS item_id,d.UnitPackageID AS unit_package_id,d.OuterPackageID AS outer_package_id,d.QuantityPerOuter AS quantity_per_outer,d.ValidFrom AS valid_from,d.ValidTo AS valid_to FROM Warehouse.StockItems FOR SYSTEM_TIME ALL d WHERE d.ValidFrom < ? ORDER BY d.StockItemID,d.ValidFrom",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 219
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(st.StockItemTransactionID,st.StockItemID,st.TransactionTypeID,st.TransactionOccurredWhen,st.Quantity,st.InvoiceID,st.PurchaseOrderID,st.LastEditedWhen)) AS checksum FROM Warehouse.StockItemTransactions st WHERE st.TransactionOccurredWhen < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "scope": "Viabilidad por documento sin matrices ni entrenamiento; desarrollo anterior a 2016",
+  "implementation_sha256": {
+    "src\\datamarts\\pedidos\\documentos.py": "8e053250777cb212c97e80fd38baf541692d715f6397533033efd47d582a3fb1",
+    "src\\datamarts\\pedidos\\reportes_documentos.py": "f0f7774aab880d7dd69d567706963044d3c9f1d495e2c0bc9091b794e783fde1",
+    "tests\\test_pedidos_documentos.py": "29c02d908a0b04937e46308adf0b4586d7e34d97bfd26ba370cd2f17c4d9391d"
+  },
+  "artifacts_sha256": {
+    "resultados\\extension_datamarts\\pedidos\\documentos\\agregados_documentos.json": "cbbe8aa735fdef7b8f8f04ca1b085e843cc399bf76767d8a7ad922b119535f63",
+    "resultados\\extension_datamarts\\pedidos\\documentos\\analisis_etiquetas.md": "bfc5a83485e129a48f3eccdf89527c8b927369263aa30c1e3347d101c6c5d991",
+    "resultados\\extension_datamarts\\pedidos\\documentos\\campos_cabecera.json": "e46e9a27499f5bb098fc2ab21e7481be5ab9d72f376259059ce283e82e1dde04",
+    "resultados\\extension_datamarts\\pedidos\\documentos\\consultas_desarrollo.json": "6b863c44f9b2924938740539e29a3997c77a17269232f5e97793b260f95ed12f",
+    "resultados\\extension_datamarts\\pedidos\\documentos\\consultas_exploratorias.json": "5dae613dad4d5629032a06e640b5c908be4eac648258c112298368539161c376",
+    "resultados\\extension_datamarts\\pedidos\\documentos\\consultas_metadatos.json": "39aecff30c6428ec05fe9aebeba26e6bfdb35f28d1ba89d78f1306a2c31fe170",
+    "resultados\\extension_datamarts\\pedidos\\documentos\\contrato_propuesto.json": "f0b405e3eab3a86f3e2790c3429ffb53a6844838f88f54644a14c8760a8406b5",
+    "resultados\\extension_datamarts\\pedidos\\documentos\\contrato_propuesto.md": "5c7829ee8720110db3b8433e5fc668e22ff0e9ceb620e3d633e2e8f2f8682437",
+    "resultados\\extension_datamarts\\pedidos\\documentos\\dictamen.json": "f2158c487afae0cc8ae710f1816bf49952162ac3b1b8ededdb7f214f6cb654dc",
+    "resultados\\extension_datamarts\\pedidos\\documentos\\etiquetas_desarrollo.json": "002e19e92101d9c6f554aabf5a763c792e6cede0d110f5f704bd563c6c9d9221",
+    "resultados\\extension_datamarts\\pedidos\\documentos\\evidencia_semantica.json": "a91eeb4d8261cc3fcd403f2c6548196f8b46be5ad35bf03f94d798d537229b5e",
+    "resultados\\extension_datamarts\\pedidos\\documentos\\huella_antes.json": "e3f6258405c140470bd81344fc844e5f6d45f6e167c7794bb3d07b62b7207a80",
+    "resultados\\extension_datamarts\\pedidos\\documentos\\huella_despues.json": "e3f6258405c140470bd81344fc844e5f6d45f6e167c7794bb3d07b62b7207a80",
+    "resultados\\extension_datamarts\\pedidos\\documentos\\integridad_antes.json": "d49d3f7c71778737ff90ca7f7b48ad364e6549e1c93cb87d79f63eafc1ed3e29",
+    "resultados\\extension_datamarts\\pedidos\\documentos\\integridad_despues.json": "d49d3f7c71778737ff90ca7f7b48ad364e6549e1c93cb87d79f63eafc1ed3e29",
+    "resultados\\extension_datamarts\\pedidos\\documentos\\prevalencias_mensuales.csv": "d193865406038544b345e5a5ed8c2dfa664b5558ca6deca42c2a876e89a60693",
+    "resultados\\extension_datamarts\\pedidos\\documentos\\viabilidad.md": "855f9e30d735b43e35219eb116bd62ad85353a0157392aa19cd601a23fa357b6"
+  }
+}

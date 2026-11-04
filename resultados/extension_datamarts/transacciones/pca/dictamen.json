@@ -1,0 +1,21 @@
+{
+  "status": "development_consistent_pca_verified_test_readiness_confirmed_under_academic_contract",
+  "first_test_evaluation_can_be_authorized_in_subsequent_task": true,
+  "unconditional_operational_certification": false,
+  "primary_validation": 2943,
+  "secondary_common_validation": 2927,
+  "exclusions_only_for_historical_baseline": true,
+  "models_unchanged": true,
+  "classifier_inputs_remain_16D": true,
+  "pca_fit_partition": "train",
+  "test_opened": false,
+  "final_evaluation_executed": false,
+  "new_classifier_training_runs": 0,
+  "sql_queries": 0,
+  "conditions_before_test": [
+    "Check all original dataset/model/implementation hashes and new manifest/protocol",
+    "Check thresholds, checkpoint, feature order and preprocessor hashes",
+    "Record date and scope of first opening and preserve snapshot/provenance",
+    "Execute only after an explicit subsequent evaluation request"
+  ]
+}

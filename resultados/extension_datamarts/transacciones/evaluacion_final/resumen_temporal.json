@@ -1,0 +1,14 @@
+{
+  "perceptron": {
+    "global_BA": 0.6622172030867683,
+    "unweighted_monthly_mean_BA": 0.6589343779551255
+  },
+  "logistic": {
+    "global_BA": 0.6280895915678525,
+    "unweighted_monthly_mean_BA": 0.6251828465524003
+  },
+  "majority": {
+    "global_BA": 0.5,
+    "unweighted_monthly_mean_BA": 0.5
+  }
+}

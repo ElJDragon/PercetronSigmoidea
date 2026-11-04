@@ -1,0 +1,47 @@
+[
+  {
+    "sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(f.[Movement Key],f.[Date Key],f.[Stock Item Key],f.[WWI Stock Item Transaction ID],f.[Transaction Type Key],f.Quantity,f.[WWI Invoice ID],f.[WWI Purchase Order ID])) AS checksum FROM Fact.Movement f WHERE f.[Date Key] < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT f.[Movement Key] AS fact_id,f.[Date Key] AS event_date,f.[WWI Stock Item Transaction ID] AS event_id,f.[Stock Item Key] AS item_key,d.[WWI Stock Item ID] AS item_id,t.[WWI Transaction Type ID] AS type_id,t.[Transaction Type] AS type_name,f.Quantity AS quantity,f.[WWI Invoice ID] AS invoice_id,f.[WWI Purchase Order ID] AS purchase_order_id FROM Fact.Movement f LEFT JOIN Dimension.[Stock Item] d ON d.[Stock Item Key]=f.[Stock Item Key] LEFT JOIN Dimension.[Transaction Type] t ON t.[Transaction Type Key]=f.[Transaction Type Key] WHERE f.[Date Key] < ? ORDER BY f.[Movement Key]",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 206143
+  },
+  {
+    "sql": "SELECT f.[Invoice Date Key] AS event_date,f.[WWI Invoice ID] AS invoice_id,d.[WWI Stock Item ID] AS item_id,COUNT_BIG(*) AS lines,SUM(f.Quantity) AS quantity FROM Fact.Sale f LEFT JOIN Dimension.[Stock Item] d ON d.[Stock Item Key]=f.[Stock Item Key] WHERE f.[Invoice Date Key] < ? GROUP BY f.[Invoice Date Key],f.[WWI Invoice ID],d.[WWI Stock Item ID]",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 198807
+  },
+  {
+    "sql": "SELECT d.[Stock Item Key] AS item_key,d.[WWI Stock Item ID] AS item_id,d.[Quantity Per Outer] AS quantity_per_outer,d.[Selling Package] AS selling_package,d.[Buying Package] AS buying_package,d.[Valid From] AS valid_from,d.[Valid To] AS valid_to FROM Dimension.[Stock Item] d WHERE d.[Valid From] < ? ORDER BY d.[Stock Item Key]",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 220
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(f.[Movement Key],f.[Date Key],f.[Stock Item Key],f.[WWI Stock Item Transaction ID],f.[Transaction Type Key],f.Quantity,f.[WWI Invoice ID],f.[WWI Purchase Order ID])) AS checksum FROM Fact.Movement f WHERE f.[Date Key] < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  }
+]

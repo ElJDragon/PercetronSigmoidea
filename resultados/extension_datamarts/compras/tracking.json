@@ -1,0 +1,12 @@
+[
+  {
+    "table_name": "PurchaseOrderLines",
+    "change_tracking": 0,
+    "triggers": 0
+  },
+  {
+    "table_name": "PurchaseOrders",
+    "change_tracking": 0,
+    "triggers": 0
+  }
+]

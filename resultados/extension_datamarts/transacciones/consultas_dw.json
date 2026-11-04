@@ -1,0 +1,65 @@
+[
+  {
+    "sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(f.[Transaction Key],f.[Date Key],f.[WWI Customer Transaction ID],f.[WWI Supplier Transaction ID],f.[Total Including Tax],f.[Outstanding Balance],f.[Is Finalized])) AS checksum FROM Fact.[Transaction] f WHERE f.[Date Key] < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT f.[Transaction Key] AS fact_id,f.[Date Key] AS event_date,f.[WWI Customer Transaction ID] AS customer_event_id,f.[WWI Supplier Transaction ID] AS supplier_event_id,f.[WWI Invoice ID] AS invoice_id,f.[WWI Purchase Order ID] AS purchase_order_id,f.[Customer Key] AS customer_key,f.[Bill To Customer Key] AS bill_to_key,f.[Supplier Key] AS supplier_key,c.[WWI Customer ID] AS customer_id,b.[WWI Customer ID] AS bill_to_id,s.[WWI Supplier ID] AS supplier_id,t.[WWI Transaction Type ID] AS type_id,t.[Transaction Type] AS type_name,p.[WWI Payment Method ID] AS payment_id,f.[Total Excluding Tax] AS excluding_tax,f.[Tax Amount] AS tax,f.[Total Including Tax] AS amount,f.[Outstanding Balance] AS current_balance,f.[Is Finalized] AS current_finalized FROM Fact.[Transaction] f LEFT JOIN Dimension.Customer c ON c.[Customer Key]=f.[Customer Key] LEFT JOIN Dimension.Customer b ON b.[Customer Key]=f.[Bill To Customer Key] LEFT JOIN Dimension.Supplier s ON s.[Supplier Key]=f.[Supplier Key] JOIN Dimension.[Transaction Type] t ON t.[Transaction Type Key]=f.[Transaction Type Key] LEFT JOIN Dimension.[Payment Method] p ON p.[Payment Method Key]=f.[Payment Method Key] WHERE f.[Date Key] < ? ORDER BY f.[Transaction Key]",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 86475
+  },
+  {
+    "sql": "SELECT d.[Transaction Type Key] AS surrogate,d.[WWI Transaction Type ID] AS business_id,[Transaction Type] AS label,d.[Valid From] AS valid_from,d.[Valid To] AS valid_to FROM Dimension.[Transaction Type] d WHERE d.[Valid From] < ? ORDER BY surrogate",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 13
+  },
+  {
+    "sql": "SELECT d.[Payment Method Key] AS surrogate,d.[WWI Payment Method ID] AS business_id,[Payment Method] AS label,d.[Valid From] AS valid_from,d.[Valid To] AS valid_to FROM Dimension.[Payment Method] d WHERE d.[Valid From] < ? ORDER BY surrogate",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 5
+  },
+  {
+    "sql": "SELECT d.[Customer Key] AS surrogate,d.[WWI Customer ID] AS business_id,CAST(NULL AS nvarchar(100)) AS label,d.[Valid From] AS valid_from,d.[Valid To] AS valid_to FROM Dimension.[Customer] d WHERE d.[Valid From] < ? ORDER BY surrogate",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 403
+  },
+  {
+    "sql": "SELECT d.[Supplier Key] AS surrogate,d.[WWI Supplier ID] AS business_id,CAST(NULL AS nvarchar(100)) AS label,d.[Valid From] AS valid_from,d.[Valid To] AS valid_to FROM Dimension.[Supplier] d WHERE d.[Valid From] < ? ORDER BY surrogate",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 28
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(f.[Transaction Key],f.[Date Key],f.[WWI Customer Transaction ID],f.[WWI Supplier Transaction ID],f.[Total Including Tax],f.[Outstanding Balance],f.[Is Finalized])) AS checksum FROM Fact.[Transaction] f WHERE f.[Date Key] < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  }
+]

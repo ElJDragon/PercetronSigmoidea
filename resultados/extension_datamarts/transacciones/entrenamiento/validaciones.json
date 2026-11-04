@@ -1,0 +1,62 @@
+{
+  "status": "successful",
+  "tests_run": 274,
+  "new_focused_tests": 19,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "prior_files_preserved": 565,
+  "features": 16,
+  "preprocessor_refitted": false,
+  "dataset_rebuilt": false,
+  "source_matrices_modified": false,
+  "classifiers_reused_without_modification": true,
+  "training_partition": "train only",
+  "checkpoint_selection": "validation BA,F1,earliest epoch,experiment order",
+  "original_configurations": 4,
+  "adaptive_expansion": false,
+  "deterministic_reproduction": {
+    "status": "successful",
+    "original_configurations": 4,
+    "additional_configurations": 0,
+    "verification_reruns_same_configurations": 4,
+    "candidate_files_byte_identical": 16,
+    "predictions_byte_identical": true,
+    "figures_byte_identical": 12,
+    "histories_metrics_and_selected_models_identical": true,
+    "model_weights_identical": true,
+    "test_loaded": false,
+    "sql_queries": 0,
+    "environment_scope": "same recorded numeric and plotting environment"
+  },
+  "frozen_model_sha256": {
+    "perceptron": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0",
+    "logistic": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  "selected_runs": {
+    "perceptron": {
+      "id": "p_seed7",
+      "epoch": 3
+    },
+    "logistic": {
+      "id": "l_eta010",
+      "epoch": 399
+    }
+  },
+  "logistic_threshold": 0.5,
+  "figures_generated": 12,
+  "representative_figures_visually_verified": 3,
+  "majority_baseline": 0,
+  "historical_baseline_matches_four_month_contract": true,
+  "common_support": {
+    "train": 4376,
+    "validation": 2927
+  },
+  "sql_queries": 0,
+  "test_2016_loaded": false,
+  "pca_executed": false,
+  "git_operations": false,
+  "academic_report_modified": false,
+  "automatic_final_evaluation_started": false,
+  "manifest_sha256": "7f9be9e3a62b2a176748f98cfe9637a5e9998f14757f24587124443a872010e6"
+}

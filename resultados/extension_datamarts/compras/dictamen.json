@@ -1,0 +1,23 @@
+{
+  "dataset_authorized": false,
+  "training_viable_now": false,
+  "recommended_objective_for_future_contract": "frecuencia mensual de órdenes por proveedor superior a mediana de tres meses previos",
+  "recommended_granularity": "proveedor-mes, sin sumar unidades heterogéneas",
+  "recommended_target": "1[N(s,t)>median(N(s,t-1),N(s,t-2),N(s,t-3))]",
+  "status": "insufficient_historical_availability_and_coverage_for_training",
+  "authorized_observations": {
+    "train": 0,
+    "validation": 0
+  },
+  "reason": "No hay reconstrucción de cantidades originales o estado de órdenes al inicio de mes. El control conservador elimina toda la historia activa de los escenarios sin ceros. Los paneles con ausencias como cero dependen de cobertura no certificada y no dan soporte positivo en validación tras el control.",
+  "next_separate_task": "Transacciones financieras",
+  "work_order": [
+    "Compras",
+    "Transacciones financieras",
+    "Inventario/Movimientos"
+  ],
+  "test_2016_used_for_design": false,
+  "matrices_generated": false,
+  "training_performed": false,
+  "pca_performed": false
+}

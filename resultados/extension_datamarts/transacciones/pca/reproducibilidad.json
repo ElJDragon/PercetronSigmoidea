@@ -1,0 +1,10 @@
+{
+  "status": "successful",
+  "new_artifacts_reproduced_identically": 23,
+  "all_byte_hashes_identical": true,
+  "figures_identical": 3,
+  "sql_queries": 0,
+  "classifier_fit_calls": 0,
+  "test_loaded": false,
+  "projection_format": "CSV UTF-8,17 significant digits,round_trip float64 C order"
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "schema_name": "Purchasing",
+    "table_name": "SupplierTransactions",
+    "index_name": "CX_Purchasing_SupplierTransactions",
+    "is_unique": false,
+    "column_name": "TransactionDate",
+    "key_ordinal": 1
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "SupplierTransactions",
+    "index_name": "FK_Purchasing_SupplierTransactions_PaymentMethodID",
+    "is_unique": false,
+    "column_name": "TransactionDate",
+    "key_ordinal": 0
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "SupplierTransactions",
+    "index_name": "FK_Purchasing_SupplierTransactions_PaymentMethodID",
+    "is_unique": false,
+    "column_name": "PaymentMethodID",
+    "key_ordinal": 1
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "SupplierTransactions",
+    "index_name": "FK_Purchasing_SupplierTransactions_PurchaseOrderID",
+    "is_unique": false,
+    "column_name": "TransactionDate",
+    "key_ordinal": 0
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "SupplierTransactions",
+    "index_name": "FK_Purchasing_SupplierTransactions_PurchaseOrderID",
+    "is_unique": false,
+    "column_name": "PurchaseOrderID",
+    "key_ordinal": 1
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "SupplierTransactions",
+    "index_name": "FK_Purchasing_SupplierTransactions_SupplierID",
+    "is_unique": false,
+    "column_name": "TransactionDate",
+    "key_ordinal": 0
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "SupplierTransactions",
+    "index_name": "FK_Purchasing_SupplierTransactions_SupplierID",
+    "is_unique": false,
+    "column_name": "SupplierID",
+    "key_ordinal": 1
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "SupplierTransactions",
+    "index_name": "FK_Purchasing_SupplierTransactions_TransactionTypeID",
+    "is_unique": false,
+    "column_name": "TransactionDate",
+    "key_ordinal": 0
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "SupplierTransactions",
+    "index_name": "FK_Purchasing_SupplierTransactions_TransactionTypeID",
+    "is_unique": false,
+    "column_name": "TransactionTypeID",
+    "key_ordinal": 1
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "SupplierTransactions",
+    "index_name": "IX_Purchasing_SupplierTransactions_IsFinalized",
+    "is_unique": false,
+    "column_name": "TransactionDate",
+    "key_ordinal": 0
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "SupplierTransactions",
+    "index_name": "IX_Purchasing_SupplierTransactions_IsFinalized",
+    "is_unique": false,
+    "column_name": "IsFinalized",
+    "key_ordinal": 1
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "SupplierTransactions",
+    "index_name": "PK_Purchasing_SupplierTransactions",
+    "is_unique": true,
+    "column_name": "SupplierTransactionID",
+    "key_ordinal": 1
+  },
+  {
+    "schema_name": "Sales",
+    "table_name": "CustomerTransactions",
+    "index_name": "CX_Sales_CustomerTransactions",
+    "is_unique": false,
+    "column_name": "TransactionDate",
+    "key_ordinal": 1
+  },
+  {
+    "schema_name": "Sales",
+    "table_name": "CustomerTransactions",
+    "index_name": "FK_Sales_CustomerTransactions_CustomerID",
+    "is_unique": false,
+    "column_name": "TransactionDate",
+    "key_ordinal": 0
+  },
+  {
+    "schema_name": "Sales",
+    "table_name": "CustomerTransactions",
+    "index_name": "FK_Sales_CustomerTransactions_CustomerID",
+    "is_unique": false,
+    "column_name": "CustomerID",
+    "key_ordinal": 1
+  },
+  {
+    "schema_name": "Sales",
+    "table_name": "CustomerTransactions",
+    "index_name": "FK_Sales_CustomerTransactions_InvoiceID",
+    "is_unique": false,
+    "column_name": "TransactionDate",
+    "key_ordinal": 0
+  },
+  {
+    "schema_name": "Sales",
+    "table_name": "CustomerTransactions",
+    "index_name": "FK_Sales_CustomerTransactions_InvoiceID",
+    "is_unique": false,
+    "column_name": "InvoiceID",
+    "key_ordinal": 1
+  },
+  {
+    "schema_name": "Sales",
+    "table_name": "CustomerTransactions",
+    "index_name": "FK_Sales_CustomerTransactions_PaymentMethodID",
+    "is_unique": false,
+    "column_name": "TransactionDate",
+    "key_ordinal": 0
+  },
+  {
+    "schema_name": "Sales",
+    "table_name": "CustomerTransactions",
+    "index_name": "FK_Sales_CustomerTransactions_PaymentMethodID",
+    "is_unique": false,
+    "column_name": "PaymentMethodID",
+    "key_ordinal": 1
+  },
+  {
+    "schema_name": "Sales",
+    "table_name": "CustomerTransactions",
+    "index_name": "FK_Sales_CustomerTransactions_TransactionTypeID",
+    "is_unique": false,
+    "column_name": "TransactionDate",
+    "key_ordinal": 0
+  },
+  {
+    "schema_name": "Sales",
+    "table_name": "CustomerTransactions",
+    "index_name": "FK_Sales_CustomerTransactions_TransactionTypeID",
+    "is_unique": false,
+    "column_name": "TransactionTypeID",
+    "key_ordinal": 1
+  },
+  {
+    "schema_name": "Sales",
+    "table_name": "CustomerTransactions",
+    "index_name": "IX_Sales_CustomerTransactions_IsFinalized",
+    "is_unique": false,
+    "column_name": "TransactionDate",
+    "key_ordinal": 0
+  },
+  {
+    "schema_name": "Sales",
+    "table_name": "CustomerTransactions",
+    "index_name": "IX_Sales_CustomerTransactions_IsFinalized",
+    "is_unique": false,
+    "column_name": "IsFinalized",
+    "key_ordinal": 1
+  },
+  {
+    "schema_name": "Sales",
+    "table_name": "CustomerTransactions",
+    "index_name": "PK_Sales_CustomerTransactions",
+    "is_unique": true,
+    "column_name": "CustomerTransactionID",
+    "key_ordinal": 1
+  }
+]

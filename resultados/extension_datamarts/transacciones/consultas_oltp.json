@@ -1,0 +1,56 @@
+[
+  {
+    "sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(ct.CustomerTransactionID,ct.CustomerID,ct.TransactionTypeID,ct.TransactionDate,ct.TransactionAmount,ct.LastEditedWhen)) AS checksum FROM Sales.CustomerTransactions ct WHERE ct.TransactionDate < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT ct.CustomerTransactionID AS event_id,ct.CustomerID AS entity_id,ct.InvoiceID AS document_id,ct.TransactionTypeID AS type_id,ct.PaymentMethodID AS payment_id,ct.TransactionDate AS event_date,ct.AmountExcludingTax AS excluding_tax,ct.TaxAmount AS tax,ct.TransactionAmount AS amount,ct.OutstandingBalance AS current_balance,ct.FinalizationDate AS current_finalization_date,ct.IsFinalized AS current_finalized,ct.LastEditedWhen AS edited_at FROM Sales.CustomerTransactions ct WHERE ct.TransactionDate < ? ORDER BY ct.CustomerTransactionID",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 84338
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(ct.CustomerTransactionID,ct.CustomerID,ct.TransactionTypeID,ct.TransactionDate,ct.TransactionAmount,ct.LastEditedWhen)) AS checksum FROM Sales.CustomerTransactions ct WHERE ct.TransactionDate < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(st.SupplierTransactionID,st.SupplierID,st.TransactionTypeID,st.TransactionDate,st.TransactionAmount,st.LastEditedWhen)) AS checksum FROM Purchasing.SupplierTransactions st WHERE st.TransactionDate < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT st.SupplierTransactionID AS event_id,st.SupplierID AS entity_id,st.PurchaseOrderID AS document_id,st.TransactionTypeID AS type_id,st.PaymentMethodID AS payment_id,st.TransactionDate AS event_date,st.AmountExcludingTax AS excluding_tax,st.TaxAmount AS tax,st.TransactionAmount AS amount,st.OutstandingBalance AS current_balance,st.FinalizationDate AS current_finalization_date,st.IsFinalized AS current_finalized,st.LastEditedWhen AS edited_at FROM Purchasing.SupplierTransactions st WHERE st.TransactionDate < ? ORDER BY st.SupplierTransactionID",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2137
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(st.SupplierTransactionID,st.SupplierID,st.TransactionTypeID,st.TransactionDate,st.TransactionAmount,st.LastEditedWhen)) AS checksum FROM Purchasing.SupplierTransactions st WHERE st.TransactionDate < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  }
+]

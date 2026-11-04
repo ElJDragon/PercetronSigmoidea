@@ -1,0 +1,56 @@
+[
+  {
+    "sql": "SELECT COUNT_BIG(*) AS lines,CHECKSUM_AGG(BINARY_CHECKSUM(po.PurchaseOrderID,po.SupplierID,po.OrderDate,po.LastEditedWhen,pol.PurchaseOrderLineID,pol.StockItemID,pol.OrderedOuters,pol.ReceivedOuters,pol.LastEditedWhen)) AS checksum FROM Purchasing.PurchaseOrders po JOIN Purchasing.PurchaseOrderLines pol ON po.PurchaseOrderID=pol.PurchaseOrderID WHERE po.OrderDate < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT po.PurchaseOrderID,po.SupplierID,po.OrderDate,po.ExpectedDeliveryDate,po.LastEditedWhen,po.IsOrderFinalized FROM Purchasing.PurchaseOrders po WHERE po.OrderDate < ? ORDER BY po.OrderDate,po.PurchaseOrderID",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1819
+  },
+  {
+    "sql": "SELECT pol.PurchaseOrderLineID,pol.PurchaseOrderID,pol.StockItemID,pol.OrderedOuters,pol.ReceivedOuters,pol.PackageTypeID,pol.LastReceiptDate,pol.IsOrderLineFinalized,pol.LastEditedWhen,si.QuantityPerOuter FROM Purchasing.PurchaseOrderLines pol JOIN Purchasing.PurchaseOrders po ON po.PurchaseOrderID=pol.PurchaseOrderID JOIN Warehouse.StockItems si ON si.StockItemID=pol.StockItemID WHERE po.OrderDate < ? ORDER BY pol.PurchaseOrderLineID",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 7307
+  },
+  {
+    "sql": "SELECT si.StockItemID,si.QuantityPerOuter,si.ValidFrom,si.ValidTo FROM Warehouse.StockItems FOR SYSTEM_TIME ALL si WHERE si.ValidFrom < ? AND si.StockItemID IN (SELECT pol.StockItemID FROM Purchasing.PurchaseOrderLines pol JOIN Purchasing.PurchaseOrders po ON po.PurchaseOrderID=pol.PurchaseOrderID WHERE po.OrderDate<'20160101') ORDER BY si.StockItemID,si.ValidFrom",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 219
+  },
+  {
+    "sql": "SELECT s.SupplierID,s.ValidFrom,s.ValidTo FROM Purchasing.Suppliers FOR SYSTEM_TIME ALL s WHERE s.ValidFrom < ? AND s.SupplierID IN (SELECT po.SupplierID FROM Purchasing.PurchaseOrders po WHERE po.OrderDate<'20160101') ORDER BY s.SupplierID,s.ValidFrom",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 12
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS lines,CHECKSUM_AGG(BINARY_CHECKSUM(po.PurchaseOrderID,po.SupplierID,po.OrderDate,po.LastEditedWhen,pol.PurchaseOrderLineID,pol.StockItemID,pol.OrderedOuters,pol.ReceivedOuters,pol.LastEditedWhen)) AS checksum FROM Purchasing.PurchaseOrders po JOIN Purchasing.PurchaseOrderLines pol ON po.PurchaseOrderID=pol.PurchaseOrderID WHERE po.OrderDate < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  }
+]

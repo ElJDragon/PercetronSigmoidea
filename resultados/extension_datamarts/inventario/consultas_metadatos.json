@@ -1,0 +1,23 @@
+[
+  {
+    "sql": "SELECT s.name AS schema_name,t.name AS table_name,c.name AS column_name,ty.name AS data_type,c.precision,c.scale,c.is_nullable,t.temporal_type_desc FROM sys.tables t JOIN sys.schemas s ON s.schema_id=t.schema_id JOIN sys.columns c ON c.object_id=t.object_id JOIN sys.types ty ON ty.user_type_id=c.user_type_id WHERE s.name='Warehouse' AND t.name IN ('StockItemTransactions','StockItems','StockItems_Archive') ORDER BY t.name,c.column_id",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 61
+  },
+  {
+    "sql": "SELECT TransactionTypeID,TransactionTypeName FROM Application.TransactionTypes ORDER BY TransactionTypeID",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 13
+  },
+  {
+    "sql": "SELECT s.name AS schema_name,o.name AS module_name,m.definition FROM sys.sql_modules m JOIN sys.objects o ON o.object_id=m.object_id JOIN sys.schemas s ON s.schema_id=o.schema_id WHERE m.definition LIKE '%Warehouse.StockItemTransactions%'",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 5
+  }
+]

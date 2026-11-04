@@ -1,0 +1,324 @@
+[
+  {
+    "sql": "SELECT s.name AS schema_name,t.name AS table_name,c.name AS column_name FROM sys.tables t JOIN sys.schemas s ON t.schema_id=s.schema_id JOIN sys.columns c ON c.object_id=t.object_id JOIN sys.types ty ON c.user_type_id=ty.user_type_id WHERE t.name IN (?,?,?,?,?,?,?,?) AND ty.name NOT IN (?,?,?,?) ORDER BY s.name,t.name,c.column_id",
+    "parameters": [
+      "Orders",
+      "OrderLines",
+      "PurchaseOrders",
+      "PurchaseOrderLines",
+      "StockItemTransactions",
+      "StockItemHoldings",
+      "CustomerTransactions",
+      "SupplierTransactions",
+      "geography",
+      "geometry",
+      "image",
+      "xml"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 101
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([PurchaseOrderLineID],[PurchaseOrderID],[StockItemID],[OrderedOuters],[Description],[ReceivedOuters],[PackageTypeID],[ExpectedUnitPricePerOuter],[LastReceiptDate],[IsOrderLineFinalized],[LastEditedBy],[LastEditedWhen])) AS checksum FROM [Purchasing].[PurchaseOrderLines]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([PurchaseOrderID],[SupplierID],[OrderDate],[DeliveryMethodID],[ContactPersonID],[ExpectedDeliveryDate],[SupplierReference],[IsOrderFinalized],[Comments],[InternalComments],[LastEditedBy],[LastEditedWhen])) AS checksum FROM [Purchasing].[PurchaseOrders]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([SupplierTransactionID],[SupplierID],[TransactionTypeID],[PurchaseOrderID],[PaymentMethodID],[SupplierInvoiceNumber],[TransactionDate],[AmountExcludingTax],[TaxAmount],[TransactionAmount],[OutstandingBalance],[FinalizationDate],[IsFinalized],[LastEditedBy],[LastEditedWhen])) AS checksum FROM [Purchasing].[SupplierTransactions]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([CustomerTransactionID],[CustomerID],[TransactionTypeID],[InvoiceID],[PaymentMethodID],[TransactionDate],[AmountExcludingTax],[TaxAmount],[TransactionAmount],[OutstandingBalance],[FinalizationDate],[IsFinalized],[LastEditedBy],[LastEditedWhen])) AS checksum FROM [Sales].[CustomerTransactions]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([OrderLineID],[OrderID],[StockItemID],[Description],[PackageTypeID],[Quantity],[UnitPrice],[TaxRate],[PickedQuantity],[PickingCompletedWhen],[LastEditedBy],[LastEditedWhen])) AS checksum FROM [Sales].[OrderLines]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([OrderID],[CustomerID],[SalespersonPersonID],[PickedByPersonID],[ContactPersonID],[BackorderOrderID],[OrderDate],[ExpectedDeliveryDate],[CustomerPurchaseOrderNumber],[IsUndersupplyBackordered],[Comments],[DeliveryInstructions],[InternalComments],[PickingCompletedWhen],[LastEditedBy],[LastEditedWhen])) AS checksum FROM [Sales].[Orders]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([StockItemID],[QuantityOnHand],[BinLocation],[LastStocktakeQuantity],[LastCostPrice],[ReorderLevel],[TargetStockLevel],[LastEditedBy],[LastEditedWhen])) AS checksum FROM [Warehouse].[StockItemHoldings]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([StockItemTransactionID],[StockItemID],[TransactionTypeID],[CustomerID],[InvoiceID],[SupplierID],[PurchaseOrderID],[TransactionOccurredWhen],[Quantity],[LastEditedBy],[LastEditedWhen])) AS checksum FROM [Warehouse].[StockItemTransactions]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT s.name AS schema_name,t.name AS table_name,c.name AS column_name,ty.name AS data_type,c.is_nullable,t.temporal_type_desc FROM sys.tables t JOIN sys.schemas s ON t.schema_id=s.schema_id JOIN sys.columns c ON c.object_id=t.object_id JOIN sys.types ty ON c.user_type_id=ty.user_type_id WHERE t.name IN (?,?,?,?,?,?,?,?) ORDER BY s.name,t.name,c.column_id",
+    "parameters": [
+      "Orders",
+      "OrderLines",
+      "PurchaseOrders",
+      "PurchaseOrderLines",
+      "StockItemTransactions",
+      "StockItemHoldings",
+      "CustomerTransactions",
+      "SupplierTransactions"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 101
+  },
+  {
+    "sql": "SELECT s.name AS schema_name,o.name AS module_name,m.definition FROM sys.sql_modules m JOIN sys.objects o ON o.object_id=m.object_id JOIN sys.schemas s ON s.schema_id=o.schema_id WHERE s.name=? AND o.name IN (?,?,?,?,?)",
+    "parameters": [
+      "Integration",
+      "GetOrderUpdates",
+      "GetPurchaseUpdates",
+      "GetMovementUpdates",
+      "GetStockHoldingUpdates",
+      "GetTransactionUpdates"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 5
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS orders,MIN(OrderDate) AS min_order_date,MAX(OrderDate) AS max_order_date,SUM(CAST(CASE WHEN PickingCompletedWhen IS NULL THEN 1 ELSE 0 END AS bigint)) AS no_completion,SUM(CAST(CASE WHEN BackorderOrderID IS NOT NULL THEN 1 ELSE 0 END AS bigint)) AS with_backorder,SUM(CAST(CASE WHEN LastEditedWhen>CAST(OrderDate AS datetime2) THEN 1 ELSE 0 END AS bigint)) AS edited_after_order_date FROM Sales.Orders",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS repeated_order_stock_pairs,COALESCE(SUM(n-1),0) AS excess FROM (SELECT OrderID,StockItemID,COUNT_BIG(*) AS n FROM Sales.OrderLines GROUP BY OrderID,StockItemID HAVING COUNT_BIG(*)>1) d",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS matched, SUM(CAST(CASE WHEN d.[Quantity]<>ol.Quantity OR d.[Order Date Key]<>o.OrderDate OR (d.[Picked Date Key]<>CAST(ol.PickingCompletedWhen AS date)) OR (d.[Picked Date Key] IS NULL AND ol.PickingCompletedWhen IS NOT NULL) OR (d.[Picked Date Key] IS NOT NULL AND ol.PickingCompletedWhen IS NULL) THEN 1 ELSE 0 END AS bigint)) AS discrepancies FROM [WideWorldImportersDW].[Fact].[Order] d JOIN [WideWorldImportersDW].[Dimension].[Stock Item] si ON si.[Stock Item Key]=d.[Stock Item Key] JOIN Sales.OrderLines ol ON ol.OrderID=d.[WWI Order ID] AND ol.StockItemID=si.[WWI Stock Item ID] JOIN Sales.Orders o ON o.OrderID=ol.OrderID",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS eligible_documents,SUM(CAST(CASE WHEN PickingCompletedWhen IS NULL OR CAST(PickingCompletedWhen AS date)>DATEADD(day,2,OrderDate) THEN 1 ELSE 0 END AS bigint)) AS possible_positive,SUM(CAST(CASE WHEN PickingCompletedWhen IS NOT NULL AND CAST(PickingCompletedWhen AS date)<=DATEADD(day,2,OrderDate) THEN 1 ELSE 0 END AS bigint)) AS possible_negative FROM Sales.Orders WHERE OrderDate<=DATEADD(day,-2,(SELECT MAX([Order Date Key]) FROM [WideWorldImportersDW].[Fact].[Order]))",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS no_completion_before_2day_cutoff FROM Sales.Orders WHERE PickingCompletedWhen IS NULL AND OrderDate<=DATEADD(day,-2,(SELECT MAX([Order Date Key]) FROM [WideWorldImportersDW].[Fact].[Order]))",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS lines,SUM(CAST(CASE WHEN l.LastReceiptDate IS NULL THEN 1 ELSE 0 END AS bigint)) AS missing_receipt,SUM(CAST(CASE WHEN l.LastReceiptDate<p.OrderDate THEN 1 ELSE 0 END AS bigint)) AS receipt_before_order,SUM(CAST(CASE WHEN l.LastReceiptDate>p.ExpectedDeliveryDate THEN 1 ELSE 0 END AS bigint)) AS last_receipt_after_expected,SUM(CAST(CASE WHEN l.LastEditedWhen>CAST(p.OrderDate AS datetime2) THEN 1 ELSE 0 END AS bigint)) AS edited_after_order_date FROM Purchasing.PurchaseOrderLines l JOIN Purchasing.PurchaseOrders p ON l.PurchaseOrderID=p.PurchaseOrderID",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS closed_observed_lines,SUM(CAST(CASE WHEN l.LastReceiptDate>p.ExpectedDeliveryDate THEN 1 ELSE 0 END AS bigint)) AS possible_late,COUNT(DISTINCT p.PurchaseOrderID) AS documents FROM Purchasing.PurchaseOrderLines l JOIN Purchasing.PurchaseOrders p ON l.PurchaseOrderID=p.PurchaseOrderID WHERE l.IsOrderLineFinalized=1 AND l.LastReceiptDate IS NOT NULL AND p.ExpectedDeliveryDate<=(SELECT MAX([Date Key]) FROM [WideWorldImportersDW].[Fact].[Purchase])",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS transactions,SUM(CAST(CASE WHEN Quantity<>FLOOR(Quantity) THEN 1 ELSE 0 END AS bigint)) AS fractional_quantities,MIN(TransactionOccurredWhen) AS min_event,MAX(TransactionOccurredWhen) AS max_event,SUM(CAST(CASE WHEN LastEditedWhen>TransactionOccurredWhen THEN 1 ELSE 0 END AS bigint)) AS edited_after_event FROM Warehouse.StockItemTransactions",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS matched,SUM(CAST(CASE WHEN d.[Date Key]<>CAST(s.TransactionOccurredWhen AS date) OR d.[Quantity]<>s.Quantity THEN 1 ELSE 0 END AS bigint)) AS discrepancies FROM [WideWorldImportersDW].[Fact].[Movement] d JOIN Warehouse.StockItemTransactions s ON s.StockItemTransactionID=d.[WWI Stock Item Transaction ID]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS transactions,MIN(TransactionDate) AS min_event,MAX(TransactionDate) AS max_event,MAX(FinalizationDate) AS latest_finalization,SUM(CAST(CASE WHEN FinalizationDate>TransactionDate THEN 1 ELSE 0 END AS bigint)) AS finalized_later,SUM(CAST(CASE WHEN IsFinalized=1 AND OutstandingBalance<>0 THEN 1 ELSE 0 END AS bigint)) AS finalized_nonzero_balance,SUM(CAST(CASE WHEN IsFinalized=0 AND FinalizationDate IS NOT NULL THEN 1 ELSE 0 END AS bigint)) AS unfinalized_with_date FROM Sales.CustomerTransactions",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS transactions,MIN(TransactionDate) AS min_event,MAX(TransactionDate) AS max_event,MAX(FinalizationDate) AS latest_finalization,SUM(CAST(CASE WHEN FinalizationDate>TransactionDate THEN 1 ELSE 0 END AS bigint)) AS finalized_later,SUM(CAST(CASE WHEN IsFinalized=1 AND OutstandingBalance<>0 THEN 1 ELSE 0 END AS bigint)) AS finalized_nonzero_balance,SUM(CAST(CASE WHEN IsFinalized=0 AND FinalizationDate IS NOT NULL THEN 1 ELSE 0 END AS bigint)) AS unfinalized_with_date FROM Purchasing.SupplierTransactions",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS eligible_positive_invoices,SUM(CAST(CASE WHEN FinalizationDate IS NULL OR FinalizationDate>DATEADD(day,30,TransactionDate) THEN 1 ELSE 0 END AS bigint)) AS possible_unpaid_after_30d,MAX(FinalizationDate) AS latest_finalization FROM Sales.CustomerTransactions WHERE InvoiceID IS NOT NULL AND TransactionAmount>0 AND TransactionDate<=DATEADD(day,-30,(SELECT MAX([Date Key]) FROM [WideWorldImportersDW].[Fact].[Transaction]))",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS matched,SUM(CAST(CASE WHEN d.[Ordered Quantity]<>l.OrderedOuters*s.QuantityPerOuter OR d.[Is Order Finalized]<>l.IsOrderLineFinalized OR d.[Received Outers]<>l.ReceivedOuters THEN 1 ELSE 0 END AS bigint)) AS discrepancies FROM [WideWorldImportersDW].[Fact].[Purchase] d JOIN [WideWorldImportersDW].[Dimension].[Stock Item] si ON si.[Stock Item Key]=d.[Stock Item Key] JOIN Purchasing.PurchaseOrderLines l ON l.PurchaseOrderID=d.[WWI Purchase Order ID] AND l.StockItemID=si.[WWI Stock Item ID] JOIN Warehouse.StockItems s ON s.StockItemID=l.StockItemID",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS orders,SUM(CAST(CASE WHEN o.PickingCompletedWhen IS NULL AND o.BackorderOrderID IS NOT NULL THEN 1 ELSE 0 END AS bigint)) AS null_completion_with_backorder,SUM(CAST(CASE WHEN o.PickingCompletedWhen IS NULL AND o.BackorderOrderID IS NULL THEN 1 ELSE 0 END AS bigint)) AS null_completion_without_backorder,SUM(CAST(CASE WHEN o.BackorderOrderID IS NOT NULL AND b.OrderID IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphan_backorders,SUM(CAST(CASE WHEN b.OrderDate<o.OrderDate THEN 1 ELSE 0 END AS bigint)) AS backorder_before_parent,MAX(DATEDIFF(day,o.OrderDate,b.OrderDate)) AS max_backorder_lag_days FROM Sales.Orders o LEFT JOIN Sales.Orders b ON o.BackorderOrderID=b.OrderID",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS mature_orders,SUM(CAST(CASE WHEN b.OrderID IS NOT NULL AND b.OrderDate<=DATEADD(day,2,o.OrderDate) THEN 1 ELSE 0 END AS bigint)) AS backorder_within_2d,SUM(CAST(CASE WHEN b.OrderID IS NULL OR b.OrderDate>DATEADD(day,2,o.OrderDate) THEN 1 ELSE 0 END AS bigint)) AS no_backorder_within_2d FROM Sales.Orders o LEFT JOIN Sales.Orders b ON o.BackorderOrderID=b.OrderID WHERE o.OrderDate<=DATEADD(day,-2,(SELECT MAX([Order Date Key]) FROM [WideWorldImportersDW].[Fact].[Order]))",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT DATEDIFF(day,TransactionDate,FinalizationDate) AS days_to_finalize,COUNT_BIG(*) AS invoices FROM Sales.CustomerTransactions WHERE InvoiceID IS NOT NULL AND TransactionAmount>0 GROUP BY DATEDIFF(day,TransactionDate,FinalizationDate) ORDER BY days_to_finalize",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS mature_invoices,SUM(CAST(CASE WHEN FinalizationDate IS NULL OR FinalizationDate>DATEADD(day,7,TransactionDate) THEN 1 ELSE 0 END AS bigint)) AS possible_positive FROM Sales.CustomerTransactions WHERE InvoiceID IS NOT NULL AND TransactionAmount>0 AND TransactionDate<=DATEADD(day,-7,(SELECT MAX([Date Key]) FROM [WideWorldImportersDW].[Fact].[Transaction]))",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT DATEDIFF(day,p.OrderDate,l.LastReceiptDate) AS days_to_last_receipt,COUNT_BIG(*) AS lines FROM Purchasing.PurchaseOrderLines l JOIN Purchasing.PurchaseOrders p ON l.PurchaseOrderID=p.PurchaseOrderID GROUP BY DATEDIFF(day,p.OrderDate,l.LastReceiptDate) ORDER BY days_to_last_receipt",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 4
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS mature_lines,SUM(CAST(CASE WHEN l.PickingCompletedWhen IS NULL THEN 1 ELSE 0 END AS bigint)) AS unknown_completion,SUM(CAST(CASE WHEN l.PickingCompletedWhen IS NOT NULL AND CAST(l.PickingCompletedWhen AS date)>DATEADD(day,2,o.OrderDate) THEN 1 ELSE 0 END AS bigint)) AS observed_late,SUM(CAST(CASE WHEN l.PickingCompletedWhen IS NOT NULL AND CAST(l.PickingCompletedWhen AS date)<=DATEADD(day,2,o.OrderDate) THEN 1 ELSE 0 END AS bigint)) AS observed_within_2d FROM Sales.OrderLines l JOIN Sales.Orders o ON o.OrderID=l.OrderID WHERE o.OrderDate<=DATEADD(day,-2,(SELECT MAX([Order Date Key]) FROM [WideWorldImportersDW].[Fact].[Order]))",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS affected_lines,COUNT(DISTINCT o.CustomerID) AS source_customer_ids,SUM(CAST(CASE WHEN c.[Customer Key] IS NULL THEN 1 ELSE 0 END AS bigint)) AS lines_without_business_id_in_dimension FROM [WideWorldImportersDW].[Fact].[Order] d JOIN Sales.Orders o ON d.[WWI Order ID]=o.OrderID LEFT JOIN [WideWorldImportersDW].[Dimension].[Customer] c ON c.[WWI Customer ID]=o.CustomerID WHERE d.[Customer Key]=0",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT s.name AS schema_name,t.name AS table_name,c.name AS column_name FROM sys.tables t JOIN sys.schemas s ON t.schema_id=s.schema_id JOIN sys.columns c ON c.object_id=t.object_id JOIN sys.types ty ON c.user_type_id=ty.user_type_id WHERE t.name IN (?,?,?,?,?,?,?,?) AND ty.name NOT IN (?,?,?,?) ORDER BY s.name,t.name,c.column_id",
+    "parameters": [
+      "Orders",
+      "OrderLines",
+      "PurchaseOrders",
+      "PurchaseOrderLines",
+      "StockItemTransactions",
+      "StockItemHoldings",
+      "CustomerTransactions",
+      "SupplierTransactions",
+      "geography",
+      "geometry",
+      "image",
+      "xml"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 101
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([PurchaseOrderLineID],[PurchaseOrderID],[StockItemID],[OrderedOuters],[Description],[ReceivedOuters],[PackageTypeID],[ExpectedUnitPricePerOuter],[LastReceiptDate],[IsOrderLineFinalized],[LastEditedBy],[LastEditedWhen])) AS checksum FROM [Purchasing].[PurchaseOrderLines]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([PurchaseOrderID],[SupplierID],[OrderDate],[DeliveryMethodID],[ContactPersonID],[ExpectedDeliveryDate],[SupplierReference],[IsOrderFinalized],[Comments],[InternalComments],[LastEditedBy],[LastEditedWhen])) AS checksum FROM [Purchasing].[PurchaseOrders]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([SupplierTransactionID],[SupplierID],[TransactionTypeID],[PurchaseOrderID],[PaymentMethodID],[SupplierInvoiceNumber],[TransactionDate],[AmountExcludingTax],[TaxAmount],[TransactionAmount],[OutstandingBalance],[FinalizationDate],[IsFinalized],[LastEditedBy],[LastEditedWhen])) AS checksum FROM [Purchasing].[SupplierTransactions]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([CustomerTransactionID],[CustomerID],[TransactionTypeID],[InvoiceID],[PaymentMethodID],[TransactionDate],[AmountExcludingTax],[TaxAmount],[TransactionAmount],[OutstandingBalance],[FinalizationDate],[IsFinalized],[LastEditedBy],[LastEditedWhen])) AS checksum FROM [Sales].[CustomerTransactions]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([OrderLineID],[OrderID],[StockItemID],[Description],[PackageTypeID],[Quantity],[UnitPrice],[TaxRate],[PickedQuantity],[PickingCompletedWhen],[LastEditedBy],[LastEditedWhen])) AS checksum FROM [Sales].[OrderLines]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([OrderID],[CustomerID],[SalespersonPersonID],[PickedByPersonID],[ContactPersonID],[BackorderOrderID],[OrderDate],[ExpectedDeliveryDate],[CustomerPurchaseOrderNumber],[IsUndersupplyBackordered],[Comments],[DeliveryInstructions],[InternalComments],[PickingCompletedWhen],[LastEditedBy],[LastEditedWhen])) AS checksum FROM [Sales].[Orders]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([StockItemID],[QuantityOnHand],[BinLocation],[LastStocktakeQuantity],[LastCostPrice],[ReorderLevel],[TargetStockLevel],[LastEditedBy],[LastEditedWhen])) AS checksum FROM [Warehouse].[StockItemHoldings]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS rows,CHECKSUM_AGG(BINARY_CHECKSUM([StockItemTransactionID],[StockItemID],[TransactionTypeID],[CustomerID],[InvoiceID],[SupplierID],[PurchaseOrderID],[TransactionOccurredWhen],[Quantity],[LastEditedBy],[LastEditedWhen])) AS checksum FROM [Warehouse].[StockItemTransactions]",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  }
+]

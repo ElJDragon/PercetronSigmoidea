@@ -1,0 +1,136 @@
+{
+  "recorded_at_utc": "2026-11-04T04:31:43.776702+00:00",
+  "status": "preflight_passed_before_test_SQL",
+  "protocol_version": "PCA definitive protocol frozen before first test opening",
+  "protocol_sha256": "989b92ba2f032613341719f926d2ef0b500e1d659ed51fd276d5a6dffa169d1e",
+  "protocol_markdown_sha256": "78093dcff26297d32f8d20f61749a80c8eaf15f8bbfbf20dbc3eabcb02764fa0",
+  "protocol": {
+    "status": "frozen_before_first_test_opening",
+    "test_executed": false,
+    "sql_queries_now": 0,
+    "planned_months": [
+      "2016-01",
+      "2016-02",
+      "2016-03",
+      "2016-04",
+      "2016-05"
+    ],
+    "event_interval_inclusive_exclusive": [
+      "2016-01-01",
+      "2016-06-01"
+    ],
+    "proposed_label_knowledge_cut_exclusive": "2016-06-01 00:00:00",
+    "prior_protocol_sha256": "bb77d0ab3057cb1440de7ebbfb0657c40874a2ffeadfb5c10af014bae505b897",
+    "prior_test_spec_sha256": "de259dd01d5178490a2904a9c7b4e954c58a94ead6bac2c5bdd17c128ab30f17",
+    "primary_population": "All eligible account-month rows: 3 consecutive prior covered months, stable operational identity and target label known by cut; no fourth-lag requirement",
+    "primary_methods": [
+      "perceptron",
+      "logistic",
+      "majority"
+    ],
+    "secondary_population": "Exact intersection where contractual 4-month historical baseline is defined",
+    "secondary_methods": [
+      "perceptron",
+      "logistic",
+      "majority",
+      "historical"
+    ],
+    "events": "Only Customer Payment Received type 3, operational CustomerTransactionID unique; minimal approved projection and OLTP-DW bijection, read-only extraction",
+    "identity": "CustomerTransactions.CustomerID (Bill To), never substitute unknown DW keys or current names",
+    "first_seen": "First payment observable before prediction, no rows before appearance and no selection by future activity/survival",
+    "history": "N(t-1),N(t-2),N(t-3) and known calendar at start(t); development frozen plus prior test months already closed, never t for X",
+    "coverage": "Explicit business_ledger_academic and documented conservation assumptions; unknown/incomplete months indeterminate, never silent zeros",
+    "y": "1[N(t)>median(N(t-1),N(t-2),N(t-3))], ties 0; only after complete month and before cut; never select by prediction/error",
+    "preprocessing": "Frozen 16-column preprocessor: transform only, no fit, new constants, scaling or feature selection",
+    "classifiers": "Frozen perceptron epoch 3 seed 7 eta .01 z>=0; frozen logistic epoch 399 eta .10 threshold .5; no refit train+val",
+    "pca": "Visualization only, not classifier input; never fit on validation/test",
+    "majority": "Constant 0 from train only",
+    "historical": "1[N(t-1)>median(N(t-2),N(t-3),N(t-4))]",
+    "historical_undefined": "Keep row in primary evaluation if otherwise eligible; mark historical prediction missing; no imputation or classifier/majority exclusion from primary",
+    "exclusions": "Log stable ID, month, first appearance, primary eligibility, label availability, coverage state, fourth-month availability and separate reasons. Never overwrite old predictions.",
+    "metrics": "Full frozen conventions: accuracy, BA, precision, recall, F1, specificity, confusion [0,1], class support and predicted-positive rate; logistic AP from scores with grouped ties",
+    "comparisons": "Global and monthly, with exact stable-key equality for all methods within each named support. Do not compare n of one support with n of another.",
+    "generalization": "Report accounts seen in train, seen only in validation, and new eligible in test when support permits; no filtering based on these future outcomes",
+    "before_opening": [
+      "Check all original dataset/model/implementation hashes and new manifest/protocol",
+      "Check thresholds, checkpoint, feature order and preprocessor hashes",
+      "Record date and scope of first opening and preserve snapshot/provenance",
+      "Execute only after an explicit subsequent evaluation request"
+    ],
+    "after_opening": "No changes of model, threshold, label, horizon, coverage, support rules or baselines in response to outcomes; limitations remain documented"
+  },
+  "models_sha256": {
+    "perceptron": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0",
+    "logistic": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  "preprocessor_sha256": "f1b513c99312e07afe70980631fd4881c388a34be61b4bc7164e741d6b4c1ba5",
+  "source_matrices_sha256": {
+    "datos\\Procesados\\transacciones\\X_train.npy": "db2726949cd064c6c904a414493e195d3d43b9b08aed43f0bcb21de232765060",
+    "datos\\Procesados\\transacciones\\X_val.npy": "95237d20bc30e5280a57ce0b9eca58c35bd106c6b198f7faad4ccca69cbbce44",
+    "datos\\Procesados\\transacciones\\y_train.npy": "e971d363c3b7f6c6dd27ee8ec09e53d4c1a62e22dd39eb1cd5b36570037c580e",
+    "datos\\Procesados\\transacciones\\y_val.npy": "fbf59ac74441badc49c5d3f4348d33c5ee6d6b7ac91f50818fc894eca55d7e87"
+  },
+  "feature_names": [
+    "cobros_lag_1",
+    "cobros_lag_2",
+    "cobros_lag_3",
+    "cobros_media_3",
+    "cobros_mediana_3",
+    "cobros_std_3",
+    "cobros_cambio_1",
+    "cobros_tendencia_3",
+    "meses_con_cobros_3",
+    "mes_anterior_sin_cobros",
+    "variacion_relativa_cobros",
+    "base_variacion_cero",
+    "antiguedad_observada_meses",
+    "mes_sin",
+    "mes_cos",
+    "dias_mes_objetivo"
+  ],
+  "thresholds": {
+    "perceptron": "z>=0",
+    "logistic": 0.5
+  },
+  "baseline": "1[N(t-1)>median(N(t-2),N(t-3),N(t-4))]",
+  "majority": 0,
+  "source_sql": "SELECT ct.CustomerTransactionID AS event_id,ct.CustomerID AS customer_id,\nct.TransactionDate AS event_date,ct.TransactionTypeID AS type_id,ct.LastEditedWhen AS edited_at,\nCASE WHEN ct.TransactionAmount<0 THEN 1 ELSE 0 END AS negative_payment\nFROM Sales.CustomerTransactions ct\nWHERE ct.TransactionTypeID=? AND ct.TransactionDate>=? AND ct.TransactionDate<?\nORDER BY ct.CustomerTransactionID",
+  "source_fingerprint_sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(ct.CustomerTransactionID,\nct.CustomerID,ct.TransactionDate,ct.TransactionTypeID,ct.LastEditedWhen,\nCASE WHEN ct.TransactionAmount<0 THEN 1 ELSE 0 END)) AS checksum\nFROM Sales.CustomerTransactions ct\nWHERE ct.TransactionTypeID=? AND ct.TransactionDate>=? AND ct.TransactionDate<?",
+  "dw_sql": "SELECT f.[WWI Customer Transaction ID] AS event_id,f.[Date Key] AS event_date,\nt.[WWI Transaction Type ID] AS type_id\nFROM Fact.[Transaction] f JOIN Dimension.[Transaction Type] t\nON t.[Transaction Type Key]=f.[Transaction Type Key]\nWHERE t.[WWI Transaction Type ID]=? AND f.[Date Key]>=? AND f.[Date Key]<?\nAND f.[WWI Customer Transaction ID] IS NOT NULL\nORDER BY f.[WWI Customer Transaction ID]",
+  "dw_fingerprint_sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(f.[WWI Customer Transaction ID],\nf.[Date Key],t.[WWI Transaction Type ID])) AS checksum\nFROM Fact.[Transaction] f JOIN Dimension.[Transaction Type] t\nON t.[Transaction Type Key]=f.[Transaction Type Key]\nWHERE t.[WWI Transaction Type ID]=? AND f.[Date Key]>=? AND f.[Date Key]<?\nAND f.[WWI Customer Transaction ID] IS NOT NULL",
+  "parameters": [
+    3,
+    "2016-01-01",
+    "2016-06-01"
+  ],
+  "coverage_mode": "business_ledger_academic",
+  "coverage_assumptions": [
+    "TransactionDate representa el día de registro empresarial del pago/cobro; no se afirma una hora auditada de inserción.",
+    "El libro de eventos de desarrollo conserva los pagos registrados sin borrados o reclasificaciones retrospectivas relevantes no observados. Los módulos locales y las versiones actuales son evidencia de apoyo, no bitácora exhaustiva.",
+    "Las extracciones conciliadas OLTP–DW y presencia de pagos en los 36 meses justifican cobertura académica mensual del libro desde enero de 2013; no certifican conciliación bancaria ni completitud absoluta.",
+    "Bajo esa cobertura explícita, ausencia de un pago en un mes posterior a primera observación significa cero eventos registrados, no incapacidad de pagar ni ausencia de ventas.",
+    "La disponibilidad retrospectiva de eventos se aproxima por su día empresarial y el control observable de versión. Para todos los pagos seleccionados, última edición coincide con ese día; no se necesita inferir saldos anteriores."
+  ],
+  "month_evaluation_rule": "Complete calendar month before frozen cut; prior audit covers Jan-May; whole source interval reconciled OLTP-DW. Require observed monthly payment ledger continuity. Missing global month or failed reconciliation => unknown, never zero. Closure is academic, not inferred from last event date alone or bank-certified.",
+  "primary_population": "3 prior covered consecutive months, stable identity, X available at start(t), y known before cut",
+  "common_population": "Primary plus contractual 4 prior covered months for historical baseline, no imputation",
+  "metrics": [
+    "accuracy",
+    "balanced_accuracy",
+    "precision",
+    "recall",
+    "f1",
+    "specificity",
+    "false_alarm_rate",
+    "confusion_matrix",
+    "support",
+    "positive_prediction_proportion",
+    "logistic_average_precision"
+  ],
+  "eligibility": "First payment before prediction, age>=3; no selection using future account activity or prediction errors",
+  "classifier_training_allowed": false,
+  "scaler_fit_allowed": false,
+  "pca_used_for_classification": false,
+  "evaluator_sha256_before_opening": "92c244e8cc4cff13efcd13eaa4cefb564473e2cb2fd699d9902478baf91381a4",
+  "test_outcomes_accessed_when_record_written": false
+}

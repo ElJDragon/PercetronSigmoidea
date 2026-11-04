@@ -1,0 +1,31 @@
+{
+  "status": "identical",
+  "exports": 2,
+  "files_compared": 19,
+  "file_hashes": {
+    "data\\agregados_articulo_mes.csv.gz": "cccf6d8d9825f925f15af0d76bf0ac4de4e4d91a5867dcb6dc877beb6a227d51",
+    "data\\baseline_historico_train.csv": "36bcfa3f255a79c6b41d18f886da907868c1e749b195bbac625e0dc1b463f23f",
+    "data\\baseline_historico_val.csv": "18592438217cad63fec27d409d69a3d83fd5f31e55ce020a3f63d6c7c82d6568",
+    "data\\caracteristicas_sin_escalar.csv.gz": "0ebb89b53fb0fd17c78cbb2c0bb84352e0fc2d48bdb279635e17cb72c73dd76e",
+    "data\\claves_train.csv": "0a47ac6ed756e47b8a2b0017eda89f79295cae4751975af1f39b419c1c5687f8",
+    "data\\claves_val.csv": "396c2b79f30d7ec15d5336ad3b0ec3512d096b5e23103e27197e6a74729cfb2c",
+    "data\\etiquetas.csv.gz": "7b518cf1263e690780ed27a212472acfff79f70f0aeb2548ad4ff58f49806aa4",
+    "data\\exclusiones.csv": "779090bd6780c058d4009129b506154d597fa368134b9b6c1e788372a4c562df",
+    "data\\metadatos.csv.gz": "a74e188904f8aae5128e5c3c7584e2cc480c97ee662946fa920b622406e76c84",
+    "data\\primera_aparicion.csv": "02805e8ed8a4ebede885129c64254fc74b687f6a84d04424cbb42d425c5b1eb7",
+    "data\\X_train.npy": "9f39ba27433d6259914825dd307991a7a9150c6decfa49a0e74c34044a25dc03",
+    "data\\X_val.npy": "4d5038b73f2c04104ff7690eb45026ac9bf3b7f91b28bc057748814faf660e66",
+    "data\\y_train.npy": "bf7577c8f5767f93ad908cb105e8968ccb2c2d04321c69f7e7ea80797d3ebafd",
+    "data\\y_val.npy": "08dee6d39a114a32d574e68c74363a487ffdaacba145d2451ca60ca7bd9e0be6",
+    "out\\caracteristicas.json": "11fba56aec771135cab14ec7431795f36a8862c3f2787a9ae603305f85f27832",
+    "out\\cobertura_y_exclusiones.json": "36016d289ea3b37486139010db1d83d7327f005f7f28c04cf9fe80708ba24f71",
+    "out\\conteos.json": "dfb0405202a9e95fbf435b3e614d949bfe18d4a544dc73abb267fb98b5831038",
+    "out\\dimensiones.json": "2643c130a10b87e7e111f652c2a06a6f4c5d2cb5a19cdaae518d167b929d5ae4",
+    "out\\preprocesador.json": "a0541ad37cd070df3e3dc169844c3002833ed372efe4b9d7c7427e8b8c7cf408"
+  },
+  "SQL_queries": 0,
+  "classifier_training": false,
+  "classifier_predictions": false,
+  "PCA": false,
+  "canonical_files_identical": true
+}

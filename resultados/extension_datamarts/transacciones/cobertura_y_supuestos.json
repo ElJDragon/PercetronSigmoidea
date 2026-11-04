@@ -1,0 +1,25 @@
+{
+  "status": "justified_academic_business_event_ledger_not_absolute_certification",
+  "scope": "Eventos tipos 3/7 con TransactionDate en 2013-01..2015-12; dominios separados",
+  "confirmed": [
+    "Biyectividad de 86475 transacciones OLTP–DW en desarrollo sin discrepancias de fecha/tipo/importes/estado actual",
+    "Tipos de pago presentes en los 36 meses de desarrollo",
+    "23338 pagos/cobros con última edición en el propio día empresarial",
+    "Módulos locales insertan pagos separados y actualizan saldos/finalizaciones de obligaciones; no se ejecutó SQL de modificación"
+  ],
+  "assumptions": [
+    "TransactionDate representa el día de registro empresarial del pago/cobro; no se afirma una hora auditada de inserción.",
+    "El libro de eventos de desarrollo conserva los pagos registrados sin borrados o reclasificaciones retrospectivas relevantes no observados. Los módulos locales y las versiones actuales son evidencia de apoyo, no bitácora exhaustiva.",
+    "Las extracciones conciliadas OLTP–DW y presencia de pagos en los 36 meses justifican cobertura académica mensual del libro desde enero de 2013; no certifican conciliación bancaria ni completitud absoluta.",
+    "Bajo esa cobertura explícita, ausencia de un pago en un mes posterior a primera observación significa cero eventos registrados, no incapacidad de pagar ni ausencia de ventas.",
+    "La disponibilidad retrospectiva de eventos se aproxima por su día empresarial y el control observable de versión. Para todos los pagos seleccionados, última edición coincide con ese día; no se necesita inferir saldos anteriores."
+  ],
+  "unknowns": [
+    "No hay auditoría exhaustiva de borrados, anulaciones, escrituras desde clientes externos o backdating",
+    "No existe snapshot mensual ni bitácora de cada estado; no se necesitan para el objetivo de conteo, sí para saldos",
+    "No se certifica latencia ETL histórica o conciliación bancaria"
+  ],
+  "zero_policy": "Solo business_ledger_academic explícito, después de primera observación y dentro de meses cubiertos; unknown nunca rellena cero",
+  "unknown_coverage_sensitivity": "Solo meses con eventos observados en t y tres anteriores; resultado condicionado por actividad de t, no población alternativa aprobada",
+  "production_status": "Requiere cierres/latencias y reconciliación operacional antes de uso operativo"
+}

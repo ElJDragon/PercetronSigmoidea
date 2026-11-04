@@ -1,0 +1,61 @@
+{
+  "status": "successful",
+  "tests_run": 255,
+  "new_focused_tests": 28,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "prior_files_preserved": 529,
+  "deterministically_reproduced_files": 28,
+  "snapshot_events": 23018,
+  "snapshot_accounts": 257,
+  "snapshot_sha256": "38739cfbcccd5df3d8dd11248e44a16b35279a714f796eb8e206794e41b14a8d",
+  "coverage_explicit": "business_ledger_academic",
+  "absolute_completeness_claimed": false,
+  "train": {
+    "X_shape": [
+      4612,
+      16
+    ],
+    "y_shape": [
+      4612
+    ],
+    "positive": 1798,
+    "negative": 2814
+  },
+  "validation": {
+    "X_shape": [
+      2943,
+      16
+    ],
+    "y_shape": [
+      2943
+    ],
+    "positive": 1198,
+    "negative": 1745
+  },
+  "X_dtype": "float64",
+  "y_dtype": "int8",
+  "features_before_and_after_constant_filter": [
+    16,
+    16
+  ],
+  "discarded_features": [],
+  "matrices_finite": true,
+  "preprocessor_fit_partition": "train_only",
+  "identities_targets_and_predictors_separate": true,
+  "label_target_month_change_does_not_change_same_month_X": true,
+  "future_changes_do_not_affect_prior_observations": true,
+  "source_dw_payment_bijection": true,
+  "source_read_only_select_queries": 7,
+  "source_fingerprints_unchanged": true,
+  "query_2016_events": false,
+  "X_test_or_y_test_created": false,
+  "test_specification_prepared": true,
+  "models_trained": false,
+  "pca_experiment_executed": false,
+  "previous_contracts_or_report_modified": false,
+  "git_operations_performed": false,
+  "automatic_training_started": false,
+  "manifest_sha256": "74503aa2ecf8b08d152b861134d3971a0daa1269bd06792099a0da19d1932201"
+}

@@ -1,0 +1,17 @@
+{
+  "status": "reviewed",
+  "figures": 3,
+  "all_negatives_preserved": true,
+  "minority_drawn_last_with_larger_markers": true,
+  "no_jitter": true,
+  "no_decision_boundaries": true,
+  "shared_axis_limits": true,
+  "no_clipping_or_label_overlap": true,
+  "observed_class_overlap": true,
+  "classification_uses_original_17_features": true,
+  "figure_hashes": {
+    "graficos\\dispersion_train.png": "9cc02d2066328dad6ae3fce7c0dd7601253c419bde913eb70ca4540e7057f093",
+    "graficos\\dispersion_val.png": "175219e68e607713f2b747338ddb332a70a4845484df526dd8febef1d443e74d",
+    "graficos\\varianza_explicada.png": "f5d28164dc2fb028428ff87881235d81aa2f37c91f8c21437fa52421ffcc9513"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "Purchasing.PurchaseOrderLines": {
+    "rows": 8367,
+    "checksum": 22662676
+  },
+  "Purchasing.PurchaseOrders": {
+    "rows": 2074,
+    "checksum": -2084078098
+  },
+  "Purchasing.SupplierTransactions": {
+    "rows": 2438,
+    "checksum": 1626751145
+  },
+  "Sales.CustomerTransactions": {
+    "rows": 97147,
+    "checksum": 1621258364
+  },
+  "Sales.OrderLines": {
+    "rows": 231412,
+    "checksum": -694270442
+  },
+  "Sales.Orders": {
+    "rows": 73595,
+    "checksum": -1929618992
+  },
+  "Warehouse.StockItemHoldings": {
+    "rows": 227,
+    "checksum": 1801685076
+  },
+  "Warehouse.StockItemTransactions": {
+    "rows": 236667,
+    "checksum": -32726996
+  }
+}

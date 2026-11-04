@@ -1,0 +1,6 @@
+{
+  "python": "3.12.3",
+  "numpy": "2.4.4",
+  "pandas": "3.0.2",
+  "serialization": "CSV LF %.17g; gzip level9 mtime0 empty name; npy allow_pickle=False; fixed recorded numerical environment"
+}

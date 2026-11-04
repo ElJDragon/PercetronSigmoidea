@@ -1,0 +1,197 @@
+{
+  "id": "p_seed7",
+  "index": 1,
+  "algorithm": "perceptron",
+  "variant": "standard",
+  "params": {
+    "learning_rate": 0.01,
+    "max_epochs": 100,
+    "seed": 7,
+    "shuffle": true,
+    "initial_weights": null,
+    "initial_bias": 0.0
+  },
+  "selected_epoch": 98,
+  "metrics": {
+    "train": {
+      "n": 4599,
+      "accuracy": 0.979560774081322,
+      "precision": 0.4772727272727273,
+      "recall": 0.9767441860465116,
+      "specificity": 0.9796144471526701,
+      "f1": 0.6412213740458015,
+      "balanced_accuracy": 0.9781793165995909,
+      "confusion_matrix": [
+        [
+          4421,
+          92
+        ],
+        [
+          2,
+          84
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 4513,
+        "1": 86
+      },
+      "class_proportions": {
+        "0": 0.9813002826701457,
+        "1": 0.018699717329854315
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.03826918895412046,
+      "only_majority_predicted": false
+    },
+    "val": {
+      "n": 2628,
+      "accuracy": 0.9722222222222222,
+      "precision": 0.32407407407407407,
+      "recall": 1.0,
+      "specificity": 0.9718472811415348,
+      "f1": 0.48951048951048953,
+      "balanced_accuracy": 0.9859236405707674,
+      "confusion_matrix": [
+        [
+          2520,
+          73
+        ],
+        [
+          0,
+          35
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 2593,
+        "1": 35
+      },
+      "class_proportions": {
+        "0": 0.9866818873668188,
+        "1": 0.013318112633181126
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.0410958904109589,
+      "only_majority_predicted": false
+    }
+  },
+  "last_epoch_metrics": {
+    "train": {
+      "n": 4599,
+      "accuracy": 0.9849967384213959,
+      "precision": 0.5570469798657718,
+      "recall": 0.9651162790697675,
+      "specificity": 0.9853755816530024,
+      "f1": 0.7063829787234043,
+      "balanced_accuracy": 0.975245930361385,
+      "confusion_matrix": [
+        [
+          4447,
+          66
+        ],
+        [
+          3,
+          83
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 4513,
+        "1": 86
+      },
+      "class_proportions": {
+        "0": 0.9813002826701457,
+        "1": 0.018699717329854315
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.032398347466840616,
+      "only_majority_predicted": false
+    },
+    "val": {
+      "n": 2628,
+      "accuracy": 0.8162100456621004,
+      "precision": 0.06589147286821706,
+      "recall": 0.9714285714285714,
+      "specificity": 0.8141149247975318,
+      "f1": 0.12341197822141561,
+      "balanced_accuracy": 0.8927717481130516,
+      "confusion_matrix": [
+        [
+          2111,
+          482
+        ],
+        [
+          1,
+          34
+        ]
+      ],
+      "confusion_order": [
+        0,
+        1
+      ],
+      "support": {
+        "0": 2593,
+        "1": 35
+      },
+      "class_proportions": {
+        "0": 0.9866818873668188,
+        "1": 0.013318112633181126
+      },
+      "denominator_zero": {
+        "precision": false,
+        "recall": false,
+        "specificity": false,
+        "f1": false
+      },
+      "positive_prediction_proportion": 0.1963470319634703,
+      "only_majority_predicted": false
+    }
+  },
+  "epochs_run": 100,
+  "last_weights": [
+    0.30234866724560566,
+    0.2848767495268392,
+    0.33471570668369743,
+    -1.722883593788564,
+    1.0171520952222257,
+    0.7281291385454414,
+    0.3085628525844178,
+    -1.0380057379322014,
+    0.5153586526947046,
+    0.14673157921655963,
+    -0.11153567160311072,
+    -0.8560067468700269,
+    -0.9030371779464353,
+    0.1486301082920588,
+    0.3810250538208228,
+    -0.3881709497931369,
+    0.7746240203358994
+  ],
+  "last_bias": -1.400000000000001,
+  "termination": "max_epochs"
+}

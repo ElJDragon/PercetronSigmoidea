@@ -1,0 +1,47 @@
+[
+  {
+    "sql": "SELECT COUNT_BIG(*) AS lines,CHECKSUM_AGG(BINARY_CHECKSUM(p.[Purchase Key],p.[Date Key],p.[WWI Purchase Order ID],p.[Supplier Key],p.[Stock Item Key],p.[Ordered Quantity],p.[Ordered Outers],p.[Received Outers],p.[Is Order Finalized])) AS checksum FROM Fact.Purchase p WHERE p.[Date Key] < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT p.[Purchase Key] AS purchase_key,p.[Date Key] AS order_date,p.[WWI Purchase Order ID] AS order_id,p.[Supplier Key] AS supplier_key,p.[Stock Item Key] AS item_key,s.[WWI Supplier ID] AS supplier_id,i.[WWI Stock Item ID] AS item_id,s.[Valid From] AS supplier_from,s.[Valid To] AS supplier_to,i.[Valid From] AS item_from,i.[Valid To] AS item_to,p.[Ordered Outers] AS ordered_outers,p.[Ordered Quantity] AS ordered_quantity,p.[Received Outers] AS received_outers,p.[Is Order Finalized] AS finalized,p.Package FROM Fact.Purchase p JOIN Dimension.Supplier s ON s.[Supplier Key]=p.[Supplier Key] JOIN Dimension.[Stock Item] i ON i.[Stock Item Key]=p.[Stock Item Key] WHERE p.[Date Key] < ? ORDER BY p.[Purchase Key]",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 7307
+  },
+  {
+    "sql": "SELECT 'supplier' AS kind,s.[Supplier Key] AS surrogate,s.[WWI Supplier ID] AS business_id,s.[Valid From] AS valid_from,s.[Valid To] AS valid_to,CAST(NULL AS int) AS quantity_per_outer FROM Dimension.Supplier s WHERE s.[Valid From] < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 28
+  },
+  {
+    "sql": "SELECT i.[Stock Item Key] AS surrogate,i.[WWI Stock Item ID] AS business_id,i.[Valid From] AS valid_from,i.[Valid To] AS valid_to,i.[Quantity Per Outer] AS quantity_per_outer FROM Dimension.[Stock Item] i WHERE i.[Valid From] < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 220
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS lines,CHECKSUM_AGG(BINARY_CHECKSUM(p.[Purchase Key],p.[Date Key],p.[WWI Purchase Order ID],p.[Supplier Key],p.[Stock Item Key],p.[Ordered Quantity],p.[Ordered Outers],p.[Received Outers],p.[Is Order Finalized])) AS checksum FROM Fact.Purchase p WHERE p.[Date Key] < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  }
+]

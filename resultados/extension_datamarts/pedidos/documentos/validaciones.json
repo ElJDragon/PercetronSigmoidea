@@ -1,0 +1,24 @@
+{
+  "status": "successful",
+  "tests_run": 172,
+  "new_focused_tests": 14,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "prior_files_preserved": 427,
+  "offline_reports_reproduced": 6,
+  "select_query_ledgers_verified": {
+    "consultas_desarrollo.json": 7,
+    "consultas_exploratorias.json": 6
+  },
+  "database_fingerprint_unchanged": true,
+  "development_order_dates_before": "2016-01-01",
+  "test_2016_order_outcomes_queried": false,
+  "matrices_generated": false,
+  "models_trained": false,
+  "academic_report_modified": false,
+  "git_operations_performed": false,
+  "dataset_authorized": false,
+  "recommended_next_separate_task": "Fact.Movement",
+  "manifest_sha256": "5900d61d447069212bb879df49b1740ee339708c7a6fffeb6ca5fce883390b66"
+}

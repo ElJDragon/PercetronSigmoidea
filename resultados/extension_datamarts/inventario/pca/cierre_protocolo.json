@@ -1,0 +1,16 @@
+{
+  "closed_at_utc": "2026-11-04T06:14:37.749701+00:00",
+  "protocol_sha256": "0b302d7cf66e8f23f806356e5bbf3ee6571cc4d4efe784e81b63a6dfbe62ca68",
+  "frozen_models_manifest_sha256": "cf9084a1841d67e0ef76f3783279d5e1feaa2589f0e52b1d46eba2bb7c00ed7d",
+  "dataset_manifest_sha256": "7fcfee2c8d8475cba80620307b43126a529501063445c1f917e77069936f5589",
+  "feature_catalog_sha256": "a0f2983780ba0da751016aca0ba6576281d8b833ca28d27ea3d6e8c7eee751f1",
+  "preprocessor_sha256": "a0541ad37cd070df3e3dc169844c3002833ed372efe4b9d7c7427e8b8c7cf408",
+  "implementation_sha256": {
+    "src/experiments/pca_inventario.py": "e1f141c9cb9e45ca9f92e1bf3567edc2137e4c6a2dd2a1b8f937d4aea37743b0",
+    "src/experiments/reportes_pca_inventario.py": "5df7b3a6ab7b48e28678cf2bd9b90bc3bc863e5dd8807b685bb3339c13cbd194",
+    "tests/test_pca_inventario.py": "0b058de5e36bda97c7a0c76a2141ccbb111d9b122bb33474e5b95747570bae71"
+  },
+  "test_opened": false,
+  "SQL_queries": 0,
+  "required_future_opening_record": true
+}

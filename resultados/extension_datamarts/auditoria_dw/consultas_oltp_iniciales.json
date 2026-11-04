@@ -1,0 +1,26 @@
+[
+  {
+    "sql": "SELECT s.name AS schema_name,t.name AS table_name,c.name AS column_name,ty.name AS data_type,c.is_nullable,t.temporal_type_desc FROM sys.tables t JOIN sys.schemas s ON t.schema_id=s.schema_id JOIN sys.columns c ON c.object_id=t.object_id JOIN sys.types ty ON c.user_type_id=ty.user_type_id WHERE t.name IN (?,?,?,?,?,?,?,?) ORDER BY s.name,t.name,c.column_id",
+    "parameters": [
+      "Orders",
+      "OrderLines",
+      "PurchaseOrders",
+      "PurchaseOrderLines",
+      "StockItemTransactions",
+      "StockItemHoldings",
+      "CustomerTransactions",
+      "SupplierTransactions"
+    ],
+    "rows_returned": 101,
+    "operation": "SELECT"
+  },
+  {
+    "sql": "SELECT s.name AS schema_name,o.name AS module_name FROM sys.objects o JOIN sys.schemas s ON o.schema_id=s.schema_id WHERE s.name=? AND o.type=?",
+    "parameters": [
+      "Integration",
+      "P"
+    ],
+    "rows_returned": 13,
+    "operation": "SELECT"
+  }
+]

@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "fit_partition": "train",
+  "train_rows": 4612,
+  "input_features": [
+    "cobros_lag_1",
+    "cobros_lag_2",
+    "cobros_lag_3",
+    "cobros_media_3",
+    "cobros_mediana_3",
+    "cobros_std_3",
+    "cobros_cambio_1",
+    "cobros_tendencia_3",
+    "meses_con_cobros_3",
+    "mes_anterior_sin_cobros",
+    "variacion_relativa_cobros",
+    "base_variacion_cero",
+    "antiguedad_observada_meses",
+    "mes_sin",
+    "mes_cos",
+    "dias_mes_objetivo"
+  ],
+  "optional": [
+    "variacion_relativa_cobros"
+  ],
+  "feature_names": [
+    "cobros_lag_1",
+    "cobros_lag_2",
+    "cobros_lag_3",
+    "cobros_media_3",
+    "cobros_mediana_3",
+    "cobros_std_3",
+    "cobros_cambio_1",
+    "cobros_tendencia_3",
+    "meses_con_cobros_3",
+    "mes_anterior_sin_cobros",
+    "variacion_relativa_cobros",
+    "base_variacion_cero",
+    "antiguedad_observada_meses",
+    "mes_sin",
+    "mes_cos",
+    "dias_mes_objetivo"
+  ],
+  "discarded": {},
+  "parameters": {
+    "cobros_lag_1": {
+      "median": 2.0,
+      "mean": 2.711838681699913,
+      "std_population": 2.7353660782344273,
+      "impute": "not_needed_required_finite"
+    },
+    "cobros_lag_2": {
+      "median": 2.0,
+      "mean": 2.6910234171725933,
+      "std_population": 2.7315853680678313,
+      "impute": "not_needed_required_finite"
+    },
+    "cobros_lag_3": {
+      "median": 2.0,
+      "mean": 2.695793581960104,
+      "std_population": 2.72305845580827,
+      "impute": "not_needed_required_finite"
+    },
+    "cobros_media_3": {
+      "median": 2.3333333333333335,
+      "mean": 2.6995518936108702,
+      "std_population": 2.4200231979720117,
+      "impute": "not_needed_required_finite"
+    },
+    "cobros_mediana_3": {
+      "median": 2.0,
+      "mean": 2.6105810928013877,
+      "std_population": 2.5156321179531713,
+      "impute": "not_needed_required_finite"
+    },
+    "cobros_std_3": {
+      "median": 0.9428090415820634,
+      "mean": 1.1101847277438441,
+      "std_population": 0.6033252739084383,
+      "impute": "not_needed_required_finite"
+    },
+    "cobros_cambio_1": {
+      "median": 0.0,
+      "mean": 0.020815264527320035,
+      "std_population": 2.1951615234833093,
+      "impute": "not_needed_required_finite"
+    },
+    "cobros_tendencia_3": {
+      "median": 0.0,
+      "mean": 0.008022549869904597,
+      "std_population": 1.090018496232107,
+      "impute": "not_needed_required_finite"
+    },
+    "meses_con_cobros_3": {
+      "median": 3.0,
+      "mean": 2.7502168256721595,
+      "std_population": 0.4767467502017308,
+      "impute": "not_needed_required_finite"
+    },
+    "mes_anterior_sin_cobros": {
+      "median": 0.0,
+      "mean": 0.0826105810928014,
+      "std_population": 0.27529270419738894,
+      "impute": "not_needed_required_finite"
+    },
+    "variacion_relativa_cobros": {
+      "median": 0.0,
+      "mean": 0.22048641269911867,
+      "std_population": 1.0947717648473716,
+      "impute": "median_train"
+    },
+    "base_variacion_cero": {
+      "median": 0.0,
+      "mean": 0.08586296617519515,
+      "std_population": 0.28016159125546175,
+      "impute": "not_needed_required_finite"
+    },
+    "antiguedad_observada_meses": {
+      "median": 13.0,
+      "mean": 12.654163052905464,
+      "std_population": 5.991997229996834,
+      "impute": "not_needed_required_finite"
+    },
+    "mes_sin": {
+      "median": 0.0,
+      "mean": -0.08108069668682102,
+      "std_population": 0.7169549215117643,
+      "impute": "not_needed_required_finite"
+    },
+    "mes_cos": {
+      "median": -1.8369701987210297e-16,
+      "mean": -0.10475000098558863,
+      "std_population": 0.684418730338642,
+      "impute": "not_needed_required_finite"
+    },
+    "dias_mes_objetivo": {
+      "median": 31.0,
+      "mean": 30.47918473547268,
+      "std_population": 0.7346288002196624,
+      "impute": "not_needed_required_finite"
+    }
+  },
+  "dtype": "float64",
+  "ddof": 0,
+  "formula": "(x_filled_with_train_median - train_mean) / train_population_std",
+  "redundancy_policy": "keep_all_nonconstant_authorized_features; no selection using validation"
+}

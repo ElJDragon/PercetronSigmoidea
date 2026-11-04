@@ -1,0 +1,91 @@
+{
+  "version": "pedidos-1.0-especificacion",
+  "verdict": "Viable con ajustes explícitos para líneas con picking observado; no validación de utilidad predictiva ni habilitación del ETL",
+  "unit": {
+    "primary_key": "Sales.OrderLines.OrderLineID",
+    "dw_bridge": [
+      "WWI Order ID",
+      "WWI Stock Item ID"
+    ],
+    "document_id": "Sales.Orders.OrderID actual; cambia por traslado a backorder",
+    "group_id": "Raíz de la familia de backorders, solo asociación, nunca entrada numérica"
+  },
+  "prediction_instant": "Emisión de la demanda original de la línea; solo se conoce su fecha calendario heredada OrderDate, no hora exacta. Usar historia estrictamente anterior al inicio de ese día.",
+  "target": "1[DATE(picking_completed)>OrderDate+2 días calendario], solo cuando picking observado y justificadamente disponible; igualdad es clase 0",
+  "horizon_end_exclusive": "inicio de OrderDate+3 días; no 48 horas, días laborables ni SLA contractual",
+  "known_at_conservative": "max(PickingCompletedWhen,OrderLines.LastEditedWhen,Orders.LastEditedWhen); última edición es cota conservadora del estado persistido, no prueba de latencia ni historial completo",
+  "asof_mode": "Reconstrucción retrospectiva conservadora de la copia, no snapshot real de cada corte; disponibilidad de ingestión sin certificar",
+  "missing_pick_policy": "Indeterminado incluso con seguimiento nominal suficiente: no evidencia histórica negativa fiable de ausencia del evento; conservar estado sin y",
+  "development_eligibility": "OrderDate<2016-01-01, horizon_end<=cut, picking>=inicio OrderDate y picking<cut, ambas últimas ediciones<cut; no nulos; filtros de features posteriores aún no aplicados",
+  "partitions": {
+    "train": {
+      "orders": [
+        "2013-01-01",
+        "2014-12-31"
+      ],
+      "outcomes_before": "2015-01-01T00:00:00"
+    },
+    "validation": {
+      "orders": [
+        "2015-01-01",
+        "2015-12-31"
+      ],
+      "outcomes_before": "2016-01-01T00:00:00"
+    },
+    "test": {
+      "orders": [
+        "2016-01-01",
+        "2016-05-31"
+      ],
+      "proposed_followup_before": "2016-06-01T00:00:00",
+      "outcomes": "No consultados en esta tarea; certificar cobertura antes de apertura"
+    }
+  },
+  "boundary_policy": "Excluir últimos dos días calendario de cada partición para horizonte homogéneo; además retener etiqueta solo si su observación y versión existían antes del corte. No etiquetar positivos en el vencimiento sin observabilidad de ausencia.",
+  "features_enabled_design": {
+    "mes_sin": "sin(2*pi*(month-1)/12)",
+    "mes_cos": "cos(2*pi*(month-1)/12)",
+    "semana_sin": "sin(2*pi*weekday/7), lunes=0",
+    "semana_cos": "cos(2*pi*weekday/7), lunes=0",
+    "dia_mes": "día de mes 1..31",
+    "dias_mes": "días calendario del mes, incluyendo bisiestos"
+  },
+  "features_conditional_disabled": [
+    "Cantidad solicitada y precio/importe originales: no tomar último estado como valor inicial sin prueba",
+    "Conteo y variedad original del pedido: la composición actual fue alterada por backorders",
+    "Historia de actividad por producto/cliente: requiere origen estable, corte estricto y versiones disponibles",
+    "Historia de retrasos: disponible solo desde known_at del evento, no desde OrderDate ni desde una supuesta ausencia al día 3",
+    "Atributos dimensionales/cliente: relaciones as-of únicas y comprobadas antes de habilitar"
+  ],
+  "forbidden_features": [
+    "Picking objetivo",
+    "PickedQuantity objetivo",
+    "Picker final",
+    "BackorderOrderID final",
+    "Estado de cumplimiento",
+    "Fechas de última edición como predictores",
+    "Información posterior al registro",
+    "OrderKey/OrderID/OrderLineID/StockItemID/CustomerID como magnitudes continuas"
+  ],
+  "unknown_customer": "Conservar observación; categoría desconocido si se habilita categórica y su resolución es conocida al corte. En base se desactivan entradas de cliente. IDs OLTP son evidencia, no identidad inventada; su uso requiere contrato.",
+  "dimensional_join_policy": "No unir a última versión. Exigir intervalo semiabierto vigente en corte, ID operacional y exactamente una coincidencia; cero -> desconocido, más de una -> ambiguo/deshabilitado. Nunca arbitrar con TOP 1 o clave máxima.",
+  "metrics": [
+    "balanced_accuracy",
+    "precision_delay",
+    "recall_delay",
+    "f1_delay",
+    "average_precision_from_scores_if_available",
+    "specificity",
+    "FPR",
+    "false_discovery_rate",
+    "alert_proportion",
+    "confusion_matrix",
+    "accuracy_secondary"
+  ],
+  "baselines": {
+    "majority": "Clase 0 congelada desde train justificado; regla/estado persisten antes de abrir test",
+    "causal_history_candidate": "Última etiqueta de línea conocida por producto, con known_at anterior al inicio del día objetivo; si falta, mayoría train. Desactivada hasta validar identidad y disponibilidad de historia."
+  },
+  "training_strategy": "No ponderación, sobremuestreo, síntesis o búsqueda de umbral fijados aquí; modelos propios no aceptan automáticamente sample_weight. Estrategia posterior solo con train/validación y pruebas propias.",
+  "test_seal": "Todas las nuevas consultas de outcomes llevan o.OrderDate<2016-01-01 parametrizado; cifras globales preexistentes solo se reutilizan para conciliación."
+}

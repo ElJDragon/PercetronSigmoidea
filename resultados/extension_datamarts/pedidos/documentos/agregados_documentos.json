@@ -1,0 +1,3668 @@
+{
+  "identity_coverage": {
+    "documents": 63978,
+    "distinct_documents": 63978,
+    "min_date": "2013-01-01",
+    "max_date": "2015-12-31",
+    "current_pending_or_unobserved": 2428,
+    "current_completed_flag": 61550,
+    "pick_before_order": 0
+  },
+  "monthly_states_by_cohort": [
+    {
+      "month": "2013-01",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 49
+    },
+    {
+      "month": "2013-01",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 8
+    },
+    {
+      "month": "2013-01",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 2
+    },
+    {
+      "month": "2013-01",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 126
+    },
+    {
+      "month": "2013-01",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 1
+    },
+    {
+      "month": "2013-01",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 185
+    },
+    {
+      "month": "2013-01",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1303
+    },
+    {
+      "month": "2013-02",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 45
+    },
+    {
+      "month": "2013-02",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 18
+    },
+    {
+      "month": "2013-02",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 1
+    },
+    {
+      "month": "2013-02",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 11
+    },
+    {
+      "month": "2013-02",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 1
+    },
+    {
+      "month": "2013-02",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 75
+    },
+    {
+      "month": "2013-02",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 988
+    },
+    {
+      "month": "2013-03",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 84
+    },
+    {
+      "month": "2013-03",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 25
+    },
+    {
+      "month": "2013-03",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 2
+    },
+    {
+      "month": "2013-03",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 24
+    },
+    {
+      "month": "2013-03",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 3
+    },
+    {
+      "month": "2013-03",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 2
+    },
+    {
+      "month": "2013-03",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 135
+    },
+    {
+      "month": "2013-03",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1408
+    },
+    {
+      "month": "2013-04",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 105
+    },
+    {
+      "month": "2013-04",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 28
+    },
+    {
+      "month": "2013-04",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 5
+    },
+    {
+      "month": "2013-04",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 33
+    },
+    {
+      "month": "2013-04",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 4
+    },
+    {
+      "month": "2013-04",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 171
+    },
+    {
+      "month": "2013-04",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1350
+    },
+    {
+      "month": "2013-05",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 98
+    },
+    {
+      "month": "2013-05",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 47
+    },
+    {
+      "month": "2013-05",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 5
+    },
+    {
+      "month": "2013-05",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 28
+    },
+    {
+      "month": "2013-05",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 4
+    },
+    {
+      "month": "2013-05",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 3
+    },
+    {
+      "month": "2013-05",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 178
+    },
+    {
+      "month": "2013-05",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1445
+    },
+    {
+      "month": "2013-06",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 77
+    },
+    {
+      "month": "2013-06",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 33
+    },
+    {
+      "month": "2013-06",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 5
+    },
+    {
+      "month": "2013-06",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 24
+    },
+    {
+      "month": "2013-06",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 10
+    },
+    {
+      "month": "2013-06",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 3
+    },
+    {
+      "month": "2013-06",
+      "cohort": "original_with_backorder",
+      "state": "after_two_days",
+      "documents": 1
+    },
+    {
+      "month": "2013-06",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 138
+    },
+    {
+      "month": "2013-06",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1384
+    },
+    {
+      "month": "2013-07",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 100
+    },
+    {
+      "month": "2013-07",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 38
+    },
+    {
+      "month": "2013-07",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 4
+    },
+    {
+      "month": "2013-07",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 32
+    },
+    {
+      "month": "2013-07",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 3
+    },
+    {
+      "month": "2013-07",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 2
+    },
+    {
+      "month": "2013-07",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 174
+    },
+    {
+      "month": "2013-07",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1533
+    },
+    {
+      "month": "2013-08",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 77
+    },
+    {
+      "month": "2013-08",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 45
+    },
+    {
+      "month": "2013-08",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 7
+    },
+    {
+      "month": "2013-08",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 13
+    },
+    {
+      "month": "2013-08",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 2
+    },
+    {
+      "month": "2013-08",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 2
+    },
+    {
+      "month": "2013-08",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 142
+    },
+    {
+      "month": "2013-08",
+      "cohort": "original_without_backorder",
+      "state": "missing_pick_indeterminate",
+      "documents": 1
+    },
+    {
+      "month": "2013-08",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1248
+    },
+    {
+      "month": "2013-09",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 74
+    },
+    {
+      "month": "2013-09",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 53
+    },
+    {
+      "month": "2013-09",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 11
+    },
+    {
+      "month": "2013-09",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 23
+    },
+    {
+      "month": "2013-09",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 2
+    },
+    {
+      "month": "2013-09",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 3
+    },
+    {
+      "month": "2013-09",
+      "cohort": "original_with_backorder",
+      "state": "after_two_days",
+      "documents": 2
+    },
+    {
+      "month": "2013-09",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 159
+    },
+    {
+      "month": "2013-09",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1290
+    },
+    {
+      "month": "2013-10",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 78
+    },
+    {
+      "month": "2013-10",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 50
+    },
+    {
+      "month": "2013-10",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 9
+    },
+    {
+      "month": "2013-10",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 17
+    },
+    {
+      "month": "2013-10",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 5
+    },
+    {
+      "month": "2013-10",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 3
+    },
+    {
+      "month": "2013-10",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 154
+    },
+    {
+      "month": "2013-10",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1302
+    },
+    {
+      "month": "2013-11",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 67
+    },
+    {
+      "month": "2013-11",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 47
+    },
+    {
+      "month": "2013-11",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 11
+    },
+    {
+      "month": "2013-11",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 23
+    },
+    {
+      "month": "2013-11",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 3
+    },
+    {
+      "month": "2013-11",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 2
+    },
+    {
+      "month": "2013-11",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 148
+    },
+    {
+      "month": "2013-11",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1251
+    },
+    {
+      "month": "2013-12",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 59
+    },
+    {
+      "month": "2013-12",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 45
+    },
+    {
+      "month": "2013-12",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 10
+    },
+    {
+      "month": "2013-12",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 32
+    },
+    {
+      "month": "2013-12",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 4
+    },
+    {
+      "month": "2013-12",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 2
+    },
+    {
+      "month": "2013-12",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 146
+    },
+    {
+      "month": "2013-12",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1267
+    },
+    {
+      "month": "2014-01",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 74
+    },
+    {
+      "month": "2014-01",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 56
+    },
+    {
+      "month": "2014-01",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 7
+    },
+    {
+      "month": "2014-01",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 24
+    },
+    {
+      "month": "2014-01",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 5
+    },
+    {
+      "month": "2014-01",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 161
+    },
+    {
+      "month": "2014-01",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1464
+    },
+    {
+      "month": "2014-02",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 70
+    },
+    {
+      "month": "2014-02",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 46
+    },
+    {
+      "month": "2014-02",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 2
+    },
+    {
+      "month": "2014-02",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 29
+    },
+    {
+      "month": "2014-02",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 3
+    },
+    {
+      "month": "2014-02",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 2
+    },
+    {
+      "month": "2014-02",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 147
+    },
+    {
+      "month": "2014-02",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1239
+    },
+    {
+      "month": "2014-03",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 60
+    },
+    {
+      "month": "2014-03",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 45
+    },
+    {
+      "month": "2014-03",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 7
+    },
+    {
+      "month": "2014-03",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 18
+    },
+    {
+      "month": "2014-03",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 7
+    },
+    {
+      "month": "2014-03",
+      "cohort": "derived_with_backorder",
+      "state": "pick_not_observed_by_cut",
+      "documents": 1
+    },
+    {
+      "month": "2014-03",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 2
+    },
+    {
+      "month": "2014-03",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 130
+    },
+    {
+      "month": "2014-03",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1316
+    },
+    {
+      "month": "2014-04",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 66
+    },
+    {
+      "month": "2014-04",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 68
+    },
+    {
+      "month": "2014-04",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 6
+    },
+    {
+      "month": "2014-04",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 24
+    },
+    {
+      "month": "2014-04",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 3
+    },
+    {
+      "month": "2014-04",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 1
+    },
+    {
+      "month": "2014-04",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 164
+    },
+    {
+      "month": "2014-04",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1407
+    },
+    {
+      "month": "2014-05",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 83
+    },
+    {
+      "month": "2014-05",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 78
+    },
+    {
+      "month": "2014-05",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 10
+    },
+    {
+      "month": "2014-05",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 32
+    },
+    {
+      "month": "2014-05",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 3
+    },
+    {
+      "month": "2014-05",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 1
+    },
+    {
+      "month": "2014-05",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 203
+    },
+    {
+      "month": "2014-05",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1498
+    },
+    {
+      "month": "2014-06",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 85
+    },
+    {
+      "month": "2014-06",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 79
+    },
+    {
+      "month": "2014-06",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 8
+    },
+    {
+      "month": "2014-06",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 24
+    },
+    {
+      "month": "2014-06",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 3
+    },
+    {
+      "month": "2014-06",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 196
+    },
+    {
+      "month": "2014-06",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1492
+    },
+    {
+      "month": "2014-07",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 74
+    },
+    {
+      "month": "2014-07",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 67
+    },
+    {
+      "month": "2014-07",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 21
+    },
+    {
+      "month": "2014-07",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 33
+    },
+    {
+      "month": "2014-07",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 6
+    },
+    {
+      "month": "2014-07",
+      "cohort": "derived_with_backorder",
+      "state": "pick_not_observed_by_cut",
+      "documents": 3
+    },
+    {
+      "month": "2014-07",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 2
+    },
+    {
+      "month": "2014-07",
+      "cohort": "original_with_backorder",
+      "state": "after_two_days",
+      "documents": 1
+    },
+    {
+      "month": "2014-07",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 194
+    },
+    {
+      "month": "2014-07",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1607
+    },
+    {
+      "month": "2014-08",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 50
+    },
+    {
+      "month": "2014-08",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 59
+    },
+    {
+      "month": "2014-08",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 32
+    },
+    {
+      "month": "2014-08",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 23
+    },
+    {
+      "month": "2014-08",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 5
+    },
+    {
+      "month": "2014-08",
+      "cohort": "derived_with_backorder",
+      "state": "pick_not_observed_by_cut",
+      "documents": 1
+    },
+    {
+      "month": "2014-08",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 1
+    },
+    {
+      "month": "2014-08",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 164
+    },
+    {
+      "month": "2014-08",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1307
+    },
+    {
+      "month": "2014-09",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 40
+    },
+    {
+      "month": "2014-09",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 55
+    },
+    {
+      "month": "2014-09",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 34
+    },
+    {
+      "month": "2014-09",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 31
+    },
+    {
+      "month": "2014-09",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 3
+    },
+    {
+      "month": "2014-09",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 1
+    },
+    {
+      "month": "2014-09",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 160
+    },
+    {
+      "month": "2014-09",
+      "cohort": "original_without_backorder",
+      "state": "missing_pick_indeterminate",
+      "documents": 1
+    },
+    {
+      "month": "2014-09",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1312
+    },
+    {
+      "month": "2014-10",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 57
+    },
+    {
+      "month": "2014-10",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 76
+    },
+    {
+      "month": "2014-10",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 46
+    },
+    {
+      "month": "2014-10",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 30
+    },
+    {
+      "month": "2014-10",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 1
+    },
+    {
+      "month": "2014-10",
+      "cohort": "derived_with_backorder",
+      "state": "pick_not_observed_by_cut",
+      "documents": 1
+    },
+    {
+      "month": "2014-10",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 2
+    },
+    {
+      "month": "2014-10",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 209
+    },
+    {
+      "month": "2014-10",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1499
+    },
+    {
+      "month": "2014-11",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 36
+    },
+    {
+      "month": "2014-11",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 69
+    },
+    {
+      "month": "2014-11",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 45
+    },
+    {
+      "month": "2014-11",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 25
+    },
+    {
+      "month": "2014-11",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 1
+    },
+    {
+      "month": "2014-11",
+      "cohort": "derived_with_backorder",
+      "state": "pick_not_observed_by_cut",
+      "documents": 1
+    },
+    {
+      "month": "2014-11",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 175
+    },
+    {
+      "month": "2014-11",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1276
+    },
+    {
+      "month": "2014-12",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 37
+    },
+    {
+      "month": "2014-12",
+      "cohort": "derived_terminal",
+      "state": "insufficient_followup",
+      "documents": 13
+    },
+    {
+      "month": "2014-12",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 80
+    },
+    {
+      "month": "2014-12",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 51
+    },
+    {
+      "month": "2014-12",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 23
+    },
+    {
+      "month": "2014-12",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 2
+    },
+    {
+      "month": "2014-12",
+      "cohort": "derived_with_backorder",
+      "state": "pick_not_observed_by_cut",
+      "documents": 1
+    },
+    {
+      "month": "2014-12",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 4
+    },
+    {
+      "month": "2014-12",
+      "cohort": "original_with_backorder",
+      "state": "insufficient_followup",
+      "documents": 13
+    },
+    {
+      "month": "2014-12",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 191
+    },
+    {
+      "month": "2014-12",
+      "cohort": "original_without_backorder",
+      "state": "insufficient_followup",
+      "documents": 146
+    },
+    {
+      "month": "2014-12",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1353
+    },
+    {
+      "month": "2015-01",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 74
+    },
+    {
+      "month": "2015-01",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 75
+    },
+    {
+      "month": "2015-01",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 7
+    },
+    {
+      "month": "2015-01",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 30
+    },
+    {
+      "month": "2015-01",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 3
+    },
+    {
+      "month": "2015-01",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 6
+    },
+    {
+      "month": "2015-01",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 186
+    },
+    {
+      "month": "2015-01",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1449
+    },
+    {
+      "month": "2015-02",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 69
+    },
+    {
+      "month": "2015-02",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 64
+    },
+    {
+      "month": "2015-02",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 12
+    },
+    {
+      "month": "2015-02",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 24
+    },
+    {
+      "month": "2015-02",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 1
+    },
+    {
+      "month": "2015-02",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 2
+    },
+    {
+      "month": "2015-02",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 169
+    },
+    {
+      "month": "2015-02",
+      "cohort": "original_without_backorder",
+      "state": "missing_pick_indeterminate",
+      "documents": 1
+    },
+    {
+      "month": "2015-02",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1390
+    },
+    {
+      "month": "2015-03",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 58
+    },
+    {
+      "month": "2015-03",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 78
+    },
+    {
+      "month": "2015-03",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 18
+    },
+    {
+      "month": "2015-03",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 29
+    },
+    {
+      "month": "2015-03",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 4
+    },
+    {
+      "month": "2015-03",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 4
+    },
+    {
+      "month": "2015-03",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 183
+    },
+    {
+      "month": "2015-03",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1517
+    },
+    {
+      "month": "2015-04",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 59
+    },
+    {
+      "month": "2015-04",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 95
+    },
+    {
+      "month": "2015-04",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 20
+    },
+    {
+      "month": "2015-04",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 30
+    },
+    {
+      "month": "2015-04",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 3
+    },
+    {
+      "month": "2015-04",
+      "cohort": "derived_with_backorder",
+      "state": "pick_not_observed_by_cut",
+      "documents": 2
+    },
+    {
+      "month": "2015-04",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 2
+    },
+    {
+      "month": "2015-04",
+      "cohort": "original_with_backorder",
+      "state": "pick_not_observed_by_cut",
+      "documents": 1
+    },
+    {
+      "month": "2015-04",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 203
+    },
+    {
+      "month": "2015-04",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1696
+    },
+    {
+      "month": "2015-05",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 53
+    },
+    {
+      "month": "2015-05",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 103
+    },
+    {
+      "month": "2015-05",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 13
+    },
+    {
+      "month": "2015-05",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 32
+    },
+    {
+      "month": "2015-05",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 3
+    },
+    {
+      "month": "2015-05",
+      "cohort": "derived_with_backorder",
+      "state": "pick_not_observed_by_cut",
+      "documents": 1
+    },
+    {
+      "month": "2015-05",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 1
+    },
+    {
+      "month": "2015-05",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 201
+    },
+    {
+      "month": "2015-05",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1552
+    },
+    {
+      "month": "2015-06",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 89
+    },
+    {
+      "month": "2015-06",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 108
+    },
+    {
+      "month": "2015-06",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 3
+    },
+    {
+      "month": "2015-06",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 26
+    },
+    {
+      "month": "2015-06",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 7
+    },
+    {
+      "month": "2015-06",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 3
+    },
+    {
+      "month": "2015-06",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 226
+    },
+    {
+      "month": "2015-06",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1527
+    },
+    {
+      "month": "2015-07",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 66
+    },
+    {
+      "month": "2015-07",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 122
+    },
+    {
+      "month": "2015-07",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 9
+    },
+    {
+      "month": "2015-07",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 36
+    },
+    {
+      "month": "2015-07",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 8
+    },
+    {
+      "month": "2015-07",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 5
+    },
+    {
+      "month": "2015-07",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 233
+    },
+    {
+      "month": "2015-07",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1794
+    },
+    {
+      "month": "2015-08",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 50
+    },
+    {
+      "month": "2015-08",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 82
+    },
+    {
+      "month": "2015-08",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 25
+    },
+    {
+      "month": "2015-08",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 22
+    },
+    {
+      "month": "2015-08",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 7
+    },
+    {
+      "month": "2015-08",
+      "cohort": "derived_with_backorder",
+      "state": "pick_not_observed_by_cut",
+      "documents": 2
+    },
+    {
+      "month": "2015-08",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 3
+    },
+    {
+      "month": "2015-08",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 179
+    },
+    {
+      "month": "2015-08",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1359
+    },
+    {
+      "month": "2015-09",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 45
+    },
+    {
+      "month": "2015-09",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 114
+    },
+    {
+      "month": "2015-09",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 22
+    },
+    {
+      "month": "2015-09",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 36
+    },
+    {
+      "month": "2015-09",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 1
+    },
+    {
+      "month": "2015-09",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 4
+    },
+    {
+      "month": "2015-09",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 217
+    },
+    {
+      "month": "2015-09",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1626
+    },
+    {
+      "month": "2015-10",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 39
+    },
+    {
+      "month": "2015-10",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 115
+    },
+    {
+      "month": "2015-10",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 18
+    },
+    {
+      "month": "2015-10",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 23
+    },
+    {
+      "month": "2015-10",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 3
+    },
+    {
+      "month": "2015-10",
+      "cohort": "derived_with_backorder",
+      "state": "pick_not_observed_by_cut",
+      "documents": 2
+    },
+    {
+      "month": "2015-10",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 4
+    },
+    {
+      "month": "2015-10",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 195
+    },
+    {
+      "month": "2015-10",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1566
+    },
+    {
+      "month": "2015-11",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 31
+    },
+    {
+      "month": "2015-11",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 124
+    },
+    {
+      "month": "2015-11",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 10
+    },
+    {
+      "month": "2015-11",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 33
+    },
+    {
+      "month": "2015-11",
+      "cohort": "derived_with_backorder",
+      "state": "after_two_days",
+      "documents": 4
+    },
+    {
+      "month": "2015-11",
+      "cohort": "derived_with_backorder",
+      "state": "pick_not_observed_by_cut",
+      "documents": 2
+    },
+    {
+      "month": "2015-11",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 4
+    },
+    {
+      "month": "2015-11",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 198
+    },
+    {
+      "month": "2015-11",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1428
+    },
+    {
+      "month": "2015-12",
+      "cohort": "derived_terminal",
+      "state": "after_two_days",
+      "documents": 21
+    },
+    {
+      "month": "2015-12",
+      "cohort": "derived_terminal",
+      "state": "insufficient_followup",
+      "documents": 14
+    },
+    {
+      "month": "2015-12",
+      "cohort": "derived_terminal",
+      "state": "missing_pick_indeterminate",
+      "documents": 116
+    },
+    {
+      "month": "2015-12",
+      "cohort": "derived_terminal",
+      "state": "pick_not_observed_by_cut",
+      "documents": 20
+    },
+    {
+      "month": "2015-12",
+      "cohort": "derived_terminal",
+      "state": "within_two_days",
+      "documents": 34
+    },
+    {
+      "month": "2015-12",
+      "cohort": "derived_with_backorder",
+      "state": "within_two_days",
+      "documents": 1
+    },
+    {
+      "month": "2015-12",
+      "cohort": "original_with_backorder",
+      "state": "insufficient_followup",
+      "documents": 14
+    },
+    {
+      "month": "2015-12",
+      "cohort": "original_with_backorder",
+      "state": "within_two_days",
+      "documents": 191
+    },
+    {
+      "month": "2015-12",
+      "cohort": "original_without_backorder",
+      "state": "insufficient_followup",
+      "documents": 126
+    },
+    {
+      "month": "2015-12",
+      "cohort": "original_without_backorder",
+      "state": "within_two_days",
+      "documents": 1414
+    }
+  ],
+  "cohort_counts": [
+    {
+      "cohort": "derived_terminal",
+      "documents": 6312
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "documents": 222
+    },
+    {
+      "cohort": "original_with_backorder",
+      "documents": 6312
+    },
+    {
+      "cohort": "original_without_backorder",
+      "documents": 51132
+    }
+  ],
+  "backorder_dates": {
+    "edges": 6534,
+    "orphan_child": 0,
+    "different_dates": 0,
+    "non_increasing_ids": 0
+  },
+  "header_delay_histogram": [
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": null,
+      "documents": 2425
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 1,
+      "documents": 760
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 2,
+      "documents": 298
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 3,
+      "documents": 245
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 4,
+      "documents": 200
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 5,
+      "documents": 134
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 6,
+      "documents": 129
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 7,
+      "documents": 116
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 8,
+      "documents": 62
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 9,
+      "documents": 60
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 10,
+      "documents": 43
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 11,
+      "documents": 36
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 12,
+      "documents": 30
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 13,
+      "documents": 39
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 14,
+      "documents": 28
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 15,
+      "documents": 29
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 16,
+      "documents": 17
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 17,
+      "documents": 23
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 18,
+      "documents": 20
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 19,
+      "documents": 16
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 20,
+      "documents": 24
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 21,
+      "documents": 20
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 22,
+      "documents": 17
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 23,
+      "documents": 13
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 24,
+      "documents": 13
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 25,
+      "documents": 13
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 26,
+      "documents": 12
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 27,
+      "documents": 15
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 28,
+      "documents": 19
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 29,
+      "documents": 9
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 30,
+      "documents": 11
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 31,
+      "documents": 13
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 32,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 33,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 34,
+      "documents": 8
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 35,
+      "documents": 12
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 36,
+      "documents": 15
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 37,
+      "documents": 11
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 38,
+      "documents": 15
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 39,
+      "documents": 8
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 40,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 41,
+      "documents": 10
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 42,
+      "documents": 17
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 43,
+      "documents": 10
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 44,
+      "documents": 11
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 45,
+      "documents": 7
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 46,
+      "documents": 6
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 47,
+      "documents": 7
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 48,
+      "documents": 11
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 49,
+      "documents": 17
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 50,
+      "documents": 6
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 51,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 52,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 53,
+      "documents": 10
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 54,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 55,
+      "documents": 7
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 56,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 57,
+      "documents": 6
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 58,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 59,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 60,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 61,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 62,
+      "documents": 8
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 63,
+      "documents": 6
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 64,
+      "documents": 8
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 65,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 66,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 67,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 68,
+      "documents": 6
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 69,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 70,
+      "documents": 11
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 71,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 72,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 73,
+      "documents": 8
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 74,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 75,
+      "documents": 6
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 76,
+      "documents": 8
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 77,
+      "documents": 14
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 78,
+      "documents": 6
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 79,
+      "documents": 9
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 80,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 81,
+      "documents": 7
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 82,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 83,
+      "documents": 15
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 84,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 85,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 86,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 87,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 88,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 89,
+      "documents": 6
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 90,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 91,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 92,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 93,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 94,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 95,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 96,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 97,
+      "documents": 7
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 98,
+      "documents": 11
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 99,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 100,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 101,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 102,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 103,
+      "documents": 6
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 104,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 105,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 106,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 107,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 108,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 109,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 110,
+      "documents": 7
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 111,
+      "documents": 8
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 112,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 113,
+      "documents": 6
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 114,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 115,
+      "documents": 6
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 116,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 117,
+      "documents": 11
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 118,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 119,
+      "documents": 7
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 120,
+      "documents": 6
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 121,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 122,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 123,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 124,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 125,
+      "documents": 8
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 126,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 127,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 128,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 129,
+      "documents": 6
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 130,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 131,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 132,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 133,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 134,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 135,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 136,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 137,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 138,
+      "documents": 7
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 139,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 140,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 141,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 142,
+      "documents": 7
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 143,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 144,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 145,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 146,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 147,
+      "documents": 7
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 148,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 149,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 150,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 151,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 152,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 153,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 154,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 155,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 156,
+      "documents": 5
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 157,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 158,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 159,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 160,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 161,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 162,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 163,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 164,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 166,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 167,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 168,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 169,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 170,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 171,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 173,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 174,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 175,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 176,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 177,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 178,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 179,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 180,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 181,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 182,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 183,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 184,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 185,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 186,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 187,
+      "documents": 6
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 189,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 193,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 194,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 195,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 196,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 199,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 201,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 202,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 203,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 204,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 205,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 206,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 209,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 212,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 213,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 214,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 216,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 217,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 218,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 221,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 224,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 227,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 228,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 229,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 230,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 231,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 232,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 236,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 237,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 238,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 240,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 241,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 243,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 245,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 247,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 248,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 250,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 252,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 254,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 255,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 256,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 257,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 258,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 259,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 260,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 262,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 265,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 269,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 270,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 272,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 273,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 277,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 282,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 286,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 291,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 295,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 296,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 299,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 300,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 303,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 314,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 320,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 322,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 324,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 325,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 329,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 331,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 333,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 334,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 338,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 339,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 340,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 342,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 343,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 344,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 356,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 360,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 361,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 363,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 364,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 383,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 385,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 389,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 390,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 402,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 404,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 412,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 415,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 418,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 419,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 423,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 424,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 432,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 439,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 450,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 474,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 482,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 511,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 536,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 551,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_terminal",
+      "days_to_pick": 592,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 1,
+      "documents": 50
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 2,
+      "documents": 28
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 3,
+      "documents": 13
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 4,
+      "documents": 12
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 5,
+      "documents": 11
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 6,
+      "documents": 6
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 7,
+      "documents": 11
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 8,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 9,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 10,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 11,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 14,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 15,
+      "documents": 3
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 16,
+      "documents": 4
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 20,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 21,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 25,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 26,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 27,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 34,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 35,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 37,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 38,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 39,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 46,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 47,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 48,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 50,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 51,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 53,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 63,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 68,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 73,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 74,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 84,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 98,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 99,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 102,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 104,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 106,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 108,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 109,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 118,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 120,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 126,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 128,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 130,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 142,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 145,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 146,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 148,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 161,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 162,
+      "documents": 2
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 163,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 171,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 176,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 189,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 203,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 213,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 264,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 299,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 327,
+      "documents": 1
+    },
+    {
+      "cohort": "derived_with_backorder",
+      "days_to_pick": 475,
+      "documents": 1
+    },
+    {
+      "cohort": "original_with_backorder",
+      "days_to_pick": 0,
+      "documents": 6303
+    },
+    {
+      "cohort": "original_with_backorder",
+      "days_to_pick": 1,
+      "documents": 3
+    },
+    {
+      "cohort": "original_with_backorder",
+      "days_to_pick": 2,
+      "documents": 1
+    },
+    {
+      "cohort": "original_with_backorder",
+      "days_to_pick": 3,
+      "documents": 2
+    },
+    {
+      "cohort": "original_with_backorder",
+      "days_to_pick": 7,
+      "documents": 1
+    },
+    {
+      "cohort": "original_with_backorder",
+      "days_to_pick": 165,
+      "documents": 1
+    },
+    {
+      "cohort": "original_without_backorder",
+      "days_to_pick": null,
+      "documents": 3
+    },
+    {
+      "cohort": "original_without_backorder",
+      "days_to_pick": 0,
+      "documents": 51123
+    },
+    {
+      "cohort": "original_without_backorder",
+      "days_to_pick": 1,
+      "documents": 6
+    }
+  ],
+  "fingerprint": {
+    "documents": 63978,
+    "checksum": -1182070709
+  }
+}

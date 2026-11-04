@@ -1,0 +1,54 @@
+{
+  "status": "known_historical_failures_only",
+  "tests_run": 386,
+  "passed": 377,
+  "failures": [
+    {
+      "test": "test_prior_files_and_manifest_integrity (test_compras_viabilidad.EvidenciaComprasTests.test_prior_files_and_manifest_integrity)",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\User\\Documents\\Joshua Universidad\\Sexto\\BI\\BI2Pyhton\\PerceptronReal\\tests\\test_compras_viabilidad.py\", line 190, in test_prior_files_and_manifest_integrity\n    for n,h in cv.load('integridad_antes.json').items():self.assertEqual(sha(cv.BASE/n),h,n)\n                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: '4d12bc0709375c87fde9eadc44bbae74a5aef7783a7873f7681e0217425bba4a' != '2e88bbc22612b14088caed47f48666eff3dc5887aed601b0688726ae0de6f4dd'\n- 4d12bc0709375c87fde9eadc44bbae74a5aef7783a7873f7681e0217425bba4a\n+ 2e88bbc22612b14088caed47f48666eff3dc5887aed601b0688726ae0de6f4dd\n : informe\\main.aux\n"
+    },
+    {
+      "test": "test_manifest_and_previous_artifacts_unchanged (test_dataset_pedidos.IntegridadYAlcanceTests.test_manifest_and_previous_artifacts_unchanged)",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\User\\Documents\\Joshua Universidad\\Sexto\\BI\\BI2Pyhton\\PerceptronReal\\tests\\test_dataset_pedidos.py\", line 112, in test_manifest_and_previous_artifacts_unchanged\n    for name,digest in json.loads((OUT/'integridad_antes.json').read_text(encoding='utf-8')).items():self.assertEqual(sha(BASE/name),digest,name)\n                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: '4d12bc0709375c87fde9eadc44bbae74a5aef7783a7873f7681e0217425bba4a' != '2e88bbc22612b14088caed47f48666eff3dc5887aed601b0688726ae0de6f4dd'\n- 4d12bc0709375c87fde9eadc44bbae74a5aef7783a7873f7681e0217425bba4a\n+ 2e88bbc22612b14088caed47f48666eff3dc5887aed601b0688726ae0de6f4dd\n : informe\\main.aux\n"
+    },
+    {
+      "test": "test_export_hashes_and_previous_files_preserved (test_especificacion_pedidos.SelloYConteosTests.test_export_hashes_and_previous_files_preserved)",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\User\\Documents\\Joshua Universidad\\Sexto\\BI\\BI2Pyhton\\PerceptronReal\\tests\\test_especificacion_pedidos.py\", line 100, in test_export_hashes_and_previous_files_preserved\n    for name,digest in json.loads((OUT/'integridad_antes.json').read_text(encoding='utf-8')).items():self.assertEqual(sha(BASE/name),digest,name)\n                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: '4d12bc0709375c87fde9eadc44bbae74a5aef7783a7873f7681e0217425bba4a' != '2e88bbc22612b14088caed47f48666eff3dc5887aed601b0688726ae0de6f4dd'\n- 4d12bc0709375c87fde9eadc44bbae74a5aef7783a7873f7681e0217425bba4a\n+ 2e88bbc22612b14088caed47f48666eff3dc5887aed601b0688726ae0de6f4dd\n : informe\\main.aux\n"
+    },
+    {
+      "test": "test_hashes_and_prior_files_untouched (test_pedidos_documentos.EvidenciaDocumentosTests.test_hashes_and_prior_files_untouched)",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\User\\Documents\\Joshua Universidad\\Sexto\\BI\\BI2Pyhton\\PerceptronReal\\tests\\test_pedidos_documentos.py\", line 104, in test_hashes_and_prior_files_untouched\n    for name,digest in json.loads((OUT/'integridad_antes.json').read_text(encoding='utf-8')).items():self.assertEqual(sha(BASE/name),digest,name)\n                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: '4d12bc0709375c87fde9eadc44bbae74a5aef7783a7873f7681e0217425bba4a' != '2e88bbc22612b14088caed47f48666eff3dc5887aed601b0688726ae0de6f4dd'\n- 4d12bc0709375c87fde9eadc44bbae74a5aef7783a7873f7681e0217425bba4a\n+ 2e88bbc22612b14088caed47f48666eff3dc5887aed601b0688726ae0de6f4dd\n : informe\\main.aux\n"
+    },
+    {
+      "test": "test_prior_evidence_and_manifest_integrity (test_transacciones_viabilidad.EvidenciaFinancieraTests.test_prior_evidence_and_manifest_integrity)",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\User\\Documents\\Joshua Universidad\\Sexto\\BI\\BI2Pyhton\\PerceptronReal\\tests\\test_transacciones_viabilidad.py\", line 209, in test_prior_evidence_and_manifest_integrity\n    for n,h in tv.load('integridad_antes.json').items():self.assertEqual(sha(tv.BASE/n),h,n)\n                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: '4d12bc0709375c87fde9eadc44bbae74a5aef7783a7873f7681e0217425bba4a' != '2e88bbc22612b14088caed47f48666eff3dc5887aed601b0688726ae0de6f4dd'\n- 4d12bc0709375c87fde9eadc44bbae74a5aef7783a7873f7681e0217425bba4a\n+ 2e88bbc22612b14088caed47f48666eff3dc5887aed601b0688726ae0de6f4dd\n : informe\\main.aux\n"
+    }
+  ],
+  "errors": [
+    {
+      "test": "test_frozen_hashes_dataset_preprocessor_and_prior_files (test_entrenamiento_transacciones.ArtefactosEntrenamientoFinancieroTests.test_frozen_hashes_dataset_preprocessor_and_prior_files)",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\User\\Documents\\Joshua Universidad\\Sexto\\BI\\BI2Pyhton\\PerceptronReal\\tests\\test_entrenamiento_transacciones.py\", line 183, in test_frozen_hashes_dataset_preprocessor_and_prior_files\n    et.verify_prior()\n  File \"C:\\Users\\User\\Documents\\Joshua Universidad\\Sexto\\BI\\BI2Pyhton\\PerceptronReal\\src\\experiments\\entrenar_transacciones.py\", line 57, in verify_prior\n    if any(sha(BASE/n)!=h for n,h in prior.items()):raise RuntimeError('Se modificó un artefacto previo')\n                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Se modificó un artefacto previo\n"
+    },
+    {
+      "test": "test_seven_real_graphs_and_prior_integrity (test_evaluacion_transacciones.ArtefactosEvaluacionFinancieraTests.test_seven_real_graphs_and_prior_integrity)",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\User\\Documents\\Joshua Universidad\\Sexto\\BI\\BI2Pyhton\\PerceptronReal\\tests\\test_evaluacion_transacciones.py\", line 168, in test_seven_real_graphs_and_prior_integrity\n    ev.verify_prior()\n  File \"C:\\Users\\User\\Documents\\Joshua Universidad\\Sexto\\BI\\BI2Pyhton\\PerceptronReal\\src\\experiments\\evaluar_transacciones.py\", line 44, in verify_prior\n    if any(sha(BASE/n)!=h for n,h in previous.items()):raise RuntimeError('Artefacto previo modificado')\n                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Artefacto previo modificado\n"
+    },
+    {
+      "test": "test_manifest_and_all_prior_artifacts_remain_intact (test_pca_transacciones.EvidenciaPCAFinancieroTests.test_manifest_and_all_prior_artifacts_remain_intact)",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\User\\Documents\\Joshua Universidad\\Sexto\\BI\\BI2Pyhton\\PerceptronReal\\tests\\test_pca_transacciones.py\", line 168, in test_manifest_and_all_prior_artifacts_remain_intact\n    pc.verify_prior();m=pc.read(pc.OUT/'manifiesto.json')\n    ^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\User\\Documents\\Joshua Universidad\\Sexto\\BI\\BI2Pyhton\\PerceptronReal\\src\\experiments\\pca_transacciones.py\", line 36, in verify_prior\n    if any(sha(BASE/n)!=h for n,h in previous.items()):raise RuntimeError('Cambió un artefacto anterior al PCA')\n                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Cambió un artefacto anterior al PCA\n"
+    },
+    {
+      "test": "test_artifact_and_prior_integrity_hashes (test_transacciones_dataset.ArtefactosDatasetFinancieroTests.test_artifact_and_prior_integrity_hashes)",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\User\\Documents\\Joshua Universidad\\Sexto\\BI\\BI2Pyhton\\PerceptronReal\\tests\\test_transacciones_dataset.py\", line 272, in test_artifact_and_prior_integrity_hashes\n    pipeline.verify_prior()\n  File \"C:\\Users\\User\\Documents\\Joshua Universidad\\Sexto\\BI\\BI2Pyhton\\PerceptronReal\\src\\datamarts\\transacciones\\construir.py\", line 37, in verify_prior\n    if before!=after:raise RuntimeError('Cambió un artefacto anterior a este dataset')\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Cambió un artefacto anterior a este dataset\n"
+    }
+  ],
+  "skipped": [],
+  "exact_prior_nine_cases": true,
+  "new_regressions": false,
+  "global_suite_passed": false,
+  "old_tests_modified": false,
+  "preserved_files": 890,
+  "historical_cause": "old report version hashes, proven before Inventory dataset",
+  "synthetic_unit_fixture_training_or_PCA_may_run": true,
+  "experimental_test_or_PCA_not_executed": true
+}

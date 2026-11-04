@@ -1,0 +1,54 @@
+{
+  "Fact.Order": {
+    "rows": 231412,
+    "checksum": 2027277139
+  },
+  "Fact.Purchase": {
+    "rows": 8367,
+    "checksum": -808942192
+  },
+  "Fact.Movement": {
+    "rows": 236667,
+    "checksum": -110451043
+  },
+  "Fact.Stock Holding": {
+    "rows": 227,
+    "checksum": 1513116550
+  },
+  "Fact.Transaction": {
+    "rows": 99585,
+    "checksum": 175692920
+  },
+  "Dimension.Date": {
+    "rows": 1461,
+    "checksum": 595514010
+  },
+  "Dimension.Stock Item": {
+    "rows": 672,
+    "checksum": 209962405
+  },
+  "Dimension.Customer": {
+    "rows": 403,
+    "checksum": 1999402412
+  },
+  "Dimension.Supplier": {
+    "rows": 28,
+    "checksum": -1122310841
+  },
+  "Dimension.Transaction Type": {
+    "rows": 15,
+    "checksum": 1869660017
+  },
+  "Dimension.Payment Method": {
+    "rows": 6,
+    "checksum": 830099159
+  },
+  "Dimension.City": {
+    "rows": 116295,
+    "checksum": -469327496
+  },
+  "Dimension.Employee": {
+    "rows": 213,
+    "checksum": -771454781
+  }
+}

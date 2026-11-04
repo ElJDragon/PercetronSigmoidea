@@ -1,0 +1,1044 @@
+{
+  "line": {
+    "train": {
+      "states": {
+        "after_two_days": 1734,
+        "missing_pick_indeterminate": 1235,
+        "pick_not_observed_by_cut": 349,
+        "within_two_days": 124607,
+        "insufficient_followup": 582
+      },
+      "positive": 1734,
+      "negative": 124607,
+      "eligible": 126341,
+      "total": 128507,
+      "positive_proportion": 0.01372476076649702
+    },
+    "2013": {
+      "states": {
+        "after_two_days": 958,
+        "missing_pick_indeterminate": 442,
+        "pick_not_observed_by_cut": 72,
+        "within_two_days": 60183
+      },
+      "positive": 958,
+      "negative": 60183,
+      "eligible": 61141,
+      "total": 61655,
+      "positive_proportion": 0.01566870021752997
+    },
+    "2013-01": {
+      "states": {
+        "after_two_days": 50,
+        "missing_pick_indeterminate": 8,
+        "pick_not_observed_by_cut": 2,
+        "within_two_days": 5221
+      },
+      "positive": 50,
+      "negative": 5221,
+      "eligible": 5271,
+      "total": 5281,
+      "positive_proportion": 0.00948586605957124
+    },
+    "2013-02": {
+      "states": {
+        "after_two_days": 46,
+        "missing_pick_indeterminate": 18,
+        "pick_not_observed_by_cut": 1,
+        "within_two_days": 3661
+      },
+      "positive": 46,
+      "negative": 3661,
+      "eligible": 3707,
+      "total": 3726,
+      "positive_proportion": 0.01240895602913407
+    },
+    "2013-03": {
+      "states": {
+        "after_two_days": 87,
+        "missing_pick_indeterminate": 25,
+        "pick_not_observed_by_cut": 2,
+        "within_two_days": 5275
+      },
+      "positive": 87,
+      "negative": 5275,
+      "eligible": 5362,
+      "total": 5389,
+      "positive_proportion": 0.016225289071242075
+    },
+    "2013-04": {
+      "states": {
+        "after_two_days": 109,
+        "missing_pick_indeterminate": 28,
+        "pick_not_observed_by_cut": 5,
+        "within_two_days": 5172
+      },
+      "positive": 109,
+      "negative": 5172,
+      "eligible": 5281,
+      "total": 5314,
+      "positive_proportion": 0.02064003029729218
+    },
+    "2013-05": {
+      "states": {
+        "after_two_days": 102,
+        "missing_pick_indeterminate": 48,
+        "pick_not_observed_by_cut": 5,
+        "within_two_days": 5544
+      },
+      "positive": 102,
+      "negative": 5544,
+      "eligible": 5646,
+      "total": 5699,
+      "positive_proportion": 0.018065887353878853
+    },
+    "2013-06": {
+      "states": {
+        "after_two_days": 88,
+        "missing_pick_indeterminate": 33,
+        "pick_not_observed_by_cut": 5,
+        "within_two_days": 5212
+      },
+      "positive": 88,
+      "negative": 5212,
+      "eligible": 5300,
+      "total": 5338,
+      "positive_proportion": 0.01660377358490566
+    },
+    "2013-07": {
+      "states": {
+        "after_two_days": 103,
+        "missing_pick_indeterminate": 38,
+        "pick_not_observed_by_cut": 4,
+        "within_two_days": 5751
+      },
+      "positive": 103,
+      "negative": 5751,
+      "eligible": 5854,
+      "total": 5896,
+      "positive_proportion": 0.01759480696959344
+    },
+    "2013-08": {
+      "states": {
+        "after_two_days": 79,
+        "missing_pick_indeterminate": 47,
+        "pick_not_observed_by_cut": 7,
+        "within_two_days": 4686
+      },
+      "positive": 79,
+      "negative": 4686,
+      "eligible": 4765,
+      "total": 4819,
+      "positive_proportion": 0.01657922350472193
+    },
+    "2013-09": {
+      "states": {
+        "after_two_days": 78,
+        "missing_pick_indeterminate": 53,
+        "pick_not_observed_by_cut": 11,
+        "within_two_days": 4957
+      },
+      "positive": 78,
+      "negative": 4957,
+      "eligible": 5035,
+      "total": 5099,
+      "positive_proportion": 0.015491559086395233
+    },
+    "2013-10": {
+      "states": {
+        "after_two_days": 83,
+        "missing_pick_indeterminate": 52,
+        "pick_not_observed_by_cut": 9,
+        "within_two_days": 5027
+      },
+      "positive": 83,
+      "negative": 5027,
+      "eligible": 5110,
+      "total": 5171,
+      "positive_proportion": 0.0162426614481409
+    },
+    "2013-11": {
+      "states": {
+        "after_two_days": 70,
+        "missing_pick_indeterminate": 47,
+        "pick_not_observed_by_cut": 11,
+        "within_two_days": 4829
+      },
+      "positive": 70,
+      "negative": 4829,
+      "eligible": 4899,
+      "total": 4957,
+      "positive_proportion": 0.014288630332720964
+    },
+    "2013-12": {
+      "states": {
+        "after_two_days": 63,
+        "missing_pick_indeterminate": 45,
+        "pick_not_observed_by_cut": 10,
+        "within_two_days": 4848
+      },
+      "positive": 63,
+      "negative": 4848,
+      "eligible": 4911,
+      "total": 4966,
+      "positive_proportion": 0.012828344532681736
+    },
+    "2014": {
+      "states": {
+        "after_two_days": 776,
+        "missing_pick_indeterminate": 793,
+        "pick_not_observed_by_cut": 277,
+        "within_two_days": 64424,
+        "insufficient_followup": 582
+      },
+      "positive": 776,
+      "negative": 64424,
+      "eligible": 65200,
+      "total": 66852,
+      "positive_proportion": 0.011901840490797545
+    },
+    "2014-01": {
+      "states": {
+        "after_two_days": 79,
+        "missing_pick_indeterminate": 56,
+        "pick_not_observed_by_cut": 7,
+        "within_two_days": 5540
+      },
+      "positive": 79,
+      "negative": 5540,
+      "eligible": 5619,
+      "total": 5682,
+      "positive_proportion": 0.01405944118170493
+    },
+    "2014-02": {
+      "states": {
+        "after_two_days": 73,
+        "missing_pick_indeterminate": 46,
+        "pick_not_observed_by_cut": 2,
+        "within_two_days": 4709
+      },
+      "positive": 73,
+      "negative": 4709,
+      "eligible": 4782,
+      "total": 4830,
+      "positive_proportion": 0.015265579255541615
+    },
+    "2014-03": {
+      "states": {
+        "after_two_days": 67,
+        "missing_pick_indeterminate": 45,
+        "pick_not_observed_by_cut": 8,
+        "within_two_days": 4998
+      },
+      "positive": 67,
+      "negative": 4998,
+      "eligible": 5065,
+      "total": 5118,
+      "positive_proportion": 0.013228035538005924
+    },
+    "2014-04": {
+      "states": {
+        "after_two_days": 69,
+        "missing_pick_indeterminate": 68,
+        "pick_not_observed_by_cut": 6,
+        "within_two_days": 5370
+      },
+      "positive": 69,
+      "negative": 5370,
+      "eligible": 5439,
+      "total": 5513,
+      "positive_proportion": 0.0126861555432984
+    },
+    "2014-05": {
+      "states": {
+        "after_two_days": 86,
+        "missing_pick_indeterminate": 79,
+        "pick_not_observed_by_cut": 10,
+        "within_two_days": 5852
+      },
+      "positive": 86,
+      "negative": 5852,
+      "eligible": 5938,
+      "total": 6027,
+      "positive_proportion": 0.014482990906028967
+    },
+    "2014-06": {
+      "states": {
+        "after_two_days": 88,
+        "missing_pick_indeterminate": 82,
+        "pick_not_observed_by_cut": 8,
+        "within_two_days": 5710
+      },
+      "positive": 88,
+      "negative": 5710,
+      "eligible": 5798,
+      "total": 5888,
+      "positive_proportion": 0.015177647464642981
+    },
+    "2014-07": {
+      "states": {
+        "after_two_days": 82,
+        "missing_pick_indeterminate": 67,
+        "pick_not_observed_by_cut": 24,
+        "within_two_days": 6137
+      },
+      "positive": 82,
+      "negative": 6137,
+      "eligible": 6219,
+      "total": 6310,
+      "positive_proportion": 0.013185399581926355
+    },
+    "2014-08": {
+      "states": {
+        "after_two_days": 55,
+        "missing_pick_indeterminate": 60,
+        "pick_not_observed_by_cut": 33,
+        "within_two_days": 4982
+      },
+      "positive": 55,
+      "negative": 4982,
+      "eligible": 5037,
+      "total": 5130,
+      "positive_proportion": 0.010919197935278936
+    },
+    "2014-09": {
+      "states": {
+        "after_two_days": 43,
+        "missing_pick_indeterminate": 57,
+        "pick_not_observed_by_cut": 34,
+        "within_two_days": 4983
+      },
+      "positive": 43,
+      "negative": 4983,
+      "eligible": 5026,
+      "total": 5117,
+      "positive_proportion": 0.008555511341026662
+    },
+    "2014-10": {
+      "states": {
+        "after_two_days": 58,
+        "missing_pick_indeterminate": 80,
+        "pick_not_observed_by_cut": 47,
+        "within_two_days": 5892
+      },
+      "positive": 58,
+      "negative": 5892,
+      "eligible": 5950,
+      "total": 6077,
+      "positive_proportion": 0.009747899159663866
+    },
+    "2014-11": {
+      "states": {
+        "after_two_days": 37,
+        "missing_pick_indeterminate": 71,
+        "pick_not_observed_by_cut": 46,
+        "within_two_days": 4997
+      },
+      "positive": 37,
+      "negative": 4997,
+      "eligible": 5034,
+      "total": 5151,
+      "positive_proportion": 0.007350019864918554
+    },
+    "2014-12": {
+      "states": {
+        "after_two_days": 39,
+        "insufficient_followup": 582,
+        "missing_pick_indeterminate": 82,
+        "pick_not_observed_by_cut": 52,
+        "within_two_days": 5254
+      },
+      "positive": 39,
+      "negative": 5254,
+      "eligible": 5293,
+      "total": 6009,
+      "positive_proportion": 0.00736822218023805
+    },
+    "validation": {
+      "states": {
+        "after_two_days": 698,
+        "missing_pick_indeterminate": 1223,
+        "pick_not_observed_by_cut": 187,
+        "within_two_days": 70414,
+        "insufficient_followup": 481
+      },
+      "positive": 698,
+      "negative": 70414,
+      "eligible": 71112,
+      "total": 73003,
+      "positive_proportion": 0.009815502306221172
+    },
+    "2015": {
+      "states": {
+        "after_two_days": 698,
+        "missing_pick_indeterminate": 1223,
+        "pick_not_observed_by_cut": 187,
+        "within_two_days": 70414,
+        "insufficient_followup": 481
+      },
+      "positive": 698,
+      "negative": 70414,
+      "eligible": 71112,
+      "total": 73003,
+      "positive_proportion": 0.009815502306221172
+    },
+    "2015-01": {
+      "states": {
+        "after_two_days": 77,
+        "missing_pick_indeterminate": 78,
+        "pick_not_observed_by_cut": 7,
+        "within_two_days": 5573
+      },
+      "positive": 77,
+      "negative": 5573,
+      "eligible": 5650,
+      "total": 5735,
+      "positive_proportion": 0.013628318584070797
+    },
+    "2015-02": {
+      "states": {
+        "after_two_days": 70,
+        "missing_pick_indeterminate": 66,
+        "pick_not_observed_by_cut": 12,
+        "within_two_days": 5330
+      },
+      "positive": 70,
+      "negative": 5330,
+      "eligible": 5400,
+      "total": 5478,
+      "positive_proportion": 0.012962962962962963
+    },
+    "2015-03": {
+      "states": {
+        "after_two_days": 62,
+        "missing_pick_indeterminate": 78,
+        "pick_not_observed_by_cut": 18,
+        "within_two_days": 5789
+      },
+      "positive": 62,
+      "negative": 5789,
+      "eligible": 5851,
+      "total": 5947,
+      "positive_proportion": 0.010596479234318919
+    },
+    "2015-04": {
+      "states": {
+        "after_two_days": 62,
+        "missing_pick_indeterminate": 96,
+        "pick_not_observed_by_cut": 23,
+        "within_two_days": 6460
+      },
+      "positive": 62,
+      "negative": 6460,
+      "eligible": 6522,
+      "total": 6641,
+      "positive_proportion": 0.009506286415210058
+    },
+    "2015-05": {
+      "states": {
+        "after_two_days": 56,
+        "missing_pick_indeterminate": 104,
+        "pick_not_observed_by_cut": 14,
+        "within_two_days": 5929
+      },
+      "positive": 56,
+      "negative": 5929,
+      "eligible": 5985,
+      "total": 6103,
+      "positive_proportion": 0.00935672514619883
+    },
+    "2015-06": {
+      "states": {
+        "after_two_days": 96,
+        "missing_pick_indeterminate": 110,
+        "pick_not_observed_by_cut": 3,
+        "within_two_days": 5989
+      },
+      "positive": 96,
+      "negative": 5989,
+      "eligible": 6085,
+      "total": 6198,
+      "positive_proportion": 0.015776499589153656
+    },
+    "2015-07": {
+      "states": {
+        "after_two_days": 74,
+        "missing_pick_indeterminate": 127,
+        "pick_not_observed_by_cut": 9,
+        "within_two_days": 6856
+      },
+      "positive": 74,
+      "negative": 6856,
+      "eligible": 6930,
+      "total": 7066,
+      "positive_proportion": 0.010678210678210679
+    },
+    "2015-08": {
+      "states": {
+        "after_two_days": 57,
+        "missing_pick_indeterminate": 85,
+        "pick_not_observed_by_cut": 27,
+        "within_two_days": 5242
+      },
+      "positive": 57,
+      "negative": 5242,
+      "eligible": 5299,
+      "total": 5411,
+      "positive_proportion": 0.010756746555953954
+    },
+    "2015-09": {
+      "states": {
+        "after_two_days": 46,
+        "missing_pick_indeterminate": 114,
+        "pick_not_observed_by_cut": 22,
+        "within_two_days": 6210
+      },
+      "positive": 46,
+      "negative": 6210,
+      "eligible": 6256,
+      "total": 6392,
+      "positive_proportion": 0.007352941176470588
+    },
+    "2015-10": {
+      "states": {
+        "after_two_days": 42,
+        "missing_pick_indeterminate": 118,
+        "pick_not_observed_by_cut": 20,
+        "within_two_days": 6060
+      },
+      "positive": 42,
+      "negative": 6060,
+      "eligible": 6102,
+      "total": 6240,
+      "positive_proportion": 0.00688298918387414
+    },
+    "2015-11": {
+      "states": {
+        "after_two_days": 35,
+        "missing_pick_indeterminate": 127,
+        "pick_not_observed_by_cut": 12,
+        "within_two_days": 5545
+      },
+      "positive": 35,
+      "negative": 5545,
+      "eligible": 5580,
+      "total": 5719,
+      "positive_proportion": 0.0062724014336917565
+    },
+    "2015-12": {
+      "states": {
+        "after_two_days": 21,
+        "insufficient_followup": 481,
+        "missing_pick_indeterminate": 120,
+        "pick_not_observed_by_cut": 20,
+        "within_two_days": 5431
+      },
+      "positive": 21,
+      "negative": 5431,
+      "eligible": 5452,
+      "total": 6073,
+      "positive_proportion": 0.003851797505502568
+    }
+  },
+  "document_diagnostic": {
+    "train": {
+      "states": {
+        "after_two_days": 1732,
+        "indeterminate_document": 1566,
+        "within_two_days": 37179,
+        "insufficient_followup": 172
+      },
+      "positive": 1732,
+      "negative": 37179,
+      "eligible": 38911,
+      "total": 40649,
+      "positive_proportion": 0.04451183469969931
+    },
+    "2013": {
+      "states": {
+        "after_two_days": 957,
+        "indeterminate_document": 510,
+        "within_two_days": 17983
+      },
+      "positive": 957,
+      "negative": 17983,
+      "eligible": 18940,
+      "total": 19450,
+      "positive_proportion": 0.05052798310454065
+    },
+    "2013-01": {
+      "states": {
+        "after_two_days": 49,
+        "indeterminate_document": 10,
+        "within_two_days": 1615
+      },
+      "positive": 49,
+      "negative": 1615,
+      "eligible": 1664,
+      "total": 1674,
+      "positive_proportion": 0.029447115384615384
+    },
+    "2013-02": {
+      "states": {
+        "after_two_days": 46,
+        "indeterminate_document": 19,
+        "within_two_days": 1074
+      },
+      "positive": 46,
+      "negative": 1074,
+      "eligible": 1120,
+      "total": 1139,
+      "positive_proportion": 0.04107142857142857
+    },
+    "2013-03": {
+      "states": {
+        "after_two_days": 87,
+        "indeterminate_document": 27,
+        "within_two_days": 1569
+      },
+      "positive": 87,
+      "negative": 1569,
+      "eligible": 1656,
+      "total": 1683,
+      "positive_proportion": 0.05253623188405797
+    },
+    "2013-04": {
+      "states": {
+        "after_two_days": 109,
+        "indeterminate_document": 33,
+        "within_two_days": 1554
+      },
+      "positive": 109,
+      "negative": 1554,
+      "eligible": 1663,
+      "total": 1696,
+      "positive_proportion": 0.06554419723391461
+    },
+    "2013-05": {
+      "states": {
+        "after_two_days": 102,
+        "indeterminate_document": 52,
+        "within_two_days": 1654
+      },
+      "positive": 102,
+      "negative": 1654,
+      "eligible": 1756,
+      "total": 1808,
+      "positive_proportion": 0.05808656036446469
+    },
+    "2013-06": {
+      "states": {
+        "after_two_days": 88,
+        "indeterminate_document": 38,
+        "within_two_days": 1549
+      },
+      "positive": 88,
+      "negative": 1549,
+      "eligible": 1637,
+      "total": 1675,
+      "positive_proportion": 0.05375687232742822
+    },
+    "2013-07": {
+      "states": {
+        "after_two_days": 103,
+        "indeterminate_document": 42,
+        "within_two_days": 1741
+      },
+      "positive": 103,
+      "negative": 1741,
+      "eligible": 1844,
+      "total": 1886,
+      "positive_proportion": 0.055856832971800434
+    },
+    "2013-08": {
+      "states": {
+        "after_two_days": 79,
+        "indeterminate_document": 53,
+        "within_two_days": 1405
+      },
+      "positive": 79,
+      "negative": 1405,
+      "eligible": 1484,
+      "total": 1537,
+      "positive_proportion": 0.05323450134770889
+    },
+    "2013-09": {
+      "states": {
+        "after_two_days": 78,
+        "indeterminate_document": 64,
+        "within_two_days": 1475
+      },
+      "positive": 78,
+      "negative": 1475,
+      "eligible": 1553,
+      "total": 1617,
+      "positive_proportion": 0.050225370251126854
+    },
+    "2013-10": {
+      "states": {
+        "after_two_days": 83,
+        "indeterminate_document": 59,
+        "within_two_days": 1476
+      },
+      "positive": 83,
+      "negative": 1476,
+      "eligible": 1559,
+      "total": 1618,
+      "positive_proportion": 0.05323925593329057
+    },
+    "2013-11": {
+      "states": {
+        "after_two_days": 70,
+        "indeterminate_document": 58,
+        "within_two_days": 1424
+      },
+      "positive": 70,
+      "negative": 1424,
+      "eligible": 1494,
+      "total": 1552,
+      "positive_proportion": 0.04685408299866131
+    },
+    "2013-12": {
+      "states": {
+        "after_two_days": 63,
+        "indeterminate_document": 55,
+        "within_two_days": 1447
+      },
+      "positive": 63,
+      "negative": 1447,
+      "eligible": 1510,
+      "total": 1565,
+      "positive_proportion": 0.041721854304635764
+    },
+    "2014": {
+      "states": {
+        "after_two_days": 775,
+        "indeterminate_document": 1056,
+        "within_two_days": 19196,
+        "insufficient_followup": 172
+      },
+      "positive": 775,
+      "negative": 19196,
+      "eligible": 19971,
+      "total": 21199,
+      "positive_proportion": 0.03880626909018076
+    },
+    "2014-01": {
+      "states": {
+        "after_two_days": 79,
+        "indeterminate_document": 63,
+        "within_two_days": 1649
+      },
+      "positive": 79,
+      "negative": 1649,
+      "eligible": 1728,
+      "total": 1791,
+      "positive_proportion": 0.045717592592592594
+    },
+    "2014-02": {
+      "states": {
+        "after_two_days": 73,
+        "indeterminate_document": 48,
+        "within_two_days": 1417
+      },
+      "positive": 73,
+      "negative": 1417,
+      "eligible": 1490,
+      "total": 1538,
+      "positive_proportion": 0.04899328859060403
+    },
+    "2014-03": {
+      "states": {
+        "after_two_days": 67,
+        "indeterminate_document": 53,
+        "within_two_days": 1466
+      },
+      "positive": 67,
+      "negative": 1466,
+      "eligible": 1533,
+      "total": 1586,
+      "positive_proportion": 0.04370515329419439
+    },
+    "2014-04": {
+      "states": {
+        "after_two_days": 69,
+        "indeterminate_document": 74,
+        "within_two_days": 1596
+      },
+      "positive": 69,
+      "negative": 1596,
+      "eligible": 1665,
+      "total": 1739,
+      "positive_proportion": 0.04144144144144144
+    },
+    "2014-05": {
+      "states": {
+        "after_two_days": 86,
+        "indeterminate_document": 88,
+        "within_two_days": 1734
+      },
+      "positive": 86,
+      "negative": 1734,
+      "eligible": 1820,
+      "total": 1908,
+      "positive_proportion": 0.04725274725274725
+    },
+    "2014-06": {
+      "states": {
+        "after_two_days": 88,
+        "indeterminate_document": 87,
+        "within_two_days": 1712
+      },
+      "positive": 88,
+      "negative": 1712,
+      "eligible": 1800,
+      "total": 1887,
+      "positive_proportion": 0.04888888888888889
+    },
+    "2014-07": {
+      "states": {
+        "after_two_days": 81,
+        "indeterminate_document": 91,
+        "within_two_days": 1836
+      },
+      "positive": 81,
+      "negative": 1836,
+      "eligible": 1917,
+      "total": 2008,
+      "positive_proportion": 0.04225352112676056
+    },
+    "2014-08": {
+      "states": {
+        "after_two_days": 55,
+        "indeterminate_document": 92,
+        "within_two_days": 1495
+      },
+      "positive": 55,
+      "negative": 1495,
+      "eligible": 1550,
+      "total": 1642,
+      "positive_proportion": 0.035483870967741936
+    },
+    "2014-09": {
+      "states": {
+        "after_two_days": 43,
+        "indeterminate_document": 90,
+        "within_two_days": 1504
+      },
+      "positive": 43,
+      "negative": 1504,
+      "eligible": 1547,
+      "total": 1637,
+      "positive_proportion": 0.027795733678086618
+    },
+    "2014-10": {
+      "states": {
+        "after_two_days": 58,
+        "indeterminate_document": 123,
+        "within_two_days": 1740
+      },
+      "positive": 58,
+      "negative": 1740,
+      "eligible": 1798,
+      "total": 1921,
+      "positive_proportion": 0.03225806451612903
+    },
+    "2014-11": {
+      "states": {
+        "after_two_days": 37,
+        "indeterminate_document": 115,
+        "within_two_days": 1476
+      },
+      "positive": 37,
+      "negative": 1476,
+      "eligible": 1513,
+      "total": 1628,
+      "positive_proportion": 0.024454725710508923
+    },
+    "2014-12": {
+      "states": {
+        "after_two_days": 39,
+        "indeterminate_document": 132,
+        "insufficient_followup": 172,
+        "within_two_days": 1571
+      },
+      "positive": 39,
+      "negative": 1571,
+      "eligible": 1610,
+      "total": 1914,
+      "positive_proportion": 0.02422360248447205
+    },
+    "validation": {
+      "states": {
+        "after_two_days": 698,
+        "indeterminate_document": 1384,
+        "within_two_days": 21093,
+        "insufficient_followup": 154
+      },
+      "positive": 698,
+      "negative": 21093,
+      "eligible": 21791,
+      "total": 23329,
+      "positive_proportion": 0.03203157266761507
+    },
+    "2015": {
+      "states": {
+        "after_two_days": 698,
+        "indeterminate_document": 1384,
+        "within_two_days": 21093,
+        "insufficient_followup": 154
+      },
+      "positive": 698,
+      "negative": 21093,
+      "eligible": 21791,
+      "total": 23329,
+      "positive_proportion": 0.03203157266761507
+    },
+    "2015-01": {
+      "states": {
+        "after_two_days": 77,
+        "indeterminate_document": 82,
+        "within_two_days": 1671
+      },
+      "positive": 77,
+      "negative": 1671,
+      "eligible": 1748,
+      "total": 1830,
+      "positive_proportion": 0.044050343249427915
+    },
+    "2015-02": {
+      "states": {
+        "after_two_days": 70,
+        "indeterminate_document": 77,
+        "within_two_days": 1585
+      },
+      "positive": 70,
+      "negative": 1585,
+      "eligible": 1655,
+      "total": 1732,
+      "positive_proportion": 0.04229607250755287
+    },
+    "2015-03": {
+      "states": {
+        "after_two_days": 62,
+        "indeterminate_document": 96,
+        "within_two_days": 1733
+      },
+      "positive": 62,
+      "negative": 1733,
+      "eligible": 1795,
+      "total": 1891,
+      "positive_proportion": 0.03454038997214485
+    },
+    "2015-04": {
+      "states": {
+        "after_two_days": 62,
+        "indeterminate_document": 118,
+        "within_two_days": 1931
+      },
+      "positive": 62,
+      "negative": 1931,
+      "eligible": 1993,
+      "total": 2111,
+      "positive_proportion": 0.031108881083793276
+    },
+    "2015-05": {
+      "states": {
+        "after_two_days": 56,
+        "indeterminate_document": 117,
+        "within_two_days": 1786
+      },
+      "positive": 56,
+      "negative": 1786,
+      "eligible": 1842,
+      "total": 1959,
+      "positive_proportion": 0.03040173724212812
+    },
+    "2015-06": {
+      "states": {
+        "after_two_days": 96,
+        "indeterminate_document": 111,
+        "within_two_days": 1782
+      },
+      "positive": 96,
+      "negative": 1782,
+      "eligible": 1878,
+      "total": 1989,
+      "positive_proportion": 0.051118210862619806
+    },
+    "2015-07": {
+      "states": {
+        "after_two_days": 74,
+        "indeterminate_document": 131,
+        "within_two_days": 2068
+      },
+      "positive": 74,
+      "negative": 2068,
+      "eligible": 2142,
+      "total": 2273,
+      "positive_proportion": 0.03454715219421102
+    },
+    "2015-08": {
+      "states": {
+        "after_two_days": 57,
+        "indeterminate_document": 109,
+        "within_two_days": 1563
+      },
+      "positive": 57,
+      "negative": 1563,
+      "eligible": 1620,
+      "total": 1729,
+      "positive_proportion": 0.03518518518518519
+    },
+    "2015-09": {
+      "states": {
+        "after_two_days": 46,
+        "indeterminate_document": 136,
+        "within_two_days": 1883
+      },
+      "positive": 46,
+      "negative": 1883,
+      "eligible": 1929,
+      "total": 2065,
+      "positive_proportion": 0.023846552617936754
+    },
+    "2015-10": {
+      "states": {
+        "after_two_days": 42,
+        "indeterminate_document": 135,
+        "within_two_days": 1788
+      },
+      "positive": 42,
+      "negative": 1788,
+      "eligible": 1830,
+      "total": 1965,
+      "positive_proportion": 0.022950819672131147
+    },
+    "2015-11": {
+      "states": {
+        "after_two_days": 35,
+        "indeterminate_document": 136,
+        "within_two_days": 1663
+      },
+      "positive": 35,
+      "negative": 1663,
+      "eligible": 1698,
+      "total": 1834,
+      "positive_proportion": 0.02061248527679623
+    },
+    "2015-12": {
+      "states": {
+        "after_two_days": 21,
+        "indeterminate_document": 136,
+        "insufficient_followup": 154,
+        "within_two_days": 1640
+      },
+      "positive": 21,
+      "negative": 1640,
+      "eligible": 1661,
+      "total": 1951,
+      "positive_proportion": 0.012642986152919929
+    }
+  },
+  "test": "No consultado: se excluye OrderDate>=2016-01-01 antes de agregar outcomes."
+}

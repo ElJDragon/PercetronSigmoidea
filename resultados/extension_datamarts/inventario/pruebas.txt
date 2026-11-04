@@ -1,0 +1,29 @@
+test_all_zero_entity_retained_and_single_class_BA_undefined (tests.test_inventario_viabilidad.InventoryRulesTests.test_all_zero_entity_retained_and_single_class_BA_undefined) ... ok
+test_catalog_is_causal_and_has_no_continuous_ids (tests.test_inventario_viabilidad.InventoryRulesTests.test_catalog_is_causal_and_has_no_continuous_ids) ... ok
+test_count_label_independent_of_quantity_scale (tests.test_inventario_viabilidad.InventoryRulesTests.test_count_label_independent_of_quantity_scale) ... ok
+test_duplicate_event_is_not_double_counted (tests.test_inventario_viabilidad.InventoryRulesTests.test_duplicate_event_is_not_double_counted) ... ok
+test_existing_metrics_handle_single_class (tests.test_inventario_viabilidad.InventoryRulesTests.test_existing_metrics_handle_single_class) ... ok
+test_first_appearance_is_minimum_and_input_order_independent (tests.test_inventario_viabilidad.InventoryRulesTests.test_first_appearance_is_minimum_and_input_order_independent) ... ok
+test_future_outcomes_blocked_at_aggregation (tests.test_inventario_viabilidad.InventoryRulesTests.test_future_outcomes_blocked_at_aggregation) ... ok
+test_incoherent_type_sign_blocks (tests.test_inventario_viabilidad.InventoryRulesTests.test_incoherent_type_sign_blocks) ... ok
+test_late_edit_blocks_availability_claim (tests.test_inventario_viabilidad.InventoryRulesTests.test_late_edit_blocks_availability_claim) ... ok
+test_majority_is_fit_on_train_only (tests.test_inventario_viabilidad.InventoryRulesTests.test_majority_is_fit_on_train_only) ... ok
+test_missing_identity_never_zero (tests.test_inventario_viabilidad.InventoryRulesTests.test_missing_identity_never_zero) ... ok
+test_negative_adjustment_is_not_sale (tests.test_inventario_viabilidad.InventoryRulesTests.test_negative_adjustment_is_not_sale) ... ok
+test_no_preappearance_history_or_targets (tests.test_inventario_viabilidad.InventoryRulesTests.test_no_preappearance_history_or_targets) ... ok
+test_only_select_development_boundary_is_bound (tests.test_inventario_viabilidad.InventoryRulesTests.test_only_select_development_boundary_is_bound) ... ok
+test_positive_adjustment_is_not_receipt (tests.test_inventario_viabilidad.InventoryRulesTests.test_positive_adjustment_is_not_receipt) ... ok
+test_scope_rejects_unbounded_and_mutation (tests.test_inventario_viabilidad.InventoryRulesTests.test_scope_rejects_unbounded_and_mutation) ... ok
+test_target_change_does_not_change_historical_baseline (tests.test_inventario_viabilidad.InventoryRulesTests.test_target_change_does_not_change_historical_baseline) ... ok
+test_test_never_produced (tests.test_inventario_viabilidad.InventoryRulesTests.test_test_never_produced) ... ok
+test_tie_negative_and_strict_excess_positive (tests.test_inventario_viabilidad.InventoryRulesTests.test_tie_negative_and_strict_excess_positive) ... ok
+test_two_ids_same_day_count_as_two_receipts (tests.test_inventario_viabilidad.InventoryRulesTests.test_two_ids_same_day_count_as_two_receipts) ... ok
+test_unknown_statistic_not_authorized (tests.test_inventario_viabilidad.InventoryRulesTests.test_unknown_statistic_not_authorized) ... ok
+test_unknown_type_not_inferred_from_sign (tests.test_inventario_viabilidad.InventoryRulesTests.test_unknown_type_not_inferred_from_sign) ... ok
+test_zero_filling_requires_explicit_coverage (tests.test_inventario_viabilidad.InventoryRulesTests.test_zero_filling_requires_explicit_coverage) ... ok
+test_zero_quantity_adjustment_still_counts (tests.test_inventario_viabilidad.InventoryRulesTests.test_zero_quantity_adjustment_still_counts) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.022s
+
+OK

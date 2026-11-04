@@ -1,0 +1,68 @@
+{
+  "executed_at_utc": "2026-11-04T03:09:01.217056+00:00",
+  "server": "lpc:.\\AMBATO",
+  "source_database": "WideWorldImporters",
+  "source_table": "Sales.CustomerTransactions",
+  "verification_database": "WideWorldImportersDW",
+  "source_sql": "SELECT ct.CustomerTransactionID AS event_id,ct.CustomerID AS customer_id,\nct.TransactionDate AS event_date,ct.TransactionTypeID AS type_id,ct.LastEditedWhen AS edited_at,\nCASE WHEN ct.TransactionAmount<0 THEN 1 ELSE 0 END AS negative_payment\nFROM Sales.CustomerTransactions ct\nWHERE ct.TransactionTypeID=? AND ct.TransactionDate>=? AND ct.TransactionDate<?\nORDER BY ct.CustomerTransactionID",
+  "source_sql_sha256": "296e19a0d96818a22857c1f9f921143efae7a877961d97bd58cca77ff8954151",
+  "verification_sql": "SELECT f.[WWI Customer Transaction ID] AS event_id,f.[Date Key] AS event_date,\nt.[WWI Transaction Type ID] AS type_id\nFROM Fact.[Transaction] f JOIN Dimension.[Transaction Type] t\nON t.[Transaction Type Key]=f.[Transaction Type Key]\nWHERE t.[WWI Transaction Type ID]=? AND f.[Date Key]>=? AND f.[Date Key]<?\nAND f.[WWI Customer Transaction ID] IS NOT NULL\nORDER BY f.[WWI Customer Transaction ID]",
+  "parameters": [
+    3,
+    "2013-01-01",
+    "2016-01-01"
+  ],
+  "events": 23018,
+  "accounts": 257,
+  "fingerprints": {
+    "WideWorldImporters": {
+      "before": [
+        {
+          "events": 23018,
+          "checksum": 91661244
+        }
+      ],
+      "after": [
+        {
+          "events": 23018,
+          "checksum": 91661244
+        }
+      ]
+    },
+    "WideWorldImportersDW": {
+      "before": [
+        {
+          "events": 23018,
+          "checksum": 12596656
+        }
+      ],
+      "after": [
+        {
+          "events": 23018,
+          "checksum": 12596656
+        }
+      ]
+    }
+  },
+  "compressed_snapshot_sha256": "38739cfbcccd5df3d8dd11248e44a16b35279a714f796eb8e206794e41b14a8d",
+  "canonical_csv_sha256": "5315f68ed66dfcd0c5feb34538bf6b9375f0467646285a269f8b9d6a8c7fddce",
+  "snapshot_fields": [
+    "event_id",
+    "customer_id",
+    "event_date",
+    "type_id",
+    "edited_at",
+    "negative_payment"
+  ],
+  "approved_contract_sha256": "efeb3cca809c4d36e6a2ab70ed258ac8a68b2b63bbf5e7528fad065eb43b382e",
+  "approved_audit_projection_matches": true,
+  "coverage_mode": "business_ledger_academic",
+  "assumptions": [
+    "TransactionDate representa el día de registro empresarial del pago/cobro; no se afirma una hora auditada de inserción.",
+    "El libro de eventos de desarrollo conserva los pagos registrados sin borrados o reclasificaciones retrospectivas relevantes no observados. Los módulos locales y las versiones actuales son evidencia de apoyo, no bitácora exhaustiva.",
+    "Las extracciones conciliadas OLTP–DW y presencia de pagos en los 36 meses justifican cobertura académica mensual del libro desde enero de 2013; no certifican conciliación bancaria ni completitud absoluta.",
+    "Bajo esa cobertura explícita, ausencia de un pago en un mes posterior a primera observación significa cero eventos registrados, no incapacidad de pagar ni ausencia de ventas.",
+    "La disponibilidad retrospectiva de eventos se aproxima por su día empresarial y el control observable de versión. Para todos los pagos seleccionados, última edición coincide con ese día; no se necesita inferir saldos anteriores."
+  ],
+  "last_edit_is_audit_of_creation": false
+}

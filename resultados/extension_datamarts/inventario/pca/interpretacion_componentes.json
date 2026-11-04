@@ -1,0 +1,81 @@
+{
+  "top_coefficients": {
+    "PC1": [
+      {
+        "feature": "recepciones_media_3",
+        "coefficient": 0.3196436555512971,
+        "squared_loading_share": 0.10217206653419626
+      },
+      {
+        "feature": "recepciones_lag_1",
+        "coefficient": 0.31947492958765006,
+        "squared_loading_share": 0.10206423063503396
+      },
+      {
+        "feature": "recepciones_mediana_3",
+        "coefficient": 0.3189233206027631,
+        "squared_loading_share": 0.10171208442429283
+      },
+      {
+        "feature": "recepciones_lag_2",
+        "coefficient": 0.31865256648976664,
+        "squared_loading_share": 0.10153945813051515
+      },
+      {
+        "feature": "mes_anterior_sin_recepciones",
+        "coefficient": -0.3175019049868282,
+        "squared_loading_share": 0.10080745967026487
+      },
+      {
+        "feature": "recepciones_lag_3",
+        "coefficient": 0.31618578145548804,
+        "squared_loading_share": 0.09997344839461764
+      }
+    ],
+    "PC2": [
+      {
+        "feature": "recepciones_tendencia_3",
+        "coefficient": 0.6014453592412273,
+        "squared_loading_share": 0.361736520152809
+      },
+      {
+        "feature": "recepciones_cambio_1",
+        "coefficient": 0.5603797906286793,
+        "squared_loading_share": 0.3140255097450424
+      },
+      {
+        "feature": "recepciones_std_3",
+        "coefficient": 0.41592372060759625,
+        "squared_loading_share": 0.17299254136406578
+      },
+      {
+        "feature": "unidades_recibidas_lag_3",
+        "coefficient": -0.1859225215016441,
+        "squared_loading_share": 0.03456718400152931
+      },
+      {
+        "feature": "unidades_recibidas_lag_2",
+        "coefficient": -0.18243162121752254,
+        "squared_loading_share": 0.03328129642005362
+      },
+      {
+        "feature": "antiguedad_observada_meses",
+        "coefficient": -0.1527496718093815,
+        "squared_loading_share": 0.02333246223787376
+      }
+    ]
+  },
+  "grouping": {
+    "train": {
+      "between_item_SS_fraction_PC1": 0.953407539126453,
+      "between_item_SS_fraction_PC2": 0.053343997350789644,
+      "caveat": "descriptive repeated-item grouping, not supervised separation or causal inference"
+    },
+    "val": {
+      "between_item_SS_fraction_PC1": 0.9928105486392674,
+      "between_item_SS_fraction_PC2": 0.7168442203259124,
+      "caveat": "descriptive repeated-item grouping, not supervised separation or causal inference"
+    }
+  },
+  "definition": "unit eigenvector coefficients on standardized inputs; squared loadings sum to 1 per PC, not causal effects"
+}

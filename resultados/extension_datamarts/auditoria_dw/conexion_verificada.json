@@ -1,0 +1,13 @@
+{
+  "connection": [
+    {
+      "server_name": "JoshuaG\\AMBATO",
+      "database_name": "WideWorldImportersDW",
+      "version": "16.0.1210.3"
+    }
+  ],
+  "authentication": "Windows integrada",
+  "driver": "ODBC Driver 17 for SQL Server",
+  "local_readonly": true,
+  "note": "Acceso ODBC readonly e intención de lectura; toda consulta emitida se valida SELECT, no se cambia ningún permiso en el servidor."
+}

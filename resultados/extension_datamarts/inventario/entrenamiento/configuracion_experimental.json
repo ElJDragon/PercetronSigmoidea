@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "process": "inventory_high_receipt_frequency",
+  "features": [
+    "recepciones_lag_1",
+    "recepciones_lag_2",
+    "recepciones_lag_3",
+    "unidades_recibidas_lag_1",
+    "unidades_recibidas_lag_2",
+    "unidades_recibidas_lag_3",
+    "recepciones_media_3",
+    "recepciones_mediana_3",
+    "recepciones_std_3",
+    "recepciones_cambio_1",
+    "recepciones_tendencia_3",
+    "meses_con_recepciones_3",
+    "mes_anterior_sin_recepciones",
+    "antiguedad_observada_meses",
+    "mes_sin",
+    "mes_cos",
+    "dias_mes_objetivo"
+  ],
+  "primary_metric": "unweighted validation balanced_accuracy, all 2628 observations",
+  "selection": "BA descending, F1 descending, epoch ascending, experiment index ascending",
+  "initialization": "fresh zero weights and bias for each run; no warm start or previous Data Mart parameters",
+  "thresholds": {
+    "perceptron": "z>=0",
+    "logistic": 0.5,
+    "candidates": [
+      0.5
+    ],
+    "search": false
+  },
+  "weighting_amendment": "This user request explicitly authorizes an isolated weighted logistic variant, superseding the earlier no-class-weight training default only for that variant. Dataset and validation remain unweighted.",
+  "class_weights": "n_train/(2*n_train_class), only y_train, no resampling",
+  "experiments": [
+    {
+      "id": "p_seed42",
+      "algorithm": "perceptron",
+      "variant": "standard",
+      "params": {
+        "learning_rate": 0.01,
+        "max_epochs": 100,
+        "seed": 42,
+        "shuffle": true
+      }
+    },
+    {
+      "id": "p_seed7",
+      "algorithm": "perceptron",
+      "variant": "standard",
+      "params": {
+        "learning_rate": 0.01,
+        "max_epochs": 100,
+        "seed": 7,
+        "shuffle": true
+      }
+    },
+    {
+      "id": "l_eta005",
+      "algorithm": "logistic",
+      "variant": "standard",
+      "params": {
+        "learning_rate": 0.05,
+        "max_epochs": 400,
+        "seed": 42,
+        "initialization": "zeros",
+        "tolerance": 1e-06,
+        "threshold": 0.5
+      }
+    },
+    {
+      "id": "l_eta010",
+      "algorithm": "logistic",
+      "variant": "standard",
+      "params": {
+        "learning_rate": 0.1,
+        "max_epochs": 400,
+        "seed": 42,
+        "initialization": "zeros",
+        "tolerance": 1e-06,
+        "threshold": 0.5
+      }
+    },
+    {
+      "id": "lw_eta005",
+      "algorithm": "logistic",
+      "variant": "weighted",
+      "params": {
+        "learning_rate": 0.05,
+        "max_epochs": 400,
+        "seed": 42,
+        "initialization": "zeros",
+        "tolerance": 1e-06,
+        "threshold": 0.5
+      }
+    },
+    {
+      "id": "lw_eta010",
+      "algorithm": "logistic",
+      "variant": "weighted",
+      "params": {
+        "learning_rate": 0.1,
+        "max_epochs": 400,
+        "seed": 42,
+        "initialization": "zeros",
+        "tolerance": 1e-06,
+        "threshold": 0.5
+      }
+    }
+  ],
+  "budget": {
+    "runs": 6,
+    "online_epochs_max": 200,
+    "batch_epochs_max": 1600,
+    "adaptive_expansion": false
+  },
+  "perceptron_rate_rationale": "One eta and two predefined permutations; from zero eta rescaling is redundant",
+  "baselines": {
+    "majority": "class most frequent in train, tie 0",
+    "historical": "1[N(t-1)>median(N(t-1),N(t-2),N(t-3))]",
+    "history_months": 3
+  },
+  "support_policy": "principal and common identical when all three-month baselines available; never drop principal rows",
+  "AP": "descriptive only, tie-aware ranking, not precision at cutoff and not checkpoint criterion",
+  "model_policy": "one best perceptron; best standard and best weighted logistic documented; select final logistic across both variants by same validation rule",
+  "test_reserved": true,
+  "PCA": false,
+  "SQL": false
+}

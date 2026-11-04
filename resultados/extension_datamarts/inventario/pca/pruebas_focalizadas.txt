@@ -1,0 +1,25 @@
+test_PCA_fit_sees_train_only_once (tests.test_pca_inventario.InventoryPCAAuditTests.test_PCA_fit_sees_train_only_once) ... ok
+test_PCA_persistence_and_feature_order (tests.test_pca_inventario.InventoryPCAAuditTests.test_PCA_persistence_and_feature_order) ... ok
+test_activity_diagnostic_joins_by_key_not_partition_positions (tests.test_pca_inventario.InventoryPCAAuditTests.test_activity_diagnostic_joins_by_key_not_partition_positions) ... ok
+test_all_17_formula_checks_no_target_feature (tests.test_pca_inventario.InventoryPCAAuditTests.test_all_17_formula_checks_no_target_feature) ... ok
+test_all_previous_files_and_frozen_models_remain_unchanged (tests.test_pca_inventario.InventoryPCAAuditTests.test_all_previous_files_and_frozen_models_remain_unchanged) ... ok
+test_changed_labels_do_not_change_PCA (tests.test_pca_inventario.InventoryPCAAuditTests.test_changed_labels_do_not_change_PCA) ... ok
+test_changed_validation_does_not_change_PCA_parameters (tests.test_pca_inventario.InventoryPCAAuditTests.test_changed_validation_does_not_change_PCA_parameters) ... ok
+test_confusion_metrics_FPR_and_BA (tests.test_pca_inventario.InventoryPCAAuditTests.test_confusion_metrics_FPR_and_BA) ... ok
+test_frozen_models_reproduce_predictions_without_fit (tests.test_pca_inventario.InventoryPCAAuditTests.test_frozen_models_reproduce_predictions_without_fit) ... ok
+test_future_changes_do_not_modify_past_X_or_eligibility (tests.test_pca_inventario.InventoryPCAAuditTests.test_future_changes_do_not_modify_past_X_or_eligibility) ... ok
+test_hash_discrepancy_blocks_before_PCA (tests.test_pca_inventario.InventoryPCAAuditTests.test_hash_discrepancy_blocks_before_PCA) ... ok
+test_no_later_activity_needed_to_retain_eligible_rows (tests.test_pca_inventario.InventoryPCAAuditTests.test_no_later_activity_needed_to_retain_eligible_rows) ... ok
+test_original_convergence_is_read_only (tests.test_pca_inventario.InventoryPCAAuditTests.test_original_convergence_is_read_only) ... ok
+test_orthogonality_variance_and_residual (tests.test_pca_inventario.InventoryPCAAuditTests.test_orthogonality_variance_and_residual) ... ok
+test_positive_ids_and_shared_errors_reconcile (tests.test_pca_inventario.InventoryPCAAuditTests.test_positive_ids_and_shared_errors_reconcile) ... ok
+test_primary_common_and_baselines_exact_support (tests.test_pca_inventario.InventoryPCAAuditTests.test_primary_common_and_baselines_exact_support) ... ok
+test_protocol_is_closed_and_does_not_query_outcomes (tests.test_pca_inventario.InventoryPCAAuditTests.test_protocol_is_closed_and_does_not_query_outcomes) ... ok
+test_target_receipt_changes_y_not_same_month_X (tests.test_pca_inventario.InventoryPCAAuditTests.test_target_receipt_changes_y_not_same_month_X) ... ok
+test_three_figures_and_all_projection_rows_preserved (tests.test_pca_inventario.InventoryPCAAuditTests.test_three_figures_and_all_projection_rows_preserved) ... ok
+test_zero_mode_required_and_unknown_month_excluded (tests.test_pca_inventario.InventoryPCAAuditTests.test_zero_mode_required_and_unknown_month_excluded) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 2.695s
+
+OK

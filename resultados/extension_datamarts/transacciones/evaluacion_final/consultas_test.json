@@ -1,0 +1,84 @@
+[
+  {
+    "database": "WideWorldImporters",
+    "sql": "SELECT TransactionTypeName FROM Application.TransactionTypes WHERE TransactionTypeID=?",
+    "parameters": [
+      3
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "database": "WideWorldImporters",
+    "sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(ct.CustomerTransactionID,\nct.CustomerID,ct.TransactionDate,ct.TransactionTypeID,ct.LastEditedWhen,\nCASE WHEN ct.TransactionAmount<0 THEN 1 ELSE 0 END)) AS checksum\nFROM Sales.CustomerTransactions ct\nWHERE ct.TransactionTypeID=? AND ct.TransactionDate>=? AND ct.TransactionDate<?",
+    "parameters": [
+      3,
+      "2016-01-01",
+      "2016-06-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "database": "WideWorldImporters",
+    "sql": "SELECT ct.CustomerTransactionID AS event_id,ct.CustomerID AS customer_id,\nct.TransactionDate AS event_date,ct.TransactionTypeID AS type_id,ct.LastEditedWhen AS edited_at,\nCASE WHEN ct.TransactionAmount<0 THEN 1 ELSE 0 END AS negative_payment\nFROM Sales.CustomerTransactions ct\nWHERE ct.TransactionTypeID=? AND ct.TransactionDate>=? AND ct.TransactionDate<?\nORDER BY ct.CustomerTransactionID",
+    "parameters": [
+      3,
+      "2016-01-01",
+      "2016-06-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 3619
+  },
+  {
+    "database": "WideWorldImporters",
+    "sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(ct.CustomerTransactionID,\nct.CustomerID,ct.TransactionDate,ct.TransactionTypeID,ct.LastEditedWhen,\nCASE WHEN ct.TransactionAmount<0 THEN 1 ELSE 0 END)) AS checksum\nFROM Sales.CustomerTransactions ct\nWHERE ct.TransactionTypeID=? AND ct.TransactionDate>=? AND ct.TransactionDate<?",
+    "parameters": [
+      3,
+      "2016-01-01",
+      "2016-06-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "database": "WideWorldImportersDW",
+    "sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(f.[WWI Customer Transaction ID],\nf.[Date Key],t.[WWI Transaction Type ID])) AS checksum\nFROM Fact.[Transaction] f JOIN Dimension.[Transaction Type] t\nON t.[Transaction Type Key]=f.[Transaction Type Key]\nWHERE t.[WWI Transaction Type ID]=? AND f.[Date Key]>=? AND f.[Date Key]<?\nAND f.[WWI Customer Transaction ID] IS NOT NULL",
+    "parameters": [
+      3,
+      "2016-01-01",
+      "2016-06-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "database": "WideWorldImportersDW",
+    "sql": "SELECT f.[WWI Customer Transaction ID] AS event_id,f.[Date Key] AS event_date,\nt.[WWI Transaction Type ID] AS type_id\nFROM Fact.[Transaction] f JOIN Dimension.[Transaction Type] t\nON t.[Transaction Type Key]=f.[Transaction Type Key]\nWHERE t.[WWI Transaction Type ID]=? AND f.[Date Key]>=? AND f.[Date Key]<?\nAND f.[WWI Customer Transaction ID] IS NOT NULL\nORDER BY f.[WWI Customer Transaction ID]",
+    "parameters": [
+      3,
+      "2016-01-01",
+      "2016-06-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 3619
+  },
+  {
+    "database": "WideWorldImportersDW",
+    "sql": "SELECT COUNT_BIG(*) AS events,CHECKSUM_AGG(BINARY_CHECKSUM(f.[WWI Customer Transaction ID],\nf.[Date Key],t.[WWI Transaction Type ID])) AS checksum\nFROM Fact.[Transaction] f JOIN Dimension.[Transaction Type] t\nON t.[Transaction Type Key]=f.[Transaction Type Key]\nWHERE t.[WWI Transaction Type ID]=? AND f.[Date Key]>=? AND f.[Date Key]<?\nAND f.[WWI Customer Transaction ID] IS NOT NULL",
+    "parameters": [
+      3,
+      "2016-01-01",
+      "2016-06-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  }
+]

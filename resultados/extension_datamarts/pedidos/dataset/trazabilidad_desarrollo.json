@@ -1,0 +1,141 @@
+{
+  "fingerprint": {
+    "lines": 201510,
+    "checksum": 1021212603
+  },
+  "identity": {
+    "lines": 201510,
+    "order_line_ids": 201510,
+    "current_order_ids": 63978
+  },
+  "duplicate_current_order_stock": {
+    "groups": 0,
+    "excess": 0
+  },
+  "dw_exact_bridge": {
+    "dw_rows": 201510,
+    "matched_lines": 201510,
+    "distinct_lines": 201510,
+    "no_source": 0,
+    "date_discrepancies": 0
+  },
+  "last_edit_by_period": [
+    {
+      "partition": "validation",
+      "lines": 73003,
+      "last_edit_same_day": 71641,
+      "last_edit_later_day": 1362,
+      "last_edit_earlier_day": 0
+    },
+    {
+      "partition": "train",
+      "lines": 128507,
+      "last_edit_same_day": 125535,
+      "last_edit_later_day": 2972,
+      "last_edit_earlier_day": 0
+    }
+  ],
+  "restricted_diagnostic_not_dataset": [
+    {
+      "partition": "validation",
+      "previously_eligible": 71112,
+      "same_day_edit": 70014,
+      "positive_with_same_day_edit": 0,
+      "later_day_edit": 1098,
+      "previous_positive": 698
+    },
+    {
+      "partition": "train",
+      "previously_eligible": 126341,
+      "same_day_edit": 123800,
+      "positive_with_same_day_edit": 0,
+      "later_day_edit": 2541,
+      "previous_positive": 1734
+    }
+  ],
+  "quantity_price_versions": {
+    "lines": 201510,
+    "current_price_null": 0,
+    "current_nonpositive_quantity": 0,
+    "current_negative_price": 0
+  },
+  "backorder_lineage": {
+    "edges": 6534,
+    "different_reference_dates": 0,
+    "non_increasing_ids": 0
+  },
+  "metadata_sample_no_picking": [
+    {
+      "OrderLineID": 1,
+      "current_order_id": 45,
+      "reference_date": "2013-01-01",
+      "last_edit_only": "2013-01-02 11:00:00"
+    },
+    {
+      "OrderLineID": 2,
+      "current_order_id": 1,
+      "reference_date": "2013-01-01",
+      "last_edit_only": "2013-01-01 11:00:00"
+    },
+    {
+      "OrderLineID": 3,
+      "current_order_id": 2,
+      "reference_date": "2013-01-01",
+      "last_edit_only": "2013-01-01 11:00:00"
+    },
+    {
+      "OrderLineID": 4,
+      "current_order_id": 46,
+      "reference_date": "2013-01-01",
+      "last_edit_only": "2013-01-02 11:00:00"
+    },
+    {
+      "OrderLineID": 5,
+      "current_order_id": 46,
+      "reference_date": "2013-01-01",
+      "last_edit_only": "2013-01-02 11:00:00"
+    },
+    {
+      "OrderLineID": 6,
+      "current_order_id": 2,
+      "reference_date": "2013-01-01",
+      "last_edit_only": "2013-01-01 11:00:00"
+    },
+    {
+      "OrderLineID": 7,
+      "current_order_id": 47,
+      "reference_date": "2013-01-01",
+      "last_edit_only": "2013-01-02 11:00:00"
+    },
+    {
+      "OrderLineID": 8,
+      "current_order_id": 47,
+      "reference_date": "2013-01-01",
+      "last_edit_only": "2013-01-02 11:00:00"
+    },
+    {
+      "OrderLineID": 9,
+      "current_order_id": 3,
+      "reference_date": "2013-01-01",
+      "last_edit_only": "2013-01-01 11:00:00"
+    },
+    {
+      "OrderLineID": 10,
+      "current_order_id": 47,
+      "reference_date": "2013-01-01",
+      "last_edit_only": "2013-01-02 11:00:00"
+    },
+    {
+      "OrderLineID": 11,
+      "current_order_id": 4,
+      "reference_date": "2013-01-01",
+      "last_edit_only": "2013-01-01 11:00:00"
+    },
+    {
+      "OrderLineID": 12,
+      "current_order_id": 4,
+      "reference_date": "2013-01-01",
+      "last_edit_only": "2013-01-01 11:00:00"
+    }
+  ]
+}

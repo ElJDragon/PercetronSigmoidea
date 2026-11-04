@@ -1,0 +1,173 @@
+{
+  "dimensions": {
+    "Stock Item": {
+      "business_id": "WWI Stock Item ID",
+      "versions": {
+        "business_ids": 228,
+        "max_versions": 5,
+        "ids_multiple_versions": 227
+      },
+      "invalid_intervals": 0,
+      "overlapping_version_pairs": 0
+    },
+    "Customer": {
+      "business_id": "WWI Customer ID",
+      "versions": {
+        "business_ids": 403,
+        "max_versions": 1,
+        "ids_multiple_versions": 0
+      },
+      "invalid_intervals": 0,
+      "overlapping_version_pairs": 0
+    },
+    "Supplier": {
+      "business_id": "WWI Supplier ID",
+      "versions": {
+        "business_ids": 14,
+        "max_versions": 3,
+        "ids_multiple_versions": 13
+      },
+      "invalid_intervals": 0,
+      "overlapping_version_pairs": 1
+    },
+    "Transaction Type": {
+      "business_id": "WWI Transaction Type ID",
+      "versions": {
+        "business_ids": 14,
+        "max_versions": 2,
+        "ids_multiple_versions": 1
+      },
+      "invalid_intervals": 0,
+      "overlapping_version_pairs": 0
+    },
+    "Payment Method": {
+      "business_id": "WWI Payment Method ID",
+      "versions": {
+        "business_ids": 5,
+        "max_versions": 2,
+        "ids_multiple_versions": 1
+      },
+      "invalid_intervals": 0,
+      "overlapping_version_pairs": 0
+    },
+    "City": {
+      "business_id": "WWI City ID",
+      "versions": {
+        "business_ids": 37941,
+        "max_versions": 6,
+        "ids_multiple_versions": 37936
+      },
+      "invalid_intervals": 0,
+      "overlapping_version_pairs": 5948
+    },
+    "Employee": {
+      "business_id": "WWI Employee ID",
+      "versions": {
+        "business_ids": 20,
+        "max_versions": 18,
+        "ids_multiple_versions": 19
+      },
+      "invalid_intervals": 0,
+      "overlapping_version_pairs": 1
+    }
+  },
+  "fact_version_alignment_by_date_midnight": [
+    {
+      "fact": "Movement",
+      "dimension": "Customer",
+      "column": "Customer Key",
+      "outside_event_date_interval": 0
+    },
+    {
+      "fact": "Movement",
+      "dimension": "Stock Item",
+      "column": "Stock Item Key",
+      "outside_event_date_interval": 0
+    },
+    {
+      "fact": "Movement",
+      "dimension": "Supplier",
+      "column": "Supplier Key",
+      "outside_event_date_interval": 0
+    },
+    {
+      "fact": "Movement",
+      "dimension": "Transaction Type",
+      "column": "Transaction Type Key",
+      "outside_event_date_interval": 0
+    },
+    {
+      "fact": "Order",
+      "dimension": "City",
+      "column": "City Key",
+      "outside_event_date_interval": 377
+    },
+    {
+      "fact": "Order",
+      "dimension": "Customer",
+      "column": "Customer Key",
+      "outside_event_date_interval": 0
+    },
+    {
+      "fact": "Order",
+      "dimension": "Employee",
+      "column": "Picker Key",
+      "outside_event_date_interval": 2492
+    },
+    {
+      "fact": "Order",
+      "dimension": "Employee",
+      "column": "Salesperson Key",
+      "outside_event_date_interval": 2632
+    },
+    {
+      "fact": "Order",
+      "dimension": "Stock Item",
+      "column": "Stock Item Key",
+      "outside_event_date_interval": 0
+    },
+    {
+      "fact": "Purchase",
+      "dimension": "Stock Item",
+      "column": "Stock Item Key",
+      "outside_event_date_interval": 0
+    },
+    {
+      "fact": "Purchase",
+      "dimension": "Supplier",
+      "column": "Supplier Key",
+      "outside_event_date_interval": 94
+    },
+    {
+      "fact": "Transaction",
+      "dimension": "Customer",
+      "column": "Bill To Customer Key",
+      "outside_event_date_interval": 0
+    },
+    {
+      "fact": "Transaction",
+      "dimension": "Customer",
+      "column": "Customer Key",
+      "outside_event_date_interval": 0
+    },
+    {
+      "fact": "Transaction",
+      "dimension": "Payment Method",
+      "column": "Payment Method Key",
+      "outside_event_date_interval": 0
+    },
+    {
+      "fact": "Transaction",
+      "dimension": "Supplier",
+      "column": "Supplier Key",
+      "outside_event_date_interval": 0
+    },
+    {
+      "fact": "Transaction",
+      "dimension": "Transaction Type",
+      "column": "Transaction Type Key",
+      "outside_event_date_interval": 0
+    }
+  ],
+  "note": "Intervalos semiabiertos [Valid From,Valid To). Las claves fecha carecen de hora: desacuerdos intradía requieren resolver contra hora OLTP; los valores posteriores al corte no se vuelven predictores por tener FK válida."
+}

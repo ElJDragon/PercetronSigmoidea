@@ -1,0 +1,24 @@
+test_average_precision_ties_and_distinct_precision (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_average_precision_ties_and_distinct_precision) ... ok
+test_balanced_weights_train_only (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_balanced_weights_train_only) ... ok
+test_class_weights_do_not_follow_validation (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_class_weights_do_not_follow_validation) ... ok
+test_invalid_weights_and_single_class_block (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_invalid_weights_and_single_class_block) ... ok
+test_majority_metrics_never_claim_good_minority_detection (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_majority_metrics_never_claim_good_minority_detection) ... ok
+test_model_rejects_feature_order_or_dimension (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_model_rejects_feature_order_or_dimension) ... ok
+test_monoclass_month_BA_remains_undefined (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_monoclass_month_BA_remains_undefined) ... ok
+test_plan_budget_thresholds_and_three_month_baseline (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_plan_budget_thresholds_and_three_month_baseline) ... ok
+test_preflight_is_offline_and_does_not_load_2016 (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_preflight_is_offline_and_does_not_load_2016) ... ok
+test_preflight_validates_frozen_hashes (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_preflight_validates_frozen_hashes) ... ok
+test_selected_checkpoint_is_trace_not_last (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_selected_checkpoint_is_trace_not_last) ... ok
+test_traced_perceptron_reuses_exact_base_updates (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_traced_perceptron_reuses_exact_base_updates) ... ok
+test_traced_standard_logistic_reuses_base_math (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_traced_standard_logistic_reuses_base_math) ... ok
+test_unit_weights_match_standard_gradient (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_unit_weights_match_standard_gradient) ... ok
+test_weighted_gradient_central_differences (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_weighted_gradient_central_differences) ... ok
+test_weighted_gradient_extreme_logits (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_weighted_gradient_extreme_logits) ... ok
+test_weighted_initialization_and_repeat_training_deterministic (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_weighted_initialization_and_repeat_training_deterministic) ... ok
+test_weighted_persistence_exact_predictions (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_weighted_persistence_exact_predictions) ... ok
+test_wilson_interval_is_descriptive_and_finite (tests.test_entrenamiento_inventario.InventoryTrainingTests.test_wilson_interval_is_descriptive_and_finite) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.407s
+
+OK

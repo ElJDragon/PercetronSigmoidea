@@ -1,0 +1,43 @@
+{
+  "scope": "Viabilidad de Compras, sin matrices ni entrenamiento; 2016 reservado",
+  "implementation_sha256": {
+    "src/datamarts/compras_viabilidad.py": "fa98d4680949d101de41466305cee7938ee7961056df0101ea1933b3c8f4919b",
+    "src/datamarts/reportes_compras.py": "7f9b174771959a413426607dd802cc1f1b972954b87e15f832bd692b0baa61d6",
+    "tests/test_compras_viabilidad.py": "60f863a0290da75d46c93821eda0ec5365e078b7d59ae97637bcdd6913791a1b"
+  },
+  "artifacts_sha256": {
+    "resultados\\extension_datamarts\\compras\\analisis_etiquetas.md": "46492132db1a545318af21949087b9efbe36060b08ccbc7e728747711c410539",
+    "resultados\\extension_datamarts\\compras\\catalogo_caracteristicas.json": "302e25261bd7432229fe7b870e52ad4769e515759fdcfa14902418f5c21ab0de",
+    "resultados\\extension_datamarts\\compras\\comprobaciones_focalizadas.json": "f219a6cb944b4c4ea491d5e8135f785f52c1fcfe1fc24962ac0aeb8812cfe7fa",
+    "resultados\\extension_datamarts\\compras\\consultas_dw.json": "429781e3b2d98ee2df1d9abfd9fcf6bfcfe1116466c3d0b12dc81afbb2ccdb83",
+    "resultados\\extension_datamarts\\compras\\consultas_metadatos.json": "1d6d93bc2e9645c3ae430b7bad951ea0ee69123b5bd17ec86db0c910b17ad92a",
+    "resultados\\extension_datamarts\\compras\\consultas_oltp.json": "13ff70121e3196cb89079e15b1d37aeb8f39baa78a20fc48f575f5892f073dfe",
+    "resultados\\extension_datamarts\\compras\\contrato_datos.json": "fc91865ae7d90d94cfec1f673dde7d755181aaf7d7993d7fe14e1195d115a50c",
+    "resultados\\extension_datamarts\\compras\\contrato_datos.md": "4fb2e30843a46864fc6b7a37a6fb9fa376e6fa29d3e1a5e8170e768a3d2e8f5d",
+    "resultados\\extension_datamarts\\compras\\dictamen.json": "dc1da1be298b9dc50f68d15a0324c6fb85f133e86bae5d55674230e7df8a1138",
+    "resultados\\extension_datamarts\\compras\\dimensiones_desarrollo.json": "850732088b888122ce232c78eb19e706eb9549a00745e6820ee1cd5b6c8cd0da",
+    "resultados\\extension_datamarts\\compras\\diseno_evaluacion.md": "5be52a91728f57436be0573588d53fbf404e474f8a8a916267d358f51c5f9d78",
+    "resultados\\extension_datamarts\\compras\\distribuciones_mensuales.csv": "24b8506c33dc40937d40be48a1f050f8e95a67f33585bd89dec9efea7059fb03",
+    "resultados\\extension_datamarts\\compras\\etiquetas_candidatas.json": "5f654f66898c3e43a9f20201d913d767ce84449f4cdf6bda5225e480be55c3a9",
+    "resultados\\extension_datamarts\\compras\\evidencia_semantica.json": "c1437a313337838856c545583fa32ea6818649aadb5173566a72fe2e3d8e0cb5",
+    "resultados\\extension_datamarts\\compras\\granularidades.json": "29568676d8f145e29abcb1d9ba9dc1e33179dd3c0626cd408a220236d047cbbc",
+    "resultados\\extension_datamarts\\compras\\hechos_desarrollo.json": "7901d0408a58f6ace5a1b106fad6941456e37a066b20d3146f786935b8920e84",
+    "resultados\\extension_datamarts\\compras\\huella_dw_antes.json": "9db882907a9a513dd38fb3a89622b4f089436b2809e824d34acf7239ae4b0b8b",
+    "resultados\\extension_datamarts\\compras\\huella_dw_despues.json": "9db882907a9a513dd38fb3a89622b4f089436b2809e824d34acf7239ae4b0b8b",
+    "resultados\\extension_datamarts\\compras\\huella_oltp_antes.json": "8b96c4dc6caf16e9e2811106a42033ac14783603a3d1f8e268056a7963caab14",
+    "resultados\\extension_datamarts\\compras\\huella_oltp_despues.json": "8b96c4dc6caf16e9e2811106a42033ac14783603a3d1f8e268056a7963caab14",
+    "resultados\\extension_datamarts\\compras\\integridad_antes.json": "3aaafd05f523c62a9fd4e5b762d6bc4025ded7e61a0adb8e2c15de3a7973118e",
+    "resultados\\extension_datamarts\\compras\\integridad_despues.json": "3aaafd05f523c62a9fd4e5b762d6bc4025ded7e61a0adb8e2c15de3a7973118e",
+    "resultados\\extension_datamarts\\compras\\lineas_desarrollo.json": "55f87c596fd3230e0fd0b6b3599fa0edd3722b7df0696b588d41c8dfa86240eb",
+    "resultados\\extension_datamarts\\compras\\metadatos_oltp.json": "a5f58d000a1bb0c62e270d86003440ba2399eb5a43e991cbe871c19ec1881f53",
+    "resultados\\extension_datamarts\\compras\\modulos_compras.json": "f5baa5829a05d136611f17342d52b546747c200a0addc80d01575858b9265a95",
+    "resultados\\extension_datamarts\\compras\\ordenes_desarrollo.json": "cbcf3d9b4a2cb8ef1e25594d71e48b83fa91148f4915cdd058fd63030b825d18",
+    "resultados\\extension_datamarts\\compras\\productos_dim_desarrollo.json": "49a0f743fa1889710624029273f5e362adf50ab9b147fffc8ab3ad4db162bc62",
+    "resultados\\extension_datamarts\\compras\\proveedores_historicos.json": "3b1a71e76bd6f94f117bd4a6d95c18cd95012ff42dc0661184f2edea6fbbdd63",
+    "resultados\\extension_datamarts\\compras\\restricciones.json": "12608d24f9c6d360eaf6b1b26925328c3e54f9f8e9780196d5e8eed0bd733af9",
+    "resultados\\extension_datamarts\\compras\\resumen_consola.json": "deef5f2cebf88bc46981bcabf865a35e5a0515eda8de5237c49460c717377bb1",
+    "resultados\\extension_datamarts\\compras\\semantica_compras.md": "313daada7a1c03ef1407135c218d9b294e94e5498c16b9a2c49589514c49732e",
+    "resultados\\extension_datamarts\\compras\\tracking.json": "e010dc3c59bf6d7b31f68c731156eaa38c4e45acc0427c68044c81407af0cd84",
+    "resultados\\extension_datamarts\\compras\\unidades_historicas.json": "86dccaa9e59da7a655375b46cc6daf7212be262779dd3093a4c4475dad94b61a"
+  }
+}

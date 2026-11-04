@@ -1,0 +1,93 @@
+[
+  {
+    "surrogate": 0,
+    "business_id": 0,
+    "label": "Unknown",
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 1,
+    "business_id": 1,
+    "label": "Customer Invoice",
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 2,
+    "business_id": 2,
+    "label": "Customer Credit Note",
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 3,
+    "business_id": 3,
+    "label": "Customer Payment Received",
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 4,
+    "business_id": 4,
+    "label": "Customer Refund",
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 5,
+    "business_id": 5,
+    "label": "Supplier Invoice",
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 6,
+    "business_id": 6,
+    "label": "Supplier Credit Note",
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 7,
+    "business_id": 7,
+    "label": "Supplier Payment Issued",
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 8,
+    "business_id": 8,
+    "label": "Supplier Refund",
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 9,
+    "business_id": 9,
+    "label": "Stock Transfer",
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 10,
+    "business_id": 10,
+    "label": "Stock Issue",
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 11,
+    "business_id": 11,
+    "label": "Stock Receipt",
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  },
+  {
+    "surrogate": 12,
+    "business_id": 12,
+    "label": "Stock Adjustment at Stocktake",
+    "valid_from": "2013-01-01 00:00:00",
+    "valid_to": "9999-12-31 23:59:59.999999"
+  }
+]

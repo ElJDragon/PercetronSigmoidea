@@ -1,0 +1,65 @@
+[
+  {
+    "sql": "SELECT COUNT_BIG(*) AS documents,CHECKSUM_AGG(BINARY_CHECKSUM(OrderID,OrderDate,pick_at,edited_at,BackorderOrderID,parent_count)) AS checksum FROM (SELECT o.OrderID,o.OrderDate,o.PickingCompletedWhen AS pick_at,o.LastEditedWhen AS edited_at,\n    o.BackorderOrderID,COALESCE(p.parents,0) AS parent_count,\n    CASE WHEN COALESCE(p.parents,0)>1 THEN 'ambiguous_lineage'\n      WHEN p.parents IS NOT NULL AND o.BackorderOrderID IS NOT NULL THEN 'derived_with_backorder'\n      WHEN p.parents IS NOT NULL THEN 'derived_terminal'\n      WHEN o.BackorderOrderID IS NOT NULL THEN 'original_with_backorder'\n      ELSE 'original_without_backorder' END AS cohort,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS cutoff\n    FROM Sales.Orders o LEFT JOIN (SELECT BackorderOrderID,COUNT_BIG(*) AS parents FROM Sales.Orders WHERE BackorderOrderID IS NOT NULL GROUP BY BackorderOrderID) p ON o.OrderID=p.BackorderOrderID\n    WHERE o.OrderDate < ?) q",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS documents,COUNT_BIG(DISTINCT OrderID) AS distinct_documents,MIN(OrderDate) AS min_date,MAX(OrderDate) AS max_date,SUM(CAST(CASE WHEN pick_at IS NULL THEN 1 ELSE 0 END AS bigint)) AS current_pending_or_unobserved,SUM(CAST(CASE WHEN pick_at IS NOT NULL THEN 1 ELSE 0 END AS bigint)) AS current_completed_flag,SUM(CAST(CASE WHEN pick_at<CAST(OrderDate AS datetime2) THEN 1 ELSE 0 END AS bigint)) AS pick_before_order FROM (SELECT o.OrderID,o.OrderDate,o.PickingCompletedWhen AS pick_at,o.LastEditedWhen AS edited_at,\n    o.BackorderOrderID,COALESCE(p.parents,0) AS parent_count,\n    CASE WHEN COALESCE(p.parents,0)>1 THEN 'ambiguous_lineage'\n      WHEN p.parents IS NOT NULL AND o.BackorderOrderID IS NOT NULL THEN 'derived_with_backorder'\n      WHEN p.parents IS NOT NULL THEN 'derived_terminal'\n      WHEN o.BackorderOrderID IS NOT NULL THEN 'original_with_backorder'\n      ELSE 'original_without_backorder' END AS cohort,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS cutoff\n    FROM Sales.Orders o LEFT JOIN (SELECT BackorderOrderID,COUNT_BIG(*) AS parents FROM Sales.Orders WHERE BackorderOrderID IS NOT NULL GROUP BY BackorderOrderID) p ON o.OrderID=p.BackorderOrderID\n    WHERE o.OrderDate < ?) q",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),OrderDate,126) AS month,cohort,state,COUNT_BIG(*) AS documents FROM (SELECT b.*,CASE WHEN OrderDate IS NULL OR pick_at<CAST(OrderDate AS datetime2) THEN 'invalid'\n    WHEN horizon_end>cutoff THEN 'insufficient_followup'\n    WHEN pick_at IS NULL THEN 'missing_pick_indeterminate'\n    WHEN pick_at>=cutoff THEN 'pick_not_observed_by_cut'\n    WHEN edited_at IS NULL OR edited_at>=cutoff THEN 'row_not_available_by_cut'\n    WHEN CAST(pick_at AS date)>DATEADD(day,2,OrderDate) THEN 'after_two_days'\n    ELSE 'within_two_days' END AS state FROM (SELECT o.OrderID,o.OrderDate,o.PickingCompletedWhen AS pick_at,o.LastEditedWhen AS edited_at,\n    o.BackorderOrderID,COALESCE(p.parents,0) AS parent_count,\n    CASE WHEN COALESCE(p.parents,0)>1 THEN 'ambiguous_lineage'\n      WHEN p.parents IS NOT NULL AND o.BackorderOrderID IS NOT NULL THEN 'derived_with_backorder'\n      WHEN p.parents IS NOT NULL THEN 'derived_terminal'\n      WHEN o.BackorderOrderID IS NOT NULL THEN 'original_with_backorder'\n      ELSE 'original_without_backorder' END AS cohort,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS cutoff\n    FROM Sales.Orders o LEFT JOIN (SELECT BackorderOrderID,COUNT_BIG(*) AS parents FROM Sales.Orders WHERE BackorderOrderID IS NOT NULL GROUP BY BackorderOrderID) p ON o.OrderID=p.BackorderOrderID\n    WHERE o.OrderDate < ?) b) q GROUP BY CONVERT(char(7),OrderDate,126),cohort,state ORDER BY month,cohort,state",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 305
+  },
+  {
+    "sql": "SELECT cohort,COUNT_BIG(*) AS documents FROM (SELECT o.OrderID,o.OrderDate,o.PickingCompletedWhen AS pick_at,o.LastEditedWhen AS edited_at,\n    o.BackorderOrderID,COALESCE(p.parents,0) AS parent_count,\n    CASE WHEN COALESCE(p.parents,0)>1 THEN 'ambiguous_lineage'\n      WHEN p.parents IS NOT NULL AND o.BackorderOrderID IS NOT NULL THEN 'derived_with_backorder'\n      WHEN p.parents IS NOT NULL THEN 'derived_terminal'\n      WHEN o.BackorderOrderID IS NOT NULL THEN 'original_with_backorder'\n      ELSE 'original_without_backorder' END AS cohort,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS cutoff\n    FROM Sales.Orders o LEFT JOIN (SELECT BackorderOrderID,COUNT_BIG(*) AS parents FROM Sales.Orders WHERE BackorderOrderID IS NOT NULL GROUP BY BackorderOrderID) p ON o.OrderID=p.BackorderOrderID\n    WHERE o.OrderDate < ?) q GROUP BY cohort ORDER BY cohort",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 4
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS edges,SUM(CAST(CASE WHEN c.OrderID IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphan_child,SUM(CAST(CASE WHEN c.OrderDate<>o.OrderDate THEN 1 ELSE 0 END AS bigint)) AS different_dates,SUM(CAST(CASE WHEN c.OrderID<=o.OrderID THEN 1 ELSE 0 END AS bigint)) AS non_increasing_ids FROM Sales.Orders o LEFT JOIN Sales.Orders c ON c.OrderID=o.BackorderOrderID WHERE o.OrderDate < ? AND o.BackorderOrderID IS NOT NULL",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT cohort,DATEDIFF(day,OrderDate,CAST(pick_at AS date)) AS days_to_pick,COUNT_BIG(*) AS documents FROM (SELECT o.OrderID,o.OrderDate,o.PickingCompletedWhen AS pick_at,o.LastEditedWhen AS edited_at,\n    o.BackorderOrderID,COALESCE(p.parents,0) AS parent_count,\n    CASE WHEN COALESCE(p.parents,0)>1 THEN 'ambiguous_lineage'\n      WHEN p.parents IS NOT NULL AND o.BackorderOrderID IS NOT NULL THEN 'derived_with_backorder'\n      WHEN p.parents IS NOT NULL THEN 'derived_terminal'\n      WHEN o.BackorderOrderID IS NOT NULL THEN 'original_with_backorder'\n      ELSE 'original_without_backorder' END AS cohort,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS cutoff\n    FROM Sales.Orders o LEFT JOIN (SELECT BackorderOrderID,COUNT_BIG(*) AS parents FROM Sales.Orders WHERE BackorderOrderID IS NOT NULL GROUP BY BackorderOrderID) p ON o.OrderID=p.BackorderOrderID\n    WHERE o.OrderDate < ?) q WHERE pick_at IS NULL OR (pick_at<cutoff AND edited_at<cutoff) GROUP BY cohort,DATEDIFF(day,OrderDate,CAST(pick_at AS date)) ORDER BY cohort,days_to_pick",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 359
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS documents,CHECKSUM_AGG(BINARY_CHECKSUM(OrderID,OrderDate,pick_at,edited_at,BackorderOrderID,parent_count)) AS checksum FROM (SELECT o.OrderID,o.OrderDate,o.PickingCompletedWhen AS pick_at,o.LastEditedWhen AS edited_at,\n    o.BackorderOrderID,COALESCE(p.parents,0) AS parent_count,\n    CASE WHEN COALESCE(p.parents,0)>1 THEN 'ambiguous_lineage'\n      WHEN p.parents IS NOT NULL AND o.BackorderOrderID IS NOT NULL THEN 'derived_with_backorder'\n      WHEN p.parents IS NOT NULL THEN 'derived_terminal'\n      WHEN o.BackorderOrderID IS NOT NULL THEN 'original_with_backorder'\n      ELSE 'original_without_backorder' END AS cohort,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS cutoff\n    FROM Sales.Orders o LEFT JOIN (SELECT BackorderOrderID,COUNT_BIG(*) AS parents FROM Sales.Orders WHERE BackorderOrderID IS NOT NULL GROUP BY BackorderOrderID) p ON o.OrderID=p.BackorderOrderID\n    WHERE o.OrderDate < ?) q",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  }
+]

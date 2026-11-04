@@ -1,0 +1,10 @@
+{
+  "recorded_at_utc": "2026-11-04T05:49:21.070953+00:00",
+  "plan_sha256": "f00b64709c66c5817600e906959d85ee3a433390e3803c28054e79cb60e43d97",
+  "class_weights_train": {
+    "0": 0.5095280301351651,
+    "1": 26.738372093023255
+  },
+  "runs": 6,
+  "results_existed_at_registration": false
+}

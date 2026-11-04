@@ -1,0 +1,37 @@
+[
+  {
+    "sql": "SELECT COUNT_BIG(*) AS orders,SUM(CAST(CASE WHEN o.PickingCompletedWhen IS NULL AND o.BackorderOrderID IS NOT NULL THEN 1 ELSE 0 END AS bigint)) AS null_completion_with_backorder,SUM(CAST(CASE WHEN o.PickingCompletedWhen IS NULL AND o.BackorderOrderID IS NULL THEN 1 ELSE 0 END AS bigint)) AS null_completion_without_backorder,SUM(CAST(CASE WHEN o.BackorderOrderID IS NOT NULL AND b.OrderID IS NULL THEN 1 ELSE 0 END AS bigint)) AS orphan_backorders,SUM(CAST(CASE WHEN b.OrderDate<o.OrderDate THEN 1 ELSE 0 END AS bigint)) AS backorder_before_parent,MAX(DATEDIFF(day,o.OrderDate,b.OrderDate)) AS max_backorder_lag_days FROM Sales.Orders o LEFT JOIN Sales.Orders b ON o.BackorderOrderID=b.OrderID",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS mature_orders,SUM(CAST(CASE WHEN b.OrderID IS NOT NULL AND b.OrderDate<=DATEADD(day,2,o.OrderDate) THEN 1 ELSE 0 END AS bigint)) AS backorder_within_2d,SUM(CAST(CASE WHEN b.OrderID IS NULL OR b.OrderDate>DATEADD(day,2,o.OrderDate) THEN 1 ELSE 0 END AS bigint)) AS no_backorder_within_2d FROM Sales.Orders o LEFT JOIN Sales.Orders b ON o.BackorderOrderID=b.OrderID WHERE o.OrderDate<=DATEADD(day,-2,(SELECT MAX([Order Date Key]) FROM [WideWorldImportersDW].[Fact].[Order]))",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT DATEDIFF(day,TransactionDate,FinalizationDate) AS days_to_finalize,COUNT_BIG(*) AS invoices FROM Sales.CustomerTransactions WHERE InvoiceID IS NOT NULL AND TransactionAmount>0 GROUP BY DATEDIFF(day,TransactionDate,FinalizationDate) ORDER BY days_to_finalize",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 2
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS mature_invoices,SUM(CAST(CASE WHEN FinalizationDate IS NULL OR FinalizationDate>DATEADD(day,7,TransactionDate) THEN 1 ELSE 0 END AS bigint)) AS possible_positive FROM Sales.CustomerTransactions WHERE InvoiceID IS NOT NULL AND TransactionAmount>0 AND TransactionDate<=DATEADD(day,-7,(SELECT MAX([Date Key]) FROM [WideWorldImportersDW].[Fact].[Transaction]))",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT DATEDIFF(day,p.OrderDate,l.LastReceiptDate) AS days_to_last_receipt,COUNT_BIG(*) AS lines FROM Purchasing.PurchaseOrderLines l JOIN Purchasing.PurchaseOrders p ON l.PurchaseOrderID=p.PurchaseOrderID GROUP BY DATEDIFF(day,p.OrderDate,l.LastReceiptDate) ORDER BY days_to_last_receipt",
+    "parameters": [],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 4
+  }
+]

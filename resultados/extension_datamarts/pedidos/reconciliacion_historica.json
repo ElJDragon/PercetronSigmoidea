@@ -1,0 +1,14 @@
+{
+  "source_scope": "Agregados históricos de toda la auditoría anterior, incluidos meses ahora reservados; solo conciliación, nunca selección o prevalencia test.",
+  "states": {
+    "picking_dentro_horizonte_observado_maduro": 224591,
+    "picking_posterior_observado_maduro": 3154,
+    "sin_picking_con_seguimiento_nominal_indeterminado": 3129,
+    "sin_seguimiento_nominal_suficiente": 538,
+    "inconsistencia_fecha_pick_anterior_a_pedido": 0
+  },
+  "total": 231412,
+  "observed_mature": 227745,
+  "null_picking_total": 3147,
+  "null_picking_in_immature": 18
+}

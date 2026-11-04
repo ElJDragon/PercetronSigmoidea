@@ -1,0 +1,60 @@
+{
+  "product": {
+    "identities": 219,
+    "active_entity_months": 521,
+    "ledger_month_slots_after_first_observation": 7884,
+    "unobserved_month_slots_conditional_not_certified_zero": 7363,
+    "activity_months_histogram": {
+      "1": 209,
+      "4": 1,
+      "21": 1,
+      "35": 1,
+      "36": 7
+    },
+    "first_observation_months": {
+      "2013-01": 219
+    },
+    "entities_multiple_package_types": 0,
+    "products_per_supplier": null
+  },
+  "supplier": {
+    "identities": 6,
+    "active_entity_months": 76,
+    "ledger_month_slots_after_first_observation": 216,
+    "unobserved_month_slots_conditional_not_certified_zero": 140,
+    "activity_months_histogram": {
+      "1": 4,
+      "36": 2
+    },
+    "first_observation_months": {
+      "2013-01": 6
+    },
+    "entities_multiple_package_types": 2,
+    "products_per_supplier": {
+      "2": 3,
+      "4": 74,
+      "5": 42,
+      "7": 67,
+      "10": 18,
+      "12": 15
+    }
+  },
+  "product_supplier": {
+    "identities": 219,
+    "active_entity_months": 521,
+    "ledger_month_slots_after_first_observation": 7884,
+    "unobserved_month_slots_conditional_not_certified_zero": 7363,
+    "activity_months_histogram": {
+      "1": 209,
+      "4": 1,
+      "21": 1,
+      "35": 1,
+      "36": 7
+    },
+    "first_observation_months": {
+      "2013-01": 219
+    },
+    "entities_multiple_package_types": 0,
+    "products_per_supplier": null
+  }
+}

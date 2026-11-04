@@ -1,0 +1,7 @@
+{
+  "python": "3.12.3",
+  "numpy": "2.4.4",
+  "pandas": "3.0.2",
+  "gzip": "level9,mtime0,empty_name",
+  "arrays": "npy allow_pickle=False; float64 X, int8 y; deterministic within recorded numeric environment"
+}

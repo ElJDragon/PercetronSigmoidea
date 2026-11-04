@@ -1,0 +1,47 @@
+{
+  "2016-01": {
+    "covered_under_academic_contract": true,
+    "calendar_closed_before_cut": true,
+    "event_count": 762,
+    "min_event_date": "2016-01-01",
+    "max_event_date": "2016-01-31",
+    "status": "academic_closed_reconciled_ledger",
+    "justification": "Frozen Jan-May scope, complete interval extraction matched to DW, monthly continuity, conservation assumptions; not absolute certification or last-event-only closure"
+  },
+  "2016-02": {
+    "covered_under_academic_contract": true,
+    "calendar_closed_before_cut": true,
+    "event_count": 603,
+    "min_event_date": "2016-02-02",
+    "max_event_date": "2016-02-28",
+    "status": "academic_closed_reconciled_ledger",
+    "justification": "Frozen Jan-May scope, complete interval extraction matched to DW, monthly continuity, conservation assumptions; not absolute certification or last-event-only closure"
+  },
+  "2016-03": {
+    "covered_under_academic_contract": true,
+    "calendar_closed_before_cut": true,
+    "event_count": 753,
+    "min_event_date": "2016-03-01",
+    "max_event_date": "2016-03-31",
+    "status": "academic_closed_reconciled_ledger",
+    "justification": "Frozen Jan-May scope, complete interval extraction matched to DW, monthly continuity, conservation assumptions; not absolute certification or last-event-only closure"
+  },
+  "2016-04": {
+    "covered_under_academic_contract": true,
+    "calendar_closed_before_cut": true,
+    "event_count": 758,
+    "min_event_date": "2016-04-01",
+    "max_event_date": "2016-04-30",
+    "status": "academic_closed_reconciled_ledger",
+    "justification": "Frozen Jan-May scope, complete interval extraction matched to DW, monthly continuity, conservation assumptions; not absolute certification or last-event-only closure"
+  },
+  "2016-05": {
+    "covered_under_academic_contract": true,
+    "calendar_closed_before_cut": true,
+    "event_count": 743,
+    "min_event_date": "2016-05-01",
+    "max_event_date": "2016-05-31",
+    "status": "academic_closed_reconciled_ledger",
+    "justification": "Frozen Jan-May scope, complete interval extraction matched to DW, monthly continuity, conservation assumptions; not absolute certification or last-event-only closure"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "successful",
+  "original_configurations": 4,
+  "additional_configurations": 0,
+  "verification_reruns_same_configurations": 4,
+  "candidate_files_byte_identical": 16,
+  "predictions_byte_identical": true,
+  "figures_byte_identical": 12,
+  "histories_metrics_and_selected_models_identical": true,
+  "model_weights_identical": true,
+  "test_loaded": false,
+  "sql_queries": 0,
+  "environment_scope": "same recorded numeric and plotting environment"
+}

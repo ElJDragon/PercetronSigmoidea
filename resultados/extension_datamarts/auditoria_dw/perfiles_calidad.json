@@ -1,0 +1,3609 @@
+{
+  "Fact.Order": {
+    "rows": 231412,
+    "columns": {
+      "Order Key": {
+        "nulls": 0,
+        "distinct_nonnull": 231412,
+        "min": 1,
+        "max": 231412,
+        "negative": 0,
+        "zero": 0
+      },
+      "City Key": {
+        "nulls": 0,
+        "distinct_nonnull": 1240,
+        "min": 37955,
+        "max": 115719,
+        "negative": 0,
+        "zero": 0
+      },
+      "Customer Key": {
+        "nulls": 0,
+        "distinct_nonnull": 403,
+        "min": 0,
+        "max": 402,
+        "negative": 0,
+        "zero": 85469
+      },
+      "Stock Item Key": {
+        "nulls": 0,
+        "distinct_nonnull": 227,
+        "min": 1,
+        "max": 227,
+        "negative": 0,
+        "zero": 0
+      },
+      "Order Date Key": {
+        "nulls": 0,
+        "distinct_nonnull": 1069,
+        "min": "2013-01-01",
+        "max": "2016-05-31"
+      },
+      "Picked Date Key": {
+        "nulls": 3147,
+        "distinct_nonnull": 1069,
+        "min": "2013-01-01",
+        "max": "2016-05-31"
+      },
+      "Salesperson Key": {
+        "nulls": 0,
+        "distinct_nonnull": 101,
+        "min": 4,
+        "max": 174,
+        "negative": 0,
+        "zero": 0
+      },
+      "Picker Key": {
+        "nulls": 0,
+        "distinct_nonnull": 133,
+        "min": 0,
+        "max": 173,
+        "negative": 0,
+        "zero": 23740
+      },
+      "WWI Order ID": {
+        "nulls": 0,
+        "distinct_nonnull": 73595,
+        "min": 1,
+        "max": 73595,
+        "negative": 0,
+        "zero": 0
+      },
+      "WWI Backorder ID": {
+        "nulls": 210819,
+        "distinct_nonnull": 7538,
+        "min": 45,
+        "max": 73595,
+        "negative": 0,
+        "zero": 0
+      },
+      "Description": {
+        "nulls": 0,
+        "distinct_nonnull": 227
+      },
+      "Package": {
+        "nulls": 0,
+        "distinct_nonnull": 4
+      },
+      "Quantity": {
+        "nulls": 0,
+        "distinct_nonnull": 61,
+        "min": 1,
+        "max": 360,
+        "negative": 0,
+        "zero": 0
+      },
+      "Unit Price": {
+        "nulls": 0,
+        "distinct_nonnull": 62,
+        "min": "0.66",
+        "max": "1899.00",
+        "negative": 0,
+        "zero": 0
+      },
+      "Tax Rate": {
+        "nulls": 0,
+        "distinct_nonnull": 2,
+        "min": "10.000",
+        "max": "15.000",
+        "negative": 0,
+        "zero": 0
+      },
+      "Total Excluding Tax": {
+        "nulls": 0,
+        "distinct_nonnull": 491,
+        "min": "2.50",
+        "max": "18990.00",
+        "negative": 0,
+        "zero": 0
+      },
+      "Tax Amount": {
+        "nulls": 0,
+        "distinct_nonnull": 493,
+        "min": "0.38",
+        "max": "2848.50",
+        "negative": 0,
+        "zero": 0
+      },
+      "Total Including Tax": {
+        "nulls": 0,
+        "distinct_nonnull": 497,
+        "min": "2.88",
+        "max": "21838.50",
+        "negative": 0,
+        "zero": 0
+      },
+      "Lineage Key": {
+        "nulls": 0,
+        "distinct_nonnull": 1,
+        "min": 9,
+        "max": 9,
+        "negative": 0,
+        "zero": 0
+      }
+    },
+    "temporal": {
+      "Order Date Key": {
+        "monthly": [
+          {
+            "month": "2013-01",
+            "n": 5281
+          },
+          {
+            "month": "2013-02",
+            "n": 3726
+          },
+          {
+            "month": "2013-03",
+            "n": 5389
+          },
+          {
+            "month": "2013-04",
+            "n": 5314
+          },
+          {
+            "month": "2013-05",
+            "n": 5699
+          },
+          {
+            "month": "2013-06",
+            "n": 5338
+          },
+          {
+            "month": "2013-07",
+            "n": 5896
+          },
+          {
+            "month": "2013-08",
+            "n": 4819
+          },
+          {
+            "month": "2013-09",
+            "n": 5099
+          },
+          {
+            "month": "2013-10",
+            "n": 5171
+          },
+          {
+            "month": "2013-11",
+            "n": 4957
+          },
+          {
+            "month": "2013-12",
+            "n": 4966
+          },
+          {
+            "month": "2014-01",
+            "n": 5682
+          },
+          {
+            "month": "2014-02",
+            "n": 4830
+          },
+          {
+            "month": "2014-03",
+            "n": 5118
+          },
+          {
+            "month": "2014-04",
+            "n": 5513
+          },
+          {
+            "month": "2014-05",
+            "n": 6027
+          },
+          {
+            "month": "2014-06",
+            "n": 5888
+          },
+          {
+            "month": "2014-07",
+            "n": 6310
+          },
+          {
+            "month": "2014-08",
+            "n": 5130
+          },
+          {
+            "month": "2014-09",
+            "n": 5117
+          },
+          {
+            "month": "2014-10",
+            "n": 6077
+          },
+          {
+            "month": "2014-11",
+            "n": 5151
+          },
+          {
+            "month": "2014-12",
+            "n": 6009
+          },
+          {
+            "month": "2015-01",
+            "n": 5735
+          },
+          {
+            "month": "2015-02",
+            "n": 5478
+          },
+          {
+            "month": "2015-03",
+            "n": 5947
+          },
+          {
+            "month": "2015-04",
+            "n": 6641
+          },
+          {
+            "month": "2015-05",
+            "n": 6103
+          },
+          {
+            "month": "2015-06",
+            "n": 6198
+          },
+          {
+            "month": "2015-07",
+            "n": 7066
+          },
+          {
+            "month": "2015-08",
+            "n": 5411
+          },
+          {
+            "month": "2015-09",
+            "n": 6392
+          },
+          {
+            "month": "2015-10",
+            "n": 6240
+          },
+          {
+            "month": "2015-11",
+            "n": 5719
+          },
+          {
+            "month": "2015-12",
+            "n": 6073
+          },
+          {
+            "month": "2016-01",
+            "n": 6017
+          },
+          {
+            "month": "2016-02",
+            "n": 5247
+          },
+          {
+            "month": "2016-03",
+            "n": 6159
+          },
+          {
+            "month": "2016-04",
+            "n": 6022
+          },
+          {
+            "month": "2016-05",
+            "n": 6457
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2013,
+            "n": 61655
+          },
+          {
+            "year": 2014,
+            "n": 66852
+          },
+          {
+            "year": 2015,
+            "n": 73003
+          },
+          {
+            "year": 2016,
+            "n": 29902
+          }
+        ],
+        "months_observed": 41,
+        "missing_months_between_extremes": [],
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      },
+      "Picked Date Key": {
+        "monthly": [
+          {
+            "month": "2013-01",
+            "n": 5246
+          },
+          {
+            "month": "2013-02",
+            "n": 3707
+          },
+          {
+            "month": "2013-03",
+            "n": 5330
+          },
+          {
+            "month": "2013-04",
+            "n": 5254
+          },
+          {
+            "month": "2013-05",
+            "n": 5617
+          },
+          {
+            "month": "2013-06",
+            "n": 5287
+          },
+          {
+            "month": "2013-07",
+            "n": 5834
+          },
+          {
+            "month": "2013-08",
+            "n": 4767
+          },
+          {
+            "month": "2013-09",
+            "n": 5021
+          },
+          {
+            "month": "2013-10",
+            "n": 5097
+          },
+          {
+            "month": "2013-11",
+            "n": 4899
+          },
+          {
+            "month": "2013-12",
+            "n": 4909
+          },
+          {
+            "month": "2014-01",
+            "n": 5610
+          },
+          {
+            "month": "2014-02",
+            "n": 4768
+          },
+          {
+            "month": "2014-03",
+            "n": 5070
+          },
+          {
+            "month": "2014-04",
+            "n": 5443
+          },
+          {
+            "month": "2014-05",
+            "n": 5930
+          },
+          {
+            "month": "2014-06",
+            "n": 5798
+          },
+          {
+            "month": "2014-07",
+            "n": 6227
+          },
+          {
+            "month": "2014-08",
+            "n": 5059
+          },
+          {
+            "month": "2014-09",
+            "n": 5059
+          },
+          {
+            "month": "2014-10",
+            "n": 5983
+          },
+          {
+            "month": "2014-11",
+            "n": 5070
+          },
+          {
+            "month": "2014-12",
+            "n": 5924
+          },
+          {
+            "month": "2015-01",
+            "n": 5651
+          },
+          {
+            "month": "2015-02",
+            "n": 5406
+          },
+          {
+            "month": "2015-03",
+            "n": 5877
+          },
+          {
+            "month": "2015-04",
+            "n": 6549
+          },
+          {
+            "month": "2015-05",
+            "n": 6000
+          },
+          {
+            "month": "2015-06",
+            "n": 6084
+          },
+          {
+            "month": "2015-07",
+            "n": 6955
+          },
+          {
+            "month": "2015-08",
+            "n": 5321
+          },
+          {
+            "month": "2015-09",
+            "n": 6297
+          },
+          {
+            "month": "2015-10",
+            "n": 6152
+          },
+          {
+            "month": "2015-11",
+            "n": 5625
+          },
+          {
+            "month": "2015-12",
+            "n": 5981
+          },
+          {
+            "month": "2016-01",
+            "n": 5914
+          },
+          {
+            "month": "2016-02",
+            "n": 5196
+          },
+          {
+            "month": "2016-03",
+            "n": 6074
+          },
+          {
+            "month": "2016-04",
+            "n": 5923
+          },
+          {
+            "month": "2016-05",
+            "n": 6351
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2013,
+            "n": 60968
+          },
+          {
+            "year": 2014,
+            "n": 65941
+          },
+          {
+            "year": 2015,
+            "n": 71898
+          },
+          {
+            "year": 2016,
+            "n": 29458
+          }
+        ],
+        "months_observed": 41,
+        "missing_months_between_extremes": [],
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      }
+    },
+    "foreign_keys": [
+      {
+        "fk_name": "FK_Fact_Order_City_Key_Dimension_City",
+        "parent_schema": "Fact",
+        "parent_table": "Order",
+        "parent_column": "City Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "City",
+        "referenced_column": "City Key",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 231412,
+        "orphans": 0
+      },
+      {
+        "fk_name": "FK_Fact_Order_Customer_Key_Dimension_Customer",
+        "parent_schema": "Fact",
+        "parent_table": "Order",
+        "parent_column": "Customer Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Customer",
+        "referenced_column": "Customer Key",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 231412,
+        "orphans": 0
+      },
+      {
+        "fk_name": "FK_Fact_Order_Order_Date_Key_Dimension_Date",
+        "parent_schema": "Fact",
+        "parent_table": "Order",
+        "parent_column": "Order Date Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Date",
+        "referenced_column": "Date",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 231412,
+        "orphans": 0
+      },
+      {
+        "fk_name": "FK_Fact_Order_Picked_Date_Key_Dimension_Date",
+        "parent_schema": "Fact",
+        "parent_table": "Order",
+        "parent_column": "Picked Date Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Date",
+        "referenced_column": "Date",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 228265,
+        "orphans": 0
+      },
+      {
+        "fk_name": "FK_Fact_Order_Picker_Key_Dimension_Employee",
+        "parent_schema": "Fact",
+        "parent_table": "Order",
+        "parent_column": "Picker Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Employee",
+        "referenced_column": "Employee Key",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 231412,
+        "orphans": 0
+      },
+      {
+        "fk_name": "FK_Fact_Order_Salesperson_Key_Dimension_Employee",
+        "parent_schema": "Fact",
+        "parent_table": "Order",
+        "parent_column": "Salesperson Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Employee",
+        "referenced_column": "Employee Key",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 231412,
+        "orphans": 0
+      },
+      {
+        "fk_name": "FK_Fact_Order_Stock_Item_Key_Dimension_Stock Item",
+        "parent_schema": "Fact",
+        "parent_table": "Order",
+        "parent_column": "Stock Item Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Stock Item",
+        "referenced_column": "Stock Item Key",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 231412,
+        "orphans": 0
+      }
+    ],
+    "primary_key_columns": [
+      "Order Key",
+      "Order Date Key"
+    ],
+    "primary_key_duplicates": {
+      "groups": 0,
+      "excess": 0
+    },
+    "payload_duplicates_excluding_pk_lineage": {
+      "groups": 0,
+      "excess": 0
+    },
+    "duplicate_note": "Repetición de contenido sin clave técnica/linaje, no eliminación automática ni prueba de error.",
+    "distributions": {
+      "Quantity": {
+        "q05": 1.0,
+        "q25": 5.0,
+        "median": 10.0,
+        "q75": 60.0,
+        "q95": 160.0,
+        "outside_1_5_IQR": 14428,
+        "lower_fence": -77.5,
+        "upper_fence": 142.5
+      },
+      "Total Including Tax": {
+        "q05": 30.19,
+        "q25": 110.4,
+        "median": 276.0,
+        "q75": 1021.2,
+        "q95": 2944.0,
+        "outside_1_5_IQR": 19886,
+        "lower_fence": -1255.8,
+        "upper_fence": 2387.4
+      }
+    }
+  },
+  "Fact.Purchase": {
+    "rows": 8367,
+    "columns": {
+      "Purchase Key": {
+        "nulls": 0,
+        "distinct_nonnull": 8367,
+        "min": 1,
+        "max": 8367,
+        "negative": 0,
+        "zero": 0
+      },
+      "Date Key": {
+        "nulls": 0,
+        "distinct_nonnull": 1064,
+        "min": "2013-01-01",
+        "max": "2016-05-31"
+      },
+      "Supplier Key": {
+        "nulls": 0,
+        "distinct_nonnull": 7,
+        "min": 14,
+        "max": 25,
+        "negative": 0,
+        "zero": 0
+      },
+      "Stock Item Key": {
+        "nulls": 0,
+        "distinct_nonnull": 227,
+        "min": 1,
+        "max": 227,
+        "negative": 0,
+        "zero": 0
+      },
+      "WWI Purchase Order ID": {
+        "nulls": 0,
+        "distinct_nonnull": 2074,
+        "min": 1,
+        "max": 2074,
+        "negative": 0,
+        "zero": 0
+      },
+      "Ordered Outers": {
+        "nulls": 0,
+        "distinct_nonnull": 2933,
+        "min": 1,
+        "max": 3768,
+        "negative": 0,
+        "zero": 0
+      },
+      "Ordered Quantity": {
+        "nulls": 0,
+        "distinct_nonnull": 3981,
+        "min": 6,
+        "max": 67368,
+        "negative": 0,
+        "zero": 0
+      },
+      "Received Outers": {
+        "nulls": 0,
+        "distinct_nonnull": 2930,
+        "min": 0,
+        "max": 3768,
+        "negative": 0,
+        "zero": 9
+      },
+      "Package": {
+        "nulls": 0,
+        "distinct_nonnull": 3
+      },
+      "Is Order Finalized": {
+        "nulls": 0,
+        "distinct_nonnull": 2,
+        "min": 0,
+        "max": 1,
+        "negative": 0,
+        "zero": 9
+      },
+      "Lineage Key": {
+        "nulls": 0,
+        "distinct_nonnull": 1,
+        "min": 10,
+        "max": 10,
+        "negative": 0,
+        "zero": 0
+      }
+    },
+    "temporal": {
+      "Date Key": {
+        "monthly": [
+          {
+            "month": "2013-01",
+            "n": 323
+          },
+          {
+            "month": "2013-02",
+            "n": 145
+          },
+          {
+            "month": "2013-03",
+            "n": 173
+          },
+          {
+            "month": "2013-04",
+            "n": 190
+          },
+          {
+            "month": "2013-05",
+            "n": 195
+          },
+          {
+            "month": "2013-06",
+            "n": 183
+          },
+          {
+            "month": "2013-07",
+            "n": 199
+          },
+          {
+            "month": "2013-08",
+            "n": 193
+          },
+          {
+            "month": "2013-09",
+            "n": 176
+          },
+          {
+            "month": "2013-10",
+            "n": 203
+          },
+          {
+            "month": "2013-11",
+            "n": 179
+          },
+          {
+            "month": "2013-12",
+            "n": 180
+          },
+          {
+            "month": "2014-01",
+            "n": 195
+          },
+          {
+            "month": "2014-02",
+            "n": 175
+          },
+          {
+            "month": "2014-03",
+            "n": 180
+          },
+          {
+            "month": "2014-04",
+            "n": 190
+          },
+          {
+            "month": "2014-05",
+            "n": 198
+          },
+          {
+            "month": "2014-06",
+            "n": 200
+          },
+          {
+            "month": "2014-07",
+            "n": 225
+          },
+          {
+            "month": "2014-08",
+            "n": 202
+          },
+          {
+            "month": "2014-09",
+            "n": 209
+          },
+          {
+            "month": "2014-10",
+            "n": 227
+          },
+          {
+            "month": "2014-11",
+            "n": 205
+          },
+          {
+            "month": "2014-12",
+            "n": 223
+          },
+          {
+            "month": "2015-01",
+            "n": 213
+          },
+          {
+            "month": "2015-02",
+            "n": 196
+          },
+          {
+            "month": "2015-03",
+            "n": 215
+          },
+          {
+            "month": "2015-04",
+            "n": 212
+          },
+          {
+            "month": "2015-05",
+            "n": 212
+          },
+          {
+            "month": "2015-06",
+            "n": 208
+          },
+          {
+            "month": "2015-07",
+            "n": 222
+          },
+          {
+            "month": "2015-08",
+            "n": 207
+          },
+          {
+            "month": "2015-09",
+            "n": 215
+          },
+          {
+            "month": "2015-10",
+            "n": 216
+          },
+          {
+            "month": "2015-11",
+            "n": 198
+          },
+          {
+            "month": "2015-12",
+            "n": 225
+          },
+          {
+            "month": "2016-01",
+            "n": 225
+          },
+          {
+            "month": "2016-02",
+            "n": 201
+          },
+          {
+            "month": "2016-03",
+            "n": 217
+          },
+          {
+            "month": "2016-04",
+            "n": 207
+          },
+          {
+            "month": "2016-05",
+            "n": 210
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2013,
+            "n": 2339
+          },
+          {
+            "year": 2014,
+            "n": 2429
+          },
+          {
+            "year": 2015,
+            "n": 2539
+          },
+          {
+            "year": 2016,
+            "n": 1060
+          }
+        ],
+        "months_observed": 41,
+        "missing_months_between_extremes": [],
+        "volume_changes_outside_half_double": [
+          {
+            "previous_observed_month": "2013-01",
+            "month": "2013-02",
+            "ratio": 0.44891640866873067
+          }
+        ],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      }
+    },
+    "foreign_keys": [
+      {
+        "fk_name": "FK_Fact_Purchase_Date_Key_Dimension_Date",
+        "parent_schema": "Fact",
+        "parent_table": "Purchase",
+        "parent_column": "Date Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Date",
+        "referenced_column": "Date",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 8367,
+        "orphans": 0
+      },
+      {
+        "fk_name": "FK_Fact_Purchase_Stock_Item_Key_Dimension_Stock Item",
+        "parent_schema": "Fact",
+        "parent_table": "Purchase",
+        "parent_column": "Stock Item Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Stock Item",
+        "referenced_column": "Stock Item Key",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 8367,
+        "orphans": 0
+      },
+      {
+        "fk_name": "FK_Fact_Purchase_Supplier_Key_Dimension_Supplier",
+        "parent_schema": "Fact",
+        "parent_table": "Purchase",
+        "parent_column": "Supplier Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Supplier",
+        "referenced_column": "Supplier Key",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 8367,
+        "orphans": 0
+      }
+    ],
+    "primary_key_columns": [
+      "Purchase Key",
+      "Date Key"
+    ],
+    "primary_key_duplicates": {
+      "groups": 0,
+      "excess": 0
+    },
+    "payload_duplicates_excluding_pk_lineage": {
+      "groups": 0,
+      "excess": 0
+    },
+    "duplicate_note": "Repetición de contenido sin clave técnica/linaje, no eliminación automática ni prueba de error.",
+    "distributions": {
+      "Ordered Quantity": {
+        "q05": 72.0,
+        "q25": 4788.0,
+        "median": 13560.0,
+        "q75": 26255.0,
+        "q95": 41688.0,
+        "outside_1_5_IQR": 106,
+        "lower_fence": -27412.5,
+        "upper_fence": 58455.5
+      },
+      "Ordered Outers": {
+        "q05": 7.0,
+        "q25": 356.0,
+        "median": 1055.0,
+        "q75": 1886.5,
+        "q95": 3167.0,
+        "outside_1_5_IQR": 0,
+        "lower_fence": -1939.75,
+        "upper_fence": 4182.25
+      },
+      "Received Outers": {
+        "q05": 7.0,
+        "q25": 352.5,
+        "median": 1053.0,
+        "q75": 1884.5,
+        "q95": 3162.7,
+        "outside_1_5_IQR": 0,
+        "lower_fence": -1945.5,
+        "upper_fence": 4182.5
+      }
+    }
+  },
+  "Fact.Movement": {
+    "rows": 236667,
+    "columns": {
+      "Movement Key": {
+        "nulls": 0,
+        "distinct_nonnull": 236667,
+        "min": 1,
+        "max": 236667,
+        "negative": 0,
+        "zero": 0
+      },
+      "Date Key": {
+        "nulls": 0,
+        "distinct_nonnull": 1070,
+        "min": "2013-01-01",
+        "max": "2016-05-31"
+      },
+      "Stock Item Key": {
+        "nulls": 0,
+        "distinct_nonnull": 227,
+        "min": 1,
+        "max": 227,
+        "negative": 0,
+        "zero": 0
+      },
+      "Customer Key": {
+        "nulls": 0,
+        "distinct_nonnull": 403,
+        "min": 0,
+        "max": 402,
+        "negative": 0,
+        "zero": 92699
+      },
+      "Supplier Key": {
+        "nulls": 0,
+        "distinct_nonnull": 8,
+        "min": 0,
+        "max": 25,
+        "negative": 0,
+        "zero": 228309
+      },
+      "Transaction Type Key": {
+        "nulls": 0,
+        "distinct_nonnull": 3,
+        "min": 10,
+        "max": 12,
+        "negative": 0,
+        "zero": 0
+      },
+      "WWI Stock Item Transaction ID": {
+        "nulls": 0,
+        "distinct_nonnull": 236667,
+        "min": 1,
+        "max": 336251,
+        "negative": 0,
+        "zero": 0
+      },
+      "WWI Invoice ID": {
+        "nulls": 8402,
+        "distinct_nonnull": 70510,
+        "min": 1,
+        "max": 70510,
+        "negative": 0,
+        "zero": 0
+      },
+      "WWI Purchase Order ID": {
+        "nulls": 228309,
+        "distinct_nonnull": 2072,
+        "min": 1,
+        "max": 2072,
+        "negative": 0,
+        "zero": 0
+      },
+      "Quantity": {
+        "nulls": 0,
+        "distinct_nonnull": 4043,
+        "min": -360,
+        "max": 67368,
+        "negative": 228286,
+        "zero": 4
+      },
+      "Lineage Key": {
+        "nulls": 0,
+        "distinct_nonnull": 1,
+        "min": 8,
+        "max": 8,
+        "negative": 0,
+        "zero": 0
+      }
+    },
+    "temporal": {
+      "Date Key": {
+        "monthly": [
+          {
+            "month": "2013-01",
+            "n": 5564
+          },
+          {
+            "month": "2013-02",
+            "n": 3851
+          },
+          {
+            "month": "2013-03",
+            "n": 5498
+          },
+          {
+            "month": "2013-04",
+            "n": 5449
+          },
+          {
+            "month": "2013-05",
+            "n": 5812
+          },
+          {
+            "month": "2013-06",
+            "n": 5465
+          },
+          {
+            "month": "2013-07",
+            "n": 6040
+          },
+          {
+            "month": "2013-08",
+            "n": 4957
+          },
+          {
+            "month": "2013-09",
+            "n": 5200
+          },
+          {
+            "month": "2013-10",
+            "n": 5303
+          },
+          {
+            "month": "2013-11",
+            "n": 5077
+          },
+          {
+            "month": "2013-12",
+            "n": 5090
+          },
+          {
+            "month": "2014-01",
+            "n": 5809
+          },
+          {
+            "month": "2014-02",
+            "n": 4943
+          },
+          {
+            "month": "2014-03",
+            "n": 5250
+          },
+          {
+            "month": "2014-04",
+            "n": 5637
+          },
+          {
+            "month": "2014-05",
+            "n": 6124
+          },
+          {
+            "month": "2014-06",
+            "n": 6001
+          },
+          {
+            "month": "2014-07",
+            "n": 6457
+          },
+          {
+            "month": "2014-08",
+            "n": 5260
+          },
+          {
+            "month": "2014-09",
+            "n": 5269
+          },
+          {
+            "month": "2014-10",
+            "n": 6214
+          },
+          {
+            "month": "2014-11",
+            "n": 5272
+          },
+          {
+            "month": "2014-12",
+            "n": 6150
+          },
+          {
+            "month": "2015-01",
+            "n": 5863
+          },
+          {
+            "month": "2015-02",
+            "n": 5602
+          },
+          {
+            "month": "2015-03",
+            "n": 6097
+          },
+          {
+            "month": "2015-04",
+            "n": 6766
+          },
+          {
+            "month": "2015-05",
+            "n": 6207
+          },
+          {
+            "month": "2015-06",
+            "n": 6297
+          },
+          {
+            "month": "2015-07",
+            "n": 7178
+          },
+          {
+            "month": "2015-08",
+            "n": 5528
+          },
+          {
+            "month": "2015-09",
+            "n": 6512
+          },
+          {
+            "month": "2015-10",
+            "n": 6367
+          },
+          {
+            "month": "2015-11",
+            "n": 5828
+          },
+          {
+            "month": "2015-12",
+            "n": 6206
+          },
+          {
+            "month": "2016-01",
+            "n": 6133
+          },
+          {
+            "month": "2016-02",
+            "n": 5404
+          },
+          {
+            "month": "2016-03",
+            "n": 6291
+          },
+          {
+            "month": "2016-04",
+            "n": 6134
+          },
+          {
+            "month": "2016-05",
+            "n": 6562
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2013,
+            "n": 63306
+          },
+          {
+            "year": 2014,
+            "n": 68386
+          },
+          {
+            "year": 2015,
+            "n": 74451
+          },
+          {
+            "year": 2016,
+            "n": 30524
+          }
+        ],
+        "months_observed": 41,
+        "missing_months_between_extremes": [],
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      }
+    },
+    "foreign_keys": [
+      {
+        "fk_name": "FK_Fact_Movement_Customer_Key_Dimension_Customer",
+        "parent_schema": "Fact",
+        "parent_table": "Movement",
+        "parent_column": "Customer Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Customer",
+        "referenced_column": "Customer Key",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 236667,
+        "orphans": 0
+      },
+      {
+        "fk_name": "FK_Fact_Movement_Date_Key_Dimension_Date",
+        "parent_schema": "Fact",
+        "parent_table": "Movement",
+        "parent_column": "Date Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Date",
+        "referenced_column": "Date",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 236667,
+        "orphans": 0
+      },
+      {
+        "fk_name": "FK_Fact_Movement_Stock_Item_Key_Dimension_Stock Item",
+        "parent_schema": "Fact",
+        "parent_table": "Movement",
+        "parent_column": "Stock Item Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Stock Item",
+        "referenced_column": "Stock Item Key",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 236667,
+        "orphans": 0
+      },
+      {
+        "fk_name": "FK_Fact_Movement_Supplier_Key_Dimension_Supplier",
+        "parent_schema": "Fact",
+        "parent_table": "Movement",
+        "parent_column": "Supplier Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Supplier",
+        "referenced_column": "Supplier Key",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 236667,
+        "orphans": 0
+      },
+      {
+        "fk_name": "FK_Fact_Movement_Transaction_Type_Key_Dimension_Transaction Type",
+        "parent_schema": "Fact",
+        "parent_table": "Movement",
+        "parent_column": "Transaction Type Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Transaction Type",
+        "referenced_column": "Transaction Type Key",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 236667,
+        "orphans": 0
+      }
+    ],
+    "primary_key_columns": [
+      "Movement Key",
+      "Date Key"
+    ],
+    "primary_key_duplicates": {
+      "groups": 0,
+      "excess": 0
+    },
+    "payload_duplicates_excluding_pk_lineage": {
+      "groups": 0,
+      "excess": 0
+    },
+    "duplicate_note": "Repetición de contenido sin clave técnica/linaje, no eliminación automática ni prueba de error.",
+    "distributions": {
+      "Quantity": {
+        "q05": -150.0,
+        "q25": -60.0,
+        "median": -9.0,
+        "q75": -5.0,
+        "q95": -1.0,
+        "outside_1_5_IQR": 21834,
+        "lower_fence": -142.5,
+        "upper_fence": 77.5
+      }
+    }
+  },
+  "Fact.Stock Holding": {
+    "rows": 227,
+    "columns": {
+      "Stock Holding Key": {
+        "nulls": 0,
+        "distinct_nonnull": 227,
+        "min": 1,
+        "max": 227,
+        "negative": 0,
+        "zero": 0
+      },
+      "Stock Item Key": {
+        "nulls": 0,
+        "distinct_nonnull": 227,
+        "min": 398,
+        "max": 671,
+        "negative": 0,
+        "zero": 0
+      },
+      "Quantity On Hand": {
+        "nulls": 0,
+        "distinct_nonnull": 227,
+        "min": 3,
+        "max": 1034169,
+        "negative": 0,
+        "zero": 0
+      },
+      "Bin Location": {
+        "nulls": 0,
+        "distinct_nonnull": 31
+      },
+      "Last Stocktake Quantity": {
+        "nulls": 0,
+        "distinct_nonnull": 226,
+        "min": 1,
+        "max": 1009444,
+        "negative": 0,
+        "zero": 0
+      },
+      "Last Cost Price": {
+        "nulls": 0,
+        "distinct_nonnull": 37,
+        "min": "0.00",
+        "max": "1140.00",
+        "negative": 0,
+        "zero": 8
+      },
+      "Reorder Level": {
+        "nulls": 0,
+        "distinct_nonnull": 10,
+        "min": 1,
+        "max": 240,
+        "negative": 0,
+        "zero": 0
+      },
+      "Target Stock Level": {
+        "nulls": 0,
+        "distinct_nonnull": 13,
+        "min": 2,
+        "max": 500,
+        "negative": 0,
+        "zero": 0
+      },
+      "Lineage Key": {
+        "nulls": 0,
+        "distinct_nonnull": 1,
+        "min": 12,
+        "max": 12,
+        "negative": 0,
+        "zero": 0
+      }
+    },
+    "temporal": {},
+    "foreign_keys": [
+      {
+        "fk_name": "FK_Fact_Stock_Holding_Stock_Item_Key_Dimension_Stock Item",
+        "parent_schema": "Fact",
+        "parent_table": "Stock Holding",
+        "parent_column": "Stock Item Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Stock Item",
+        "referenced_column": "Stock Item Key",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 227,
+        "orphans": 0
+      }
+    ],
+    "primary_key_columns": [
+      "Stock Holding Key"
+    ],
+    "primary_key_duplicates": {
+      "groups": 0,
+      "excess": 0
+    },
+    "payload_duplicates_excluding_pk_lineage": {
+      "groups": 0,
+      "excess": 0
+    },
+    "duplicate_note": "Repetición de contenido sin clave técnica/linaje, no eliminación automática ni prueba de error.",
+    "distributions": {
+      "Quantity On Hand": {
+        "q05": 5715.5,
+        "q25": 47701.5,
+        "median": 76373.0,
+        "q75": 190916.0,
+        "q95": 401198.49999999994,
+        "outside_1_5_IQR": 11,
+        "lower_fence": -167120.25,
+        "upper_fence": 405737.75
+      }
+    }
+  },
+  "Fact.Transaction": {
+    "rows": 99585,
+    "columns": {
+      "Transaction Key": {
+        "nulls": 0,
+        "distinct_nonnull": 99585,
+        "min": 1,
+        "max": 99585,
+        "negative": 0,
+        "zero": 0
+      },
+      "Date Key": {
+        "nulls": 0,
+        "distinct_nonnull": 1247,
+        "min": "2013-01-01",
+        "max": "2016-05-31"
+      },
+      "Customer Key": {
+        "nulls": 0,
+        "distinct_nonnull": 403,
+        "min": 0,
+        "max": 402,
+        "negative": 0,
+        "zero": 52968
+      },
+      "Bill To Customer Key": {
+        "nulls": 0,
+        "distinct_nonnull": 3,
+        "min": 0,
+        "max": 202,
+        "negative": 0,
+        "zero": 52968
+      },
+      "Supplier Key": {
+        "nulls": 0,
+        "distinct_nonnull": 8,
+        "min": 0,
+        "max": 25,
+        "negative": 0,
+        "zero": 97147
+      },
+      "Transaction Type Key": {
+        "nulls": 0,
+        "distinct_nonnull": 4,
+        "min": 1,
+        "max": 7,
+        "negative": 0,
+        "zero": 0
+      },
+      "Payment Method Key": {
+        "nulls": 0,
+        "distinct_nonnull": 2,
+        "min": 0,
+        "max": 4,
+        "negative": 0,
+        "zero": 70510
+      },
+      "WWI Customer Transaction ID": {
+        "nulls": 2438,
+        "distinct_nonnull": 97147,
+        "min": 2,
+        "max": 336252,
+        "negative": 0,
+        "zero": 0
+      },
+      "WWI Supplier Transaction ID": {
+        "nulls": 97147,
+        "distinct_nonnull": 2438,
+        "min": 134,
+        "max": 335847,
+        "negative": 0,
+        "zero": 0
+      },
+      "WWI Invoice ID": {
+        "nulls": 29075,
+        "distinct_nonnull": 70510,
+        "min": 1,
+        "max": 70510,
+        "negative": 0,
+        "zero": 0
+      },
+      "WWI Purchase Order ID": {
+        "nulls": 97513,
+        "distinct_nonnull": 2072,
+        "min": 1,
+        "max": 2072,
+        "negative": 0,
+        "zero": 0
+      },
+      "Supplier Invoice Number": {
+        "nulls": 97513,
+        "distinct_nonnull": 1882
+      },
+      "Total Excluding Tax": {
+        "nulls": 0,
+        "distinct_nonnull": 24543,
+        "min": "0.00",
+        "max": "1627734.00",
+        "negative": 0,
+        "zero": 27003
+      },
+      "Tax Amount": {
+        "nulls": 0,
+        "distinct_nonnull": 24513,
+        "min": "0.00",
+        "max": "244160.10",
+        "negative": 0,
+        "zero": 27003
+      },
+      "Total Including Tax": {
+        "nulls": 0,
+        "distinct_nonnull": 39806,
+        "min": "-9313012.80",
+        "max": "1871894.10",
+        "negative": 27003,
+        "zero": 0
+      },
+      "Outstanding Balance": {
+        "nulls": 0,
+        "distinct_nonnull": 86,
+        "min": "0.00",
+        "max": "1871894.10",
+        "negative": 0,
+        "zero": 99499
+      },
+      "Is Finalized": {
+        "nulls": 0,
+        "distinct_nonnull": 2,
+        "min": 0,
+        "max": 1,
+        "negative": 0,
+        "zero": 86
+      },
+      "Lineage Key": {
+        "nulls": 0,
+        "distinct_nonnull": 1,
+        "min": 13,
+        "max": 13,
+        "negative": 0,
+        "zero": 0
+      }
+    },
+    "temporal": {
+      "Date Key": {
+        "monthly": [
+          {
+            "month": "2013-01",
+            "n": 2265
+          },
+          {
+            "month": "2013-02",
+            "n": 1590
+          },
+          {
+            "month": "2013-03",
+            "n": 2290
+          },
+          {
+            "month": "2013-04",
+            "n": 2242
+          },
+          {
+            "month": "2013-05",
+            "n": 2390
+          },
+          {
+            "month": "2013-06",
+            "n": 2317
+          },
+          {
+            "month": "2013-07",
+            "n": 2516
+          },
+          {
+            "month": "2013-08",
+            "n": 2086
+          },
+          {
+            "month": "2013-09",
+            "n": 2147
+          },
+          {
+            "month": "2013-10",
+            "n": 2189
+          },
+          {
+            "month": "2013-11",
+            "n": 2104
+          },
+          {
+            "month": "2013-12",
+            "n": 2115
+          },
+          {
+            "month": "2014-01",
+            "n": 2413
+          },
+          {
+            "month": "2014-02",
+            "n": 2090
+          },
+          {
+            "month": "2014-03",
+            "n": 2167
+          },
+          {
+            "month": "2014-04",
+            "n": 2316
+          },
+          {
+            "month": "2014-05",
+            "n": 2566
+          },
+          {
+            "month": "2014-06",
+            "n": 2510
+          },
+          {
+            "month": "2014-07",
+            "n": 2728
+          },
+          {
+            "month": "2014-08",
+            "n": 2256
+          },
+          {
+            "month": "2014-09",
+            "n": 2234
+          },
+          {
+            "month": "2014-10",
+            "n": 2570
+          },
+          {
+            "month": "2014-11",
+            "n": 2233
+          },
+          {
+            "month": "2014-12",
+            "n": 2542
+          },
+          {
+            "month": "2015-01",
+            "n": 2499
+          },
+          {
+            "month": "2015-02",
+            "n": 2362
+          },
+          {
+            "month": "2015-03",
+            "n": 2593
+          },
+          {
+            "month": "2015-04",
+            "n": 2841
+          },
+          {
+            "month": "2015-05",
+            "n": 2674
+          },
+          {
+            "month": "2015-06",
+            "n": 2658
+          },
+          {
+            "month": "2015-07",
+            "n": 3056
+          },
+          {
+            "month": "2015-08",
+            "n": 2333
+          },
+          {
+            "month": "2015-09",
+            "n": 2759
+          },
+          {
+            "month": "2015-10",
+            "n": 2699
+          },
+          {
+            "month": "2015-11",
+            "n": 2481
+          },
+          {
+            "month": "2015-12",
+            "n": 2644
+          },
+          {
+            "month": "2016-01",
+            "n": 2669
+          },
+          {
+            "month": "2016-02",
+            "n": 2319
+          },
+          {
+            "month": "2016-03",
+            "n": 2699
+          },
+          {
+            "month": "2016-04",
+            "n": 2671
+          },
+          {
+            "month": "2016-05",
+            "n": 2752
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2013,
+            "n": 26251
+          },
+          {
+            "year": 2014,
+            "n": 28625
+          },
+          {
+            "year": 2015,
+            "n": 31599
+          },
+          {
+            "year": 2016,
+            "n": 13110
+          }
+        ],
+        "months_observed": 41,
+        "missing_months_between_extremes": [],
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      }
+    },
+    "foreign_keys": [
+      {
+        "fk_name": "FK_Fact_Transaction_Bill_To_Customer_Key_Dimension_Customer",
+        "parent_schema": "Fact",
+        "parent_table": "Transaction",
+        "parent_column": "Bill To Customer Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Customer",
+        "referenced_column": "Customer Key",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 99585,
+        "orphans": 0
+      },
+      {
+        "fk_name": "FK_Fact_Transaction_Customer_Key_Dimension_Customer",
+        "parent_schema": "Fact",
+        "parent_table": "Transaction",
+        "parent_column": "Customer Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Customer",
+        "referenced_column": "Customer Key",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 99585,
+        "orphans": 0
+      },
+      {
+        "fk_name": "FK_Fact_Transaction_Date_Key_Dimension_Date",
+        "parent_schema": "Fact",
+        "parent_table": "Transaction",
+        "parent_column": "Date Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Date",
+        "referenced_column": "Date",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 99585,
+        "orphans": 0
+      },
+      {
+        "fk_name": "FK_Fact_Transaction_Payment_Method_Key_Dimension_Payment Method",
+        "parent_schema": "Fact",
+        "parent_table": "Transaction",
+        "parent_column": "Payment Method Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Payment Method",
+        "referenced_column": "Payment Method Key",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 99585,
+        "orphans": 0
+      },
+      {
+        "fk_name": "FK_Fact_Transaction_Supplier_Key_Dimension_Supplier",
+        "parent_schema": "Fact",
+        "parent_table": "Transaction",
+        "parent_column": "Supplier Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Supplier",
+        "referenced_column": "Supplier Key",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 99585,
+        "orphans": 0
+      },
+      {
+        "fk_name": "FK_Fact_Transaction_Transaction_Type_Key_Dimension_Transaction Type",
+        "parent_schema": "Fact",
+        "parent_table": "Transaction",
+        "parent_column": "Transaction Type Key",
+        "referenced_schema": "Dimension",
+        "referenced_table": "Transaction Type",
+        "referenced_column": "Transaction Type Key",
+        "is_disabled": false,
+        "is_not_trusted": false,
+        "constraint_column_id": 1,
+        "nonnull_references": 99585,
+        "orphans": 0
+      }
+    ],
+    "primary_key_columns": [
+      "Transaction Key",
+      "Date Key"
+    ],
+    "primary_key_duplicates": {
+      "groups": 0,
+      "excess": 0
+    },
+    "payload_duplicates_excluding_pk_lineage": {
+      "groups": 0,
+      "excess": 0
+    },
+    "duplicate_note": "Repetición de contenido sin clave técnica/linaje, no eliminación automática ni prueba de error.",
+    "distributions": {
+      "Outstanding Balance": {
+        "q05": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "q95": 0.0,
+        "outside_1_5_IQR": 86,
+        "lower_fence": 0.0,
+        "upper_fence": 0.0
+      },
+      "Total Including Tax": {
+        "q05": -6450.579999999996,
+        "q25": -346.44,
+        "median": 1038.45,
+        "q75": 2884.2,
+        "q95": 9825.139999999974,
+        "outside_1_5_IQR": 12601,
+        "lower_fence": -5192.4,
+        "upper_fence": 7730.16
+      }
+    }
+  },
+  "Dimension.Date": {
+    "rows": 1461,
+    "columns": {
+      "Date": {
+        "nulls": 0,
+        "distinct_nonnull": 1461,
+        "min": "2013-01-01",
+        "max": "2016-12-31"
+      },
+      "Day Number": {
+        "nulls": 0,
+        "distinct_nonnull": 31,
+        "min": 1,
+        "max": 31,
+        "negative": 0,
+        "zero": 0
+      },
+      "Day": {
+        "nulls": 0,
+        "distinct_nonnull": 31
+      },
+      "Month": {
+        "nulls": 0,
+        "distinct_nonnull": 12
+      },
+      "Short Month": {
+        "nulls": 0,
+        "distinct_nonnull": 12
+      },
+      "Calendar Month Number": {
+        "nulls": 0,
+        "distinct_nonnull": 12,
+        "min": 1,
+        "max": 12,
+        "negative": 0,
+        "zero": 0
+      },
+      "Calendar Month Label": {
+        "nulls": 0,
+        "distinct_nonnull": 48
+      },
+      "Calendar Year": {
+        "nulls": 0,
+        "distinct_nonnull": 4,
+        "min": 2013,
+        "max": 2016,
+        "negative": 0,
+        "zero": 0
+      },
+      "Calendar Year Label": {
+        "nulls": 0,
+        "distinct_nonnull": 4
+      },
+      "Fiscal Month Number": {
+        "nulls": 0,
+        "distinct_nonnull": 12,
+        "min": 1,
+        "max": 12,
+        "negative": 0,
+        "zero": 0
+      },
+      "Fiscal Month Label": {
+        "nulls": 0,
+        "distinct_nonnull": 48
+      },
+      "Fiscal Year": {
+        "nulls": 0,
+        "distinct_nonnull": 5,
+        "min": 2013,
+        "max": 2017,
+        "negative": 0,
+        "zero": 0
+      },
+      "Fiscal Year Label": {
+        "nulls": 0,
+        "distinct_nonnull": 5
+      },
+      "ISO Week Number": {
+        "nulls": 0,
+        "distinct_nonnull": 53,
+        "min": 1,
+        "max": 53,
+        "negative": 0,
+        "zero": 0
+      }
+    },
+    "temporal": {
+      "Date": {
+        "monthly": [
+          {
+            "month": "2013-01",
+            "n": 31
+          },
+          {
+            "month": "2013-02",
+            "n": 28
+          },
+          {
+            "month": "2013-03",
+            "n": 31
+          },
+          {
+            "month": "2013-04",
+            "n": 30
+          },
+          {
+            "month": "2013-05",
+            "n": 31
+          },
+          {
+            "month": "2013-06",
+            "n": 30
+          },
+          {
+            "month": "2013-07",
+            "n": 31
+          },
+          {
+            "month": "2013-08",
+            "n": 31
+          },
+          {
+            "month": "2013-09",
+            "n": 30
+          },
+          {
+            "month": "2013-10",
+            "n": 31
+          },
+          {
+            "month": "2013-11",
+            "n": 30
+          },
+          {
+            "month": "2013-12",
+            "n": 31
+          },
+          {
+            "month": "2014-01",
+            "n": 31
+          },
+          {
+            "month": "2014-02",
+            "n": 28
+          },
+          {
+            "month": "2014-03",
+            "n": 31
+          },
+          {
+            "month": "2014-04",
+            "n": 30
+          },
+          {
+            "month": "2014-05",
+            "n": 31
+          },
+          {
+            "month": "2014-06",
+            "n": 30
+          },
+          {
+            "month": "2014-07",
+            "n": 31
+          },
+          {
+            "month": "2014-08",
+            "n": 31
+          },
+          {
+            "month": "2014-09",
+            "n": 30
+          },
+          {
+            "month": "2014-10",
+            "n": 31
+          },
+          {
+            "month": "2014-11",
+            "n": 30
+          },
+          {
+            "month": "2014-12",
+            "n": 31
+          },
+          {
+            "month": "2015-01",
+            "n": 31
+          },
+          {
+            "month": "2015-02",
+            "n": 28
+          },
+          {
+            "month": "2015-03",
+            "n": 31
+          },
+          {
+            "month": "2015-04",
+            "n": 30
+          },
+          {
+            "month": "2015-05",
+            "n": 31
+          },
+          {
+            "month": "2015-06",
+            "n": 30
+          },
+          {
+            "month": "2015-07",
+            "n": 31
+          },
+          {
+            "month": "2015-08",
+            "n": 31
+          },
+          {
+            "month": "2015-09",
+            "n": 30
+          },
+          {
+            "month": "2015-10",
+            "n": 31
+          },
+          {
+            "month": "2015-11",
+            "n": 30
+          },
+          {
+            "month": "2015-12",
+            "n": 31
+          },
+          {
+            "month": "2016-01",
+            "n": 31
+          },
+          {
+            "month": "2016-02",
+            "n": 29
+          },
+          {
+            "month": "2016-03",
+            "n": 31
+          },
+          {
+            "month": "2016-04",
+            "n": 30
+          },
+          {
+            "month": "2016-05",
+            "n": 31
+          },
+          {
+            "month": "2016-06",
+            "n": 30
+          },
+          {
+            "month": "2016-07",
+            "n": 31
+          },
+          {
+            "month": "2016-08",
+            "n": 31
+          },
+          {
+            "month": "2016-09",
+            "n": 30
+          },
+          {
+            "month": "2016-10",
+            "n": 31
+          },
+          {
+            "month": "2016-11",
+            "n": 30
+          },
+          {
+            "month": "2016-12",
+            "n": 31
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2013,
+            "n": 365
+          },
+          {
+            "year": 2014,
+            "n": 365
+          },
+          {
+            "year": 2015,
+            "n": 365
+          },
+          {
+            "year": 2016,
+            "n": 366
+          }
+        ],
+        "months_observed": 48,
+        "missing_months_between_extremes": [],
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      }
+    },
+    "foreign_keys": [],
+    "primary_key_columns": [
+      "Date"
+    ],
+    "primary_key_duplicates": {
+      "groups": 0,
+      "excess": 0
+    },
+    "payload_duplicates_excluding_pk_lineage": {
+      "groups": 0,
+      "excess": 0
+    },
+    "duplicate_note": "Repetición de contenido sin clave técnica/linaje, no eliminación automática ni prueba de error.",
+    "distributions": {}
+  },
+  "Dimension.Stock Item": {
+    "rows": 672,
+    "columns": {
+      "Stock Item Key": {
+        "nulls": 0,
+        "distinct_nonnull": 672,
+        "min": 0,
+        "max": 671,
+        "negative": 0,
+        "zero": 1
+      },
+      "WWI Stock Item ID": {
+        "nulls": 0,
+        "distinct_nonnull": 228,
+        "min": 0,
+        "max": 227,
+        "negative": 0,
+        "zero": 1
+      },
+      "Stock Item": {
+        "nulls": 0,
+        "distinct_nonnull": 228
+      },
+      "Color": {
+        "nulls": 0,
+        "distinct_nonnull": 9
+      },
+      "Selling Package": {
+        "nulls": 0,
+        "distinct_nonnull": 5
+      },
+      "Buying Package": {
+        "nulls": 0,
+        "distinct_nonnull": 4
+      },
+      "Brand": {
+        "nulls": 0,
+        "distinct_nonnull": 2
+      },
+      "Size": {
+        "nulls": 0,
+        "distinct_nonnull": 44
+      },
+      "Lead Time Days": {
+        "nulls": 0,
+        "distinct_nonnull": 7,
+        "min": 0,
+        "max": 20,
+        "negative": 0,
+        "zero": 1
+      },
+      "Quantity Per Outer": {
+        "nulls": 0,
+        "distinct_nonnull": 10,
+        "min": 0,
+        "max": 36,
+        "negative": 0,
+        "zero": 1
+      },
+      "Is Chiller Stock": {
+        "nulls": 0,
+        "distinct_nonnull": 2,
+        "min": 0,
+        "max": 1,
+        "negative": 0,
+        "zero": 656
+      },
+      "Barcode": {
+        "nulls": 0,
+        "distinct_nonnull": 9
+      },
+      "Tax Rate": {
+        "nulls": 0,
+        "distinct_nonnull": 7,
+        "min": "0.000",
+        "max": "20.000",
+        "negative": 0,
+        "zero": 1
+      },
+      "Unit Price": {
+        "nulls": 0,
+        "distinct_nonnull": 58,
+        "min": "0.00",
+        "max": "1899.00",
+        "negative": 0,
+        "zero": 1
+      },
+      "Recommended Retail Price": {
+        "nulls": 0,
+        "distinct_nonnull": 58,
+        "min": "0.00",
+        "max": "2839.01",
+        "negative": 0,
+        "zero": 1
+      },
+      "Typical Weight Per Unit": {
+        "nulls": 0,
+        "distinct_nonnull": 24,
+        "min": "0.000",
+        "max": "21.000",
+        "negative": 0,
+        "zero": 1
+      },
+      "Photo": {
+        "nulls": 672
+      },
+      "Valid From": {
+        "nulls": 0,
+        "distinct_nonnull": 18,
+        "min": "2013-01-01 00:00:00",
+        "max": "2016-05-31 23:12:00"
+      },
+      "Valid To": {
+        "nulls": 0,
+        "distinct_nonnull": 14,
+        "min": "2016-05-31 23:00:00",
+        "max": "9999-12-31 23:59:59.999999"
+      },
+      "Lineage Key": {
+        "nulls": 0,
+        "distinct_nonnull": 2,
+        "min": 0,
+        "max": 5,
+        "negative": 0,
+        "zero": 1
+      }
+    },
+    "temporal": {
+      "Valid From": {
+        "monthly": [
+          {
+            "month": "2013-01",
+            "n": 220
+          },
+          {
+            "month": "2016-01",
+            "n": 8
+          },
+          {
+            "month": "2016-05",
+            "n": 444
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2013,
+            "n": 220
+          },
+          {
+            "year": 2016,
+            "n": 452
+          }
+        ],
+        "months_observed": 3,
+        "missing_months_between_extremes": null,
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      },
+      "Valid To": {
+        "monthly": [
+          {
+            "month": "2016-05",
+            "n": 444
+          },
+          {
+            "month": "9999-12",
+            "n": 228
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2016,
+            "n": 444
+          },
+          {
+            "year": 9999,
+            "n": 228
+          }
+        ],
+        "months_observed": 2,
+        "missing_months_between_extremes": null,
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      }
+    },
+    "foreign_keys": [],
+    "primary_key_columns": [
+      "Stock Item Key"
+    ],
+    "primary_key_duplicates": {
+      "groups": 0,
+      "excess": 0
+    },
+    "payload_duplicates_excluding_pk_lineage": {
+      "groups": 0,
+      "excess": 0
+    },
+    "duplicate_note": "Repetición de contenido sin clave técnica/linaje, no eliminación automática ni prueba de error.",
+    "distributions": {}
+  },
+  "Dimension.Customer": {
+    "rows": 403,
+    "columns": {
+      "Customer Key": {
+        "nulls": 0,
+        "distinct_nonnull": 403,
+        "min": 0,
+        "max": 402,
+        "negative": 0,
+        "zero": 1
+      },
+      "WWI Customer ID": {
+        "nulls": 0,
+        "distinct_nonnull": 403,
+        "min": 0,
+        "max": 601,
+        "negative": 0,
+        "zero": 1
+      },
+      "Customer": {
+        "nulls": 0,
+        "distinct_nonnull": 403
+      },
+      "Bill To Customer": {
+        "nulls": 0,
+        "distinct_nonnull": 3
+      },
+      "Category": {
+        "nulls": 0,
+        "distinct_nonnull": 2
+      },
+      "Buying Group": {
+        "nulls": 0,
+        "distinct_nonnull": 3
+      },
+      "Primary Contact": {
+        "nulls": 0,
+        "distinct_nonnull": 403
+      },
+      "Postal Code": {
+        "nulls": 0,
+        "distinct_nonnull": 318
+      },
+      "Valid From": {
+        "nulls": 0,
+        "distinct_nonnull": 1,
+        "min": "2013-01-01 00:00:00",
+        "max": "2013-01-01 00:00:00"
+      },
+      "Valid To": {
+        "nulls": 0,
+        "distinct_nonnull": 1,
+        "min": "9999-12-31 23:59:59.999999",
+        "max": "9999-12-31 23:59:59.999999"
+      },
+      "Lineage Key": {
+        "nulls": 0,
+        "distinct_nonnull": 2,
+        "min": 0,
+        "max": 2,
+        "negative": 0,
+        "zero": 1
+      }
+    },
+    "temporal": {
+      "Valid From": {
+        "monthly": [
+          {
+            "month": "2013-01",
+            "n": 403
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2013,
+            "n": 403
+          }
+        ],
+        "months_observed": 1,
+        "missing_months_between_extremes": null,
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      },
+      "Valid To": {
+        "monthly": [
+          {
+            "month": "9999-12",
+            "n": 403
+          }
+        ],
+        "yearly": [
+          {
+            "year": 9999,
+            "n": 403
+          }
+        ],
+        "months_observed": 1,
+        "missing_months_between_extremes": null,
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      }
+    },
+    "foreign_keys": [],
+    "primary_key_columns": [
+      "Customer Key"
+    ],
+    "primary_key_duplicates": {
+      "groups": 0,
+      "excess": 0
+    },
+    "payload_duplicates_excluding_pk_lineage": {
+      "groups": 0,
+      "excess": 0
+    },
+    "duplicate_note": "Repetición de contenido sin clave técnica/linaje, no eliminación automática ni prueba de error.",
+    "distributions": {}
+  },
+  "Dimension.Supplier": {
+    "rows": 28,
+    "columns": {
+      "Supplier Key": {
+        "nulls": 0,
+        "distinct_nonnull": 28,
+        "min": 0,
+        "max": 27,
+        "negative": 0,
+        "zero": 1
+      },
+      "WWI Supplier ID": {
+        "nulls": 0,
+        "distinct_nonnull": 14,
+        "min": 0,
+        "max": 13,
+        "negative": 0,
+        "zero": 1
+      },
+      "Supplier": {
+        "nulls": 0,
+        "distinct_nonnull": 14
+      },
+      "Category": {
+        "nulls": 0,
+        "distinct_nonnull": 10
+      },
+      "Primary Contact": {
+        "nulls": 0,
+        "distinct_nonnull": 14
+      },
+      "Supplier Reference": {
+        "nulls": 0,
+        "distinct_nonnull": 14
+      },
+      "Payment Days": {
+        "nulls": 0,
+        "distinct_nonnull": 4,
+        "min": 0,
+        "max": 30,
+        "negative": 0,
+        "zero": 1
+      },
+      "Postal Code": {
+        "nulls": 0,
+        "distinct_nonnull": 13
+      },
+      "Valid From": {
+        "nulls": 0,
+        "distinct_nonnull": 2,
+        "min": "2013-01-01 00:00:00",
+        "max": "2013-01-01 00:05:00"
+      },
+      "Valid To": {
+        "nulls": 0,
+        "distinct_nonnull": 2,
+        "min": "2013-01-01 00:05:00",
+        "max": "9999-12-31 23:59:59.999999"
+      },
+      "Lineage Key": {
+        "nulls": 0,
+        "distinct_nonnull": 2,
+        "min": 0,
+        "max": 6,
+        "negative": 0,
+        "zero": 1
+      }
+    },
+    "temporal": {
+      "Valid From": {
+        "monthly": [
+          {
+            "month": "2013-01",
+            "n": 28
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2013,
+            "n": 28
+          }
+        ],
+        "months_observed": 1,
+        "missing_months_between_extremes": null,
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      },
+      "Valid To": {
+        "monthly": [
+          {
+            "month": "2013-01",
+            "n": 13
+          },
+          {
+            "month": "9999-12",
+            "n": 15
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2013,
+            "n": 13
+          },
+          {
+            "year": 9999,
+            "n": 15
+          }
+        ],
+        "months_observed": 2,
+        "missing_months_between_extremes": null,
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      }
+    },
+    "foreign_keys": [],
+    "primary_key_columns": [
+      "Supplier Key"
+    ],
+    "primary_key_duplicates": {
+      "groups": 0,
+      "excess": 0
+    },
+    "payload_duplicates_excluding_pk_lineage": {
+      "groups": 0,
+      "excess": 0
+    },
+    "duplicate_note": "Repetición de contenido sin clave técnica/linaje, no eliminación automática ni prueba de error.",
+    "distributions": {}
+  },
+  "Dimension.Transaction Type": {
+    "rows": 15,
+    "columns": {
+      "Transaction Type Key": {
+        "nulls": 0,
+        "distinct_nonnull": 15,
+        "min": 0,
+        "max": 14,
+        "negative": 0,
+        "zero": 1
+      },
+      "WWI Transaction Type ID": {
+        "nulls": 0,
+        "distinct_nonnull": 14,
+        "min": 0,
+        "max": 13,
+        "negative": 0,
+        "zero": 1
+      },
+      "Transaction Type": {
+        "nulls": 0,
+        "distinct_nonnull": 15
+      },
+      "Valid From": {
+        "nulls": 0,
+        "distinct_nonnull": 3,
+        "min": "2013-01-01 00:00:00",
+        "max": "2016-01-01 16:05:00"
+      },
+      "Valid To": {
+        "nulls": 0,
+        "distinct_nonnull": 2,
+        "min": "2016-01-01 16:05:00",
+        "max": "9999-12-31 23:59:59.999999"
+      },
+      "Lineage Key": {
+        "nulls": 0,
+        "distinct_nonnull": 2,
+        "min": 0,
+        "max": 7,
+        "negative": 0,
+        "zero": 1
+      }
+    },
+    "temporal": {
+      "Valid From": {
+        "monthly": [
+          {
+            "month": "2013-01",
+            "n": 13
+          },
+          {
+            "month": "2016-01",
+            "n": 2
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2013,
+            "n": 13
+          },
+          {
+            "year": 2016,
+            "n": 2
+          }
+        ],
+        "months_observed": 2,
+        "missing_months_between_extremes": null,
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      },
+      "Valid To": {
+        "monthly": [
+          {
+            "month": "2016-01",
+            "n": 1
+          },
+          {
+            "month": "9999-12",
+            "n": 14
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2016,
+            "n": 1
+          },
+          {
+            "year": 9999,
+            "n": 14
+          }
+        ],
+        "months_observed": 2,
+        "missing_months_between_extremes": null,
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      }
+    },
+    "foreign_keys": [],
+    "primary_key_columns": [
+      "Transaction Type Key"
+    ],
+    "primary_key_duplicates": {
+      "groups": 0,
+      "excess": 0
+    },
+    "payload_duplicates_excluding_pk_lineage": {
+      "groups": 0,
+      "excess": 0
+    },
+    "duplicate_note": "Repetición de contenido sin clave técnica/linaje, no eliminación automática ni prueba de error.",
+    "distributions": {}
+  },
+  "Dimension.Payment Method": {
+    "rows": 6,
+    "columns": {
+      "Payment Method Key": {
+        "nulls": 0,
+        "distinct_nonnull": 6,
+        "min": 0,
+        "max": 5,
+        "negative": 0,
+        "zero": 1
+      },
+      "WWI Payment Method ID": {
+        "nulls": 0,
+        "distinct_nonnull": 5,
+        "min": 0,
+        "max": 4,
+        "negative": 0,
+        "zero": 1
+      },
+      "Payment Method": {
+        "nulls": 0,
+        "distinct_nonnull": 6
+      },
+      "Valid From": {
+        "nulls": 0,
+        "distinct_nonnull": 2,
+        "min": "2013-01-01 00:00:00",
+        "max": "2016-01-01 16:00:00"
+      },
+      "Valid To": {
+        "nulls": 0,
+        "distinct_nonnull": 2,
+        "min": "2016-01-01 16:00:00",
+        "max": "9999-12-31 23:59:59.999999"
+      },
+      "Lineage Key": {
+        "nulls": 0,
+        "distinct_nonnull": 2,
+        "min": 0,
+        "max": 4,
+        "negative": 0,
+        "zero": 1
+      }
+    },
+    "temporal": {
+      "Valid From": {
+        "monthly": [
+          {
+            "month": "2013-01",
+            "n": 5
+          },
+          {
+            "month": "2016-01",
+            "n": 1
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2013,
+            "n": 5
+          },
+          {
+            "year": 2016,
+            "n": 1
+          }
+        ],
+        "months_observed": 2,
+        "missing_months_between_extremes": null,
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      },
+      "Valid To": {
+        "monthly": [
+          {
+            "month": "2016-01",
+            "n": 1
+          },
+          {
+            "month": "9999-12",
+            "n": 5
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2016,
+            "n": 1
+          },
+          {
+            "year": 9999,
+            "n": 5
+          }
+        ],
+        "months_observed": 2,
+        "missing_months_between_extremes": null,
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      }
+    },
+    "foreign_keys": [],
+    "primary_key_columns": [
+      "Payment Method Key"
+    ],
+    "primary_key_duplicates": {
+      "groups": 0,
+      "excess": 0
+    },
+    "payload_duplicates_excluding_pk_lineage": {
+      "groups": 0,
+      "excess": 0
+    },
+    "duplicate_note": "Repetición de contenido sin clave técnica/linaje, no eliminación automática ni prueba de error.",
+    "distributions": {}
+  },
+  "Dimension.City": {
+    "rows": 116295,
+    "columns": {
+      "City Key": {
+        "nulls": 0,
+        "distinct_nonnull": 116295,
+        "min": 0,
+        "max": 116294,
+        "negative": 0,
+        "zero": 1
+      },
+      "WWI City ID": {
+        "nulls": 0,
+        "distinct_nonnull": 37941,
+        "min": 0,
+        "max": 38186,
+        "negative": 0,
+        "zero": 1
+      },
+      "City": {
+        "nulls": 0,
+        "distinct_nonnull": 23273
+      },
+      "State Province": {
+        "nulls": 0,
+        "distinct_nonnull": 54
+      },
+      "Country": {
+        "nulls": 0,
+        "distinct_nonnull": 2
+      },
+      "Continent": {
+        "nulls": 0,
+        "distinct_nonnull": 2
+      },
+      "Sales Territory": {
+        "nulls": 0,
+        "distinct_nonnull": 10
+      },
+      "Region": {
+        "nulls": 0,
+        "distinct_nonnull": 2
+      },
+      "Subregion": {
+        "nulls": 0,
+        "distinct_nonnull": 2
+      },
+      "Location": {
+        "nulls": 1
+      },
+      "Latest Recorded Population": {
+        "nulls": 0,
+        "distinct_nonnull": 9326,
+        "min": 0,
+        "max": 8175133,
+        "negative": 0,
+        "zero": 34275
+      },
+      "Valid From": {
+        "nulls": 0,
+        "distinct_nonnull": 9,
+        "min": "2013-01-01 00:00:00",
+        "max": "2015-07-01 16:00:00"
+      },
+      "Valid To": {
+        "nulls": 0,
+        "distinct_nonnull": 9,
+        "min": "2013-01-01 00:01:00",
+        "max": "9999-12-31 23:59:59.999999"
+      },
+      "Lineage Key": {
+        "nulls": 0,
+        "distinct_nonnull": 2,
+        "min": 0,
+        "max": 1,
+        "negative": 0,
+        "zero": 1
+      }
+    },
+    "temporal": {
+      "Valid From": {
+        "monthly": [
+          {
+            "month": "2013-01",
+            "n": 75877
+          },
+          {
+            "month": "2013-07",
+            "n": 17711
+          },
+          {
+            "month": "2014-07",
+            "n": 13079
+          },
+          {
+            "month": "2015-07",
+            "n": 9628
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2013,
+            "n": 93588
+          },
+          {
+            "year": 2014,
+            "n": 13079
+          },
+          {
+            "year": 2015,
+            "n": 9628
+          }
+        ],
+        "months_observed": 4,
+        "missing_months_between_extremes": null,
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      },
+      "Valid To": {
+        "monthly": [
+          {
+            "month": "2013-01",
+            "n": 37936
+          },
+          {
+            "month": "2013-07",
+            "n": 15033
+          },
+          {
+            "month": "2014-07",
+            "n": 13077
+          },
+          {
+            "month": "2015-07",
+            "n": 7694
+          },
+          {
+            "month": "9999-12",
+            "n": 42555
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2013,
+            "n": 52969
+          },
+          {
+            "year": 2014,
+            "n": 13077
+          },
+          {
+            "year": 2015,
+            "n": 7694
+          },
+          {
+            "year": 9999,
+            "n": 42555
+          }
+        ],
+        "months_observed": 5,
+        "missing_months_between_extremes": null,
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      }
+    },
+    "foreign_keys": [],
+    "primary_key_columns": [
+      "City Key"
+    ],
+    "primary_key_duplicates": {
+      "groups": 0,
+      "excess": 0
+    },
+    "payload_duplicates_excluding_pk_lineage": {
+      "groups": 5944,
+      "excess": 5946
+    },
+    "duplicate_note": "Repetición de contenido sin clave técnica/linaje, no eliminación automática ni prueba de error.",
+    "distributions": {}
+  },
+  "Dimension.Employee": {
+    "rows": 213,
+    "columns": {
+      "Employee Key": {
+        "nulls": 0,
+        "distinct_nonnull": 213,
+        "min": 0,
+        "max": 212,
+        "negative": 0,
+        "zero": 1
+      },
+      "WWI Employee ID": {
+        "nulls": 0,
+        "distinct_nonnull": 20,
+        "min": 0,
+        "max": 20,
+        "negative": 0,
+        "zero": 1
+      },
+      "Employee": {
+        "nulls": 0,
+        "distinct_nonnull": 20
+      },
+      "Preferred Name": {
+        "nulls": 0,
+        "distinct_nonnull": 19
+      },
+      "Is Salesperson": {
+        "nulls": 0,
+        "distinct_nonnull": 2,
+        "min": 0,
+        "max": 1,
+        "negative": 0,
+        "zero": 90
+      },
+      "Photo": {
+        "nulls": 213
+      },
+      "Valid From": {
+        "nulls": 0,
+        "distinct_nonnull": 143,
+        "min": "2013-01-01 00:00:00",
+        "max": "2016-05-31 23:14:00"
+      },
+      "Valid To": {
+        "nulls": 0,
+        "distinct_nonnull": 143,
+        "min": "2013-01-01 08:00:00",
+        "max": "9999-12-31 23:59:59.999999"
+      },
+      "Lineage Key": {
+        "nulls": 0,
+        "distinct_nonnull": 2,
+        "min": 0,
+        "max": 3,
+        "negative": 0,
+        "zero": 1
+      }
+    },
+    "temporal": {
+      "Valid From": {
+        "monthly": [
+          {
+            "month": "2013-01",
+            "n": 40
+          },
+          {
+            "month": "2013-02",
+            "n": 11
+          },
+          {
+            "month": "2013-03",
+            "n": 9
+          },
+          {
+            "month": "2013-04",
+            "n": 7
+          },
+          {
+            "month": "2013-05",
+            "n": 7
+          },
+          {
+            "month": "2013-06",
+            "n": 4
+          },
+          {
+            "month": "2013-07",
+            "n": 4
+          },
+          {
+            "month": "2013-08",
+            "n": 2
+          },
+          {
+            "month": "2013-09",
+            "n": 3
+          },
+          {
+            "month": "2013-10",
+            "n": 2
+          },
+          {
+            "month": "2013-11",
+            "n": 7
+          },
+          {
+            "month": "2013-12",
+            "n": 6
+          },
+          {
+            "month": "2014-01",
+            "n": 1
+          },
+          {
+            "month": "2014-02",
+            "n": 1
+          },
+          {
+            "month": "2014-03",
+            "n": 2
+          },
+          {
+            "month": "2014-04",
+            "n": 5
+          },
+          {
+            "month": "2014-05",
+            "n": 6
+          },
+          {
+            "month": "2014-06",
+            "n": 2
+          },
+          {
+            "month": "2014-07",
+            "n": 4
+          },
+          {
+            "month": "2014-08",
+            "n": 1
+          },
+          {
+            "month": "2014-09",
+            "n": 2
+          },
+          {
+            "month": "2014-10",
+            "n": 3
+          },
+          {
+            "month": "2014-11",
+            "n": 7
+          },
+          {
+            "month": "2014-12",
+            "n": 6
+          },
+          {
+            "month": "2015-01",
+            "n": 2
+          },
+          {
+            "month": "2015-02",
+            "n": 2
+          },
+          {
+            "month": "2015-03",
+            "n": 2
+          },
+          {
+            "month": "2015-04",
+            "n": 2
+          },
+          {
+            "month": "2015-05",
+            "n": 3
+          },
+          {
+            "month": "2015-06",
+            "n": 3
+          },
+          {
+            "month": "2015-07",
+            "n": 1
+          },
+          {
+            "month": "2015-08",
+            "n": 1
+          },
+          {
+            "month": "2015-09",
+            "n": 1
+          },
+          {
+            "month": "2015-11",
+            "n": 1
+          },
+          {
+            "month": "2015-12",
+            "n": 5
+          },
+          {
+            "month": "2016-02",
+            "n": 2
+          },
+          {
+            "month": "2016-03",
+            "n": 6
+          },
+          {
+            "month": "2016-04",
+            "n": 1
+          },
+          {
+            "month": "2016-05",
+            "n": 39
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2013,
+            "n": 102
+          },
+          {
+            "year": 2014,
+            "n": 40
+          },
+          {
+            "year": 2015,
+            "n": 23
+          },
+          {
+            "year": 2016,
+            "n": 48
+          }
+        ],
+        "months_observed": 39,
+        "missing_months_between_extremes": null,
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      },
+      "Valid To": {
+        "monthly": [
+          {
+            "month": "2013-01",
+            "n": 20
+          },
+          {
+            "month": "2013-02",
+            "n": 11
+          },
+          {
+            "month": "2013-03",
+            "n": 9
+          },
+          {
+            "month": "2013-04",
+            "n": 7
+          },
+          {
+            "month": "2013-05",
+            "n": 7
+          },
+          {
+            "month": "2013-06",
+            "n": 4
+          },
+          {
+            "month": "2013-07",
+            "n": 4
+          },
+          {
+            "month": "2013-08",
+            "n": 2
+          },
+          {
+            "month": "2013-09",
+            "n": 3
+          },
+          {
+            "month": "2013-10",
+            "n": 2
+          },
+          {
+            "month": "2013-11",
+            "n": 6
+          },
+          {
+            "month": "2013-12",
+            "n": 6
+          },
+          {
+            "month": "2014-01",
+            "n": 1
+          },
+          {
+            "month": "2014-02",
+            "n": 1
+          },
+          {
+            "month": "2014-03",
+            "n": 2
+          },
+          {
+            "month": "2014-04",
+            "n": 6
+          },
+          {
+            "month": "2014-05",
+            "n": 6
+          },
+          {
+            "month": "2014-06",
+            "n": 2
+          },
+          {
+            "month": "2014-07",
+            "n": 4
+          },
+          {
+            "month": "2014-08",
+            "n": 1
+          },
+          {
+            "month": "2014-09",
+            "n": 2
+          },
+          {
+            "month": "2014-10",
+            "n": 3
+          },
+          {
+            "month": "2014-11",
+            "n": 7
+          },
+          {
+            "month": "2014-12",
+            "n": 6
+          },
+          {
+            "month": "2015-01",
+            "n": 2
+          },
+          {
+            "month": "2015-02",
+            "n": 2
+          },
+          {
+            "month": "2015-03",
+            "n": 2
+          },
+          {
+            "month": "2015-04",
+            "n": 2
+          },
+          {
+            "month": "2015-05",
+            "n": 3
+          },
+          {
+            "month": "2015-06",
+            "n": 3
+          },
+          {
+            "month": "2015-07",
+            "n": 1
+          },
+          {
+            "month": "2015-08",
+            "n": 1
+          },
+          {
+            "month": "2015-09",
+            "n": 1
+          },
+          {
+            "month": "2015-11",
+            "n": 1
+          },
+          {
+            "month": "2015-12",
+            "n": 5
+          },
+          {
+            "month": "2016-02",
+            "n": 2
+          },
+          {
+            "month": "2016-03",
+            "n": 6
+          },
+          {
+            "month": "2016-04",
+            "n": 1
+          },
+          {
+            "month": "2016-05",
+            "n": 39
+          },
+          {
+            "month": "9999-12",
+            "n": 20
+          }
+        ],
+        "yearly": [
+          {
+            "year": 2013,
+            "n": 81
+          },
+          {
+            "year": 2014,
+            "n": 41
+          },
+          {
+            "year": 2015,
+            "n": 23
+          },
+          {
+            "year": 2016,
+            "n": 48
+          },
+          {
+            "year": 9999,
+            "n": 20
+          }
+        ],
+        "months_observed": 40,
+        "missing_months_between_extremes": null,
+        "volume_changes_outside_half_double": [],
+        "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+      }
+    },
+    "foreign_keys": [],
+    "primary_key_columns": [
+      "Employee Key"
+    ],
+    "primary_key_duplicates": {
+      "groups": 0,
+      "excess": 0
+    },
+    "payload_duplicates_excluding_pk_lineage": {
+      "groups": 1,
+      "excess": 1
+    },
+    "duplicate_note": "Repetición de contenido sin clave técnica/linaje, no eliminación automática ni prueba de error.",
+    "distributions": {}
+  }
+}

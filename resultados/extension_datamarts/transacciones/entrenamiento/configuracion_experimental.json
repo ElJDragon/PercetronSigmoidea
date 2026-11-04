@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "process": "financial_customer_payment_frequency",
+  "input_features": [
+    "cobros_lag_1",
+    "cobros_lag_2",
+    "cobros_lag_3",
+    "cobros_media_3",
+    "cobros_mediana_3",
+    "cobros_std_3",
+    "cobros_cambio_1",
+    "cobros_tendencia_3",
+    "meses_con_cobros_3",
+    "mes_anterior_sin_cobros",
+    "variacion_relativa_cobros",
+    "base_variacion_cero",
+    "antiguedad_observada_meses",
+    "mes_sin",
+    "mes_cos",
+    "dias_mes_objetivo"
+  ],
+  "selection": "validation balanced_accuracy descending; F1 descending; earliest epoch; earliest experiment index",
+  "selection_population": "all approved validation observations, n=2943; no test",
+  "threshold_policy": {
+    "perceptron": "z>=0",
+    "logistic": 0.5,
+    "threshold_candidates": [
+      0.5
+    ],
+    "threshold_search": false
+  },
+  "initialization": "new zero weights and zero bias; no weights from Ventas",
+  "experiments": [
+    {
+      "id": "p_seed42",
+      "algorithm": "perceptron",
+      "params": {
+        "learning_rate": 0.01,
+        "max_epochs": 100,
+        "seed": 42,
+        "shuffle": true
+      }
+    },
+    {
+      "id": "p_seed7",
+      "algorithm": "perceptron",
+      "params": {
+        "learning_rate": 0.01,
+        "max_epochs": 100,
+        "seed": 7,
+        "shuffle": true
+      }
+    },
+    {
+      "id": "l_eta005",
+      "algorithm": "logistic",
+      "params": {
+        "learning_rate": 0.05,
+        "max_epochs": 400,
+        "seed": 42,
+        "initialization": "zeros",
+        "tolerance": 1e-06,
+        "threshold": 0.5
+      }
+    },
+    {
+      "id": "l_eta010",
+      "algorithm": "logistic",
+      "params": {
+        "learning_rate": 0.1,
+        "max_epochs": 400,
+        "seed": 42,
+        "initialization": "zeros",
+        "tolerance": 1e-06,
+        "threshold": 0.5
+      }
+    }
+  ],
+  "budget": {
+    "runs": 4,
+    "max_online_epochs_total": 200,
+    "max_batch_epochs_total": 800,
+    "adaptive_expansion": false
+  },
+  "perceptron_order": "numpy default_rng(seed).permutation(train rows) each epoch; training rows in frozen dataset order",
+  "logistic_order": "full batch gradient descent; seed recorded but zero initialization is deterministic",
+  "perceptron_rate_rationale": "One rate with two predefined permutations; with zero initialization scaling eta scales parameters, so no redundant rate sweep.",
+  "reference": "Existing manual class defaults/Ventas supply technical starting rates, not transferred weights or optimality claims.",
+  "baselines": {
+    "majority": "majority y_train, tie=0",
+    "history": "1[N(t-1)>median(N(t-2),N(t-3),N(t-4))]",
+    "common_comparison": "all four methods on identical rows with four covered prior months; full model metrics reported separately; no fourth-lag imputation"
+  },
+  "average_precision": "Report logistic validation scores with grouped ties, noninterpolated AP; descriptive only, not selection",
+  "stopping": {
+    "perceptron": "existing implementation runs max_epochs; zero-error epochs reported without assuming convergence",
+    "logistic": "gradient norm<=1e-6 or max_epochs, as implemented; report actual reason"
+  },
+  "test_2016": "sealed; no SQL or test array access",
+  "pca": false
+}

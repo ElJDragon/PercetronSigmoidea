@@ -1,0 +1,87 @@
+{
+  "status": "successful",
+  "tests_run": 313,
+  "new_focused_tests": 20,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "prior_files_preserved": 642,
+  "previous_tests_modified": false,
+  "preflight_passed_before_first_test_SQL": true,
+  "opening_record_sha256": "ed25a41dedf8f4d904d3c8687b36174aa4ade51f84ad3734150bb204886410c2",
+  "opening_record_precedes_SQL": true,
+  "baseline_type": "A: persistence of previous label",
+  "baseline_formula": "1[N(t-1)>median(N(t-2),N(t-3),N(t-4))]",
+  "test_period": [
+    "2016-01",
+    "2016-05"
+  ],
+  "counts": {
+    "source_events": 3619,
+    "accounts_in_extraction": 263,
+    "primary": 1284,
+    "common": 1276,
+    "positive": 525,
+    "negative": 759,
+    "shape": [
+      1284,
+      16
+    ],
+    "dtype": "float64",
+    "eligibility_reasons": {
+      "eligible": 1284,
+      "insufficient_history": 20
+    },
+    "evaluable_months": [
+      "2016-01",
+      "2016-02",
+      "2016-03",
+      "2016-04",
+      "2016-05"
+    ],
+    "input_features": [
+      "cobros_lag_1",
+      "cobros_lag_2",
+      "cobros_lag_3",
+      "cobros_media_3",
+      "cobros_mediana_3",
+      "cobros_std_3",
+      "cobros_cambio_1",
+      "cobros_tendencia_3",
+      "meses_con_cobros_3",
+      "mes_anterior_sin_cobros",
+      "variacion_relativa_cobros",
+      "base_variacion_cero",
+      "antiguedad_observada_meses",
+      "mes_sin",
+      "mes_cos",
+      "dias_mes_objetivo"
+    ]
+  },
+  "source_dw_bijection": true,
+  "read_only_SQL_queries": 7,
+  "fingerprints_unchanged": true,
+  "primary_n": 1284,
+  "common_n": 1276,
+  "excluded_only_from_historical": 8,
+  "source_models_sha256_unchanged": {
+    "perceptron": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0",
+    "logistic": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  "threshold_logistic": 0.5,
+  "original_dataset_and_preprocessor_unchanged": true,
+  "classifier_retraining_on_business_data": false,
+  "preprocessor_refit": false,
+  "PCA_used_for_classification": false,
+  "parameters_selected_using_test": false,
+  "figures_generated": 7,
+  "figures_visually_verified": 3,
+  "deterministically_reproduced_artifacts": 36,
+  "all_outputs_reproduced_identically": true,
+  "sql_access_during_reproduction": false,
+  "absolute_completeness_claimed": false,
+  "academic_report_modified": false,
+  "git_operations": false,
+  "inventory_investigation_started": false,
+  "manifest_sha256": "0172cac224f7a96efdee644729b674a5713357d1e1f08e4eec4d6bd1f7e57337"
+}

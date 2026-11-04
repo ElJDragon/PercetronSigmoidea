@@ -1,0 +1,16 @@
+{
+  "caracteristicas_autorizadas.json": "52c0d6f2411e88c6ef9cc683f0865437f7b11877ea486828a497661263b6b44e",
+  "consultas_desarrollo.json": "b1e2fe7bfd057b8842712b6e5794c17c54fb84a2fb033038ff4331c429dd1554",
+  "consultas_metadatos.json": "32e18b687c764331166a0b99d6268f5752b846ac48f97c040453a879c51a73eb",
+  "estado_construccion.json": "78b60a7b34fdf3f5501d83b12b155d29120d660fd579cf5afef5f575de056f35",
+  "evidencia_codigo.json": "10473cf9a2efe916aaba2f424b214887a4b90a959e3df65aefaaf8d1c68d21f8",
+  "huella_antes.json": "b31ffcc90e577da137067ee428d661f340e2d727281999a0593914bc191f51de",
+  "huella_despues.json": "b31ffcc90e577da137067ee428d661f340e2d727281999a0593914bc191f51de",
+  "integridad_antes.json": "483cedaee12528c48d066fb0a3b13a7df4f2aa0a403c7650c0bb68d9f7c2d032",
+  "integridad_despues.json": "483cedaee12528c48d066fb0a3b13a7df4f2aa0a403c7650c0bb68d9f7c2d032",
+  "manifiesto.json": "3a47f486e32b1ee859c808d5cdea92468f7419c98a8a2fe10ea54633ae13d534",
+  "metadatos_creacion.json": "632fb94cde19171c8c97fa26e2a5e86fc9cf8ba0aedcec22d1359229158abe3f",
+  "observaciones_incluidas_excluidas.json": "3cd5d21edda8f7e375477677b946b20e5b0dcb8051d1e212891ec0d6f1e08ccb",
+  "reporte_verificacion_temporal.md": "b352e028602eafe18437190fdf7976f6d8f875f533266453a545494291def1ba",
+  "trazabilidad_desarrollo.json": "35a981644dcd5ec9dc87a48e49c9d57dfa3bdbbc2df9a437bc1c8955ff344d5c"
+}

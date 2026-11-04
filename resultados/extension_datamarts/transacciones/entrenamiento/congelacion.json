@@ -1,0 +1,310 @@
+{
+  "status": "frozen_development_only_test_not_evaluated",
+  "configuration_sha256": "3c058cd9c7cf7e5eccf20f218c5baf9871d033aef64fc18c168a39f4e4d4d8cf",
+  "feature_names": [
+    "cobros_lag_1",
+    "cobros_lag_2",
+    "cobros_lag_3",
+    "cobros_media_3",
+    "cobros_mediana_3",
+    "cobros_std_3",
+    "cobros_cambio_1",
+    "cobros_tendencia_3",
+    "meses_con_cobros_3",
+    "mes_anterior_sin_cobros",
+    "variacion_relativa_cobros",
+    "base_variacion_cero",
+    "antiguedad_observada_meses",
+    "mes_sin",
+    "mes_cos",
+    "dias_mes_objetivo"
+  ],
+  "n_features": 16,
+  "preprocessor": {
+    "version": 1,
+    "fit_partition": "train",
+    "train_rows": 4612,
+    "input_features": [
+      "cobros_lag_1",
+      "cobros_lag_2",
+      "cobros_lag_3",
+      "cobros_media_3",
+      "cobros_mediana_3",
+      "cobros_std_3",
+      "cobros_cambio_1",
+      "cobros_tendencia_3",
+      "meses_con_cobros_3",
+      "mes_anterior_sin_cobros",
+      "variacion_relativa_cobros",
+      "base_variacion_cero",
+      "antiguedad_observada_meses",
+      "mes_sin",
+      "mes_cos",
+      "dias_mes_objetivo"
+    ],
+    "optional": [
+      "variacion_relativa_cobros"
+    ],
+    "feature_names": [
+      "cobros_lag_1",
+      "cobros_lag_2",
+      "cobros_lag_3",
+      "cobros_media_3",
+      "cobros_mediana_3",
+      "cobros_std_3",
+      "cobros_cambio_1",
+      "cobros_tendencia_3",
+      "meses_con_cobros_3",
+      "mes_anterior_sin_cobros",
+      "variacion_relativa_cobros",
+      "base_variacion_cero",
+      "antiguedad_observada_meses",
+      "mes_sin",
+      "mes_cos",
+      "dias_mes_objetivo"
+    ],
+    "discarded": {},
+    "parameters": {
+      "cobros_lag_1": {
+        "median": 2.0,
+        "mean": 2.711838681699913,
+        "std_population": 2.7353660782344273,
+        "impute": "not_needed_required_finite"
+      },
+      "cobros_lag_2": {
+        "median": 2.0,
+        "mean": 2.6910234171725933,
+        "std_population": 2.7315853680678313,
+        "impute": "not_needed_required_finite"
+      },
+      "cobros_lag_3": {
+        "median": 2.0,
+        "mean": 2.695793581960104,
+        "std_population": 2.72305845580827,
+        "impute": "not_needed_required_finite"
+      },
+      "cobros_media_3": {
+        "median": 2.3333333333333335,
+        "mean": 2.6995518936108702,
+        "std_population": 2.4200231979720117,
+        "impute": "not_needed_required_finite"
+      },
+      "cobros_mediana_3": {
+        "median": 2.0,
+        "mean": 2.6105810928013877,
+        "std_population": 2.5156321179531713,
+        "impute": "not_needed_required_finite"
+      },
+      "cobros_std_3": {
+        "median": 0.9428090415820634,
+        "mean": 1.1101847277438441,
+        "std_population": 0.6033252739084383,
+        "impute": "not_needed_required_finite"
+      },
+      "cobros_cambio_1": {
+        "median": 0.0,
+        "mean": 0.020815264527320035,
+        "std_population": 2.1951615234833093,
+        "impute": "not_needed_required_finite"
+      },
+      "cobros_tendencia_3": {
+        "median": 0.0,
+        "mean": 0.008022549869904597,
+        "std_population": 1.090018496232107,
+        "impute": "not_needed_required_finite"
+      },
+      "meses_con_cobros_3": {
+        "median": 3.0,
+        "mean": 2.7502168256721595,
+        "std_population": 0.4767467502017308,
+        "impute": "not_needed_required_finite"
+      },
+      "mes_anterior_sin_cobros": {
+        "median": 0.0,
+        "mean": 0.0826105810928014,
+        "std_population": 0.27529270419738894,
+        "impute": "not_needed_required_finite"
+      },
+      "variacion_relativa_cobros": {
+        "median": 0.0,
+        "mean": 0.22048641269911867,
+        "std_population": 1.0947717648473716,
+        "impute": "median_train"
+      },
+      "base_variacion_cero": {
+        "median": 0.0,
+        "mean": 0.08586296617519515,
+        "std_population": 0.28016159125546175,
+        "impute": "not_needed_required_finite"
+      },
+      "antiguedad_observada_meses": {
+        "median": 13.0,
+        "mean": 12.654163052905464,
+        "std_population": 5.991997229996834,
+        "impute": "not_needed_required_finite"
+      },
+      "mes_sin": {
+        "median": 0.0,
+        "mean": -0.08108069668682102,
+        "std_population": 0.7169549215117643,
+        "impute": "not_needed_required_finite"
+      },
+      "mes_cos": {
+        "median": -1.8369701987210297e-16,
+        "mean": -0.10475000098558863,
+        "std_population": 0.684418730338642,
+        "impute": "not_needed_required_finite"
+      },
+      "dias_mes_objetivo": {
+        "median": 31.0,
+        "mean": 30.47918473547268,
+        "std_population": 0.7346288002196624,
+        "impute": "not_needed_required_finite"
+      }
+    },
+    "dtype": "float64",
+    "ddof": 0,
+    "formula": "(x_filled_with_train_median - train_mean) / train_population_std",
+    "redundancy_policy": "keep_all_nonconstant_authorized_features; no selection using validation"
+  },
+  "preprocessor_sha256": "f1b513c99312e07afe70980631fd4881c388a34be61b4bc7164e741d6b4c1ba5",
+  "source_artifacts_sha256": {
+    "datos\\Procesados\\transacciones\\caracteristicas_crudas_train.csv": "03593574be0b3f4995e52b12071e1099d6209a308701e42e559ddc53fe9a71c4",
+    "datos\\Procesados\\transacciones\\caracteristicas_crudas_val.csv": "6388015d8ca8b40543e1b448db4efef7dbc8719124b0d38d990c30f1bbe38daf",
+    "datos\\Procesados\\transacciones\\cobros_desarrollo.csv.gz": "38739cfbcccd5df3d8dd11248e44a16b35279a714f796eb8e206794e41b14a8d",
+    "datos\\Procesados\\transacciones\\cuentas_meses.csv.gz": "54eb55ac49a9f6c99371e5e9da198958e8d95ff0e2a384d8de72818907ba4b7f",
+    "datos\\Procesados\\transacciones\\elegibilidad.csv.gz": "ffa18bf6391d03c122d72aa1a3c2d490c2dfe77192c407e24089b0b627341718",
+    "datos\\Procesados\\transacciones\\etiquetas_train.csv": "13ccb22515583ee3eebe8b9e2bc97b22b2a28024b687d861515cf603c42da711",
+    "datos\\Procesados\\transacciones\\etiquetas_val.csv": "7d7472ed2c53bd16e84cef74241615682232c879f8bbd675b9092a5cde505119",
+    "datos\\Procesados\\transacciones\\feature_names.json": "e6e9aa8bbfa6248be710297a8fca0db1d375e83da4b66431133f1df3764f918d",
+    "datos\\Procesados\\transacciones\\metadatos_train.csv": "9435dea31604d22c054ea34de51610a6224e26806c110309a1f26ea4511d8f80",
+    "datos\\Procesados\\transacciones\\metadatos_val.csv": "df1a6289f70635bda05e199cd1efc9ff6bed8ea7c8d1af4d599038ba37ebcbb0",
+    "datos\\Procesados\\transacciones\\preprocesador.json": "f1b513c99312e07afe70980631fd4881c388a34be61b4bc7164e741d6b4c1ba5",
+    "datos\\Procesados\\transacciones\\X_train.npy": "db2726949cd064c6c904a414493e195d3d43b9b08aed43f0bcb21de232765060",
+    "datos\\Procesados\\transacciones\\X_val.npy": "95237d20bc30e5280a57ce0b9eca58c35bd106c6b198f7faad4ccca69cbbce44",
+    "datos\\Procesados\\transacciones\\y_train.npy": "e971d363c3b7f6c6dd27ee8ec09e53d4c1a62e22dd39eb1cd5b36570037c580e",
+    "datos\\Procesados\\transacciones\\y_val.npy": "fbf59ac74441badc49c5d3f4348d33c5ee6d6b7ac91f50818fc894eca55d7e87"
+  },
+  "models": {
+    "perceptron": {
+      "path": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\perceptron.json",
+      "sha256": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0",
+      "selected_run": "p_seed7",
+      "selected_epoch": 3,
+      "params": {
+        "learning_rate": 0.01,
+        "max_epochs": 100,
+        "seed": 7,
+        "shuffle": true,
+        "initial_weights": null,
+        "initial_bias": 0.0
+      },
+      "validation_metrics": {
+        "n": 2943,
+        "accuracy": 0.655113829425756,
+        "precision": 0.5578747628083491,
+        "recall": 0.7362270450751253,
+        "specificity": 0.5994269340974212,
+        "f1": 0.6347607052896725,
+        "balanced_accuracy": 0.6678269895862732,
+        "confusion_matrix": [
+          [
+            1046,
+            699
+          ],
+          [
+            316,
+            882
+          ]
+        ],
+        "confusion_order": [
+          0,
+          1
+        ],
+        "support": {
+          "0": 1745,
+          "1": 1198
+        },
+        "class_proportions": {
+          "0": 0.5929323819232076,
+          "1": 0.40706761807679237
+        },
+        "denominator_zero": {
+          "precision": false,
+          "recall": false,
+          "specificity": false,
+          "f1": false
+        },
+        "positive_prediction_proportion": 0.5372069317023446
+      }
+    },
+    "logistic": {
+      "path": "resultados\\extension_datamarts\\transacciones\\entrenamiento\\modelos\\logistic.json",
+      "sha256": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726",
+      "selected_run": "l_eta010",
+      "selected_epoch": 399,
+      "params": {
+        "learning_rate": 0.1,
+        "max_epochs": 400,
+        "seed": 42,
+        "initialization": "zeros",
+        "initial_weights": null,
+        "initial_bias": 0.0,
+        "tolerance": 1e-06,
+        "threshold": 0.5
+      },
+      "validation_metrics": {
+        "n": 2943,
+        "accuracy": 0.6724430852871219,
+        "precision": 0.6989795918367347,
+        "recall": 0.34307178631051755,
+        "specificity": 0.898567335243553,
+        "f1": 0.46024636058230683,
+        "balanced_accuracy": 0.6208195607770353,
+        "confusion_matrix": [
+          [
+            1568,
+            177
+          ],
+          [
+            787,
+            411
+          ]
+        ],
+        "confusion_order": [
+          0,
+          1
+        ],
+        "support": {
+          "0": 1745,
+          "1": 1198
+        },
+        "class_proportions": {
+          "0": 0.5929323819232076,
+          "1": 0.40706761807679237
+        },
+        "denominator_zero": {
+          "precision": false,
+          "recall": false,
+          "specificity": false,
+          "f1": false
+        },
+        "positive_prediction_proportion": 0.199796126401631
+      }
+    }
+  },
+  "baselines": {
+    "majority": "majority y_train, tie=0",
+    "history": "1[N(t-1)>median(N(t-2),N(t-3),N(t-4))]",
+    "common_comparison": "all four methods on identical rows with four covered prior months; full model metrics reported separately; no fourth-lag imputation"
+  },
+  "majority_class": 0,
+  "thresholds": {
+    "perceptron": "z>=0",
+    "logistic": 0.5
+  },
+  "test_2016_loaded": false,
+  "training_with_validation": false,
+  "retraining_train_plus_validation": false,
+  "future_evaluation": "Apply frozen models/preprocessor and compare all methods on identical four-month intersection; report model full support separately"
+}

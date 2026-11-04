@@ -1,0 +1,18 @@
+{
+  "orthogonality_max_error": 2.220446049250313e-16,
+  "total_variance": 16.003469963131632,
+  "covariance_trace": 16.00346996313163,
+  "ratio_sum": 1.0,
+  "projected_variance": [
+    4.46438155892527,
+    2.7406036855674083
+  ],
+  "sample_variance_ddof": 1,
+  "reconstruction_discarded_variance": 8.798484718638965,
+  "spectral_discarded_variance": 8.798484718638965,
+  "eigenvalues_vs_svd_max_error": 6.217248937900877e-15,
+  "train_projected_mean_max_abs": 9.21928044169433e-16,
+  "rank": 13,
+  "n_features": 16,
+  "status": "successful"
+}

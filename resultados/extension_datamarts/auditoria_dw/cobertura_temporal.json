@@ -1,0 +1,1897 @@
+{
+  "Fact.Order": {
+    "Order Date Key": {
+      "monthly": [
+        {
+          "month": "2013-01",
+          "n": 5281
+        },
+        {
+          "month": "2013-02",
+          "n": 3726
+        },
+        {
+          "month": "2013-03",
+          "n": 5389
+        },
+        {
+          "month": "2013-04",
+          "n": 5314
+        },
+        {
+          "month": "2013-05",
+          "n": 5699
+        },
+        {
+          "month": "2013-06",
+          "n": 5338
+        },
+        {
+          "month": "2013-07",
+          "n": 5896
+        },
+        {
+          "month": "2013-08",
+          "n": 4819
+        },
+        {
+          "month": "2013-09",
+          "n": 5099
+        },
+        {
+          "month": "2013-10",
+          "n": 5171
+        },
+        {
+          "month": "2013-11",
+          "n": 4957
+        },
+        {
+          "month": "2013-12",
+          "n": 4966
+        },
+        {
+          "month": "2014-01",
+          "n": 5682
+        },
+        {
+          "month": "2014-02",
+          "n": 4830
+        },
+        {
+          "month": "2014-03",
+          "n": 5118
+        },
+        {
+          "month": "2014-04",
+          "n": 5513
+        },
+        {
+          "month": "2014-05",
+          "n": 6027
+        },
+        {
+          "month": "2014-06",
+          "n": 5888
+        },
+        {
+          "month": "2014-07",
+          "n": 6310
+        },
+        {
+          "month": "2014-08",
+          "n": 5130
+        },
+        {
+          "month": "2014-09",
+          "n": 5117
+        },
+        {
+          "month": "2014-10",
+          "n": 6077
+        },
+        {
+          "month": "2014-11",
+          "n": 5151
+        },
+        {
+          "month": "2014-12",
+          "n": 6009
+        },
+        {
+          "month": "2015-01",
+          "n": 5735
+        },
+        {
+          "month": "2015-02",
+          "n": 5478
+        },
+        {
+          "month": "2015-03",
+          "n": 5947
+        },
+        {
+          "month": "2015-04",
+          "n": 6641
+        },
+        {
+          "month": "2015-05",
+          "n": 6103
+        },
+        {
+          "month": "2015-06",
+          "n": 6198
+        },
+        {
+          "month": "2015-07",
+          "n": 7066
+        },
+        {
+          "month": "2015-08",
+          "n": 5411
+        },
+        {
+          "month": "2015-09",
+          "n": 6392
+        },
+        {
+          "month": "2015-10",
+          "n": 6240
+        },
+        {
+          "month": "2015-11",
+          "n": 5719
+        },
+        {
+          "month": "2015-12",
+          "n": 6073
+        },
+        {
+          "month": "2016-01",
+          "n": 6017
+        },
+        {
+          "month": "2016-02",
+          "n": 5247
+        },
+        {
+          "month": "2016-03",
+          "n": 6159
+        },
+        {
+          "month": "2016-04",
+          "n": 6022
+        },
+        {
+          "month": "2016-05",
+          "n": 6457
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2013,
+          "n": 61655
+        },
+        {
+          "year": 2014,
+          "n": 66852
+        },
+        {
+          "year": 2015,
+          "n": 73003
+        },
+        {
+          "year": 2016,
+          "n": 29902
+        }
+      ],
+      "months_observed": 41,
+      "missing_months_between_extremes": [],
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    },
+    "Picked Date Key": {
+      "monthly": [
+        {
+          "month": "2013-01",
+          "n": 5246
+        },
+        {
+          "month": "2013-02",
+          "n": 3707
+        },
+        {
+          "month": "2013-03",
+          "n": 5330
+        },
+        {
+          "month": "2013-04",
+          "n": 5254
+        },
+        {
+          "month": "2013-05",
+          "n": 5617
+        },
+        {
+          "month": "2013-06",
+          "n": 5287
+        },
+        {
+          "month": "2013-07",
+          "n": 5834
+        },
+        {
+          "month": "2013-08",
+          "n": 4767
+        },
+        {
+          "month": "2013-09",
+          "n": 5021
+        },
+        {
+          "month": "2013-10",
+          "n": 5097
+        },
+        {
+          "month": "2013-11",
+          "n": 4899
+        },
+        {
+          "month": "2013-12",
+          "n": 4909
+        },
+        {
+          "month": "2014-01",
+          "n": 5610
+        },
+        {
+          "month": "2014-02",
+          "n": 4768
+        },
+        {
+          "month": "2014-03",
+          "n": 5070
+        },
+        {
+          "month": "2014-04",
+          "n": 5443
+        },
+        {
+          "month": "2014-05",
+          "n": 5930
+        },
+        {
+          "month": "2014-06",
+          "n": 5798
+        },
+        {
+          "month": "2014-07",
+          "n": 6227
+        },
+        {
+          "month": "2014-08",
+          "n": 5059
+        },
+        {
+          "month": "2014-09",
+          "n": 5059
+        },
+        {
+          "month": "2014-10",
+          "n": 5983
+        },
+        {
+          "month": "2014-11",
+          "n": 5070
+        },
+        {
+          "month": "2014-12",
+          "n": 5924
+        },
+        {
+          "month": "2015-01",
+          "n": 5651
+        },
+        {
+          "month": "2015-02",
+          "n": 5406
+        },
+        {
+          "month": "2015-03",
+          "n": 5877
+        },
+        {
+          "month": "2015-04",
+          "n": 6549
+        },
+        {
+          "month": "2015-05",
+          "n": 6000
+        },
+        {
+          "month": "2015-06",
+          "n": 6084
+        },
+        {
+          "month": "2015-07",
+          "n": 6955
+        },
+        {
+          "month": "2015-08",
+          "n": 5321
+        },
+        {
+          "month": "2015-09",
+          "n": 6297
+        },
+        {
+          "month": "2015-10",
+          "n": 6152
+        },
+        {
+          "month": "2015-11",
+          "n": 5625
+        },
+        {
+          "month": "2015-12",
+          "n": 5981
+        },
+        {
+          "month": "2016-01",
+          "n": 5914
+        },
+        {
+          "month": "2016-02",
+          "n": 5196
+        },
+        {
+          "month": "2016-03",
+          "n": 6074
+        },
+        {
+          "month": "2016-04",
+          "n": 5923
+        },
+        {
+          "month": "2016-05",
+          "n": 6351
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2013,
+          "n": 60968
+        },
+        {
+          "year": 2014,
+          "n": 65941
+        },
+        {
+          "year": 2015,
+          "n": 71898
+        },
+        {
+          "year": 2016,
+          "n": 29458
+        }
+      ],
+      "months_observed": 41,
+      "missing_months_between_extremes": [],
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    }
+  },
+  "Fact.Purchase": {
+    "Date Key": {
+      "monthly": [
+        {
+          "month": "2013-01",
+          "n": 323
+        },
+        {
+          "month": "2013-02",
+          "n": 145
+        },
+        {
+          "month": "2013-03",
+          "n": 173
+        },
+        {
+          "month": "2013-04",
+          "n": 190
+        },
+        {
+          "month": "2013-05",
+          "n": 195
+        },
+        {
+          "month": "2013-06",
+          "n": 183
+        },
+        {
+          "month": "2013-07",
+          "n": 199
+        },
+        {
+          "month": "2013-08",
+          "n": 193
+        },
+        {
+          "month": "2013-09",
+          "n": 176
+        },
+        {
+          "month": "2013-10",
+          "n": 203
+        },
+        {
+          "month": "2013-11",
+          "n": 179
+        },
+        {
+          "month": "2013-12",
+          "n": 180
+        },
+        {
+          "month": "2014-01",
+          "n": 195
+        },
+        {
+          "month": "2014-02",
+          "n": 175
+        },
+        {
+          "month": "2014-03",
+          "n": 180
+        },
+        {
+          "month": "2014-04",
+          "n": 190
+        },
+        {
+          "month": "2014-05",
+          "n": 198
+        },
+        {
+          "month": "2014-06",
+          "n": 200
+        },
+        {
+          "month": "2014-07",
+          "n": 225
+        },
+        {
+          "month": "2014-08",
+          "n": 202
+        },
+        {
+          "month": "2014-09",
+          "n": 209
+        },
+        {
+          "month": "2014-10",
+          "n": 227
+        },
+        {
+          "month": "2014-11",
+          "n": 205
+        },
+        {
+          "month": "2014-12",
+          "n": 223
+        },
+        {
+          "month": "2015-01",
+          "n": 213
+        },
+        {
+          "month": "2015-02",
+          "n": 196
+        },
+        {
+          "month": "2015-03",
+          "n": 215
+        },
+        {
+          "month": "2015-04",
+          "n": 212
+        },
+        {
+          "month": "2015-05",
+          "n": 212
+        },
+        {
+          "month": "2015-06",
+          "n": 208
+        },
+        {
+          "month": "2015-07",
+          "n": 222
+        },
+        {
+          "month": "2015-08",
+          "n": 207
+        },
+        {
+          "month": "2015-09",
+          "n": 215
+        },
+        {
+          "month": "2015-10",
+          "n": 216
+        },
+        {
+          "month": "2015-11",
+          "n": 198
+        },
+        {
+          "month": "2015-12",
+          "n": 225
+        },
+        {
+          "month": "2016-01",
+          "n": 225
+        },
+        {
+          "month": "2016-02",
+          "n": 201
+        },
+        {
+          "month": "2016-03",
+          "n": 217
+        },
+        {
+          "month": "2016-04",
+          "n": 207
+        },
+        {
+          "month": "2016-05",
+          "n": 210
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2013,
+          "n": 2339
+        },
+        {
+          "year": 2014,
+          "n": 2429
+        },
+        {
+          "year": 2015,
+          "n": 2539
+        },
+        {
+          "year": 2016,
+          "n": 1060
+        }
+      ],
+      "months_observed": 41,
+      "missing_months_between_extremes": [],
+      "volume_changes_outside_half_double": [
+        {
+          "previous_observed_month": "2013-01",
+          "month": "2013-02",
+          "ratio": 0.44891640866873067
+        }
+      ],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    }
+  },
+  "Fact.Movement": {
+    "Date Key": {
+      "monthly": [
+        {
+          "month": "2013-01",
+          "n": 5564
+        },
+        {
+          "month": "2013-02",
+          "n": 3851
+        },
+        {
+          "month": "2013-03",
+          "n": 5498
+        },
+        {
+          "month": "2013-04",
+          "n": 5449
+        },
+        {
+          "month": "2013-05",
+          "n": 5812
+        },
+        {
+          "month": "2013-06",
+          "n": 5465
+        },
+        {
+          "month": "2013-07",
+          "n": 6040
+        },
+        {
+          "month": "2013-08",
+          "n": 4957
+        },
+        {
+          "month": "2013-09",
+          "n": 5200
+        },
+        {
+          "month": "2013-10",
+          "n": 5303
+        },
+        {
+          "month": "2013-11",
+          "n": 5077
+        },
+        {
+          "month": "2013-12",
+          "n": 5090
+        },
+        {
+          "month": "2014-01",
+          "n": 5809
+        },
+        {
+          "month": "2014-02",
+          "n": 4943
+        },
+        {
+          "month": "2014-03",
+          "n": 5250
+        },
+        {
+          "month": "2014-04",
+          "n": 5637
+        },
+        {
+          "month": "2014-05",
+          "n": 6124
+        },
+        {
+          "month": "2014-06",
+          "n": 6001
+        },
+        {
+          "month": "2014-07",
+          "n": 6457
+        },
+        {
+          "month": "2014-08",
+          "n": 5260
+        },
+        {
+          "month": "2014-09",
+          "n": 5269
+        },
+        {
+          "month": "2014-10",
+          "n": 6214
+        },
+        {
+          "month": "2014-11",
+          "n": 5272
+        },
+        {
+          "month": "2014-12",
+          "n": 6150
+        },
+        {
+          "month": "2015-01",
+          "n": 5863
+        },
+        {
+          "month": "2015-02",
+          "n": 5602
+        },
+        {
+          "month": "2015-03",
+          "n": 6097
+        },
+        {
+          "month": "2015-04",
+          "n": 6766
+        },
+        {
+          "month": "2015-05",
+          "n": 6207
+        },
+        {
+          "month": "2015-06",
+          "n": 6297
+        },
+        {
+          "month": "2015-07",
+          "n": 7178
+        },
+        {
+          "month": "2015-08",
+          "n": 5528
+        },
+        {
+          "month": "2015-09",
+          "n": 6512
+        },
+        {
+          "month": "2015-10",
+          "n": 6367
+        },
+        {
+          "month": "2015-11",
+          "n": 5828
+        },
+        {
+          "month": "2015-12",
+          "n": 6206
+        },
+        {
+          "month": "2016-01",
+          "n": 6133
+        },
+        {
+          "month": "2016-02",
+          "n": 5404
+        },
+        {
+          "month": "2016-03",
+          "n": 6291
+        },
+        {
+          "month": "2016-04",
+          "n": 6134
+        },
+        {
+          "month": "2016-05",
+          "n": 6562
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2013,
+          "n": 63306
+        },
+        {
+          "year": 2014,
+          "n": 68386
+        },
+        {
+          "year": 2015,
+          "n": 74451
+        },
+        {
+          "year": 2016,
+          "n": 30524
+        }
+      ],
+      "months_observed": 41,
+      "missing_months_between_extremes": [],
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    }
+  },
+  "Fact.Stock Holding": {},
+  "Fact.Transaction": {
+    "Date Key": {
+      "monthly": [
+        {
+          "month": "2013-01",
+          "n": 2265
+        },
+        {
+          "month": "2013-02",
+          "n": 1590
+        },
+        {
+          "month": "2013-03",
+          "n": 2290
+        },
+        {
+          "month": "2013-04",
+          "n": 2242
+        },
+        {
+          "month": "2013-05",
+          "n": 2390
+        },
+        {
+          "month": "2013-06",
+          "n": 2317
+        },
+        {
+          "month": "2013-07",
+          "n": 2516
+        },
+        {
+          "month": "2013-08",
+          "n": 2086
+        },
+        {
+          "month": "2013-09",
+          "n": 2147
+        },
+        {
+          "month": "2013-10",
+          "n": 2189
+        },
+        {
+          "month": "2013-11",
+          "n": 2104
+        },
+        {
+          "month": "2013-12",
+          "n": 2115
+        },
+        {
+          "month": "2014-01",
+          "n": 2413
+        },
+        {
+          "month": "2014-02",
+          "n": 2090
+        },
+        {
+          "month": "2014-03",
+          "n": 2167
+        },
+        {
+          "month": "2014-04",
+          "n": 2316
+        },
+        {
+          "month": "2014-05",
+          "n": 2566
+        },
+        {
+          "month": "2014-06",
+          "n": 2510
+        },
+        {
+          "month": "2014-07",
+          "n": 2728
+        },
+        {
+          "month": "2014-08",
+          "n": 2256
+        },
+        {
+          "month": "2014-09",
+          "n": 2234
+        },
+        {
+          "month": "2014-10",
+          "n": 2570
+        },
+        {
+          "month": "2014-11",
+          "n": 2233
+        },
+        {
+          "month": "2014-12",
+          "n": 2542
+        },
+        {
+          "month": "2015-01",
+          "n": 2499
+        },
+        {
+          "month": "2015-02",
+          "n": 2362
+        },
+        {
+          "month": "2015-03",
+          "n": 2593
+        },
+        {
+          "month": "2015-04",
+          "n": 2841
+        },
+        {
+          "month": "2015-05",
+          "n": 2674
+        },
+        {
+          "month": "2015-06",
+          "n": 2658
+        },
+        {
+          "month": "2015-07",
+          "n": 3056
+        },
+        {
+          "month": "2015-08",
+          "n": 2333
+        },
+        {
+          "month": "2015-09",
+          "n": 2759
+        },
+        {
+          "month": "2015-10",
+          "n": 2699
+        },
+        {
+          "month": "2015-11",
+          "n": 2481
+        },
+        {
+          "month": "2015-12",
+          "n": 2644
+        },
+        {
+          "month": "2016-01",
+          "n": 2669
+        },
+        {
+          "month": "2016-02",
+          "n": 2319
+        },
+        {
+          "month": "2016-03",
+          "n": 2699
+        },
+        {
+          "month": "2016-04",
+          "n": 2671
+        },
+        {
+          "month": "2016-05",
+          "n": 2752
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2013,
+          "n": 26251
+        },
+        {
+          "year": 2014,
+          "n": 28625
+        },
+        {
+          "year": 2015,
+          "n": 31599
+        },
+        {
+          "year": 2016,
+          "n": 13110
+        }
+      ],
+      "months_observed": 41,
+      "missing_months_between_extremes": [],
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    }
+  },
+  "Dimension.Date": {
+    "Date": {
+      "monthly": [
+        {
+          "month": "2013-01",
+          "n": 31
+        },
+        {
+          "month": "2013-02",
+          "n": 28
+        },
+        {
+          "month": "2013-03",
+          "n": 31
+        },
+        {
+          "month": "2013-04",
+          "n": 30
+        },
+        {
+          "month": "2013-05",
+          "n": 31
+        },
+        {
+          "month": "2013-06",
+          "n": 30
+        },
+        {
+          "month": "2013-07",
+          "n": 31
+        },
+        {
+          "month": "2013-08",
+          "n": 31
+        },
+        {
+          "month": "2013-09",
+          "n": 30
+        },
+        {
+          "month": "2013-10",
+          "n": 31
+        },
+        {
+          "month": "2013-11",
+          "n": 30
+        },
+        {
+          "month": "2013-12",
+          "n": 31
+        },
+        {
+          "month": "2014-01",
+          "n": 31
+        },
+        {
+          "month": "2014-02",
+          "n": 28
+        },
+        {
+          "month": "2014-03",
+          "n": 31
+        },
+        {
+          "month": "2014-04",
+          "n": 30
+        },
+        {
+          "month": "2014-05",
+          "n": 31
+        },
+        {
+          "month": "2014-06",
+          "n": 30
+        },
+        {
+          "month": "2014-07",
+          "n": 31
+        },
+        {
+          "month": "2014-08",
+          "n": 31
+        },
+        {
+          "month": "2014-09",
+          "n": 30
+        },
+        {
+          "month": "2014-10",
+          "n": 31
+        },
+        {
+          "month": "2014-11",
+          "n": 30
+        },
+        {
+          "month": "2014-12",
+          "n": 31
+        },
+        {
+          "month": "2015-01",
+          "n": 31
+        },
+        {
+          "month": "2015-02",
+          "n": 28
+        },
+        {
+          "month": "2015-03",
+          "n": 31
+        },
+        {
+          "month": "2015-04",
+          "n": 30
+        },
+        {
+          "month": "2015-05",
+          "n": 31
+        },
+        {
+          "month": "2015-06",
+          "n": 30
+        },
+        {
+          "month": "2015-07",
+          "n": 31
+        },
+        {
+          "month": "2015-08",
+          "n": 31
+        },
+        {
+          "month": "2015-09",
+          "n": 30
+        },
+        {
+          "month": "2015-10",
+          "n": 31
+        },
+        {
+          "month": "2015-11",
+          "n": 30
+        },
+        {
+          "month": "2015-12",
+          "n": 31
+        },
+        {
+          "month": "2016-01",
+          "n": 31
+        },
+        {
+          "month": "2016-02",
+          "n": 29
+        },
+        {
+          "month": "2016-03",
+          "n": 31
+        },
+        {
+          "month": "2016-04",
+          "n": 30
+        },
+        {
+          "month": "2016-05",
+          "n": 31
+        },
+        {
+          "month": "2016-06",
+          "n": 30
+        },
+        {
+          "month": "2016-07",
+          "n": 31
+        },
+        {
+          "month": "2016-08",
+          "n": 31
+        },
+        {
+          "month": "2016-09",
+          "n": 30
+        },
+        {
+          "month": "2016-10",
+          "n": 31
+        },
+        {
+          "month": "2016-11",
+          "n": 30
+        },
+        {
+          "month": "2016-12",
+          "n": 31
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2013,
+          "n": 365
+        },
+        {
+          "year": 2014,
+          "n": 365
+        },
+        {
+          "year": 2015,
+          "n": 365
+        },
+        {
+          "year": 2016,
+          "n": 366
+        }
+      ],
+      "months_observed": 48,
+      "missing_months_between_extremes": [],
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    }
+  },
+  "Dimension.Stock Item": {
+    "Valid From": {
+      "monthly": [
+        {
+          "month": "2013-01",
+          "n": 220
+        },
+        {
+          "month": "2016-01",
+          "n": 8
+        },
+        {
+          "month": "2016-05",
+          "n": 444
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2013,
+          "n": 220
+        },
+        {
+          "year": 2016,
+          "n": 452
+        }
+      ],
+      "months_observed": 3,
+      "missing_months_between_extremes": null,
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    },
+    "Valid To": {
+      "monthly": [
+        {
+          "month": "2016-05",
+          "n": 444
+        },
+        {
+          "month": "9999-12",
+          "n": 228
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2016,
+          "n": 444
+        },
+        {
+          "year": 9999,
+          "n": 228
+        }
+      ],
+      "months_observed": 2,
+      "missing_months_between_extremes": null,
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    }
+  },
+  "Dimension.Customer": {
+    "Valid From": {
+      "monthly": [
+        {
+          "month": "2013-01",
+          "n": 403
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2013,
+          "n": 403
+        }
+      ],
+      "months_observed": 1,
+      "missing_months_between_extremes": null,
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    },
+    "Valid To": {
+      "monthly": [
+        {
+          "month": "9999-12",
+          "n": 403
+        }
+      ],
+      "yearly": [
+        {
+          "year": 9999,
+          "n": 403
+        }
+      ],
+      "months_observed": 1,
+      "missing_months_between_extremes": null,
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    }
+  },
+  "Dimension.Supplier": {
+    "Valid From": {
+      "monthly": [
+        {
+          "month": "2013-01",
+          "n": 28
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2013,
+          "n": 28
+        }
+      ],
+      "months_observed": 1,
+      "missing_months_between_extremes": null,
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    },
+    "Valid To": {
+      "monthly": [
+        {
+          "month": "2013-01",
+          "n": 13
+        },
+        {
+          "month": "9999-12",
+          "n": 15
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2013,
+          "n": 13
+        },
+        {
+          "year": 9999,
+          "n": 15
+        }
+      ],
+      "months_observed": 2,
+      "missing_months_between_extremes": null,
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    }
+  },
+  "Dimension.Transaction Type": {
+    "Valid From": {
+      "monthly": [
+        {
+          "month": "2013-01",
+          "n": 13
+        },
+        {
+          "month": "2016-01",
+          "n": 2
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2013,
+          "n": 13
+        },
+        {
+          "year": 2016,
+          "n": 2
+        }
+      ],
+      "months_observed": 2,
+      "missing_months_between_extremes": null,
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    },
+    "Valid To": {
+      "monthly": [
+        {
+          "month": "2016-01",
+          "n": 1
+        },
+        {
+          "month": "9999-12",
+          "n": 14
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2016,
+          "n": 1
+        },
+        {
+          "year": 9999,
+          "n": 14
+        }
+      ],
+      "months_observed": 2,
+      "missing_months_between_extremes": null,
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    }
+  },
+  "Dimension.Payment Method": {
+    "Valid From": {
+      "monthly": [
+        {
+          "month": "2013-01",
+          "n": 5
+        },
+        {
+          "month": "2016-01",
+          "n": 1
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2013,
+          "n": 5
+        },
+        {
+          "year": 2016,
+          "n": 1
+        }
+      ],
+      "months_observed": 2,
+      "missing_months_between_extremes": null,
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    },
+    "Valid To": {
+      "monthly": [
+        {
+          "month": "2016-01",
+          "n": 1
+        },
+        {
+          "month": "9999-12",
+          "n": 5
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2016,
+          "n": 1
+        },
+        {
+          "year": 9999,
+          "n": 5
+        }
+      ],
+      "months_observed": 2,
+      "missing_months_between_extremes": null,
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    }
+  },
+  "Dimension.City": {
+    "Valid From": {
+      "monthly": [
+        {
+          "month": "2013-01",
+          "n": 75877
+        },
+        {
+          "month": "2013-07",
+          "n": 17711
+        },
+        {
+          "month": "2014-07",
+          "n": 13079
+        },
+        {
+          "month": "2015-07",
+          "n": 9628
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2013,
+          "n": 93588
+        },
+        {
+          "year": 2014,
+          "n": 13079
+        },
+        {
+          "year": 2015,
+          "n": 9628
+        }
+      ],
+      "months_observed": 4,
+      "missing_months_between_extremes": null,
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    },
+    "Valid To": {
+      "monthly": [
+        {
+          "month": "2013-01",
+          "n": 37936
+        },
+        {
+          "month": "2013-07",
+          "n": 15033
+        },
+        {
+          "month": "2014-07",
+          "n": 13077
+        },
+        {
+          "month": "2015-07",
+          "n": 7694
+        },
+        {
+          "month": "9999-12",
+          "n": 42555
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2013,
+          "n": 52969
+        },
+        {
+          "year": 2014,
+          "n": 13077
+        },
+        {
+          "year": 2015,
+          "n": 7694
+        },
+        {
+          "year": 9999,
+          "n": 42555
+        }
+      ],
+      "months_observed": 5,
+      "missing_months_between_extremes": null,
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    }
+  },
+  "Dimension.Employee": {
+    "Valid From": {
+      "monthly": [
+        {
+          "month": "2013-01",
+          "n": 40
+        },
+        {
+          "month": "2013-02",
+          "n": 11
+        },
+        {
+          "month": "2013-03",
+          "n": 9
+        },
+        {
+          "month": "2013-04",
+          "n": 7
+        },
+        {
+          "month": "2013-05",
+          "n": 7
+        },
+        {
+          "month": "2013-06",
+          "n": 4
+        },
+        {
+          "month": "2013-07",
+          "n": 4
+        },
+        {
+          "month": "2013-08",
+          "n": 2
+        },
+        {
+          "month": "2013-09",
+          "n": 3
+        },
+        {
+          "month": "2013-10",
+          "n": 2
+        },
+        {
+          "month": "2013-11",
+          "n": 7
+        },
+        {
+          "month": "2013-12",
+          "n": 6
+        },
+        {
+          "month": "2014-01",
+          "n": 1
+        },
+        {
+          "month": "2014-02",
+          "n": 1
+        },
+        {
+          "month": "2014-03",
+          "n": 2
+        },
+        {
+          "month": "2014-04",
+          "n": 5
+        },
+        {
+          "month": "2014-05",
+          "n": 6
+        },
+        {
+          "month": "2014-06",
+          "n": 2
+        },
+        {
+          "month": "2014-07",
+          "n": 4
+        },
+        {
+          "month": "2014-08",
+          "n": 1
+        },
+        {
+          "month": "2014-09",
+          "n": 2
+        },
+        {
+          "month": "2014-10",
+          "n": 3
+        },
+        {
+          "month": "2014-11",
+          "n": 7
+        },
+        {
+          "month": "2014-12",
+          "n": 6
+        },
+        {
+          "month": "2015-01",
+          "n": 2
+        },
+        {
+          "month": "2015-02",
+          "n": 2
+        },
+        {
+          "month": "2015-03",
+          "n": 2
+        },
+        {
+          "month": "2015-04",
+          "n": 2
+        },
+        {
+          "month": "2015-05",
+          "n": 3
+        },
+        {
+          "month": "2015-06",
+          "n": 3
+        },
+        {
+          "month": "2015-07",
+          "n": 1
+        },
+        {
+          "month": "2015-08",
+          "n": 1
+        },
+        {
+          "month": "2015-09",
+          "n": 1
+        },
+        {
+          "month": "2015-11",
+          "n": 1
+        },
+        {
+          "month": "2015-12",
+          "n": 5
+        },
+        {
+          "month": "2016-02",
+          "n": 2
+        },
+        {
+          "month": "2016-03",
+          "n": 6
+        },
+        {
+          "month": "2016-04",
+          "n": 1
+        },
+        {
+          "month": "2016-05",
+          "n": 39
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2013,
+          "n": 102
+        },
+        {
+          "year": 2014,
+          "n": 40
+        },
+        {
+          "year": 2015,
+          "n": 23
+        },
+        {
+          "year": 2016,
+          "n": 48
+        }
+      ],
+      "months_observed": 39,
+      "missing_months_between_extremes": null,
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    },
+    "Valid To": {
+      "monthly": [
+        {
+          "month": "2013-01",
+          "n": 20
+        },
+        {
+          "month": "2013-02",
+          "n": 11
+        },
+        {
+          "month": "2013-03",
+          "n": 9
+        },
+        {
+          "month": "2013-04",
+          "n": 7
+        },
+        {
+          "month": "2013-05",
+          "n": 7
+        },
+        {
+          "month": "2013-06",
+          "n": 4
+        },
+        {
+          "month": "2013-07",
+          "n": 4
+        },
+        {
+          "month": "2013-08",
+          "n": 2
+        },
+        {
+          "month": "2013-09",
+          "n": 3
+        },
+        {
+          "month": "2013-10",
+          "n": 2
+        },
+        {
+          "month": "2013-11",
+          "n": 6
+        },
+        {
+          "month": "2013-12",
+          "n": 6
+        },
+        {
+          "month": "2014-01",
+          "n": 1
+        },
+        {
+          "month": "2014-02",
+          "n": 1
+        },
+        {
+          "month": "2014-03",
+          "n": 2
+        },
+        {
+          "month": "2014-04",
+          "n": 6
+        },
+        {
+          "month": "2014-05",
+          "n": 6
+        },
+        {
+          "month": "2014-06",
+          "n": 2
+        },
+        {
+          "month": "2014-07",
+          "n": 4
+        },
+        {
+          "month": "2014-08",
+          "n": 1
+        },
+        {
+          "month": "2014-09",
+          "n": 2
+        },
+        {
+          "month": "2014-10",
+          "n": 3
+        },
+        {
+          "month": "2014-11",
+          "n": 7
+        },
+        {
+          "month": "2014-12",
+          "n": 6
+        },
+        {
+          "month": "2015-01",
+          "n": 2
+        },
+        {
+          "month": "2015-02",
+          "n": 2
+        },
+        {
+          "month": "2015-03",
+          "n": 2
+        },
+        {
+          "month": "2015-04",
+          "n": 2
+        },
+        {
+          "month": "2015-05",
+          "n": 3
+        },
+        {
+          "month": "2015-06",
+          "n": 3
+        },
+        {
+          "month": "2015-07",
+          "n": 1
+        },
+        {
+          "month": "2015-08",
+          "n": 1
+        },
+        {
+          "month": "2015-09",
+          "n": 1
+        },
+        {
+          "month": "2015-11",
+          "n": 1
+        },
+        {
+          "month": "2015-12",
+          "n": 5
+        },
+        {
+          "month": "2016-02",
+          "n": 2
+        },
+        {
+          "month": "2016-03",
+          "n": 6
+        },
+        {
+          "month": "2016-04",
+          "n": 1
+        },
+        {
+          "month": "2016-05",
+          "n": 39
+        },
+        {
+          "month": "9999-12",
+          "n": 20
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2013,
+          "n": 81
+        },
+        {
+          "year": 2014,
+          "n": 41
+        },
+        {
+          "year": 2015,
+          "n": 23
+        },
+        {
+          "year": 2016,
+          "n": 48
+        },
+        {
+          "year": 9999,
+          "n": 20
+        }
+      ],
+      "months_observed": 40,
+      "missing_months_between_extremes": null,
+      "volume_changes_outside_half_double": [],
+      "note": "Cambios exploratorios; extremos y meses con filas no prueban completitud ni disponibilidad al cierre."
+    }
+  }
+}

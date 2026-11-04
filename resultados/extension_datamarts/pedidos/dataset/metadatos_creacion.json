@@ -1,0 +1,421 @@
+{
+  "visibility": [
+    {
+      "database_name": "WideWorldImporters",
+      "can_view_definition": 1
+    }
+  ],
+  "columns": [
+    {
+      "table_name": "OrderLines",
+      "column_id": 1,
+      "column_name": "OrderLineID",
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": "(NEXT VALUE FOR [Sequences].[OrderLineID])"
+    },
+    {
+      "table_name": "OrderLines",
+      "column_id": 2,
+      "column_name": "OrderID",
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "OrderLines",
+      "column_id": 3,
+      "column_name": "StockItemID",
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "OrderLines",
+      "column_id": 4,
+      "column_name": "Description",
+      "data_type": "nvarchar",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "OrderLines",
+      "column_id": 5,
+      "column_name": "PackageTypeID",
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "OrderLines",
+      "column_id": 6,
+      "column_name": "Quantity",
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "OrderLines",
+      "column_id": 7,
+      "column_name": "UnitPrice",
+      "data_type": "decimal",
+      "is_nullable": true,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "OrderLines",
+      "column_id": 8,
+      "column_name": "TaxRate",
+      "data_type": "decimal",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "OrderLines",
+      "column_id": 9,
+      "column_name": "PickedQuantity",
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "OrderLines",
+      "column_id": 10,
+      "column_name": "PickingCompletedWhen",
+      "data_type": "datetime2",
+      "is_nullable": true,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "OrderLines",
+      "column_id": 11,
+      "column_name": "LastEditedBy",
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "OrderLines",
+      "column_id": 12,
+      "column_name": "LastEditedWhen",
+      "data_type": "datetime2",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": "(sysdatetime())"
+    },
+    {
+      "table_name": "Orders",
+      "column_id": 1,
+      "column_name": "OrderID",
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": "(NEXT VALUE FOR [Sequences].[OrderID])"
+    },
+    {
+      "table_name": "Orders",
+      "column_id": 2,
+      "column_name": "CustomerID",
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "Orders",
+      "column_id": 3,
+      "column_name": "SalespersonPersonID",
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "Orders",
+      "column_id": 4,
+      "column_name": "PickedByPersonID",
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "Orders",
+      "column_id": 5,
+      "column_name": "ContactPersonID",
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "Orders",
+      "column_id": 6,
+      "column_name": "BackorderOrderID",
+      "data_type": "int",
+      "is_nullable": true,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "Orders",
+      "column_id": 7,
+      "column_name": "OrderDate",
+      "data_type": "date",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "Orders",
+      "column_id": 8,
+      "column_name": "ExpectedDeliveryDate",
+      "data_type": "date",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "Orders",
+      "column_id": 9,
+      "column_name": "CustomerPurchaseOrderNumber",
+      "data_type": "nvarchar",
+      "is_nullable": true,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "Orders",
+      "column_id": 10,
+      "column_name": "IsUndersupplyBackordered",
+      "data_type": "bit",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "Orders",
+      "column_id": 11,
+      "column_name": "Comments",
+      "data_type": "nvarchar",
+      "is_nullable": true,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "Orders",
+      "column_id": 12,
+      "column_name": "DeliveryInstructions",
+      "data_type": "nvarchar",
+      "is_nullable": true,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "Orders",
+      "column_id": 13,
+      "column_name": "InternalComments",
+      "data_type": "nvarchar",
+      "is_nullable": true,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "Orders",
+      "column_id": 14,
+      "column_name": "PickingCompletedWhen",
+      "data_type": "datetime2",
+      "is_nullable": true,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "Orders",
+      "column_id": 15,
+      "column_name": "LastEditedBy",
+      "data_type": "int",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": null
+    },
+    {
+      "table_name": "Orders",
+      "column_id": 16,
+      "column_name": "LastEditedWhen",
+      "data_type": "datetime2",
+      "is_nullable": false,
+      "is_identity": false,
+      "generated_always_type_desc": "NOT_APPLICABLE",
+      "default_definition": "(sysdatetime())"
+    }
+  ],
+  "history_configuration": [
+    {
+      "schema_name": "Sales",
+      "table_name": "OrderLines",
+      "temporal_type_desc": "NON_TEMPORAL_TABLE",
+      "is_tracked_by_cdc": false,
+      "history_schema": null,
+      "history_table": null,
+      "change_tracking": 0
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Orders",
+      "temporal_type_desc": "NON_TEMPORAL_TABLE",
+      "is_tracked_by_cdc": false,
+      "history_schema": null,
+      "history_table": null,
+      "change_tracking": 0
+    }
+  ],
+  "triggers": [],
+  "candidate_history_tables": [
+    {
+      "schema_name": "Sales",
+      "table_name": "BuyingGroups_Archive",
+      "temporal_type_desc": "HISTORY_TABLE"
+    },
+    {
+      "schema_name": "Application",
+      "table_name": "Cities_Archive",
+      "temporal_type_desc": "HISTORY_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "ColdRoomTemperatures_Archive",
+      "temporal_type_desc": "HISTORY_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "Colors_Archive",
+      "temporal_type_desc": "HISTORY_TABLE"
+    },
+    {
+      "schema_name": "Application",
+      "table_name": "Countries_Archive",
+      "temporal_type_desc": "HISTORY_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "CustomerCategories_Archive",
+      "temporal_type_desc": "HISTORY_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Customers_Archive",
+      "temporal_type_desc": "HISTORY_TABLE"
+    },
+    {
+      "schema_name": "Application",
+      "table_name": "DeliveryMethods_Archive",
+      "temporal_type_desc": "HISTORY_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "OrderLines",
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Sales",
+      "table_name": "Orders",
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "PackageTypes_Archive",
+      "temporal_type_desc": "HISTORY_TABLE"
+    },
+    {
+      "schema_name": "Application",
+      "table_name": "PaymentMethods_Archive",
+      "temporal_type_desc": "HISTORY_TABLE"
+    },
+    {
+      "schema_name": "Application",
+      "table_name": "People_Archive",
+      "temporal_type_desc": "HISTORY_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrderLines",
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "PurchaseOrders",
+      "temporal_type_desc": "NON_TEMPORAL_TABLE"
+    },
+    {
+      "schema_name": "Application",
+      "table_name": "StateProvinces_Archive",
+      "temporal_type_desc": "HISTORY_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockGroups_Archive",
+      "temporal_type_desc": "HISTORY_TABLE"
+    },
+    {
+      "schema_name": "Warehouse",
+      "table_name": "StockItems_Archive",
+      "temporal_type_desc": "HISTORY_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "SupplierCategories_Archive",
+      "temporal_type_desc": "HISTORY_TABLE"
+    },
+    {
+      "schema_name": "Purchasing",
+      "table_name": "Suppliers_Archive",
+      "temporal_type_desc": "HISTORY_TABLE"
+    },
+    {
+      "schema_name": "Application",
+      "table_name": "TransactionTypes_Archive",
+      "temporal_type_desc": "HISTORY_TABLE"
+    }
+  ],
+  "candidate_history_views": [],
+  "candidate_history_synonyms": [],
+  "descriptions": []
+}

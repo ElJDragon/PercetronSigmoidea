@@ -1,0 +1,55 @@
+{
+  "status": "frozen_before_first_test_opening",
+  "test_executed": false,
+  "sql_queries_now": 0,
+  "planned_months": [
+    "2016-01",
+    "2016-02",
+    "2016-03",
+    "2016-04",
+    "2016-05"
+  ],
+  "event_interval_inclusive_exclusive": [
+    "2016-01-01",
+    "2016-06-01"
+  ],
+  "proposed_label_knowledge_cut_exclusive": "2016-06-01 00:00:00",
+  "prior_protocol_sha256": "bb77d0ab3057cb1440de7ebbfb0657c40874a2ffeadfb5c10af014bae505b897",
+  "prior_test_spec_sha256": "de259dd01d5178490a2904a9c7b4e954c58a94ead6bac2c5bdd17c128ab30f17",
+  "primary_population": "All eligible account-month rows: 3 consecutive prior covered months, stable operational identity and target label known by cut; no fourth-lag requirement",
+  "primary_methods": [
+    "perceptron",
+    "logistic",
+    "majority"
+  ],
+  "secondary_population": "Exact intersection where contractual 4-month historical baseline is defined",
+  "secondary_methods": [
+    "perceptron",
+    "logistic",
+    "majority",
+    "historical"
+  ],
+  "events": "Only Customer Payment Received type 3, operational CustomerTransactionID unique; minimal approved projection and OLTP-DW bijection, read-only extraction",
+  "identity": "CustomerTransactions.CustomerID (Bill To), never substitute unknown DW keys or current names",
+  "first_seen": "First payment observable before prediction, no rows before appearance and no selection by future activity/survival",
+  "history": "N(t-1),N(t-2),N(t-3) and known calendar at start(t); development frozen plus prior test months already closed, never t for X",
+  "coverage": "Explicit business_ledger_academic and documented conservation assumptions; unknown/incomplete months indeterminate, never silent zeros",
+  "y": "1[N(t)>median(N(t-1),N(t-2),N(t-3))], ties 0; only after complete month and before cut; never select by prediction/error",
+  "preprocessing": "Frozen 16-column preprocessor: transform only, no fit, new constants, scaling or feature selection",
+  "classifiers": "Frozen perceptron epoch 3 seed 7 eta .01 z>=0; frozen logistic epoch 399 eta .10 threshold .5; no refit train+val",
+  "pca": "Visualization only, not classifier input; never fit on validation/test",
+  "majority": "Constant 0 from train only",
+  "historical": "1[N(t-1)>median(N(t-2),N(t-3),N(t-4))]",
+  "historical_undefined": "Keep row in primary evaluation if otherwise eligible; mark historical prediction missing; no imputation or classifier/majority exclusion from primary",
+  "exclusions": "Log stable ID, month, first appearance, primary eligibility, label availability, coverage state, fourth-month availability and separate reasons. Never overwrite old predictions.",
+  "metrics": "Full frozen conventions: accuracy, BA, precision, recall, F1, specificity, confusion [0,1], class support and predicted-positive rate; logistic AP from scores with grouped ties",
+  "comparisons": "Global and monthly, with exact stable-key equality for all methods within each named support. Do not compare n of one support with n of another.",
+  "generalization": "Report accounts seen in train, seen only in validation, and new eligible in test when support permits; no filtering based on these future outcomes",
+  "before_opening": [
+    "Check all original dataset/model/implementation hashes and new manifest/protocol",
+    "Check thresholds, checkpoint, feature order and preprocessor hashes",
+    "Record date and scope of first opening and preserve snapshot/provenance",
+    "Execute only after an explicit subsequent evaluation request"
+  ],
+  "after_opening": "No changes of model, threshold, label, horizon, coverage, support rules or baselines in response to outcomes; limitations remain documented"
+}

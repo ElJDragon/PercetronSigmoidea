@@ -1,0 +1,175 @@
+[
+  {
+    "process": "Pedidos",
+    "candidate": "Línea recogida después de dos días calendario",
+    "unit": "Una línea identificada por OrderID+StockItemID, única en esta copia; no una factura",
+    "horizon": "2 días, exploratorio; fecha diaria sin promesa de 48 horas exactas",
+    "possible_label": "1 si picking observado ocurre después de OrderDate+2; 0 si ocurre antes o en ese límite. No etiquetar picking nulo sin política de censura.",
+    "historical_features": [
+      "Unidades y frecuencia previas por producto/cliente, cerradas antes del pedido",
+      "Calendario conocido",
+      "Cantidad/precio iniciales únicamente tras verificar disponibilidad"
+    ],
+    "eligibility": "Historia mínima a acordar; outcome y corte comprobados; excluir o censurar nulos y purgar el horizonte en fronteras",
+    "potential_counts": {
+      "mature_upper_bound": 230874,
+      "observed_outcomes": 227745,
+      "observed_late": 3154,
+      "observed_within_2d": 224591,
+      "unknown": 3129,
+      "after_history_and_split_purge": null
+    },
+    "splits": "Propuesta provisional: 2013–2014 train, 2015 validación, 2016-01 a 2016-05 test; purgar al menos dos días y agrupar líneas de pedido y familias de backorders; nueva reserva independiente de Ventas.",
+    "baseline": "Clase mayoritaria en train; tasa histórica causal por producto solo si hay soporte",
+    "status": "Primero para formalizar, condicionado a semántica de picking, censura y predictores as-of; todavía no listo para entrenar",
+    "leakage": "No usar picker, picking, backorder final ni dimensiones futuras; filas de un documento no independientes"
+  },
+  {
+    "process": "Pedidos",
+    "candidate": "Pedido genera backorder",
+    "unit": "Documento OrderID",
+    "horizon": "No verificable con fechas actuales: el backorder hereda el mismo OrderDate",
+    "possible_label": "Existencia posterior de BackorderOrderID solo si se recupera cuándo se conoció",
+    "historical_features": [
+      "Historia cerrada de pedido/producto/cliente"
+    ],
+    "eligibility": "Timestamp real de generación del backorder y estado inicial",
+    "potential_counts": {
+      "mature_orders": 73426,
+      "backorder_within_2d": 7521,
+      "no_backorder_within_2d": 65905
+    },
+    "splits": "Cronológicas por pedido y familia, tras resolver timestamps",
+    "baseline": "Sin backorder o mayoría de train",
+    "status": "No fijar horizonte de 2 días a partir de fechas copiadas; disponibilidad no demostrada",
+    "leakage": "El vínculo final es outcome, nunca predictor inicial"
+  },
+  {
+    "process": "Compras",
+    "candidate": "Última recepción después de la fecha esperada",
+    "unit": "Línea de compra; separar de las 2074 órdenes",
+    "horizon": "Hasta fecha esperada más margen a acordar",
+    "possible_label": "LastReceiptDate > ExpectedDeliveryDate; no recibido requiere censura",
+    "historical_features": [
+      "Proveedor y producto con vigencia",
+      "Frecuencia/cantidad histórica y calendario"
+    ],
+    "eligibility": "Fecha esperada original, recepción observada y fin de horizonte",
+    "potential_counts": {
+      "closed_observed_lines": 8235,
+      "possible_late": 0,
+      "documents": 2043
+    },
+    "splits": "Por OrderDate, documentos completos y purga del horizonte",
+    "baseline": "No tardía",
+    "status": "Rechazado en esta copia: cero positivos entre 8235 líneas cerradas observadas",
+    "leakage": "Received Outers, estado final y fecha recepción no disponibles al crear"
+  },
+  {
+    "process": "Compras",
+    "candidate": "Recepción necesita más de un día",
+    "unit": "Línea de compra; documento agrupado en evaluación",
+    "horizon": "Un día calendario, exploratorio y sujeto al negocio",
+    "possible_label": "LastReceiptDate > OrderDate+1 entre outcomes verificables; resolver recepciones parciales",
+    "historical_features": [
+      "Historial de plazos por proveedor/producto",
+      "Cantidad pedida inicial y calendario si se verifica"
+    ],
+    "eligibility": "Historia mínima y cantidad/unidad inicial; censurar las 9 líneas sin recepción",
+    "potential_counts": {
+      "observed_receipts_upper_bound": 8358,
+      "days_distribution": [
+        {
+          "days_to_last_receipt": null,
+          "lines": 9
+        },
+        {
+          "days_to_last_receipt": 1,
+          "lines": 6215
+        },
+        {
+          "days_to_last_receipt": 2,
+          "lines": 619
+        },
+        {
+          "days_to_last_receipt": 3,
+          "lines": 1524
+        }
+      ],
+      "after_history_purge": null
+    },
+    "splits": "2013–2014/2015/2016, con agrupación de orden, purga y soporte suficiente por proveedor",
+    "baseline": "Mayoría train o plazo histórico causal de proveedor",
+    "status": "Segundo proceso candidato, condicionado a significado de última recepción, tamaño y unidad; no contrato aprobado",
+    "leakage": "El DW conserva último estado, no toda la trayectoria de recepciones"
+  },
+  {
+    "process": "Inventario",
+    "candidate": "Balance neto de movimientos positivo el próximo mes",
+    "unit": "Producto operacional-mes, agregando versiones de Stock Item",
+    "horizon": "Mes siguiente",
+    "possible_label": "Suma de Quantity del mes > 0; aún sin construir etiqueta ni calendario",
+    "historical_features": [
+      "Entradas/salidas/ajustes de meses cerrados",
+      "Frecuencia por tipo y calendario"
+    ],
+    "eligibility": "Continuidad, unidades y cobertura verificadas; historia mínima a acordar; no llenar ausencias con cero sin prueba",
+    "potential_counts": {
+      "groups": 9019,
+      "min_month": "2013-01",
+      "max_month": "2016-05",
+      "positive_net_groups": 352,
+      "negative_net_groups": 8667,
+      "zero_net_groups": 0
+    },
+    "splits": "Por mes con ventanas previas causales y sin estado Stock Holding actual",
+    "baseline": "Balance negativo o mayoría de train",
+    "status": "Tercero, condicionado a utilidad comercial y fuerte desequilibrio observado (352 meses positivos de 9019 grupos), no equivale a stockout",
+    "leakage": "Sin saldo inicial ni snapshots no reconstruir stock histórico"
+  },
+  {
+    "process": "Inventario",
+    "candidate": "Stockout del próximo período desde Stock Holding",
+    "unit": "Producto-fecha de snapshot",
+    "horizon": "No estimable con una sola instantánea",
+    "possible_label": "No definida con evidencia suficiente",
+    "historical_features": [
+      "Requiere snapshots fechados y saldo inicial"
+    ],
+    "eligibility": "Historial real de existencias y cierres",
+    "potential_counts": {
+      "snapshot_rows": 227,
+      "historical_observations": null
+    },
+    "splits": "No disponibles para este snapshot",
+    "baseline": "Persistencia cuando exista serie",
+    "status": "Bloqueado: 227 filas sin columna fecha no constituyen historia",
+    "leakage": "No retroproyectar el estado actual"
+  },
+  {
+    "process": "Transacciones",
+    "candidate": "Factura cliente sin finalizar a 7 o 30 días",
+    "unit": "Factura positiva con ID de origen único; excluir pagos negativos",
+    "horizon": "7/30 días exploratorios",
+    "possible_label": "FinalizationDate nula o posterior al horizonte; balance actual no sirve como predictor",
+    "historical_features": [
+      "Historial de pagos anterior y cuenta cliente original"
+    ],
+    "eligibility": "Corte/horizonte maduros y política de censura verificables",
+    "potential_counts": {
+      "seven_days": {
+        "mature_invoices": 70051,
+        "possible_positive": 0
+      },
+      "thirty_days": {
+        "eligible_positive_invoices": 68562,
+        "possible_unpaid_after_30d": 0,
+        "latest_finalization": "2016-05-01"
+      }
+    },
+    "splits": "Por TransactionDate con purga del horizonte y entidades repetidas consideradas",
+    "baseline": "Finaliza dentro del horizonte",
+    "status": "No viable con estos objetivos: cero positivos a 7 y 30 días; 70426 facturas finalizadas exactamente al día siguiente y 84 pendientes",
+    "leakage": "Outstanding Balance e Is Finalized son estados posteriores; solicitar historial de pagos si se cambia el objetivo"
+  }
+]

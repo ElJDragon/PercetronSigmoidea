@@ -1,0 +1,11 @@
+# Dictamen previo a primera evaluación de test
+
+Las predicciones, scores, pesos/sesgos, checkpoints 30/156 y métricas de validación se reproducen exactamente sobre las 2628 filas oficiales. La revisión focalizada no detecta fuga temporal en las 17 características; no certifica completitud operativa independiente del archivo retrospectivo. La BA superior al 98% es coherente con los conteos y con una estructura de recepción muy concentrada: los 35 positivos y las falsas alertas están en nueve artículos. Una política descriptiva de actividad previa explica parte importante del resultado. No se cambió ni optimizó el experimento a partir de ese hallazgo.
+
+Principal y comparación común coinciden: 4599 train/2628 val; el histórico usa tres meses y no excluye filas. PCA se ajusta solo en train por SVD y es exclusivamente visual. No se reentrenaron clasificadores, reajustó preprocesador ni abrieron outcomes de 2016. Modelos, dataset, entrenamiento, informe y demás Data Marts permanecen protegidos por hashes.
+
+Se recomienda metodológicamente autorizar la primera evaluación posterior de test conforme al protocolo definitivo, condicionada a verificación satisfactoria de hashes, pruebas focalizadas, ausencia de regresiones nuevas y registro de apertura antes de consultas. La reserva sigue sin abrir; este encargo se detiene en el dictamen. La suite global y los nueve casos históricos se declaran explícitamente en validaciones.json y suite_global.json; no se presentan como una suite totalmente aprobada ni se cambian sus valores esperados.
+
+Resultado final de suite: 406 pruebas, 397 correctas; 5 fallos y 4 errores. Coincidencia exacta con los nueve casos históricos: True. Nuevas regresiones: False. Archivos previos preservados: 972. No se abrió test.
+
+Verificaciones focalizadas finales: 20 pruebas y 10 controles satisfactorios; 13 artefactos PCA reproducidos byte a byte y tres gráficos revisados visualmente. PC1=55,798494747%, PC2=11,499841939%, acumulada=67,298336686%, no representada=32,701663314%. El protocolo y sus dependencias están sellados en cierre_protocolo.json. Se recomienda la primera evaluación posterior conforme a ese protocolo y con registro previo, sin ejecutar ahora test.

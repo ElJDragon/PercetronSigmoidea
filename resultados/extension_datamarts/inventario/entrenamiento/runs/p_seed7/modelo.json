@@ -1,0 +1,59 @@
+{
+  "format_version": 1,
+  "algorithm": "manual_binary_perceptron",
+  "label_values": [
+    0,
+    1
+  ],
+  "activation": "1 if z >= 0 else 0",
+  "params": {
+    "learning_rate": 0.01,
+    "max_epochs": 100,
+    "seed": 7,
+    "shuffle": true,
+    "initial_weights": null,
+    "initial_bias": 0.0
+  },
+  "n_features": 17,
+  "feature_names": [
+    "recepciones_lag_1",
+    "recepciones_lag_2",
+    "recepciones_lag_3",
+    "unidades_recibidas_lag_1",
+    "unidades_recibidas_lag_2",
+    "unidades_recibidas_lag_3",
+    "recepciones_media_3",
+    "recepciones_mediana_3",
+    "recepciones_std_3",
+    "recepciones_cambio_1",
+    "recepciones_tendencia_3",
+    "meses_con_recepciones_3",
+    "mes_anterior_sin_recepciones",
+    "antiguedad_observada_meses",
+    "mes_sin",
+    "mes_cos",
+    "dias_mes_objetivo"
+  ],
+  "weights": [
+    0.3429312726593844,
+    0.3438586595034663,
+    0.4273432844379832,
+    -1.7137003131879691,
+    0.9995329558264199,
+    0.7104590150281073,
+    0.37265627233853854,
+    -0.937481484851805,
+    0.6162020501258263,
+    0.01260465504495161,
+    -0.3574729095087066,
+    -0.7589020554527439,
+    -1.004717351525564,
+    0.12220697792902613,
+    0.3754889414329472,
+    -0.3844068595541867,
+    0.6860955608689391
+  ],
+  "bias": -1.390000000000001,
+  "selected_epoch": 98,
+  "selection": "validation_balanced_accuracy_then_f1_then_earliest_epoch"
+}

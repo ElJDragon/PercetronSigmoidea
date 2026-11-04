@@ -1,0 +1,63 @@
+{
+  "format_version": 1,
+  "algorithm": "inventory_manual_weighted_binary_logistic",
+  "params": {
+    "learning_rate": 0.1,
+    "max_epochs": 400,
+    "seed": 42,
+    "initialization": "zeros",
+    "initial_weights": null,
+    "initial_bias": 0.0,
+    "tolerance": 1e-06,
+    "threshold": 0.5,
+    "class_weights": {
+      "0": 0.5095280301351651,
+      "1": 26.738372093023255
+    }
+  },
+  "n_features": 17,
+  "feature_names": [
+    "recepciones_lag_1",
+    "recepciones_lag_2",
+    "recepciones_lag_3",
+    "unidades_recibidas_lag_1",
+    "unidades_recibidas_lag_2",
+    "unidades_recibidas_lag_3",
+    "recepciones_media_3",
+    "recepciones_mediana_3",
+    "recepciones_std_3",
+    "recepciones_cambio_1",
+    "recepciones_tendencia_3",
+    "meses_con_recepciones_3",
+    "mes_anterior_sin_recepciones",
+    "antiguedad_observada_meses",
+    "mes_sin",
+    "mes_cos",
+    "dias_mes_objetivo"
+  ],
+  "weights": [
+    0.1172605415751388,
+    0.11655954429305251,
+    0.11461308266836037,
+    0.09129788495016299,
+    0.09148218876465801,
+    0.09041563428922922,
+    0.11671426613758665,
+    0.11608996113595381,
+    0.10647058700892856,
+    0.011859311132782354,
+    0.030343555413476744,
+    0.11338831156028749,
+    -0.12389467741155591,
+    -0.0002935318073520501,
+    0.0028860237601770495,
+    -0.0020505319969749652,
+    0.00852326323140002
+  ],
+  "bias": 4.163336342344338e-18,
+  "selected_epoch": 1,
+  "selection": "validation_unweighted_BA_F1_earliest_epoch",
+  "history_threshold": 0.5,
+  "scores_calibrated": false,
+  "loss": "sum(weight_i*BCE_logits)/sum(weight_i)"
+}

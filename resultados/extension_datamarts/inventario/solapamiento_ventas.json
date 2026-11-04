@@ -1,0 +1,12 @@
+{
+  "issue_events": 198807,
+  "issue_groups": 198807,
+  "sale_groups": 198807,
+  "sales_lines": 198807,
+  "missing_sale_groups": 0,
+  "sales_groups_without_issue": 0,
+  "quantity_mismatches": 0,
+  "line_count_mismatches": 0,
+  "net_windows_only_sales": 6594,
+  "net_exactly_lower_sales_volume": 6594
+}

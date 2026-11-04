@@ -1,0 +1,119 @@
+[
+  {
+    "sql": "SELECT COUNT_BIG(*) AS lines,CHECKSUM_AGG(BINARY_CHECKSUM(OrderID,OrderLineID,OrderDate,StockItemID,CustomerID,pick_at,line_edited,header_edited)) AS checksum FROM (SELECT o.OrderID,l.OrderLineID,o.OrderDate,l.StockItemID,o.CustomerID,\n    l.Quantity,l.UnitPrice,l.PickedQuantity,l.PickingCompletedWhen AS pick_at,\n    o.PickingCompletedWhen AS header_pick_at,l.LastEditedWhen AS line_edited,\n    o.LastEditedWhen AS header_edited,\n    CASE WHEN l.LastEditedWhen>o.LastEditedWhen THEN l.LastEditedWhen ELSE o.LastEditedWhen END AS known_at,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS partition_cut\n    FROM Sales.OrderLines l JOIN Sales.Orders o ON l.OrderID=o.OrderID WHERE o.OrderDate < ?) q",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),OrderDate,126) AS month,state,COUNT_BIG(*) AS lines,COUNT(DISTINCT OrderID) AS documents FROM (SELECT b.*,CASE WHEN OrderDate IS NULL OR pick_at<CAST(OrderDate AS datetime2) THEN 'invalid'\n    WHEN horizon_end>partition_cut THEN 'insufficient_followup'\n    WHEN pick_at IS NULL THEN 'missing_pick_indeterminate'\n    WHEN pick_at>=partition_cut THEN 'pick_not_observed_by_cut'\n    WHEN known_at IS NULL OR known_at>=partition_cut THEN 'row_not_available_by_cut'\n    WHEN CAST(pick_at AS date)>DATEADD(day,2,OrderDate) THEN 'after_two_days'\n    ELSE 'within_two_days' END AS state FROM (SELECT o.OrderID,l.OrderLineID,o.OrderDate,l.StockItemID,o.CustomerID,\n    l.Quantity,l.UnitPrice,l.PickedQuantity,l.PickingCompletedWhen AS pick_at,\n    o.PickingCompletedWhen AS header_pick_at,l.LastEditedWhen AS line_edited,\n    o.LastEditedWhen AS header_edited,\n    CASE WHEN l.LastEditedWhen>o.LastEditedWhen THEN l.LastEditedWhen ELSE o.LastEditedWhen END AS known_at,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS partition_cut\n    FROM Sales.OrderLines l JOIN Sales.Orders o ON l.OrderID=o.OrderID WHERE o.OrderDate < ?) b) q GROUP BY CONVERT(char(7),OrderDate,126),state ORDER BY month,state",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 146
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),OrderDate,126) AS month,COUNT_BIG(*) AS lines,COUNT(DISTINCT OrderID) AS documents,COUNT(DISTINCT OrderLineID) AS stable_lines,COUNT(DISTINCT StockItemID) AS products,COUNT(DISTINCT CustomerID) AS customers FROM (SELECT o.OrderID,l.OrderLineID,o.OrderDate,l.StockItemID,o.CustomerID,\n    l.Quantity,l.UnitPrice,l.PickedQuantity,l.PickingCompletedWhen AS pick_at,\n    o.PickingCompletedWhen AS header_pick_at,l.LastEditedWhen AS line_edited,\n    o.LastEditedWhen AS header_edited,\n    CASE WHEN l.LastEditedWhen>o.LastEditedWhen THEN l.LastEditedWhen ELSE o.LastEditedWhen END AS known_at,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS partition_cut\n    FROM Sales.OrderLines l JOIN Sales.Orders o ON l.OrderID=o.OrderID WHERE o.OrderDate < ?) q GROUP BY CONVERT(char(7),OrderDate,126) ORDER BY month",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 36
+  },
+  {
+    "sql": "SELECT CONVERT(char(7),OrderDate,126) AS month,CASE WHEN invalid_n>0 THEN 'invalid' WHEN horizon_end>partition_cut THEN 'insufficient_followup'\n    WHEN late_n>0 THEN 'after_two_days' WHEN within_n=n THEN 'within_two_days' ELSE 'indeterminate_document' END AS state,COUNT_BIG(*) AS documents,SUM(n) AS lines FROM (SELECT OrderID,OrderDate,partition_cut,MAX(horizon_end) AS horizon_end,COUNT_BIG(*) AS n,\n    SUM(CASE WHEN state='invalid' THEN 1 ELSE 0 END) AS invalid_n,\n    SUM(CASE WHEN state='after_two_days' THEN 1 ELSE 0 END) AS late_n,\n    SUM(CASE WHEN state='within_two_days' THEN 1 ELSE 0 END) AS within_n,\n    SUM(CASE WHEN pick_at IS NULL THEN 1 ELSE 0 END) AS missing_n,\n    COUNT(DISTINCT CAST(pick_at AS date)) AS picked_dates,\n    MIN(pick_at) AS first_pick,MAX(pick_at) AS last_pick,MAX(header_pick_at) AS header_pick\n    FROM (SELECT b.*,CASE WHEN OrderDate IS NULL OR pick_at<CAST(OrderDate AS datetime2) THEN 'invalid'\n    WHEN horizon_end>partition_cut THEN 'insufficient_followup'\n    WHEN pick_at IS NULL THEN 'missing_pick_indeterminate'\n    WHEN pick_at>=partition_cut THEN 'pick_not_observed_by_cut'\n    WHEN known_at IS NULL OR known_at>=partition_cut THEN 'row_not_available_by_cut'\n    WHEN CAST(pick_at AS date)>DATEADD(day,2,OrderDate) THEN 'after_two_days'\n    ELSE 'within_two_days' END AS state FROM (SELECT o.OrderID,l.OrderLineID,o.OrderDate,l.StockItemID,o.CustomerID,\n    l.Quantity,l.UnitPrice,l.PickedQuantity,l.PickingCompletedWhen AS pick_at,\n    o.PickingCompletedWhen AS header_pick_at,l.LastEditedWhen AS line_edited,\n    o.LastEditedWhen AS header_edited,\n    CASE WHEN l.LastEditedWhen>o.LastEditedWhen THEN l.LastEditedWhen ELSE o.LastEditedWhen END AS known_at,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS partition_cut\n    FROM Sales.OrderLines l JOIN Sales.Orders o ON l.OrderID=o.OrderID WHERE o.OrderDate < ?) b) q GROUP BY OrderID,OrderDate,partition_cut) q GROUP BY CONVERT(char(7),OrderDate,126),CASE WHEN invalid_n>0 THEN 'invalid' WHEN horizon_end>partition_cut THEN 'insufficient_followup'\n    WHEN late_n>0 THEN 'after_two_days' WHEN within_n=n THEN 'within_two_days' ELSE 'indeterminate_document' END ORDER BY month,state",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 110
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS documents,SUM(n) AS lines,MIN(n) AS min_lines,MAX(n) AS max_lines,SUM(CASE WHEN picked_dates>1 THEN 1 ELSE 0 END) AS documents_multiple_picked_dates,SUM(CASE WHEN missing_n>0 AND missing_n<n THEN 1 ELSE 0 END) AS mixed_missing_observed,SUM(CASE WHEN missing_n=n THEN 1 ELSE 0 END) AS all_missing,SUM(CASE WHEN late_n>0 AND within_n>0 THEN 1 ELSE 0 END) AS mixed_visible_classes,SUM(CASE WHEN header_pick IS NOT NULL AND last_pick IS NOT NULL AND header_pick<>last_pick THEN 1 ELSE 0 END) AS header_vs_last_line_timestamp_different FROM (SELECT OrderID,OrderDate,partition_cut,MAX(horizon_end) AS horizon_end,COUNT_BIG(*) AS n,\n    SUM(CASE WHEN state='invalid' THEN 1 ELSE 0 END) AS invalid_n,\n    SUM(CASE WHEN state='after_two_days' THEN 1 ELSE 0 END) AS late_n,\n    SUM(CASE WHEN state='within_two_days' THEN 1 ELSE 0 END) AS within_n,\n    SUM(CASE WHEN pick_at IS NULL THEN 1 ELSE 0 END) AS missing_n,\n    COUNT(DISTINCT CAST(pick_at AS date)) AS picked_dates,\n    MIN(pick_at) AS first_pick,MAX(pick_at) AS last_pick,MAX(header_pick_at) AS header_pick\n    FROM (SELECT b.*,CASE WHEN OrderDate IS NULL OR pick_at<CAST(OrderDate AS datetime2) THEN 'invalid'\n    WHEN horizon_end>partition_cut THEN 'insufficient_followup'\n    WHEN pick_at IS NULL THEN 'missing_pick_indeterminate'\n    WHEN pick_at>=partition_cut THEN 'pick_not_observed_by_cut'\n    WHEN known_at IS NULL OR known_at>=partition_cut THEN 'row_not_available_by_cut'\n    WHEN CAST(pick_at AS date)>DATEADD(day,2,OrderDate) THEN 'after_two_days'\n    ELSE 'within_two_days' END AS state FROM (SELECT o.OrderID,l.OrderLineID,o.OrderDate,l.StockItemID,o.CustomerID,\n    l.Quantity,l.UnitPrice,l.PickedQuantity,l.PickingCompletedWhen AS pick_at,\n    o.PickingCompletedWhen AS header_pick_at,l.LastEditedWhen AS line_edited,\n    o.LastEditedWhen AS header_edited,\n    CASE WHEN l.LastEditedWhen>o.LastEditedWhen THEN l.LastEditedWhen ELSE o.LastEditedWhen END AS known_at,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS partition_cut\n    FROM Sales.OrderLines l JOIN Sales.Orders o ON l.OrderID=o.OrderID WHERE o.OrderDate < ?) b) q GROUP BY OrderID,OrderDate,partition_cut) q",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT n AS lines_per_order,COUNT_BIG(*) AS documents FROM (SELECT OrderID,OrderDate,partition_cut,MAX(horizon_end) AS horizon_end,COUNT_BIG(*) AS n,\n    SUM(CASE WHEN state='invalid' THEN 1 ELSE 0 END) AS invalid_n,\n    SUM(CASE WHEN state='after_two_days' THEN 1 ELSE 0 END) AS late_n,\n    SUM(CASE WHEN state='within_two_days' THEN 1 ELSE 0 END) AS within_n,\n    SUM(CASE WHEN pick_at IS NULL THEN 1 ELSE 0 END) AS missing_n,\n    COUNT(DISTINCT CAST(pick_at AS date)) AS picked_dates,\n    MIN(pick_at) AS first_pick,MAX(pick_at) AS last_pick,MAX(header_pick_at) AS header_pick\n    FROM (SELECT b.*,CASE WHEN OrderDate IS NULL OR pick_at<CAST(OrderDate AS datetime2) THEN 'invalid'\n    WHEN horizon_end>partition_cut THEN 'insufficient_followup'\n    WHEN pick_at IS NULL THEN 'missing_pick_indeterminate'\n    WHEN pick_at>=partition_cut THEN 'pick_not_observed_by_cut'\n    WHEN known_at IS NULL OR known_at>=partition_cut THEN 'row_not_available_by_cut'\n    WHEN CAST(pick_at AS date)>DATEADD(day,2,OrderDate) THEN 'after_two_days'\n    ELSE 'within_two_days' END AS state FROM (SELECT o.OrderID,l.OrderLineID,o.OrderDate,l.StockItemID,o.CustomerID,\n    l.Quantity,l.UnitPrice,l.PickedQuantity,l.PickingCompletedWhen AS pick_at,\n    o.PickingCompletedWhen AS header_pick_at,l.LastEditedWhen AS line_edited,\n    o.LastEditedWhen AS header_edited,\n    CASE WHEN l.LastEditedWhen>o.LastEditedWhen THEN l.LastEditedWhen ELSE o.LastEditedWhen END AS known_at,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS partition_cut\n    FROM Sales.OrderLines l JOIN Sales.Orders o ON l.OrderID=o.OrderID WHERE o.OrderDate < ?) b) q GROUP BY OrderID,OrderDate,partition_cut) q GROUP BY n ORDER BY n",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 5
+  },
+  {
+    "sql": "SELECT DATEDIFF(day,OrderDate,CAST(pick_at AS date)) AS delay_days,COUNT_BIG(*) AS lines FROM (SELECT o.OrderID,l.OrderLineID,o.OrderDate,l.StockItemID,o.CustomerID,\n    l.Quantity,l.UnitPrice,l.PickedQuantity,l.PickingCompletedWhen AS pick_at,\n    o.PickingCompletedWhen AS header_pick_at,l.LastEditedWhen AS line_edited,\n    o.LastEditedWhen AS header_edited,\n    CASE WHEN l.LastEditedWhen>o.LastEditedWhen THEN l.LastEditedWhen ELSE o.LastEditedWhen END AS known_at,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS partition_cut\n    FROM Sales.OrderLines l JOIN Sales.Orders o ON l.OrderID=o.OrderID WHERE o.OrderDate < ?) q GROUP BY DATEDIFF(day,OrderDate,CAST(pick_at AS date)) ORDER BY delay_days",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 481
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS lines,SUM(CASE WHEN CAST(line_edited AS date)=OrderDate THEN 1 ELSE 0 END) AS last_line_edit_same_calendar_day,SUM(CASE WHEN CAST(line_edited AS date)>OrderDate THEN 1 ELSE 0 END) AS last_line_edit_later_day,SUM(CASE WHEN pick_at IS NOT NULL AND line_edited<pick_at THEN 1 ELSE 0 END) AS last_edit_before_pick FROM (SELECT o.OrderID,l.OrderLineID,o.OrderDate,l.StockItemID,o.CustomerID,\n    l.Quantity,l.UnitPrice,l.PickedQuantity,l.PickingCompletedWhen AS pick_at,\n    o.PickingCompletedWhen AS header_pick_at,l.LastEditedWhen AS line_edited,\n    o.LastEditedWhen AS header_edited,\n    CASE WHEN l.LastEditedWhen>o.LastEditedWhen THEN l.LastEditedWhen ELSE o.LastEditedWhen END AS known_at,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS partition_cut\n    FROM Sales.OrderLines l JOIN Sales.Orders o ON l.OrderID=o.OrderID WHERE o.OrderDate < ?) q",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS links,SUM(CASE WHEN c.OrderDate<>o.OrderDate THEN 1 ELSE 0 END) AS different_order_date,SUM(CASE WHEN c.OrderID<=o.OrderID THEN 1 ELSE 0 END) AS non_increasing_ids FROM Sales.Orders o JOIN Sales.Orders c ON o.BackorderOrderID=c.OrderID WHERE o.OrderDate < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT state,CASE WHEN p.id IS NULL THEN 0 ELSE 1 END AS is_derived_document,COUNT_BIG(*) AS lines FROM (SELECT b.*,CASE WHEN OrderDate IS NULL OR pick_at<CAST(OrderDate AS datetime2) THEN 'invalid'\n    WHEN horizon_end>partition_cut THEN 'insufficient_followup'\n    WHEN pick_at IS NULL THEN 'missing_pick_indeterminate'\n    WHEN pick_at>=partition_cut THEN 'pick_not_observed_by_cut'\n    WHEN known_at IS NULL OR known_at>=partition_cut THEN 'row_not_available_by_cut'\n    WHEN CAST(pick_at AS date)>DATEADD(day,2,OrderDate) THEN 'after_two_days'\n    ELSE 'within_two_days' END AS state FROM (SELECT o.OrderID,l.OrderLineID,o.OrderDate,l.StockItemID,o.CustomerID,\n    l.Quantity,l.UnitPrice,l.PickedQuantity,l.PickingCompletedWhen AS pick_at,\n    o.PickingCompletedWhen AS header_pick_at,l.LastEditedWhen AS line_edited,\n    o.LastEditedWhen AS header_edited,\n    CASE WHEN l.LastEditedWhen>o.LastEditedWhen THEN l.LastEditedWhen ELSE o.LastEditedWhen END AS known_at,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS partition_cut\n    FROM Sales.OrderLines l JOIN Sales.Orders o ON l.OrderID=o.OrderID WHERE o.OrderDate < ?) b) q LEFT JOIN (SELECT DISTINCT BackorderOrderID AS id FROM Sales.Orders WHERE BackorderOrderID IS NOT NULL) p ON p.id=q.OrderID GROUP BY state,CASE WHEN p.id IS NULL THEN 0 ELSE 1 END ORDER BY state,is_derived_document",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 10
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS documents,SUM(CASE WHEN p.id IS NOT NULL THEN 1 ELSE 0 END) AS derived_backorder_documents FROM Sales.Orders o LEFT JOIN (SELECT DISTINCT BackorderOrderID AS id FROM Sales.Orders WHERE BackorderOrderID IS NOT NULL) p ON p.id=o.OrderID WHERE o.OrderDate < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS dw_lines,SUM(CASE WHEN d.[Customer Key]=0 THEN 1 ELSE 0 END) AS zero_customer,SUM(CASE WHEN d.[Customer Key] IS NULL THEN 1 ELSE 0 END) AS null_customer,COUNT(DISTINCT CASE WHEN d.[Customer Key]=0 THEN o.CustomerID END) AS operational_ids_for_unknown,SUM(CASE WHEN d.[Customer Key]=0 AND c.[Customer Key] IS NULL THEN 1 ELSE 0 END) AS missing_business_id_in_dimension FROM [WideWorldImportersDW].[Fact].[Order] d JOIN Sales.Orders o ON d.[WWI Order ID]=o.OrderID LEFT JOIN [WideWorldImportersDW].[Dimension].[Customer] c ON c.[WWI Customer ID]=o.CustomerID WHERE o.OrderDate < ?",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  },
+  {
+    "sql": "SELECT COUNT_BIG(*) AS lines,CHECKSUM_AGG(BINARY_CHECKSUM(OrderID,OrderLineID,OrderDate,StockItemID,CustomerID,pick_at,line_edited,header_edited)) AS checksum FROM (SELECT o.OrderID,l.OrderLineID,o.OrderDate,l.StockItemID,o.CustomerID,\n    l.Quantity,l.UnitPrice,l.PickedQuantity,l.PickingCompletedWhen AS pick_at,\n    o.PickingCompletedWhen AS header_pick_at,l.LastEditedWhen AS line_edited,\n    o.LastEditedWhen AS header_edited,\n    CASE WHEN l.LastEditedWhen>o.LastEditedWhen THEN l.LastEditedWhen ELSE o.LastEditedWhen END AS known_at,\n    DATEADD(day,3,CAST(o.OrderDate AS datetime2)) AS horizon_end,\n    CASE WHEN o.OrderDate<'20150101' THEN CAST('20150101' AS datetime2) ELSE CAST('20160101' AS datetime2) END AS partition_cut\n    FROM Sales.OrderLines l JOIN Sales.Orders o ON l.OrderID=o.OrderID WHERE o.OrderDate < ?) q",
+    "parameters": [
+      "2016-01-01"
+    ],
+    "operation": "SELECT",
+    "status": "successful",
+    "rows_returned": 1
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "scope": "Dataset de desarrollo financiero train/val; test 2016 sellado; sin entrenamiento ni PCA",
+  "implementation_sha256": {
+    "src\\datamarts\\transacciones\\__init__.py": "19cfa1d8cdc4528ceb540734cb1e09286339ae43e49fc3586e5999ef6ce3fa50",
+    "src\\datamarts\\transacciones\\caracteristicas.py": "0c3fb0219352f9c4d599ffec7bacc20f0d84770a7c67beff79c1eafcbfbf117a",
+    "src\\datamarts\\transacciones\\construir.py": "61ef20baddfda64d163e531a166b3791be68a0e0d01cdccf778f1710d94cc435",
+    "src\\datamarts\\transacciones\\extraccion.py": "e45e4edf9719834f6d148a34b36e0977a27ce123e0ec11930f651ddc6456ef72",
+    "src\\datamarts\\transacciones\\preprocesamiento.py": "84d9ae078c8dbe67eec4c67adfc1202bdddda58c035340003bbd09a8ea36f668",
+    "tests\\test_transacciones_dataset.py": "6d2febe22adb0df17ff12714150bdca74769da499c3d572cfcf910d6f90c37ec"
+  },
+  "artifacts_sha256": {
+    "datos\\Procesados\\transacciones\\caracteristicas_crudas_train.csv": "03593574be0b3f4995e52b12071e1099d6209a308701e42e559ddc53fe9a71c4",
+    "datos\\Procesados\\transacciones\\caracteristicas_crudas_val.csv": "6388015d8ca8b40543e1b448db4efef7dbc8719124b0d38d990c30f1bbe38daf",
+    "datos\\Procesados\\transacciones\\cobros_desarrollo.csv.gz": "38739cfbcccd5df3d8dd11248e44a16b35279a714f796eb8e206794e41b14a8d",
+    "datos\\Procesados\\transacciones\\cuentas_meses.csv.gz": "54eb55ac49a9f6c99371e5e9da198958e8d95ff0e2a384d8de72818907ba4b7f",
+    "datos\\Procesados\\transacciones\\elegibilidad.csv.gz": "ffa18bf6391d03c122d72aa1a3c2d490c2dfe77192c407e24089b0b627341718",
+    "datos\\Procesados\\transacciones\\etiquetas_train.csv": "13ccb22515583ee3eebe8b9e2bc97b22b2a28024b687d861515cf603c42da711",
+    "datos\\Procesados\\transacciones\\etiquetas_val.csv": "7d7472ed2c53bd16e84cef74241615682232c879f8bbd675b9092a5cde505119",
+    "datos\\Procesados\\transacciones\\feature_names.json": "e6e9aa8bbfa6248be710297a8fca0db1d375e83da4b66431133f1df3764f918d",
+    "datos\\Procesados\\transacciones\\metadatos_train.csv": "9435dea31604d22c054ea34de51610a6224e26806c110309a1f26ea4511d8f80",
+    "datos\\Procesados\\transacciones\\metadatos_val.csv": "df1a6289f70635bda05e199cd1efc9ff6bed8ea7c8d1af4d599038ba37ebcbb0",
+    "datos\\Procesados\\transacciones\\preprocesador.json": "f1b513c99312e07afe70980631fd4881c388a34be61b4bc7164e741d6b4c1ba5",
+    "datos\\Procesados\\transacciones\\X_train.npy": "db2726949cd064c6c904a414493e195d3d43b9b08aed43f0bcb21de232765060",
+    "datos\\Procesados\\transacciones\\X_val.npy": "95237d20bc30e5280a57ce0b9eca58c35bd106c6b198f7faad4ccca69cbbce44",
+    "datos\\Procesados\\transacciones\\y_train.npy": "e971d363c3b7f6c6dd27ee8ec09e53d4c1a62e22dd39eb1cd5b36570037c580e",
+    "datos\\Procesados\\transacciones\\y_val.npy": "fbf59ac74441badc49c5d3f4348d33c5ee6d6b7ac91f50818fc894eca55d7e87",
+    "resultados\\extension_datamarts\\transacciones\\dataset\\caracteristicas.json": "01747698ed8a07ab2df3a7efe1ae7f625db5c58328fed1c1a67d66d7397ab00e",
+    "resultados\\extension_datamarts\\transacciones\\dataset\\cobertura_aplicada.json": "4efe982404b222eac4eb16ee07d7655ccf04f23c7dd4b7be3ab6a53ad59f75d6",
+    "resultados\\extension_datamarts\\transacciones\\dataset\\consultas_sql.json": "d7dd18b721cedd2d36e9df3ea85827965b14f87fd31b955ae70bc63cb69b2759",
+    "resultados\\extension_datamarts\\transacciones\\dataset\\conteos.json": "3341f19d631ae8b2d487e4b6cc97fc1dc8aedc2fe3dfb05ca3a49655f4280580",
+    "resultados\\extension_datamarts\\transacciones\\dataset\\entorno.json": "895bd6224b5a6fc923fd7da7139f31e895a520613f65e13ed6422d40b8e4ee41",
+    "resultados\\extension_datamarts\\transacciones\\dataset\\especificacion_test.json": "de259dd01d5178490a2904a9c7b4e954c58a94ead6bac2c5bdd17c128ab30f17",
+    "resultados\\extension_datamarts\\transacciones\\dataset\\integridad_antes.json": "a8dfe002c4272a84c7eabcd28ba636af7d151f3e2566dc7d1ca90c715d0d0368",
+    "resultados\\extension_datamarts\\transacciones\\dataset\\integridad_despues.json": "a8dfe002c4272a84c7eabcd28ba636af7d151f3e2566dc7d1ca90c715d0d0368",
+    "resultados\\extension_datamarts\\transacciones\\dataset\\matrices.json": "2ee97e04697cb07e89635fb7c2f9043fe55eb6c37e4b6ce8a543f73a0f7aabd7",
+    "resultados\\extension_datamarts\\transacciones\\dataset\\procedencia.json": "dd4a770668c2acdb77ed784c1efaab8113ca78fc27c494c0c7d76f31aa772408",
+    "resultados\\extension_datamarts\\transacciones\\dataset\\reconciliacion.json": "b2b3501ab1d11403b923f432e4a5b0e0becfd25e45e50c3d42ddc1a95c9b6eb1",
+    "resultados\\extension_datamarts\\transacciones\\dataset\\reporte_dataset.md": "eba152ea578c5173dee070212a24beadc90941c61285f2d3f73685598a1df32b"
+  },
+  "approved_contract_sha256": "efeb3cca809c4d36e6a2ab70ed258ac8a68b2b63bbf5e7528fad065eb43b382e"
+}

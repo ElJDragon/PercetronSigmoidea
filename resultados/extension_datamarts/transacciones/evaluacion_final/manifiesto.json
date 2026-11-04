@@ -1,0 +1,48 @@
+{
+  "implementation_sha256": {
+    "src/experiments/evaluar_transacciones.py": "ad8e8ce484e3daac539bed32f7e1a16c0d16accaf742d22d2e30bad664c2ebca",
+    "tests/test_evaluacion_transacciones.py": "3f8c0893f1e1a124d6d6280b09001edca15551e996a795fa09a6b6e5b1e7f2a7"
+  },
+  "artifacts_sha256": {
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\analisis_errores.json": "718cbbbf5b7bbf01064ac983ef9efbfad43bad982fbc03eeddf754b0119b2ee5",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\anotaciones_tecnicas.json": "45cb709c851cada3e6d8d1ac83651e3db4167c1524f24d121e233ec2c10ae799",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\apertura_previa.json": "ed25a41dedf8f4d904d3c8687b36174aa4ade51f84ad3734150bb204886410c2",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\caracteristicas_crudas_test.csv": "89c980fc67b38ddd604b52db23916f1ee95ee43ec636cf8beb90eb97060fbaea",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\cobertura_test.json": "fc108995d6ab3b928fc3f4cbe00a57123dffe96a2a95b9acf052fb1b7f2bddff",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\cohortes.json": "4987561cd2275bd246bce0fb0c7d7ceb33eb354f7be81481d1b30eebcf6eda8d",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\cohortes_detalladas.json": "a29ba74076241b1817c47329b1ec81873b58d800898b0521af42722af46ea503",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\comparacion_desarrollo_test.json": "82dbc33f5f6ce5bac6db977407809f04b8401d3fbb5e7cd23fb299b05593681e",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\concentracion_errores.json": "ab6014998da8507226ae8e3dacba1ce6979f811046474fa598586b02bd934f53",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\consultas_test.json": "7720075ede6f77ee0189f0fc2372dbd742ca004c46d93e950c9bf331c88df677",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\conteos.json": "e843d0219fc206a34c02f5af3cca2dcd1bf18ca837eb43d03c6d2755cebe88fa",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\elegibilidad_test.csv": "19eacde2ecf077650548c6ffaf4de4fdd27210e2e7064a698ae1e32ea1697490",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\errores_por_observacion.csv": "be39b9def61fbf506ec30d2832ad07b8b9fd8d65103d23e5771e887ce706bb2d",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\exclusiones_historico.csv": "d6bb21ccd2f11b68b5b752a3e41c997f9860150747ac852ae8f36b98b5c10d80",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\graficos\\01_balanced_accuracy.png": "db0da68a24ea608aa28ca6b1425e694c05f0dc5ef05a59ed34cfad3b457c3103",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\graficos\\02_metricas.png": "1c5175a3eb7cb085d16b0dff4f769ff9ee0ab63490b9989cb69d3d8d8f73a06a",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\graficos\\03_confusion_perceptron.png": "633572783fdcc5884807e9a3f4f2096654af9926caf18718d0cd7cd6a81df4b0",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\graficos\\04_confusion_logistic.png": "d561f26795f8ced2d8bea0de7baa90b4379dfd11bd1e88d8f3bf607969ddf358",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\graficos\\05_BA_mensual.png": "786abf74f5b1fbad6cd1654e37b96b20952ef523cfa0f4ab0a35f1bf9dacc846",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\graficos\\06_train_validacion_test.png": "8ab5b68ad1c7cf08a33a2e94113ac040684f3735339c7bf4f32c49ad166caefc",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\graficos\\07_sensibilidad_especificidad.png": "d8d96a15604ea03a745cd18c6aa3673f4e7125a24490b23420eae39b42988a18",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\inicio_consulta_test.json": "21ee34986d765564fb3c95c6f175ce2987221d86c54a5d560cd4adcbcca99610",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\integridad_antes.json": "cb5c7307916158d6c9f384fb6154ae449785eb8c24696c3c7cde1c1e19672b2c",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\integridad_despues.json": "cb5c7307916158d6c9f384fb6154ae449785eb8c24696c3c7cde1c1e19672b2c",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\metadatos_test.csv": "c507e5c22b4de0f04e16f77a554b3dba53d7912b39e4c02c3d50bc9dad3b4297",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\metricas_globales.json": "df0a0649e91aefbd4917559384397cc63c10ef0833635dbd3754efed223f7c03",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\metricas_mensuales.json": "db609ebbe4c630148b55bc44c01bb7139633dc55ed432686267a6c88a084ffa4",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\predicciones_test.csv": "efb6f9861f191d549b04d0edb54ade78429030c1d370faaba08a44f890e5f496",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\procedencia_test.json": "ad30889d28905147458ba0ab29817e635005e8b71f5bd64f3c96c3ae37fe26fb",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\reporte_evaluacion_final.md": "ca5977d96d3526b411c70dae4f48795dc0a1368e9695e96254190d7b9fb232f8",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\resumen_temporal.json": "6fbf928e3676dd69a441248c9e4e0c6f8b00ae685736f4090a3684b5cf6de053",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\snapshot_test.csv.gz": "22df4f7d3771bd8bdbbd2cef367a1e088b842878f70e29c3831ddee8e5b0dd28",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\verificacion_previa.json": "d720947e03fd7eeae9736a88f8530d3e3c79bdd57c9ad85d4b16aa9082f6802c",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\X_test.csv": "14b997f807f88ebdd58d5b7fd701fa11a329c0ab4bedc7bb0b5bcfda32eac65b",
+    "resultados\\extension_datamarts\\transacciones\\evaluacion_final\\y_test.csv": "2b36517f90607f369d262667a4f338382a7bee5fadad0a69757dca74a2716c9a"
+  },
+  "frozen_models_sha256": {
+    "perceptron": "19aca080e0e38d007dfb6b8e4050c7b371a5b7665e93bcc6a7463aa70b5109b0",
+    "logistic": "11e86463138a284caa4cac90f4ae10fa4448b6cccb5d2a4d8f6c9070d4e8f726"
+  },
+  "opening_record_sha256": "ed25a41dedf8f4d904d3c8687b36174aa4ade51f84ad3734150bb204886410c2"
+}

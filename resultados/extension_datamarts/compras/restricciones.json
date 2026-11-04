@@ -1,0 +1,18 @@
+[
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrderLines",
+    "index_name": "PK_Purchasing_PurchaseOrderLines",
+    "is_unique": true,
+    "column_name": "PurchaseOrderLineID",
+    "key_ordinal": 1
+  },
+  {
+    "schema_name": "Purchasing",
+    "table_name": "PurchaseOrders",
+    "index_name": "PK_Purchasing_PurchaseOrders",
+    "is_unique": true,
+    "column_name": "PurchaseOrderID",
+    "key_ordinal": 1
+  }
+]

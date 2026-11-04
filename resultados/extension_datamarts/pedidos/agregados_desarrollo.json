@@ -1,0 +1,3869 @@
+{
+  "line_states_monthly": [
+    {
+      "month": "2013-01",
+      "state": "after_two_days",
+      "lines": 50,
+      "documents": 49
+    },
+    {
+      "month": "2013-01",
+      "state": "missing_pick_indeterminate",
+      "lines": 8,
+      "documents": 8
+    },
+    {
+      "month": "2013-01",
+      "state": "pick_not_observed_by_cut",
+      "lines": 2,
+      "documents": 2
+    },
+    {
+      "month": "2013-01",
+      "state": "within_two_days",
+      "lines": 5221,
+      "documents": 1615
+    },
+    {
+      "month": "2013-02",
+      "state": "after_two_days",
+      "lines": 46,
+      "documents": 46
+    },
+    {
+      "month": "2013-02",
+      "state": "missing_pick_indeterminate",
+      "lines": 18,
+      "documents": 18
+    },
+    {
+      "month": "2013-02",
+      "state": "pick_not_observed_by_cut",
+      "lines": 1,
+      "documents": 1
+    },
+    {
+      "month": "2013-02",
+      "state": "within_two_days",
+      "lines": 3661,
+      "documents": 1074
+    },
+    {
+      "month": "2013-03",
+      "state": "after_two_days",
+      "lines": 87,
+      "documents": 87
+    },
+    {
+      "month": "2013-03",
+      "state": "missing_pick_indeterminate",
+      "lines": 25,
+      "documents": 25
+    },
+    {
+      "month": "2013-03",
+      "state": "pick_not_observed_by_cut",
+      "lines": 2,
+      "documents": 2
+    },
+    {
+      "month": "2013-03",
+      "state": "within_two_days",
+      "lines": 5275,
+      "documents": 1569
+    },
+    {
+      "month": "2013-04",
+      "state": "after_two_days",
+      "lines": 109,
+      "documents": 109
+    },
+    {
+      "month": "2013-04",
+      "state": "missing_pick_indeterminate",
+      "lines": 28,
+      "documents": 28
+    },
+    {
+      "month": "2013-04",
+      "state": "pick_not_observed_by_cut",
+      "lines": 5,
+      "documents": 5
+    },
+    {
+      "month": "2013-04",
+      "state": "within_two_days",
+      "lines": 5172,
+      "documents": 1554
+    },
+    {
+      "month": "2013-05",
+      "state": "after_two_days",
+      "lines": 102,
+      "documents": 102
+    },
+    {
+      "month": "2013-05",
+      "state": "missing_pick_indeterminate",
+      "lines": 48,
+      "documents": 47
+    },
+    {
+      "month": "2013-05",
+      "state": "pick_not_observed_by_cut",
+      "lines": 5,
+      "documents": 5
+    },
+    {
+      "month": "2013-05",
+      "state": "within_two_days",
+      "lines": 5544,
+      "documents": 1654
+    },
+    {
+      "month": "2013-06",
+      "state": "after_two_days",
+      "lines": 88,
+      "documents": 88
+    },
+    {
+      "month": "2013-06",
+      "state": "missing_pick_indeterminate",
+      "lines": 33,
+      "documents": 33
+    },
+    {
+      "month": "2013-06",
+      "state": "pick_not_observed_by_cut",
+      "lines": 5,
+      "documents": 5
+    },
+    {
+      "month": "2013-06",
+      "state": "within_two_days",
+      "lines": 5212,
+      "documents": 1549
+    },
+    {
+      "month": "2013-07",
+      "state": "after_two_days",
+      "lines": 103,
+      "documents": 103
+    },
+    {
+      "month": "2013-07",
+      "state": "missing_pick_indeterminate",
+      "lines": 38,
+      "documents": 38
+    },
+    {
+      "month": "2013-07",
+      "state": "pick_not_observed_by_cut",
+      "lines": 4,
+      "documents": 4
+    },
+    {
+      "month": "2013-07",
+      "state": "within_two_days",
+      "lines": 5751,
+      "documents": 1741
+    },
+    {
+      "month": "2013-08",
+      "state": "after_two_days",
+      "lines": 79,
+      "documents": 79
+    },
+    {
+      "month": "2013-08",
+      "state": "missing_pick_indeterminate",
+      "lines": 47,
+      "documents": 46
+    },
+    {
+      "month": "2013-08",
+      "state": "pick_not_observed_by_cut",
+      "lines": 7,
+      "documents": 7
+    },
+    {
+      "month": "2013-08",
+      "state": "within_two_days",
+      "lines": 4686,
+      "documents": 1405
+    },
+    {
+      "month": "2013-09",
+      "state": "after_two_days",
+      "lines": 78,
+      "documents": 78
+    },
+    {
+      "month": "2013-09",
+      "state": "missing_pick_indeterminate",
+      "lines": 53,
+      "documents": 53
+    },
+    {
+      "month": "2013-09",
+      "state": "pick_not_observed_by_cut",
+      "lines": 11,
+      "documents": 11
+    },
+    {
+      "month": "2013-09",
+      "state": "within_two_days",
+      "lines": 4957,
+      "documents": 1475
+    },
+    {
+      "month": "2013-10",
+      "state": "after_two_days",
+      "lines": 83,
+      "documents": 83
+    },
+    {
+      "month": "2013-10",
+      "state": "missing_pick_indeterminate",
+      "lines": 52,
+      "documents": 50
+    },
+    {
+      "month": "2013-10",
+      "state": "pick_not_observed_by_cut",
+      "lines": 9,
+      "documents": 9
+    },
+    {
+      "month": "2013-10",
+      "state": "within_two_days",
+      "lines": 5027,
+      "documents": 1476
+    },
+    {
+      "month": "2013-11",
+      "state": "after_two_days",
+      "lines": 70,
+      "documents": 70
+    },
+    {
+      "month": "2013-11",
+      "state": "missing_pick_indeterminate",
+      "lines": 47,
+      "documents": 47
+    },
+    {
+      "month": "2013-11",
+      "state": "pick_not_observed_by_cut",
+      "lines": 11,
+      "documents": 11
+    },
+    {
+      "month": "2013-11",
+      "state": "within_two_days",
+      "lines": 4829,
+      "documents": 1424
+    },
+    {
+      "month": "2013-12",
+      "state": "after_two_days",
+      "lines": 63,
+      "documents": 63
+    },
+    {
+      "month": "2013-12",
+      "state": "missing_pick_indeterminate",
+      "lines": 45,
+      "documents": 45
+    },
+    {
+      "month": "2013-12",
+      "state": "pick_not_observed_by_cut",
+      "lines": 10,
+      "documents": 10
+    },
+    {
+      "month": "2013-12",
+      "state": "within_two_days",
+      "lines": 4848,
+      "documents": 1447
+    },
+    {
+      "month": "2014-01",
+      "state": "after_two_days",
+      "lines": 79,
+      "documents": 79
+    },
+    {
+      "month": "2014-01",
+      "state": "missing_pick_indeterminate",
+      "lines": 56,
+      "documents": 56
+    },
+    {
+      "month": "2014-01",
+      "state": "pick_not_observed_by_cut",
+      "lines": 7,
+      "documents": 7
+    },
+    {
+      "month": "2014-01",
+      "state": "within_two_days",
+      "lines": 5540,
+      "documents": 1649
+    },
+    {
+      "month": "2014-02",
+      "state": "after_two_days",
+      "lines": 73,
+      "documents": 73
+    },
+    {
+      "month": "2014-02",
+      "state": "missing_pick_indeterminate",
+      "lines": 46,
+      "documents": 46
+    },
+    {
+      "month": "2014-02",
+      "state": "pick_not_observed_by_cut",
+      "lines": 2,
+      "documents": 2
+    },
+    {
+      "month": "2014-02",
+      "state": "within_two_days",
+      "lines": 4709,
+      "documents": 1417
+    },
+    {
+      "month": "2014-03",
+      "state": "after_two_days",
+      "lines": 67,
+      "documents": 67
+    },
+    {
+      "month": "2014-03",
+      "state": "missing_pick_indeterminate",
+      "lines": 45,
+      "documents": 45
+    },
+    {
+      "month": "2014-03",
+      "state": "pick_not_observed_by_cut",
+      "lines": 8,
+      "documents": 8
+    },
+    {
+      "month": "2014-03",
+      "state": "within_two_days",
+      "lines": 4998,
+      "documents": 1466
+    },
+    {
+      "month": "2014-04",
+      "state": "after_two_days",
+      "lines": 69,
+      "documents": 69
+    },
+    {
+      "month": "2014-04",
+      "state": "missing_pick_indeterminate",
+      "lines": 68,
+      "documents": 68
+    },
+    {
+      "month": "2014-04",
+      "state": "pick_not_observed_by_cut",
+      "lines": 6,
+      "documents": 6
+    },
+    {
+      "month": "2014-04",
+      "state": "within_two_days",
+      "lines": 5370,
+      "documents": 1596
+    },
+    {
+      "month": "2014-05",
+      "state": "after_two_days",
+      "lines": 86,
+      "documents": 86
+    },
+    {
+      "month": "2014-05",
+      "state": "missing_pick_indeterminate",
+      "lines": 79,
+      "documents": 78
+    },
+    {
+      "month": "2014-05",
+      "state": "pick_not_observed_by_cut",
+      "lines": 10,
+      "documents": 10
+    },
+    {
+      "month": "2014-05",
+      "state": "within_two_days",
+      "lines": 5852,
+      "documents": 1734
+    },
+    {
+      "month": "2014-06",
+      "state": "after_two_days",
+      "lines": 88,
+      "documents": 88
+    },
+    {
+      "month": "2014-06",
+      "state": "missing_pick_indeterminate",
+      "lines": 82,
+      "documents": 79
+    },
+    {
+      "month": "2014-06",
+      "state": "pick_not_observed_by_cut",
+      "lines": 8,
+      "documents": 8
+    },
+    {
+      "month": "2014-06",
+      "state": "within_two_days",
+      "lines": 5710,
+      "documents": 1712
+    },
+    {
+      "month": "2014-07",
+      "state": "after_two_days",
+      "lines": 82,
+      "documents": 81
+    },
+    {
+      "month": "2014-07",
+      "state": "missing_pick_indeterminate",
+      "lines": 67,
+      "documents": 67
+    },
+    {
+      "month": "2014-07",
+      "state": "pick_not_observed_by_cut",
+      "lines": 24,
+      "documents": 24
+    },
+    {
+      "month": "2014-07",
+      "state": "within_two_days",
+      "lines": 6137,
+      "documents": 1836
+    },
+    {
+      "month": "2014-08",
+      "state": "after_two_days",
+      "lines": 55,
+      "documents": 55
+    },
+    {
+      "month": "2014-08",
+      "state": "missing_pick_indeterminate",
+      "lines": 60,
+      "documents": 59
+    },
+    {
+      "month": "2014-08",
+      "state": "pick_not_observed_by_cut",
+      "lines": 33,
+      "documents": 33
+    },
+    {
+      "month": "2014-08",
+      "state": "within_two_days",
+      "lines": 4982,
+      "documents": 1495
+    },
+    {
+      "month": "2014-09",
+      "state": "after_two_days",
+      "lines": 43,
+      "documents": 43
+    },
+    {
+      "month": "2014-09",
+      "state": "missing_pick_indeterminate",
+      "lines": 57,
+      "documents": 56
+    },
+    {
+      "month": "2014-09",
+      "state": "pick_not_observed_by_cut",
+      "lines": 34,
+      "documents": 34
+    },
+    {
+      "month": "2014-09",
+      "state": "within_two_days",
+      "lines": 4983,
+      "documents": 1504
+    },
+    {
+      "month": "2014-10",
+      "state": "after_two_days",
+      "lines": 58,
+      "documents": 58
+    },
+    {
+      "month": "2014-10",
+      "state": "missing_pick_indeterminate",
+      "lines": 80,
+      "documents": 76
+    },
+    {
+      "month": "2014-10",
+      "state": "pick_not_observed_by_cut",
+      "lines": 47,
+      "documents": 47
+    },
+    {
+      "month": "2014-10",
+      "state": "within_two_days",
+      "lines": 5892,
+      "documents": 1740
+    },
+    {
+      "month": "2014-11",
+      "state": "after_two_days",
+      "lines": 37,
+      "documents": 37
+    },
+    {
+      "month": "2014-11",
+      "state": "missing_pick_indeterminate",
+      "lines": 71,
+      "documents": 69
+    },
+    {
+      "month": "2014-11",
+      "state": "pick_not_observed_by_cut",
+      "lines": 46,
+      "documents": 46
+    },
+    {
+      "month": "2014-11",
+      "state": "within_two_days",
+      "lines": 4997,
+      "documents": 1476
+    },
+    {
+      "month": "2014-12",
+      "state": "after_two_days",
+      "lines": 39,
+      "documents": 39
+    },
+    {
+      "month": "2014-12",
+      "state": "insufficient_followup",
+      "lines": 582,
+      "documents": 172
+    },
+    {
+      "month": "2014-12",
+      "state": "missing_pick_indeterminate",
+      "lines": 82,
+      "documents": 80
+    },
+    {
+      "month": "2014-12",
+      "state": "pick_not_observed_by_cut",
+      "lines": 52,
+      "documents": 52
+    },
+    {
+      "month": "2014-12",
+      "state": "within_two_days",
+      "lines": 5254,
+      "documents": 1571
+    },
+    {
+      "month": "2015-01",
+      "state": "after_two_days",
+      "lines": 77,
+      "documents": 77
+    },
+    {
+      "month": "2015-01",
+      "state": "missing_pick_indeterminate",
+      "lines": 78,
+      "documents": 75
+    },
+    {
+      "month": "2015-01",
+      "state": "pick_not_observed_by_cut",
+      "lines": 7,
+      "documents": 7
+    },
+    {
+      "month": "2015-01",
+      "state": "within_two_days",
+      "lines": 5573,
+      "documents": 1671
+    },
+    {
+      "month": "2015-02",
+      "state": "after_two_days",
+      "lines": 70,
+      "documents": 70
+    },
+    {
+      "month": "2015-02",
+      "state": "missing_pick_indeterminate",
+      "lines": 66,
+      "documents": 65
+    },
+    {
+      "month": "2015-02",
+      "state": "pick_not_observed_by_cut",
+      "lines": 12,
+      "documents": 12
+    },
+    {
+      "month": "2015-02",
+      "state": "within_two_days",
+      "lines": 5330,
+      "documents": 1585
+    },
+    {
+      "month": "2015-03",
+      "state": "after_two_days",
+      "lines": 62,
+      "documents": 62
+    },
+    {
+      "month": "2015-03",
+      "state": "missing_pick_indeterminate",
+      "lines": 78,
+      "documents": 78
+    },
+    {
+      "month": "2015-03",
+      "state": "pick_not_observed_by_cut",
+      "lines": 18,
+      "documents": 18
+    },
+    {
+      "month": "2015-03",
+      "state": "within_two_days",
+      "lines": 5789,
+      "documents": 1733
+    },
+    {
+      "month": "2015-04",
+      "state": "after_two_days",
+      "lines": 62,
+      "documents": 62
+    },
+    {
+      "month": "2015-04",
+      "state": "missing_pick_indeterminate",
+      "lines": 96,
+      "documents": 95
+    },
+    {
+      "month": "2015-04",
+      "state": "pick_not_observed_by_cut",
+      "lines": 23,
+      "documents": 23
+    },
+    {
+      "month": "2015-04",
+      "state": "within_two_days",
+      "lines": 6460,
+      "documents": 1931
+    },
+    {
+      "month": "2015-05",
+      "state": "after_two_days",
+      "lines": 56,
+      "documents": 56
+    },
+    {
+      "month": "2015-05",
+      "state": "missing_pick_indeterminate",
+      "lines": 104,
+      "documents": 103
+    },
+    {
+      "month": "2015-05",
+      "state": "pick_not_observed_by_cut",
+      "lines": 14,
+      "documents": 14
+    },
+    {
+      "month": "2015-05",
+      "state": "within_two_days",
+      "lines": 5929,
+      "documents": 1786
+    },
+    {
+      "month": "2015-06",
+      "state": "after_two_days",
+      "lines": 96,
+      "documents": 96
+    },
+    {
+      "month": "2015-06",
+      "state": "missing_pick_indeterminate",
+      "lines": 110,
+      "documents": 108
+    },
+    {
+      "month": "2015-06",
+      "state": "pick_not_observed_by_cut",
+      "lines": 3,
+      "documents": 3
+    },
+    {
+      "month": "2015-06",
+      "state": "within_two_days",
+      "lines": 5989,
+      "documents": 1782
+    },
+    {
+      "month": "2015-07",
+      "state": "after_two_days",
+      "lines": 74,
+      "documents": 74
+    },
+    {
+      "month": "2015-07",
+      "state": "missing_pick_indeterminate",
+      "lines": 127,
+      "documents": 122
+    },
+    {
+      "month": "2015-07",
+      "state": "pick_not_observed_by_cut",
+      "lines": 9,
+      "documents": 9
+    },
+    {
+      "month": "2015-07",
+      "state": "within_two_days",
+      "lines": 6856,
+      "documents": 2068
+    },
+    {
+      "month": "2015-08",
+      "state": "after_two_days",
+      "lines": 57,
+      "documents": 57
+    },
+    {
+      "month": "2015-08",
+      "state": "missing_pick_indeterminate",
+      "lines": 85,
+      "documents": 82
+    },
+    {
+      "month": "2015-08",
+      "state": "pick_not_observed_by_cut",
+      "lines": 27,
+      "documents": 27
+    },
+    {
+      "month": "2015-08",
+      "state": "within_two_days",
+      "lines": 5242,
+      "documents": 1563
+    },
+    {
+      "month": "2015-09",
+      "state": "after_two_days",
+      "lines": 46,
+      "documents": 46
+    },
+    {
+      "month": "2015-09",
+      "state": "missing_pick_indeterminate",
+      "lines": 114,
+      "documents": 114
+    },
+    {
+      "month": "2015-09",
+      "state": "pick_not_observed_by_cut",
+      "lines": 22,
+      "documents": 22
+    },
+    {
+      "month": "2015-09",
+      "state": "within_two_days",
+      "lines": 6210,
+      "documents": 1883
+    },
+    {
+      "month": "2015-10",
+      "state": "after_two_days",
+      "lines": 42,
+      "documents": 42
+    },
+    {
+      "month": "2015-10",
+      "state": "missing_pick_indeterminate",
+      "lines": 118,
+      "documents": 115
+    },
+    {
+      "month": "2015-10",
+      "state": "pick_not_observed_by_cut",
+      "lines": 20,
+      "documents": 20
+    },
+    {
+      "month": "2015-10",
+      "state": "within_two_days",
+      "lines": 6060,
+      "documents": 1788
+    },
+    {
+      "month": "2015-11",
+      "state": "after_two_days",
+      "lines": 35,
+      "documents": 35
+    },
+    {
+      "month": "2015-11",
+      "state": "missing_pick_indeterminate",
+      "lines": 127,
+      "documents": 124
+    },
+    {
+      "month": "2015-11",
+      "state": "pick_not_observed_by_cut",
+      "lines": 12,
+      "documents": 12
+    },
+    {
+      "month": "2015-11",
+      "state": "within_two_days",
+      "lines": 5545,
+      "documents": 1663
+    },
+    {
+      "month": "2015-12",
+      "state": "after_two_days",
+      "lines": 21,
+      "documents": 21
+    },
+    {
+      "month": "2015-12",
+      "state": "insufficient_followup",
+      "lines": 481,
+      "documents": 154
+    },
+    {
+      "month": "2015-12",
+      "state": "missing_pick_indeterminate",
+      "lines": 120,
+      "documents": 116
+    },
+    {
+      "month": "2015-12",
+      "state": "pick_not_observed_by_cut",
+      "lines": 20,
+      "documents": 20
+    },
+    {
+      "month": "2015-12",
+      "state": "within_two_days",
+      "lines": 5431,
+      "documents": 1640
+    }
+  ],
+  "line_structure_monthly": [
+    {
+      "month": "2013-01",
+      "lines": 5281,
+      "documents": 1674,
+      "stable_lines": 5281,
+      "products": 219,
+      "customers": 546
+    },
+    {
+      "month": "2013-02",
+      "lines": 3726,
+      "documents": 1139,
+      "stable_lines": 3726,
+      "products": 219,
+      "customers": 503
+    },
+    {
+      "month": "2013-03",
+      "lines": 5389,
+      "documents": 1683,
+      "stable_lines": 5389,
+      "products": 219,
+      "customers": 566
+    },
+    {
+      "month": "2013-04",
+      "lines": 5314,
+      "documents": 1696,
+      "stable_lines": 5314,
+      "products": 219,
+      "customers": 563
+    },
+    {
+      "month": "2013-05",
+      "lines": 5699,
+      "documents": 1808,
+      "stable_lines": 5699,
+      "products": 219,
+      "customers": 561
+    },
+    {
+      "month": "2013-06",
+      "lines": 5338,
+      "documents": 1675,
+      "stable_lines": 5338,
+      "products": 219,
+      "customers": 559
+    },
+    {
+      "month": "2013-07",
+      "lines": 5896,
+      "documents": 1886,
+      "stable_lines": 5896,
+      "products": 219,
+      "customers": 574
+    },
+    {
+      "month": "2013-08",
+      "lines": 4819,
+      "documents": 1537,
+      "stable_lines": 4819,
+      "products": 219,
+      "customers": 550
+    },
+    {
+      "month": "2013-09",
+      "lines": 5099,
+      "documents": 1617,
+      "stable_lines": 5099,
+      "products": 219,
+      "customers": 552
+    },
+    {
+      "month": "2013-10",
+      "lines": 5171,
+      "documents": 1618,
+      "stable_lines": 5171,
+      "products": 219,
+      "customers": 557
+    },
+    {
+      "month": "2013-11",
+      "lines": 4957,
+      "documents": 1552,
+      "stable_lines": 4957,
+      "products": 219,
+      "customers": 544
+    },
+    {
+      "month": "2013-12",
+      "lines": 4966,
+      "documents": 1565,
+      "stable_lines": 4966,
+      "products": 219,
+      "customers": 554
+    },
+    {
+      "month": "2014-01",
+      "lines": 5682,
+      "documents": 1791,
+      "stable_lines": 5682,
+      "products": 219,
+      "customers": 578
+    },
+    {
+      "month": "2014-02",
+      "lines": 4830,
+      "documents": 1538,
+      "stable_lines": 4830,
+      "products": 219,
+      "customers": 549
+    },
+    {
+      "month": "2014-03",
+      "lines": 5118,
+      "documents": 1586,
+      "stable_lines": 5118,
+      "products": 219,
+      "customers": 563
+    },
+    {
+      "month": "2014-04",
+      "lines": 5513,
+      "documents": 1739,
+      "stable_lines": 5513,
+      "products": 219,
+      "customers": 572
+    },
+    {
+      "month": "2014-05",
+      "lines": 6027,
+      "documents": 1908,
+      "stable_lines": 6027,
+      "products": 219,
+      "customers": 591
+    },
+    {
+      "month": "2014-06",
+      "lines": 5888,
+      "documents": 1887,
+      "stable_lines": 5888,
+      "products": 219,
+      "customers": 593
+    },
+    {
+      "month": "2014-07",
+      "lines": 6310,
+      "documents": 2008,
+      "stable_lines": 6310,
+      "products": 219,
+      "customers": 586
+    },
+    {
+      "month": "2014-08",
+      "lines": 5130,
+      "documents": 1642,
+      "stable_lines": 5130,
+      "products": 219,
+      "customers": 574
+    },
+    {
+      "month": "2014-09",
+      "lines": 5117,
+      "documents": 1637,
+      "stable_lines": 5117,
+      "products": 219,
+      "customers": 572
+    },
+    {
+      "month": "2014-10",
+      "lines": 6077,
+      "documents": 1921,
+      "stable_lines": 6077,
+      "products": 219,
+      "customers": 576
+    },
+    {
+      "month": "2014-11",
+      "lines": 5151,
+      "documents": 1628,
+      "stable_lines": 5151,
+      "products": 219,
+      "customers": 580
+    },
+    {
+      "month": "2014-12",
+      "lines": 6009,
+      "documents": 1914,
+      "stable_lines": 6009,
+      "products": 219,
+      "customers": 602
+    },
+    {
+      "month": "2015-01",
+      "lines": 5735,
+      "documents": 1830,
+      "stable_lines": 5735,
+      "products": 219,
+      "customers": 590
+    },
+    {
+      "month": "2015-02",
+      "lines": 5478,
+      "documents": 1732,
+      "stable_lines": 5478,
+      "products": 219,
+      "customers": 592
+    },
+    {
+      "month": "2015-03",
+      "lines": 5947,
+      "documents": 1891,
+      "stable_lines": 5947,
+      "products": 219,
+      "customers": 609
+    },
+    {
+      "month": "2015-04",
+      "lines": 6641,
+      "documents": 2111,
+      "stable_lines": 6641,
+      "products": 219,
+      "customers": 611
+    },
+    {
+      "month": "2015-05",
+      "lines": 6103,
+      "documents": 1959,
+      "stable_lines": 6103,
+      "products": 219,
+      "customers": 603
+    },
+    {
+      "month": "2015-06",
+      "lines": 6198,
+      "documents": 1989,
+      "stable_lines": 6198,
+      "products": 219,
+      "customers": 604
+    },
+    {
+      "month": "2015-07",
+      "lines": 7066,
+      "documents": 2273,
+      "stable_lines": 7066,
+      "products": 219,
+      "customers": 621
+    },
+    {
+      "month": "2015-08",
+      "lines": 5411,
+      "documents": 1729,
+      "stable_lines": 5411,
+      "products": 219,
+      "customers": 597
+    },
+    {
+      "month": "2015-09",
+      "lines": 6392,
+      "documents": 2065,
+      "stable_lines": 6392,
+      "products": 219,
+      "customers": 611
+    },
+    {
+      "month": "2015-10",
+      "lines": 6240,
+      "documents": 1965,
+      "stable_lines": 6240,
+      "products": 219,
+      "customers": 603
+    },
+    {
+      "month": "2015-11",
+      "lines": 5719,
+      "documents": 1834,
+      "stable_lines": 5719,
+      "products": 219,
+      "customers": 597
+    },
+    {
+      "month": "2015-12",
+      "lines": 6073,
+      "documents": 1951,
+      "stable_lines": 6073,
+      "products": 219,
+      "customers": 608
+    }
+  ],
+  "document_states_monthly": [
+    {
+      "month": "2013-01",
+      "state": "after_two_days",
+      "documents": 49,
+      "lines": 50
+    },
+    {
+      "month": "2013-01",
+      "state": "indeterminate_document",
+      "documents": 10,
+      "lines": 10
+    },
+    {
+      "month": "2013-01",
+      "state": "within_two_days",
+      "documents": 1615,
+      "lines": 5221
+    },
+    {
+      "month": "2013-02",
+      "state": "after_two_days",
+      "documents": 46,
+      "lines": 46
+    },
+    {
+      "month": "2013-02",
+      "state": "indeterminate_document",
+      "documents": 19,
+      "lines": 19
+    },
+    {
+      "month": "2013-02",
+      "state": "within_two_days",
+      "documents": 1074,
+      "lines": 3661
+    },
+    {
+      "month": "2013-03",
+      "state": "after_two_days",
+      "documents": 87,
+      "lines": 87
+    },
+    {
+      "month": "2013-03",
+      "state": "indeterminate_document",
+      "documents": 27,
+      "lines": 27
+    },
+    {
+      "month": "2013-03",
+      "state": "within_two_days",
+      "documents": 1569,
+      "lines": 5275
+    },
+    {
+      "month": "2013-04",
+      "state": "after_two_days",
+      "documents": 109,
+      "lines": 109
+    },
+    {
+      "month": "2013-04",
+      "state": "indeterminate_document",
+      "documents": 33,
+      "lines": 33
+    },
+    {
+      "month": "2013-04",
+      "state": "within_two_days",
+      "documents": 1554,
+      "lines": 5172
+    },
+    {
+      "month": "2013-05",
+      "state": "after_two_days",
+      "documents": 102,
+      "lines": 102
+    },
+    {
+      "month": "2013-05",
+      "state": "indeterminate_document",
+      "documents": 52,
+      "lines": 53
+    },
+    {
+      "month": "2013-05",
+      "state": "within_two_days",
+      "documents": 1654,
+      "lines": 5544
+    },
+    {
+      "month": "2013-06",
+      "state": "after_two_days",
+      "documents": 88,
+      "lines": 88
+    },
+    {
+      "month": "2013-06",
+      "state": "indeterminate_document",
+      "documents": 38,
+      "lines": 38
+    },
+    {
+      "month": "2013-06",
+      "state": "within_two_days",
+      "documents": 1549,
+      "lines": 5212
+    },
+    {
+      "month": "2013-07",
+      "state": "after_two_days",
+      "documents": 103,
+      "lines": 103
+    },
+    {
+      "month": "2013-07",
+      "state": "indeterminate_document",
+      "documents": 42,
+      "lines": 42
+    },
+    {
+      "month": "2013-07",
+      "state": "within_two_days",
+      "documents": 1741,
+      "lines": 5751
+    },
+    {
+      "month": "2013-08",
+      "state": "after_two_days",
+      "documents": 79,
+      "lines": 79
+    },
+    {
+      "month": "2013-08",
+      "state": "indeterminate_document",
+      "documents": 53,
+      "lines": 54
+    },
+    {
+      "month": "2013-08",
+      "state": "within_two_days",
+      "documents": 1405,
+      "lines": 4686
+    },
+    {
+      "month": "2013-09",
+      "state": "after_two_days",
+      "documents": 78,
+      "lines": 78
+    },
+    {
+      "month": "2013-09",
+      "state": "indeterminate_document",
+      "documents": 64,
+      "lines": 64
+    },
+    {
+      "month": "2013-09",
+      "state": "within_two_days",
+      "documents": 1475,
+      "lines": 4957
+    },
+    {
+      "month": "2013-10",
+      "state": "after_two_days",
+      "documents": 83,
+      "lines": 83
+    },
+    {
+      "month": "2013-10",
+      "state": "indeterminate_document",
+      "documents": 59,
+      "lines": 61
+    },
+    {
+      "month": "2013-10",
+      "state": "within_two_days",
+      "documents": 1476,
+      "lines": 5027
+    },
+    {
+      "month": "2013-11",
+      "state": "after_two_days",
+      "documents": 70,
+      "lines": 70
+    },
+    {
+      "month": "2013-11",
+      "state": "indeterminate_document",
+      "documents": 58,
+      "lines": 58
+    },
+    {
+      "month": "2013-11",
+      "state": "within_two_days",
+      "documents": 1424,
+      "lines": 4829
+    },
+    {
+      "month": "2013-12",
+      "state": "after_two_days",
+      "documents": 63,
+      "lines": 63
+    },
+    {
+      "month": "2013-12",
+      "state": "indeterminate_document",
+      "documents": 55,
+      "lines": 55
+    },
+    {
+      "month": "2013-12",
+      "state": "within_two_days",
+      "documents": 1447,
+      "lines": 4848
+    },
+    {
+      "month": "2014-01",
+      "state": "after_two_days",
+      "documents": 79,
+      "lines": 79
+    },
+    {
+      "month": "2014-01",
+      "state": "indeterminate_document",
+      "documents": 63,
+      "lines": 63
+    },
+    {
+      "month": "2014-01",
+      "state": "within_two_days",
+      "documents": 1649,
+      "lines": 5540
+    },
+    {
+      "month": "2014-02",
+      "state": "after_two_days",
+      "documents": 73,
+      "lines": 73
+    },
+    {
+      "month": "2014-02",
+      "state": "indeterminate_document",
+      "documents": 48,
+      "lines": 48
+    },
+    {
+      "month": "2014-02",
+      "state": "within_two_days",
+      "documents": 1417,
+      "lines": 4709
+    },
+    {
+      "month": "2014-03",
+      "state": "after_two_days",
+      "documents": 67,
+      "lines": 67
+    },
+    {
+      "month": "2014-03",
+      "state": "indeterminate_document",
+      "documents": 53,
+      "lines": 53
+    },
+    {
+      "month": "2014-03",
+      "state": "within_two_days",
+      "documents": 1466,
+      "lines": 4998
+    },
+    {
+      "month": "2014-04",
+      "state": "after_two_days",
+      "documents": 69,
+      "lines": 69
+    },
+    {
+      "month": "2014-04",
+      "state": "indeterminate_document",
+      "documents": 74,
+      "lines": 74
+    },
+    {
+      "month": "2014-04",
+      "state": "within_two_days",
+      "documents": 1596,
+      "lines": 5370
+    },
+    {
+      "month": "2014-05",
+      "state": "after_two_days",
+      "documents": 86,
+      "lines": 86
+    },
+    {
+      "month": "2014-05",
+      "state": "indeterminate_document",
+      "documents": 88,
+      "lines": 89
+    },
+    {
+      "month": "2014-05",
+      "state": "within_two_days",
+      "documents": 1734,
+      "lines": 5852
+    },
+    {
+      "month": "2014-06",
+      "state": "after_two_days",
+      "documents": 88,
+      "lines": 88
+    },
+    {
+      "month": "2014-06",
+      "state": "indeterminate_document",
+      "documents": 87,
+      "lines": 90
+    },
+    {
+      "month": "2014-06",
+      "state": "within_two_days",
+      "documents": 1712,
+      "lines": 5710
+    },
+    {
+      "month": "2014-07",
+      "state": "after_two_days",
+      "documents": 81,
+      "lines": 82
+    },
+    {
+      "month": "2014-07",
+      "state": "indeterminate_document",
+      "documents": 91,
+      "lines": 91
+    },
+    {
+      "month": "2014-07",
+      "state": "within_two_days",
+      "documents": 1836,
+      "lines": 6137
+    },
+    {
+      "month": "2014-08",
+      "state": "after_two_days",
+      "documents": 55,
+      "lines": 55
+    },
+    {
+      "month": "2014-08",
+      "state": "indeterminate_document",
+      "documents": 92,
+      "lines": 93
+    },
+    {
+      "month": "2014-08",
+      "state": "within_two_days",
+      "documents": 1495,
+      "lines": 4982
+    },
+    {
+      "month": "2014-09",
+      "state": "after_two_days",
+      "documents": 43,
+      "lines": 43
+    },
+    {
+      "month": "2014-09",
+      "state": "indeterminate_document",
+      "documents": 90,
+      "lines": 91
+    },
+    {
+      "month": "2014-09",
+      "state": "within_two_days",
+      "documents": 1504,
+      "lines": 4983
+    },
+    {
+      "month": "2014-10",
+      "state": "after_two_days",
+      "documents": 58,
+      "lines": 58
+    },
+    {
+      "month": "2014-10",
+      "state": "indeterminate_document",
+      "documents": 123,
+      "lines": 127
+    },
+    {
+      "month": "2014-10",
+      "state": "within_two_days",
+      "documents": 1740,
+      "lines": 5892
+    },
+    {
+      "month": "2014-11",
+      "state": "after_two_days",
+      "documents": 37,
+      "lines": 37
+    },
+    {
+      "month": "2014-11",
+      "state": "indeterminate_document",
+      "documents": 115,
+      "lines": 117
+    },
+    {
+      "month": "2014-11",
+      "state": "within_two_days",
+      "documents": 1476,
+      "lines": 4997
+    },
+    {
+      "month": "2014-12",
+      "state": "after_two_days",
+      "documents": 39,
+      "lines": 39
+    },
+    {
+      "month": "2014-12",
+      "state": "indeterminate_document",
+      "documents": 132,
+      "lines": 134
+    },
+    {
+      "month": "2014-12",
+      "state": "insufficient_followup",
+      "documents": 172,
+      "lines": 582
+    },
+    {
+      "month": "2014-12",
+      "state": "within_two_days",
+      "documents": 1571,
+      "lines": 5254
+    },
+    {
+      "month": "2015-01",
+      "state": "after_two_days",
+      "documents": 77,
+      "lines": 77
+    },
+    {
+      "month": "2015-01",
+      "state": "indeterminate_document",
+      "documents": 82,
+      "lines": 85
+    },
+    {
+      "month": "2015-01",
+      "state": "within_two_days",
+      "documents": 1671,
+      "lines": 5573
+    },
+    {
+      "month": "2015-02",
+      "state": "after_two_days",
+      "documents": 70,
+      "lines": 70
+    },
+    {
+      "month": "2015-02",
+      "state": "indeterminate_document",
+      "documents": 77,
+      "lines": 78
+    },
+    {
+      "month": "2015-02",
+      "state": "within_two_days",
+      "documents": 1585,
+      "lines": 5330
+    },
+    {
+      "month": "2015-03",
+      "state": "after_two_days",
+      "documents": 62,
+      "lines": 62
+    },
+    {
+      "month": "2015-03",
+      "state": "indeterminate_document",
+      "documents": 96,
+      "lines": 96
+    },
+    {
+      "month": "2015-03",
+      "state": "within_two_days",
+      "documents": 1733,
+      "lines": 5789
+    },
+    {
+      "month": "2015-04",
+      "state": "after_two_days",
+      "documents": 62,
+      "lines": 62
+    },
+    {
+      "month": "2015-04",
+      "state": "indeterminate_document",
+      "documents": 118,
+      "lines": 119
+    },
+    {
+      "month": "2015-04",
+      "state": "within_two_days",
+      "documents": 1931,
+      "lines": 6460
+    },
+    {
+      "month": "2015-05",
+      "state": "after_two_days",
+      "documents": 56,
+      "lines": 56
+    },
+    {
+      "month": "2015-05",
+      "state": "indeterminate_document",
+      "documents": 117,
+      "lines": 118
+    },
+    {
+      "month": "2015-05",
+      "state": "within_two_days",
+      "documents": 1786,
+      "lines": 5929
+    },
+    {
+      "month": "2015-06",
+      "state": "after_two_days",
+      "documents": 96,
+      "lines": 96
+    },
+    {
+      "month": "2015-06",
+      "state": "indeterminate_document",
+      "documents": 111,
+      "lines": 113
+    },
+    {
+      "month": "2015-06",
+      "state": "within_two_days",
+      "documents": 1782,
+      "lines": 5989
+    },
+    {
+      "month": "2015-07",
+      "state": "after_two_days",
+      "documents": 74,
+      "lines": 74
+    },
+    {
+      "month": "2015-07",
+      "state": "indeterminate_document",
+      "documents": 131,
+      "lines": 136
+    },
+    {
+      "month": "2015-07",
+      "state": "within_two_days",
+      "documents": 2068,
+      "lines": 6856
+    },
+    {
+      "month": "2015-08",
+      "state": "after_two_days",
+      "documents": 57,
+      "lines": 57
+    },
+    {
+      "month": "2015-08",
+      "state": "indeterminate_document",
+      "documents": 109,
+      "lines": 112
+    },
+    {
+      "month": "2015-08",
+      "state": "within_two_days",
+      "documents": 1563,
+      "lines": 5242
+    },
+    {
+      "month": "2015-09",
+      "state": "after_two_days",
+      "documents": 46,
+      "lines": 46
+    },
+    {
+      "month": "2015-09",
+      "state": "indeterminate_document",
+      "documents": 136,
+      "lines": 136
+    },
+    {
+      "month": "2015-09",
+      "state": "within_two_days",
+      "documents": 1883,
+      "lines": 6210
+    },
+    {
+      "month": "2015-10",
+      "state": "after_two_days",
+      "documents": 42,
+      "lines": 42
+    },
+    {
+      "month": "2015-10",
+      "state": "indeterminate_document",
+      "documents": 135,
+      "lines": 138
+    },
+    {
+      "month": "2015-10",
+      "state": "within_two_days",
+      "documents": 1788,
+      "lines": 6060
+    },
+    {
+      "month": "2015-11",
+      "state": "after_two_days",
+      "documents": 35,
+      "lines": 35
+    },
+    {
+      "month": "2015-11",
+      "state": "indeterminate_document",
+      "documents": 136,
+      "lines": 139
+    },
+    {
+      "month": "2015-11",
+      "state": "within_two_days",
+      "documents": 1663,
+      "lines": 5545
+    },
+    {
+      "month": "2015-12",
+      "state": "after_two_days",
+      "documents": 21,
+      "lines": 21
+    },
+    {
+      "month": "2015-12",
+      "state": "indeterminate_document",
+      "documents": 136,
+      "lines": 140
+    },
+    {
+      "month": "2015-12",
+      "state": "insufficient_followup",
+      "documents": 154,
+      "lines": 481
+    },
+    {
+      "month": "2015-12",
+      "state": "within_two_days",
+      "documents": 1640,
+      "lines": 5431
+    }
+  ],
+  "document_composition": {
+    "documents": 63978,
+    "lines": 201510,
+    "min_lines": 1,
+    "max_lines": 5,
+    "documents_multiple_picked_dates": 0,
+    "mixed_missing_observed": 0,
+    "all_missing": 2428,
+    "mixed_visible_classes": 0,
+    "header_vs_last_line_timestamp_different": 6534
+  },
+  "line_count_distribution": [
+    {
+      "lines_per_order": 1,
+      "documents": 7427
+    },
+    {
+      "lines_per_order": 2,
+      "documents": 14749
+    },
+    {
+      "lines_per_order": 3,
+      "documents": 14847
+    },
+    {
+      "lines_per_order": 4,
+      "documents": 14731
+    },
+    {
+      "lines_per_order": 5,
+      "documents": 12224
+    }
+  ],
+  "line_delay_histogram_development": [
+    {
+      "delay_days": null,
+      "lines": 2473
+    },
+    {
+      "delay_days": 0,
+      "lines": 194849
+    },
+    {
+      "delay_days": 1,
+      "lines": 880
+    },
+    {
+      "delay_days": 2,
+      "lines": 332
+    },
+    {
+      "delay_days": 3,
+      "lines": 262
+    },
+    {
+      "delay_days": 4,
+      "lines": 213
+    },
+    {
+      "delay_days": 5,
+      "lines": 147
+    },
+    {
+      "delay_days": 6,
+      "lines": 138
+    },
+    {
+      "delay_days": 7,
+      "lines": 130
+    },
+    {
+      "delay_days": 8,
+      "lines": 66
+    },
+    {
+      "delay_days": 9,
+      "lines": 64
+    },
+    {
+      "delay_days": 10,
+      "lines": 46
+    },
+    {
+      "delay_days": 11,
+      "lines": 38
+    },
+    {
+      "delay_days": 12,
+      "lines": 30
+    },
+    {
+      "delay_days": 13,
+      "lines": 41
+    },
+    {
+      "delay_days": 14,
+      "lines": 31
+    },
+    {
+      "delay_days": 15,
+      "lines": 32
+    },
+    {
+      "delay_days": 16,
+      "lines": 22
+    },
+    {
+      "delay_days": 17,
+      "lines": 24
+    },
+    {
+      "delay_days": 18,
+      "lines": 20
+    },
+    {
+      "delay_days": 19,
+      "lines": 16
+    },
+    {
+      "delay_days": 20,
+      "lines": 27
+    },
+    {
+      "delay_days": 21,
+      "lines": 23
+    },
+    {
+      "delay_days": 22,
+      "lines": 18
+    },
+    {
+      "delay_days": 23,
+      "lines": 14
+    },
+    {
+      "delay_days": 24,
+      "lines": 13
+    },
+    {
+      "delay_days": 25,
+      "lines": 16
+    },
+    {
+      "delay_days": 26,
+      "lines": 14
+    },
+    {
+      "delay_days": 27,
+      "lines": 16
+    },
+    {
+      "delay_days": 28,
+      "lines": 20
+    },
+    {
+      "delay_days": 29,
+      "lines": 9
+    },
+    {
+      "delay_days": 30,
+      "lines": 12
+    },
+    {
+      "delay_days": 31,
+      "lines": 13
+    },
+    {
+      "delay_days": 32,
+      "lines": 6
+    },
+    {
+      "delay_days": 33,
+      "lines": 4
+    },
+    {
+      "delay_days": 34,
+      "lines": 9
+    },
+    {
+      "delay_days": 35,
+      "lines": 13
+    },
+    {
+      "delay_days": 36,
+      "lines": 16
+    },
+    {
+      "delay_days": 37,
+      "lines": 13
+    },
+    {
+      "delay_days": 38,
+      "lines": 17
+    },
+    {
+      "delay_days": 39,
+      "lines": 9
+    },
+    {
+      "delay_days": 40,
+      "lines": 7
+    },
+    {
+      "delay_days": 41,
+      "lines": 11
+    },
+    {
+      "delay_days": 42,
+      "lines": 17
+    },
+    {
+      "delay_days": 43,
+      "lines": 10
+    },
+    {
+      "delay_days": 44,
+      "lines": 12
+    },
+    {
+      "delay_days": 45,
+      "lines": 7
+    },
+    {
+      "delay_days": 46,
+      "lines": 7
+    },
+    {
+      "delay_days": 47,
+      "lines": 8
+    },
+    {
+      "delay_days": 48,
+      "lines": 13
+    },
+    {
+      "delay_days": 49,
+      "lines": 17
+    },
+    {
+      "delay_days": 50,
+      "lines": 7
+    },
+    {
+      "delay_days": 51,
+      "lines": 5
+    },
+    {
+      "delay_days": 52,
+      "lines": 5
+    },
+    {
+      "delay_days": 53,
+      "lines": 11
+    },
+    {
+      "delay_days": 54,
+      "lines": 5
+    },
+    {
+      "delay_days": 55,
+      "lines": 7
+    },
+    {
+      "delay_days": 56,
+      "lines": 6
+    },
+    {
+      "delay_days": 57,
+      "lines": 6
+    },
+    {
+      "delay_days": 58,
+      "lines": 2
+    },
+    {
+      "delay_days": 59,
+      "lines": 5
+    },
+    {
+      "delay_days": 60,
+      "lines": 5
+    },
+    {
+      "delay_days": 61,
+      "lines": 4
+    },
+    {
+      "delay_days": 62,
+      "lines": 8
+    },
+    {
+      "delay_days": 63,
+      "lines": 8
+    },
+    {
+      "delay_days": 64,
+      "lines": 8
+    },
+    {
+      "delay_days": 65,
+      "lines": 3
+    },
+    {
+      "delay_days": 66,
+      "lines": 2
+    },
+    {
+      "delay_days": 67,
+      "lines": 6
+    },
+    {
+      "delay_days": 68,
+      "lines": 9
+    },
+    {
+      "delay_days": 69,
+      "lines": 5
+    },
+    {
+      "delay_days": 70,
+      "lines": 12
+    },
+    {
+      "delay_days": 71,
+      "lines": 5
+    },
+    {
+      "delay_days": 72,
+      "lines": 5
+    },
+    {
+      "delay_days": 73,
+      "lines": 9
+    },
+    {
+      "delay_days": 74,
+      "lines": 4
+    },
+    {
+      "delay_days": 75,
+      "lines": 6
+    },
+    {
+      "delay_days": 76,
+      "lines": 8
+    },
+    {
+      "delay_days": 77,
+      "lines": 15
+    },
+    {
+      "delay_days": 78,
+      "lines": 7
+    },
+    {
+      "delay_days": 79,
+      "lines": 10
+    },
+    {
+      "delay_days": 80,
+      "lines": 2
+    },
+    {
+      "delay_days": 81,
+      "lines": 7
+    },
+    {
+      "delay_days": 82,
+      "lines": 6
+    },
+    {
+      "delay_days": 83,
+      "lines": 15
+    },
+    {
+      "delay_days": 84,
+      "lines": 6
+    },
+    {
+      "delay_days": 85,
+      "lines": 5
+    },
+    {
+      "delay_days": 86,
+      "lines": 3
+    },
+    {
+      "delay_days": 87,
+      "lines": 4
+    },
+    {
+      "delay_days": 88,
+      "lines": 2
+    },
+    {
+      "delay_days": 89,
+      "lines": 6
+    },
+    {
+      "delay_days": 90,
+      "lines": 2
+    },
+    {
+      "delay_days": 91,
+      "lines": 3
+    },
+    {
+      "delay_days": 92,
+      "lines": 3
+    },
+    {
+      "delay_days": 93,
+      "lines": 2
+    },
+    {
+      "delay_days": 94,
+      "lines": 3
+    },
+    {
+      "delay_days": 95,
+      "lines": 5
+    },
+    {
+      "delay_days": 96,
+      "lines": 1
+    },
+    {
+      "delay_days": 97,
+      "lines": 7
+    },
+    {
+      "delay_days": 98,
+      "lines": 13
+    },
+    {
+      "delay_days": 99,
+      "lines": 4
+    },
+    {
+      "delay_days": 100,
+      "lines": 5
+    },
+    {
+      "delay_days": 101,
+      "lines": 6
+    },
+    {
+      "delay_days": 102,
+      "lines": 3
+    },
+    {
+      "delay_days": 103,
+      "lines": 6
+    },
+    {
+      "delay_days": 104,
+      "lines": 6
+    },
+    {
+      "delay_days": 105,
+      "lines": 5
+    },
+    {
+      "delay_days": 106,
+      "lines": 2
+    },
+    {
+      "delay_days": 107,
+      "lines": 5
+    },
+    {
+      "delay_days": 108,
+      "lines": 6
+    },
+    {
+      "delay_days": 109,
+      "lines": 4
+    },
+    {
+      "delay_days": 110,
+      "lines": 7
+    },
+    {
+      "delay_days": 111,
+      "lines": 9
+    },
+    {
+      "delay_days": 112,
+      "lines": 5
+    },
+    {
+      "delay_days": 113,
+      "lines": 6
+    },
+    {
+      "delay_days": 114,
+      "lines": 5
+    },
+    {
+      "delay_days": 115,
+      "lines": 7
+    },
+    {
+      "delay_days": 116,
+      "lines": 4
+    },
+    {
+      "delay_days": 117,
+      "lines": 11
+    },
+    {
+      "delay_days": 118,
+      "lines": 4
+    },
+    {
+      "delay_days": 119,
+      "lines": 7
+    },
+    {
+      "delay_days": 120,
+      "lines": 8
+    },
+    {
+      "delay_days": 121,
+      "lines": 4
+    },
+    {
+      "delay_days": 122,
+      "lines": 3
+    },
+    {
+      "delay_days": 123,
+      "lines": 5
+    },
+    {
+      "delay_days": 124,
+      "lines": 5
+    },
+    {
+      "delay_days": 125,
+      "lines": 8
+    },
+    {
+      "delay_days": 126,
+      "lines": 3
+    },
+    {
+      "delay_days": 127,
+      "lines": 4
+    },
+    {
+      "delay_days": 128,
+      "lines": 4
+    },
+    {
+      "delay_days": 129,
+      "lines": 6
+    },
+    {
+      "delay_days": 130,
+      "lines": 4
+    },
+    {
+      "delay_days": 131,
+      "lines": 6
+    },
+    {
+      "delay_days": 132,
+      "lines": 4
+    },
+    {
+      "delay_days": 133,
+      "lines": 6
+    },
+    {
+      "delay_days": 134,
+      "lines": 6
+    },
+    {
+      "delay_days": 135,
+      "lines": 3
+    },
+    {
+      "delay_days": 136,
+      "lines": 5
+    },
+    {
+      "delay_days": 137,
+      "lines": 1
+    },
+    {
+      "delay_days": 138,
+      "lines": 8
+    },
+    {
+      "delay_days": 139,
+      "lines": 9
+    },
+    {
+      "delay_days": 140,
+      "lines": 8
+    },
+    {
+      "delay_days": 141,
+      "lines": 6
+    },
+    {
+      "delay_days": 142,
+      "lines": 12
+    },
+    {
+      "delay_days": 143,
+      "lines": 7
+    },
+    {
+      "delay_days": 144,
+      "lines": 3
+    },
+    {
+      "delay_days": 145,
+      "lines": 4
+    },
+    {
+      "delay_days": 146,
+      "lines": 11
+    },
+    {
+      "delay_days": 147,
+      "lines": 10
+    },
+    {
+      "delay_days": 148,
+      "lines": 4
+    },
+    {
+      "delay_days": 149,
+      "lines": 6
+    },
+    {
+      "delay_days": 150,
+      "lines": 2
+    },
+    {
+      "delay_days": 151,
+      "lines": 3
+    },
+    {
+      "delay_days": 152,
+      "lines": 4
+    },
+    {
+      "delay_days": 153,
+      "lines": 5
+    },
+    {
+      "delay_days": 154,
+      "lines": 7
+    },
+    {
+      "delay_days": 155,
+      "lines": 5
+    },
+    {
+      "delay_days": 156,
+      "lines": 7
+    },
+    {
+      "delay_days": 157,
+      "lines": 6
+    },
+    {
+      "delay_days": 158,
+      "lines": 3
+    },
+    {
+      "delay_days": 159,
+      "lines": 6
+    },
+    {
+      "delay_days": 160,
+      "lines": 5
+    },
+    {
+      "delay_days": 161,
+      "lines": 5
+    },
+    {
+      "delay_days": 162,
+      "lines": 6
+    },
+    {
+      "delay_days": 163,
+      "lines": 6
+    },
+    {
+      "delay_days": 164,
+      "lines": 4
+    },
+    {
+      "delay_days": 165,
+      "lines": 1
+    },
+    {
+      "delay_days": 166,
+      "lines": 3
+    },
+    {
+      "delay_days": 167,
+      "lines": 5
+    },
+    {
+      "delay_days": 168,
+      "lines": 3
+    },
+    {
+      "delay_days": 169,
+      "lines": 2
+    },
+    {
+      "delay_days": 170,
+      "lines": 2
+    },
+    {
+      "delay_days": 171,
+      "lines": 2
+    },
+    {
+      "delay_days": 172,
+      "lines": 3
+    },
+    {
+      "delay_days": 173,
+      "lines": 5
+    },
+    {
+      "delay_days": 174,
+      "lines": 4
+    },
+    {
+      "delay_days": 175,
+      "lines": 3
+    },
+    {
+      "delay_days": 176,
+      "lines": 5
+    },
+    {
+      "delay_days": 177,
+      "lines": 6
+    },
+    {
+      "delay_days": 178,
+      "lines": 4
+    },
+    {
+      "delay_days": 179,
+      "lines": 2
+    },
+    {
+      "delay_days": 180,
+      "lines": 4
+    },
+    {
+      "delay_days": 181,
+      "lines": 4
+    },
+    {
+      "delay_days": 182,
+      "lines": 3
+    },
+    {
+      "delay_days": 183,
+      "lines": 6
+    },
+    {
+      "delay_days": 184,
+      "lines": 2
+    },
+    {
+      "delay_days": 185,
+      "lines": 3
+    },
+    {
+      "delay_days": 186,
+      "lines": 2
+    },
+    {
+      "delay_days": 187,
+      "lines": 7
+    },
+    {
+      "delay_days": 188,
+      "lines": 3
+    },
+    {
+      "delay_days": 189,
+      "lines": 2
+    },
+    {
+      "delay_days": 191,
+      "lines": 1
+    },
+    {
+      "delay_days": 192,
+      "lines": 2
+    },
+    {
+      "delay_days": 193,
+      "lines": 3
+    },
+    {
+      "delay_days": 194,
+      "lines": 2
+    },
+    {
+      "delay_days": 195,
+      "lines": 4
+    },
+    {
+      "delay_days": 196,
+      "lines": 4
+    },
+    {
+      "delay_days": 197,
+      "lines": 1
+    },
+    {
+      "delay_days": 198,
+      "lines": 2
+    },
+    {
+      "delay_days": 199,
+      "lines": 7
+    },
+    {
+      "delay_days": 200,
+      "lines": 3
+    },
+    {
+      "delay_days": 201,
+      "lines": 3
+    },
+    {
+      "delay_days": 202,
+      "lines": 4
+    },
+    {
+      "delay_days": 203,
+      "lines": 4
+    },
+    {
+      "delay_days": 204,
+      "lines": 4
+    },
+    {
+      "delay_days": 205,
+      "lines": 2
+    },
+    {
+      "delay_days": 206,
+      "lines": 8
+    },
+    {
+      "delay_days": 207,
+      "lines": 1
+    },
+    {
+      "delay_days": 208,
+      "lines": 3
+    },
+    {
+      "delay_days": 209,
+      "lines": 5
+    },
+    {
+      "delay_days": 210,
+      "lines": 5
+    },
+    {
+      "delay_days": 211,
+      "lines": 3
+    },
+    {
+      "delay_days": 212,
+      "lines": 3
+    },
+    {
+      "delay_days": 213,
+      "lines": 6
+    },
+    {
+      "delay_days": 214,
+      "lines": 3
+    },
+    {
+      "delay_days": 215,
+      "lines": 1
+    },
+    {
+      "delay_days": 216,
+      "lines": 3
+    },
+    {
+      "delay_days": 217,
+      "lines": 1
+    },
+    {
+      "delay_days": 218,
+      "lines": 4
+    },
+    {
+      "delay_days": 219,
+      "lines": 2
+    },
+    {
+      "delay_days": 220,
+      "lines": 3
+    },
+    {
+      "delay_days": 221,
+      "lines": 1
+    },
+    {
+      "delay_days": 222,
+      "lines": 1
+    },
+    {
+      "delay_days": 224,
+      "lines": 4
+    },
+    {
+      "delay_days": 227,
+      "lines": 2
+    },
+    {
+      "delay_days": 228,
+      "lines": 1
+    },
+    {
+      "delay_days": 229,
+      "lines": 1
+    },
+    {
+      "delay_days": 230,
+      "lines": 2
+    },
+    {
+      "delay_days": 231,
+      "lines": 2
+    },
+    {
+      "delay_days": 232,
+      "lines": 2
+    },
+    {
+      "delay_days": 234,
+      "lines": 1
+    },
+    {
+      "delay_days": 236,
+      "lines": 4
+    },
+    {
+      "delay_days": 237,
+      "lines": 1
+    },
+    {
+      "delay_days": 238,
+      "lines": 2
+    },
+    {
+      "delay_days": 239,
+      "lines": 2
+    },
+    {
+      "delay_days": 240,
+      "lines": 2
+    },
+    {
+      "delay_days": 241,
+      "lines": 5
+    },
+    {
+      "delay_days": 242,
+      "lines": 3
+    },
+    {
+      "delay_days": 243,
+      "lines": 2
+    },
+    {
+      "delay_days": 244,
+      "lines": 1
+    },
+    {
+      "delay_days": 245,
+      "lines": 3
+    },
+    {
+      "delay_days": 247,
+      "lines": 4
+    },
+    {
+      "delay_days": 248,
+      "lines": 3
+    },
+    {
+      "delay_days": 250,
+      "lines": 5
+    },
+    {
+      "delay_days": 251,
+      "lines": 4
+    },
+    {
+      "delay_days": 252,
+      "lines": 2
+    },
+    {
+      "delay_days": 253,
+      "lines": 1
+    },
+    {
+      "delay_days": 254,
+      "lines": 2
+    },
+    {
+      "delay_days": 255,
+      "lines": 3
+    },
+    {
+      "delay_days": 256,
+      "lines": 4
+    },
+    {
+      "delay_days": 257,
+      "lines": 2
+    },
+    {
+      "delay_days": 258,
+      "lines": 3
+    },
+    {
+      "delay_days": 259,
+      "lines": 5
+    },
+    {
+      "delay_days": 260,
+      "lines": 2
+    },
+    {
+      "delay_days": 261,
+      "lines": 2
+    },
+    {
+      "delay_days": 262,
+      "lines": 2
+    },
+    {
+      "delay_days": 263,
+      "lines": 1
+    },
+    {
+      "delay_days": 264,
+      "lines": 2
+    },
+    {
+      "delay_days": 265,
+      "lines": 1
+    },
+    {
+      "delay_days": 266,
+      "lines": 3
+    },
+    {
+      "delay_days": 267,
+      "lines": 1
+    },
+    {
+      "delay_days": 269,
+      "lines": 3
+    },
+    {
+      "delay_days": 270,
+      "lines": 2
+    },
+    {
+      "delay_days": 272,
+      "lines": 3
+    },
+    {
+      "delay_days": 273,
+      "lines": 2
+    },
+    {
+      "delay_days": 274,
+      "lines": 1
+    },
+    {
+      "delay_days": 276,
+      "lines": 1
+    },
+    {
+      "delay_days": 277,
+      "lines": 3
+    },
+    {
+      "delay_days": 278,
+      "lines": 5
+    },
+    {
+      "delay_days": 280,
+      "lines": 4
+    },
+    {
+      "delay_days": 281,
+      "lines": 1
+    },
+    {
+      "delay_days": 282,
+      "lines": 6
+    },
+    {
+      "delay_days": 283,
+      "lines": 1
+    },
+    {
+      "delay_days": 285,
+      "lines": 1
+    },
+    {
+      "delay_days": 286,
+      "lines": 2
+    },
+    {
+      "delay_days": 287,
+      "lines": 2
+    },
+    {
+      "delay_days": 289,
+      "lines": 1
+    },
+    {
+      "delay_days": 291,
+      "lines": 1
+    },
+    {
+      "delay_days": 292,
+      "lines": 2
+    },
+    {
+      "delay_days": 295,
+      "lines": 1
+    },
+    {
+      "delay_days": 296,
+      "lines": 1
+    },
+    {
+      "delay_days": 298,
+      "lines": 1
+    },
+    {
+      "delay_days": 299,
+      "lines": 3
+    },
+    {
+      "delay_days": 300,
+      "lines": 2
+    },
+    {
+      "delay_days": 301,
+      "lines": 1
+    },
+    {
+      "delay_days": 302,
+      "lines": 1
+    },
+    {
+      "delay_days": 303,
+      "lines": 1
+    },
+    {
+      "delay_days": 304,
+      "lines": 1
+    },
+    {
+      "delay_days": 307,
+      "lines": 1
+    },
+    {
+      "delay_days": 309,
+      "lines": 1
+    },
+    {
+      "delay_days": 310,
+      "lines": 1
+    },
+    {
+      "delay_days": 311,
+      "lines": 1
+    },
+    {
+      "delay_days": 312,
+      "lines": 2
+    },
+    {
+      "delay_days": 313,
+      "lines": 1
+    },
+    {
+      "delay_days": 314,
+      "lines": 5
+    },
+    {
+      "delay_days": 315,
+      "lines": 3
+    },
+    {
+      "delay_days": 316,
+      "lines": 1
+    },
+    {
+      "delay_days": 317,
+      "lines": 3
+    },
+    {
+      "delay_days": 318,
+      "lines": 2
+    },
+    {
+      "delay_days": 319,
+      "lines": 1
+    },
+    {
+      "delay_days": 320,
+      "lines": 3
+    },
+    {
+      "delay_days": 321,
+      "lines": 2
+    },
+    {
+      "delay_days": 322,
+      "lines": 3
+    },
+    {
+      "delay_days": 323,
+      "lines": 2
+    },
+    {
+      "delay_days": 324,
+      "lines": 2
+    },
+    {
+      "delay_days": 325,
+      "lines": 3
+    },
+    {
+      "delay_days": 326,
+      "lines": 4
+    },
+    {
+      "delay_days": 327,
+      "lines": 2
+    },
+    {
+      "delay_days": 328,
+      "lines": 1
+    },
+    {
+      "delay_days": 329,
+      "lines": 5
+    },
+    {
+      "delay_days": 331,
+      "lines": 1
+    },
+    {
+      "delay_days": 332,
+      "lines": 1
+    },
+    {
+      "delay_days": 333,
+      "lines": 2
+    },
+    {
+      "delay_days": 334,
+      "lines": 1
+    },
+    {
+      "delay_days": 335,
+      "lines": 1
+    },
+    {
+      "delay_days": 336,
+      "lines": 1
+    },
+    {
+      "delay_days": 337,
+      "lines": 2
+    },
+    {
+      "delay_days": 338,
+      "lines": 2
+    },
+    {
+      "delay_days": 339,
+      "lines": 2
+    },
+    {
+      "delay_days": 340,
+      "lines": 1
+    },
+    {
+      "delay_days": 341,
+      "lines": 1
+    },
+    {
+      "delay_days": 342,
+      "lines": 5
+    },
+    {
+      "delay_days": 343,
+      "lines": 2
+    },
+    {
+      "delay_days": 344,
+      "lines": 4
+    },
+    {
+      "delay_days": 345,
+      "lines": 2
+    },
+    {
+      "delay_days": 346,
+      "lines": 2
+    },
+    {
+      "delay_days": 347,
+      "lines": 2
+    },
+    {
+      "delay_days": 348,
+      "lines": 1
+    },
+    {
+      "delay_days": 351,
+      "lines": 1
+    },
+    {
+      "delay_days": 352,
+      "lines": 1
+    },
+    {
+      "delay_days": 353,
+      "lines": 4
+    },
+    {
+      "delay_days": 355,
+      "lines": 3
+    },
+    {
+      "delay_days": 356,
+      "lines": 2
+    },
+    {
+      "delay_days": 357,
+      "lines": 1
+    },
+    {
+      "delay_days": 359,
+      "lines": 1
+    },
+    {
+      "delay_days": 360,
+      "lines": 4
+    },
+    {
+      "delay_days": 361,
+      "lines": 5
+    },
+    {
+      "delay_days": 362,
+      "lines": 1
+    },
+    {
+      "delay_days": 363,
+      "lines": 1
+    },
+    {
+      "delay_days": 364,
+      "lines": 2
+    },
+    {
+      "delay_days": 365,
+      "lines": 3
+    },
+    {
+      "delay_days": 369,
+      "lines": 4
+    },
+    {
+      "delay_days": 372,
+      "lines": 2
+    },
+    {
+      "delay_days": 373,
+      "lines": 1
+    },
+    {
+      "delay_days": 374,
+      "lines": 2
+    },
+    {
+      "delay_days": 375,
+      "lines": 2
+    },
+    {
+      "delay_days": 376,
+      "lines": 1
+    },
+    {
+      "delay_days": 377,
+      "lines": 2
+    },
+    {
+      "delay_days": 378,
+      "lines": 1
+    },
+    {
+      "delay_days": 379,
+      "lines": 2
+    },
+    {
+      "delay_days": 381,
+      "lines": 2
+    },
+    {
+      "delay_days": 382,
+      "lines": 1
+    },
+    {
+      "delay_days": 383,
+      "lines": 1
+    },
+    {
+      "delay_days": 385,
+      "lines": 2
+    },
+    {
+      "delay_days": 386,
+      "lines": 1
+    },
+    {
+      "delay_days": 387,
+      "lines": 1
+    },
+    {
+      "delay_days": 388,
+      "lines": 1
+    },
+    {
+      "delay_days": 389,
+      "lines": 2
+    },
+    {
+      "delay_days": 390,
+      "lines": 1
+    },
+    {
+      "delay_days": 391,
+      "lines": 1
+    },
+    {
+      "delay_days": 392,
+      "lines": 1
+    },
+    {
+      "delay_days": 393,
+      "lines": 1
+    },
+    {
+      "delay_days": 394,
+      "lines": 1
+    },
+    {
+      "delay_days": 396,
+      "lines": 1
+    },
+    {
+      "delay_days": 399,
+      "lines": 1
+    },
+    {
+      "delay_days": 400,
+      "lines": 1
+    },
+    {
+      "delay_days": 402,
+      "lines": 1
+    },
+    {
+      "delay_days": 404,
+      "lines": 1
+    },
+    {
+      "delay_days": 408,
+      "lines": 2
+    },
+    {
+      "delay_days": 409,
+      "lines": 2
+    },
+    {
+      "delay_days": 410,
+      "lines": 2
+    },
+    {
+      "delay_days": 412,
+      "lines": 2
+    },
+    {
+      "delay_days": 415,
+      "lines": 1
+    },
+    {
+      "delay_days": 418,
+      "lines": 1
+    },
+    {
+      "delay_days": 419,
+      "lines": 1
+    },
+    {
+      "delay_days": 423,
+      "lines": 1
+    },
+    {
+      "delay_days": 424,
+      "lines": 1
+    },
+    {
+      "delay_days": 426,
+      "lines": 1
+    },
+    {
+      "delay_days": 429,
+      "lines": 1
+    },
+    {
+      "delay_days": 432,
+      "lines": 2
+    },
+    {
+      "delay_days": 433,
+      "lines": 1
+    },
+    {
+      "delay_days": 439,
+      "lines": 2
+    },
+    {
+      "delay_days": 440,
+      "lines": 1
+    },
+    {
+      "delay_days": 443,
+      "lines": 1
+    },
+    {
+      "delay_days": 444,
+      "lines": 1
+    },
+    {
+      "delay_days": 446,
+      "lines": 1
+    },
+    {
+      "delay_days": 448,
+      "lines": 1
+    },
+    {
+      "delay_days": 450,
+      "lines": 1
+    },
+    {
+      "delay_days": 471,
+      "lines": 1
+    },
+    {
+      "delay_days": 472,
+      "lines": 1
+    },
+    {
+      "delay_days": 474,
+      "lines": 2
+    },
+    {
+      "delay_days": 475,
+      "lines": 1
+    },
+    {
+      "delay_days": 481,
+      "lines": 1
+    },
+    {
+      "delay_days": 482,
+      "lines": 1
+    },
+    {
+      "delay_days": 486,
+      "lines": 1
+    },
+    {
+      "delay_days": 490,
+      "lines": 2
+    },
+    {
+      "delay_days": 501,
+      "lines": 1
+    },
+    {
+      "delay_days": 502,
+      "lines": 1
+    },
+    {
+      "delay_days": 509,
+      "lines": 1
+    },
+    {
+      "delay_days": 511,
+      "lines": 1
+    },
+    {
+      "delay_days": 518,
+      "lines": 1
+    },
+    {
+      "delay_days": 522,
+      "lines": 1
+    },
+    {
+      "delay_days": 528,
+      "lines": 2
+    },
+    {
+      "delay_days": 536,
+      "lines": 1
+    },
+    {
+      "delay_days": 548,
+      "lines": 1
+    },
+    {
+      "delay_days": 551,
+      "lines": 1
+    },
+    {
+      "delay_days": 564,
+      "lines": 1
+    },
+    {
+      "delay_days": 573,
+      "lines": 1
+    },
+    {
+      "delay_days": 580,
+      "lines": 2
+    },
+    {
+      "delay_days": 584,
+      "lines": 1
+    },
+    {
+      "delay_days": 585,
+      "lines": 1
+    },
+    {
+      "delay_days": 590,
+      "lines": 1
+    },
+    {
+      "delay_days": 592,
+      "lines": 1
+    },
+    {
+      "delay_days": 594,
+      "lines": 1
+    },
+    {
+      "delay_days": 598,
+      "lines": 1
+    },
+    {
+      "delay_days": 606,
+      "lines": 1
+    },
+    {
+      "delay_days": 614,
+      "lines": 2
+    },
+    {
+      "delay_days": 615,
+      "lines": 2
+    },
+    {
+      "delay_days": 616,
+      "lines": 1
+    },
+    {
+      "delay_days": 619,
+      "lines": 1
+    },
+    {
+      "delay_days": 625,
+      "lines": 1
+    },
+    {
+      "delay_days": 636,
+      "lines": 1
+    },
+    {
+      "delay_days": 639,
+      "lines": 1
+    },
+    {
+      "delay_days": 642,
+      "lines": 2
+    },
+    {
+      "delay_days": 650,
+      "lines": 1
+    },
+    {
+      "delay_days": 654,
+      "lines": 1
+    },
+    {
+      "delay_days": 656,
+      "lines": 1
+    },
+    {
+      "delay_days": 657,
+      "lines": 1
+    },
+    {
+      "delay_days": 667,
+      "lines": 1
+    },
+    {
+      "delay_days": 669,
+      "lines": 1
+    },
+    {
+      "delay_days": 671,
+      "lines": 1
+    },
+    {
+      "delay_days": 682,
+      "lines": 1
+    },
+    {
+      "delay_days": 683,
+      "lines": 1
+    },
+    {
+      "delay_days": 692,
+      "lines": 1
+    },
+    {
+      "delay_days": 696,
+      "lines": 1
+    },
+    {
+      "delay_days": 698,
+      "lines": 1
+    },
+    {
+      "delay_days": 700,
+      "lines": 1
+    },
+    {
+      "delay_days": 703,
+      "lines": 1
+    },
+    {
+      "delay_days": 705,
+      "lines": 1
+    },
+    {
+      "delay_days": 712,
+      "lines": 1
+    },
+    {
+      "delay_days": 715,
+      "lines": 1
+    },
+    {
+      "delay_days": 718,
+      "lines": 2
+    },
+    {
+      "delay_days": 720,
+      "lines": 1
+    },
+    {
+      "delay_days": 721,
+      "lines": 1
+    },
+    {
+      "delay_days": 724,
+      "lines": 1
+    },
+    {
+      "delay_days": 731,
+      "lines": 1
+    },
+    {
+      "delay_days": 734,
+      "lines": 2
+    },
+    {
+      "delay_days": 738,
+      "lines": 1
+    },
+    {
+      "delay_days": 739,
+      "lines": 1
+    },
+    {
+      "delay_days": 740,
+      "lines": 1
+    },
+    {
+      "delay_days": 741,
+      "lines": 1
+    },
+    {
+      "delay_days": 755,
+      "lines": 1
+    },
+    {
+      "delay_days": 759,
+      "lines": 1
+    },
+    {
+      "delay_days": 775,
+      "lines": 2
+    },
+    {
+      "delay_days": 777,
+      "lines": 1
+    },
+    {
+      "delay_days": 809,
+      "lines": 1
+    },
+    {
+      "delay_days": 810,
+      "lines": 1
+    },
+    {
+      "delay_days": 812,
+      "lines": 1
+    },
+    {
+      "delay_days": 815,
+      "lines": 1
+    },
+    {
+      "delay_days": 820,
+      "lines": 1
+    },
+    {
+      "delay_days": 839,
+      "lines": 1
+    },
+    {
+      "delay_days": 848,
+      "lines": 1
+    },
+    {
+      "delay_days": 875,
+      "lines": 1
+    },
+    {
+      "delay_days": 892,
+      "lines": 1
+    },
+    {
+      "delay_days": 893,
+      "lines": 1
+    },
+    {
+      "delay_days": 905,
+      "lines": 1
+    },
+    {
+      "delay_days": 914,
+      "lines": 1
+    },
+    {
+      "delay_days": 924,
+      "lines": 1
+    },
+    {
+      "delay_days": 927,
+      "lines": 1
+    },
+    {
+      "delay_days": 954,
+      "lines": 1
+    },
+    {
+      "delay_days": 964,
+      "lines": 1
+    },
+    {
+      "delay_days": 977,
+      "lines": 1
+    },
+    {
+      "delay_days": 987,
+      "lines": 1
+    },
+    {
+      "delay_days": 990,
+      "lines": 1
+    },
+    {
+      "delay_days": 1004,
+      "lines": 1
+    },
+    {
+      "delay_days": 1007,
+      "lines": 1
+    },
+    {
+      "delay_days": 1012,
+      "lines": 1
+    },
+    {
+      "delay_days": 1032,
+      "lines": 1
+    },
+    {
+      "delay_days": 1064,
+      "lines": 1
+    },
+    {
+      "delay_days": 1074,
+      "lines": 1
+    },
+    {
+      "delay_days": 1116,
+      "lines": 1
+    }
+  ],
+  "edited_dates": {
+    "lines": 201510,
+    "last_line_edit_same_calendar_day": 197176,
+    "last_line_edit_later_day": 4334,
+    "last_edit_before_pick": 0
+  },
+  "backorder_links": {
+    "links": 6534,
+    "different_order_date": 0,
+    "non_increasing_ids": 0
+  },
+  "line_states_by_backorder_document": [
+    {
+      "state": "after_two_days",
+      "is_derived_document": 0,
+      "lines": 4
+    },
+    {
+      "state": "after_two_days",
+      "is_derived_document": 1,
+      "lines": 2428
+    },
+    {
+      "state": "insufficient_followup",
+      "is_derived_document": 0,
+      "lines": 1035
+    },
+    {
+      "state": "insufficient_followup",
+      "is_derived_document": 1,
+      "lines": 28
+    },
+    {
+      "state": "missing_pick_indeterminate",
+      "is_derived_document": 0,
+      "lines": 6
+    },
+    {
+      "state": "missing_pick_indeterminate",
+      "is_derived_document": 1,
+      "lines": 2452
+    },
+    {
+      "state": "pick_not_observed_by_cut",
+      "is_derived_document": 0,
+      "lines": 1
+    },
+    {
+      "state": "pick_not_observed_by_cut",
+      "is_derived_document": 1,
+      "lines": 535
+    },
+    {
+      "state": "within_two_days",
+      "is_derived_document": 0,
+      "lines": 193833
+    },
+    {
+      "state": "within_two_days",
+      "is_derived_document": 1,
+      "lines": 1188
+    }
+  ],
+  "development_document_child_status": {
+    "documents": 63978,
+    "derived_backorder_documents": 6534
+  },
+  "unknown_customer_development": {
+    "dw_lines": 201510,
+    "zero_customer": 73772,
+    "null_customer": 0,
+    "operational_ids_for_unknown": 255,
+    "missing_business_id_in_dimension": 73772
+  },
+  "fingerprint_development": {
+    "lines": 201510,
+    "checksum": 1631227191
+  }
+}
